@@ -1,0 +1,173 @@
+{
+  "milestone": "H2",
+  "python": "3.11.7",
+  "numpy": "1.26.4",
+  "scipy": "1.12.0",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "tree_count": 20,
+  "tree_prior": {
+    "alpha_tree": 0.6,
+    "beta_tree": 1,
+    "max_depth": 2,
+    "min_child": 1
+  },
+  "tau2": 0.0625,
+  "fixed_sigma2": 0.1,
+  "scale": {
+    "lower": -0.5,
+    "upper": 0.5
+  },
+  "burn_in": 2000,
+  "draws_per_chain": 20000,
+  "seeds": [
+    1709,
+    1710,
+    1711,
+    1712
+  ],
+  "row_normalization_error": 2.220446049250313e-16,
+  "detailed_balance_error": 6.938893903907228e-18,
+  "stationarity_error": 1.3877787807814457e-17,
+  "spectral_radius_excluding_one": 0.771206613555937,
+  "chains": [
+    {
+      "seed": 1709,
+      "total_variation": 0.01714218664152984,
+      "maximum_frequency_error": 0.006228238237929576,
+      "maximum_latent_mean_error": 0.0023372976835305814,
+      "diagnostics": {
+        "sweeps": 22000,
+        "burn_in": 2000,
+        "retained": 20000,
+        "targets_outside_scale": 0,
+        "moves": {
+          "grow": {
+            "selected": 11042,
+            "impossible": 2007,
+            "accepted": 6088,
+            "rejected": 2947,
+            "acceptance_given_possible": 0.6738240177089098
+          },
+          "prune": {
+            "selected": 10958,
+            "impossible": 4040,
+            "accepted": 6087,
+            "rejected": 831,
+            "acceptance_given_possible": 0.8798785776235907
+          }
+        }
+      }
+    },
+    {
+      "seed": 1710,
+      "total_variation": 0.015582280411466769,
+      "maximum_frequency_error": 0.0042923573568944,
+      "maximum_latent_mean_error": 0.0011542716381952103,
+      "diagnostics": {
+        "sweeps": 22000,
+        "burn_in": 2000,
+        "retained": 20000,
+        "targets_outside_scale": 0,
+        "moves": {
+          "grow": {
+            "selected": 11004,
+            "impossible": 1941,
+            "accepted": 6090,
+            "rejected": 2973,
+            "acceptance_given_possible": 0.6719629261833829
+          },
+          "prune": {
+            "selected": 10996,
+            "impossible": 4071,
+            "accepted": 6090,
+            "rejected": 835,
+            "acceptance_given_possible": 0.8794223826714801
+          }
+        }
+      }
+    },
+    {
+      "seed": 1711,
+      "total_variation": 0.0156460852454183,
+      "maximum_frequency_error": 0.0053332868583712,
+      "maximum_latent_mean_error": 0.0005042150609042492,
+      "diagnostics": {
+        "sweeps": 22000,
+        "burn_in": 2000,
+        "retained": 20000,
+        "targets_outside_scale": 0,
+        "moves": {
+          "grow": {
+            "selected": 11062,
+            "impossible": 2131,
+            "accepted": 6030,
+            "rejected": 2901,
+            "acceptance_given_possible": 0.6751763520322472
+          },
+          "prune": {
+            "selected": 10938,
+            "impossible": 4061,
+            "accepted": 6030,
+            "rejected": 847,
+            "acceptance_given_possible": 0.8768358295768504
+          }
+        }
+      }
+    },
+    {
+      "seed": 1712,
+      "total_variation": 0.01649710652211193,
+      "maximum_frequency_error": 0.007833286858371202,
+      "maximum_latent_mean_error": 0.0010121315340463205,
+      "diagnostics": {
+        "sweeps": 22000,
+        "burn_in": 2000,
+        "retained": 20000,
+        "targets_outside_scale": 0,
+        "moves": {
+          "grow": {
+            "selected": 11151,
+            "impossible": 2158,
+            "accepted": 5974,
+            "rejected": 3019,
+            "acceptance_given_possible": 0.6642944512398532
+          },
+          "prune": {
+            "selected": 10849,
+            "impossible": 4003,
+            "accepted": 5974,
+            "rejected": 872,
+            "acceptance_given_possible": 0.8726263511539585
+          }
+        }
+      }
+    }
+  ],
+  "unknown_noise_signal_rmse": 0.005221429222834229,
+  "unknown_noise_mean_sigma2": 0.002115280048439418,
+  "elapsed_seconds": 33.40508533299726,
+  "source_hashes": {
+    "bayesian_rrtl/__init__.py": "e6171365a6aef56cc6027d088f31c32830e9d80ef9c14951a87b6d14dcbce302",
+    "bayesian_rrtl/baseline.py": "faad68c0eca33ebd33a0b1e93b8bd4e615f7afc19d1e85b628e2c0d29a78698e",
+    "bayesian_rrtl/config.py": "7da2ea2e139c648a9215bcbdeab18934d01386d18f4ffe692b1d7de23d1d0bce",
+    "bayesian_rrtl/encoding.py": "32752fd93792c35937baae455566fe04cf99836024e2bc43802923b5257b0857",
+    "bayesian_rrtl/exact.py": "a03b0aa8d34a42a6bf6ca7bd45efdb7c08e993283cca89e84a857b20031296bb",
+    "bayesian_rrtl/likelihood.py": "deece50c50f827d24da9c79b70ec5f798c4f12afaa158a4dcebe95af60f3ffdb",
+    "bayesian_rrtl/priors.py": "049775ef3e7044000befef052cd8b1782c30d362b60d89f95a01e63b483511a0",
+    "bayesian_rrtl/proposals.py": "905198a3825cf8ef2606005e0110e0567d4be5734ac7a9fc3fe6c55056c6945e",
+    "bayesian_rrtl/rules.py": "a825eef8e8079c8d2b14dfc2aca5f29f9b710f36f98abb23ce368c9775b18cf6",
+    "bayesian_rrtl/sampler.py": "9b7899e5a8a55c0fbaad176e0020da6a8d7053c3fd9306e3a96918bdd894528f",
+    "bayesian_rrtl/targets.py": "f1f7237d369a7828272aace344997b604ef6198c133eda4b7f300756dcd707a9",
+    "bayesian_rrtl/tree.py": "a0bca8f5c6271c48f8efe38b849c97f47592b07a488cbd6d468c1b759ea3abfc",
+    "experiments/validate_h2.py": "76eb8d44a040ce55072a1da1053ab722041967b5c812444bdc62e605baf40a75"
+  },
+  "scope": "Exact reference uses m=1 and fixed variance; unknown-noise signal run is a smoke check",
+  "pytest": {
+    "passed": 50,
+    "failed": 0,
+    "seconds": 11.78,
+    "new_h2_tests": 20,
+    "warnings": "13 Matplotlib/pyparsing deprecation warnings inherited from H0/H1"
+  },
+  "lint": "ruff: All checks passed"
+}

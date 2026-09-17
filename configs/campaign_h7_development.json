@@ -1,0 +1,77 @@
+{
+  "purpose": "development",
+  "games": [
+    "Breakout",
+    "Pong",
+    "DemonAttack"
+  ],
+  "variants": [
+    "bart",
+    "bart_revision",
+    "single_tree",
+    "batch_tree",
+    "incremental_binary",
+    "corrected"
+  ],
+  "training_seeds": [
+    11,
+    22,
+    33
+  ],
+  "validation_seeds": [
+    100001,
+    100002
+  ],
+  "test_seeds": [
+    200001,
+    200002
+  ],
+  "interactions": 128,
+  "curve_interval": 64,
+  "max_episode_steps": 80,
+  "include_incomplete_states": true,
+  "agent": {
+    "gamma": 0.99,
+    "m": 3,
+    "burn_in": 8,
+    "draws": 8,
+    "max_depth": 2,
+    "min_child": 2,
+    "replay_capacity": 2000,
+    "batch_size_per_action": 24,
+    "fit_interval": 64,
+    "warmup_interactions": 32,
+    "epsilon_decay_steps": 500000
+  },
+  "contrasts": [
+    [
+      "bart",
+      "batch_tree"
+    ],
+    [
+      "bart",
+      "single_tree"
+    ],
+    [
+      "bart_revision",
+      "bart"
+    ],
+    [
+      "batch_tree",
+      "incremental_binary"
+    ],
+    [
+      "incremental_binary",
+      "corrected"
+    ]
+  ],
+  "failure_thresholds": {
+    "Breakout": 1.0,
+    "Pong": 0.0,
+    "DemonAttack": 1.0
+  },
+  "incremental_control": {
+    "eta": 0.025,
+    "split_min": 16
+  }
+}

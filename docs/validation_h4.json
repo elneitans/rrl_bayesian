@@ -1,0 +1,28 @@
+{
+  "milestone": "H4",
+  "structures": 37,
+  "nontrivial_swap_events": 16,
+  "max_detailed_balance_error": 1.3877787807814457e-17,
+  "max_row_normalization_error": 2.220446049250313e-16,
+  "zero_mean_draw_for_draw": true,
+  "linear_draws": 12000,
+  "linear_mean_error": 0.0003380936164265602,
+  "linear_covariance_error": 7.617240261032442e-06,
+  "limitations": [
+    "Exact finite-state check fixes sigma2 and marginalizes leaves.",
+    "General linear extension validated synthetically; no arbitrary noise models or OCAtari."
+  ],
+  "source_hashes": {
+    "bayesian_rrtl/general_bart.py": "74db0774d898501c418c7be83ac91192f65bdc33c42be79dcaaca6a8371fa122",
+    "bayesian_rrtl/proposals.py": "5b11b4f4ee991378048352835312aad4f1ca66d241d024ef9f0ae542eb25038e",
+    "bayesian_rrtl/rules.py": "20bf0e4bfaa5870bfca78a23752ef2fe983ec0d61a371d77b005b95513c832c7"
+  },
+  "validation_date": "2026-09-17",
+  "tests": {
+    "tests": 137,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "report": "results/h4_h7_full_tests.xml"
+  }
+}

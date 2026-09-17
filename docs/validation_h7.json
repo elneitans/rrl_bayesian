@@ -1,0 +1,53 @@
+{
+  "milestone": "H7",
+  "scope": "implemented experimental pipeline; completed reduced multigame development campaign",
+  "scientific_efficacy_campaign_complete": false,
+  "training_runs": 54,
+  "interactions_per_run": 128,
+  "total_training_interactions": 6912,
+  "games": [
+    "Breakout",
+    "Pong",
+    "DemonAttack"
+  ],
+  "training_seeds": [
+    11,
+    22,
+    33
+  ],
+  "variants": [
+    "bart",
+    "bart_revision",
+    "single_tree",
+    "batch_tree",
+    "incremental_binary",
+    "corrected"
+  ],
+  "validation_report": "docs/h7_report_validation.json",
+  "test_report": "docs/h7_report_test.json",
+  "offline_report": "docs/validation_h7_offline.json",
+  "artifacts": "results/h7_development_final",
+  "protocol_hash": "ba5fdcdad3f6b27a30359762c7a81c2f581d64b008d4085fb3d51dbf50d8879d",
+  "checkpoint_selection": "final",
+  "inference_status": "short chains approximate; offline diagnostics did not meet all Rhat/ESS thresholds",
+  "limitations": [
+    "128 interactions and 80-step episode caps are development settings, not an efficacy study.",
+    "No claim of superiority; no cross-game pooling of raw returns.",
+    "OCAtari deferred; historical visual extraction only.",
+    "Thompson sampling and arbitrary General BART noise remain outside this implementation."
+  ],
+  "tests": {
+    "tests": 137,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "report": "results/h4_h7_full_tests.xml"
+  },
+  "test_evaluations": 54,
+  "test_episodes_per_model": 2,
+  "all_training_data_finite": true,
+  "checks": {
+    "ruff": "passed",
+    "legacy_matches_cf58dc7": true
+  }
+}

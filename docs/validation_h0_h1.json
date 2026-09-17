@@ -1,0 +1,134 @@
+{
+  "date": "2026-09-17",
+  "dependency_check": "pip check: No broken requirements found",
+  "graphviz": "dot - graphviz version 12.2.1 (20241206.2353)",
+  "historical_files_unchanged_from_cf58dc7": {
+    "preprocessing.py": "112276f01b888eb5c45e1ae47ca9ea0078d7e1ca623c56f875eec270fc68e5cd",
+    "relational_regresion_tree.py": "5e6fb6015eddb875dc3a38a1981e0da1502fa2bcdeb1db59aba362635eab1a60",
+    "train_and_test.py": "94ceade78fe523eb3670a80734cbfc8a7a307f347ec94f81f3b4fb74475d22b7",
+    "utilities.py": "19e5e9fb486a35957e3b2c25c414c9a91cbe3e2347aac55ec20bc4b5d033d86e"
+  },
+  "limits": [
+    "Smoke runs do not measure policy quality",
+    "No MCMC, BART, binary frequentist control or fitted Q integration yet",
+    "Final checkpoints support evaluation, not exact mid-episode training resume"
+  ],
+  "lint": {
+    "result": "passed",
+    "tool": "ruff 0.9.6"
+  },
+  "milestones": [
+    "H0",
+    "H1"
+  ],
+  "packages": {
+    "Farama-Notifications": "0.0.6",
+    "ale-py": "0.10.2",
+    "cloudpickle": "3.1.2",
+    "contourpy": "1.3.3",
+    "cycler": "0.12.1",
+    "fonttools": "4.65.0",
+    "formulaic": "1.2.2",
+    "graphviz": "0.20.3",
+    "gymnasium": "1.1.1",
+    "iniconfig": "2.3.0",
+    "interface_meta": "2.0.1",
+    "joblib": "1.6.0",
+    "kiwisolver": "1.5.1",
+    "matplotlib": "3.8.4",
+    "narwhals": "2.26.0",
+    "numpy": "1.26.4",
+    "opencv-python": "4.10.0.84",
+    "packaging": "26.3",
+    "pandas": "2.2.2",
+    "pandas-flavor": "0.8.1",
+    "patsy": "1.0.3",
+    "pillow": "10.4.0",
+    "pingouin": "0.5.5",
+    "pip": "23.2.1",
+    "pluggy": "1.6.0",
+    "pyparsing": "3.3.2",
+    "pytest": "8.3.5",
+    "python-dateutil": "2.9.0.post0",
+    "pytz": "2026.3.post1",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.12.0",
+    "seaborn": "0.13.2",
+    "setuptools": "65.5.0",
+    "six": "1.17.0",
+    "statsmodels": "0.15.0",
+    "tabulate": "0.10.0",
+    "threadpoolctl": "3.7.0",
+    "typing_extensions": "4.16.0",
+    "tzdata": "2026.4",
+    "wrapt": "2.4.1",
+    "xarray": "2026.7.0"
+  },
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "pytest": {
+    "atari_cases": 8,
+    "command": ".venv/bin/python -m pytest -q",
+    "failed": 0,
+    "passed": 30,
+    "seconds": 7.64,
+    "warnings": "13 deprecations from Matplotlib/pyparsing; no test failures"
+  },
+  "python": "3.11.7",
+  "smoke": {
+    "logged_transitions": 256,
+    "output_relative_to_repo": "results/smoke/rrtl_corrected/Breakout/comparative_version/run_2",
+    "summary": {
+      "checkpoint": "final_checkpoint.pkl",
+      "completed_episodes": 4,
+      "config_hash": "39c513452f9a8ef5336cf591f0980686dc19699af8cda3920260825e484fa11e",
+      "iterations": 256,
+      "last_episode": {
+        "complete": false,
+        "raw_return": 0.0,
+        "return": 0.0,
+        "seed": 4015923038
+      },
+      "splits": 0,
+      "training_seeds": [
+        4042397434,
+        2043393047,
+        617412200,
+        2579507553,
+        4015923038
+      ],
+      "variant": "rrtl_corrected"
+    },
+    "test_reserved": true,
+    "validation": [
+      {
+        "return": 0.0,
+        "seed": 100001,
+        "steps": 62,
+        "terminated": false,
+        "truncated": true
+      },
+      {
+        "return": 1.0,
+        "seed": 100002,
+        "steps": 62,
+        "terminated": false,
+        "truncated": true
+      }
+    ]
+  },
+  "source_hashes": {
+    "bayesian_rrtl/__init__.py": "6601b850296ec0a7e82efa54ac8bdffba55c491d7318922db278333b86c808e1",
+    "bayesian_rrtl/baseline.py": "faad68c0eca33ebd33a0b1e93b8bd4e615f7afc19d1e85b628e2c0d29a78698e",
+    "bayesian_rrtl/config.py": "7da2ea2e139c648a9215bcbdeab18934d01386d18f4ffe692b1d7de23d1d0bce",
+    "bayesian_rrtl/encoding.py": "32752fd93792c35937baae455566fe04cf99836024e2bc43802923b5257b0857",
+    "bayesian_rrtl/rules.py": "a825eef8e8079c8d2b14dfc2aca5f29f9b710f36f98abb23ce368c9775b18cf6",
+    "bayesian_rrtl/targets.py": "f1f7237d369a7828272aace344997b604ef6198c133eda4b7f300756dcd707a9",
+    "bayesian_rrtl/tree.py": "198653ef99d32ce8f5bb8e14e65586c6a021f4d6d1401f82928e6aeac66ff4f5",
+    "identify_best_runs.py": "e8f7abf44f9c2440feafac4f6af2c6327f14b0a6f21aaee6e808837d1c739dc4",
+    "preprocessing.py": "112276f01b888eb5c45e1ae47ca9ea0078d7e1ca623c56f875eec270fc68e5cd",
+    "relational_regresion_tree.py": "5e6fb6015eddb875dc3a38a1981e0da1502fa2bcdeb1db59aba362635eab1a60",
+    "train_and_test.py": "94ceade78fe523eb3670a80734cbfc8a7a307f347ec94f81f3b4fb74475d22b7",
+    "train_baseline.py": "8f69b60c4a76dd768035d3dc83bd4e681c2a7c94d9f2790bf0473d328b8ebc4a",
+    "utilities.py": "19e5e9fb486a35957e3b2c25c414c9a91cbe3e2347aac55ec20bc4b5d033d86e"
+  }
+}

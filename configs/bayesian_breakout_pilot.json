@@ -1,0 +1,35 @@
+{
+  "environment": {
+    "game": "Breakout",
+    "extractor": "legacy_visual_breakout_v1",
+    "representation": "comparative",
+    "include_incomplete_states": false,
+    "frameskip": 4,
+    "repeat_action_probability": 0.0,
+    "max_episode_steps": 1000
+  },
+  "agent": {
+    "actions": ["NOOP", "FIRE", "RIGHT", "LEFT"],
+    "seed": 11,
+    "gamma": 0.99,
+    "reward_min": -1.0,
+    "reward_max": 1.0,
+    "replay_capacity": 50000,
+    "batch_size_per_action": 128,
+    "fit_interval": 512,
+    "warmup_interactions": 256,
+    "m": 20,
+    "burn_in": 50,
+    "draws": 50,
+    "max_depth": 4,
+    "epsilon_init": 1.0,
+    "epsilon_min": 0.1,
+    "epsilon_decay_steps": 500000,
+    "resample_repeated_actions": true,
+    "validation_seeds": [100001, 100002],
+    "test_seeds": [200001, 200002]
+  },
+  "interactions": 1024,
+  "training_seeds": [11, 22, 33],
+  "diagnostics": {"chains": 4, "burn_in": 100, "draws": 100, "seed": 600001}
+}

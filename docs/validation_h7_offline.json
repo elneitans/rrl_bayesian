@@ -1,0 +1,1052 @@
+{
+  "checkpoint": "results/h7_development/Breakout/bart/11/final_checkpoint.rrtl",
+  "fit_id": 2,
+  "config_hash": "76c04d2f91dfa672e40e6a95a226dba2824e9f6903195280a158428cb0f31640",
+  "burn_in": 20,
+  "draws": 20,
+  "chains": 4,
+  "seed": 700001,
+  "actions": {
+    "NOOP": {
+      "transition_ids": [
+        2,
+        7,
+        12,
+        15,
+        16,
+        19,
+        20,
+        23,
+        27,
+        31,
+        33,
+        34,
+        36,
+        40,
+        43,
+        51,
+        54,
+        67,
+        78,
+        90,
+        98,
+        123,
+        125,
+        126
+      ],
+      "dataset_hash": "f183faa4e461278540da5bea1f2365e9ad11330e939657f859370575f4b31dec",
+      "samples": 24,
+      "variants": {
+        "batch_tree": {
+          "train_mse": 0.0,
+          "seconds": 0.0005089589976705611
+        },
+        "single_tree": {
+          "train_mse": 1.5340249679555808e-09,
+          "seconds": 0.056708249991061166,
+          "diagnostics": {
+            "prediction_0": {
+              "status": "ok",
+              "rhat": 1.0702427283828837,
+              "ess_bulk": 38.0801498019245,
+              "ess_tail": 65.71119524067063,
+              "draws_used": 80
+            },
+            "prediction_1": {
+              "status": "ok",
+              "rhat": 1.0702427283828837,
+              "ess_bulk": 38.0801498019245,
+              "ess_tail": 65.71119524067063,
+              "draws_used": 80
+            },
+            "prediction_2": {
+              "status": "ok",
+              "rhat": 1.0702427283828837,
+              "ess_bulk": 38.0801498019245,
+              "ess_tail": 65.71119524067063,
+              "draws_used": 80
+            },
+            "prediction_3": {
+              "status": "ok",
+              "rhat": 1.0702427283828837,
+              "ess_bulk": 38.0801498019245,
+              "ess_tail": 65.71119524067063,
+              "draws_used": 80
+            },
+            "sigma2": {
+              "status": "ok",
+              "rhat": 1.0428169381450454,
+              "ess_bulk": 75.73599565479229,
+              "ess_tail": 63.02684476721569,
+              "draws_used": 80
+            },
+            "total_leaves": {
+              "status": "constant",
+              "rhat": null,
+              "ess_bulk": null,
+              "ess_tail": null,
+              "draws_used": 80
+            },
+            "max_depth": {
+              "status": "constant",
+              "rhat": null,
+              "ess_bulk": null,
+              "ess_tail": null,
+              "draws_used": 80
+            }
+          },
+          "all_meet_rhat_1_01_ess_400": false
+        },
+        "bart": {
+          "train_mse": 1.8171750664792894e-08,
+          "seconds": 0.15043437501299195,
+          "diagnostics": {
+            "prediction_0": {
+              "status": "ok",
+              "rhat": 1.0273573486564274,
+              "ess_bulk": 80.0,
+              "ess_tail": 64.21874999999999,
+              "draws_used": 80
+            },
+            "prediction_1": {
+              "status": "ok",
+              "rhat": 1.0273573486564274,
+              "ess_bulk": 80.0,
+              "ess_tail": 64.21874999999999,
+              "draws_used": 80
+            },
+            "prediction_2": {
+              "status": "ok",
+              "rhat": 1.0273573486564274,
+              "ess_bulk": 80.0,
+              "ess_tail": 64.21874999999999,
+              "draws_used": 80
+            },
+            "prediction_3": {
+              "status": "ok",
+              "rhat": 1.0273573486564274,
+              "ess_bulk": 80.0,
+              "ess_tail": 64.21874999999999,
+              "draws_used": 80
+            },
+            "sigma2": {
+              "status": "ok",
+              "rhat": 1.0440962445492572,
+              "ess_bulk": 80.0,
+              "ess_tail": 80.0,
+              "draws_used": 80
+            },
+            "total_leaves": {
+              "status": "constant",
+              "rhat": null,
+              "ess_bulk": null,
+              "ess_tail": null,
+              "draws_used": 80
+            },
+            "max_depth": {
+              "status": "constant",
+              "rhat": null,
+              "ess_bulk": null,
+              "ess_tail": null,
+              "draws_used": 80
+            }
+          },
+          "all_meet_rhat_1_01_ess_400": false
+        },
+        "bart_revision": {
+          "train_mse": 3.14404570531079e-09,
+          "seconds": 0.08885466601350345,
+          "diagnostics": {
+            "prediction_0": {
+              "status": "ok",
+              "rhat": 1.007091844809562,
+              "ess_bulk": 80.0,
+              "ess_tail": 80.0,
+              "draws_used": 80
+            },
+            "prediction_1": {
+              "status": "ok",
+              "rhat": 1.007091844809562,
+              "ess_bulk": 80.0,
+              "ess_tail": 80.0,
+              "draws_used": 80
+            },
+            "prediction_2": {
+              "status": "ok",
+              "rhat": 1.007091844809562,
+              "ess_bulk": 80.0,
+              "ess_tail": 80.0,
+              "draws_used": 80
+            },
+            "prediction_3": {
+              "status": "ok",
+              "rhat": 1.007091844809562,
+              "ess_bulk": 80.0,
+              "ess_tail": 80.0,
+              "draws_used": 80
+            },
+            "sigma2": {
+              "status": "ok",
+              "rhat": 1.0249829585562893,
+              "ess_bulk": 80.0,
+              "ess_tail": 65.71119524067063,
+              "draws_used": 80
+            },
+            "total_leaves": {
+              "status": "constant",
+              "rhat": null,
+              "ess_bulk": null,
+              "ess_tail": null,
+              "draws_used": 80
+            },
+            "max_depth": {
+              "status": "constant",
+              "rhat": null,
+              "ess_bulk": null,
+              "ess_tail": null,
+              "draws_used": 80
+            }
+          },
+          "all_meet_rhat_1_01_ess_400": false
+        },
+        "bart_longer": {
+          "train_mse": 2.51602696194302e-10,
+          "seconds": 0.3009762919973582,
+          "diagnostics": {
+            "prediction_0": {
+              "status": "ok",
+              "rhat": 0.9955987651981393,
+              "ess_bulk": 160.0,
+              "ess_tail": 160.0,
+              "draws_used": 160
+            },
+            "prediction_1": {
+              "status": "ok",
+              "rhat": 0.9955987651981393,
+              "ess_bulk": 160.0,
+              "ess_tail": 160.0,
+              "draws_used": 160
+            },
+            "prediction_2": {
+              "status": "ok",
+              "rhat": 0.9955987651981393,
+              "ess_bulk": 160.0,
+              "ess_tail": 160.0,
+              "draws_used": 160
+            },
+            "prediction_3": {
+              "status": "ok",
+              "rhat": 0.9955987651981393,
+              "ess_bulk": 160.0,
+              "ess_tail": 160.0,
+              "draws_used": 160
+            },
+            "sigma2": {
+              "status": "ok",
+              "rhat": 1.0116933479900612,
+              "ess_bulk": 160.0,
+              "ess_tail": 151.6847003419858,
+              "draws_used": 160
+            },
+            "total_leaves": {
+              "status": "constant",
+              "rhat": null,
+              "ess_bulk": null,
+              "ess_tail": null,
+              "draws_used": 160
+            },
+            "max_depth": {
+              "status": "constant",
+              "rhat": null,
+              "ess_bulk": null,
+              "ess_tail": null,
+              "draws_used": 160
+            }
+          },
+          "all_meet_rhat_1_01_ess_400": false
+        }
+      }
+    },
+    "FIRE": {
+      "transition_ids": [
+        3,
+        25,
+        26,
+        30,
+        41,
+        47,
+        49,
+        50,
+        59,
+        61,
+        73,
+        74,
+        80,
+        82,
+        84,
+        85,
+        89,
+        96,
+        100,
+        101,
+        104,
+        107,
+        111,
+        127
+      ],
+      "dataset_hash": "b78f0778b1a0807910c6a370950285c62c355a0167b5c1866c321d864f17c370",
+      "samples": 24,
+      "variants": {
+        "batch_tree": {
+          "train_mse": 0.0,
+          "seconds": 0.00043750001350417733
+        },
+        "single_tree": {
+          "train_mse": 7.368242389336346e-11,
+          "seconds": 0.054678832995705307,
+          "diagnostics": {
+            "prediction_0": {
+              "status": "ok",
+              "rhat": 1.0983341721342978,
+              "ess_bulk": 80.0,
+              "ess_tail": 65.71119524067063,
+              "draws_used": 80
+            },
+            "prediction_1": {
+              "status": "ok",
+              "rhat": 1.0983341721342978,
+              "ess_bulk": 80.0,
+              "ess_tail": 65.71119524067063,
+              "draws_used": 80
+            },
+            "prediction_2": {
+              "status": "ok",
+              "rhat": 1.0983341721342978,
+              "ess_bulk": 80.0,
+              "ess_tail": 65.71119524067063,
+              "draws_used": 80
+            },
+            "prediction_3": {
+              "status": "ok",
+              "rhat": 1.0983341721342978,
+              "ess_bulk": 80.0,
+              "ess_tail": 65.71119524067063,
+              "draws_used": 80
+            },
+            "sigma2": {
+              "status": "ok",
+              "rhat": 1.0203928248871268,
+              "ess_bulk": 80.0,
+              "ess_tail": 76.8865685809208,
+              "draws_used": 80
+            },
+            "total_leaves": {
+              "status": "constant",
+              "rhat": null,
+              "ess_bulk": null,
+              "ess_tail": null,
+              "draws_used": 80
+            },
+            "max_depth": {
+              "status": "constant",
+              "rhat": null,
+              "ess_bulk": null,
+              "ess_tail": null,
+              "draws_used": 80
+            }
+          },
+          "all_meet_rhat_1_01_ess_400": false
+        },
+        "bart": {
+          "train_mse": 2.0104179737276195e-08,
+          "seconds": 0.15975749999051914,
+          "diagnostics": {
+            "prediction_0": {
+              "status": "ok",
+              "rhat": 1.026409438116745,
+              "ess_bulk": 80.0,
+              "ess_tail": 59.94123408423116,
+              "draws_used": 80
+            },
+            "prediction_1": {
+              "status": "ok",
+              "rhat": 1.026409438116745,
+              "ess_bulk": 80.0,
+              "ess_tail": 59.94123408423116,
+              "draws_used": 80
+            },
+            "prediction_2": {
+              "status": "ok",
+              "rhat": 1.026409438116745,
+              "ess_bulk": 80.0,
+              "ess_tail": 59.94123408423116,
+              "draws_used": 80
+            },
+            "prediction_3": {
+              "status": "ok",
+              "rhat": 1.026409438116745,
+              "ess_bulk": 80.0,
+              "ess_tail": 59.94123408423116,
+              "draws_used": 80
+            },
+            "sigma2": {
+              "status": "ok",
+              "rhat": 1.0688397122694475,
+              "ess_bulk": 37.389977722429265,
+              "ess_tail": 80.0,
+              "draws_used": 80
+            },
+            "total_leaves": {
+              "status": "constant",
+              "rhat": null,
+              "ess_bulk": null,
+              "ess_tail": null,
+              "draws_used": 80
+            },
+            "max_depth": {
+              "status": "constant",
+              "rhat": null,
+              "ess_bulk": null,
+              "ess_tail": null,
+              "draws_used": 80
+            }
+          },
+          "all_meet_rhat_1_01_ess_400": false
+        },
+        "bart_revision": {
+          "train_mse": 6.540240602743519e-09,
+          "seconds": 0.078958625002997,
+          "diagnostics": {
+            "prediction_0": {
+              "status": "ok",
+              "rhat": 1.029698625444734,
+              "ess_bulk": 56.806402689207644,
+              "ess_tail": 65.71119524067063,
+              "draws_used": 80
+            },
+            "prediction_1": {
+              "status": "ok",
+              "rhat": 1.029698625444734,
+              "ess_bulk": 56.806402689207644,
+              "ess_tail": 65.71119524067063,
+              "draws_used": 80
+            },
+            "prediction_2": {
+              "status": "ok",
+              "rhat": 1.029698625444734,
+              "ess_bulk": 56.806402689207644,
+              "ess_tail": 65.71119524067063,
+              "draws_used": 80
+            },
+            "prediction_3": {
+              "status": "ok",
+              "rhat": 1.029698625444734,
+              "ess_bulk": 56.806402689207644,
+              "ess_tail": 65.71119524067063,
+              "draws_used": 80
+            },
+            "sigma2": {
+              "status": "ok",
+              "rhat": 1.0361712867824282,
+              "ess_bulk": 59.20550230661388,
+              "ess_tail": 80.0,
+              "draws_used": 80
+            },
+            "total_leaves": {
+              "status": "constant",
+              "rhat": null,
+              "ess_bulk": null,
+              "ess_tail": null,
+              "draws_used": 80
+            },
+            "max_depth": {
+              "status": "constant",
+              "rhat": null,
+              "ess_bulk": null,
+              "ess_tail": null,
+              "draws_used": 80
+            }
+          },
+          "all_meet_rhat_1_01_ess_400": false
+        },
+        "bart_longer": {
+          "train_mse": 1.8286910151363682e-10,
+          "seconds": 0.3103429590119049,
+          "diagnostics": {
+            "prediction_0": {
+              "status": "ok",
+              "rhat": 1.0076929995160977,
+              "ess_bulk": 134.42084936849113,
+              "ess_tail": 138.65154336277158,
+              "draws_used": 160
+            },
+            "prediction_1": {
+              "status": "ok",
+              "rhat": 1.0076929995160977,
+              "ess_bulk": 134.42084936849113,
+              "ess_tail": 138.65154336277158,
+              "draws_used": 160
+            },
+            "prediction_2": {
+              "status": "ok",
+              "rhat": 1.0076929995160977,
+              "ess_bulk": 134.42084936849113,
+              "ess_tail": 138.65154336277158,
+              "draws_used": 160
+            },
+            "prediction_3": {
+              "status": "ok",
+              "rhat": 1.0076929995160977,
+              "ess_bulk": 134.42084936849113,
+              "ess_tail": 138.65154336277158,
+              "draws_used": 160
+            },
+            "sigma2": {
+              "status": "ok",
+              "rhat": 1.02169421165554,
+              "ess_bulk": 160.0,
+              "ess_tail": 150.10896251137893,
+              "draws_used": 160
+            },
+            "total_leaves": {
+              "status": "constant",
+              "rhat": null,
+              "ess_bulk": null,
+              "ess_tail": null,
+              "draws_used": 160
+            },
+            "max_depth": {
+              "status": "constant",
+              "rhat": null,
+              "ess_bulk": null,
+              "ess_tail": null,
+              "draws_used": 160
+            }
+          },
+          "all_meet_rhat_1_01_ess_400": false
+        }
+      }
+    },
+    "RIGHT": {
+      "transition_ids": [
+        13,
+        21,
+        24,
+        28,
+        29,
+        35,
+        46,
+        48,
+        56,
+        63,
+        64,
+        71,
+        76,
+        87,
+        88,
+        93,
+        94,
+        95,
+        106,
+        108,
+        109,
+        110,
+        115,
+        118
+      ],
+      "dataset_hash": "6260813b9893e1cc806523b43bbc8f45798453ab392276cf65b8382f63dc5a5a",
+      "samples": 24,
+      "variants": {
+        "batch_tree": {
+          "train_mse": 0.0,
+          "seconds": 0.0008456670038867742
+        },
+        "single_tree": {
+          "train_mse": 9.627684508845822e-09,
+          "seconds": 0.05596408399287611,
+          "diagnostics": {
+            "prediction_0": {
+              "status": "ok",
+              "rhat": 0.995359803968738,
+              "ess_bulk": 80.0,
+              "ess_tail": 80.0,
+              "draws_used": 80
+            },
+            "prediction_1": {
+              "status": "ok",
+              "rhat": 0.995359803968738,
+              "ess_bulk": 80.0,
+              "ess_tail": 80.0,
+              "draws_used": 80
+            },
+            "prediction_2": {
+              "status": "ok",
+              "rhat": 0.995359803968738,
+              "ess_bulk": 80.0,
+              "ess_tail": 80.0,
+              "draws_used": 80
+            },
+            "prediction_3": {
+              "status": "ok",
+              "rhat": 0.995359803968738,
+              "ess_bulk": 80.0,
+              "ess_tail": 80.0,
+              "draws_used": 80
+            },
+            "sigma2": {
+              "status": "ok",
+              "rhat": 1.0330997412119287,
+              "ess_bulk": 80.0,
+              "ess_tail": 80.0,
+              "draws_used": 80
+            },
+            "total_leaves": {
+              "status": "constant",
+              "rhat": null,
+              "ess_bulk": null,
+              "ess_tail": null,
+              "draws_used": 80
+            },
+            "max_depth": {
+              "status": "constant",
+              "rhat": null,
+              "ess_bulk": null,
+              "ess_tail": null,
+              "draws_used": 80
+            }
+          },
+          "all_meet_rhat_1_01_ess_400": false
+        },
+        "bart": {
+          "train_mse": 6.121147628632633e-10,
+          "seconds": 0.32580420799786225,
+          "diagnostics": {
+            "prediction_0": {
+              "status": "ok",
+              "rhat": 0.988743602238406,
+              "ess_bulk": 80.0,
+              "ess_tail": 80.0,
+              "draws_used": 80
+            },
+            "prediction_1": {
+              "status": "ok",
+              "rhat": 0.988743602238406,
+              "ess_bulk": 80.0,
+              "ess_tail": 80.0,
+              "draws_used": 80
+            },
+            "prediction_2": {
+              "status": "ok",
+              "rhat": 0.988743602238406,
+              "ess_bulk": 80.0,
+              "ess_tail": 80.0,
+              "draws_used": 80
+            },
+            "prediction_3": {
+              "status": "ok",
+              "rhat": 0.988743602238406,
+              "ess_bulk": 80.0,
+              "ess_tail": 80.0,
+              "draws_used": 80
+            },
+            "sigma2": {
+              "status": "ok",
+              "rhat": 0.9864668209790667,
+              "ess_bulk": 79.4164888816394,
+              "ess_tail": 80.0,
+              "draws_used": 80
+            },
+            "total_leaves": {
+              "status": "constant",
+              "rhat": null,
+              "ess_bulk": null,
+              "ess_tail": null,
+              "draws_used": 80
+            },
+            "max_depth": {
+              "status": "constant",
+              "rhat": null,
+              "ess_bulk": null,
+              "ess_tail": null,
+              "draws_used": 80
+            }
+          },
+          "all_meet_rhat_1_01_ess_400": false
+        },
+        "bart_revision": {
+          "train_mse": 1.1468766547051955e-09,
+          "seconds": 0.1072943749895785,
+          "diagnostics": {
+            "prediction_0": {
+              "status": "ok",
+              "rhat": 1.0014003099623063,
+              "ess_bulk": 80.0,
+              "ess_tail": 80.0,
+              "draws_used": 80
+            },
+            "prediction_1": {
+              "status": "ok",
+              "rhat": 1.0014003099623063,
+              "ess_bulk": 80.0,
+              "ess_tail": 80.0,
+              "draws_used": 80
+            },
+            "prediction_2": {
+              "status": "ok",
+              "rhat": 1.0014003099623063,
+              "ess_bulk": 80.0,
+              "ess_tail": 80.0,
+              "draws_used": 80
+            },
+            "prediction_3": {
+              "status": "ok",
+              "rhat": 1.0014003099623063,
+              "ess_bulk": 80.0,
+              "ess_tail": 80.0,
+              "draws_used": 80
+            },
+            "sigma2": {
+              "status": "ok",
+              "rhat": 1.001970117915552,
+              "ess_bulk": 80.0,
+              "ess_tail": 80.0,
+              "draws_used": 80
+            },
+            "total_leaves": {
+              "status": "constant",
+              "rhat": null,
+              "ess_bulk": null,
+              "ess_tail": null,
+              "draws_used": 80
+            },
+            "max_depth": {
+              "status": "constant",
+              "rhat": null,
+              "ess_bulk": null,
+              "ess_tail": null,
+              "draws_used": 80
+            }
+          },
+          "all_meet_rhat_1_01_ess_400": false
+        },
+        "bart_longer": {
+          "train_mse": 9.876583141672528e-12,
+          "seconds": 0.292140790988924,
+          "diagnostics": {
+            "prediction_0": {
+              "status": "ok",
+              "rhat": 1.0263163591057562,
+              "ess_bulk": 160.0,
+              "ess_tail": 150.34284388772906,
+              "draws_used": 160
+            },
+            "prediction_1": {
+              "status": "ok",
+              "rhat": 1.0263163591057562,
+              "ess_bulk": 160.0,
+              "ess_tail": 150.34284388772906,
+              "draws_used": 160
+            },
+            "prediction_2": {
+              "status": "ok",
+              "rhat": 1.0263163591057562,
+              "ess_bulk": 160.0,
+              "ess_tail": 150.34284388772906,
+              "draws_used": 160
+            },
+            "prediction_3": {
+              "status": "ok",
+              "rhat": 1.0263163591057562,
+              "ess_bulk": 160.0,
+              "ess_tail": 150.34284388772906,
+              "draws_used": 160
+            },
+            "sigma2": {
+              "status": "ok",
+              "rhat": 0.9931211577808813,
+              "ess_bulk": 150.9100609783804,
+              "ess_tail": 160.0,
+              "draws_used": 160
+            },
+            "total_leaves": {
+              "status": "constant",
+              "rhat": null,
+              "ess_bulk": null,
+              "ess_tail": null,
+              "draws_used": 160
+            },
+            "max_depth": {
+              "status": "constant",
+              "rhat": null,
+              "ess_bulk": null,
+              "ess_tail": null,
+              "draws_used": 160
+            }
+          },
+          "all_meet_rhat_1_01_ess_400": false
+        }
+      }
+    },
+    "LEFT": {
+      "transition_ids": [
+        5,
+        6,
+        22,
+        39,
+        44,
+        53,
+        58,
+        62,
+        65,
+        66,
+        70,
+        72,
+        75,
+        83,
+        92,
+        97,
+        99,
+        102,
+        103,
+        112,
+        113,
+        114,
+        117,
+        124
+      ],
+      "dataset_hash": "48dd99be25a4a936956ac52df6dbcac7ead8b927260e2457703a53d6438e084c",
+      "samples": 24,
+      "variants": {
+        "batch_tree": {
+          "train_mse": 0.0,
+          "seconds": 0.0004994999908376485
+        },
+        "single_tree": {
+          "train_mse": 2.9805209601518117e-09,
+          "seconds": 0.05834462499478832,
+          "diagnostics": {
+            "prediction_0": {
+              "status": "ok",
+              "rhat": 1.0240684700070317,
+              "ess_bulk": 80.0,
+              "ess_tail": 80.0,
+              "draws_used": 80
+            },
+            "prediction_1": {
+              "status": "ok",
+              "rhat": 1.0240684700070317,
+              "ess_bulk": 80.0,
+              "ess_tail": 80.0,
+              "draws_used": 80
+            },
+            "prediction_2": {
+              "status": "ok",
+              "rhat": 1.0240684700070317,
+              "ess_bulk": 80.0,
+              "ess_tail": 80.0,
+              "draws_used": 80
+            },
+            "prediction_3": {
+              "status": "ok",
+              "rhat": 1.0240684700070317,
+              "ess_bulk": 80.0,
+              "ess_tail": 80.0,
+              "draws_used": 80
+            },
+            "sigma2": {
+              "status": "ok",
+              "rhat": 0.95748106198531,
+              "ess_bulk": 80.0,
+              "ess_tail": 80.0,
+              "draws_used": 80
+            },
+            "total_leaves": {
+              "status": "constant",
+              "rhat": null,
+              "ess_bulk": null,
+              "ess_tail": null,
+              "draws_used": 80
+            },
+            "max_depth": {
+              "status": "constant",
+              "rhat": null,
+              "ess_bulk": null,
+              "ess_tail": null,
+              "draws_used": 80
+            }
+          },
+          "all_meet_rhat_1_01_ess_400": false
+        },
+        "bart": {
+          "train_mse": 9.736127769858617e-09,
+          "seconds": 0.1619782499910798,
+          "diagnostics": {
+            "prediction_0": {
+              "status": "ok",
+              "rhat": 1.0432391221399544,
+              "ess_bulk": 80.0,
+              "ess_tail": 80.0,
+              "draws_used": 80
+            },
+            "prediction_1": {
+              "status": "ok",
+              "rhat": 1.0432391221399544,
+              "ess_bulk": 80.0,
+              "ess_tail": 80.0,
+              "draws_used": 80
+            },
+            "prediction_2": {
+              "status": "ok",
+              "rhat": 1.0432391221399544,
+              "ess_bulk": 80.0,
+              "ess_tail": 80.0,
+              "draws_used": 80
+            },
+            "prediction_3": {
+              "status": "ok",
+              "rhat": 1.0432391221399544,
+              "ess_bulk": 80.0,
+              "ess_tail": 80.0,
+              "draws_used": 80
+            },
+            "sigma2": {
+              "status": "ok",
+              "rhat": 0.990676353173842,
+              "ess_bulk": 80.0,
+              "ess_tail": 58.26639491667667,
+              "draws_used": 80
+            },
+            "total_leaves": {
+              "status": "constant",
+              "rhat": null,
+              "ess_bulk": null,
+              "ess_tail": null,
+              "draws_used": 80
+            },
+            "max_depth": {
+              "status": "constant",
+              "rhat": null,
+              "ess_bulk": null,
+              "ess_tail": null,
+              "draws_used": 80
+            }
+          },
+          "all_meet_rhat_1_01_ess_400": false
+        },
+        "bart_revision": {
+          "train_mse": 6.516594772951927e-09,
+          "seconds": 0.08628216598299332,
+          "diagnostics": {
+            "prediction_0": {
+              "status": "ok",
+              "rhat": 1.0193514612032506,
+              "ess_bulk": 80.0,
+              "ess_tail": 80.0,
+              "draws_used": 80
+            },
+            "prediction_1": {
+              "status": "ok",
+              "rhat": 1.0193514612032506,
+              "ess_bulk": 80.0,
+              "ess_tail": 80.0,
+              "draws_used": 80
+            },
+            "prediction_2": {
+              "status": "ok",
+              "rhat": 1.0193514612032506,
+              "ess_bulk": 80.0,
+              "ess_tail": 80.0,
+              "draws_used": 80
+            },
+            "prediction_3": {
+              "status": "ok",
+              "rhat": 1.0193514612032506,
+              "ess_bulk": 80.0,
+              "ess_tail": 80.0,
+              "draws_used": 80
+            },
+            "sigma2": {
+              "status": "ok",
+              "rhat": 1.010519824700119,
+              "ess_bulk": 71.69179798907939,
+              "ess_tail": 80.0,
+              "draws_used": 80
+            },
+            "total_leaves": {
+              "status": "constant",
+              "rhat": null,
+              "ess_bulk": null,
+              "ess_tail": null,
+              "draws_used": 80
+            },
+            "max_depth": {
+              "status": "constant",
+              "rhat": null,
+              "ess_bulk": null,
+              "ess_tail": null,
+              "draws_used": 80
+            }
+          },
+          "all_meet_rhat_1_01_ess_400": false
+        },
+        "bart_longer": {
+          "train_mse": 3.6870513123637686e-10,
+          "seconds": 0.3231209169898648,
+          "diagnostics": {
+            "prediction_0": {
+              "status": "ok",
+              "rhat": 1.0250329610440139,
+              "ess_bulk": 160.0,
+              "ess_tail": 147.0136056876827,
+              "draws_used": 160
+            },
+            "prediction_1": {
+              "status": "ok",
+              "rhat": 1.0250329610440139,
+              "ess_bulk": 160.0,
+              "ess_tail": 147.0136056876827,
+              "draws_used": 160
+            },
+            "prediction_2": {
+              "status": "ok",
+              "rhat": 1.0250329610440139,
+              "ess_bulk": 160.0,
+              "ess_tail": 147.0136056876827,
+              "draws_used": 160
+            },
+            "prediction_3": {
+              "status": "ok",
+              "rhat": 1.0250329610440139,
+              "ess_bulk": 160.0,
+              "ess_tail": 147.0136056876827,
+              "draws_used": 160
+            },
+            "sigma2": {
+              "status": "ok",
+              "rhat": 1.003927407833699,
+              "ess_bulk": 160.0,
+              "ess_tail": 71.21311475409831,
+              "draws_used": 160
+            },
+            "total_leaves": {
+              "status": "constant",
+              "rhat": null,
+              "ess_bulk": null,
+              "ess_tail": null,
+              "draws_used": 160
+            },
+            "max_depth": {
+              "status": "constant",
+              "rhat": null,
+              "ess_bulk": null,
+              "ess_tail": null,
+              "draws_used": 160
+            }
+          },
+          "all_meet_rhat_1_01_ess_400": false
+        }
+      }
+    }
+  },
+  "interpretation": "Fixed training dataset and targets; MSE is in-sample, not a validation score."
+}

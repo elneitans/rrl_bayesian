@@ -1,0 +1,122 @@
+{
+  "milestone": "H5",
+  "environment": "two_step_v1",
+  "seeds": [
+    {
+      "seed": 11,
+      "interactions": 600,
+      "fits": 6,
+      "checkpoint_step": 302,
+      "resume_exact": true,
+      "q": [
+        [
+          0.799999745666362,
+          0.3999998185997861
+        ],
+        [
+          0.9999999904345593,
+          -0.1999996341122845
+        ]
+      ],
+      "optimal_q": [
+        [
+          0.8,
+          0.4
+        ],
+        [
+          1.0,
+          -0.2
+        ]
+      ],
+      "max_abs_q_error": 3.6588771551437915e-07,
+      "config_hash": "a25b8a7086ee07417f533e57d5ccfbe62317a99d92b36077a666551519103f64",
+      "seconds": 4.6712867919995915
+    },
+    {
+      "seed": 22,
+      "interactions": 600,
+      "fits": 6,
+      "checkpoint_step": 303,
+      "resume_exact": true,
+      "q": [
+        [
+          0.8000001527720836,
+          0.4000003222638762
+        ],
+        [
+          1.0000000864952174,
+          -0.19999951028393126
+        ]
+      ],
+      "optimal_q": [
+        [
+          0.8,
+          0.4
+        ],
+        [
+          1.0,
+          -0.2
+        ]
+      ],
+      "max_abs_q_error": 4.89716068752255e-07,
+      "config_hash": "0fb3655a1e86959479cfdea43bfdd5ec16ff06b4a5fa44b4bb3ca27cd85e732e",
+      "seconds": 4.737301292014308
+    },
+    {
+      "seed": 33,
+      "interactions": 600,
+      "fits": 6,
+      "checkpoint_step": 302,
+      "resume_exact": true,
+      "q": [
+        [
+          0.7999991048734847,
+          0.3999998421008881
+        ],
+        [
+          1.0000001888125898,
+          -0.20000022850237606
+        ]
+      ],
+      "optimal_q": [
+        [
+          0.8,
+          0.4
+        ],
+        [
+          1.0,
+          -0.2
+        ]
+      ],
+      "max_abs_q_error": 8.951265153545052e-07,
+      "config_hash": "4f20f4b91078a6524d3217c92df2c399bf559fdc902a7f125e94a43abbaa0c92",
+      "seconds": 6.512829084007535
+    }
+  ],
+  "criteria": {
+    "max_abs_q_error_below": 0.12,
+    "optimal_actions": [
+      0,
+      0
+    ],
+    "resume": "identical transitions, RNG, targets and posterior draws"
+  },
+  "limitations": [
+    "Controlled MDP only; Atari pilot belongs to H6.",
+    "No claim of Q-learning convergence or general MCMC convergence.",
+    "Exact resume is checked on the same software/runtime."
+  ],
+  "validation_date": "2026-09-17",
+  "tests": {
+    "tests": 100,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 21.992,
+    "report": "results/h5_full_tests.xml"
+  },
+  "checks": {
+    "ruff": "passed",
+    "legacy_matches_cf58dc7": true
+  }
+}
