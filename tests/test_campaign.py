@@ -219,8 +219,12 @@ def test_campaign_cli_frozen_protocol_and_separate_test(tmp_path):
     assert result.returncode == 0, result.stdout + result.stderr
     assert len(list(output.glob("*/*/*/test.json"))) == 3
     assert all(p.read_bytes() == data for p, data in checkpoints.items())
+    saved = {p: (p.read_bytes(), p.stat().st_mtime_ns)
+             for p in output.glob("*/*/*/test.json")}
     result = run("--output", output, "--stage", "test")
-    assert result.returncode != 0 and "already exist" in result.stderr
+    assert result.returncode == 0, result.stdout + result.stderr
+    assert all((p.read_bytes(), p.stat().st_mtime_ns) == value
+               for p, value in saved.items())
     frozen = output / "protocol.json"
     frozen.write_text(frozen.read_text() + "\n")
     result = run("--output", output, "--stage", "report-test")

@@ -14,8 +14,12 @@ un piloto con baseline pareado y diagnóstico de mezcla. Usa el extractor visual
 actual mediante un contrato de objetos preparado para un futuro adaptador
 OCAtari. H4 añade General BART lineal y change/swap verificados. H7 implementa
 controles, ablaciones y campaña multijuego con test separado; se ejecutó una
-campaña corta de desarrollo. OCAtari y el estudio de eficacia a escala siguen
-pendientes; los diagnósticos cortos no prueban convergencia de las posteriores.
+campaña corta de desarrollo. OCAtari Pong dispone del backend RAM, relaciones
+versionadas y entrenamiento/evaluación/reanudación por CLI (pasos 0–5). Pasaron
+la matriz de snapshots entre procesos y el smoke de 2.048 interacciones/8 fits.
+Los diagnósticos MCMC detectaron mezcla insuficiente en cinco de seis acciones;
+el piloto y el estudio de eficacia siguen sin ejecutarse.
+Los diagnósticos cortos no prueban convergencia de las posteriores.
 
 - [Guía de H0/H1 y validación](docs/h0_h1.md)
 - [Guía de H2 y validación matemática](docs/h2.md)
@@ -24,6 +28,8 @@ pendientes; los diagnósticos cortos no prueban convergencia de las posteriores.
 - [Guía de H6: piloto Atari y contrato para OCAtari](docs/h6.md)
 - [Guía de H4: General BART y revisión estructural](docs/h4.md)
 - [Guía de H7: controles, ablaciones y campaña multijuego](docs/h7.md)
+- [OCAtari Pong: backend, relaciones, CLI y evidencia de pasos 0–5](docs/ocatari_pong.md)
+- [Comparación Pong: campaña pareada y auditoría de readiness, pasos A–E](docs/pong_comparison.md)
 - [Plan de implementación versionado](plan_implementacion_rrtl_bart.md)
 - [Configuración de prueba corta](configs/breakout_smoke.json)
 

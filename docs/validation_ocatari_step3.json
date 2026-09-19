@@ -1,0 +1,381 @@
+{
+  "scope": "ocatari_pong_plan_step_3",
+  "status": "passed",
+  "timestamp_utc": "2026-09-18T02:39:16.222684+00:00",
+  "python": "3.11.7",
+  "executable": "/private/tmp/rrtl-ocatari-step01-env/bin/python",
+  "configuration": "configs/bayesian_pong_ocatari_integration.json",
+  "artifacts": "results/ocatari_step3_final",
+  "test_suite": {
+    "tests": 247,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 46.632,
+    "command": [
+      "/private/tmp/rrtl-ocatari-step01-env/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "--junitxml=results/ocatari_step3_final/tests.xml"
+    ]
+  },
+  "training": {
+    "interactions": 64,
+    "fits": 4,
+    "training_seconds": 0.5032682500004739,
+    "finite_data": true,
+    "checkpoint_bytes": 80248
+  },
+  "resume": {
+    "interactions": 80,
+    "additional_interactions": 16,
+    "fits": 5,
+    "training_seconds": 0.12093170900152472,
+    "finite_data": true
+  },
+  "cli": {
+    "commands": [
+      {
+        "command": [
+          "/private/tmp/rrtl-ocatari-step01-env/bin/python",
+          "train_atari.py",
+          "--checkpoint",
+          "/Users/natanzamorano/Documents/Universidad/capstone/rrl_bayesian/results/ocatari_step3_final/train/final_checkpoint.rrtl",
+          "--eval-split",
+          "validation"
+        ],
+        "returncode": 0,
+        "stdout": "{\"evaluation\": \"/Users/natanzamorano/Documents/Universidad/capstone/rrl_bayesian/results/ocatari_step3_final/train/validation.json\"}\n",
+        "stderr": "A.L.E: Arcade Learning Environment (version 0.10.2+c9d4b19)\n[Powered by Stella]\n"
+      },
+      {
+        "command": [
+          "/private/tmp/rrtl-ocatari-step01-env/bin/python",
+          "train_atari.py",
+          "--resume",
+          "/Users/natanzamorano/Documents/Universidad/capstone/rrl_bayesian/results/ocatari_step3_final/train/final_checkpoint.rrtl",
+          "--output",
+          "/Users/natanzamorano/Documents/Universidad/capstone/rrl_bayesian/results/ocatari_step3_final/resumed",
+          "--steps",
+          "16",
+          "--eval-split",
+          "none"
+        ],
+        "returncode": 0,
+        "stdout": "{\"output\": \"/Users/natanzamorano/Documents/Universidad/capstone/rrl_bayesian/results/ocatari_step3_final/resumed\", \"seconds\": 0.12093170900152472, \"interactions\": 80}\n",
+        "stderr": "A.L.E: Arcade Learning Environment (version 0.10.2+c9d4b19)\n[Powered by Stella]\n"
+      },
+      {
+        "command": [
+          "/private/tmp/rrtl-ocatari-step01-env/bin/python",
+          "train_atari.py",
+          "--config",
+          "configs/bayesian_pong_ocatari_integration.json",
+          "--variant",
+          "corrected",
+          "--output",
+          "/Users/natanzamorano/Documents/Universidad/capstone/rrl_bayesian/results/ocatari_step3_final/rejected"
+        ],
+        "returncode": 2,
+        "stdout": "",
+        "stderr": "usage: train_atari.py [-h]\n                      [--config CONFIG | --resume RESUME | --checkpoint CHECKPOINT]\n                      [--variant {bayesian,corrected}] [--output OUTPUT]\n                      [--steps STEPS] [--seed SEED]\n                      [--eval-split {validation,test,none}]\ntrain_atari.py: error: corrected supports only legacy visual environments, not OCAtari\n"
+      }
+    ],
+    "checkpoint_sha256": "51c28fefb4d6ac20be701a21258fb7b7f9160ffb1632d00fa8e3160d6e3fccea",
+    "checkpoint_unchanged": true,
+    "corrected_output_absent": true,
+    "test_not_evaluated": true
+  },
+  "training_command": [
+    "/private/tmp/rrtl-ocatari-step01-env/bin/python",
+    "train_atari.py",
+    "--config",
+    "configs/bayesian_pong_ocatari_integration.json",
+    "--output",
+    "results/ocatari_step3_final/train",
+    "--eval-split",
+    "none"
+  ],
+  "runtime_environment": {
+    "backend": "ocatari_ram_v1",
+    "compatibility_id": "ocatari_2.2.1_gymnasium_1.1.1_ale_0.10.2_v1",
+    "env_id": "ALE/Pong-v5",
+    "versions": {
+      "ocatari": "2.2.1",
+      "gymnasium": "1.1.1",
+      "ale-py": "0.10.2"
+    },
+    "source_hashes": {
+      "ocatari.core": "cae7f62813e50f783d702ed8caf079ccfdc7b0b07e009b2b73be8740e6e3eac0",
+      "ocatari.ram.pong": "ae84b42c4d12750c165bd004d9f1b3b36a775047b60a7991d6510e9940a3811b",
+      "ocatari.ram.game_objects": "765e8ebc17509e1a73f38c5d5b25e89d4a8cb37916241498daeab3691cdab8c6",
+      "ocatari.ram.extract_ram_info": "5d6b41941a502e847912d54c55470646d86586d8697a9ba4645979cf32aeabfe",
+      "ale_py.env": "da1c03632043affbff49f84ebb8e496daca707488fb463ec9f500fc6a32b1cee",
+      "bayesian_rrtl.ocatari_backend": "c67e70ef29ab432599886461e12c65742cbc95f2cad5ad00293564d8e8e341c2",
+      "bayesian_rrtl.games.pong": "413681aa1064c55b574adcb86466d00002d9c40c8651d17eb5ae63aede8c7ad4"
+    },
+    "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+    "actions": [
+      "NOOP",
+      "FIRE",
+      "RIGHT",
+      "LEFT",
+      "RIGHTFIRE",
+      "LEFTFIRE"
+    ],
+    "mode": "ram",
+    "hud": false,
+    "obs_mode": "ori",
+    "buffers": [],
+    "render_mode": null,
+    "reset_policy": "none",
+    "frameskip": 4,
+    "repeat_action_probability": 0.0,
+    "full_action_space": false,
+    "max_episode_steps": 120,
+    "relations": {
+      "relation_schema": "pong_relational_v1",
+      "config": {
+        "representation": "comparative",
+        "include_incomplete_states": true,
+        "coordinates": "pixel_centers_top_left_x_right_y_down",
+        "spatial_tolerance": 4,
+        "temporal_tolerance": 0,
+        "contact": "bbox_overlap_or_touch_both_axes",
+        "history": "previous_decision_clear_before_nonzero_raw_reward"
+      },
+      "catalog_hash": "fd40d7f407a3ea2b3634712e212e0d35c591626e41f8fbe3d64ce8073ff2de42"
+    },
+    "catalog": {
+      "version": 1,
+      "catalog": [
+        {
+          "type": "comparative",
+          "name": "x",
+          "obj1": "ball_t",
+          "obj2": "ball_t-1",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "x",
+          "obj1": "ball_t",
+          "obj2": "enemy_t",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "x",
+          "obj1": "enemy_t",
+          "obj2": "enemy_t-1",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "x",
+          "obj1": "player_t",
+          "obj2": "ball_t",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "x",
+          "obj1": "player_t",
+          "obj2": "enemy_t",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "x",
+          "obj1": "player_t",
+          "obj2": "player_t-1",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "y",
+          "obj1": "ball_t",
+          "obj2": "ball_t-1",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "y",
+          "obj1": "ball_t",
+          "obj2": "enemy_t",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "y",
+          "obj1": "enemy_t",
+          "obj2": "enemy_t-1",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "y",
+          "obj1": "player_t",
+          "obj2": "ball_t",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "y",
+          "obj1": "player_t",
+          "obj2": "enemy_t",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "y",
+          "obj1": "player_t",
+          "obj2": "player_t-1",
+          "obj3": null
+        },
+        {
+          "type": "logical",
+          "name": "incontact",
+          "obj1": "ball_t",
+          "obj2": "enemy_t",
+          "obj3": null
+        },
+        {
+          "type": "logical",
+          "name": "incontact",
+          "obj1": "player_t",
+          "obj2": "ball_t",
+          "obj3": null
+        },
+        {
+          "type": "logical",
+          "name": "present",
+          "obj1": "ball_t",
+          "obj2": null,
+          "obj3": null
+        },
+        {
+          "type": "logical",
+          "name": "present",
+          "obj1": "ball_t-1",
+          "obj2": null,
+          "obj3": null
+        },
+        {
+          "type": "logical",
+          "name": "present",
+          "obj1": "enemy_t",
+          "obj2": null,
+          "obj3": null
+        },
+        {
+          "type": "logical",
+          "name": "present",
+          "obj1": "enemy_t-1",
+          "obj2": null,
+          "obj3": null
+        },
+        {
+          "type": "logical",
+          "name": "present",
+          "obj1": "player_t",
+          "obj2": null,
+          "obj3": null
+        },
+        {
+          "type": "logical",
+          "name": "present",
+          "obj1": "player_t-1",
+          "obj2": null,
+          "obj3": null
+        }
+      ],
+      "catalog_hash": "fd40d7f407a3ea2b3634712e212e0d35c591626e41f8fbe3d64ce8073ff2de42"
+    }
+  },
+  "environment": {
+    "game": "Pong",
+    "extractor": "ocatari_ram_v1",
+    "representation": "comparative",
+    "include_incomplete_states": true,
+    "frameskip": 4,
+    "repeat_action_probability": 0.0,
+    "max_episode_steps": 120,
+    "env_id": "ALE/Pong-v5",
+    "relation_schema": "pong_relational_v1",
+    "reward_transform": "sign",
+    "reset_policy": "none"
+  },
+  "validation_only": [
+    {
+      "seed": 310001,
+      "return": -2.0,
+      "steps": 120,
+      "terminated": false,
+      "truncated": true
+    },
+    {
+      "seed": 310002,
+      "return": -2.0,
+      "steps": 120,
+      "terminated": false,
+      "truncated": true
+    }
+  ],
+  "profile": {
+    "backend_step_seconds": 0.025264667990995804,
+    "backend_reset_seconds": 0.054158165999979246,
+    "object_conversion_seconds": 0.0019215399988752324,
+    "relations_seconds": 0.002877497992813005,
+    "frames_extracted": 81,
+    "empty_states": 0
+  },
+  "algorithm_and_legacy_files_unchanged_from_head": [
+    "bayesian_rrtl/training.py",
+    "bayesian_rrtl/agent.py",
+    "bayesian_rrtl/targets.py",
+    "bayesian_rrtl/replay.py",
+    "bayesian_rrtl/priors.py",
+    "bayesian_rrtl/sampler.py",
+    "bayesian_rrtl/ensemble.py",
+    "bayesian_rrtl/general_bart.py",
+    "preprocessing.py",
+    "relational_regresion_tree.py",
+    "utilities.py",
+    "train_and_test.py",
+    "configs/campaign_h7_development.json"
+  ],
+  "criteria": {
+    "config_defaults_and_legacy_serialization": "passed",
+    "registry_factory_selection": "passed",
+    "real_action_catalog_validation": "passed",
+    "reward_sign_and_raw_return": "passed",
+    "terminal_truncation_bootstrap_and_point": "passed",
+    "cli_train_evaluate_resume": "passed",
+    "corrected_rejected_before_output": "passed",
+    "v1_legacy_compatibility": "passed",
+    "v2_snapshot_and_100_future_steps": "passed",
+    "next_step_truncation_restored": "passed",
+    "h5_rng_replay_targets_draws_continuity": "passed",
+    "cli_resume_matches_local_continuation": "passed",
+    "save_does_not_force_fit": "passed",
+    "checkpoint_unchanged_by_evaluation": "passed"
+  },
+  "not_run": [
+    "full_step4_boundary_matrix",
+    "100_actions_between_processes",
+    "step5_2048_training_smoke",
+    "step5_mcmc_diagnostics",
+    "test_evaluation",
+    "efficacy_campaign"
+  ],
+  "source_hashes": {
+    "bayesian_rrtl/atari.py": "e100639a5817cd4d142287f7ed03e5ed438a1172fe1332e4e6857414b9130d0a",
+    "bayesian_rrtl/ocatari_backend.py": "c67e70ef29ab432599886461e12c65742cbc95f2cad5ad00293564d8e8e341c2",
+    "bayesian_rrtl/game_registry.py": "fc9a68baa9cceb54704c6724fea6edf533d96a0a3d2d2648dbd2d079234db109",
+    "bayesian_rrtl/games/pong.py": "413681aa1064c55b574adcb86466d00002d9c40c8651d17eb5ae63aede8c7ad4",
+    "train_atari.py": "b4b412559a811d6feacfad75f10aef5a1bfda6a852e5c8d0ff6668d78ee86dd4",
+    "tests/test_ocatari_integration.py": "8c43be292d2d71da0a3f9fa67575ef4b679a6bff9785e615570401c186ae0335"
+  }
+}

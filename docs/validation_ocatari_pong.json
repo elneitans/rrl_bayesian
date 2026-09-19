@@ -1,0 +1,2379 @@
+{
+  "scope": "ocatari_pong_steps_4_5",
+  "timestamp_utc": "2026-09-18T02:46:18.047708+00:00",
+  "criteria": {
+    "truncation": {
+      "status": "passed",
+      "initial_frame": {
+        "objects": [
+          {
+            "identity": "ball",
+            "present": false,
+            "bbox": null
+          },
+          {
+            "identity": "enemy",
+            "present": false,
+            "bbox": null
+          },
+          {
+            "identity": "player",
+            "present": true,
+            "bbox": [
+              140.0,
+              96.0,
+              4.0,
+              15.0
+            ]
+          }
+        ],
+        "width": 160,
+        "height": 210
+      },
+      "step": {
+        "frame": {
+          "objects": [
+            {
+              "identity": "ball",
+              "present": false,
+              "bbox": null
+            },
+            {
+              "identity": "enemy",
+              "present": false,
+              "bbox": null
+            },
+            {
+              "identity": "player",
+              "present": true,
+              "bbox": [
+                140.0,
+                96.0,
+                4.0,
+                15.0
+              ]
+            }
+          ],
+          "width": 160,
+          "height": 210
+        },
+        "raw_reward": 0.0,
+        "terminated": false,
+        "truncated": true
+      }
+    },
+    "natural_terminal": {
+      "status": "passed",
+      "seed": 41,
+      "limit": 27000,
+      "steps": 931,
+      "actions": [
+        "NOOP",
+        "FIRE",
+        "RIGHT",
+        "LEFT",
+        "RIGHTFIRE",
+        "LEFTFIRE"
+      ],
+      "action_counts": [
+        146,
+        154,
+        142,
+        147,
+        184,
+        158
+      ],
+      "positive_points": 0,
+      "negative_points": 21,
+      "raw_return": -21.0,
+      "present_frames": {
+        "ball": 613,
+        "enemy": 859,
+        "player": 931
+      },
+      "distinct_boxes": {
+        "ball": 264,
+        "enemy": 87,
+        "player": 151
+      },
+      "terminated": true,
+      "truncated": false,
+      "initial_frame_unchanged": true,
+      "final_frame": {
+        "objects": [
+          {
+            "identity": "ball",
+            "present": true,
+            "bbox": [
+              156.0,
+              37.0,
+              2.0,
+              4.0
+            ]
+          },
+          {
+            "identity": "enemy",
+            "present": true,
+            "bbox": [
+              16.0,
+              35.0,
+              4.0,
+              15.0
+            ]
+          },
+          {
+            "identity": "player",
+            "present": true,
+            "bbox": [
+              140.0,
+              34.0,
+              4.0,
+              11.0
+            ]
+          }
+        ],
+        "width": 160,
+        "height": 210
+      },
+      "trajectory_sha256": "4ace9953e7e81cf562b5859fe0eaee68e9f986f3289b12edabe6c8525cc7bea4",
+      "seconds": 0.35535587500089605
+    },
+    "resume": {
+      "status": "passed",
+      "worker_command": [
+        "/private/tmp/rrtl-ocatari-step01-env/bin/python",
+        "-m",
+        "experiments.validate_ocatari_resume",
+        "--worker",
+        "/Users/natanzamorano/Documents/Universidad/capstone/rrl_bayesian/results/ocatari_pong_validation_step45/resume/cases.pkl",
+        "--output",
+        "/Users/natanzamorano/Documents/Universidad/capstone/rrl_bayesian/results/ocatari_pong_validation_step45/resume/child.json"
+      ],
+      "cases": {
+        "mid_rally": {
+          "status": "passed",
+          "snapshot_after_decisions": 41,
+          "compared_steps": 128,
+          "objects_facts_flags_rewards_exact": true,
+          "detector_temporal_fields_exact": true,
+          "max_deviation": 0,
+          "trajectory_sha256": "a0264df6fc541636943b784685c9b31db93e297d013764b0e826c21707647bde"
+        },
+        "before_point": {
+          "status": "passed",
+          "snapshot_after_decisions": 183,
+          "compared_steps": 128,
+          "objects_facts_flags_rewards_exact": true,
+          "detector_temporal_fields_exact": true,
+          "max_deviation": 0,
+          "trajectory_sha256": "b535d95f2ed9b6c4290557f4de7ca7e9e0fe1df90a9732b009787b5a20dd1dd1"
+        },
+        "after_point": {
+          "status": "passed",
+          "snapshot_after_decisions": 184,
+          "compared_steps": 128,
+          "objects_facts_flags_rewards_exact": true,
+          "detector_temporal_fields_exact": true,
+          "max_deviation": 0,
+          "trajectory_sha256": "5ff0cda2c4e701e2caf4a9625519f70f0c92487d5d13b0106615f4769589a011"
+        },
+        "before_absence": {
+          "status": "passed",
+          "snapshot_after_decisions": 184,
+          "compared_steps": 128,
+          "objects_facts_flags_rewards_exact": true,
+          "detector_temporal_fields_exact": true,
+          "max_deviation": 0,
+          "trajectory_sha256": "5ff0cda2c4e701e2caf4a9625519f70f0c92487d5d13b0106615f4769589a011"
+        },
+        "absent": {
+          "status": "passed",
+          "snapshot_after_decisions": 185,
+          "compared_steps": 128,
+          "objects_facts_flags_rewards_exact": true,
+          "detector_temporal_fields_exact": true,
+          "max_deviation": 0,
+          "trajectory_sha256": "605d2ee1e6320ea480b18b6aff8c56251588dd075a8ac75fc866d43590905291"
+        },
+        "before_reappearance": {
+          "status": "passed",
+          "snapshot_after_decisions": 199,
+          "compared_steps": 128,
+          "objects_facts_flags_rewards_exact": true,
+          "detector_temporal_fields_exact": true,
+          "max_deviation": 0,
+          "trajectory_sha256": "c17c030d6c7f6c0d3ed6aa4d87d0db32bf1e461e10641251aeb6ad66433d5e2b"
+        },
+        "reappeared": {
+          "status": "passed",
+          "snapshot_after_decisions": 200,
+          "compared_steps": 128,
+          "objects_facts_flags_rewards_exact": true,
+          "detector_temporal_fields_exact": true,
+          "max_deviation": 0,
+          "trajectory_sha256": "657c62cacc8b2ef219af0a46e986c1676d1e1bd9bb596fbcbd140d5cca5ffdda"
+        },
+        "before_truncation": {
+          "status": "passed",
+          "snapshot_after_decisions": 41,
+          "compared_steps": 1,
+          "objects_facts_flags_rewards_exact": true,
+          "detector_temporal_fields_exact": true,
+          "max_deviation": 0,
+          "trajectory_sha256": "c73b446304aabb301e1a05945956f0815b68c5b37ac0744858cb73ee2e189e57"
+        }
+      },
+      "seconds": 4.34648579199893
+    },
+    "smoke": {
+      "status": "passed",
+      "reason": null,
+      "budget_seconds": 600,
+      "seconds": 25.50652983299915,
+      "command": [
+        "/private/tmp/rrtl-ocatari-step01-env/bin/python",
+        "-m",
+        "experiments.validate_ocatari_pong",
+        "--worker",
+        "--output",
+        "/Users/natanzamorano/Documents/Universidad/capstone/rrl_bayesian/results/ocatari_pong_validation_step45/smoke"
+      ],
+      "log": "/Users/natanzamorano/Documents/Universidad/capstone/rrl_bayesian/results/ocatari_pong_validation_step45/smoke.log",
+      "results": {
+        "status": "passed",
+        "interactions": 2048,
+        "fits": 8,
+        "fit_interactions": [
+          256,
+          512,
+          768,
+          1024,
+          1280,
+          1536,
+          1792,
+          2048
+        ],
+        "finite_q_targets_rewards": true,
+        "training_seconds": 23.987596375000066,
+        "checkpoint": "/Users/natanzamorano/Documents/Universidad/capstone/rrl_bayesian/results/ocatari_pong_validation_step45/smoke/final_checkpoint.rrtl",
+        "checkpoint_bytes": 1082539,
+        "checkpoint_reloaded": true,
+        "distinct_encoded_states": 217,
+        "action_counts": {
+          "NOOP": 368,
+          "FIRE": 354,
+          "RIGHT": 308,
+          "LEFT": 344,
+          "RIGHTFIRE": 321,
+          "LEFTFIRE": 353
+        },
+        "present_frames": {
+          "player": 2048,
+          "ball": 1357,
+          "enemy": 1879
+        },
+        "missing_fact_counts": [
+          760,
+          691,
+          227,
+          691,
+          169,
+          43,
+          760,
+          691,
+          227,
+          691,
+          169,
+          43,
+          691,
+          691,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "catalog": {
+          "version": 1,
+          "catalog": [
+            {
+              "type": "comparative",
+              "name": "x",
+              "obj1": "ball_t",
+              "obj2": "ball_t-1",
+              "obj3": null
+            },
+            {
+              "type": "comparative",
+              "name": "x",
+              "obj1": "ball_t",
+              "obj2": "enemy_t",
+              "obj3": null
+            },
+            {
+              "type": "comparative",
+              "name": "x",
+              "obj1": "enemy_t",
+              "obj2": "enemy_t-1",
+              "obj3": null
+            },
+            {
+              "type": "comparative",
+              "name": "x",
+              "obj1": "player_t",
+              "obj2": "ball_t",
+              "obj3": null
+            },
+            {
+              "type": "comparative",
+              "name": "x",
+              "obj1": "player_t",
+              "obj2": "enemy_t",
+              "obj3": null
+            },
+            {
+              "type": "comparative",
+              "name": "x",
+              "obj1": "player_t",
+              "obj2": "player_t-1",
+              "obj3": null
+            },
+            {
+              "type": "comparative",
+              "name": "y",
+              "obj1": "ball_t",
+              "obj2": "ball_t-1",
+              "obj3": null
+            },
+            {
+              "type": "comparative",
+              "name": "y",
+              "obj1": "ball_t",
+              "obj2": "enemy_t",
+              "obj3": null
+            },
+            {
+              "type": "comparative",
+              "name": "y",
+              "obj1": "enemy_t",
+              "obj2": "enemy_t-1",
+              "obj3": null
+            },
+            {
+              "type": "comparative",
+              "name": "y",
+              "obj1": "player_t",
+              "obj2": "ball_t",
+              "obj3": null
+            },
+            {
+              "type": "comparative",
+              "name": "y",
+              "obj1": "player_t",
+              "obj2": "enemy_t",
+              "obj3": null
+            },
+            {
+              "type": "comparative",
+              "name": "y",
+              "obj1": "player_t",
+              "obj2": "player_t-1",
+              "obj3": null
+            },
+            {
+              "type": "logical",
+              "name": "incontact",
+              "obj1": "ball_t",
+              "obj2": "enemy_t",
+              "obj3": null
+            },
+            {
+              "type": "logical",
+              "name": "incontact",
+              "obj1": "player_t",
+              "obj2": "ball_t",
+              "obj3": null
+            },
+            {
+              "type": "logical",
+              "name": "present",
+              "obj1": "ball_t",
+              "obj2": null,
+              "obj3": null
+            },
+            {
+              "type": "logical",
+              "name": "present",
+              "obj1": "ball_t-1",
+              "obj2": null,
+              "obj3": null
+            },
+            {
+              "type": "logical",
+              "name": "present",
+              "obj1": "enemy_t",
+              "obj2": null,
+              "obj3": null
+            },
+            {
+              "type": "logical",
+              "name": "present",
+              "obj1": "enemy_t-1",
+              "obj2": null,
+              "obj3": null
+            },
+            {
+              "type": "logical",
+              "name": "present",
+              "obj1": "player_t",
+              "obj2": null,
+              "obj3": null
+            },
+            {
+              "type": "logical",
+              "name": "present",
+              "obj1": "player_t-1",
+              "obj2": null,
+              "obj3": null
+            }
+          ],
+          "catalog_hash": "fd40d7f407a3ea2b3634712e212e0d35c591626e41f8fbe3d64ce8073ff2de42"
+        },
+        "positive_points": 1,
+        "negative_points": 42,
+        "terminated": 1,
+        "truncated": 1,
+        "training_seeds": [
+          957771126,
+          305613586,
+          2090826948
+        ],
+        "profile": {
+          "encoding": {
+            "calls": 8191,
+            "self_seconds": 0.23737579700000003,
+            "cumulative_seconds": 4.682340541
+          },
+          "targets": {
+            "calls": 48,
+            "self_seconds": 0.0025934950000000003,
+            "cumulative_seconds": 0.275552043
+          },
+          "proposals": {
+            "calls": 9600,
+            "self_seconds": 0.028726249000000002,
+            "cumulative_seconds": 8.160929865
+          },
+          "sweeps": {
+            "calls": 1920,
+            "self_seconds": 0.027270864000000002,
+            "cumulative_seconds": 16.712625322
+          },
+          "prediction": {
+            "calls": 846,
+            "self_seconds": 0.000748246,
+            "cumulative_seconds": 0.8102016430000001
+          },
+          "action_selection": {
+            "calls": 2048,
+            "self_seconds": 0.004733327000000001,
+            "cumulative_seconds": 1.709782262
+          },
+          "fits": {
+            "calls": 2048,
+            "self_seconds": 0.0048035560000000005,
+            "cumulative_seconds": 17.186104118
+          },
+          "note": "Instrumented training only; cumulative times are nested, not additive.",
+          "process_peak_rss_bytes": 172425216
+        },
+        "adapter_profile": {
+          "backend_step_seconds": 0.6637441490092897,
+          "backend_reset_seconds": 0.16178404300262628,
+          "object_conversion_seconds": 0.050462384988350095,
+          "relations_seconds": 0.07662062799863634,
+          "frames_extracted": 2051,
+          "empty_states": 0
+        }
+      },
+      "last_completed_block": {
+        "interaction": 2048,
+        "fits": 8,
+        "completed_episodes": 2,
+        "cumulative_raw_return": -41.0
+      }
+    },
+    "diagnostics": {
+      "status": "passed",
+      "reason": null,
+      "budget_seconds": 600,
+      "seconds": 173.82469391700033,
+      "command": [
+        "/private/tmp/rrtl-ocatari-step01-env/bin/python",
+        "-m",
+        "experiments.diagnose_atari",
+        "--checkpoint",
+        "/Users/natanzamorano/Documents/Universidad/capstone/rrl_bayesian/results/ocatari_pong_validation_step45/smoke/final_checkpoint.rrtl",
+        "--output",
+        "/Users/natanzamorano/Documents/Universidad/capstone/rrl_bayesian/results/ocatari_pong_validation_step45/diagnostics",
+        "--chains",
+        "4",
+        "--burn-in",
+        "500",
+        "--draws",
+        "1000",
+        "--seed",
+        "610001"
+      ],
+      "log": "/Users/natanzamorano/Documents/Universidad/capstone/rrl_bayesian/results/ocatari_pong_validation_step45/diagnostics.log",
+      "checkpoint_unchanged": true,
+      "results": {
+        "config_hash": "d1e2c3053bf941ce005b167d0fab6622b74131145114afdb68f4fc655c4dbf24",
+        "fit_id": 8,
+        "target_model_id": 7,
+        "chains": 4,
+        "burn_in": 500,
+        "draws": 1000,
+        "seed": 610001,
+        "actions": {
+          "NOOP": {
+            "status": "checked",
+            "samples": 64,
+            "dataset_hash": "2d6df840b3341436f764cba60d5d2e37d0fead05e0bb0006558ec6bf356033ee",
+            "posterior_data_hash": "9f2e90355f894811f036265f7fc1a2e6bc8394c039825efd42db526254f3f8ac",
+            "rhat_1_01_ess_400_all_observables": false,
+            "diagnostics": {
+              "prediction_0": {
+                "status": "ok",
+                "rhat": 1.0086122891802318,
+                "ess_bulk": 2561.738892231114,
+                "ess_tail": 3205.5158068135793,
+                "draws_used": 4000
+              },
+              "prediction_1": {
+                "status": "ok",
+                "rhat": 1.0085530113952206,
+                "ess_bulk": 2604.3173041498376,
+                "ess_tail": 3205.5158068135793,
+                "draws_used": 4000
+              },
+              "prediction_2": {
+                "status": "ok",
+                "rhat": 1.110988993974242,
+                "ess_bulk": 41.51787500641549,
+                "ess_tail": 46.77907625957341,
+                "draws_used": 4000
+              },
+              "prediction_3": {
+                "status": "ok",
+                "rhat": 1.1113446145101322,
+                "ess_bulk": 39.97205046963547,
+                "ess_tail": 45.22545075907083,
+                "draws_used": 4000
+              },
+              "prediction_4": {
+                "status": "ok",
+                "rhat": 1.1484668666607045,
+                "ess_bulk": 18.29336729666999,
+                "ess_tail": 58.31599772563382,
+                "draws_used": 4000
+              },
+              "prediction_5": {
+                "status": "ok",
+                "rhat": 1.1573075588318493,
+                "ess_bulk": 17.33853409336425,
+                "ess_tail": 48.823489034075706,
+                "draws_used": 4000
+              },
+              "prediction_6": {
+                "status": "ok",
+                "rhat": 1.2503818377542362,
+                "ess_bulk": 11.667380380991037,
+                "ess_tail": 65.22850911381194,
+                "draws_used": 4000
+              },
+              "prediction_7": {
+                "status": "ok",
+                "rhat": 1.1531099316878615,
+                "ess_bulk": 17.93396084064425,
+                "ess_tail": 55.771712452980864,
+                "draws_used": 4000
+              },
+              "sigma2": {
+                "status": "ok",
+                "rhat": 1.4245211484472686,
+                "ess_bulk": 8.171547142474608,
+                "ess_tail": 82.47332964317198,
+                "draws_used": 4000
+              },
+              "total_leaves": {
+                "status": "ok",
+                "rhat": 2.068534924728928,
+                "ess_bulk": 5.306066278380517,
+                "ess_tail": 8.252198278192136,
+                "draws_used": 4000
+              },
+              "max_depth": {
+                "status": "ok",
+                "rhat": 2.2737950098649,
+                "ess_bulk": 5.120278508680497,
+                "ess_tail": 5.090020816956173,
+                "draws_used": 4000
+              }
+            },
+            "chains": [
+              {
+                "m": 5,
+                "sweeps": 1500,
+                "burn_in": 500,
+                "retained": 1000,
+                "targets_outside_scale": 0,
+                "elapsed_seconds": 6.770890750000035,
+                "max_cache_error": null,
+                "moves": {
+                  "grow": {
+                    "selected": 3790,
+                    "impossible": 0,
+                    "accepted": 150,
+                    "rejected": 3640,
+                    "acceptance_given_possible": 0.0395778364116095
+                  },
+                  "prune": {
+                    "selected": 3710,
+                    "impossible": 2291,
+                    "accepted": 149,
+                    "rejected": 1270,
+                    "acceptance_given_possible": 0.10500352360817478
+                  },
+                  "change": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  },
+                  "swap": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  }
+                }
+              },
+              {
+                "m": 5,
+                "sweeps": 1500,
+                "burn_in": 500,
+                "retained": 1000,
+                "targets_outside_scale": 0,
+                "elapsed_seconds": 9.777598583001236,
+                "max_cache_error": null,
+                "moves": {
+                  "grow": {
+                    "selected": 3727,
+                    "impossible": 0,
+                    "accepted": 72,
+                    "rejected": 3655,
+                    "acceptance_given_possible": 0.01931848671854038
+                  },
+                  "prune": {
+                    "selected": 3773,
+                    "impossible": 1188,
+                    "accepted": 66,
+                    "rejected": 2519,
+                    "acceptance_given_possible": 0.02553191489361702
+                  },
+                  "change": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  },
+                  "swap": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  }
+                }
+              },
+              {
+                "m": 5,
+                "sweeps": 1500,
+                "burn_in": 500,
+                "retained": 1000,
+                "targets_outside_scale": 0,
+                "elapsed_seconds": 6.506289250000918,
+                "max_cache_error": null,
+                "moves": {
+                  "grow": {
+                    "selected": 3798,
+                    "impossible": 0,
+                    "accepted": 153,
+                    "rejected": 3645,
+                    "acceptance_given_possible": 0.04028436018957346
+                  },
+                  "prune": {
+                    "selected": 3702,
+                    "impossible": 2543,
+                    "accepted": 151,
+                    "rejected": 1008,
+                    "acceptance_given_possible": 0.13028472821397757
+                  },
+                  "change": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  },
+                  "swap": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  }
+                }
+              },
+              {
+                "m": 5,
+                "sweeps": 1500,
+                "burn_in": 500,
+                "retained": 1000,
+                "targets_outside_scale": 0,
+                "elapsed_seconds": 8.019382041999052,
+                "max_cache_error": null,
+                "moves": {
+                  "grow": {
+                    "selected": 3722,
+                    "impossible": 0,
+                    "accepted": 116,
+                    "rejected": 3606,
+                    "acceptance_given_possible": 0.031166039763567976
+                  },
+                  "prune": {
+                    "selected": 3778,
+                    "impossible": 1928,
+                    "accepted": 112,
+                    "rejected": 1738,
+                    "acceptance_given_possible": 0.06054054054054054
+                  },
+                  "change": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  },
+                  "swap": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  }
+                }
+              }
+            ]
+          },
+          "FIRE": {
+            "status": "checked",
+            "samples": 64,
+            "dataset_hash": "5a30b7503b4291bd206baf0c331c6cef827b42aa687cdfb95885a303babf6e58",
+            "posterior_data_hash": "2b54efcf2f7ae1005e90919693482e74452c6d40651d4be4a3abfadd2184fa8c",
+            "rhat_1_01_ess_400_all_observables": false,
+            "diagnostics": {
+              "prediction_0": {
+                "status": "ok",
+                "rhat": 1.0001532494864507,
+                "ess_bulk": 3754.7630331969335,
+                "ess_tail": 3745.8343499886555,
+                "draws_used": 4000
+              },
+              "prediction_1": {
+                "status": "ok",
+                "rhat": 1.000173113372702,
+                "ess_bulk": 3509.128587127089,
+                "ess_tail": 3379.624097859397,
+                "draws_used": 4000
+              },
+              "prediction_2": {
+                "status": "ok",
+                "rhat": 1.0001278861572207,
+                "ess_bulk": 3755.515947943934,
+                "ess_tail": 3745.8343499886555,
+                "draws_used": 4000
+              },
+              "prediction_3": {
+                "status": "ok",
+                "rhat": 1.0001369433024017,
+                "ess_bulk": 3758.958080978766,
+                "ess_tail": 3745.8343499886555,
+                "draws_used": 4000
+              },
+              "prediction_4": {
+                "status": "ok",
+                "rhat": 1.0176575925393114,
+                "ess_bulk": 3940.896544298834,
+                "ess_tail": 254.7137164851736,
+                "draws_used": 4000
+              },
+              "prediction_5": {
+                "status": "ok",
+                "rhat": 1.0176995203709998,
+                "ess_bulk": 3933.129397983133,
+                "ess_tail": 251.20584106267503,
+                "draws_used": 4000
+              },
+              "prediction_6": {
+                "status": "ok",
+                "rhat": 1.0005140292718482,
+                "ess_bulk": 4000.0,
+                "ess_tail": 4000.0,
+                "draws_used": 4000
+              },
+              "prediction_7": {
+                "status": "ok",
+                "rhat": 1.0005680302614244,
+                "ess_bulk": 4000.0,
+                "ess_tail": 4000.0,
+                "draws_used": 4000
+              },
+              "sigma2": {
+                "status": "ok",
+                "rhat": 1.0003840890960254,
+                "ess_bulk": 3695.8356905445057,
+                "ess_tail": 3320.700859722273,
+                "draws_used": 4000
+              },
+              "total_leaves": {
+                "status": "ok",
+                "rhat": 1.0403863528517086,
+                "ess_bulk": 71.82452328352703,
+                "ess_tail": 69.60617806602326,
+                "draws_used": 4000
+              },
+              "max_depth": {
+                "status": "ok",
+                "rhat": 2.7986191601500647,
+                "ess_bulk": 4.621034026058995,
+                "ess_tail": 4.621034026058995,
+                "draws_used": 4000
+              }
+            },
+            "chains": [
+              {
+                "m": 5,
+                "sweeps": 1500,
+                "burn_in": 500,
+                "retained": 1000,
+                "targets_outside_scale": 0,
+                "elapsed_seconds": 6.969470209000065,
+                "max_cache_error": null,
+                "moves": {
+                  "grow": {
+                    "selected": 3703,
+                    "impossible": 0,
+                    "accepted": 71,
+                    "rejected": 3632,
+                    "acceptance_given_possible": 0.01917364299216851
+                  },
+                  "prune": {
+                    "selected": 3797,
+                    "impossible": 2188,
+                    "accepted": 69,
+                    "rejected": 1540,
+                    "acceptance_given_possible": 0.04288377874456184
+                  },
+                  "change": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  },
+                  "swap": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  }
+                }
+              },
+              {
+                "m": 5,
+                "sweeps": 1500,
+                "burn_in": 500,
+                "retained": 1000,
+                "targets_outside_scale": 0,
+                "elapsed_seconds": 7.623150583000097,
+                "max_cache_error": null,
+                "moves": {
+                  "grow": {
+                    "selected": 3669,
+                    "impossible": 0,
+                    "accepted": 67,
+                    "rejected": 3602,
+                    "acceptance_given_possible": 0.01826110656854729
+                  },
+                  "prune": {
+                    "selected": 3831,
+                    "impossible": 2152,
+                    "accepted": 65,
+                    "rejected": 1614,
+                    "acceptance_given_possible": 0.03871351995235259
+                  },
+                  "change": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  },
+                  "swap": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  }
+                }
+              },
+              {
+                "m": 5,
+                "sweeps": 1500,
+                "burn_in": 500,
+                "retained": 1000,
+                "targets_outside_scale": 0,
+                "elapsed_seconds": 6.915825833999406,
+                "max_cache_error": null,
+                "moves": {
+                  "grow": {
+                    "selected": 3757,
+                    "impossible": 0,
+                    "accepted": 79,
+                    "rejected": 3678,
+                    "acceptance_given_possible": 0.02102741549108331
+                  },
+                  "prune": {
+                    "selected": 3743,
+                    "impossible": 2888,
+                    "accepted": 77,
+                    "rejected": 778,
+                    "acceptance_given_possible": 0.09005847953216374
+                  },
+                  "change": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  },
+                  "swap": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  }
+                }
+              },
+              {
+                "m": 5,
+                "sweeps": 1500,
+                "burn_in": 500,
+                "retained": 1000,
+                "targets_outside_scale": 0,
+                "elapsed_seconds": 7.5357638749992475,
+                "max_cache_error": null,
+                "moves": {
+                  "grow": {
+                    "selected": 3756,
+                    "impossible": 0,
+                    "accepted": 61,
+                    "rejected": 3695,
+                    "acceptance_given_possible": 0.016240681576144837
+                  },
+                  "prune": {
+                    "selected": 3744,
+                    "impossible": 2207,
+                    "accepted": 59,
+                    "rejected": 1478,
+                    "acceptance_given_possible": 0.038386467143786594
+                  },
+                  "change": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  },
+                  "swap": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  }
+                }
+              }
+            ]
+          },
+          "RIGHT": {
+            "status": "checked",
+            "samples": 64,
+            "dataset_hash": "a64eb46e431fc68b7a530658d9b9c2c71df9a64a0ebdbe68a6ba226591a4af3e",
+            "posterior_data_hash": "155df70b28f4c92d921a9d4a947b76cc971f535bf28fb2c96f629457293b7bfb",
+            "rhat_1_01_ess_400_all_observables": false,
+            "diagnostics": {
+              "prediction_0": {
+                "status": "ok",
+                "rhat": 1.0000041772678092,
+                "ess_bulk": 3983.9855705792747,
+                "ess_tail": 3792.5171391314902,
+                "draws_used": 4000
+              },
+              "prediction_1": {
+                "status": "ok",
+                "rhat": 1.0046617295788836,
+                "ess_bulk": 2802.352952500492,
+                "ess_tail": 598.4019864169692,
+                "draws_used": 4000
+              },
+              "prediction_2": {
+                "status": "ok",
+                "rhat": 0.9995944765792102,
+                "ess_bulk": 2992.493159997783,
+                "ess_tail": 2821.27318456791,
+                "draws_used": 4000
+              },
+              "prediction_3": {
+                "status": "ok",
+                "rhat": 0.9995370410845733,
+                "ess_bulk": 2992.223431152448,
+                "ess_tail": 2869.9716512606615,
+                "draws_used": 4000
+              },
+              "prediction_4": {
+                "status": "ok",
+                "rhat": 0.9996340644575763,
+                "ess_bulk": 2998.8296820902583,
+                "ess_tail": 2841.2938579147312,
+                "draws_used": 4000
+              },
+              "prediction_5": {
+                "status": "ok",
+                "rhat": 0.9996954568514977,
+                "ess_bulk": 2967.1901784738498,
+                "ess_tail": 2799.6258873966112,
+                "draws_used": 4000
+              },
+              "prediction_6": {
+                "status": "ok",
+                "rhat": 0.999726495033168,
+                "ess_bulk": 2959.359930770444,
+                "ess_tail": 2840.3080072631196,
+                "draws_used": 4000
+              },
+              "prediction_7": {
+                "status": "ok",
+                "rhat": 1.0041904933442576,
+                "ess_bulk": 2031.9263557212753,
+                "ess_tail": 666.3755430881541,
+                "draws_used": 4000
+              },
+              "sigma2": {
+                "status": "ok",
+                "rhat": 1.0006739557764133,
+                "ess_bulk": 2816.689978009336,
+                "ess_tail": 3540.004998975981,
+                "draws_used": 4000
+              },
+              "total_leaves": {
+                "status": "ok",
+                "rhat": 1.1261955451097725,
+                "ess_bulk": 20.694984381661612,
+                "ess_tail": 22.208825095526876,
+                "draws_used": 4000
+              },
+              "max_depth": {
+                "status": "ok",
+                "rhat": 1.0047646540414077,
+                "ess_bulk": 588.8338774168408,
+                "ess_tail": 588.8338774168409,
+                "draws_used": 4000
+              }
+            },
+            "chains": [
+              {
+                "m": 5,
+                "sweeps": 1500,
+                "burn_in": 500,
+                "retained": 1000,
+                "targets_outside_scale": 0,
+                "elapsed_seconds": 6.423346958001275,
+                "max_cache_error": null,
+                "moves": {
+                  "grow": {
+                    "selected": 3664,
+                    "impossible": 0,
+                    "accepted": 142,
+                    "rejected": 3522,
+                    "acceptance_given_possible": 0.03875545851528384
+                  },
+                  "prune": {
+                    "selected": 3836,
+                    "impossible": 2901,
+                    "accepted": 141,
+                    "rejected": 794,
+                    "acceptance_given_possible": 0.15080213903743314
+                  },
+                  "change": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  },
+                  "swap": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  }
+                }
+              },
+              {
+                "m": 5,
+                "sweeps": 1500,
+                "burn_in": 500,
+                "retained": 1000,
+                "targets_outside_scale": 0,
+                "elapsed_seconds": 6.137415916000464,
+                "max_cache_error": null,
+                "moves": {
+                  "grow": {
+                    "selected": 3781,
+                    "impossible": 0,
+                    "accepted": 156,
+                    "rejected": 3625,
+                    "acceptance_given_possible": 0.041258926209997354
+                  },
+                  "prune": {
+                    "selected": 3719,
+                    "impossible": 2765,
+                    "accepted": 153,
+                    "rejected": 801,
+                    "acceptance_given_possible": 0.16037735849056603
+                  },
+                  "change": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  },
+                  "swap": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  }
+                }
+              },
+              {
+                "m": 5,
+                "sweeps": 1500,
+                "burn_in": 500,
+                "retained": 1000,
+                "targets_outside_scale": 0,
+                "elapsed_seconds": 5.85910899999908,
+                "max_cache_error": null,
+                "moves": {
+                  "grow": {
+                    "selected": 3722,
+                    "impossible": 0,
+                    "accepted": 145,
+                    "rejected": 3577,
+                    "acceptance_given_possible": 0.03895754970445997
+                  },
+                  "prune": {
+                    "selected": 3778,
+                    "impossible": 2849,
+                    "accepted": 144,
+                    "rejected": 785,
+                    "acceptance_given_possible": 0.155005382131324
+                  },
+                  "change": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  },
+                  "swap": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  }
+                }
+              },
+              {
+                "m": 5,
+                "sweeps": 1500,
+                "burn_in": 500,
+                "retained": 1000,
+                "targets_outside_scale": 0,
+                "elapsed_seconds": 6.761942875000386,
+                "max_cache_error": null,
+                "moves": {
+                  "grow": {
+                    "selected": 3770,
+                    "impossible": 0,
+                    "accepted": 128,
+                    "rejected": 3642,
+                    "acceptance_given_possible": 0.03395225464190981
+                  },
+                  "prune": {
+                    "selected": 3730,
+                    "impossible": 2292,
+                    "accepted": 125,
+                    "rejected": 1313,
+                    "acceptance_given_possible": 0.08692628650904033
+                  },
+                  "change": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  },
+                  "swap": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  }
+                }
+              }
+            ]
+          },
+          "LEFT": {
+            "status": "checked",
+            "samples": 64,
+            "dataset_hash": "079a7b84343dad87c091e089ba6ddde1659e9b740877af979c34d30f914f3825",
+            "posterior_data_hash": "a6173b3745107cd64867d81e23f549cba45031b3fea4fa06caa88b67e8916b2e",
+            "rhat_1_01_ess_400_all_observables": false,
+            "diagnostics": {
+              "prediction_0": {
+                "status": "ok",
+                "rhat": 1.000053786801344,
+                "ess_bulk": 3882.844904902827,
+                "ess_tail": 3803.0987984341828,
+                "draws_used": 4000
+              },
+              "prediction_1": {
+                "status": "ok",
+                "rhat": 1.0000925887425598,
+                "ess_bulk": 3890.2381431492695,
+                "ess_tail": 3803.0987984341828,
+                "draws_used": 4000
+              },
+              "prediction_2": {
+                "status": "ok",
+                "rhat": 1.0001552634244757,
+                "ess_bulk": 3889.785042272838,
+                "ess_tail": 3765.1838635977642,
+                "draws_used": 4000
+              },
+              "prediction_3": {
+                "status": "ok",
+                "rhat": 1.0036656892764224,
+                "ess_bulk": 1083.0465378949189,
+                "ess_tail": 2507.420192779054,
+                "draws_used": 4000
+              },
+              "prediction_4": {
+                "status": "ok",
+                "rhat": 1.0037819154372458,
+                "ess_bulk": 1081.278914415217,
+                "ess_tail": 2507.42019277905,
+                "draws_used": 4000
+              },
+              "prediction_5": {
+                "status": "ok",
+                "rhat": 1.0038174290301345,
+                "ess_bulk": 1059.8228414795046,
+                "ess_tail": 2512.3470197441557,
+                "draws_used": 4000
+              },
+              "prediction_6": {
+                "status": "ok",
+                "rhat": 1.0040853749687142,
+                "ess_bulk": 1067.99249107373,
+                "ess_tail": 2520.6259246123623,
+                "draws_used": 4000
+              },
+              "prediction_7": {
+                "status": "ok",
+                "rhat": 1.003917477840068,
+                "ess_bulk": 1038.2981898095552,
+                "ess_tail": 2517.5341910631055,
+                "draws_used": 4000
+              },
+              "sigma2": {
+                "status": "ok",
+                "rhat": 1.0127994137911682,
+                "ess_bulk": 477.12114641944567,
+                "ess_tail": 1411.067884709732,
+                "draws_used": 4000
+              },
+              "total_leaves": {
+                "status": "ok",
+                "rhat": 1.0518057991543939,
+                "ess_bulk": 63.64242199410494,
+                "ess_tail": 91.68837249594759,
+                "draws_used": 4000
+              },
+              "max_depth": {
+                "status": "ok",
+                "rhat": 1.0249275153662156,
+                "ess_bulk": 141.9582106026387,
+                "ess_tail": 141.95821060263867,
+                "draws_used": 4000
+              }
+            },
+            "chains": [
+              {
+                "m": 5,
+                "sweeps": 1500,
+                "burn_in": 500,
+                "retained": 1000,
+                "targets_outside_scale": 0,
+                "elapsed_seconds": 6.415238583998871,
+                "max_cache_error": null,
+                "moves": {
+                  "grow": {
+                    "selected": 3778,
+                    "impossible": 0,
+                    "accepted": 107,
+                    "rejected": 3671,
+                    "acceptance_given_possible": 0.028321863419798834
+                  },
+                  "prune": {
+                    "selected": 3722,
+                    "impossible": 2418,
+                    "accepted": 105,
+                    "rejected": 1199,
+                    "acceptance_given_possible": 0.08052147239263803
+                  },
+                  "change": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  },
+                  "swap": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  }
+                }
+              },
+              {
+                "m": 5,
+                "sweeps": 1500,
+                "burn_in": 500,
+                "retained": 1000,
+                "targets_outside_scale": 0,
+                "elapsed_seconds": 6.517857959001049,
+                "max_cache_error": null,
+                "moves": {
+                  "grow": {
+                    "selected": 3712,
+                    "impossible": 0,
+                    "accepted": 104,
+                    "rejected": 3608,
+                    "acceptance_given_possible": 0.028017241379310345
+                  },
+                  "prune": {
+                    "selected": 3788,
+                    "impossible": 2350,
+                    "accepted": 102,
+                    "rejected": 1336,
+                    "acceptance_given_possible": 0.07093184979137691
+                  },
+                  "change": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  },
+                  "swap": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  }
+                }
+              },
+              {
+                "m": 5,
+                "sweeps": 1500,
+                "burn_in": 500,
+                "retained": 1000,
+                "targets_outside_scale": 0,
+                "elapsed_seconds": 6.740159541999674,
+                "max_cache_error": null,
+                "moves": {
+                  "grow": {
+                    "selected": 3782,
+                    "impossible": 0,
+                    "accepted": 99,
+                    "rejected": 3683,
+                    "acceptance_given_possible": 0.02617662612374405
+                  },
+                  "prune": {
+                    "selected": 3718,
+                    "impossible": 2235,
+                    "accepted": 97,
+                    "rejected": 1386,
+                    "acceptance_given_possible": 0.06540795684423466
+                  },
+                  "change": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  },
+                  "swap": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  }
+                }
+              },
+              {
+                "m": 5,
+                "sweeps": 1500,
+                "burn_in": 500,
+                "retained": 1000,
+                "targets_outside_scale": 0,
+                "elapsed_seconds": 6.648578791000546,
+                "max_cache_error": null,
+                "moves": {
+                  "grow": {
+                    "selected": 3758,
+                    "impossible": 0,
+                    "accepted": 90,
+                    "rejected": 3668,
+                    "acceptance_given_possible": 0.023948908994145823
+                  },
+                  "prune": {
+                    "selected": 3742,
+                    "impossible": 2315,
+                    "accepted": 88,
+                    "rejected": 1339,
+                    "acceptance_given_possible": 0.06166783461807989
+                  },
+                  "change": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  },
+                  "swap": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  }
+                }
+              }
+            ]
+          },
+          "RIGHTFIRE": {
+            "status": "checked",
+            "samples": 64,
+            "dataset_hash": "7730d9abfb5aec32c79a992a6ab3010ac9665cbe88df6fb1dcf0f7cd70632f7d",
+            "posterior_data_hash": "e3b5025517f94ffc3c39ee0a8ffd47443befc1e569503810f55db4c30f1bfb6f",
+            "rhat_1_01_ess_400_all_observables": false,
+            "diagnostics": {
+              "prediction_0": {
+                "status": "ok",
+                "rhat": 1.0112542905760449,
+                "ess_bulk": 4000.0,
+                "ess_tail": 2754.547677123953,
+                "draws_used": 4000
+              },
+              "prediction_1": {
+                "status": "ok",
+                "rhat": 1.0113971209662052,
+                "ess_bulk": 4000.0,
+                "ess_tail": 2873.138580684583,
+                "draws_used": 4000
+              },
+              "prediction_2": {
+                "status": "ok",
+                "rhat": 1.0114756509437823,
+                "ess_bulk": 4000.0,
+                "ess_tail": 2873.133759214095,
+                "draws_used": 4000
+              },
+              "prediction_3": {
+                "status": "ok",
+                "rhat": 1.0112676034197479,
+                "ess_bulk": 4000.0,
+                "ess_tail": 2873.138580684583,
+                "draws_used": 4000
+              },
+              "prediction_4": {
+                "status": "ok",
+                "rhat": 1.0181569865000997,
+                "ess_bulk": 291.5798477600748,
+                "ess_tail": 69.88673443871038,
+                "draws_used": 4000
+              },
+              "prediction_5": {
+                "status": "ok",
+                "rhat": 1.0195893794282775,
+                "ess_bulk": 252.48096245728237,
+                "ess_tail": 65.22073575782701,
+                "draws_used": 4000
+              },
+              "prediction_6": {
+                "status": "ok",
+                "rhat": 1.0186490152817778,
+                "ess_bulk": 240.92126554975988,
+                "ess_tail": 66.19525930462373,
+                "draws_used": 4000
+              },
+              "prediction_7": {
+                "status": "ok",
+                "rhat": 1.020889579255248,
+                "ess_bulk": 212.91635702158158,
+                "ess_tail": 59.019613645574516,
+                "draws_used": 4000
+              },
+              "sigma2": {
+                "status": "ok",
+                "rhat": 1.0797113985416757,
+                "ess_bulk": 34.29548155584343,
+                "ess_tail": 11.09056891291354,
+                "draws_used": 4000
+              },
+              "total_leaves": {
+                "status": "ok",
+                "rhat": 1.322304820122438,
+                "ess_bulk": 9.95554756216505,
+                "ess_tail": 8.782504537209102,
+                "draws_used": 4000
+              },
+              "max_depth": {
+                "status": "ok",
+                "rhat": 2.849275183445844,
+                "ess_bulk": 4.632963711412955,
+                "ess_tail": 8.601508443095014,
+                "draws_used": 4000
+              }
+            },
+            "chains": [
+              {
+                "m": 5,
+                "sweeps": 1500,
+                "burn_in": 500,
+                "retained": 1000,
+                "targets_outside_scale": 0,
+                "elapsed_seconds": 9.253596499998821,
+                "max_cache_error": null,
+                "moves": {
+                  "grow": {
+                    "selected": 3749,
+                    "impossible": 0,
+                    "accepted": 93,
+                    "rejected": 3656,
+                    "acceptance_given_possible": 0.024806615097359295
+                  },
+                  "prune": {
+                    "selected": 3751,
+                    "impossible": 2001,
+                    "accepted": 88,
+                    "rejected": 1662,
+                    "acceptance_given_possible": 0.05028571428571429
+                  },
+                  "change": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  },
+                  "swap": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  }
+                }
+              },
+              {
+                "m": 5,
+                "sweeps": 1500,
+                "burn_in": 500,
+                "retained": 1000,
+                "targets_outside_scale": 0,
+                "elapsed_seconds": 8.87841520800066,
+                "max_cache_error": null,
+                "moves": {
+                  "grow": {
+                    "selected": 3784,
+                    "impossible": 0,
+                    "accepted": 84,
+                    "rejected": 3700,
+                    "acceptance_given_possible": 0.022198731501057084
+                  },
+                  "prune": {
+                    "selected": 3716,
+                    "impossible": 1612,
+                    "accepted": 80,
+                    "rejected": 2024,
+                    "acceptance_given_possible": 0.03802281368821293
+                  },
+                  "change": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  },
+                  "swap": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  }
+                }
+              },
+              {
+                "m": 5,
+                "sweeps": 1500,
+                "burn_in": 500,
+                "retained": 1000,
+                "targets_outside_scale": 0,
+                "elapsed_seconds": 8.318956209001044,
+                "max_cache_error": null,
+                "moves": {
+                  "grow": {
+                    "selected": 3819,
+                    "impossible": 0,
+                    "accepted": 123,
+                    "rejected": 3696,
+                    "acceptance_given_possible": 0.03220738413197172
+                  },
+                  "prune": {
+                    "selected": 3681,
+                    "impossible": 1689,
+                    "accepted": 119,
+                    "rejected": 1873,
+                    "acceptance_given_possible": 0.05973895582329317
+                  },
+                  "change": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  },
+                  "swap": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  }
+                }
+              },
+              {
+                "m": 5,
+                "sweeps": 1500,
+                "burn_in": 500,
+                "retained": 1000,
+                "targets_outside_scale": 0,
+                "elapsed_seconds": 9.021777915999337,
+                "max_cache_error": null,
+                "moves": {
+                  "grow": {
+                    "selected": 3798,
+                    "impossible": 0,
+                    "accepted": 87,
+                    "rejected": 3711,
+                    "acceptance_given_possible": 0.022906793048973143
+                  },
+                  "prune": {
+                    "selected": 3702,
+                    "impossible": 1583,
+                    "accepted": 83,
+                    "rejected": 2036,
+                    "acceptance_given_possible": 0.039169419537517694
+                  },
+                  "change": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  },
+                  "swap": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  }
+                }
+              }
+            ]
+          },
+          "LEFTFIRE": {
+            "status": "checked",
+            "samples": 64,
+            "dataset_hash": "8e004ce7e7aeeb54441d694b20f25cf5f1691a768270b809a2b758ee69071a95",
+            "posterior_data_hash": "9e323b9282c7395613995a1279bbd927439958028fe8f51828c3250af7f6e354",
+            "rhat_1_01_ess_400_all_observables": true,
+            "diagnostics": {
+              "prediction_0": {
+                "status": "ok",
+                "rhat": 0.999908895156499,
+                "ess_bulk": 3853.1501362848485,
+                "ess_tail": 3951.2000474100223,
+                "draws_used": 4000
+              },
+              "prediction_1": {
+                "status": "ok",
+                "rhat": 0.9999017569944088,
+                "ess_bulk": 3875.5251648051135,
+                "ess_tail": 3994.072572304993,
+                "draws_used": 4000
+              },
+              "prediction_2": {
+                "status": "ok",
+                "rhat": 0.9999179947169945,
+                "ess_bulk": 3874.606881709795,
+                "ess_tail": 3951.351464223158,
+                "draws_used": 4000
+              },
+              "prediction_3": {
+                "status": "ok",
+                "rhat": 0.9995978350497616,
+                "ess_bulk": 3368.422263506566,
+                "ess_tail": 2688.2399529831873,
+                "draws_used": 4000
+              },
+              "prediction_4": {
+                "status": "ok",
+                "rhat": 0.9997414822787462,
+                "ess_bulk": 3635.027749146949,
+                "ess_tail": 2958.8345812929483,
+                "draws_used": 4000
+              },
+              "prediction_5": {
+                "status": "ok",
+                "rhat": 0.9997152629199744,
+                "ess_bulk": 3701.255897450909,
+                "ess_tail": 2982.8631573068956,
+                "draws_used": 4000
+              },
+              "prediction_6": {
+                "status": "ok",
+                "rhat": 0.9996732952762245,
+                "ess_bulk": 3696.2636519860944,
+                "ess_tail": 3054.95187620571,
+                "draws_used": 4000
+              },
+              "prediction_7": {
+                "status": "ok",
+                "rhat": 0.999721782237236,
+                "ess_bulk": 3765.611052423453,
+                "ess_tail": 2982.8322517965657,
+                "draws_used": 4000
+              },
+              "sigma2": {
+                "status": "ok",
+                "rhat": 1.0007253431477068,
+                "ess_bulk": 3902.126246953654,
+                "ess_tail": 3812.058924050434,
+                "draws_used": 4000
+              },
+              "total_leaves": {
+                "status": "ok",
+                "rhat": 1.0026746840043415,
+                "ess_bulk": 1113.4459768509153,
+                "ess_tail": 1156.2683963975576,
+                "draws_used": 4000
+              },
+              "max_depth": {
+                "status": "ok",
+                "rhat": 1.0004320656608523,
+                "ess_bulk": 2293.6720511899293,
+                "ess_tail": 2293.6720511899293,
+                "draws_used": 4000
+              }
+            },
+            "chains": [
+              {
+                "m": 5,
+                "sweeps": 1500,
+                "burn_in": 500,
+                "retained": 1000,
+                "targets_outside_scale": 0,
+                "elapsed_seconds": 6.300502916999903,
+                "max_cache_error": null,
+                "moves": {
+                  "grow": {
+                    "selected": 3803,
+                    "impossible": 0,
+                    "accepted": 102,
+                    "rejected": 3701,
+                    "acceptance_given_possible": 0.02682093084407047
+                  },
+                  "prune": {
+                    "selected": 3697,
+                    "impossible": 2833,
+                    "accepted": 99,
+                    "rejected": 765,
+                    "acceptance_given_possible": 0.11458333333333333
+                  },
+                  "change": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  },
+                  "swap": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  }
+                }
+              },
+              {
+                "m": 5,
+                "sweeps": 1500,
+                "burn_in": 500,
+                "retained": 1000,
+                "targets_outside_scale": 0,
+                "elapsed_seconds": 6.471317542000179,
+                "max_cache_error": null,
+                "moves": {
+                  "grow": {
+                    "selected": 3727,
+                    "impossible": 0,
+                    "accepted": 141,
+                    "rejected": 3586,
+                    "acceptance_given_possible": 0.03783203649047491
+                  },
+                  "prune": {
+                    "selected": 3773,
+                    "impossible": 2780,
+                    "accepted": 140,
+                    "rejected": 853,
+                    "acceptance_given_possible": 0.14098690835850958
+                  },
+                  "change": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  },
+                  "swap": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  }
+                }
+              },
+              {
+                "m": 5,
+                "sweeps": 1500,
+                "burn_in": 500,
+                "retained": 1000,
+                "targets_outside_scale": 0,
+                "elapsed_seconds": 5.862763041999642,
+                "max_cache_error": null,
+                "moves": {
+                  "grow": {
+                    "selected": 3684,
+                    "impossible": 0,
+                    "accepted": 108,
+                    "rejected": 3576,
+                    "acceptance_given_possible": 0.029315960912052116
+                  },
+                  "prune": {
+                    "selected": 3816,
+                    "impossible": 2953,
+                    "accepted": 106,
+                    "rejected": 757,
+                    "acceptance_given_possible": 0.12282734646581692
+                  },
+                  "change": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  },
+                  "swap": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  }
+                }
+              },
+              {
+                "m": 5,
+                "sweeps": 1500,
+                "burn_in": 500,
+                "retained": 1000,
+                "targets_outside_scale": 0,
+                "elapsed_seconds": 5.712314749998768,
+                "max_cache_error": null,
+                "moves": {
+                  "grow": {
+                    "selected": 3730,
+                    "impossible": 0,
+                    "accepted": 120,
+                    "rejected": 3610,
+                    "acceptance_given_possible": 0.032171581769437
+                  },
+                  "prune": {
+                    "selected": 3770,
+                    "impossible": 2863,
+                    "accepted": 118,
+                    "rejected": 789,
+                    "acceptance_given_possible": 0.13009922822491732
+                  },
+                  "change": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  },
+                  "swap": {
+                    "selected": 0,
+                    "impossible": 0,
+                    "accepted": 0,
+                    "rejected": 0,
+                    "acceptance_given_possible": null
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "seconds": 172.76093566599957,
+        "interpretation": "Supervised diagnostics on a frozen RL dataset; short chains are approximate. Constant observables do not establish convergence. No new data or test calibration."
+      }
+    },
+    "h5_cross_process_resume": {
+      "status": "passed",
+      "future_transitions": 128,
+      "evidence": "tests/test_ocatari_resume.py::test_h5_process_resume_matches_full_future_state",
+      "checks": [
+        "collector",
+        "replay/IDs",
+        "RNG streams",
+        "targets",
+        "current and frozen target models",
+        "draws"
+      ]
+    },
+    "legacy_snapshots_v1": {
+      "status": "passed",
+      "games": [
+        "Breakout",
+        "Pong",
+        "DemonAttack"
+      ],
+      "evidence": "tests/test_ocatari_resume.py::test_v1_old_config_shape_restores_with_explicit_resolved_defaults"
+    }
+  },
+  "not_run": [
+    "pilot_20480_per_seed",
+    "test_evaluation",
+    "efficacy_campaign"
+  ],
+  "runtime": {
+    "executable": "/private/tmp/rrtl-ocatari-step01-env/bin/python",
+    "python": "3.11.7",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "isolated": true,
+    "versions": {
+      "ocatari": "2.2.1",
+      "gymnasium": "1.1.1",
+      "ale-py": "0.10.2"
+    },
+    "compatibility_id": "ocatari_2.2.1_gymnasium_1.1.1_ale_0.10.2_v1",
+    "sources": {
+      "ocatari.core": {
+        "path": "/private/tmp/rrtl-ocatari-step01-env/lib/python3.11/site-packages/ocatari/core.py",
+        "sha256": "cae7f62813e50f783d702ed8caf079ccfdc7b0b07e009b2b73be8740e6e3eac0"
+      },
+      "ocatari.ram.pong": {
+        "path": "/private/tmp/rrtl-ocatari-step01-env/lib/python3.11/site-packages/ocatari/ram/pong.py",
+        "sha256": "ae84b42c4d12750c165bd004d9f1b3b36a775047b60a7991d6510e9940a3811b"
+      },
+      "ocatari.ram.game_objects": {
+        "path": "/private/tmp/rrtl-ocatari-step01-env/lib/python3.11/site-packages/ocatari/ram/game_objects.py",
+        "sha256": "765e8ebc17509e1a73f38c5d5b25e89d4a8cb37916241498daeab3691cdab8c6"
+      }
+    },
+    "rom": {
+      "path": "/private/tmp/rrtl-ocatari-step01-env/lib/python3.11/site-packages/ale_py/roms/pong.bin",
+      "sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3"
+    },
+    "packages": {
+      "Farama-Notifications": "0.0.6",
+      "ImageIO": "2.37.4",
+      "ale-py": "0.10.2",
+      "cloudpickle": "3.1.2",
+      "contourpy": "1.3.3",
+      "cycler": "0.12.1",
+      "fonttools": "4.65.0",
+      "formulaic": "1.2.2",
+      "graphviz": "0.20.3",
+      "gymnasium": "1.1.1",
+      "iniconfig": "2.3.0",
+      "interface_meta": "2.0.1",
+      "joblib": "1.6.0",
+      "keyboard": "0.13.5",
+      "kiwisolver": "1.5.1",
+      "lazy-loader": "0.5",
+      "matplotlib": "3.8.4",
+      "narwhals": "2.26.0",
+      "networkx": "3.6.1",
+      "numpy": "1.26.4",
+      "ocatari": "2.2.1",
+      "opencv-python": "4.10.0.84",
+      "packaging": "26.3",
+      "pandas": "2.2.2",
+      "pandas-flavor": "0.8.1",
+      "patsy": "1.0.3",
+      "pillow": "10.4.0",
+      "pingouin": "0.5.5",
+      "pip": "23.2.1",
+      "pluggy": "1.6.0",
+      "pyfiglet": "1.0.4",
+      "pygame": "2.6.1",
+      "pyobjc": "12.2.2",
+      "pyobjc-core": "12.2.2",
+      "pyobjc-framework-ARKit": "12.2.2",
+      "pyobjc-framework-AVFoundation": "12.2.2",
+      "pyobjc-framework-AVKit": "12.2.2",
+      "pyobjc-framework-AVRouting": "12.2.2",
+      "pyobjc-framework-Accessibility": "12.2.2",
+      "pyobjc-framework-Accounts": "12.2.2",
+      "pyobjc-framework-AdServices": "12.2.2",
+      "pyobjc-framework-AdSupport": "12.2.2",
+      "pyobjc-framework-AddressBook": "12.2.2",
+      "pyobjc-framework-AppTrackingTransparency": "12.2.2",
+      "pyobjc-framework-AppleScriptKit": "12.2.2",
+      "pyobjc-framework-AppleScriptObjC": "12.2.2",
+      "pyobjc-framework-ApplicationServices": "12.2.2",
+      "pyobjc-framework-AudioVideoBridging": "12.2.2",
+      "pyobjc-framework-AuthenticationServices": "12.2.2",
+      "pyobjc-framework-AutomaticAssessmentConfiguration": "12.2.2",
+      "pyobjc-framework-Automator": "12.2.2",
+      "pyobjc-framework-BackgroundAssets": "12.2.2",
+      "pyobjc-framework-BrowserEngineKit": "12.2.2",
+      "pyobjc-framework-BusinessChat": "12.2.2",
+      "pyobjc-framework-CFNetwork": "12.2.2",
+      "pyobjc-framework-CalendarStore": "12.2.2",
+      "pyobjc-framework-CallKit": "12.2.2",
+      "pyobjc-framework-Carbon": "12.2.2",
+      "pyobjc-framework-Cinematic": "12.2.2",
+      "pyobjc-framework-ClassKit": "12.2.2",
+      "pyobjc-framework-CloudKit": "12.2.2",
+      "pyobjc-framework-Cocoa": "12.2.2",
+      "pyobjc-framework-Collaboration": "12.2.2",
+      "pyobjc-framework-ColorSync": "12.2.2",
+      "pyobjc-framework-CompositorServices": "12.2.2",
+      "pyobjc-framework-Contacts": "12.2.2",
+      "pyobjc-framework-ContactsUI": "12.2.2",
+      "pyobjc-framework-CoreAudio": "12.2.2",
+      "pyobjc-framework-CoreAudioKit": "12.2.2",
+      "pyobjc-framework-CoreBluetooth": "12.2.2",
+      "pyobjc-framework-CoreData": "12.2.2",
+      "pyobjc-framework-CoreHaptics": "12.2.2",
+      "pyobjc-framework-CoreLocation": "12.2.2",
+      "pyobjc-framework-CoreMIDI": "12.2.2",
+      "pyobjc-framework-CoreML": "12.2.2",
+      "pyobjc-framework-CoreMedia": "12.2.2",
+      "pyobjc-framework-CoreMediaIO": "12.2.2",
+      "pyobjc-framework-CoreMotion": "12.2.2",
+      "pyobjc-framework-CoreServices": "12.2.2",
+      "pyobjc-framework-CoreSpotlight": "12.2.2",
+      "pyobjc-framework-CoreText": "12.2.2",
+      "pyobjc-framework-CoreWLAN": "12.2.2",
+      "pyobjc-framework-CryptoTokenKit": "12.2.2",
+      "pyobjc-framework-DVDPlayback": "12.2.2",
+      "pyobjc-framework-DataDetection": "12.2.2",
+      "pyobjc-framework-DeviceCheck": "12.2.2",
+      "pyobjc-framework-DeviceDiscoveryExtension": "12.2.2",
+      "pyobjc-framework-DictionaryServices": "12.2.2",
+      "pyobjc-framework-DiscRecording": "12.2.2",
+      "pyobjc-framework-DiscRecordingUI": "12.2.2",
+      "pyobjc-framework-DiskArbitration": "12.2.2",
+      "pyobjc-framework-EventKit": "12.2.2",
+      "pyobjc-framework-ExceptionHandling": "12.2.2",
+      "pyobjc-framework-ExecutionPolicy": "12.2.2",
+      "pyobjc-framework-ExtensionKit": "12.2.2",
+      "pyobjc-framework-ExternalAccessory": "12.2.2",
+      "pyobjc-framework-FSEvents": "12.2.2",
+      "pyobjc-framework-FSKit": "12.2.2",
+      "pyobjc-framework-FileProvider": "12.2.2",
+      "pyobjc-framework-FileProviderUI": "12.2.2",
+      "pyobjc-framework-FinderSync": "12.2.2",
+      "pyobjc-framework-GameCenter": "12.2.2",
+      "pyobjc-framework-GameController": "12.2.2",
+      "pyobjc-framework-GameKit": "12.2.2",
+      "pyobjc-framework-GameSave": "12.2.2",
+      "pyobjc-framework-GameplayKit": "12.2.2",
+      "pyobjc-framework-HealthKit": "12.2.2",
+      "pyobjc-framework-IOBluetooth": "12.2.2",
+      "pyobjc-framework-IOBluetoothUI": "12.2.2",
+      "pyobjc-framework-IOSurface": "12.2.2",
+      "pyobjc-framework-ImageCaptureCore": "12.2.2",
+      "pyobjc-framework-InputMethodKit": "12.2.2",
+      "pyobjc-framework-InstallerPlugins": "12.2.2",
+      "pyobjc-framework-InstantMessage": "12.2.2",
+      "pyobjc-framework-Intents": "12.2.2",
+      "pyobjc-framework-IntentsUI": "12.2.2",
+      "pyobjc-framework-KernelManagement": "12.2.2",
+      "pyobjc-framework-LatentSemanticMapping": "12.2.2",
+      "pyobjc-framework-LaunchServices": "12.2.2",
+      "pyobjc-framework-LinkPresentation": "12.2.2",
+      "pyobjc-framework-LocalAuthentication": "12.2.2",
+      "pyobjc-framework-LocalAuthenticationEmbeddedUI": "12.2.2",
+      "pyobjc-framework-MLCompute": "12.2.2",
+      "pyobjc-framework-MailKit": "12.2.2",
+      "pyobjc-framework-MapKit": "12.2.2",
+      "pyobjc-framework-MediaAccessibility": "12.2.2",
+      "pyobjc-framework-MediaExtension": "12.2.2",
+      "pyobjc-framework-MediaLibrary": "12.2.2",
+      "pyobjc-framework-MediaPlayer": "12.2.2",
+      "pyobjc-framework-MediaToolbox": "12.2.2",
+      "pyobjc-framework-Metal": "12.2.2",
+      "pyobjc-framework-MetalFX": "12.2.2",
+      "pyobjc-framework-MetalKit": "12.2.2",
+      "pyobjc-framework-MetalPerformanceShaders": "12.2.2",
+      "pyobjc-framework-MetalPerformanceShadersGraph": "12.2.2",
+      "pyobjc-framework-MetricKit": "12.2.2",
+      "pyobjc-framework-ModelIO": "12.2.2",
+      "pyobjc-framework-MultipeerConnectivity": "12.2.2",
+      "pyobjc-framework-NaturalLanguage": "12.2.2",
+      "pyobjc-framework-NetFS": "12.2.2",
+      "pyobjc-framework-Network": "12.2.2",
+      "pyobjc-framework-NetworkExtension": "12.2.2",
+      "pyobjc-framework-NotificationCenter": "12.2.2",
+      "pyobjc-framework-OSAKit": "12.2.2",
+      "pyobjc-framework-OSLog": "12.2.2",
+      "pyobjc-framework-OpenDirectory": "12.2.2",
+      "pyobjc-framework-PHASE": "12.2.2",
+      "pyobjc-framework-PassKit": "12.2.2",
+      "pyobjc-framework-PencilKit": "12.2.2",
+      "pyobjc-framework-Photos": "12.2.2",
+      "pyobjc-framework-PhotosUI": "12.2.2",
+      "pyobjc-framework-PreferencePanes": "12.2.2",
+      "pyobjc-framework-PushKit": "12.2.2",
+      "pyobjc-framework-Quartz": "12.2.2",
+      "pyobjc-framework-QuickLookThumbnailing": "12.2.2",
+      "pyobjc-framework-ReplayKit": "12.2.2",
+      "pyobjc-framework-SafariServices": "12.2.2",
+      "pyobjc-framework-SafetyKit": "12.2.2",
+      "pyobjc-framework-SceneKit": "12.2.2",
+      "pyobjc-framework-ScreenCaptureKit": "12.2.2",
+      "pyobjc-framework-ScreenSaver": "12.2.2",
+      "pyobjc-framework-ScreenTime": "12.2.2",
+      "pyobjc-framework-ScriptingBridge": "12.2.2",
+      "pyobjc-framework-SearchKit": "12.2.2",
+      "pyobjc-framework-Security": "12.2.2",
+      "pyobjc-framework-SecurityFoundation": "12.2.2",
+      "pyobjc-framework-SecurityInterface": "12.2.2",
+      "pyobjc-framework-SecurityUI": "12.2.2",
+      "pyobjc-framework-SensitiveContentAnalysis": "12.2.2",
+      "pyobjc-framework-ServiceManagement": "12.2.2",
+      "pyobjc-framework-SharedWithYou": "12.2.2",
+      "pyobjc-framework-SharedWithYouCore": "12.2.2",
+      "pyobjc-framework-ShazamKit": "12.2.2",
+      "pyobjc-framework-Social": "12.2.2",
+      "pyobjc-framework-SoundAnalysis": "12.2.2",
+      "pyobjc-framework-Speech": "12.2.2",
+      "pyobjc-framework-SpriteKit": "12.2.2",
+      "pyobjc-framework-StoreKit": "12.2.2",
+      "pyobjc-framework-Symbols": "12.2.2",
+      "pyobjc-framework-SyncServices": "12.2.2",
+      "pyobjc-framework-SystemConfiguration": "12.2.2",
+      "pyobjc-framework-SystemExtensions": "12.2.2",
+      "pyobjc-framework-ThreadNetwork": "12.2.2",
+      "pyobjc-framework-UniformTypeIdentifiers": "12.2.2",
+      "pyobjc-framework-UserNotifications": "12.2.2",
+      "pyobjc-framework-UserNotificationsUI": "12.2.2",
+      "pyobjc-framework-VideoSubscriberAccount": "12.2.2",
+      "pyobjc-framework-VideoToolbox": "12.2.2",
+      "pyobjc-framework-Virtualization": "12.2.2",
+      "pyobjc-framework-Vision": "12.2.2",
+      "pyobjc-framework-WebKit": "12.2.2",
+      "pyobjc-framework-iTunesLibrary": "12.2.2",
+      "pyobjc-framework-libdispatch": "12.2.2",
+      "pyobjc-framework-libxpc": "12.2.2",
+      "pyparsing": "3.3.2",
+      "pytest": "8.3.5",
+      "python-dateutil": "2.9.0.post0",
+      "pytz": "2026.3.post1",
+      "scikit-image": "0.26.0",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.12.0",
+      "seaborn": "0.13.2",
+      "setuptools": "65.5.0",
+      "six": "1.17.0",
+      "statsmodels": "0.15.0",
+      "tabulate": "0.10.0",
+      "termcolor": "3.3.0",
+      "threadpoolctl": "3.7.0",
+      "tifffile": "2026.3.3",
+      "tqdm": "4.70.1",
+      "typing_extensions": "4.16.0",
+      "tzdata": "2026.4",
+      "wrapt": "2.4.1",
+      "xarray": "2026.7.0"
+    }
+  },
+  "status": "passed",
+  "full_suite": {
+    "tests": 265,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 56.829,
+    "command": [
+      "/private/tmp/rrtl-ocatari-step01-env/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "--junitxml=results/ocatari_pong_validation_step45/full_tests.xml"
+    ]
+  },
+  "command": [
+    "/private/tmp/rrtl-ocatari-step01-env/bin/python",
+    "-m",
+    "experiments.validate_ocatari_pong",
+    "--output",
+    "results/ocatari_pong_validation_step45"
+  ],
+  "seed_audit": {
+    "previously_used": {
+      "310001": [
+        "results/ocatari_step3_final/train/validation.json"
+      ],
+      "310002": [
+        "results/ocatari_step3_final/train/validation.json"
+      ]
+    },
+    "validation_seeds": [
+      310011,
+      310012
+    ],
+    "reserved_test_seeds": [
+      410001,
+      410002
+    ],
+    "reason_for_new_validation_seeds": "310001/310002 consumed by step 3; 310011/310012 unused at audit; test seeds never evaluated."
+  },
+  "smoke_checkpoint_sha256": "d3fbb8fe387f5a328b1a4f9ddaab982726663fb214a5537ec6fc7c2f33a67d63",
+  "smoke_resume_next_step": {
+    "status": "passed",
+    "interactions": 2049,
+    "fits": 8,
+    "checkpoint_unchanged": true
+  },
+  "frozen_diagnostics_verification": {
+    "NOOP": {
+      "dataset_hash": "2d6df840b3341436f764cba60d5d2e37d0fead05e0bb0006558ec6bf356033ee",
+      "retained_chains": 4,
+      "draws_per_chain": 1000,
+      "fixed_data_exact": true
+    },
+    "FIRE": {
+      "dataset_hash": "5a30b7503b4291bd206baf0c331c6cef827b42aa687cdfb95885a303babf6e58",
+      "retained_chains": 4,
+      "draws_per_chain": 1000,
+      "fixed_data_exact": true
+    },
+    "RIGHT": {
+      "dataset_hash": "a64eb46e431fc68b7a530658d9b9c2c71df9a64a0ebdbe68a6ba226591a4af3e",
+      "retained_chains": 4,
+      "draws_per_chain": 1000,
+      "fixed_data_exact": true
+    },
+    "LEFT": {
+      "dataset_hash": "079a7b84343dad87c091e089ba6ddde1659e9b740877af979c34d30f914f3825",
+      "retained_chains": 4,
+      "draws_per_chain": 1000,
+      "fixed_data_exact": true
+    },
+    "RIGHTFIRE": {
+      "dataset_hash": "7730d9abfb5aec32c79a992a6ab3010ac9665cbe88df6fb1dcf0f7cd70632f7d",
+      "retained_chains": 4,
+      "draws_per_chain": 1000,
+      "fixed_data_exact": true
+    },
+    "LEFTFIRE": {
+      "dataset_hash": "8e004ce7e7aeeb54441d694b20f25cf5f1691a768270b809a2b758ee69071a95",
+      "retained_chains": 4,
+      "draws_per_chain": 1000,
+      "fixed_data_exact": true
+    }
+  },
+  "interpretation": "Integration and snapshot acceptance passed. Five of six actions fail at least one R-hat/ESS threshold. No global convergence or learned efficacy claim.",
+  "artifacts": "results/ocatari_pong_validation_step45",
+  "sources_sha256": {
+    "experiments/validate_ocatari_resume.py": "2c605d4845a6d80ae1d088dd98f572d0e1bcd5189051abbd3356b796df6c9947",
+    "experiments/validate_ocatari_pong.py": "19aad9dbcafb1a2dccd745ab8a1cc6e460324a41810c9f3afdf0589981e7325b",
+    "bayesian_rrtl/ocatari_backend.py": "1183c86fda61023a56ce6c4606f150111616133da653db7e82eca0f41454dc27",
+    "bayesian_rrtl/atari.py": "b229aa4a209e0958caae57bccb1a9a34156e8807ba04457a07b509c3fdf56976",
+    "configs/bayesian_pong_ocatari_smoke.json": "dda8ce9accdc6d6ccc46093abe34d5107d413ecef52ab3f0ac3c9346864d70e7",
+    "configs/bayesian_pong_ocatari_pilot.json": "92be05ae6d562580a915830ba1c67d15e4558f27949b7ffda22b68838bcb3272"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "recorded_at_utc": "2026-09-19T15:20:39.017676+00:00",
+  "scope": "P2 operational budget resume and evaluation metrics",
+  "tests": {
+    "tests": 383,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "seconds": 205.337,
+  "warnings": 13,
+  "command": "/tmp/rrtl-ocatari-step01-env/bin/python -m pytest -q --junitxml=/tmp/pong-review-fixes.xml",
+  "junit": "results/pong_review_fixes/pytest.xml",
+  "ruff": "passed",
+  "git_diff_check": "passed",
+  "checks": [
+    "Training budget exhaustion at interaction 1, unchanged without extension, both learners complete after extension",
+    "Global evaluation budget exhausts and CLI resume with audited extension completes all four cells",
+    "Protocol bytes, existing validation and transition IDs preserved; cumulative times not reset",
+    "Reject nonfinite/decreasing/missing-reason extensions and detect altered budget history",
+    "Raw point counts preserved for completed, truncated and horizon-limited episodes without training mutation",
+    "Median/population SD/IQR checked and missing or invalid new-schema fields rejected",
+    "Legacy results remain readable with unavailable point counts; original evaluations unchanged"
+  ],
+  "source_sha256": {
+    "experiments/compare_pong.py": "e95bdd30988decb58726b026b44d73405a626bc85d826badee379c54a8821908",
+    "bayesian_rrtl/comparison.py": "b09058ace1b05ebf15410ee57265a14d7b5e54cdb4c81a32623d868d92b23c6c",
+    "tests/test_comparison_protocol.py": "1e3ad118d4f18dda933b7061f585668b82e671c1187a68033457858f310e65e6",
+    "tests/test_comparison_training.py": "10f31d543634ee82b4174aa12a539baa945a289fa05ff0a9a16c7323ff4420ce",
+    "tests/test_pong_comparison_pipeline.py": "159f0a794182ddcd50724b21548122e97e99d6cd81f1a20a142a13382fc5b5fc",
+    "docs/pong_comparison.md": "80370d040f8c0e58f051f12c696ae78fa3f83f475d3d2f1b9b3699da97f36cc6"
+  },
+  "pilot_executed": false,
+  "reserved_pong_test_executed": false,
+  "compatibility": "Source hash checks remain enforced; time extension does not migrate incompatible frozen training code."
+}

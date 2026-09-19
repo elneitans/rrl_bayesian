@@ -1,4 +1,4 @@
-"""H6 Breakout runner: replaceable visual extraction, paired corrected baseline."""
+"""Atari runner: registered visual/OCAtari backends and legacy corrected baseline."""
 
 import argparse
 import cProfile
@@ -15,8 +15,9 @@ import time
 import numpy as np
 
 from bayesian_rrtl.agent import BayesianQAgent
-from bayesian_rrtl.atari import AtariConfig, AtariRelationalEnvironment, game_actions
+from bayesian_rrtl.atari import AtariConfig, AtariRelationalEnvironment
 from bayesian_rrtl.checkpoint import load_checkpoint
+from bayesian_rrtl.game_registry import get_game_spec
 from bayesian_rrtl.profiling import profile_summary
 from bayesian_rrtl.q_config import BayesianQConfig
 from bayesian_rrtl.training import QTrainingSession
@@ -24,18 +25,20 @@ from bayesian_rrtl.training import QTrainingSession
 ROOT = Path(__file__).resolve().parent
 
 
-def validate_pair(env_config, config):
-    if config.actions != game_actions(env_config.game):
+def validate_pair(env_config, config, environment=None):
+    expected = (environment.actions if environment is not None else
+                get_game_spec(env_config.game, env_config.extractor).actions)
+    if config.actions != expected:
         raise ValueError('Agent actions differ from ALE action order')
-    bounds = (-.9, 1.1) if env_config.game == 'Pong' else (-1., 1.)
+    bounds = env_config.reward_bounds
     if (config.reward_min, config.reward_max) != bounds:
         raise ValueError('Reward bounds must match the game reward transformation')
 
 
-def manifest(env_config, config, variant):
-    sources = [Path(__file__), *sorted((ROOT / 'bayesian_rrtl').glob('*.py')),
+def manifest(env_config, config, variant, environment=None):
+    sources = [Path(__file__), *sorted((ROOT / 'bayesian_rrtl').rglob('*.py')),
                ROOT / 'preprocessing.py', ROOT / 'relational_regresion_tree.py']
-    return {'variant': variant, 'environment': env_config.to_dict(), 'agent': config.to_dict(),
+    info = {'variant': variant, 'environment': env_config.resolved_dict(), 'agent': config.to_dict(),
             'agent_config_hash': config.config_hash, 'python': platform.python_version(),
             'packages': {name: version(name) for name in ('numpy', 'scipy', 'gymnasium', 'ale-py', 'opencv-python')},
             'git_commit': subprocess.run(['git', 'rev-parse', 'HEAD'], cwd=ROOT, capture_output=True,
@@ -44,11 +47,23 @@ def manifest(env_config, config, variant):
             'checkpoint_selection': 'final', 'interaction_unit': 'agent env.step, FIRE startup excluded',
             'comparison': 'Same extractor, reward, action handling, episode-seed stream and interaction budget; '
                           'different policies produce different trajectories. Legacy vs binary representation remains a confound.'}
+    if environment is not None:
+        info['runtime_environment'] = environment.runtime_manifest()
+    if get_game_spec(env_config.game, env_config.extractor).backend_factory is not None:
+        if environment is None:
+            raise ValueError('OCAtari manifest requires the actual environment')
+        info['packages']['ocatari'] = version('ocatari')
+        info['interaction_unit'] = 'One OCAtari step (4 ALE frames); no hidden startup actions'
+        info['comparison'] = 'OCAtari RAM run; corrected/H7 visual controls are not paired with this backend.'
+        info['profile_note'] = 'backend_step_seconds includes emulation and object detection; conversion and relations measured separately.'
+    return info
 
 
-def run_bayesian(env_config, config, output, steps, eval_split, resume=None):
-    env = AtariRelationalEnvironment(env_config)
+
+def run_bayesian(env_config, config, output, steps, eval_split, resume=None, environment=None):
+    env = environment if environment is not None else AtariRelationalEnvironment(env_config)
     try:
+        validate_pair(env_config, config, env)
         session = (QTrainingSession.load(resume, env, expected_config=config) if resume else
                    QTrainingSession(BayesianQAgent(config, env.encoder()), env))
         profiler = cProfile.Profile()
@@ -105,6 +120,8 @@ def run_bayesian(env_config, config, output, steps, eval_split, resume=None):
 
 
 def run_corrected(env_config, config, output, steps, eval_split):
+    if get_game_spec(env_config.game, env_config.extractor).backend_factory is not None:
+        raise ValueError('corrected supports only legacy visual environments, not OCAtari')
     from bayesian_rrtl.baseline import CorrectedRRLAgent
     from bayesian_rrtl.config import BaselineConfig
     # Match all shared experimental controls, keeping the corrected learner unchanged.
@@ -158,7 +175,7 @@ def main():
         if args.variant != 'bayesian' or args.seed is not None:
             parser.error('Checkpoint mode requires bayesian variant and its saved seed')
         saved_agent, collector = load_checkpoint(args.resume or args.checkpoint)
-        if collector is None or collector['environment']['kind'] != 'atari_relational_v1':
+        if collector is None or collector['environment']['kind'] not in ('atari_relational_v1', 'atari_relational_v2'):
             parser.error('Expected a full Atari checkpoint')
         env_config = AtariConfig(**collector['environment']['config'])
         config = saved_agent.config
@@ -169,9 +186,19 @@ def main():
         config = replace(config, seed=args.seed) if args.seed is not None else config
         default_steps = raw['interactions']
     validate_pair(env_config, config)
+    if args.variant == 'corrected' and get_game_spec(env_config.game, env_config.extractor).backend_factory is not None:
+        parser.error('corrected supports only legacy visual environments, not OCAtari')
     if args.checkpoint:
         if args.steps is not None or args.output is not None or args.eval_split == 'none':
             parser.error('Evaluation only accepts checkpoint and validation/test split')
+        with_environment = AtariRelationalEnvironment(env_config)
+        try:
+            validate_pair(env_config, config, with_environment)
+            with_environment.validate_snapshot(collector['environment'])
+            if with_environment.encoder().catalog_hash != saved_agent.encoder.catalog_hash:
+                raise ValueError('Checkpoint/environment catalog mismatch')
+        finally:
+            with_environment.close()
         rows = saved_agent.evaluate(lambda: AtariRelationalEnvironment(env_config),
                                     getattr(config, f'{args.eval_split}_seeds'))
         destination = args.checkpoint.resolve().parent / f'{args.eval_split}.json'
@@ -184,15 +211,29 @@ def main():
     if args.output is None:
         parser.error('Training requires --output with a new directory')
     output = args.output.resolve()
-    output.mkdir(parents=True, exist_ok=False)
-    info = manifest(env_config, config, args.variant)
-    info['additional_interactions'] = steps
-    info['resumed_from'] = str(args.resume.resolve()) if args.resume else None
-    (output / 'manifest.json').write_text(json.dumps(info, indent=2))
-    if args.variant == 'bayesian':
-        summary = run_bayesian(env_config, config, output, steps, args.eval_split, args.resume)
-    else:
-        summary = run_corrected(env_config, config, output, steps, args.eval_split)
+    if output.exists():
+        raise FileExistsError(output)
+    # Preflight the real backend and checkpoint before creating output or learner.
+    env = AtariRelationalEnvironment(env_config) if args.variant == 'bayesian' else None
+    try:
+        if env is not None:
+            validate_pair(env_config, config, env)
+            if args.resume:
+                env.validate_snapshot(collector['environment'])
+                if env.encoder().catalog_hash != saved_agent.encoder.catalog_hash:
+                    raise ValueError('Checkpoint/environment catalog mismatch')
+        info = manifest(env_config, config, args.variant, env)
+        info['additional_interactions'] = steps
+        info['resumed_from'] = str(args.resume.resolve()) if args.resume else None
+        output.mkdir(parents=True, exist_ok=False)
+        (output / 'manifest.json').write_text(json.dumps(info, indent=2))
+        if args.variant == 'bayesian':
+            summary = run_bayesian(env_config, config, output, steps, args.eval_split, args.resume, env)
+        else:
+            summary = run_corrected(env_config, config, output, steps, args.eval_split)
+    finally:
+        if env is not None:
+            env.close()
     if not summary['finite_data']:
         raise ValueError('Non-finite training data')
     (output / 'summary.json').write_text(json.dumps(summary, indent=2, allow_nan=False))

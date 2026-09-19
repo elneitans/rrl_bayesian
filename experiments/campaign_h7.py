@@ -8,10 +8,12 @@ reported as the full efficacy study. Test mode uses only saved final checkpoints
 import argparse
 import hashlib
 import json
+import os
 from pathlib import Path
 import resource
 import subprocess
 import sys
+import tempfile
 import time
 
 import numpy as np
@@ -304,6 +306,8 @@ def aggregate(protocol, output, split):
                 ):
                     raise ValueError("Incomplete/nonfinite campaign run")
                 rows = json.loads((folder / f"{split}.json").read_text())
+                if split == "test":
+                    validate_test_rows(rows, protocol["test_seeds"], folder / "test.json")
                 if [r["seed"] for r in rows] != protocol[f"{split}_seeds"]:
                     raise ValueError("Evaluation seed mismatch")
                 returns[seed] = float(np.mean([r["return"] for r in rows]))
@@ -355,20 +359,62 @@ def aggregate(protocol, output, split):
     return report
 
 
+def validate_test_rows(rows, seeds, path):
+    """Require one completed, finite episode for each reserved seed, in order."""
+    valid = isinstance(rows, list) and len(rows) == len(seeds)
+    if valid:
+        for row, seed in zip(rows, seeds):
+            if not isinstance(row, dict) or not (
+                type(row.get("seed")) is int and row["seed"] == seed
+                and type(row.get("return")) in (int, float)
+                and np.isfinite(row["return"])
+                and type(row.get("steps")) is int and row["steps"] > 0
+                and type(row.get("terminated")) is bool
+                and type(row.get("truncated")) is bool
+                and (row["terminated"] or row["truncated"])
+            ):
+                valid = False
+                break
+    if not valid:
+        raise ValueError(f"Invalid or incomplete test results: {path}")
+
+
+def write_json_atomic(path, rows):
+    """Publish only fully serialized results, on the destination filesystem."""
+    fd, temporary = tempfile.mkstemp(dir=path.parent, prefix=f".{path.name}.", suffix=".tmp")
+    try:
+        with os.fdopen(fd, "w") as stream:
+            json.dump(rows, stream, indent=2, allow_nan=False)
+            stream.flush()
+            os.fsync(stream.fileno())
+        os.replace(temporary, path)
+    finally:
+        if os.path.exists(temporary):
+            os.unlink(temporary)
+
+
 def evaluate_test(protocol, output):
     """No training/tuning; evaluate every predeclared final checkpoint, never select a winner."""
+    complete = set()
     for game in protocol["games"]:
         for variant in protocol["variants"]:
             for seed in protocol["training_seeds"]:
                 folder = output / game / variant / str(seed)
-                if (folder / "test.json").exists():
-                    raise FileExistsError(
-                        "Test results already exist; aggregate without reevaluating"
-                    )
+                path = folder / "test.json"
+                if path.exists():
+                    try:
+                        rows = json.loads(path.read_text())
+                    except (ValueError, UnicodeError) as exc:
+                        raise ValueError(f"Invalid test JSON: {path}") from exc
+                    validate_test_rows(rows, protocol["test_seeds"], path)
+                    complete.add(path)
     for game in protocol["games"]:
         for variant in protocol["variants"]:
             for seed in protocol["training_seeds"]:
                 folder = output / game / variant / str(seed)
+                path = folder / "test.json"
+                if path in complete:
+                    continue
                 env_config, config = settings(protocol, game, seed, variant)
                 if variant == "corrected":
                     from bayesian_rrtl.baseline import CorrectedRRLAgent
@@ -386,7 +432,8 @@ def evaluate_test(protocol, output):
                         lambda: AtariRelationalEnvironment(env_config),
                         config.test_seeds,
                     )
-                (folder / "test.json").write_text(json.dumps(rows, indent=2))
+                validate_test_rows(rows, protocol["test_seeds"], path)
+                write_json_atomic(path, rows)
 
 
 def main():

@@ -1,0 +1,73 @@
+{
+  "purpose": "OCAtari Pong pilot; development only, no test evaluation",
+  "environment": {
+    "game": "Pong",
+    "extractor": "ocatari_ram_v1",
+    "representation": "comparative",
+    "include_incomplete_states": true,
+    "frameskip": 4,
+    "repeat_action_probability": 0.0,
+    "max_episode_steps": 27000,
+    "env_id": "ALE/Pong-v5",
+    "relation_schema": "pong_relational_v1",
+    "reward_transform": "sign",
+    "reset_policy": "none"
+  },
+  "agent": {
+    "actions": [
+      "NOOP",
+      "FIRE",
+      "RIGHT",
+      "LEFT",
+      "RIGHTFIRE",
+      "LEFTFIRE"
+    ],
+    "seed": 41,
+    "gamma": 0.99,
+    "reward_min": -1.0,
+    "reward_max": 1.0,
+    "replay_capacity": 50000,
+    "batch_size_per_action": 128,
+    "fit_interval": 512,
+    "warmup_interactions": 512,
+    "kernel": "grow_prune",
+    "m": 20,
+    "burn_in": 50,
+    "draws": 50,
+    "k": 2.0,
+    "alpha_tree": 0.95,
+    "beta_tree": 2.0,
+    "max_depth": 4,
+    "min_child": 2,
+    "nu": 3.0,
+    "noise_quantile": 0.9,
+    "variance_floor": 1e-08,
+    "epsilon_init": 1.0,
+    "epsilon_min": 0.1,
+    "epsilon_decay_steps": 50000,
+    "bootstrap_on_truncation": true,
+    "resample_repeated_actions": false,
+    "action_buffer_capacity": 10,
+    "validation_seeds": [
+      310011,
+      310012
+    ],
+    "test_seeds": [
+      410001,
+      410002
+    ]
+  },
+  "interactions": 20480,
+  "training_seeds": [
+    41,
+    42,
+    43
+  ],
+  "diagnostics": {
+    "chains": 4,
+    "burn_in": 500,
+    "draws": 1000,
+    "seed": 610001,
+    "budget_seconds": 600
+  }
+}

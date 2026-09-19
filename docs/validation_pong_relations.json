@@ -1,0 +1,209 @@
+{
+  "scope": "ocatari_pong_plan_step_2",
+  "timestamp_utc": "2026-09-18T02:27:02.258516+00:00",
+  "status": "passed",
+  "executable": "/private/tmp/rrtl-ocatari-step01-env/bin/python",
+  "python": "3.11.7",
+  "manifest": {
+    "relation_schema": "pong_relational_v1",
+    "config": {
+      "representation": "comparative",
+      "include_incomplete_states": true,
+      "coordinates": "pixel_centers_top_left_x_right_y_down",
+      "spatial_tolerance": 4,
+      "temporal_tolerance": 0,
+      "contact": "bbox_overlap_or_touch_both_axes",
+      "history": "previous_decision_clear_before_nonzero_raw_reward"
+    },
+    "catalog_hash": "fd40d7f407a3ea2b3634712e212e0d35c591626e41f8fbe3d64ce8073ff2de42"
+  },
+  "catalog": {
+    "version": 1,
+    "catalog": [
+      {
+        "type": "comparative",
+        "name": "x",
+        "obj1": "ball_t",
+        "obj2": "ball_t-1",
+        "obj3": null
+      },
+      {
+        "type": "comparative",
+        "name": "x",
+        "obj1": "ball_t",
+        "obj2": "enemy_t",
+        "obj3": null
+      },
+      {
+        "type": "comparative",
+        "name": "x",
+        "obj1": "enemy_t",
+        "obj2": "enemy_t-1",
+        "obj3": null
+      },
+      {
+        "type": "comparative",
+        "name": "x",
+        "obj1": "player_t",
+        "obj2": "ball_t",
+        "obj3": null
+      },
+      {
+        "type": "comparative",
+        "name": "x",
+        "obj1": "player_t",
+        "obj2": "enemy_t",
+        "obj3": null
+      },
+      {
+        "type": "comparative",
+        "name": "x",
+        "obj1": "player_t",
+        "obj2": "player_t-1",
+        "obj3": null
+      },
+      {
+        "type": "comparative",
+        "name": "y",
+        "obj1": "ball_t",
+        "obj2": "ball_t-1",
+        "obj3": null
+      },
+      {
+        "type": "comparative",
+        "name": "y",
+        "obj1": "ball_t",
+        "obj2": "enemy_t",
+        "obj3": null
+      },
+      {
+        "type": "comparative",
+        "name": "y",
+        "obj1": "enemy_t",
+        "obj2": "enemy_t-1",
+        "obj3": null
+      },
+      {
+        "type": "comparative",
+        "name": "y",
+        "obj1": "player_t",
+        "obj2": "ball_t",
+        "obj3": null
+      },
+      {
+        "type": "comparative",
+        "name": "y",
+        "obj1": "player_t",
+        "obj2": "enemy_t",
+        "obj3": null
+      },
+      {
+        "type": "comparative",
+        "name": "y",
+        "obj1": "player_t",
+        "obj2": "player_t-1",
+        "obj3": null
+      },
+      {
+        "type": "logical",
+        "name": "incontact",
+        "obj1": "ball_t",
+        "obj2": "enemy_t",
+        "obj3": null
+      },
+      {
+        "type": "logical",
+        "name": "incontact",
+        "obj1": "player_t",
+        "obj2": "ball_t",
+        "obj3": null
+      },
+      {
+        "type": "logical",
+        "name": "present",
+        "obj1": "ball_t",
+        "obj2": null,
+        "obj3": null
+      },
+      {
+        "type": "logical",
+        "name": "present",
+        "obj1": "ball_t-1",
+        "obj2": null,
+        "obj3": null
+      },
+      {
+        "type": "logical",
+        "name": "present",
+        "obj1": "enemy_t",
+        "obj2": null,
+        "obj3": null
+      },
+      {
+        "type": "logical",
+        "name": "present",
+        "obj1": "enemy_t-1",
+        "obj2": null,
+        "obj3": null
+      },
+      {
+        "type": "logical",
+        "name": "present",
+        "obj1": "player_t",
+        "obj2": null,
+        "obj3": null
+      },
+      {
+        "type": "logical",
+        "name": "present",
+        "obj1": "player_t-1",
+        "obj2": null,
+        "obj3": null
+      }
+    ],
+    "catalog_hash": "fd40d7f407a3ea2b3634712e212e0d35c591626e41f8fbe3d64ce8073ff2de42"
+  },
+  "sources_sha256": {
+    "bayesian_rrtl/games/pong.py": "37e487cf0a8a227e549baf1a4502788094efcd056b799386cb0aaf69ce3cffcb",
+    "tests/test_pong_relations.py": "4bfc7f253d8ced0c3b932a0816140b888a86ef905db250368610abcbb12610ff"
+  },
+  "validation": {
+    "command": [
+      "/private/tmp/rrtl-ocatari-step01-env/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "--junitxml=results/ocatari_step2/tests.xml"
+    ],
+    "xml": "results/ocatari_step2/tests.xml",
+    "log": "results/ocatari_step2/tests.log",
+    "tests": 231,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 36.147,
+    "new_relation_tests": 47,
+    "legacy_files_unchanged_from_head": true
+  },
+  "criteria": {
+    "fixed_20_key_catalog_before_reset": "passed",
+    "centers_and_screen_coordinate_directions": "passed",
+    "inclusive_spatial_tolerance_4": "passed",
+    "temporal_tolerance_0": "passed",
+    "explicit_presence_and_missing_comparisons": "passed",
+    "bbox_overlap_touch_and_separation": "passed",
+    "reset_point_and_absence_clear_temporal_history": "passed",
+    "object_fact_order_invariant_encoding": "passed",
+    "json_memory_roundtrip_future_facts": "passed",
+    "snapshot_schema_config_and_catalog_validation": "passed",
+    "unsupported_options_rejected": "passed",
+    "legacy_relation_builder_not_called": "passed"
+  },
+  "not_run": [
+    "h5_cli_integration_step_3",
+    "exact_emulator_resume_step_4",
+    "training_smoke_step_5",
+    "test_evaluation",
+    "efficacy_campaign"
+  ]
+}
