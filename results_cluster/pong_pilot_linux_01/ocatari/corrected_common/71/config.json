@@ -1,0 +1,70 @@
+{
+  "id": "ocatari/corrected_common/71",
+  "pipeline": "ocatari",
+  "learner": "corrected_common",
+  "seed": 71,
+  "environment": {
+    "game": "Pong",
+    "extractor": "ocatari_ram_v1",
+    "representation": "comparative",
+    "include_incomplete_states": true,
+    "frameskip": 4,
+    "repeat_action_probability": 0.0,
+    "max_episode_steps": 27000,
+    "env_id": "ALE/Pong-v5",
+    "relation_schema": "pong_relational_v1",
+    "reward_transform": "sign",
+    "reset_policy": "none"
+  },
+  "config": {
+    "eta_q": 0.025,
+    "gamma": 0.99,
+    "max_depth": 4,
+    "min_sample_size": 128,
+    "significance_level": 0.0001,
+    "best_literal_criteria": "p-value",
+    "inherit_q_values": true,
+    "bootstrap_on_truncation": true,
+    "seed": 71
+  },
+  "policy": {
+    "epsilon_init": 1.0,
+    "epsilon_min": 0.1,
+    "epsilon_decay_steps": 50000,
+    "validation_seeds": [
+      320101,
+      320102,
+      320103,
+      320104,
+      320105,
+      320106,
+      320107,
+      320108,
+      320109,
+      320110
+    ],
+    "test_seeds": [
+      420101,
+      420102,
+      420103,
+      420104,
+      420105,
+      420106,
+      420107,
+      420108,
+      420109,
+      420110,
+      420111,
+      420112,
+      420113,
+      420114,
+      420115,
+      420116,
+      420117,
+      420118,
+      420119,
+      420120
+    ]
+  },
+  "hash": "ab8ce2d77383bab5dbc367ed03434429f9a8a6bf9b4b7466e4d63ff1e0779593"
+}

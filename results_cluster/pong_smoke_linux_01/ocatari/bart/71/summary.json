@@ -1,0 +1,2466 @@
+{
+  "cell": {
+    "id": "ocatari/bart/71",
+    "pipeline": "ocatari",
+    "learner": "bart",
+    "seed": 71,
+    "environment": {
+      "game": "Pong",
+      "extractor": "ocatari_ram_v1",
+      "representation": "comparative",
+      "include_incomplete_states": true,
+      "frameskip": 4,
+      "repeat_action_probability": 0.0,
+      "max_episode_steps": 1000,
+      "env_id": "ALE/Pong-v5",
+      "relation_schema": "pong_relational_v1",
+      "reward_transform": "sign",
+      "reset_policy": "none"
+    },
+    "config": {
+      "actions": [
+        "NOOP",
+        "FIRE",
+        "RIGHT",
+        "LEFT",
+        "RIGHTFIRE",
+        "LEFTFIRE"
+      ],
+      "seed": 71,
+      "gamma": 0.99,
+      "reward_min": -1.0,
+      "reward_max": 1.0,
+      "replay_capacity": 5000,
+      "batch_size_per_action": 64,
+      "fit_interval": 256,
+      "warmup_interactions": 256,
+      "kernel": "grow_prune",
+      "m": 5,
+      "burn_in": 20,
+      "draws": 20,
+      "k": 2.0,
+      "alpha_tree": 0.95,
+      "beta_tree": 2.0,
+      "max_depth": 4,
+      "min_child": 2,
+      "nu": 3.0,
+      "noise_quantile": 0.9,
+      "variance_floor": 1e-08,
+      "epsilon_init": 1.0,
+      "epsilon_min": 0.1,
+      "epsilon_decay_steps": 50000,
+      "bootstrap_on_truncation": true,
+      "resample_repeated_actions": false,
+      "action_buffer_capacity": 10,
+      "validation_seeds": [
+        320101,
+        320102
+      ],
+      "test_seeds": [
+        420101,
+        420102,
+        420103,
+        420104,
+        420105,
+        420106,
+        420107,
+        420108,
+        420109,
+        420110,
+        420111,
+        420112,
+        420113,
+        420114,
+        420115,
+        420116,
+        420117,
+        420118,
+        420119,
+        420120
+      ]
+    },
+    "policy": {
+      "epsilon_init": 1.0,
+      "epsilon_min": 0.1,
+      "epsilon_decay_steps": 50000,
+      "validation_seeds": [
+        320101,
+        320102
+      ],
+      "test_seeds": [
+        420101,
+        420102,
+        420103,
+        420104,
+        420105,
+        420106,
+        420107,
+        420108,
+        420109,
+        420110,
+        420111,
+        420112,
+        420113,
+        420114,
+        420115,
+        420116,
+        420117,
+        420118,
+        420119,
+        420120
+      ]
+    },
+    "hash": "d1ebf04600fbb6eec70e43d9673a2374861b00e9d813dfce192cdec861ecbdcf"
+  },
+  "curve": [
+    {
+      "interactions": 0,
+      "mean_return": -18.5
+    },
+    {
+      "interactions": 2048,
+      "mean_return": -21.0
+    }
+  ],
+  "validation_auc": -19.75,
+  "timing": {
+    "training_seconds": 30.904778707772493,
+    "evaluation_seconds": 18.860487474594265,
+    "save_seconds": 1.326208101119846
+  },
+  "checkpoint_bytes": 1200606,
+  "final_checkpoint_sha256": "ce935ea0321e3738910f38f5db05bc96c3c7d3ef2d64a8c6e7081815833c18f7",
+  "metrics": {
+    "interactions": 2048,
+    "ended_episodes": 2,
+    "completed_games": 2,
+    "horizon_limited_episodes": 0,
+    "mean_completed_game_raw_return": -20.5,
+    "mean_horizon_limited_raw_return": null,
+    "partial_episode": {
+      "episode_id": 2,
+      "episode_seed": 4088323081,
+      "interaction": 2048,
+      "transition_id": 2047,
+      "episode_return": -3.0,
+      "raw_episode_return": -3.0,
+      "terminated": false,
+      "truncated": false,
+      "episode_end": false,
+      "return_scope": "partial",
+      "steps": 326
+    },
+    "learner": {
+      "kind": "bart",
+      "fits": 8,
+      "last_fit_step": 2048,
+      "replay_size": 2048,
+      "fit_history": [
+        {
+          "fit_id": 1,
+          "target_model_id": 0,
+          "interaction": 256,
+          "config_hash": "f83afd1e3826efec864fab6f6214ae440b3368b0e64fd0cc71a552ca9ea0d642",
+          "actions": {
+            "NOOP": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.4642187892459333,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 107,
+                  "impossible": 0,
+                  "accepted": 1,
+                  "rejected": 106,
+                  "acceptance_given_possible": 0.009345794392523364
+                },
+                "prune": {
+                  "selected": 93,
+                  "impossible": 72,
+                  "accepted": 0,
+                  "rejected": 21,
+                  "acceptance_given_possible": 0.0
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 40,
+              "data_hash": "9d44e9e5411c39ad293a21702eed0dcfacb795e29460cadf064b81175f0417c6",
+              "max_abs_q": 1.0007117301636335,
+              "replay_coverage": 40,
+              "noise_calibration": "response_variance_rank_fallback"
+            },
+            "FIRE": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.3392534381709993,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 100,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 100,
+                  "acceptance_given_possible": 0.0
+                },
+                "prune": {
+                  "selected": 100,
+                  "impossible": 100,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 39,
+              "data_hash": "1835ab093881c445e6b7b0c95a9944a6af57a8d07cc56fa8d91e6819c1758dee",
+              "max_abs_q": 3.697997129379824e-05,
+              "replay_coverage": 39,
+              "noise_calibration": "response_variance_rank_fallback_floor"
+            },
+            "RIGHT": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.49194335425272584,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 96,
+                  "impossible": 0,
+                  "accepted": 11,
+                  "rejected": 85,
+                  "acceptance_given_possible": 0.11458333333333333
+                },
+                "prune": {
+                  "selected": 104,
+                  "impossible": 67,
+                  "accepted": 7,
+                  "rejected": 30,
+                  "acceptance_given_possible": 0.1891891891891892
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 32,
+              "data_hash": "8d6ecdfb2f04902633f219b9407a8f154ddd54fb5d2fcd22b463b76ea3451200",
+              "max_abs_q": 0.6150256302422024,
+              "replay_coverage": 32,
+              "noise_calibration": "response_variance_rank_fallback"
+            },
+            "LEFT": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.3075765469111502,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 90,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 90,
+                  "acceptance_given_possible": 0.0
+                },
+                "prune": {
+                  "selected": 110,
+                  "impossible": 110,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 37,
+              "data_hash": "698f6b72561ab4d558954032239cdecd85439c743a318ff2c354ee28ed7fe76f",
+              "max_abs_q": 0.00019047169998627657,
+              "replay_coverage": 37,
+              "noise_calibration": "response_variance_rank_fallback_floor"
+            },
+            "RIGHTFIRE": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.5619533876888454,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 100,
+                  "impossible": 0,
+                  "accepted": 10,
+                  "rejected": 90,
+                  "acceptance_given_possible": 0.1
+                },
+                "prune": {
+                  "selected": 100,
+                  "impossible": 66,
+                  "accepted": 8,
+                  "rejected": 26,
+                  "acceptance_given_possible": 0.23529411764705882
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 53,
+              "data_hash": "b1f79b3ced953f0b12f068010cb0ee9924fbcc5e91a8618f4c6aa2442e2b5eaf",
+              "max_abs_q": 0.47628539336236064,
+              "replay_coverage": 53,
+              "noise_calibration": "response_variance_rank_fallback"
+            },
+            "LEFTFIRE": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.3524023820646107,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 102,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 102,
+                  "acceptance_given_possible": 0.0
+                },
+                "prune": {
+                  "selected": 98,
+                  "impossible": 98,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 55,
+              "data_hash": "3ee80d8cf1a14a538a323c521cedc75c1f9b5f2c9476a672b60d7659c96418ab",
+              "max_abs_q": 1.6893524378802742e-05,
+              "replay_coverage": 55,
+              "noise_calibration": "response_variance_rank_fallback_floor"
+            }
+          }
+        },
+        {
+          "fit_id": 2,
+          "target_model_id": 1,
+          "interaction": 512,
+          "config_hash": "f83afd1e3826efec864fab6f6214ae440b3368b0e64fd0cc71a552ca9ea0d642",
+          "actions": {
+            "NOOP": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.5753218047320843,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 107,
+                  "impossible": 0,
+                  "accepted": 12,
+                  "rejected": 95,
+                  "acceptance_given_possible": 0.11214953271028037
+                },
+                "prune": {
+                  "selected": 93,
+                  "impossible": 62,
+                  "accepted": 10,
+                  "rejected": 21,
+                  "acceptance_given_possible": 0.3225806451612903
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 64,
+              "data_hash": "4e2de2ea34d7bd75492a90a668abe435b22f8d7b604896d5feffa86e70207792",
+              "max_abs_q": 0.9649262397409117,
+              "replay_coverage": 91,
+              "noise_calibration": "response_variance_rank_fallback"
+            },
+            "FIRE": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.7294970466755331,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 103,
+                  "impossible": 0,
+                  "accepted": 5,
+                  "rejected": 98,
+                  "acceptance_given_possible": 0.04854368932038835
+                },
+                "prune": {
+                  "selected": 97,
+                  "impossible": 44,
+                  "accepted": 4,
+                  "rejected": 49,
+                  "acceptance_given_possible": 0.07547169811320754
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 64,
+              "data_hash": "6c6212cc9db08b9bbf86dd0c43eeea882416e67480132e6d5999e897130a38f2",
+              "max_abs_q": 0.03749989055506634,
+              "replay_coverage": 86,
+              "noise_calibration": "response_variance_rank_fallback_floor"
+            },
+            "RIGHT": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.4275407958775759,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 110,
+                  "impossible": 0,
+                  "accepted": 6,
+                  "rejected": 104,
+                  "acceptance_given_possible": 0.05454545454545454
+                },
+                "prune": {
+                  "selected": 90,
+                  "impossible": 80,
+                  "accepted": 5,
+                  "rejected": 5,
+                  "acceptance_given_possible": 0.5
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 64,
+              "data_hash": "379f1ecb98fcff54ddfbc208518ced9a38cab4df930a283ee3cf72702f5d2e59",
+              "max_abs_q": 0.2324754202261606,
+              "replay_coverage": 82,
+              "noise_calibration": "response_variance_rank_fallback"
+            },
+            "LEFT": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.46400980511680245,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 108,
+                  "impossible": 0,
+                  "accepted": 6,
+                  "rejected": 102,
+                  "acceptance_given_possible": 0.05555555555555555
+                },
+                "prune": {
+                  "selected": 92,
+                  "impossible": 77,
+                  "accepted": 5,
+                  "rejected": 10,
+                  "acceptance_given_possible": 0.3333333333333333
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 64,
+              "data_hash": "005fc4e0b6b6349c1426274dbd7ff8e121e308c0a0855256b34c82a6b7ba842b",
+              "max_abs_q": 0.15612941738784747,
+              "replay_coverage": 73,
+              "noise_calibration": "response_variance_rank_fallback_floor"
+            },
+            "RIGHTFIRE": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.4461751691997051,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 87,
+                  "impossible": 0,
+                  "accepted": 12,
+                  "rejected": 75,
+                  "acceptance_given_possible": 0.13793103448275862
+                },
+                "prune": {
+                  "selected": 113,
+                  "impossible": 90,
+                  "accepted": 10,
+                  "rejected": 13,
+                  "acceptance_given_possible": 0.43478260869565216
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 64,
+              "data_hash": "f272ea20cb82746f1a89f929316dd92b1e9ab87556fd2478f6dfcd43a656572c",
+              "max_abs_q": 0.7291975008422235,
+              "replay_coverage": 89,
+              "noise_calibration": "response_variance_rank_fallback"
+            },
+            "LEFTFIRE": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.6100448770448565,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 101,
+                  "impossible": 0,
+                  "accepted": 6,
+                  "rejected": 95,
+                  "acceptance_given_possible": 0.0594059405940594
+                },
+                "prune": {
+                  "selected": 99,
+                  "impossible": 63,
+                  "accepted": 4,
+                  "rejected": 32,
+                  "acceptance_given_possible": 0.1111111111111111
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 64,
+              "data_hash": "4e2379b0a7db8c6fdabbe5c84fcc627dd5ef16b7401f423fde81452ad5635cc5",
+              "max_abs_q": 0.03561362371568646,
+              "replay_coverage": 91,
+              "noise_calibration": "response_variance_rank_fallback_floor"
+            }
+          }
+        },
+        {
+          "fit_id": 3,
+          "target_model_id": 2,
+          "interaction": 768,
+          "config_hash": "f83afd1e3826efec864fab6f6214ae440b3368b0e64fd0cc71a552ca9ea0d642",
+          "actions": {
+            "NOOP": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.48367201117798686,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 98,
+                  "impossible": 0,
+                  "accepted": 6,
+                  "rejected": 92,
+                  "acceptance_given_possible": 0.061224489795918366
+                },
+                "prune": {
+                  "selected": 102,
+                  "impossible": 79,
+                  "accepted": 4,
+                  "rejected": 19,
+                  "acceptance_given_possible": 0.17391304347826086
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 64,
+              "data_hash": "a7014d656a5938296c4466cf4f4911d21da4b006e8b862fdf0ca47408f3479bb",
+              "max_abs_q": 0.8065872471274071,
+              "replay_coverage": 131,
+              "noise_calibration": "response_variance_rank_fallback"
+            },
+            "FIRE": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.6084177256561816,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 99,
+                  "impossible": 0,
+                  "accepted": 3,
+                  "rejected": 96,
+                  "acceptance_given_possible": 0.030303030303030304
+                },
+                "prune": {
+                  "selected": 101,
+                  "impossible": 73,
+                  "accepted": 0,
+                  "rejected": 28,
+                  "acceptance_given_possible": 0.0
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 64,
+              "data_hash": "6e73023765e3380e83179fc3e6f6a2f56bdc2f661762cf1e7778cef111bcff39",
+              "max_abs_q": 0.07288150274937139,
+              "replay_coverage": 127,
+              "noise_calibration": "response_variance_rank_fallback_floor"
+            },
+            "RIGHT": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.43447655998170376,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 95,
+                  "impossible": 0,
+                  "accepted": 4,
+                  "rejected": 91,
+                  "acceptance_given_possible": 0.042105263157894736
+                },
+                "prune": {
+                  "selected": 105,
+                  "impossible": 90,
+                  "accepted": 3,
+                  "rejected": 12,
+                  "acceptance_given_possible": 0.2
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 64,
+              "data_hash": "017ae94f2e6dc2935bdb332cfa84648d8815a64360febc9318c2f6a434e82b05",
+              "max_abs_q": 0.46633347563255645,
+              "replay_coverage": 115,
+              "noise_calibration": "response_variance_rank_fallback"
+            },
+            "LEFT": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.5256031733006239,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 92,
+                  "impossible": 0,
+                  "accepted": 5,
+                  "rejected": 87,
+                  "acceptance_given_possible": 0.05434782608695652
+                },
+                "prune": {
+                  "selected": 108,
+                  "impossible": 75,
+                  "accepted": 2,
+                  "rejected": 31,
+                  "acceptance_given_possible": 0.06060606060606061
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 64,
+              "data_hash": "5424449b054b4e87b52fd01829405c51028acba3d95145d32b13492e151d870a",
+              "max_abs_q": 0.06868278556105135,
+              "replay_coverage": 111,
+              "noise_calibration": "response_variance_rank_fallback_floor"
+            },
+            "RIGHTFIRE": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.4105895278044045,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 99,
+                  "impossible": 0,
+                  "accepted": 12,
+                  "rejected": 87,
+                  "acceptance_given_possible": 0.12121212121212122
+                },
+                "prune": {
+                  "selected": 101,
+                  "impossible": 89,
+                  "accepted": 11,
+                  "rejected": 1,
+                  "acceptance_given_possible": 0.9166666666666666
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 64,
+              "data_hash": "89a3d699ba87ebd936cacf98509a2065f497376945bdb9f483f9b8415db45d40",
+              "max_abs_q": 0.049428547346471896,
+              "replay_coverage": 140,
+              "noise_calibration": "response_variance_rank_fallback"
+            },
+            "LEFTFIRE": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.5637189717963338,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 96,
+                  "impossible": 0,
+                  "accepted": 3,
+                  "rejected": 93,
+                  "acceptance_given_possible": 0.03125
+                },
+                "prune": {
+                  "selected": 104,
+                  "impossible": 59,
+                  "accepted": 0,
+                  "rejected": 45,
+                  "acceptance_given_possible": 0.0
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 64,
+              "data_hash": "cbd2471967025f49334d003b71becfb8cb385d491ae72cd568eb31e0824cb469",
+              "max_abs_q": 0.06928612024373951,
+              "replay_coverage": 144,
+              "noise_calibration": "response_variance_rank_fallback_floor"
+            }
+          }
+        },
+        {
+          "fit_id": 4,
+          "target_model_id": 3,
+          "interaction": 1024,
+          "config_hash": "f83afd1e3826efec864fab6f6214ae440b3368b0e64fd0cc71a552ca9ea0d642",
+          "actions": {
+            "NOOP": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.3743925462476909,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 92,
+                  "impossible": 0,
+                  "accepted": 8,
+                  "rejected": 84,
+                  "acceptance_given_possible": 0.08695652173913043
+                },
+                "prune": {
+                  "selected": 108,
+                  "impossible": 102,
+                  "accepted": 6,
+                  "rejected": 0,
+                  "acceptance_given_possible": 1.0
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 64,
+              "data_hash": "8e573c6a2c4544a8a11a4d0669a835d7bebd1ad369d66e2353b52d9054b1e0a9",
+              "max_abs_q": 0.036663276028407195,
+              "replay_coverage": 184,
+              "noise_calibration": "response_variance_rank_fallback"
+            },
+            "FIRE": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.467182366643101,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 102,
+                  "impossible": 0,
+                  "accepted": 5,
+                  "rejected": 97,
+                  "acceptance_given_possible": 0.049019607843137254
+                },
+                "prune": {
+                  "selected": 98,
+                  "impossible": 74,
+                  "accepted": 4,
+                  "rejected": 20,
+                  "acceptance_given_possible": 0.16666666666666666
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 64,
+              "data_hash": "5f7a687b531beb69d43f29552816b669e02f542944a9cc8a0e8a156840189b05",
+              "max_abs_q": 0.3010371662897941,
+              "replay_coverage": 162,
+              "noise_calibration": "response_variance_rank_fallback_floor"
+            },
+            "RIGHT": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.46730422088876367,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 114,
+                  "impossible": 0,
+                  "accepted": 9,
+                  "rejected": 105,
+                  "acceptance_given_possible": 0.07894736842105263
+                },
+                "prune": {
+                  "selected": 86,
+                  "impossible": 70,
+                  "accepted": 6,
+                  "rejected": 10,
+                  "acceptance_given_possible": 0.375
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 64,
+              "data_hash": "8d14cd4ebe37c4493a28a3ae60326c0d0721f5115dee87203aebc10c694648ba",
+              "max_abs_q": 0.19481694252146248,
+              "replay_coverage": 155,
+              "noise_calibration": "response_variance_rank_fallback"
+            },
+            "LEFT": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.60372119769454,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 99,
+                  "impossible": 0,
+                  "accepted": 6,
+                  "rejected": 93,
+                  "acceptance_given_possible": 0.06060606060606061
+                },
+                "prune": {
+                  "selected": 101,
+                  "impossible": 85,
+                  "accepted": 4,
+                  "rejected": 12,
+                  "acceptance_given_possible": 0.25
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 64,
+              "data_hash": "defef8d288fffab3e858f2cdc46f5a8da74f56364938e41e905570d912fc0ee1",
+              "max_abs_q": 0.6118790325435477,
+              "replay_coverage": 154,
+              "noise_calibration": "response_variance_rank_fallback_floor"
+            },
+            "RIGHTFIRE": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.3685962106101215,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 104,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 104,
+                  "acceptance_given_possible": 0.0
+                },
+                "prune": {
+                  "selected": 96,
+                  "impossible": 96,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 64,
+              "data_hash": "c7092025e845ab5e674677f13e5fed5d732e6596dd41c5776bd322a221262d0f",
+              "max_abs_q": 0.06331696378901022,
+              "replay_coverage": 187,
+              "noise_calibration": "response_variance_rank_fallback"
+            },
+            "LEFTFIRE": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.39273300021886826,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 98,
+                  "impossible": 0,
+                  "accepted": 4,
+                  "rejected": 94,
+                  "acceptance_given_possible": 0.04081632653061224
+                },
+                "prune": {
+                  "selected": 102,
+                  "impossible": 95,
+                  "accepted": 4,
+                  "rejected": 3,
+                  "acceptance_given_possible": 0.5714285714285714
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 64,
+              "data_hash": "19ce07d7f45f86772573278974b9a9d54ccb817d3d4702c3484180e436994789",
+              "max_abs_q": 0.06251463100395899,
+              "replay_coverage": 182,
+              "noise_calibration": "response_variance_rank_fallback_floor"
+            }
+          }
+        },
+        {
+          "fit_id": 5,
+          "target_model_id": 4,
+          "interaction": 1280,
+          "config_hash": "f83afd1e3826efec864fab6f6214ae440b3368b0e64fd0cc71a552ca9ea0d642",
+          "actions": {
+            "NOOP": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.3623174447566271,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 95,
+                  "impossible": 0,
+                  "accepted": 3,
+                  "rejected": 92,
+                  "acceptance_given_possible": 0.031578947368421054
+                },
+                "prune": {
+                  "selected": 105,
+                  "impossible": 102,
+                  "accepted": 3,
+                  "rejected": 0,
+                  "acceptance_given_possible": 1.0
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 64,
+              "data_hash": "33c232d4534030c9b3daf82ea04829c408d0e76cdc04cd75bf8260b8e2c59b6e",
+              "max_abs_q": 0.05545217956562498,
+              "replay_coverage": 232,
+              "noise_calibration": "response_variance_rank_fallback"
+            },
+            "FIRE": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.37952123302966356,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 95,
+                  "impossible": 0,
+                  "accepted": 6,
+                  "rejected": 89,
+                  "acceptance_given_possible": 0.06315789473684211
+                },
+                "prune": {
+                  "selected": 105,
+                  "impossible": 99,
+                  "accepted": 5,
+                  "rejected": 1,
+                  "acceptance_given_possible": 0.8333333333333334
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 64,
+              "data_hash": "389e5c5652921094fd0a318da7ef2e8fcf49adc01b1056ca39918005c9774991",
+              "max_abs_q": 0.050571806673020005,
+              "replay_coverage": 204,
+              "noise_calibration": "response_variance_rank_fallback_floor"
+            },
+            "RIGHT": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.7077205646783113,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 115,
+                  "impossible": 0,
+                  "accepted": 6,
+                  "rejected": 109,
+                  "acceptance_given_possible": 0.05217391304347826
+                },
+                "prune": {
+                  "selected": 85,
+                  "impossible": 57,
+                  "accepted": 2,
+                  "rejected": 26,
+                  "acceptance_given_possible": 0.07142857142857142
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 64,
+              "data_hash": "0c99ed12d08726b33b6a6667fbd079119e9702fe3fb5ee04a78d64cf86d47e6b",
+              "max_abs_q": 0.629745127683684,
+              "replay_coverage": 197,
+              "noise_calibration": "response_variance_rank_fallback"
+            },
+            "LEFT": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.3933387086726725,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 99,
+                  "impossible": 0,
+                  "accepted": 5,
+                  "rejected": 94,
+                  "acceptance_given_possible": 0.050505050505050504
+                },
+                "prune": {
+                  "selected": 101,
+                  "impossible": 95,
+                  "accepted": 4,
+                  "rejected": 2,
+                  "acceptance_given_possible": 0.6666666666666666
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 64,
+              "data_hash": "5042e1846d200e7294fb8b2f464c9befd4342cf3d923253399bae5b1f0dbff82",
+              "max_abs_q": 0.0508743056447868,
+              "replay_coverage": 193,
+              "noise_calibration": "response_variance_rank_fallback_floor"
+            },
+            "RIGHTFIRE": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.4663687548600137,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 100,
+                  "impossible": 0,
+                  "accepted": 5,
+                  "rejected": 95,
+                  "acceptance_given_possible": 0.05
+                },
+                "prune": {
+                  "selected": 100,
+                  "impossible": 91,
+                  "accepted": 3,
+                  "rejected": 6,
+                  "acceptance_given_possible": 0.3333333333333333
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 64,
+              "data_hash": "8de5e7a5b2bbde287dbb862398f1751cc34e78f8eb7befa3c4e83f3321a02974",
+              "max_abs_q": 0.27366586277836047,
+              "replay_coverage": 233,
+              "noise_calibration": "response_variance_rank_fallback"
+            },
+            "LEFTFIRE": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.3982813651673496,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 107,
+                  "impossible": 0,
+                  "accepted": 3,
+                  "rejected": 104,
+                  "acceptance_given_possible": 0.028037383177570093
+                },
+                "prune": {
+                  "selected": 93,
+                  "impossible": 89,
+                  "accepted": 2,
+                  "rejected": 2,
+                  "acceptance_given_possible": 0.5
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 64,
+              "data_hash": "7a0682653f880c02ab1fa567ac5683af219d8db7bbd518b303e0196bb480bfd9",
+              "max_abs_q": 0.0633201896127508,
+              "replay_coverage": 221,
+              "noise_calibration": "response_variance_rank_fallback_floor"
+            }
+          }
+        },
+        {
+          "fit_id": 6,
+          "target_model_id": 5,
+          "interaction": 1536,
+          "config_hash": "f83afd1e3826efec864fab6f6214ae440b3368b0e64fd0cc71a552ca9ea0d642",
+          "actions": {
+            "NOOP": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.5406189672648907,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 94,
+                  "impossible": 0,
+                  "accepted": 8,
+                  "rejected": 86,
+                  "acceptance_given_possible": 0.0851063829787234
+                },
+                "prune": {
+                  "selected": 106,
+                  "impossible": 81,
+                  "accepted": 6,
+                  "rejected": 19,
+                  "acceptance_given_possible": 0.24
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 64,
+              "data_hash": "582111048fdeff4685387d3800e6903b64b144563cd5ac7025a71803306fb101",
+              "max_abs_q": 0.6006956760699647,
+              "replay_coverage": 273,
+              "noise_calibration": "response_variance_rank_fallback"
+            },
+            "FIRE": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.462615423835814,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 106,
+                  "impossible": 0,
+                  "accepted": 7,
+                  "rejected": 99,
+                  "acceptance_given_possible": 0.0660377358490566
+                },
+                "prune": {
+                  "selected": 94,
+                  "impossible": 86,
+                  "accepted": 5,
+                  "rejected": 3,
+                  "acceptance_given_possible": 0.625
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 64,
+              "data_hash": "ed0ac81969c8d2ca3c55f3b4765629291288a1416b4e3e00d68f9cd280751284",
+              "max_abs_q": 0.15940732479187297,
+              "replay_coverage": 246,
+              "noise_calibration": "response_variance_rank_fallback_floor"
+            },
+            "RIGHT": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.5413791369646788,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 98,
+                  "impossible": 0,
+                  "accepted": 12,
+                  "rejected": 86,
+                  "acceptance_given_possible": 0.12244897959183673
+                },
+                "prune": {
+                  "selected": 102,
+                  "impossible": 75,
+                  "accepted": 9,
+                  "rejected": 18,
+                  "acceptance_given_possible": 0.3333333333333333
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 64,
+              "data_hash": "76a928dd6f1c1b287015df42c35e19ad6d58525d9961d8a038acde17254d9f06",
+              "max_abs_q": 0.9599206255554659,
+              "replay_coverage": 237,
+              "noise_calibration": "response_variance_rank_fallback"
+            },
+            "LEFT": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.6266525480896235,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 97,
+                  "impossible": 0,
+                  "accepted": 13,
+                  "rejected": 84,
+                  "acceptance_given_possible": 0.13402061855670103
+                },
+                "prune": {
+                  "selected": 103,
+                  "impossible": 62,
+                  "accepted": 10,
+                  "rejected": 31,
+                  "acceptance_given_possible": 0.24390243902439024
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 64,
+              "data_hash": "320d51c723ac53d99fa3a500a5d9fe4d898805b464f5e83b5f59a24da8bb1c11",
+              "max_abs_q": 0.374604144903672,
+              "replay_coverage": 234,
+              "noise_calibration": "response_variance_rank_fallback_floor"
+            },
+            "RIGHTFIRE": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.4949342836625874,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 101,
+                  "impossible": 0,
+                  "accepted": 11,
+                  "rejected": 90,
+                  "acceptance_given_possible": 0.10891089108910891
+                },
+                "prune": {
+                  "selected": 99,
+                  "impossible": 79,
+                  "accepted": 9,
+                  "rejected": 11,
+                  "acceptance_given_possible": 0.45
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 64,
+              "data_hash": "462b24939b4b7a54252c45cd08017f336d59202fa7f143736058d7adda0667b0",
+              "max_abs_q": 0.46260694349836956,
+              "replay_coverage": 268,
+              "noise_calibration": "response_variance_rank_fallback"
+            },
+            "LEFTFIRE": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.41592748230323195,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 95,
+                  "impossible": 0,
+                  "accepted": 7,
+                  "rejected": 88,
+                  "acceptance_given_possible": 0.07368421052631578
+                },
+                "prune": {
+                  "selected": 105,
+                  "impossible": 92,
+                  "accepted": 7,
+                  "rejected": 6,
+                  "acceptance_given_possible": 0.5384615384615384
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 64,
+              "data_hash": "e840c8e276edfa0012a8dd5cdb1047fc40ba269b65dd92a1f7ad5346161e5aa9",
+              "max_abs_q": 0.1015340883636419,
+              "replay_coverage": 278,
+              "noise_calibration": "response_variance_rank_fallback_floor"
+            }
+          }
+        },
+        {
+          "fit_id": 7,
+          "target_model_id": 6,
+          "interaction": 1792,
+          "config_hash": "f83afd1e3826efec864fab6f6214ae440b3368b0e64fd0cc71a552ca9ea0d642",
+          "actions": {
+            "NOOP": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.406613374594599,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 107,
+                  "impossible": 0,
+                  "accepted": 4,
+                  "rejected": 103,
+                  "acceptance_given_possible": 0.037383177570093455
+                },
+                "prune": {
+                  "selected": 93,
+                  "impossible": 89,
+                  "accepted": 3,
+                  "rejected": 1,
+                  "acceptance_given_possible": 0.75
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 64,
+              "data_hash": "ed68bd64891d9ec6b5f763a629f5b5b913b5f6e61d7ea8ec7dd969b490658d7b",
+              "max_abs_q": 0.1343522475505178,
+              "replay_coverage": 314,
+              "noise_calibration": "response_variance_rank_fallback"
+            },
+            "FIRE": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.46010932605713606,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 98,
+                  "impossible": 0,
+                  "accepted": 4,
+                  "rejected": 94,
+                  "acceptance_given_possible": 0.04081632653061224
+                },
+                "prune": {
+                  "selected": 102,
+                  "impossible": 85,
+                  "accepted": 3,
+                  "rejected": 14,
+                  "acceptance_given_possible": 0.17647058823529413
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 64,
+              "data_hash": "090efee5d667f6601d59fe095840adbfadbbaab9db78fe7f6c7beee8fd9b673c",
+              "max_abs_q": 0.3497474205023424,
+              "replay_coverage": 284,
+              "noise_calibration": "response_variance_rank_fallback_floor"
+            },
+            "RIGHT": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.46579163195565343,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 103,
+                  "impossible": 0,
+                  "accepted": 9,
+                  "rejected": 94,
+                  "acceptance_given_possible": 0.08737864077669903
+                },
+                "prune": {
+                  "selected": 97,
+                  "impossible": 79,
+                  "accepted": 7,
+                  "rejected": 11,
+                  "acceptance_given_possible": 0.3888888888888889
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 64,
+              "data_hash": "7d8bf09bb26c73f053d8ca19e27004cb17ef72bfc06e1c3c0f139f33cb8dc60a",
+              "max_abs_q": 0.2193277956242538,
+              "replay_coverage": 290,
+              "noise_calibration": "response_variance_rank_fallback"
+            },
+            "LEFT": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.5927160708233714,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 100,
+                  "impossible": 0,
+                  "accepted": 14,
+                  "rejected": 86,
+                  "acceptance_given_possible": 0.14
+                },
+                "prune": {
+                  "selected": 100,
+                  "impossible": 69,
+                  "accepted": 11,
+                  "rejected": 20,
+                  "acceptance_given_possible": 0.3548387096774194
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 64,
+              "data_hash": "3cbf534c5c746a5ee9df387347451cb47cd6a85288ed4230cda183831841f5d3",
+              "max_abs_q": 0.9401701365999585,
+              "replay_coverage": 270,
+              "noise_calibration": "response_variance_rank_fallback_floor"
+            },
+            "RIGHTFIRE": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.46852482995018363,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 96,
+                  "impossible": 0,
+                  "accepted": 2,
+                  "rejected": 94,
+                  "acceptance_given_possible": 0.020833333333333332
+                },
+                "prune": {
+                  "selected": 104,
+                  "impossible": 81,
+                  "accepted": 1,
+                  "rejected": 22,
+                  "acceptance_given_possible": 0.043478260869565216
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 64,
+              "data_hash": "b573d5cec806b87674b338b139a6fe621a9ce74d836618d91a82f84e711274bd",
+              "max_abs_q": 0.11985733860040826,
+              "replay_coverage": 308,
+              "noise_calibration": "response_variance_rank_fallback"
+            },
+            "LEFTFIRE": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.4853707691654563,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 98,
+                  "impossible": 0,
+                  "accepted": 4,
+                  "rejected": 94,
+                  "acceptance_given_possible": 0.04081632653061224
+                },
+                "prune": {
+                  "selected": 102,
+                  "impossible": 77,
+                  "accepted": 3,
+                  "rejected": 22,
+                  "acceptance_given_possible": 0.12
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 64,
+              "data_hash": "286989c0215f4c07076a43b067233848cf0899c5a988c3a1ffeeb4e392a7dad5",
+              "max_abs_q": 0.10040885818836623,
+              "replay_coverage": 326,
+              "noise_calibration": "response_variance_rank_fallback_floor"
+            }
+          }
+        },
+        {
+          "fit_id": 8,
+          "target_model_id": 7,
+          "interaction": 2048,
+          "config_hash": "f83afd1e3826efec864fab6f6214ae440b3368b0e64fd0cc71a552ca9ea0d642",
+          "actions": {
+            "NOOP": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.39575414499267936,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 86,
+                  "impossible": 0,
+                  "accepted": 5,
+                  "rejected": 81,
+                  "acceptance_given_possible": 0.05813953488372093
+                },
+                "prune": {
+                  "selected": 114,
+                  "impossible": 99,
+                  "accepted": 4,
+                  "rejected": 11,
+                  "acceptance_given_possible": 0.26666666666666666
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 64,
+              "data_hash": "3176b75c02fc35f174f7a980a602a805cb6a97bcc01d5e417030fa9b56f4452d",
+              "max_abs_q": 0.10722454692499292,
+              "replay_coverage": 351,
+              "noise_calibration": "response_variance_rank_fallback"
+            },
+            "FIRE": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.36174670001491904,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 102,
+                  "impossible": 0,
+                  "accepted": 2,
+                  "rejected": 100,
+                  "acceptance_given_possible": 0.0196078431372549
+                },
+                "prune": {
+                  "selected": 98,
+                  "impossible": 96,
+                  "accepted": 2,
+                  "rejected": 0,
+                  "acceptance_given_possible": 1.0
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 64,
+              "data_hash": "b81d35498d450d29319392437a0035d1f70140dc88b57b11c900302b66af9067",
+              "max_abs_q": 0.06837234859873312,
+              "replay_coverage": 340,
+              "noise_calibration": "response_variance_rank_fallback_floor"
+            },
+            "RIGHT": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.43420406663790345,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 95,
+                  "impossible": 0,
+                  "accepted": 3,
+                  "rejected": 92,
+                  "acceptance_given_possible": 0.031578947368421054
+                },
+                "prune": {
+                  "selected": 105,
+                  "impossible": 83,
+                  "accepted": 2,
+                  "rejected": 20,
+                  "acceptance_given_possible": 0.09090909090909091
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 64,
+              "data_hash": "8c06facb21b9c306199f21b15c72619389827d2abc6b35efe007fa6f387e9dd7",
+              "max_abs_q": 0.11213339110591794,
+              "replay_coverage": 327,
+              "noise_calibration": "response_variance_rank_fallback"
+            },
+            "LEFT": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.5003795493394136,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 108,
+                  "impossible": 0,
+                  "accepted": 7,
+                  "rejected": 101,
+                  "acceptance_given_possible": 0.06481481481481481
+                },
+                "prune": {
+                  "selected": 92,
+                  "impossible": 74,
+                  "accepted": 5,
+                  "rejected": 13,
+                  "acceptance_given_possible": 0.2777777777777778
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 64,
+              "data_hash": "e2c9a597c3746ed39d27e0a502ba36b353f4387d012dd5801993cf5bcf0dedad",
+              "max_abs_q": 0.7375768896811128,
+              "replay_coverage": 309,
+              "noise_calibration": "response_variance_rank_fallback_floor"
+            },
+            "RIGHTFIRE": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.5396817405708134,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 101,
+                  "impossible": 0,
+                  "accepted": 4,
+                  "rejected": 97,
+                  "acceptance_given_possible": 0.039603960396039604
+                },
+                "prune": {
+                  "selected": 99,
+                  "impossible": 70,
+                  "accepted": 2,
+                  "rejected": 27,
+                  "acceptance_given_possible": 0.06896551724137931
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 64,
+              "data_hash": "d5991aff6b6d385c52e342444d046485e4c3efcf846200c2c205fee8b2b71e19",
+              "max_abs_q": 0.3911217791829145,
+              "replay_coverage": 368,
+              "noise_calibration": "response_variance_rank_fallback"
+            },
+            "LEFTFIRE": {
+              "m": 5,
+              "sweeps": 40,
+              "burn_in": 20,
+              "retained": 20,
+              "targets_outside_scale": 0,
+              "elapsed_seconds": 0.43053749902173877,
+              "max_cache_error": null,
+              "moves": {
+                "grow": {
+                  "selected": 99,
+                  "impossible": 0,
+                  "accepted": 8,
+                  "rejected": 91,
+                  "acceptance_given_possible": 0.08080808080808081
+                },
+                "prune": {
+                  "selected": 101,
+                  "impossible": 84,
+                  "accepted": 6,
+                  "rejected": 11,
+                  "acceptance_given_possible": 0.35294117647058826
+                },
+                "change": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                },
+                "swap": {
+                  "selected": 0,
+                  "impossible": 0,
+                  "accepted": 0,
+                  "rejected": 0,
+                  "acceptance_given_possible": null
+                }
+              },
+              "updated": true,
+              "samples": 64,
+              "data_hash": "cf877a1c8a2c8bc05239dff991d97d68a3edf420632ff1e41466254543b16efd",
+              "max_abs_q": 0.0838396240976141,
+              "replay_coverage": 353,
+              "noise_calibration": "response_variance_rank_fallback_floor"
+            }
+          }
+        }
+      ]
+    },
+    "action_coverage": {
+      "NOOP": 351,
+      "FIRE": 340,
+      "RIGHT": 327,
+      "LEFT": 309,
+      "RIGHTFIRE": 368,
+      "LEFTFIRE": 353
+    },
+    "points_won": 2,
+    "points_lost": 46,
+    "environment_profile": {
+      "backend_step_seconds": 1.5120834759436548,
+      "backend_reset_seconds": 0.5955578256398439,
+      "object_conversion_seconds": 0.05501917516812682,
+      "relations_seconds": 0.07458248687908053,
+      "frames_extracted": 2051,
+      "empty_states": 0
+    },
+    "complexity": {
+      "NOOP": {
+        "trees": 5,
+        "leaves_last_draw": 6,
+        "max_depth_last_draw": 1,
+        "leaves_draw_range": [
+          5,
+          6
+        ]
+      },
+      "FIRE": {
+        "trees": 5,
+        "leaves_last_draw": 5,
+        "max_depth_last_draw": 0,
+        "leaves_draw_range": [
+          5,
+          6
+        ]
+      },
+      "RIGHT": {
+        "trees": 5,
+        "leaves_last_draw": 6,
+        "max_depth_last_draw": 1,
+        "leaves_draw_range": [
+          5,
+          6
+        ]
+      },
+      "LEFT": {
+        "trees": 5,
+        "leaves_last_draw": 7,
+        "max_depth_last_draw": 2,
+        "leaves_draw_range": [
+          6,
+          7
+        ]
+      },
+      "RIGHTFIRE": {
+        "trees": 5,
+        "leaves_last_draw": 7,
+        "max_depth_last_draw": 1,
+        "leaves_draw_range": [
+          7,
+          7
+        ]
+      },
+      "LEFTFIRE": {
+        "trees": 5,
+        "leaves_last_draw": 7,
+        "max_depth_last_draw": 1,
+        "leaves_draw_range": [
+          5,
+          7
+        ]
+      }
+    },
+    "max_abs_q": 0.7375768896811128,
+    "incomplete_replay_states": 825,
+    "empty_replay_states": 0,
+    "targets_outside_reward_scale": 0,
+    "peak_rss_bytes": 226336768
+  },
+  "state": "completed"
+}

@@ -1,0 +1,198 @@
+{
+  "cell": {
+    "id": "ocatari/corrected_common/71",
+    "pipeline": "ocatari",
+    "learner": "corrected_common",
+    "seed": 71,
+    "environment": {
+      "game": "Pong",
+      "extractor": "ocatari_ram_v1",
+      "representation": "comparative",
+      "include_incomplete_states": true,
+      "frameskip": 4,
+      "repeat_action_probability": 0.0,
+      "max_episode_steps": 1000,
+      "env_id": "ALE/Pong-v5",
+      "relation_schema": "pong_relational_v1",
+      "reward_transform": "sign",
+      "reset_policy": "none"
+    },
+    "config": {
+      "eta_q": 0.025,
+      "gamma": 0.99,
+      "max_depth": 4,
+      "min_sample_size": 128,
+      "significance_level": 0.0001,
+      "best_literal_criteria": "p-value",
+      "inherit_q_values": true,
+      "bootstrap_on_truncation": true,
+      "seed": 71
+    },
+    "policy": {
+      "epsilon_init": 1.0,
+      "epsilon_min": 0.1,
+      "epsilon_decay_steps": 50000,
+      "validation_seeds": [
+        320101,
+        320102
+      ],
+      "test_seeds": [
+        420101,
+        420102,
+        420103,
+        420104,
+        420105,
+        420106,
+        420107,
+        420108,
+        420109,
+        420110,
+        420111,
+        420112,
+        420113,
+        420114,
+        420115,
+        420116,
+        420117,
+        420118,
+        420119,
+        420120
+      ]
+    },
+    "hash": "5abc0293e15d49d73f9eb4abd63dea0bbd1d626beacbeff31606ee8e2321affb"
+  },
+  "curve": [
+    {
+      "interactions": 0,
+      "mean_return": -18.5
+    },
+    {
+      "interactions": 2048,
+      "mean_return": -21.0
+    }
+  ],
+  "validation_auc": -19.75,
+  "timing": {
+    "training_seconds": 9.976513653527945,
+    "evaluation_seconds": 10.466249071061611,
+    "save_seconds": 0.9044704637490213
+  },
+  "checkpoint_bytes": 553203,
+  "final_checkpoint_sha256": "4d05b745c43c32feee4b247df64468cb03cef7960acb7dfb4333b85a111d4716",
+  "metrics": {
+    "interactions": 2048,
+    "ended_episodes": 2,
+    "completed_games": 2,
+    "horizon_limited_episodes": 0,
+    "mean_completed_game_raw_return": -21.0,
+    "mean_horizon_limited_raw_return": null,
+    "partial_episode": {
+      "episode_id": 2,
+      "episode_seed": 4088323081,
+      "interaction": 2048,
+      "transition_id": 2047,
+      "episode_return": -7.0,
+      "raw_episode_return": -7.0,
+      "terminated": false,
+      "truncated": false,
+      "episode_end": false,
+      "return_scope": "partial",
+      "steps": 352
+    },
+    "learner": {
+      "kind": "rrtl_corrected_common_v1",
+      "splits": 0,
+      "query_counts": {
+        "prediction": {
+          "queries": 492,
+          "internal_fallbacks": 0
+        },
+        "update": {
+          "queries": 2048,
+          "internal_fallbacks": 0
+        },
+        "bootstrap": {
+          "queries": 12276,
+          "internal_fallbacks": 0
+        }
+      }
+    },
+    "action_coverage": {
+      "NOOP": 329,
+      "FIRE": 355,
+      "RIGHT": 343,
+      "LEFT": 313,
+      "RIGHTFIRE": 362,
+      "LEFTFIRE": 346
+    },
+    "points_won": 0,
+    "points_lost": 49,
+    "environment_profile": {
+      "backend_step_seconds": 1.4571475335396826,
+      "backend_reset_seconds": 0.5706031671725214,
+      "object_conversion_seconds": 0.052730158902704716,
+      "relations_seconds": 0.07164023583754897,
+      "frames_extracted": 2051,
+      "empty_states": 0
+    },
+    "complexity": {
+      "NOOP": {
+        "nodes": 1,
+        "leaves": 1,
+        "max_depth": 0,
+        "splits": 0,
+        "eligible_leaf_candidates": 20,
+        "max_candidate_samples": 329,
+        "max_abs_q": 0.06458996688532216
+      },
+      "FIRE": {
+        "nodes": 1,
+        "leaves": 1,
+        "max_depth": 0,
+        "splits": 0,
+        "eligible_leaf_candidates": 20,
+        "max_candidate_samples": 355,
+        "max_abs_q": 0.07065043757512657
+      },
+      "RIGHT": {
+        "nodes": 1,
+        "leaves": 1,
+        "max_depth": 0,
+        "splits": 0,
+        "eligible_leaf_candidates": 20,
+        "max_candidate_samples": 343,
+        "max_abs_q": 0.03976172349487193
+      },
+      "LEFT": {
+        "nodes": 1,
+        "leaves": 1,
+        "max_depth": 0,
+        "splits": 0,
+        "eligible_leaf_candidates": 20,
+        "max_candidate_samples": 313,
+        "max_abs_q": 0.06352400714962096
+      },
+      "RIGHTFIRE": {
+        "nodes": 1,
+        "leaves": 1,
+        "max_depth": 0,
+        "splits": 0,
+        "eligible_leaf_candidates": 20,
+        "max_candidate_samples": 362,
+        "max_abs_q": 0.04071621328907848
+      },
+      "LEFTFIRE": {
+        "nodes": 1,
+        "leaves": 1,
+        "max_depth": 0,
+        "splits": 0,
+        "eligible_leaf_candidates": 20,
+        "max_candidate_samples": 346,
+        "max_abs_q": 0.09119659725669345
+      }
+    },
+    "targets_outside_reward_scale": 0,
+    "peak_rss_bytes": 210870272
+  },
+  "state": "completed"
+}

@@ -1,0 +1,344 @@
+{
+  "cell": {
+    "id": "visual/bart/71",
+    "pipeline": "visual",
+    "learner": "bart",
+    "seed": 71,
+    "environment": {
+      "game": "Pong",
+      "extractor": "legacy_visual_pong_v1",
+      "representation": "comparative",
+      "include_incomplete_states": false,
+      "frameskip": 4,
+      "repeat_action_probability": 0.0,
+      "max_episode_steps": 1000,
+      "env_id": "PongNoFrameskip-v4",
+      "relation_schema": "legacy_pong_v1",
+      "reward_transform": "sign_plus_0.1",
+      "reset_policy": "legacy_fire"
+    },
+    "config": {
+      "actions": [
+        "NOOP",
+        "FIRE",
+        "RIGHT",
+        "LEFT",
+        "RIGHTFIRE",
+        "LEFTFIRE"
+      ],
+      "seed": 71,
+      "gamma": 0.99,
+      "reward_min": -0.9,
+      "reward_max": 1.1,
+      "replay_capacity": 5000,
+      "batch_size_per_action": 64,
+      "fit_interval": 256,
+      "warmup_interactions": 256,
+      "kernel": "grow_prune",
+      "m": 5,
+      "burn_in": 20,
+      "draws": 20,
+      "k": 2.0,
+      "alpha_tree": 0.95,
+      "beta_tree": 2.0,
+      "max_depth": 4,
+      "min_child": 2,
+      "nu": 3.0,
+      "noise_quantile": 0.9,
+      "variance_floor": 1e-08,
+      "epsilon_init": 1.0,
+      "epsilon_min": 0.1,
+      "epsilon_decay_steps": 50000,
+      "bootstrap_on_truncation": true,
+      "resample_repeated_actions": false,
+      "action_buffer_capacity": 10,
+      "validation_seeds": [
+        320101,
+        320102
+      ],
+      "test_seeds": [
+        420101,
+        420102,
+        420103,
+        420104,
+        420105,
+        420106,
+        420107,
+        420108,
+        420109,
+        420110,
+        420111,
+        420112,
+        420113,
+        420114,
+        420115,
+        420116,
+        420117,
+        420118,
+        420119,
+        420120
+      ]
+    },
+    "policy": {
+      "epsilon_init": 1.0,
+      "epsilon_min": 0.1,
+      "epsilon_decay_steps": 50000,
+      "validation_seeds": [
+        320101,
+        320102
+      ],
+      "test_seeds": [
+        420101,
+        420102,
+        420103,
+        420104,
+        420105,
+        420106,
+        420107,
+        420108,
+        420109,
+        420110,
+        420111,
+        420112,
+        420113,
+        420114,
+        420115,
+        420116,
+        420117,
+        420118,
+        420119,
+        420120
+      ]
+    },
+    "hash": "0edc6ac831d452e662589d561b44cd3d9fd414eab2a9d306acd7ab1c2edd13d7"
+  },
+  "learner_id": "bart",
+  "runtime_environment": {
+    "backend": "legacy_visual_pong_v1",
+    "env_id": "PongNoFrameskip-v4",
+    "actions": [
+      "NOOP",
+      "FIRE",
+      "RIGHT",
+      "LEFT",
+      "RIGHTFIRE",
+      "LEFTFIRE"
+    ],
+    "catalog": {
+      "version": 1,
+      "catalog": [
+        {
+          "type": "comparative",
+          "name": "x",
+          "obj1": "ball_t",
+          "obj2": "ball_t-1",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "x",
+          "obj1": "ball_t",
+          "obj2": "enemy_t",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "x",
+          "obj1": "enemy_t",
+          "obj2": "enemy_t-1",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "x",
+          "obj1": "player_t",
+          "obj2": "ball_t",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "x",
+          "obj1": "player_t",
+          "obj2": "enemy_t",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "x",
+          "obj1": "player_t",
+          "obj2": "player_t-1",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "y",
+          "obj1": "ball_t",
+          "obj2": "ball_t-1",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "y",
+          "obj1": "ball_t",
+          "obj2": "enemy_t",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "y",
+          "obj1": "enemy_t",
+          "obj2": "enemy_t-1",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "y",
+          "obj1": "player_t",
+          "obj2": "ball_t",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "y",
+          "obj1": "player_t",
+          "obj2": "enemy_t",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "y",
+          "obj1": "player_t",
+          "obj2": "player_t-1",
+          "obj3": null
+        },
+        {
+          "type": "logical",
+          "name": "incontact",
+          "obj1": "ball_t",
+          "obj2": "ball_t-1",
+          "obj3": null
+        },
+        {
+          "type": "logical",
+          "name": "incontact",
+          "obj1": "ball_t",
+          "obj2": "enemy_t",
+          "obj3": null
+        },
+        {
+          "type": "logical",
+          "name": "incontact",
+          "obj1": "enemy_t",
+          "obj2": "enemy_t-1",
+          "obj3": null
+        },
+        {
+          "type": "logical",
+          "name": "incontact",
+          "obj1": "player_t",
+          "obj2": "ball_t",
+          "obj3": null
+        },
+        {
+          "type": "logical",
+          "name": "incontact",
+          "obj1": "player_t",
+          "obj2": "enemy_t",
+          "obj3": null
+        },
+        {
+          "type": "logical",
+          "name": "incontact",
+          "obj1": "player_t",
+          "obj2": "player_t-1",
+          "obj3": null
+        },
+        {
+          "type": "logical",
+          "name": "present",
+          "obj1": "ball_t",
+          "obj2": null,
+          "obj3": null
+        },
+        {
+          "type": "logical",
+          "name": "present",
+          "obj1": "ball_t-1",
+          "obj2": null,
+          "obj3": null
+        },
+        {
+          "type": "logical",
+          "name": "present",
+          "obj1": "enemy_t",
+          "obj2": null,
+          "obj3": null
+        },
+        {
+          "type": "logical",
+          "name": "present",
+          "obj1": "enemy_t-1",
+          "obj2": null,
+          "obj3": null
+        },
+        {
+          "type": "logical",
+          "name": "present",
+          "obj1": "player_t",
+          "obj2": null,
+          "obj3": null
+        },
+        {
+          "type": "logical",
+          "name": "present",
+          "obj1": "player_t-1",
+          "obj2": null,
+          "obj3": null
+        }
+      ],
+      "catalog_hash": "343b41478427af21a36e6abca951e4c7c263ce4578bf813ce61b74ed486cb9c5"
+    }
+  },
+  "source_hashes": {
+    "bayesian_rrtl/__init__.py": "e6171365a6aef56cc6027d088f31c32830e9d80ef9c14951a87b6d14dcbce302",
+    "bayesian_rrtl/agent.py": "fb83e747a487ecf1769200db3b9cc29d1df404fe2c77684aafca19796ba8601c",
+    "bayesian_rrtl/atari.py": "b229aa4a209e0958caae57bccb1a9a34156e8807ba04457a07b509c3fdf56976",
+    "bayesian_rrtl/atari_backend.py": "9ed3051f4b444035af20572db6446946546c6d837e7d86e220ab81f8e0910b3c",
+    "bayesian_rrtl/baseline.py": "e31755759d7ba5bc51a094a55a7e435d4dd2eb9270aa6c3b9865414e5fdacb12",
+    "bayesian_rrtl/baseline_adapter.py": "240e22bf0b5e0493e8e2b3640ee00306c43369877fc18cf7a62502a746ec7436",
+    "bayesian_rrtl/baseline_checkpoint.py": "5d7e124f70f18182064d0a7a950e2e42d342098e7eea16d90118473a68d52b2b",
+    "bayesian_rrtl/baseline_training.py": "72f7974e85e4feb756f4a919591abbaf03280b0c20ad948b5f1cf5508128fe1c",
+    "bayesian_rrtl/checkpoint.py": "c9219fe44fc2fa9b838d621bc4fcef4e74bdbb9e77c1332173ffa78a01ea34ef",
+    "bayesian_rrtl/comparison.py": "b09058ace1b05ebf15410ee57265a14d7b5e54cdb4c81a32623d868d92b23c6c",
+    "bayesian_rrtl/comparison_checkpoint.py": "f7f34ea0e4f364cb83f5476a72e8fcfa527c384b8083a9a11ef90c864efc41cd",
+    "bayesian_rrtl/comparison_protocol.py": "31d61f23341c2c0ab7f23fd48edd2957c4566dfdbb495e931600589c44bfaa9d",
+    "bayesian_rrtl/config.py": "7da2ea2e139c648a9215bcbdeab18934d01386d18f4ffe692b1d7de23d1d0bce",
+    "bayesian_rrtl/controls.py": "b99cb67c080fe57a07820b3bebc634eef8db5b1f39867dab7158b7b4f35f0e5e",
+    "bayesian_rrtl/diagnostics.py": "1fcea2be086a94dc76e8bb5b0c69141118773273b1d15a37bcaab1ee9c790f43",
+    "bayesian_rrtl/encoding.py": "32752fd93792c35937baae455566fe04cf99836024e2bc43802923b5257b0857",
+    "bayesian_rrtl/ensemble.py": "172d5e991a82826070037f55fb522f0383b42dd5c45c77a06615ddebfe1659be",
+    "bayesian_rrtl/evaluation.py": "fb1b783c89f206fa3f3df4c3d5772cc32f0bc1fa07a8a43121c71b433dfb2438",
+    "bayesian_rrtl/exact.py": "37589da05d88cc4f802eac4006dcb2a526a76aa0feb912fa83c1ec6632591b9b",
+    "bayesian_rrtl/game_registry.py": "fc9a68baa9cceb54704c6724fea6edf533d96a0a3d2d2648dbd2d079234db109",
+    "bayesian_rrtl/general_bart.py": "74db0774d898501c418c7be83ac91192f65bdc33c42be79dcaaca6a8371fa122",
+    "bayesian_rrtl/likelihood.py": "deece50c50f827d24da9c79b70ec5f798c4f12afaa158a4dcebe95af60f3ffdb",
+    "bayesian_rrtl/objects.py": "ba0383d8c8458c88c36465966310eff45f8a9a7322394ef9ffdfd68c0e0e583b",
+    "bayesian_rrtl/ocatari_backend.py": "1183c86fda61023a56ce6c4606f150111616133da653db7e82eca0f41454dc27",
+    "bayesian_rrtl/priors.py": "049775ef3e7044000befef052cd8b1782c30d362b60d89f95a01e63b483511a0",
+    "bayesian_rrtl/profiling.py": "cfe8efa04b26c7758fd1ab2900cc1182a0870a9d2f27bf319e245fa370f33baf",
+    "bayesian_rrtl/proposals.py": "5b11b4f4ee991378048352835312aad4f1ca66d241d024ef9f0ae542eb25038e",
+    "bayesian_rrtl/q_config.py": "db9e51e0cfa8f9099e501945b29a71ede89c48ef04ef8cbdb093d4d09f385a6f",
+    "bayesian_rrtl/replay.py": "e4de5bbecb011fa860bfce5ced13242ede6f31e0a00606aba078effc52fb835c",
+    "bayesian_rrtl/rules.py": "20bf0e4bfaa5870bfca78a23752ef2fe983ec0d61a371d77b005b95513c832c7",
+    "bayesian_rrtl/sampler.py": "2f63513a4371b04ecb7375f3d6ae6d9131567771807226e87e1dcd4664910e34",
+    "bayesian_rrtl/targets.py": "5276110077c1011c2dda184ba6ab473b3f87e5aef5336954a7796f7b2f1f46da",
+    "bayesian_rrtl/toy_mdp.py": "adc0e20c53cebcaa0148309696ad3bf008c0d06ea9bbddc4812e62e6b2d89b93",
+    "bayesian_rrtl/training.py": "2349120b26211c621717fc1cdd211556116be37366c7d9ac881fc8e145ee9b40",
+    "bayesian_rrtl/tree.py": "a0bca8f5c6271c48f8efe38b849c97f47592b07a488cbd6d468c1b759ea3abfc",
+    "bayesian_rrtl/games/__init__.py": "9b2d60e4a8d1dc2d5e5ddaccc039c2be8a49d2a709be14be9d49898875625381",
+    "bayesian_rrtl/games/pong.py": "413681aa1064c55b574adcb86466d00002d9c40c8651d17eb5ae63aede8c7ad4",
+    "preprocessing.py": "112276f01b888eb5c45e1ae47ca9ea0078d7e1ca623c56f875eec270fc68e5cd",
+    "relational_regresion_tree.py": "5e6fb6015eddb875dc3a38a1981e0da1502fa2bcdeb1db59aba362635eab1a60",
+    "experiments/compare_pong.py": "e95bdd30988decb58726b026b44d73405a626bc85d826badee379c54a8821908"
+  }
+}

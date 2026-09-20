@@ -30,6 +30,7 @@ Los diagnósticos cortos no prueban convergencia de las posteriores.
 - [Guía de H7: controles, ablaciones y campaña multijuego](docs/h7.md)
 - [OCAtari Pong: backend, relaciones, CLI y evidencia de pasos 0–5](docs/ocatari_pong.md)
 - [Comparación Pong: campaña pareada y auditoría de readiness, pasos A–E](docs/pong_comparison.md)
+- [Despliegue en clúster: Conda, Slurm, preflight, smoke y piloto](docs/cluster_pong.md)
 - [Plan de implementación versionado](plan_implementacion_rrtl_bart.md)
 - [Configuración de prueba corta](configs/breakout_smoke.json)
 

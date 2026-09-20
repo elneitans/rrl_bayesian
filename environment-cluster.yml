@@ -1,0 +1,11 @@
+name: rrl-pong
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11.7
+  - pip
+  # OpenCV's non-headless wheel imports these even without rendering.
+  - libgl
+  - glib
+  - pip:
+      - -r requirements-ocatari.txt

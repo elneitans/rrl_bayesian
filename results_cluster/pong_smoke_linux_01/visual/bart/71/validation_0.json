@@ -1,0 +1,53 @@
+{
+  "binding": {
+    "evaluation_schema": "pong_evaluation_v2",
+    "protocol_hash": "26c722dfd0e7c8d9e88177c95f3c144b56bd86473382888a701cab611b363124",
+    "cell_hash": "0edc6ac831d452e662589d561b44cd3d9fd414eab2a9d306acd7ab1c2edd13d7",
+    "checkpoint_sha256": "e94eb3188190e2614f1280ce98052f17202b05a7b20d6567ecb6d539c7afee21",
+    "evaluation_sources_hash": "3140743787bc82ba572180ad722965b4d8ccee763596d56e6c67381732fe082f",
+    "split": "validation",
+    "seeds": [
+      320101,
+      320102
+    ],
+    "horizon": 1000
+  },
+  "report": {
+    "schema": "pong_evaluation_v2",
+    "episodes": [
+      {
+        "episode_id": 0,
+        "seed": 320101,
+        "return": -14.0,
+        "steps": 998,
+        "terminated": false,
+        "truncated": true,
+        "points_won": 1.0,
+        "points_lost": 15.0,
+        "return_scope": "horizon_limited",
+        "epsilon": 0.0
+      },
+      {
+        "episode_id": 1,
+        "seed": 320102,
+        "return": -20.0,
+        "steps": 901,
+        "terminated": true,
+        "truncated": false,
+        "points_won": 1.0,
+        "points_lost": 21.0,
+        "return_scope": "complete_game",
+        "epsilon": 0.0
+      }
+    ],
+    "horizon": 1000,
+    "mean_raw_return": -17.0,
+    "median_raw_return": -17.0,
+    "std_raw_return": 3.0,
+    "iqr_raw_return": 3.0,
+    "truncation_fraction": 0.5,
+    "completed_games": 1,
+    "mean_completed_game_raw_return": -20.0
+  },
+  "seconds": 6.016869374085218
+}
