@@ -1,0 +1,10 @@
+name: rrl-pong-analysis
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11.7
+  - pip
+  - libgl
+  - glib
+  - pip:
+      - -r requirements-pong-analysis.txt
