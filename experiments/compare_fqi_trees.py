@@ -1,8 +1,7 @@
 """Offline fixed-transition FQI: BART posterior mean, CART and nominal ExtraTrees."""
 import argparse
-from dataclasses import dataclass
+from dataclasses import asdict, dataclass
 from importlib.metadata import version
-import os
 from pathlib import Path
 import pickle
 import time
@@ -14,20 +13,18 @@ from bayesian_rrtl.atari import AtariConfig
 from bayesian_rrtl.controls import fit_cart
 from bayesian_rrtl.ensemble import BARTRegressor
 from bayesian_rrtl.evaluation import paired_bootstrap
+from bayesian_rrtl.online.learners import ExtraTreesConfig, nominal_indicators
 from bayesian_rrtl.priors import calibrate_noise
 from bayesian_rrtl.targets import frozen_q_targets
-from experiments.pong_analysis_common import (ROOT, encoded, load_manifest, load_npz,
-    manifest_encoder, read, sha, source_path, transition_from_arrays, write_new)
+from experiments.pong_analysis_common import (encoded, load_manifest, load_npz,
+    manifest_encoder, read, sha, transition_from_arrays, pilot_protocol, portable_metadata)
+from experiments.pong_analysis_runtime import (WorkUnit, array_hash, atomic_bytes, atomic_json,
+    bytes_hash, episode, extension_arguments, identity, mode_root, unit_lock)
 
 EXTRA_TREES_VERSION = '1.9.1'
 METHODS = ('bart', 'cart', 'extra_trees')
 
 
-def nominal_indicators(batch):
-    """Each category and missingness gets its own column; no ordinal threshold."""
-    return np.column_stack([(batch.values[:, j] == level).astype(np.float32)
-        for j, key in enumerate(batch.catalog)
-        for level in (-1, *(range(3) if key.type == 'comparative' else range(2)))])
 
 
 @dataclass
@@ -43,7 +40,9 @@ class FittedAction:
             return self.estimator.predict_mean(batch)
         if self.method == 'cart':
             return self.estimator.predict(batch)
-        return self.estimator.predict(nominal_indicators(batch))
+        if self.method == 'extra_trees':
+            return self.estimator.predict(nominal_indicators(batch))
+        raise ValueError('Unknown fitted estimator')
 
 
 @dataclass
@@ -59,7 +58,7 @@ class FittedQ:
                                 for model in self.estimators])
 
 
-def fit_action(method, batch, y, config_data, seed, *, smoke=False):
+def fit_action(method, batch, y, config_data, seed, *, smoke=False, extra_trees_config=None):
     from bayesian_rrtl.q_config import BayesianQConfig
     config = BayesianQConfig(**config_data)
     start = time.perf_counter()
@@ -77,26 +76,30 @@ def fit_action(method, batch, y, config_data, seed, *, smoke=False):
         complexity = {'leaves': sum(node.is_leaf for _, node, _ in model.walk(batch)),
                       'max_depth': max(len(path) for path, _, _ in model.walk(batch))}
     elif method == 'extra_trees':
-        if version('scikit-learn') != EXTRA_TREES_VERSION:
+        options = ExtraTreesConfig(**(extra_trees_config or {}))
+        if version('scikit-learn') != options.sklearn_version:
             raise ValueError(f'ExtraTrees requires scikit-learn {EXTRA_TREES_VERSION}')
         from sklearn.ensemble import ExtraTreesRegressor
-        model = ExtraTreesRegressor(n_estimators=20, max_depth=4, min_samples_leaf=2,
+        model = ExtraTreesRegressor(n_estimators=options.n_estimators, max_depth=options.max_depth,
+            min_samples_leaf=options.min_samples_leaf,
             random_state=seed, n_jobs=1).fit(nominal_indicators(batch), y)
-        complexity = {'trees': 20, 'leaves': sum(tree.get_n_leaves() for tree in model.estimators_)}
+        complexity = {'config': asdict(options), 'trees': options.n_estimators, 'leaves': int(sum(tree.get_n_leaves() for tree in model.estimators_))}
     else:
         raise ValueError('Unknown control')
     return FittedAction(method, model, batch.catalog_hash), {'seconds': time.perf_counter()-start,
         'samples': len(y), 'complexity': complexity, 'random_state': seed}
 
 
-def _data(analysis, pipeline, kind):
-    folder = Path(analysis) / pipeline / kind
-    meta = read(folder / 'metadata.json')
+def _data(analysis, pipeline, kind, dataset_folder=None):
+    folder = Path(dataset_folder) if dataset_folder else Path(analysis) / pipeline / kind
+    meta = portable_metadata(folder)
     return meta, load_npz(folder / f'{kind}.npz', meta['npz_sha256'])
 
 
-def regression_benchmark(analysis, pipeline, *, smoke=False):
-    meta, data = _data(analysis, pipeline, 'fixed_fit')
+def regression_benchmark(analysis, pipeline, *, smoke=False, output=None, manifest=None, dataset_folder=None, extra_trees_config=None):
+    meta, data = _data(analysis, pipeline, 'fixed_fit', dataset_folder)
+    if meta.get('mode') == 'smoke' and not smoke:
+        raise ValueError('Smoke dataset cannot satisfy a full regression')
     encoder = manifest_encoder(meta)
     results = {}
     for action, action_meta in enumerate(meta['actions']):
@@ -110,23 +113,47 @@ def regression_benchmark(analysis, pipeline, *, smoke=False):
             continue
         models = {}
         for method in METHODS:
-            model, details = fit_action(method, batch.take(np.flatnonzero(train)), targets[train],
-                meta['config'], 570001 + action, smoke=smoke)
-            predicted = model.predict(batch.take(np.flatnonzero(~train)))
-            models[method] = {**details, 'mse_heldout_episode': float(np.mean((predicted-targets[~train])**2)),
-                'heldout_samples': int((~train).sum())}
+            expected = (identity(manifest, pipeline=pipeline, stage='regression', method=method,
+                dataset=meta.get('dataset_kind', 'common_fixed_fit' if 'common_protocol' in meta else 'pilot_fixed_fit'),
+                variant=f'a{action}', smoke=smoke, seeds=[570001+action],
+                effective={'learning': meta['config'], 'extra_trees': asdict(ExtraTreesConfig(**(extra_trees_config or {})))}
+                    if method == 'extra_trees' else meta['config'], hashes={'data': meta['npz_sha256'], 'train_mask': array_hash(train), 'targets': array_hash(targets),
+                                               'catalog': encoder.catalog_hash}) if manifest else None)
+            models[method] = regression_unit(output/method/f'a{action}' if output else None,
+                expected, method, batch, targets, train, meta['config'], 570001+action, smoke=smoke,
+                extra_trees_config=extra_trees_config)
         results[action_meta['action']] = {'status': 'checked', 'models': models,
             'data_hash': action_meta['data_hash'],
             'train_target_sha256': __import__('hashlib').sha256(targets[train].tobytes()).hexdigest(),
             'heldout_target_sha256': __import__('hashlib').sha256(targets[~train].tobytes()).hexdigest()}
     return {'pipeline': pipeline, 'kind': 'same_fixed_X_y_regression', 'actions': results,
-        'interpretation': 'Held-out error uses whole pilot episodes excluded from each fit.'}
+        'interpretation': meta.get('holdout_limitation', 'Whole holdout episodes excluded from all target-generator fits and calibration.')}
 
 
-def selected_transitions(analysis, pipeline, dataset='pilot'):
+
+def regression_unit(folder, expected, method, batch, targets, train, config_data, seed, *, smoke, extra_trees_config=None):
+    from contextlib import nullcontext
+    with unit_lock(folder) if folder else nullcontext():
+        unit = WorkUnit(folder, expected) if folder else None
+        saved = unit.load() if unit else None
+        if saved and saved['status'] == 'completed':
+            return saved['result']
+        model, details = fit_action(method, batch.take(np.flatnonzero(train)), targets[train],
+                                    config_data, seed, smoke=smoke, extra_trees_config=extra_trees_config)
+        predicted = model.predict(batch.take(np.flatnonzero(~train)))
+        result = {**details, 'mse_heldout_episode': float(np.mean((predicted-targets[~train])**2)),
+                  'heldout_samples': int((~train).sum())}
+        if unit:
+            unit.commit('completed', result=result, artifacts={'model': pickle.dumps(model)})
+        return result
+
+
+def selected_transitions(analysis, pipeline, dataset='pilot', dataset_folder=None):
+    if dataset == 'common' and dataset_folder is None:
+        raise ValueError('Common data require an explicit --dataset-folder')
     kind = 'fixed_transitions' if dataset == 'pilot' else 'assisted_fixed_transitions'
-    folder = Path(analysis) / pipeline / kind
-    meta = read(folder / 'metadata.json')
+    folder = Path(dataset_folder) if dataset_folder else Path(analysis) / pipeline / kind
+    meta = portable_metadata(folder)
     data = load_npz(folder / 'fixed_transitions.npz', meta['npz_sha256'])
     encoder = manifest_encoder(meta)
     selected = np.flatnonzero(data['fqi_selected'] & data['episode_train'])
@@ -136,7 +163,7 @@ def selected_transitions(analysis, pipeline, dataset='pilot'):
     return meta, encoder, transitions, data
 
 
-def fit_epoch(method, transitions, encoder, config_data, previous, epoch, *, smoke=False):
+def fit_epoch(method, transitions, encoder, config_data, previous, epoch, *, smoke=False, extra_trees_config=None):
     from bayesian_rrtl.q_config import BayesianQConfig
     from bayesian_rrtl.replay import concatenate_states
     config = BayesianQConfig(**config_data)
@@ -150,56 +177,42 @@ def fit_epoch(method, transitions, encoder, config_data, previous, epoch, *, smo
             raise ValueError(f'No selected transitions for action {action}')
         batch = concatenate_states([transitions[i].state for i in indices], encoder)
         model, summary = fit_action(method, batch, targets[indices], config_data,
-            580001 + epoch * 100 + action, smoke=smoke)
+            580001 + epoch * 100 + action, smoke=smoke, extra_trees_config=extra_trees_config)
         estimators.append(model)
         details.append({'action': config.actions[action], **summary,
+                        'target_sha256': array_hash(targets[indices]),
                         'target_min': float(targets[indices].min()),
                         'target_max': float(targets[indices].max())})
     # Only now publish Q_k. Earlier actions never enter y_k.
     return FittedQ(config.actions, tuple(estimators), encoder.catalog_hash), details
 
 
-def evaluate_model(model, factory, seeds, horizon, seconds_per_episode):
+@dataclass
+class GreedyController:
+    model: FittedQ
+
+    def action(self, state, env, rng):
+        batch = model_encoder(self.model, env).transform([state])
+        q = self.model.predict(batch)[0]
+        return int(rng.choice(np.flatnonzero(q == q.max())))
+
+
+def evaluate_model(model, factory, seeds, horizon, seconds_per_episode, *, output=None,
+                   expected=None, extend_seconds=0., extension_id=None):
+    import tempfile
+    if output is None:
+        with tempfile.TemporaryDirectory() as temporary:
+            return evaluate_model(model, factory, seeds, horizon, seconds_per_episode,
+                                  output=Path(temporary), expected={'model': bytes_hash(pickle.dumps(model))})
+    model_hash = bytes_hash(pickle.dumps(model, protocol=pickle.HIGHEST_PROTOCOL))
     rows = []
-    reference = None
-    rngs = {seed: np.random.default_rng(seed + 590001) for seed in seeds}
     for seed in seeds:
-        env = factory()
-        started = time.monotonic()
-        try:
-            state = env.reset(seed=seed)
-            for step in range(1, horizon + 1):
-                if time.monotonic()-started >= seconds_per_episode:
-                    rows.append({'seed': seed, 'status': 'partial', 'steps': step-1, 'reason': 'time_budget'})
-                    break
-                batch = model_encoder(model, env).transform([state])
-                q = model.predict(batch)[0]
-                if reference is None:
-                    reference = (batch, q.copy())
-                ties = np.flatnonzero(q == q.max())
-                action = int(rngs[seed].choice(ties))
-                state, _, raw, terminal, truncated = env.step(action)
-                if step == 1:
-                    total = won = lost = 0.
-                    actions = {}
-                total += raw
-                won += max(raw, 0.)
-                lost += max(-raw, 0.)
-                actions[env.actions[action]] = actions.get(env.actions[action], 0) + 1
-                if terminal or truncated:
-                    break
-            else:
-                terminal, truncated = False, True
-            if not rows or rows[-1].get('seed') != seed:
-                rows.append({'seed': seed, 'status': 'completed', 'steps': step,
-                    'terminated': bool(terminal), 'truncated': bool(truncated or not terminal),
-                    'return_scope': 'complete_game' if terminal else 'horizon_limited',
-                    'raw_return': total, 'points_won': won, 'points_lost': lost,
-                    'actions': actions, 'seconds': time.monotonic()-started})
-        finally:
-            env.close()
-    if reference is not None:
-        np.testing.assert_array_equal(model.predict(reference[0])[0], reference[1])
+        unit_id = {**expected, 'episode_seed': seed, 'model_hash': model_hash, 'horizon': horizon}
+        rows.append(episode(factory, GreedyController(model), output/str(seed), unit_id,
+            seed=seed, horizon=horizon, seconds=seconds_per_episode, rng_seed=seed+590001,
+            extend_seconds=extend_seconds, extension_id=extension_id))
+    if bytes_hash(pickle.dumps(model, protocol=pickle.HIGHEST_PROTOCOL)) != model_hash:
+        raise ValueError('Evaluation mutated frozen model')
     return rows
 
 
@@ -211,63 +224,82 @@ def model_encoder(model, env):
 
 
 def save_model(path, model):
-    temporary = path.with_suffix('.tmp')
-    with temporary.open('wb') as handle:
-        pickle.dump(model, handle, protocol=pickle.HIGHEST_PROTOCOL)
-        handle.flush()
-        os.fsync(handle.fileno())
-    temporary.replace(path)
+    atomic_bytes(path, pickle.dumps(model, protocol=pickle.HIGHEST_PROTOCOL))
     return sha(path)
 
 
-def run_fqi(analysis, pipeline, output, *, smoke=False, dataset='pilot'):
-    manifest = load_manifest(analysis)
-    specification = manifest['config']
-    meta, encoder, transitions, _ = selected_transitions(analysis, pipeline, dataset)
+def fit_iteration(folder, expected, method, transitions, encoder, config_data, previous, epoch, *, smoke=False, extra_trees_config=None):
+    with unit_lock(folder):
+        unit = WorkUnit(folder, expected)
+        saved = unit.load()
+        if saved and saved['status'] == 'completed':
+            return unit.pickle(saved, 'model'), saved['result']
+        current, details = fit_epoch(method, transitions, encoder, config_data, previous, epoch, smoke=smoke, extra_trees_config=extra_trees_config)
+        raw = pickle.dumps(current, protocol=pickle.HIGHEST_PROTOCOL)
+        result = {'epoch': epoch, 'method': method, 'details': details, 'model_sha256': bytes_hash(raw),
+                  'target_hashes': [v['target_sha256'] for v in details],
+                  'previous_model_sha256': expected['hashes']['previous_model']}
+        unit.commit('completed', result=result, artifacts={'model': raw})
+        return current, result
+
+
+def run_fqi(analysis, pipeline, output, *, smoke=False, dataset='pilot',
+            extend_seconds=0., extension_id=None, dataset_folder=None, extra_trees_config=None):
+    manifest = load_manifest(analysis, writable=True)
+    cfg = manifest['config']
+    meta, encoder, transitions, _ = selected_transitions(analysis, pipeline, dataset, dataset_folder)
+    dataset = meta.get('dataset_kind', dataset)
+    if meta.get('mode') == 'smoke' and not smoke:
+        raise ValueError('Smoke dataset cannot satisfy full FQI')
     if not transitions:
         raise ValueError('No selected transitions')
-    if not output.exists():
-        output.mkdir(parents=True)
-        write_new(output / 'identity.json', {'analysis_manifest_sha256': sha(Path(analysis)/'manifest.json'),
-            'dataset_sha256': meta['npz_sha256'], 'pipeline': pipeline, 'smoke': smoke,
-            'methods': METHODS, 'dataset': dataset,
-            'epochs': [1] if smoke else specification['fqi_epochs']})
-    elif read(output / 'identity.json')['dataset_sha256'] != meta['npz_sha256']:
-        raise ValueError('FQI output belongs to another dataset')
     from bayesian_rrtl.comparison import PongEnvironmentFactory
-    source_protocol = read(source_path(specification['source_campaign']) / 'protocol.json')['protocol']
-    factory = PongEnvironmentFactory(AtariConfig(**source_protocol['environments'][pipeline]))
-    horizon = specification['smoke_horizon'] if smoke else specification['horizon']
-    factory = factory.with_horizon(horizon)
-    seeds = [specification['smoke_seed']] if smoke else specification['fqi_evaluation_seeds']
-    epochs = [1] if smoke else specification['fqi_epochs']
+    protocol = pilot_protocol(manifest)
+    horizon = cfg['smoke_horizon'] if smoke else cfg['horizon']
+    if 'common_protocol' in meta:
+        from experiments.pong_common_contract import CommonPongConfig, CommonPongFactory, validate_contract
+        validate_contract(cfg['common_protocol'], meta['common_protocol'])
+        factory = CommonPongFactory(CommonPongConfig(pipeline, meta['common_protocol']['rom_sha256'], horizon))
+    else:
+        factory = PongEnvironmentFactory(AtariConfig(**protocol['environments'][pipeline])).with_horizon(horizon)
+    seeds = [cfg['smoke_seed']] if smoke else cfg['fqi_evaluation_seeds']
+    epochs = [1] if smoke else cfg['fqi_epochs']
+    # Recover and fit all iterations before evaluating. An interrupted evaluation
+    # cannot hide an already committed model or force it to be fitted again.
     for method in METHODS:
-        path = output / method
-        path.mkdir(exist_ok=True)
         previous = FittedQ(tuple(meta['config']['actions']), (None,)*len(meta['config']['actions']), encoder.catalog_hash)
+        previous_hash = bytes_hash(pickle.dumps(previous, protocol=pickle.HIGHEST_PROTOCOL))
         for epoch in range(1, max(epochs)+1):
-            model_path = path / f'epoch_{epoch}.pkl'
-            if epoch in epochs and model_path.exists():
-                with model_path.open('rb') as handle:
-                    previous = pickle.load(handle)  # trusted job-owned model
-            else:
-                current, details = fit_epoch(method, transitions, encoder, meta['config'], previous,
-                                             epoch, smoke=smoke)
-                previous = current
-                if epoch in epochs:
-                    save_model(model_path, current)
-                    write_new(path / f'fit_{epoch}.json', {'epoch': epoch, 'method': method,
-                        'details': details, 'model_sha256': sha(model_path),
-                        'targets_recomputed_from': epoch-1})
-            if epoch in epochs:
-                evaluation = path / f'eval_{epoch}.json'
-                if not evaluation.exists():
-                    rows = evaluate_model(previous, factory, seeds, horizon,
-                        specification['max_seconds_per_episode'])
-                    write_new(evaluation, {'method': method, 'epoch': epoch, 'rows': rows,
-                        'model_sha256': sha(model_path), 'dataset_sha256': meta['npz_sha256'],
-                        'pipeline': pipeline})
-                print(pipeline, method, epoch, 'evaluated', flush=True)
+            target = frozen_q_targets(transitions, previous, encoder, gamma=meta['config']['gamma'],
+                                     bootstrap_on_truncation=meta['config']['bootstrap_on_truncation'])
+            expected = identity(manifest, pipeline=pipeline, stage='fqi_fit', method=method,
+                dataset=dataset, variant=f'epoch_{epoch}', smoke=smoke,
+                seeds=[580001+epoch*100+i for i in range(len(meta['config']['actions']))],
+                effective={'learning': meta['config'], 'extra_trees': asdict(ExtraTreesConfig(**(extra_trees_config or {})))}
+                    if method == 'extra_trees' else meta['config'], hashes={'data': meta['npz_sha256'], 'catalog': encoder.catalog_hash,
+                    'targets': array_hash(target), 'previous_model': previous_hash})
+            previous, fit_record = fit_iteration(output/method/f'iteration_{epoch}', expected, method,
+                transitions, encoder, meta['config'], previous, epoch, smoke=smoke, extra_trees_config=extra_trees_config)
+            previous_hash = fit_record['model_sha256']
+    for method in METHODS:
+        for epoch in epochs:
+            folder = output/method/f'iteration_{epoch}'
+            from experiments.pong_analysis_runtime import checked_read
+            with unit_lock(folder):
+                fit_id = checked_read(folder/'identity.json')
+                unit = WorkUnit(folder, fit_id)
+                saved = unit.load()
+                model = unit.pickle(saved, 'model')
+            expected = identity(manifest, pipeline=pipeline, stage='fqi_evaluation', method=method,
+                dataset=dataset, variant=f'epoch_{epoch}', smoke=smoke, seeds=seeds,
+                effective={'environment': meta.get('common_protocol', protocol['environments'][pipeline])},
+                hashes={'data': meta['npz_sha256'], 'targets': fit_id['hashes']['targets'], 'catalog': encoder.catalog_hash},
+                evaluation={'model': saved['result']['model_sha256'], 'horizon': horizon, 'policy': 'greedy_random_ties'})
+            rows = evaluate_model(model, factory, seeds, horizon, cfg['max_seconds_per_episode'],
+                output=output/method/f'evaluation_{epoch}', expected=expected,
+                extend_seconds=extend_seconds, extension_id=extension_id)
+            atomic_json(output/method/f'eval_{epoch}.json', {'rows': rows, 'identity': expected})
+            print(pipeline, method, epoch, 'completed' if all(r['status']=='completed' for r in rows) else 'partial', flush=True)
     return summarize_fqi(output, epochs)
 
 
@@ -284,9 +316,7 @@ def summarize_fqi(output, epochs):
                 if common else {},
             'limitation': 'Truncated/time-budget episodes are identified separately; no complete-game claim.'}
     path = output / 'report.json'
-    if path.exists():
-        path.unlink()
-    write_new(path, report)
+    atomic_json(path, report)
     return report
 
 
@@ -295,21 +325,25 @@ def main():
     parser.add_argument('--analysis', type=Path, required=True)
     parser.add_argument('--pipeline', choices=('ocatari','visual'), required=True)
     parser.add_argument('--stage', choices=('regression','fqi'), required=True)
-    parser.add_argument('--dataset', choices=('pilot', 'assisted'), default='pilot')
+    parser.add_argument('--dataset', choices=('pilot', 'common', 'assisted'), default='pilot')
     parser.add_argument('--smoke', action='store_true')
+    parser.add_argument('--dataset-folder', type=Path, help='Explicit independent portable dataset directory')
+    parser.add_argument("--extra-trees-config", type=Path, help="Explicit nominal ExtraTrees settings; recorded in unit identity")
+    extension_arguments(parser)
     args = parser.parse_args()
-    load_manifest(args.analysis)
-    if args.dataset == 'assisted' and (args.pipeline != 'ocatari' or args.stage != 'fqi'):
-        parser.error('Assisted transitions are only collected for OCAtari FQI')
-    output = args.analysis / args.pipeline / (
-        ('fqi_assisted_' if args.dataset == 'assisted' else 'fqi_') + 'smoke' if args.smoke
-        else ('fqi_assisted' if args.dataset == 'assisted' else 'fqi'))
+    extra_options = read(args.extra_trees_config) if args.extra_trees_config else {}
+    ExtraTreesConfig(**extra_options)
+    manifest = load_manifest(args.analysis, writable=True)
+    if args.dataset in ('common', 'assisted') and args.dataset_folder is None:
+        parser.error('New common/assisted data require an explicit --dataset-folder')
+    output = mode_root(args.analysis, args.pipeline, args.stage+'_'+args.dataset, args.smoke)
     if args.stage == 'regression':
-        report = regression_benchmark(args.analysis, args.pipeline, smoke=args.smoke)
-        output.mkdir(parents=True, exist_ok=True)
-        write_new(output / 'regression.json', report)
+        with unit_lock(output):
+            report = regression_benchmark(args.analysis, args.pipeline, smoke=args.smoke, output=output, manifest=manifest, dataset_folder=args.dataset_folder, extra_trees_config=extra_options)
+            atomic_json(output / 'report.json', report)
     else:
-        run_fqi(args.analysis, args.pipeline, output, smoke=args.smoke, dataset=args.dataset)
+        run_fqi(args.analysis, args.pipeline, output, smoke=args.smoke, dataset=args.dataset,
+                extend_seconds=args.extend_seconds, extension_id=args.extension_id, dataset_folder=args.dataset_folder, extra_trees_config=extra_options)
 
 
 if __name__ == '__main__':

@@ -30,6 +30,8 @@ class GameSpec:
     object_adapter: Callable[[object], ObjectFrame] | None = None
     relation_factory: Callable | None = None
     backend_factory: Callable | None = None
+    detector_codec_factory: Callable | None = None
+    detector_module: str | None = None
 
 
 class GameRegistry:

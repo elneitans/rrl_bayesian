@@ -1,0 +1,116 @@
+{
+  "schema": "pong_progressive_v2",
+  "name": "pong_baseline_progressive_v1",
+  "level": "baseline",
+  "pipelines": [
+    "visual",
+    "ocatari"
+  ],
+  "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+  "training_horizon": 27000,
+  "learners": {
+    "corrected_common": {
+      "eta_q": 0.025,
+      "max_depth": 4,
+      "min_sample_size": 128,
+      "significance_level": 0.0001,
+      "best_literal_criteria": "p-value",
+      "inherit_q_values": true
+    }
+  },
+  "learning": {
+    "gamma": 0.99,
+    "replay_capacity": 50000,
+    "batch_size_per_action": 128,
+    "fit_interval": 512,
+    "warmup_interactions": 512,
+    "bootstrap_on_truncation": true
+  },
+  "exploration": {
+    "epsilon_init": 1.0,
+    "epsilon_min": 0.1,
+    "epsilon_decay_steps": 50000
+  },
+  "training_seeds": [
+    501601,
+    501602,
+    501603
+  ],
+  "evaluation": {
+    "intermediate": {
+      "seeds": [
+        501801,
+        501802
+      ],
+      "horizon": 27000,
+      "checkpoints": [
+        0,
+        10000,
+        100000,
+        500000,
+        2000000
+      ]
+    },
+    "final_development": {
+      "seeds": [
+        501901,
+        501902,
+        501903,
+        501904,
+        501905,
+        501906,
+        501907,
+        501908,
+        501909,
+        501910
+      ],
+      "horizon": 27000,
+      "checkpoints": [
+        100000,
+        500000,
+        2000000
+      ]
+    },
+    "reserved_test": {
+      "seeds": [
+        420101,
+        420102,
+        420103,
+        420104,
+        420105,
+        420106,
+        420107,
+        420108,
+        420109,
+        420110,
+        420111,
+        420112,
+        420113,
+        420114,
+        420115,
+        420116,
+        420117,
+        420118,
+        420119,
+        420120
+      ],
+      "horizon": 27000,
+      "checkpoints": []
+    }
+  },
+  "max_decisions": 2000000,
+  "milestones": [
+    100000,
+    500000,
+    2000000
+  ],
+  "checkpoint_interval": 512,
+  "budgets": {
+    "training_seconds_per_cell": 3600,
+    "evaluation_seconds_per_episode": 600,
+    "fit_margin_seconds": 10
+  },
+  "cache_bytes": 1048576,
+  "bart_review": null,
+  "primary_checkpoint": "final"
+}

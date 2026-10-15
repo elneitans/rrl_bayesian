@@ -1,0 +1,488 @@
+{
+  "schema": "atari_comparison_v3",
+  "name": "atari_three_game_smoke_v1",
+  "level": "smoke",
+  "games": {
+    "Breakout": {
+      "environment": {
+        "game": "Breakout",
+        "pipeline": "ocatari",
+        "rom_sha256": "376323f051c3c373c887fd83abead39d87d844ff283d435f4addbfc1710c6fd5",
+        "horizon": 128,
+        "spatial_tolerance": 4.0,
+        "temporal_tolerance": 0.0,
+        "contract": "atari_common_v3"
+      },
+      "actions": [
+        "NOOP",
+        "FIRE",
+        "RIGHT",
+        "LEFT"
+      ],
+      "relations": {
+        "relation_schema": "breakout_primary_v1",
+        "catalog_hash": "d89f5773ad0bc3aae285478ca4b4cb156099bd2adeff32d1048052ceab89ab1a",
+        "objects": [
+          "player",
+          "ball"
+        ],
+        "relations": 11,
+        "movement": [
+          "player",
+          "ball"
+        ],
+        "coordinates": "pixel_centers_top_left_x_right_y_down",
+        "spatial_tolerance": 4.0,
+        "temporal_tolerance": 0.0,
+        "contact": "bbox_overlap_or_touch_both_axes_not_emulator_collision",
+        "history": "previous_decision_no_reward_reset; unknown_previous_presence_unobserved",
+        "identity": "detector_slots; no physical enemy/projectile velocity claim"
+      },
+      "training_seeds": [
+        710501
+      ],
+      "evaluation": {
+        "intermediate": {
+          "seeds": [
+            711501
+          ],
+          "horizon": 128,
+          "checkpoints": [
+            0,
+            32,
+            64
+          ]
+        },
+        "final_development": {
+          "seeds": [
+            712501
+          ],
+          "horizon": 128,
+          "checkpoints": [
+            64
+          ]
+        },
+        "reserved_test": {
+          "seeds": [
+            810101,
+            810102,
+            810103,
+            810104,
+            810105,
+            810106,
+            810107,
+            810108,
+            810109,
+            810110,
+            810111,
+            810112,
+            810113,
+            810114,
+            810115,
+            810116,
+            810117,
+            810118,
+            810119,
+            810120
+          ],
+          "horizon": 27000,
+          "checkpoints": []
+        }
+      },
+      "max_decisions": 64,
+      "milestones": [
+        32,
+        64
+      ],
+      "checkpoint_interval": 16,
+      "budgets": {
+        "training_seconds_per_cell": 120,
+        "evaluation_seconds_per_episode": 60,
+        "fit_margin_seconds": 1
+      },
+      "auc_interval": [
+        0,
+        64
+      ],
+      "contrasts": [
+        [
+          "bart",
+          "corrected_common"
+        ],
+        [
+          "cart",
+          "corrected_common"
+        ],
+        [
+          "bart",
+          "cart"
+        ]
+      ],
+      "primary_metric": "final_development_mean_raw_return"
+    },
+    "DemonAttack": {
+      "environment": {
+        "game": "DemonAttack",
+        "pipeline": "ocatari",
+        "rom_sha256": "8d72feeb267d23cb5d58bb4511566414884c572d2b4dcba8f6893ad7426442d4",
+        "horizon": 128,
+        "spatial_tolerance": 4.0,
+        "temporal_tolerance": 0.0,
+        "contract": "atari_common_v3"
+      },
+      "actions": [
+        "NOOP",
+        "FIRE",
+        "RIGHT",
+        "LEFT",
+        "RIGHTFIRE",
+        "LEFTFIRE"
+      ],
+      "relations": {
+        "relation_schema": "demonattack_slots_v1",
+        "catalog_hash": "ab1ff85d39d77f91cb4f5f63323443525b6740d18cf3f1d0ed2f4a779ba16b3c",
+        "objects": [
+          "player",
+          "player_missile",
+          "enemy_0",
+          "enemy_1",
+          "enemy_2",
+          "enemy_3",
+          "enemy_4",
+          "enemy_5",
+          "enemy_6",
+          "enemy_7",
+          "enemy_part_0",
+          "enemy_part_1",
+          "enemy_part_2",
+          "enemy_part_3",
+          "enemy_part_4",
+          "enemy_part_5",
+          "enemy_missile_00",
+          "enemy_missile_01",
+          "enemy_missile_02",
+          "enemy_missile_03",
+          "enemy_missile_04",
+          "enemy_missile_05",
+          "enemy_missile_06",
+          "enemy_missile_07",
+          "enemy_missile_08",
+          "enemy_missile_09",
+          "enemy_missile_10",
+          "enemy_missile_11",
+          "enemy_missile_12",
+          "enemy_missile_13"
+        ],
+        "relations": 134,
+        "movement": [
+          "player"
+        ],
+        "coordinates": "pixel_centers_top_left_x_right_y_down",
+        "spatial_tolerance": 4.0,
+        "temporal_tolerance": 0.0,
+        "contact": "bbox_overlap_or_touch_both_axes_not_emulator_collision",
+        "history": "previous_decision_no_reward_reset; unknown_previous_presence_unobserved",
+        "identity": "detector_slots; no physical enemy/projectile velocity claim"
+      },
+      "training_seeds": [
+        720501
+      ],
+      "evaluation": {
+        "intermediate": {
+          "seeds": [
+            721501
+          ],
+          "horizon": 128,
+          "checkpoints": [
+            0,
+            32,
+            64
+          ]
+        },
+        "final_development": {
+          "seeds": [
+            722501
+          ],
+          "horizon": 128,
+          "checkpoints": [
+            64
+          ]
+        },
+        "reserved_test": {
+          "seeds": [
+            820101,
+            820102,
+            820103,
+            820104,
+            820105,
+            820106,
+            820107,
+            820108,
+            820109,
+            820110,
+            820111,
+            820112,
+            820113,
+            820114,
+            820115,
+            820116,
+            820117,
+            820118,
+            820119,
+            820120
+          ],
+          "horizon": 27000,
+          "checkpoints": []
+        }
+      },
+      "max_decisions": 64,
+      "milestones": [
+        32,
+        64
+      ],
+      "checkpoint_interval": 16,
+      "budgets": {
+        "training_seconds_per_cell": 120,
+        "evaluation_seconds_per_episode": 60,
+        "fit_margin_seconds": 1
+      },
+      "auc_interval": [
+        0,
+        64
+      ],
+      "contrasts": [
+        [
+          "bart",
+          "corrected_common"
+        ],
+        [
+          "cart",
+          "corrected_common"
+        ],
+        [
+          "bart",
+          "cart"
+        ]
+      ],
+      "primary_metric": "final_development_mean_raw_return"
+    },
+    "Pong": {
+      "environment": {
+        "game": "Pong",
+        "pipeline": "ocatari",
+        "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+        "horizon": 128,
+        "spatial_tolerance": 4.0,
+        "temporal_tolerance": 0.0,
+        "contract": "atari_common_v3"
+      },
+      "actions": [
+        "NOOP",
+        "FIRE",
+        "RIGHT",
+        "LEFT",
+        "RIGHTFIRE",
+        "LEFTFIRE"
+      ],
+      "relations": {
+        "relation_schema": "pong_relational_v1",
+        "config": {
+          "representation": "comparative",
+          "include_incomplete_states": true,
+          "coordinates": "pixel_centers_top_left_x_right_y_down",
+          "spatial_tolerance": 4,
+          "temporal_tolerance": 0,
+          "contact": "bbox_overlap_or_touch_both_axes",
+          "history": "previous_decision_clear_before_nonzero_raw_reward"
+        },
+        "catalog_hash": "fd40d7f407a3ea2b3634712e212e0d35c591626e41f8fbe3d64ce8073ff2de42"
+      },
+      "training_seeds": [
+        730501
+      ],
+      "evaluation": {
+        "intermediate": {
+          "seeds": [
+            731501
+          ],
+          "horizon": 128,
+          "checkpoints": [
+            0,
+            32,
+            64
+          ]
+        },
+        "final_development": {
+          "seeds": [
+            732501
+          ],
+          "horizon": 128,
+          "checkpoints": [
+            64
+          ]
+        },
+        "reserved_test": {
+          "seeds": [
+            420101,
+            420102,
+            420103,
+            420104,
+            420105,
+            420106,
+            420107,
+            420108,
+            420109,
+            420110,
+            420111,
+            420112,
+            420113,
+            420114,
+            420115,
+            420116,
+            420117,
+            420118,
+            420119,
+            420120
+          ],
+          "horizon": 27000,
+          "checkpoints": []
+        }
+      },
+      "max_decisions": 64,
+      "milestones": [
+        32,
+        64
+      ],
+      "checkpoint_interval": 16,
+      "budgets": {
+        "training_seconds_per_cell": 120,
+        "evaluation_seconds_per_episode": 60,
+        "fit_margin_seconds": 1
+      },
+      "auc_interval": [
+        0,
+        64
+      ],
+      "contrasts": [
+        [
+          "bart",
+          "corrected_common"
+        ],
+        [
+          "cart",
+          "corrected_common"
+        ],
+        [
+          "bart",
+          "cart"
+        ]
+      ],
+      "primary_metric": "final_development_mean_raw_return"
+    }
+  },
+  "learners": {
+    "corrected_common": {
+      "eta_q": 0.025,
+      "max_depth": 4,
+      "min_sample_size": 128,
+      "significance_level": 0.0001,
+      "best_literal_criteria": "p-value",
+      "inherit_q_values": true
+    },
+    "cart": {
+      "max_depth": 2,
+      "min_child": 2,
+      "criterion": "SSE"
+    },
+    "bart": {
+      "kernel": "grow_prune",
+      "m": 2,
+      "burn_in": 2,
+      "draws": 3,
+      "k": 2.0,
+      "alpha_tree": 0.95,
+      "beta_tree": 2.0,
+      "max_depth": 2,
+      "min_child": 2,
+      "nu": 3.0,
+      "noise_quantile": 0.9,
+      "variance_floor": 1e-08
+    }
+  },
+  "learning": {
+    "gamma": 0.99,
+    "replay_capacity": 128,
+    "batch_size_per_action": 8,
+    "fit_interval": 16,
+    "warmup_interactions": 16,
+    "bootstrap_on_truncation": true
+  },
+  "exploration": {
+    "epsilon_init": 1.0,
+    "epsilon_min": 0.1,
+    "epsilon_decay_steps": 50000
+  },
+  "cache_bytes": 1048576,
+  "bart_review": null,
+  "primary_checkpoint": "final",
+  "cells": [
+    {
+      "game": "Breakout",
+      "pipeline": "ocatari",
+      "learner": "corrected_common",
+      "seed": 710501
+    },
+    {
+      "game": "Breakout",
+      "pipeline": "ocatari",
+      "learner": "cart",
+      "seed": 710501
+    },
+    {
+      "game": "Breakout",
+      "pipeline": "ocatari",
+      "learner": "bart",
+      "seed": 710501
+    },
+    {
+      "game": "DemonAttack",
+      "pipeline": "ocatari",
+      "learner": "corrected_common",
+      "seed": 720501
+    },
+    {
+      "game": "DemonAttack",
+      "pipeline": "ocatari",
+      "learner": "cart",
+      "seed": 720501
+    },
+    {
+      "game": "DemonAttack",
+      "pipeline": "ocatari",
+      "learner": "bart",
+      "seed": 720501
+    },
+    {
+      "game": "Pong",
+      "pipeline": "ocatari",
+      "learner": "corrected_common",
+      "seed": 730501
+    },
+    {
+      "game": "Pong",
+      "pipeline": "ocatari",
+      "learner": "cart",
+      "seed": 730501
+    },
+    {
+      "game": "Pong",
+      "pipeline": "ocatari",
+      "learner": "bart",
+      "seed": 730501
+    }
+  ],
+  "resources": {
+    "cpus_per_cell": 2,
+    "memory_gib_per_cell": 20
+  }
+}

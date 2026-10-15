@@ -1,5 +1,6 @@
 """Frozen independent Pong diagnostics: config, provenance and portable data."""
 import hashlib
+import io
 import json
 from pathlib import Path
 import platform
@@ -9,9 +10,11 @@ import numpy as np
 
 from bayesian_rrtl.encoding import EncodedBatch, RelationalEncoder
 from bayesian_rrtl.replay import Transition
+from experiments.pong_analysis_runtime import atomic_bytes, atomic_json, checked_read, checked_write, unit_lock
 
 ROOT = Path(__file__).resolve().parents[1]
-SCHEMA = 'pong_bart_analysis_v1'
+HISTORIC_SCHEMA = 'pong_bart_analysis_v1'
+SCHEMA = 'pong_bart_analysis_v2'
 
 
 def source_path(relative):
@@ -41,17 +44,17 @@ def read(path):
 def write_new(path, payload):
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open('x') as handle:
-        json.dump(payload, handle, indent=2, allow_nan=False)
-        handle.write('\n')
+    atomic_json(path, payload, replace=False)
 
 
 def config(path):
     value = read(path)
-    if value.get('schema') != SCHEMA or value.get('pipeline_order') != ['ocatari', 'visual']:
+    if value.get('schema') not in (SCHEMA, HISTORIC_SCHEMA) or value.get('pipeline_order') != ['ocatari', 'visual']:
         raise ValueError('Unknown analysis configuration')
     fields = ('development_seeds', 'assisted_collection_seeds', 'fqi_evaluation_seeds')
+    fields += ('common_collection_seeds',) if 'common_collection_seeds' in value else ()
     seeds = [value['action_probe_seed'], value['smoke_seed'], value['mcmc_seed'], value['bootstrap_seed']]
+    seeds.extend(value[k] for k in ('collection_exploration_seed', 'selection_seed') if k in value)
     for field in fields:
         seeds.extend(value[field])
     if (len(value['development_seeds']) != 20 or len(value['fqi_evaluation_seeds']) != 20
@@ -80,6 +83,8 @@ def verify_source(config_data):
     configured = set(config_data['development_seeds'] + config_data['assisted_collection_seeds']
                      + config_data['fqi_evaluation_seeds'] + [config_data[k] for k in
                        ('action_probe_seed', 'smoke_seed', 'mcmc_seed', 'bootstrap_seed')])
+    configured.update(config_data.get('common_collection_seeds', []))
+    configured.update(config_data[k] for k in ('collection_exploration_seed', 'selection_seed') if k in config_data)
     if configured & (reserved | set(manifest['protocol']['training_seeds']) |
                      set(manifest['protocol']['validation_seeds'])):
         raise ValueError('Analysis seeds overlap pilot seeds')
@@ -124,27 +129,47 @@ def source_hashes():
              'experiments/audit_bart_fixed_data.py', 'experiments/compare_fqi_trees.py', 'experiments/collect_pong_assisted.py',
              'slurm/05_pong_analysis.sbatch', 'configs/pong_bart_analysis_v1.json',
              'requirements-pong-analysis.txt', 'environment-pong-analysis.yml')
+    paths += tuple(str(p.relative_to(ROOT)) for p in sorted((ROOT/'experiments').glob('*pong*.py')))
     return {p: sha(ROOT / p) for p in paths}
 
 
 def create_manifest(config_path, output):
     value = config(config_path)
-    _, verified = verify_source(value)
+    if value['schema'] != SCHEMA:
+        raise ValueError('Historical v1 is read-only; create a new v2 configuration')
     output = Path(output)
-    output.mkdir(parents=True, exist_ok=False)
-    payload = {'schema': SCHEMA, 'config': value, 'config_sha256': sha(config_path),
-               'pilot': verified, 'runtime': source_versions(), 'source_hashes': source_hashes()}
-    write_new(output / 'manifest.json', payload)
-    return payload
+    with unit_lock(output):
+        if (output / 'manifest.json').exists():
+            saved = load_manifest(output)
+            if saved['config'] != value:
+                raise ValueError('Analysis configuration mismatch')
+            return saved
+        pilot, verified = verify_source(value)
+        payload = {'schema': SCHEMA, 'config': value, 'config_sha256': sha(config_path),
+                   'pilot': verified, 'pilot_protocol': pilot['protocol'],
+                   'runtime': source_versions(), 'source_hashes': source_hashes()}
+        checked_write(output / 'manifest.json', payload, replace=False)
+        return payload
 
 
-def load_manifest(output, *, strict_sources=True):
-    value = read(Path(output) / 'manifest.json')
-    if value.get('schema') != SCHEMA:
+def load_manifest(output, *, strict_sources=True, writable=False):
+    path = Path(output) / 'manifest.json'
+    raw = read(path)
+    value = checked_read(path) if raw.get('schema') == 'pong_analysis_unit_v2' else raw
+    if value.get('schema') not in (SCHEMA, HISTORIC_SCHEMA):
         raise ValueError('Wrong analysis manifest')
-    if strict_sources and value['source_hashes'] != source_hashes():
-        raise ValueError('Analysis sources changed after freeze')
+    if writable and value['schema'] != SCHEMA:
+        raise ValueError('Historical analysis is read-only; create a new v2 campaign')
+    if strict_sources and value['schema'] == SCHEMA and value['source_hashes'] != source_hashes():
+        raise ValueError('Analysis sources changed after freeze; preserve its code or use a new campaign')
     return value
+
+
+
+def pilot_protocol(manifest):
+    # New manifests carry only the frozen protocol, without the heavy pilot data.
+    return (manifest['pilot_protocol'] if 'pilot_protocol' in manifest else
+            read(source_path(manifest['config']['source_campaign'])/'protocol.json')['protocol'])
 
 
 def encoded(values, observed, encoder):
@@ -155,8 +180,9 @@ def encoded(values, observed, encoder):
 def save_npz(path, **arrays):
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open('xb') as handle:
-        np.savez_compressed(handle, **arrays)
+    handle = io.BytesIO()
+    np.savez_compressed(handle, **arrays)
+    atomic_bytes(path, handle.getvalue(), replace=False)
     return sha(path)
 
 
@@ -164,6 +190,31 @@ def load_npz(path, expected_sha):
     if sha(path) != expected_sha:
         raise ValueError('Portable dataset checksum mismatch')
     return np.load(path, allow_pickle=False)
+
+
+def portable_metadata(folder):
+    """Validate a new export's metadata against its authoritative atomic commit.
+
+    Historical v1 portable files retain their original explicit NPZ checksum
+    contract. They are never rewritten or migrated by a reader.
+    """
+    folder = Path(folder)
+    meta = read(folder/'metadata.json')
+    commits = [folder/'_publication', folder/'problem', folder]
+    for root in commits:
+        if (root/'state.json').exists():
+            expected = checked_read(root/'identity.json')
+            saved = checked_read(root/'state.json')
+            if (saved['identity_sha256'] != digest(expected) or saved['status'] != 'completed'
+                    or saved['result'] != meta):
+                raise ValueError('Portable metadata differs from its verified commit')
+            for ref in saved['artifacts'].values():
+                if ref['path'] != ref['sha256']+'.blob' or sha(root/'objects'/ref['path']) != ref['sha256']:
+                    raise ValueError('Portable export artifact integrity mismatch')
+            return meta
+    if meta.get('schema', '').endswith('_v2'):
+        raise ValueError('New portable dataset is missing its verified commit')
+    return meta
 
 
 def episode_split(episode_ids, fraction):
@@ -192,12 +243,10 @@ def transition_from_arrays(data, i, encoder):
 def main():
     import argparse
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--config', type=Path, default=ROOT / 'configs/pong_bart_analysis_v1.json')
+    parser.add_argument('--config', type=Path, default=ROOT / 'configs/pong_bart_analysis_v2.json')
     parser.add_argument('--output', type=Path, required=True)
     args = parser.parse_args()
     value = config(args.config)
-    if args.output.exists():
-        raise FileExistsError('New analysis needs a fresh directory')
     manifest = create_manifest(args.config, args.output)
     print(json.dumps({'campaign_id': value['campaign_id'], 'verified_runs': len(manifest['pilot']['runs']),
                       'final_visual_trace': manifest['pilot']['visual_bart_73_trace']['status'],

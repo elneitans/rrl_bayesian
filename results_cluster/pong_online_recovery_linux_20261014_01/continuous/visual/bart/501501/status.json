@@ -1,0 +1,340 @@
+{
+  "payload": {
+    "binding": {
+      "campaign": "62fe0b1d4ad57d84369ceabcc97780eb4d023d56a1ad2b43fe66d5cf46fbf041",
+      "cell": "14635aac126084ce9d018f502d87b173aaa70e642d8541c7a69c099b88f8ce1c",
+      "learner": "bart",
+      "runtime": {
+        "ale-py": "0.10.2",
+        "gymnasium": "1.1.1",
+        "machine": "x86_64",
+        "numeric_threads": {
+          "MKL_NUM_THREADS": "1",
+          "NUMEXPR_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "numpy": "1.26.4",
+        "ocatari": "2.2.1",
+        "platform": "linux",
+        "python": "3.11.7",
+        "scipy": "1.12.0"
+      }
+    },
+    "checkpoint": {
+      "path": "checkpoints/64-2f883a08999030365768a36a368465a9f1c130c8c29dce1f95aeebaa34062d92.pkl",
+      "sha256": "2f883a08999030365768a36a368465a9f1c130c8c29dce1f95aeebaa34062d92"
+    },
+    "counter": 64,
+    "log_head": {
+      "end": 64,
+      "path": "logs/64-efe42e90074aa1ada38900403df3623991d2f0475403f6a2c099971ad6331456.jsonl",
+      "sha256": "efe42e90074aa1ada38900403df3623991d2f0475403f6a2c099971ad6331456"
+    },
+    "metrics": {
+      "completed_games": 0,
+      "ended_episodes": 0,
+      "epsilon": 0.9970570301320116,
+      "interactions": 64,
+      "learner": {
+        "cache_bytes": 0,
+        "complexity": {
+          "FIRE": {
+            "diagnostics": {
+              "burn_in": 2,
+              "elapsed_seconds": 0.018343911971896887,
+              "m": 2,
+              "max_cache_error": null,
+              "moves": {
+                "change": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                },
+                "grow": {
+                  "acceptance_given_possible": 0.0,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 5,
+                  "selected": 5
+                },
+                "prune": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 5,
+                  "rejected": 0,
+                  "selected": 5
+                },
+                "swap": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                }
+              },
+              "retained": 3,
+              "sweeps": 5,
+              "targets_outside_scale": 0
+            },
+            "draws": 3,
+            "leaves_last_draw": 2,
+            "max_depth_last_draw": 0,
+            "trees": 2
+          },
+          "LEFT": {
+            "diagnostics": {
+              "burn_in": 2,
+              "elapsed_seconds": 0.019088640110567212,
+              "m": 2,
+              "max_cache_error": null,
+              "moves": {
+                "change": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                },
+                "grow": {
+                  "acceptance_given_possible": 0.25,
+                  "accepted": 1,
+                  "impossible": 0,
+                  "rejected": 3,
+                  "selected": 4
+                },
+                "prune": {
+                  "acceptance_given_possible": 1.0,
+                  "accepted": 1,
+                  "impossible": 5,
+                  "rejected": 0,
+                  "selected": 6
+                },
+                "swap": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                }
+              },
+              "retained": 3,
+              "sweeps": 5,
+              "targets_outside_scale": 0
+            },
+            "draws": 3,
+            "leaves_last_draw": 2,
+            "max_depth_last_draw": 0,
+            "trees": 2
+          },
+          "LEFTFIRE": {
+            "diagnostics": {
+              "burn_in": 2,
+              "elapsed_seconds": 0.015588084002956748,
+              "m": 2,
+              "max_cache_error": null,
+              "moves": {
+                "change": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                },
+                "grow": {
+                  "acceptance_given_possible": 0.0,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 4,
+                  "selected": 4
+                },
+                "prune": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 6,
+                  "rejected": 0,
+                  "selected": 6
+                },
+                "swap": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                }
+              },
+              "retained": 3,
+              "sweeps": 5,
+              "targets_outside_scale": 0
+            },
+            "draws": 3,
+            "leaves_last_draw": 2,
+            "max_depth_last_draw": 0,
+            "trees": 2
+          },
+          "NOOP": {
+            "diagnostics": {
+              "burn_in": 2,
+              "elapsed_seconds": 0.013209328055381775,
+              "m": 2,
+              "max_cache_error": null,
+              "moves": {
+                "change": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                },
+                "grow": {
+                  "acceptance_given_possible": 0.0,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 3,
+                  "selected": 3
+                },
+                "prune": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 7,
+                  "rejected": 0,
+                  "selected": 7
+                },
+                "swap": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                }
+              },
+              "retained": 3,
+              "sweeps": 5,
+              "targets_outside_scale": 0
+            },
+            "draws": 3,
+            "leaves_last_draw": 2,
+            "max_depth_last_draw": 0,
+            "trees": 2
+          },
+          "RIGHT": {
+            "diagnostics": {
+              "burn_in": 2,
+              "elapsed_seconds": 0.016568826977163553,
+              "m": 2,
+              "max_cache_error": null,
+              "moves": {
+                "change": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                },
+                "grow": {
+                  "acceptance_given_possible": 0.0,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 4,
+                  "selected": 4
+                },
+                "prune": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 6,
+                  "rejected": 0,
+                  "selected": 6
+                },
+                "swap": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                }
+              },
+              "retained": 3,
+              "sweeps": 5,
+              "targets_outside_scale": 0
+            },
+            "draws": 3,
+            "leaves_last_draw": 2,
+            "max_depth_last_draw": 0,
+            "trees": 2
+          },
+          "RIGHTFIRE": {
+            "diagnostics": {
+              "burn_in": 2,
+              "elapsed_seconds": 0.02079058112576604,
+              "m": 2,
+              "max_cache_error": null,
+              "moves": {
+                "change": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                },
+                "grow": {
+                  "acceptance_given_possible": 0.0,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 6,
+                  "selected": 6
+                },
+                "prune": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 4,
+                  "rejected": 0,
+                  "selected": 4
+                },
+                "swap": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                }
+              },
+              "retained": 3,
+              "sweeps": 5,
+              "targets_outside_scale": 0
+            },
+            "draws": 3,
+            "leaves_last_draw": 2,
+            "max_depth_last_draw": 0,
+            "trees": 2
+          }
+        },
+        "fits": 4,
+        "kind": "bart",
+        "phase_seconds": {
+          "encoding": 0.12606120598502457,
+          "fit": 0.36758764274418354,
+          "prediction": 0.0,
+          "selection_targets": 0.05060369614511728
+        },
+        "replay_size": 64
+      },
+      "phase_seconds": {
+        "checkpoint_logs": 2.06702016107738,
+        "emulation_extraction": 0.43108249036595225,
+        "fit": 0.36758764274418354,
+        "policy_collection_td": 0.0034537978935986757,
+        "prediction": 0.0,
+        "relations_encoding": 0.16542935115285218,
+        "selection_targets": 0.05060369614511728
+      },
+      "relations": 20,
+      "truncated_episodes": 0
+    },
+    "reason": null,
+    "state": "completed"
+  },
+  "schema": "pong_analysis_unit_v2",
+  "sha256": "d5032e49143ff1950b01d55471568ea950a5367f8ca56059ca6ddea9ac30b87d"
+}

@@ -1,0 +1,2353 @@
+{
+  "payload": {
+    "accounting": {
+      "evaluation_budget_seconds_per_episode_sum": 51.66240107966587,
+      "evaluation_worker_seconds_known_sum": 74.55655637499876,
+      "training_seconds_per_unit_sum": 36.42735915700905
+    },
+    "campaign": "62fe0b1d4ad57d84369ceabcc97780eb4d023d56a1ad2b43fe66d5cf46fbf041",
+    "cells": [
+      {
+        "cell": "visual/corrected_common/501501",
+        "comparison_state": "completed",
+        "counter": 64,
+        "evaluation_budget_seconds": 9.0428821654059,
+        "evaluation_seconds": 12.823897491907701,
+        "evaluations": [
+          {
+            "checkpoint": {
+              "path": "checkpoints/64-f3bf97e872e5986243b3549c53dba68e856bbcb8060e4eb8eaea5388de19fee4.pkl",
+              "sha256": "f3bf97e872e5986243b3549c53dba68e856bbcb8060e4eb8eaea5388de19fee4"
+            },
+            "counter": 64,
+            "floor_result": false,
+            "group": "final_development",
+            "report": {
+              "completed_games": 0,
+              "episodes": [
+                {
+                  "actions": {
+                    "FIRE": 24,
+                    "LEFTFIRE": 25,
+                    "NOOP": 22,
+                    "RIGHT": 31,
+                    "RIGHTFIRE": 26
+                  },
+                  "points_lost": 2.0,
+                  "points_won": 0.0,
+                  "raw_return": -2.0,
+                  "reason": null,
+                  "return": -2.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 1.8020366351120174,
+                  "seed": 501901,
+                  "status": "completed",
+                  "steps": 128,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 30
+                }
+              ],
+              "horizon": 128,
+              "iqr_raw_return": 0.0,
+              "mean_completed_game_raw_return": null,
+              "mean_raw_return": -2.0,
+              "median_raw_return": -2.0,
+              "schema": "pong_evaluation_v2",
+              "std_raw_return": 0.0,
+              "truncation_fraction": 1.0
+            },
+            "seconds": 1.8020366351120174,
+            "training_active_seconds": 2.8246100598480552
+          },
+          {
+            "checkpoint": {
+              "path": "checkpoints/0-8cf81fb600f7d68edfd06dee5dbad27a30e82ed63bb86b5c6f467e254dc89014.pkl",
+              "sha256": "8cf81fb600f7d68edfd06dee5dbad27a30e82ed63bb86b5c6f467e254dc89014"
+            },
+            "counter": 0,
+            "floor_result": false,
+            "group": "intermediate",
+            "report": {
+              "completed_games": 0,
+              "episodes": [
+                {
+                  "actions": {
+                    "FIRE": 17,
+                    "LEFT": 23,
+                    "LEFTFIRE": 17,
+                    "NOOP": 22,
+                    "RIGHT": 25,
+                    "RIGHTFIRE": 24
+                  },
+                  "points_lost": 2.0,
+                  "points_won": 0.0,
+                  "raw_return": -2.0,
+                  "reason": null,
+                  "return": -2.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 2.1125086951069534,
+                  "seed": 501801,
+                  "status": "completed",
+                  "steps": 128,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 48
+                }
+              ],
+              "horizon": 128,
+              "iqr_raw_return": 0.0,
+              "mean_completed_game_raw_return": null,
+              "mean_raw_return": -2.0,
+              "median_raw_return": -2.0,
+              "schema": "pong_evaluation_v2",
+              "std_raw_return": 0.0,
+              "truncation_fraction": 1.0
+            },
+            "seconds": 2.1125086951069534,
+            "training_active_seconds": 0.0
+          },
+          {
+            "checkpoint": {
+              "path": "checkpoints/32-4ba2b08020a2bbb1d98e2cc61b083d3f9c3803e33a0653b134b5d6e64fe2f7b6.pkl",
+              "sha256": "4ba2b08020a2bbb1d98e2cc61b083d3f9c3803e33a0653b134b5d6e64fe2f7b6"
+            },
+            "counter": 32,
+            "floor_result": false,
+            "group": "intermediate",
+            "report": {
+              "completed_games": 0,
+              "episodes": [
+                {
+                  "actions": {
+                    "FIRE": 17,
+                    "LEFT": 23,
+                    "LEFTFIRE": 17,
+                    "NOOP": 22,
+                    "RIGHT": 25,
+                    "RIGHTFIRE": 24
+                  },
+                  "points_lost": 2.0,
+                  "points_won": 0.0,
+                  "raw_return": -2.0,
+                  "reason": null,
+                  "return": -2.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 2.1107613381464034,
+                  "seed": 501801,
+                  "status": "completed",
+                  "steps": 128,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 48
+                }
+              ],
+              "horizon": 128,
+              "iqr_raw_return": 0.0,
+              "mean_completed_game_raw_return": null,
+              "mean_raw_return": -2.0,
+              "median_raw_return": -2.0,
+              "schema": "pong_evaluation_v2",
+              "std_raw_return": 0.0,
+              "truncation_fraction": 1.0
+            },
+            "seconds": 2.1107613381464034,
+            "training_active_seconds": 1.6282291384413838
+          },
+          {
+            "checkpoint": {
+              "path": "checkpoints/64-f3bf97e872e5986243b3549c53dba68e856bbcb8060e4eb8eaea5388de19fee4.pkl",
+              "sha256": "f3bf97e872e5986243b3549c53dba68e856bbcb8060e4eb8eaea5388de19fee4"
+            },
+            "counter": 64,
+            "floor_result": false,
+            "group": "intermediate",
+            "report": {
+              "completed_games": 0,
+              "episodes": [
+                {
+                  "actions": {
+                    "FIRE": 24,
+                    "LEFTFIRE": 21,
+                    "NOOP": 23,
+                    "RIGHT": 28,
+                    "RIGHTFIRE": 32
+                  },
+                  "points_lost": 2.0,
+                  "points_won": 0.0,
+                  "raw_return": -2.0,
+                  "reason": null,
+                  "return": -2.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 2.2037324821576476,
+                  "seed": 501801,
+                  "status": "completed",
+                  "steps": 128,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 30
+                }
+              ],
+              "horizon": 128,
+              "iqr_raw_return": 0.0,
+              "mean_completed_game_raw_return": null,
+              "mean_raw_return": -2.0,
+              "median_raw_return": -2.0,
+              "schema": "pong_evaluation_v2",
+              "std_raw_return": 0.0,
+              "truncation_fraction": 1.0
+            },
+            "seconds": 2.2037324821576476,
+            "training_active_seconds": 2.8246100598480552
+          }
+        ],
+        "game": "Pong",
+        "inventory": {
+          "artifacts": [
+            {
+              "bytes": 37397,
+              "confirmed": true,
+              "path": "checkpoints/0-8cf81fb600f7d68edfd06dee5dbad27a30e82ed63bb86b5c6f467e254dc89014.pkl",
+              "protected": true,
+              "removable": false
+            },
+            {
+              "bytes": 41064,
+              "confirmed": true,
+              "path": "checkpoints/16-ebb68bfd36bafc0d9273781cc11f8b254692ab2e944f27932e460f0230daf846.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 43715,
+              "confirmed": true,
+              "path": "checkpoints/32-4ba2b08020a2bbb1d98e2cc61b083d3f9c3803e33a0653b134b5d6e64fe2f7b6.pkl",
+              "protected": true,
+              "removable": false
+            },
+            {
+              "bytes": 44096,
+              "confirmed": true,
+              "path": "checkpoints/48-9cc05fc21b343aa9b4a210b7d03b862552e621651a8dedbf8667f7c25eb3cda8.pkl",
+              "protected": true,
+              "removable": false
+            },
+            {
+              "bytes": 44045,
+              "confirmed": true,
+              "path": "checkpoints/64-f3bf97e872e5986243b3549c53dba68e856bbcb8060e4eb8eaea5388de19fee4.pkl",
+              "protected": true,
+              "removable": false
+            }
+          ],
+          "checkpoint_bytes": 210317,
+          "log_bytes": 26770,
+          "schema": "pong_retention_v2",
+          "unconfirmed_logs": []
+        },
+        "logs": {
+          "decisions": 64,
+          "ended_episodes": 0,
+          "points_lost": 1.0,
+          "points_won": 0.0,
+          "raw_return": -1.0
+        },
+        "metrics": {
+          "completed_games": 0,
+          "ended_episodes": 0,
+          "epsilon": 0.9970570301320116,
+          "interactions": 64,
+          "learner": {
+            "complexity": {
+              "FIRE": {
+                "leaves": 1,
+                "max_depth": 0
+              },
+              "LEFT": {
+                "leaves": 1,
+                "max_depth": 0
+              },
+              "LEFTFIRE": {
+                "leaves": 1,
+                "max_depth": 0
+              },
+              "NOOP": {
+                "leaves": 1,
+                "max_depth": 0
+              },
+              "RIGHT": {
+                "leaves": 1,
+                "max_depth": 0
+              },
+              "RIGHTFIRE": {
+                "leaves": 1,
+                "max_depth": 0
+              }
+            },
+            "fallback": {
+              "bootstrap": {
+                "internal_fallbacks": 0,
+                "queries": 384
+              },
+              "prediction": {
+                "internal_fallbacks": 0,
+                "queries": 0
+              },
+              "update": {
+                "internal_fallbacks": 0,
+                "queries": 64
+              }
+            },
+            "kind": "rrtl_corrected_common_v1",
+            "splits": 0
+          },
+          "phase_seconds": {
+            "checkpoint_logs": 2.3693485809490085,
+            "emulation_extraction": 0.7315323413349688,
+            "fit": 0.0,
+            "policy_collection_td": 0.03276831121183932,
+            "prediction": 0.0,
+            "relations_encoding": 0.16455609328113496,
+            "selection_targets": 0.0
+          },
+          "relations": 20,
+          "truncated_episodes": 0
+        },
+        "peak_rss_bytes": 189157376,
+        "pending_evaluations": [],
+        "reason": null,
+        "training_attempts": 2,
+        "training_seconds": 5.593862197827548,
+        "training_state": "completed",
+        "unfinished_evaluation_attempts": 0
+      },
+      {
+        "cell": "visual/cart/501501",
+        "comparison_state": "completed",
+        "counter": 64,
+        "evaluation_budget_seconds": 9.436232628067955,
+        "evaluation_seconds": 13.412042879965156,
+        "evaluations": [
+          {
+            "checkpoint": {
+              "path": "checkpoints/64-c654b120a33bbb31880a7edbfec914f76a0576c6c94b26a3fdae5db7922c796a.pkl",
+              "sha256": "c654b120a33bbb31880a7edbfec914f76a0576c6c94b26a3fdae5db7922c796a"
+            },
+            "counter": 64,
+            "floor_result": false,
+            "group": "final_development",
+            "report": {
+              "completed_games": 0,
+              "episodes": [
+                {
+                  "actions": {
+                    "FIRE": 19,
+                    "LEFT": 21,
+                    "LEFTFIRE": 22,
+                    "NOOP": 20,
+                    "RIGHT": 24,
+                    "RIGHTFIRE": 22
+                  },
+                  "points_lost": 2.0,
+                  "points_won": 0.0,
+                  "raw_return": -2.0,
+                  "reason": null,
+                  "return": -2.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 2.0773259110283107,
+                  "seed": 501901,
+                  "status": "completed",
+                  "steps": 128,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 56
+                }
+              ],
+              "horizon": 128,
+              "iqr_raw_return": 0.0,
+              "mean_completed_game_raw_return": null,
+              "mean_raw_return": -2.0,
+              "median_raw_return": -2.0,
+              "schema": "pong_evaluation_v2",
+              "std_raw_return": 0.0,
+              "truncation_fraction": 1.0
+            },
+            "seconds": 2.0773259110283107,
+            "training_active_seconds": 2.5910794308874756
+          },
+          {
+            "checkpoint": {
+              "path": "checkpoints/0-5f32fe489db1221f64072a0789ef5cdf90f7386b316da298600ea137cb975fc5.pkl",
+              "sha256": "5f32fe489db1221f64072a0789ef5cdf90f7386b316da298600ea137cb975fc5"
+            },
+            "counter": 0,
+            "floor_result": false,
+            "group": "intermediate",
+            "report": {
+              "completed_games": 0,
+              "episodes": [
+                {
+                  "actions": {
+                    "FIRE": 17,
+                    "LEFT": 23,
+                    "LEFTFIRE": 17,
+                    "NOOP": 22,
+                    "RIGHT": 25,
+                    "RIGHTFIRE": 24
+                  },
+                  "points_lost": 2.0,
+                  "points_won": 0.0,
+                  "raw_return": -2.0,
+                  "reason": null,
+                  "return": -2.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 2.0835657080169767,
+                  "seed": 501801,
+                  "status": "completed",
+                  "steps": 128,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 48
+                }
+              ],
+              "horizon": 128,
+              "iqr_raw_return": 0.0,
+              "mean_completed_game_raw_return": null,
+              "mean_raw_return": -2.0,
+              "median_raw_return": -2.0,
+              "schema": "pong_evaluation_v2",
+              "std_raw_return": 0.0,
+              "truncation_fraction": 1.0
+            },
+            "seconds": 2.0835657080169767,
+            "training_active_seconds": 0.0
+          },
+          {
+            "checkpoint": {
+              "path": "checkpoints/32-88201f48ccce4b3967413e04eb84f387ac08d4a36ea1b191f1df57756384cbb1.pkl",
+              "sha256": "88201f48ccce4b3967413e04eb84f387ac08d4a36ea1b191f1df57756384cbb1"
+            },
+            "counter": 32,
+            "floor_result": false,
+            "group": "intermediate",
+            "report": {
+              "completed_games": 0,
+              "episodes": [
+                {
+                  "actions": {
+                    "FIRE": 17,
+                    "LEFT": 23,
+                    "LEFTFIRE": 17,
+                    "NOOP": 22,
+                    "RIGHT": 25,
+                    "RIGHTFIRE": 24
+                  },
+                  "points_lost": 2.0,
+                  "points_won": 0.0,
+                  "raw_return": -2.0,
+                  "reason": null,
+                  "return": -2.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 2.067361698951572,
+                  "seed": 501801,
+                  "status": "completed",
+                  "steps": 128,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 48
+                }
+              ],
+              "horizon": 128,
+              "iqr_raw_return": 0.0,
+              "mean_completed_game_raw_return": null,
+              "mean_raw_return": -2.0,
+              "median_raw_return": -2.0,
+              "schema": "pong_evaluation_v2",
+              "std_raw_return": 0.0,
+              "truncation_fraction": 1.0
+            },
+            "seconds": 2.067361698951572,
+            "training_active_seconds": 1.094586551655084
+          },
+          {
+            "checkpoint": {
+              "path": "checkpoints/64-c654b120a33bbb31880a7edbfec914f76a0576c6c94b26a3fdae5db7922c796a.pkl",
+              "sha256": "c654b120a33bbb31880a7edbfec914f76a0576c6c94b26a3fdae5db7922c796a"
+            },
+            "counter": 64,
+            "floor_result": false,
+            "group": "intermediate",
+            "report": {
+              "completed_games": 0,
+              "episodes": [
+                {
+                  "actions": {
+                    "FIRE": 17,
+                    "LEFT": 22,
+                    "LEFTFIRE": 18,
+                    "NOOP": 22,
+                    "RIGHT": 26,
+                    "RIGHTFIRE": 23
+                  },
+                  "points_lost": 0.0,
+                  "points_won": 1.0,
+                  "raw_return": 1.0,
+                  "reason": null,
+                  "return": 1.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 2.1551405270583928,
+                  "seed": 501801,
+                  "status": "completed",
+                  "steps": 128,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 56
+                }
+              ],
+              "horizon": 128,
+              "iqr_raw_return": 0.0,
+              "mean_completed_game_raw_return": null,
+              "mean_raw_return": 1.0,
+              "median_raw_return": 1.0,
+              "schema": "pong_evaluation_v2",
+              "std_raw_return": 0.0,
+              "truncation_fraction": 1.0
+            },
+            "seconds": 2.1551405270583928,
+            "training_active_seconds": 2.5910794308874756
+          }
+        ],
+        "game": "Pong",
+        "inventory": {
+          "artifacts": [
+            {
+              "bytes": 21845,
+              "confirmed": true,
+              "path": "checkpoints/0-5f32fe489db1221f64072a0789ef5cdf90f7386b316da298600ea137cb975fc5.pkl",
+              "protected": true,
+              "removable": false
+            },
+            {
+              "bytes": 33233,
+              "confirmed": true,
+              "path": "checkpoints/16-3135aed5bf283f6025fd092460e2c0db0e39485930723afbbdf8a808de6ca053.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 40931,
+              "confirmed": true,
+              "path": "checkpoints/32-88201f48ccce4b3967413e04eb84f387ac08d4a36ea1b191f1df57756384cbb1.pkl",
+              "protected": true,
+              "removable": false
+            },
+            {
+              "bytes": 46969,
+              "confirmed": true,
+              "path": "checkpoints/48-55d350f6caad19bc965e7a2f87bf91dab3cdfecd8791d918d2e5811c3bb717a5.pkl",
+              "protected": true,
+              "removable": false
+            },
+            {
+              "bytes": 52590,
+              "confirmed": true,
+              "path": "checkpoints/64-c654b120a33bbb31880a7edbfec914f76a0576c6c94b26a3fdae5db7922c796a.pkl",
+              "protected": true,
+              "removable": false
+            }
+          ],
+          "checkpoint_bytes": 195568,
+          "log_bytes": 28082,
+          "schema": "pong_retention_v2",
+          "unconfirmed_logs": []
+        },
+        "logs": {
+          "decisions": 64,
+          "ended_episodes": 0,
+          "points_lost": 1.0,
+          "points_won": 0.0,
+          "raw_return": -1.0
+        },
+        "metrics": {
+          "completed_games": 0,
+          "ended_episodes": 0,
+          "epsilon": 0.9970570301320116,
+          "interactions": 64,
+          "learner": {
+            "cache_bytes": 0,
+            "complexity": {
+              "FIRE": {
+                "leaves": 1,
+                "max_depth": 0
+              },
+              "LEFT": {
+                "leaves": 2,
+                "max_depth": 1
+              },
+              "LEFTFIRE": {
+                "leaves": 1,
+                "max_depth": 0
+              },
+              "NOOP": {
+                "leaves": 1,
+                "max_depth": 0
+              },
+              "RIGHT": {
+                "leaves": 1,
+                "max_depth": 0
+              },
+              "RIGHTFIRE": {
+                "leaves": 1,
+                "max_depth": 0
+              }
+            },
+            "fits": 4,
+            "kind": "cart",
+            "phase_seconds": {
+              "encoding": 0.10680544539354742,
+              "fit": 0.04172342270612717,
+              "prediction": 0.0,
+              "selection_targets": 0.0325768266338855
+            },
+            "replay_size": 64
+          },
+          "phase_seconds": {
+            "checkpoint_logs": 2.235627173213288,
+            "emulation_extraction": 0.3670734220650047,
+            "fit": 0.04172342270612717,
+            "policy_collection_td": 0.0031052157282829285,
+            "prediction": 0.0,
+            "relations_encoding": 0.14031323767267168,
+            "selection_targets": 0.0325768266338855
+          },
+          "relations": 20,
+          "truncated_episodes": 0
+        },
+        "peak_rss_bytes": 190386176,
+        "pending_evaluations": [],
+        "reason": null,
+        "training_attempts": 2,
+        "training_seconds": 5.0264782211743295,
+        "training_state": "completed",
+        "unfinished_evaluation_attempts": 0
+      },
+      {
+        "cell": "visual/bart/501501",
+        "comparison_state": "completed",
+        "counter": 64,
+        "evaluation_budget_seconds": 9.220612642122433,
+        "evaluation_seconds": 13.206096889218315,
+        "evaluations": [
+          {
+            "checkpoint": {
+              "path": "checkpoints/64-fb4ba2e57f1ca2518c6a0adb586419a93ec0d0175b4550113cf5fd77c75e0724.pkl",
+              "sha256": "fb4ba2e57f1ca2518c6a0adb586419a93ec0d0175b4550113cf5fd77c75e0724"
+            },
+            "counter": 64,
+            "floor_result": false,
+            "group": "final_development",
+            "report": {
+              "completed_games": 0,
+              "episodes": [
+                {
+                  "actions": {
+                    "FIRE": 128
+                  },
+                  "points_lost": 2.0,
+                  "points_won": 0.0,
+                  "raw_return": -2.0,
+                  "reason": null,
+                  "return": -2.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 1.9005306230392307,
+                  "seed": 501901,
+                  "status": "completed",
+                  "steps": 128,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 29
+                }
+              ],
+              "horizon": 128,
+              "iqr_raw_return": 0.0,
+              "mean_completed_game_raw_return": null,
+              "mean_raw_return": -2.0,
+              "median_raw_return": -2.0,
+              "schema": "pong_evaluation_v2",
+              "std_raw_return": 0.0,
+              "truncation_fraction": 1.0
+            },
+            "seconds": 1.9005306230392307,
+            "training_active_seconds": 3.1556616199668497
+          },
+          {
+            "checkpoint": {
+              "path": "checkpoints/0-8692ff5a6ec169e72b52dac90b59ed74d5bb946533a7df2420ea86fc8d8acd67.pkl",
+              "sha256": "8692ff5a6ec169e72b52dac90b59ed74d5bb946533a7df2420ea86fc8d8acd67"
+            },
+            "counter": 0,
+            "floor_result": false,
+            "group": "intermediate",
+            "report": {
+              "completed_games": 0,
+              "episodes": [
+                {
+                  "actions": {
+                    "FIRE": 17,
+                    "LEFT": 23,
+                    "LEFTFIRE": 17,
+                    "NOOP": 22,
+                    "RIGHT": 25,
+                    "RIGHTFIRE": 24
+                  },
+                  "points_lost": 2.0,
+                  "points_won": 0.0,
+                  "raw_return": -2.0,
+                  "reason": null,
+                  "return": -2.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 2.1027429399546236,
+                  "seed": 501801,
+                  "status": "completed",
+                  "steps": 128,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 48
+                }
+              ],
+              "horizon": 128,
+              "iqr_raw_return": 0.0,
+              "mean_completed_game_raw_return": null,
+              "mean_raw_return": -2.0,
+              "median_raw_return": -2.0,
+              "schema": "pong_evaluation_v2",
+              "std_raw_return": 0.0,
+              "truncation_fraction": 1.0
+            },
+            "seconds": 2.1027429399546236,
+            "training_active_seconds": 0.0
+          },
+          {
+            "checkpoint": {
+              "path": "checkpoints/32-1fd3cb6f8371c9be472c88ffe83381c6b86090cab7381b5a6f5655e999d78c7f.pkl",
+              "sha256": "1fd3cb6f8371c9be472c88ffe83381c6b86090cab7381b5a6f5655e999d78c7f"
+            },
+            "counter": 32,
+            "floor_result": false,
+            "group": "intermediate",
+            "report": {
+              "completed_games": 0,
+              "episodes": [
+                {
+                  "actions": {
+                    "NOOP": 128
+                  },
+                  "points_lost": 2.0,
+                  "points_won": 0.0,
+                  "raw_return": -2.0,
+                  "reason": null,
+                  "return": -2.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 1.969386300072074,
+                  "seed": 501801,
+                  "status": "completed",
+                  "steps": 128,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 29
+                }
+              ],
+              "horizon": 128,
+              "iqr_raw_return": 0.0,
+              "mean_completed_game_raw_return": null,
+              "mean_raw_return": -2.0,
+              "median_raw_return": -2.0,
+              "schema": "pong_evaluation_v2",
+              "std_raw_return": 0.0,
+              "truncation_fraction": 1.0
+            },
+            "seconds": 1.969386300072074,
+            "training_active_seconds": 1.5128498307894915
+          },
+          {
+            "checkpoint": {
+              "path": "checkpoints/64-fb4ba2e57f1ca2518c6a0adb586419a93ec0d0175b4550113cf5fd77c75e0724.pkl",
+              "sha256": "fb4ba2e57f1ca2518c6a0adb586419a93ec0d0175b4550113cf5fd77c75e0724"
+            },
+            "counter": 64,
+            "floor_result": false,
+            "group": "intermediate",
+            "report": {
+              "completed_games": 0,
+              "episodes": [
+                {
+                  "actions": {
+                    "FIRE": 128
+                  },
+                  "points_lost": 2.0,
+                  "points_won": 0.0,
+                  "raw_return": -2.0,
+                  "reason": null,
+                  "return": -2.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 2.2639511830639094,
+                  "seed": 501801,
+                  "status": "completed",
+                  "steps": 128,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 29
+                }
+              ],
+              "horizon": 128,
+              "iqr_raw_return": 0.0,
+              "mean_completed_game_raw_return": null,
+              "mean_raw_return": -2.0,
+              "median_raw_return": -2.0,
+              "schema": "pong_evaluation_v2",
+              "std_raw_return": 0.0,
+              "truncation_fraction": 1.0
+            },
+            "seconds": 2.2639511830639094,
+            "training_active_seconds": 3.1556616199668497
+          }
+        ],
+        "game": "Pong",
+        "inventory": {
+          "artifacts": [
+            {
+              "bytes": 22213,
+              "confirmed": true,
+              "path": "checkpoints/0-8692ff5a6ec169e72b52dac90b59ed74d5bb946533a7df2420ea86fc8d8acd67.pkl",
+              "protected": true,
+              "removable": false
+            },
+            {
+              "bytes": 44216,
+              "confirmed": true,
+              "path": "checkpoints/16-6aba3f8cd9353c439795123008a6cb723bc2538e0cfdbbe8be93efe82ec81507.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 59720,
+              "confirmed": true,
+              "path": "checkpoints/32-1fd3cb6f8371c9be472c88ffe83381c6b86090cab7381b5a6f5655e999d78c7f.pkl",
+              "protected": true,
+              "removable": false
+            },
+            {
+              "bytes": 65866,
+              "confirmed": true,
+              "path": "checkpoints/48-5c8ea15a4642c770ea37ebed5a40d9f40104b9f43e20788320042348801dd926.pkl",
+              "protected": true,
+              "removable": false
+            },
+            {
+              "bytes": 71417,
+              "confirmed": true,
+              "path": "checkpoints/64-fb4ba2e57f1ca2518c6a0adb586419a93ec0d0175b4550113cf5fd77c75e0724.pkl",
+              "protected": true,
+              "removable": false
+            }
+          ],
+          "checkpoint_bytes": 263432,
+          "log_bytes": 40054,
+          "schema": "pong_retention_v2",
+          "unconfirmed_logs": []
+        },
+        "logs": {
+          "decisions": 64,
+          "ended_episodes": 0,
+          "points_lost": 1.0,
+          "points_won": 0.0,
+          "raw_return": -1.0
+        },
+        "metrics": {
+          "completed_games": 0,
+          "ended_episodes": 0,
+          "epsilon": 0.9970570301320116,
+          "interactions": 64,
+          "learner": {
+            "cache_bytes": 0,
+            "complexity": {
+              "FIRE": {
+                "diagnostics": {
+                  "burn_in": 2,
+                  "elapsed_seconds": 0.014890900114551187,
+                  "m": 2,
+                  "max_cache_error": null,
+                  "moves": {
+                    "change": {
+                      "acceptance_given_possible": null,
+                      "accepted": 0,
+                      "impossible": 0,
+                      "rejected": 0,
+                      "selected": 0
+                    },
+                    "grow": {
+                      "acceptance_given_possible": 0.0,
+                      "accepted": 0,
+                      "impossible": 0,
+                      "rejected": 5,
+                      "selected": 5
+                    },
+                    "prune": {
+                      "acceptance_given_possible": null,
+                      "accepted": 0,
+                      "impossible": 5,
+                      "rejected": 0,
+                      "selected": 5
+                    },
+                    "swap": {
+                      "acceptance_given_possible": null,
+                      "accepted": 0,
+                      "impossible": 0,
+                      "rejected": 0,
+                      "selected": 0
+                    }
+                  },
+                  "retained": 3,
+                  "sweeps": 5,
+                  "targets_outside_scale": 0
+                },
+                "draws": 3,
+                "leaves_last_draw": 2,
+                "max_depth_last_draw": 0,
+                "trees": 2
+              },
+              "LEFT": {
+                "diagnostics": {
+                  "burn_in": 2,
+                  "elapsed_seconds": 0.016047958051785827,
+                  "m": 2,
+                  "max_cache_error": null,
+                  "moves": {
+                    "change": {
+                      "acceptance_given_possible": null,
+                      "accepted": 0,
+                      "impossible": 0,
+                      "rejected": 0,
+                      "selected": 0
+                    },
+                    "grow": {
+                      "acceptance_given_possible": 0.25,
+                      "accepted": 1,
+                      "impossible": 0,
+                      "rejected": 3,
+                      "selected": 4
+                    },
+                    "prune": {
+                      "acceptance_given_possible": 1.0,
+                      "accepted": 1,
+                      "impossible": 5,
+                      "rejected": 0,
+                      "selected": 6
+                    },
+                    "swap": {
+                      "acceptance_given_possible": null,
+                      "accepted": 0,
+                      "impossible": 0,
+                      "rejected": 0,
+                      "selected": 0
+                    }
+                  },
+                  "retained": 3,
+                  "sweeps": 5,
+                  "targets_outside_scale": 0
+                },
+                "draws": 3,
+                "leaves_last_draw": 2,
+                "max_depth_last_draw": 0,
+                "trees": 2
+              },
+              "LEFTFIRE": {
+                "diagnostics": {
+                  "burn_in": 2,
+                  "elapsed_seconds": 0.012992233037948608,
+                  "m": 2,
+                  "max_cache_error": null,
+                  "moves": {
+                    "change": {
+                      "acceptance_given_possible": null,
+                      "accepted": 0,
+                      "impossible": 0,
+                      "rejected": 0,
+                      "selected": 0
+                    },
+                    "grow": {
+                      "acceptance_given_possible": 0.0,
+                      "accepted": 0,
+                      "impossible": 0,
+                      "rejected": 4,
+                      "selected": 4
+                    },
+                    "prune": {
+                      "acceptance_given_possible": null,
+                      "accepted": 0,
+                      "impossible": 6,
+                      "rejected": 0,
+                      "selected": 6
+                    },
+                    "swap": {
+                      "acceptance_given_possible": null,
+                      "accepted": 0,
+                      "impossible": 0,
+                      "rejected": 0,
+                      "selected": 0
+                    }
+                  },
+                  "retained": 3,
+                  "sweeps": 5,
+                  "targets_outside_scale": 0
+                },
+                "draws": 3,
+                "leaves_last_draw": 2,
+                "max_depth_last_draw": 0,
+                "trees": 2
+              },
+              "NOOP": {
+                "diagnostics": {
+                  "burn_in": 2,
+                  "elapsed_seconds": 0.013021299848333001,
+                  "m": 2,
+                  "max_cache_error": null,
+                  "moves": {
+                    "change": {
+                      "acceptance_given_possible": null,
+                      "accepted": 0,
+                      "impossible": 0,
+                      "rejected": 0,
+                      "selected": 0
+                    },
+                    "grow": {
+                      "acceptance_given_possible": 0.0,
+                      "accepted": 0,
+                      "impossible": 0,
+                      "rejected": 3,
+                      "selected": 3
+                    },
+                    "prune": {
+                      "acceptance_given_possible": null,
+                      "accepted": 0,
+                      "impossible": 7,
+                      "rejected": 0,
+                      "selected": 7
+                    },
+                    "swap": {
+                      "acceptance_given_possible": null,
+                      "accepted": 0,
+                      "impossible": 0,
+                      "rejected": 0,
+                      "selected": 0
+                    }
+                  },
+                  "retained": 3,
+                  "sweeps": 5,
+                  "targets_outside_scale": 0
+                },
+                "draws": 3,
+                "leaves_last_draw": 2,
+                "max_depth_last_draw": 0,
+                "trees": 2
+              },
+              "RIGHT": {
+                "diagnostics": {
+                  "burn_in": 2,
+                  "elapsed_seconds": 0.01353171793743968,
+                  "m": 2,
+                  "max_cache_error": null,
+                  "moves": {
+                    "change": {
+                      "acceptance_given_possible": null,
+                      "accepted": 0,
+                      "impossible": 0,
+                      "rejected": 0,
+                      "selected": 0
+                    },
+                    "grow": {
+                      "acceptance_given_possible": 0.0,
+                      "accepted": 0,
+                      "impossible": 0,
+                      "rejected": 4,
+                      "selected": 4
+                    },
+                    "prune": {
+                      "acceptance_given_possible": null,
+                      "accepted": 0,
+                      "impossible": 6,
+                      "rejected": 0,
+                      "selected": 6
+                    },
+                    "swap": {
+                      "acceptance_given_possible": null,
+                      "accepted": 0,
+                      "impossible": 0,
+                      "rejected": 0,
+                      "selected": 0
+                    }
+                  },
+                  "retained": 3,
+                  "sweeps": 5,
+                  "targets_outside_scale": 0
+                },
+                "draws": 3,
+                "leaves_last_draw": 2,
+                "max_depth_last_draw": 0,
+                "trees": 2
+              },
+              "RIGHTFIRE": {
+                "diagnostics": {
+                  "burn_in": 2,
+                  "elapsed_seconds": 0.016965491930022836,
+                  "m": 2,
+                  "max_cache_error": null,
+                  "moves": {
+                    "change": {
+                      "acceptance_given_possible": null,
+                      "accepted": 0,
+                      "impossible": 0,
+                      "rejected": 0,
+                      "selected": 0
+                    },
+                    "grow": {
+                      "acceptance_given_possible": 0.0,
+                      "accepted": 0,
+                      "impossible": 0,
+                      "rejected": 6,
+                      "selected": 6
+                    },
+                    "prune": {
+                      "acceptance_given_possible": null,
+                      "accepted": 0,
+                      "impossible": 4,
+                      "rejected": 0,
+                      "selected": 4
+                    },
+                    "swap": {
+                      "acceptance_given_possible": null,
+                      "accepted": 0,
+                      "impossible": 0,
+                      "rejected": 0,
+                      "selected": 0
+                    }
+                  },
+                  "retained": 3,
+                  "sweeps": 5,
+                  "targets_outside_scale": 0
+                },
+                "draws": 3,
+                "leaves_last_draw": 2,
+                "max_depth_last_draw": 0,
+                "trees": 2
+              }
+            },
+            "fits": 4,
+            "kind": "bart",
+            "phase_seconds": {
+              "encoding": 0.11245966842398047,
+              "fit": 0.32274729292839766,
+              "prediction": 0.0,
+              "selection_targets": 0.04717995086684823
+            },
+            "replay_size": 64
+          },
+          "phase_seconds": {
+            "checkpoint_logs": 2.8935353909619153,
+            "emulation_extraction": 0.4134895196184516,
+            "fit": 0.32274729292839766,
+            "policy_collection_td": 0.0031977402977645397,
+            "prediction": 0.0,
+            "relations_encoding": 0.14821100141853094,
+            "selection_targets": 0.04717995086684823
+          },
+          "relations": 20,
+          "truncated_episodes": 0
+        },
+        "peak_rss_bytes": 192020480,
+        "pending_evaluations": [],
+        "reason": null,
+        "training_attempts": 2,
+        "training_seconds": 6.593007928924635,
+        "training_state": "completed",
+        "unfinished_evaluation_attempts": 0
+      },
+      {
+        "cell": "ocatari/corrected_common/501501",
+        "comparison_state": "completed",
+        "counter": 64,
+        "evaluation_budget_seconds": 7.489110508002341,
+        "evaluation_seconds": 10.673674846068025,
+        "evaluations": [
+          {
+            "checkpoint": {
+              "path": "checkpoints/64-e9b6fd29b55a403a3276b361dd49d4c9900538c7904c0632d92e7b52989bf80b.pkl",
+              "sha256": "e9b6fd29b55a403a3276b361dd49d4c9900538c7904c0632d92e7b52989bf80b"
+            },
+            "counter": 64,
+            "floor_result": false,
+            "group": "final_development",
+            "report": {
+              "completed_games": 0,
+              "episodes": [
+                {
+                  "actions": {
+                    "FIRE": 24,
+                    "LEFTFIRE": 25,
+                    "NOOP": 22,
+                    "RIGHT": 31,
+                    "RIGHTFIRE": 26
+                  },
+                  "points_lost": 2.0,
+                  "points_won": 0.0,
+                  "raw_return": -2.0,
+                  "reason": null,
+                  "return": -2.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 1.5937248771078885,
+                  "seed": 501901,
+                  "status": "completed",
+                  "steps": 128,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 30
+                }
+              ],
+              "horizon": 128,
+              "iqr_raw_return": 0.0,
+              "mean_completed_game_raw_return": null,
+              "mean_raw_return": -2.0,
+              "median_raw_return": -2.0,
+              "schema": "pong_evaluation_v2",
+              "std_raw_return": 0.0,
+              "truncation_fraction": 1.0
+            },
+            "seconds": 1.5937248771078885,
+            "training_active_seconds": 2.998909665737301
+          },
+          {
+            "checkpoint": {
+              "path": "checkpoints/0-ddf9930fe7e5a774f8e6be8e5213b8b11047b2fce3d27e7ccca4c0cddafdfc46.pkl",
+              "sha256": "ddf9930fe7e5a774f8e6be8e5213b8b11047b2fce3d27e7ccca4c0cddafdfc46"
+            },
+            "counter": 0,
+            "floor_result": false,
+            "group": "intermediate",
+            "report": {
+              "completed_games": 0,
+              "episodes": [
+                {
+                  "actions": {
+                    "FIRE": 17,
+                    "LEFT": 23,
+                    "LEFTFIRE": 17,
+                    "NOOP": 22,
+                    "RIGHT": 25,
+                    "RIGHTFIRE": 24
+                  },
+                  "points_lost": 2.0,
+                  "points_won": 0.0,
+                  "raw_return": -2.0,
+                  "reason": null,
+                  "return": -2.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 1.2332146889530122,
+                  "seed": 501801,
+                  "status": "completed",
+                  "steps": 128,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 47
+                }
+              ],
+              "horizon": 128,
+              "iqr_raw_return": 0.0,
+              "mean_completed_game_raw_return": null,
+              "mean_raw_return": -2.0,
+              "median_raw_return": -2.0,
+              "schema": "pong_evaluation_v2",
+              "std_raw_return": 0.0,
+              "truncation_fraction": 1.0
+            },
+            "seconds": 1.2332146889530122,
+            "training_active_seconds": 0.0
+          },
+          {
+            "checkpoint": {
+              "path": "checkpoints/32-8111d37023596f3a32f1f5b3440585e791316c63d2c92816d089c465cd45c688.pkl",
+              "sha256": "8111d37023596f3a32f1f5b3440585e791316c63d2c92816d089c465cd45c688"
+            },
+            "counter": 32,
+            "floor_result": false,
+            "group": "intermediate",
+            "report": {
+              "completed_games": 0,
+              "episodes": [
+                {
+                  "actions": {
+                    "FIRE": 17,
+                    "LEFT": 23,
+                    "LEFTFIRE": 17,
+                    "NOOP": 22,
+                    "RIGHT": 25,
+                    "RIGHTFIRE": 24
+                  },
+                  "points_lost": 2.0,
+                  "points_won": 0.0,
+                  "raw_return": -2.0,
+                  "reason": null,
+                  "return": -2.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 1.7681555191520602,
+                  "seed": 501801,
+                  "status": "completed",
+                  "steps": 128,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 47
+                }
+              ],
+              "horizon": 128,
+              "iqr_raw_return": 0.0,
+              "mean_completed_game_raw_return": null,
+              "mean_raw_return": -2.0,
+              "median_raw_return": -2.0,
+              "schema": "pong_evaluation_v2",
+              "std_raw_return": 0.0,
+              "truncation_fraction": 1.0
+            },
+            "seconds": 1.7681555191520602,
+            "training_active_seconds": 1.3615807332098484
+          },
+          {
+            "checkpoint": {
+              "path": "checkpoints/64-e9b6fd29b55a403a3276b361dd49d4c9900538c7904c0632d92e7b52989bf80b.pkl",
+              "sha256": "e9b6fd29b55a403a3276b361dd49d4c9900538c7904c0632d92e7b52989bf80b"
+            },
+            "counter": 64,
+            "floor_result": false,
+            "group": "intermediate",
+            "report": {
+              "completed_games": 0,
+              "episodes": [
+                {
+                  "actions": {
+                    "FIRE": 24,
+                    "LEFTFIRE": 21,
+                    "NOOP": 23,
+                    "RIGHT": 28,
+                    "RIGHTFIRE": 32
+                  },
+                  "points_lost": 2.0,
+                  "points_won": 0.0,
+                  "raw_return": -2.0,
+                  "reason": null,
+                  "return": -2.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 1.8370415661484003,
+                  "seed": 501801,
+                  "status": "completed",
+                  "steps": 128,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 30
+                }
+              ],
+              "horizon": 128,
+              "iqr_raw_return": 0.0,
+              "mean_completed_game_raw_return": null,
+              "mean_raw_return": -2.0,
+              "median_raw_return": -2.0,
+              "schema": "pong_evaluation_v2",
+              "std_raw_return": 0.0,
+              "truncation_fraction": 1.0
+            },
+            "seconds": 1.8370415661484003,
+            "training_active_seconds": 2.998909665737301
+          }
+        ],
+        "game": "Pong",
+        "inventory": {
+          "artifacts": [
+            {
+              "bytes": 40511,
+              "confirmed": true,
+              "path": "checkpoints/0-ddf9930fe7e5a774f8e6be8e5213b8b11047b2fce3d27e7ccca4c0cddafdfc46.pkl",
+              "protected": true,
+              "removable": false
+            },
+            {
+              "bytes": 44061,
+              "confirmed": true,
+              "path": "checkpoints/16-1149f37f281f42005a4bce2f65009bec9d8cf1684a927ebbc87b4c3204938749.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 46698,
+              "confirmed": true,
+              "path": "checkpoints/32-8111d37023596f3a32f1f5b3440585e791316c63d2c92816d089c465cd45c688.pkl",
+              "protected": true,
+              "removable": false
+            },
+            {
+              "bytes": 47079,
+              "confirmed": true,
+              "path": "checkpoints/48-b9b972b3fd477a1c7cf0ce762a3cf93941e7d467d681fa8ec7dc6f4155d841f0.pkl",
+              "protected": true,
+              "removable": false
+            },
+            {
+              "bytes": 47042,
+              "confirmed": true,
+              "path": "checkpoints/64-e9b6fd29b55a403a3276b361dd49d4c9900538c7904c0632d92e7b52989bf80b.pkl",
+              "protected": true,
+              "removable": false
+            }
+          ],
+          "checkpoint_bytes": 225391,
+          "log_bytes": 26770,
+          "schema": "pong_retention_v2",
+          "unconfirmed_logs": []
+        },
+        "logs": {
+          "decisions": 64,
+          "ended_episodes": 0,
+          "points_lost": 1.0,
+          "points_won": 0.0,
+          "raw_return": -1.0
+        },
+        "metrics": {
+          "completed_games": 0,
+          "ended_episodes": 0,
+          "epsilon": 0.9970570301320116,
+          "interactions": 64,
+          "learner": {
+            "complexity": {
+              "FIRE": {
+                "leaves": 1,
+                "max_depth": 0
+              },
+              "LEFT": {
+                "leaves": 1,
+                "max_depth": 0
+              },
+              "LEFTFIRE": {
+                "leaves": 1,
+                "max_depth": 0
+              },
+              "NOOP": {
+                "leaves": 1,
+                "max_depth": 0
+              },
+              "RIGHT": {
+                "leaves": 1,
+                "max_depth": 0
+              },
+              "RIGHTFIRE": {
+                "leaves": 1,
+                "max_depth": 0
+              }
+            },
+            "fallback": {
+              "bootstrap": {
+                "internal_fallbacks": 0,
+                "queries": 384
+              },
+              "prediction": {
+                "internal_fallbacks": 0,
+                "queries": 0
+              },
+              "update": {
+                "internal_fallbacks": 0,
+                "queries": 64
+              }
+            },
+            "kind": "rrtl_corrected_common_v1",
+            "splits": 0
+          },
+          "phase_seconds": {
+            "checkpoint_logs": 2.9576358443591744,
+            "emulation_extraction": 0.3232007413171232,
+            "fit": 0.0,
+            "policy_collection_td": 0.03282375610433519,
+            "prediction": 0.0,
+            "relations_encoding": 0.15620317892171443,
+            "selection_targets": 0.0
+          },
+          "relations": 20,
+          "truncated_episodes": 0
+        },
+        "peak_rss_bytes": 198565888,
+        "pending_evaluations": [],
+        "reason": null,
+        "training_attempts": 2,
+        "training_seconds": 6.859199388185516,
+        "training_state": "completed",
+        "unfinished_evaluation_attempts": 0
+      },
+      {
+        "cell": "ocatari/cart/501501",
+        "comparison_state": "completed",
+        "counter": 64,
+        "evaluation_budget_seconds": 8.281000011134893,
+        "evaluation_seconds": 12.183012930909172,
+        "evaluations": [
+          {
+            "checkpoint": {
+              "path": "checkpoints/64-a14256642633dbd48ec2e60be2347fcb7bb4de9493b398c0ff689b613bf8f668.pkl",
+              "sha256": "a14256642633dbd48ec2e60be2347fcb7bb4de9493b398c0ff689b613bf8f668"
+            },
+            "counter": 64,
+            "floor_result": false,
+            "group": "final_development",
+            "report": {
+              "completed_games": 0,
+              "episodes": [
+                {
+                  "actions": {
+                    "FIRE": 20,
+                    "LEFT": 21,
+                    "LEFTFIRE": 22,
+                    "NOOP": 20,
+                    "RIGHT": 23,
+                    "RIGHTFIRE": 22
+                  },
+                  "points_lost": 2.0,
+                  "points_won": 0.0,
+                  "raw_return": -2.0,
+                  "reason": null,
+                  "return": -2.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 1.8547192020341754,
+                  "seed": 501901,
+                  "status": "completed",
+                  "steps": 128,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 55
+                }
+              ],
+              "horizon": 128,
+              "iqr_raw_return": 0.0,
+              "mean_completed_game_raw_return": null,
+              "mean_raw_return": -2.0,
+              "median_raw_return": -2.0,
+              "schema": "pong_evaluation_v2",
+              "std_raw_return": 0.0,
+              "truncation_fraction": 1.0
+            },
+            "seconds": 1.8547192020341754,
+            "training_active_seconds": 2.5872925703879446
+          },
+          {
+            "checkpoint": {
+              "path": "checkpoints/0-3c546e8990eabc4dc3dc44a5b299574bdc3a44fee52e0ac3c7bc03e5e025a10a.pkl",
+              "sha256": "3c546e8990eabc4dc3dc44a5b299574bdc3a44fee52e0ac3c7bc03e5e025a10a"
+            },
+            "counter": 0,
+            "floor_result": false,
+            "group": "intermediate",
+            "report": {
+              "completed_games": 0,
+              "episodes": [
+                {
+                  "actions": {
+                    "FIRE": 17,
+                    "LEFT": 23,
+                    "LEFTFIRE": 17,
+                    "NOOP": 22,
+                    "RIGHT": 25,
+                    "RIGHTFIRE": 24
+                  },
+                  "points_lost": 2.0,
+                  "points_won": 0.0,
+                  "raw_return": -2.0,
+                  "reason": null,
+                  "return": -2.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 1.5738245700486004,
+                  "seed": 501801,
+                  "status": "completed",
+                  "steps": 128,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 47
+                }
+              ],
+              "horizon": 128,
+              "iqr_raw_return": 0.0,
+              "mean_completed_game_raw_return": null,
+              "mean_raw_return": -2.0,
+              "median_raw_return": -2.0,
+              "schema": "pong_evaluation_v2",
+              "std_raw_return": 0.0,
+              "truncation_fraction": 1.0
+            },
+            "seconds": 1.5738245700486004,
+            "training_active_seconds": 0.0
+          },
+          {
+            "checkpoint": {
+              "path": "checkpoints/32-21e8707efce7b9677364dd9ceac3002bec1f948a8073455e20c568c5edd4e061.pkl",
+              "sha256": "21e8707efce7b9677364dd9ceac3002bec1f948a8073455e20c568c5edd4e061"
+            },
+            "counter": 32,
+            "floor_result": false,
+            "group": "intermediate",
+            "report": {
+              "completed_games": 0,
+              "episodes": [
+                {
+                  "actions": {
+                    "FIRE": 17,
+                    "LEFT": 23,
+                    "LEFTFIRE": 17,
+                    "NOOP": 22,
+                    "RIGHT": 25,
+                    "RIGHTFIRE": 24
+                  },
+                  "points_lost": 2.0,
+                  "points_won": 0.0,
+                  "raw_return": -2.0,
+                  "reason": null,
+                  "return": -2.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 1.6003432730212808,
+                  "seed": 501801,
+                  "status": "completed",
+                  "steps": 128,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 47
+                }
+              ],
+              "horizon": 128,
+              "iqr_raw_return": 0.0,
+              "mean_completed_game_raw_return": null,
+              "mean_raw_return": -2.0,
+              "median_raw_return": -2.0,
+              "schema": "pong_evaluation_v2",
+              "std_raw_return": 0.0,
+              "truncation_fraction": 1.0
+            },
+            "seconds": 1.6003432730212808,
+            "training_active_seconds": 1.290035538841039
+          },
+          {
+            "checkpoint": {
+              "path": "checkpoints/64-a14256642633dbd48ec2e60be2347fcb7bb4de9493b398c0ff689b613bf8f668.pkl",
+              "sha256": "a14256642633dbd48ec2e60be2347fcb7bb4de9493b398c0ff689b613bf8f668"
+            },
+            "counter": 64,
+            "floor_result": false,
+            "group": "intermediate",
+            "report": {
+              "completed_games": 0,
+              "episodes": [
+                {
+                  "actions": {
+                    "FIRE": 16,
+                    "LEFT": 20,
+                    "LEFTFIRE": 17,
+                    "NOOP": 23,
+                    "RIGHT": 28,
+                    "RIGHTFIRE": 24
+                  },
+                  "points_lost": 2.0,
+                  "points_won": 0.0,
+                  "raw_return": -2.0,
+                  "reason": null,
+                  "return": -2.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 1.9687955100089312,
+                  "seed": 501801,
+                  "status": "completed",
+                  "steps": 128,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 37
+                }
+              ],
+              "horizon": 128,
+              "iqr_raw_return": 0.0,
+              "mean_completed_game_raw_return": null,
+              "mean_raw_return": -2.0,
+              "median_raw_return": -2.0,
+              "schema": "pong_evaluation_v2",
+              "std_raw_return": 0.0,
+              "truncation_fraction": 1.0
+            },
+            "seconds": 1.9687955100089312,
+            "training_active_seconds": 2.5872925703879446
+          }
+        ],
+        "game": "Pong",
+        "inventory": {
+          "artifacts": [
+            {
+              "bytes": 24934,
+              "confirmed": true,
+              "path": "checkpoints/0-3c546e8990eabc4dc3dc44a5b299574bdc3a44fee52e0ac3c7bc03e5e025a10a.pkl",
+              "protected": true,
+              "removable": false
+            },
+            {
+              "bytes": 36249,
+              "confirmed": true,
+              "path": "checkpoints/16-a9cbe0b33a434a659fe062d1bbedf4a097f6ef05727063f134419bccccb491b0.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 43956,
+              "confirmed": true,
+              "path": "checkpoints/32-21e8707efce7b9677364dd9ceac3002bec1f948a8073455e20c568c5edd4e061.pkl",
+              "protected": true,
+              "removable": false
+            },
+            {
+              "bytes": 49994,
+              "confirmed": true,
+              "path": "checkpoints/48-e86321c529c06ff37ea8299d935279d3c9ff27bd51dfb0f28ba25e50f579f60d.pkl",
+              "protected": true,
+              "removable": false
+            },
+            {
+              "bytes": 55615,
+              "confirmed": true,
+              "path": "checkpoints/64-a14256642633dbd48ec2e60be2347fcb7bb4de9493b398c0ff689b613bf8f668.pkl",
+              "protected": true,
+              "removable": false
+            }
+          ],
+          "checkpoint_bytes": 210748,
+          "log_bytes": 28082,
+          "schema": "pong_retention_v2",
+          "unconfirmed_logs": []
+        },
+        "logs": {
+          "decisions": 64,
+          "ended_episodes": 0,
+          "points_lost": 1.0,
+          "points_won": 0.0,
+          "raw_return": -1.0
+        },
+        "metrics": {
+          "completed_games": 0,
+          "ended_episodes": 0,
+          "epsilon": 0.9970570301320116,
+          "interactions": 64,
+          "learner": {
+            "cache_bytes": 0,
+            "complexity": {
+              "FIRE": {
+                "leaves": 1,
+                "max_depth": 0
+              },
+              "LEFT": {
+                "leaves": 2,
+                "max_depth": 1
+              },
+              "LEFTFIRE": {
+                "leaves": 1,
+                "max_depth": 0
+              },
+              "NOOP": {
+                "leaves": 1,
+                "max_depth": 0
+              },
+              "RIGHT": {
+                "leaves": 1,
+                "max_depth": 0
+              },
+              "RIGHTFIRE": {
+                "leaves": 1,
+                "max_depth": 0
+              }
+            },
+            "fits": 4,
+            "kind": "cart",
+            "phase_seconds": {
+              "encoding": 0.12048122170381248,
+              "fit": 0.04468939732760191,
+              "prediction": 0.0,
+              "selection_targets": 0.03695050394162536
+            },
+            "replay_size": 64
+          },
+          "phase_seconds": {
+            "checkpoint_logs": 2.458364143036306,
+            "emulation_extraction": 0.3412983566522598,
+            "fit": 0.04468939732760191,
+            "policy_collection_td": 0.003521799575537443,
+            "prediction": 0.0,
+            "relations_encoding": 0.15720350272022188,
+            "selection_targets": 0.03695050394162536
+          },
+          "relations": 20,
+          "truncated_episodes": 0
+        },
+        "peak_rss_bytes": 212217856,
+        "pending_evaluations": [],
+        "reason": null,
+        "training_attempts": 2,
+        "training_seconds": 5.9184263029601425,
+        "training_state": "completed",
+        "unfinished_evaluation_attempts": 0
+      },
+      {
+        "cell": "ocatari/bart/501501",
+        "comparison_state": "completed",
+        "counter": 64,
+        "evaluation_budget_seconds": 8.192563124932349,
+        "evaluation_seconds": 12.257831336930394,
+        "evaluations": [
+          {
+            "checkpoint": {
+              "path": "checkpoints/64-51a2cee8c89e8ee27776163cc5ac4cbf924dc21c668ad4a3eaccda2d41175dda.pkl",
+              "sha256": "51a2cee8c89e8ee27776163cc5ac4cbf924dc21c668ad4a3eaccda2d41175dda"
+            },
+            "counter": 64,
+            "floor_result": false,
+            "group": "final_development",
+            "report": {
+              "completed_games": 0,
+              "episodes": [
+                {
+                  "actions": {
+                    "FIRE": 128
+                  },
+                  "points_lost": 2.0,
+                  "points_won": 0.0,
+                  "raw_return": -2.0,
+                  "reason": null,
+                  "return": -2.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 1.7319641369394958,
+                  "seed": 501901,
+                  "status": "completed",
+                  "steps": 128,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 28
+                }
+              ],
+              "horizon": 128,
+              "iqr_raw_return": 0.0,
+              "mean_completed_game_raw_return": null,
+              "mean_raw_return": -2.0,
+              "median_raw_return": -2.0,
+              "schema": "pong_evaluation_v2",
+              "std_raw_return": 0.0,
+              "truncation_fraction": 1.0
+            },
+            "seconds": 1.7319641369394958,
+            "training_active_seconds": 3.1941025911364704
+          },
+          {
+            "checkpoint": {
+              "path": "checkpoints/0-418f7535de5a47c285aee23c93b8f364356a18662829b2c51c99b9102fa41f34.pkl",
+              "sha256": "418f7535de5a47c285aee23c93b8f364356a18662829b2c51c99b9102fa41f34"
+            },
+            "counter": 0,
+            "floor_result": false,
+            "group": "intermediate",
+            "report": {
+              "completed_games": 0,
+              "episodes": [
+                {
+                  "actions": {
+                    "FIRE": 17,
+                    "LEFT": 23,
+                    "LEFTFIRE": 17,
+                    "NOOP": 22,
+                    "RIGHT": 25,
+                    "RIGHTFIRE": 24
+                  },
+                  "points_lost": 2.0,
+                  "points_won": 0.0,
+                  "raw_return": -2.0,
+                  "reason": null,
+                  "return": -2.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 1.8096022261306643,
+                  "seed": 501801,
+                  "status": "completed",
+                  "steps": 128,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 47
+                }
+              ],
+              "horizon": 128,
+              "iqr_raw_return": 0.0,
+              "mean_completed_game_raw_return": null,
+              "mean_raw_return": -2.0,
+              "median_raw_return": -2.0,
+              "schema": "pong_evaluation_v2",
+              "std_raw_return": 0.0,
+              "truncation_fraction": 1.0
+            },
+            "seconds": 1.8096022261306643,
+            "training_active_seconds": 0.0
+          },
+          {
+            "checkpoint": {
+              "path": "checkpoints/32-1f8615786a63cf984bbda84eb0e1a0cf451994af6a07f9a53257fd824db245f9.pkl",
+              "sha256": "1f8615786a63cf984bbda84eb0e1a0cf451994af6a07f9a53257fd824db245f9"
+            },
+            "counter": 32,
+            "floor_result": false,
+            "group": "intermediate",
+            "report": {
+              "completed_games": 0,
+              "episodes": [
+                {
+                  "actions": {
+                    "NOOP": 128
+                  },
+                  "points_lost": 2.0,
+                  "points_won": 0.0,
+                  "raw_return": -2.0,
+                  "reason": null,
+                  "return": -2.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 2.055592118995264,
+                  "seed": 501801,
+                  "status": "completed",
+                  "steps": 128,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 28
+                }
+              ],
+              "horizon": 128,
+              "iqr_raw_return": 0.0,
+              "mean_completed_game_raw_return": null,
+              "mean_raw_return": -2.0,
+              "median_raw_return": -2.0,
+              "schema": "pong_evaluation_v2",
+              "std_raw_return": 0.0,
+              "truncation_fraction": 1.0
+            },
+            "seconds": 2.055592118995264,
+            "training_active_seconds": 1.433460335014388
+          },
+          {
+            "checkpoint": {
+              "path": "checkpoints/64-51a2cee8c89e8ee27776163cc5ac4cbf924dc21c668ad4a3eaccda2d41175dda.pkl",
+              "sha256": "51a2cee8c89e8ee27776163cc5ac4cbf924dc21c668ad4a3eaccda2d41175dda"
+            },
+            "counter": 64,
+            "floor_result": false,
+            "group": "intermediate",
+            "report": {
+              "completed_games": 0,
+              "episodes": [
+                {
+                  "actions": {
+                    "FIRE": 128
+                  },
+                  "points_lost": 2.0,
+                  "points_won": 0.0,
+                  "raw_return": -2.0,
+                  "reason": null,
+                  "return": -2.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 1.754312489880249,
+                  "seed": 501801,
+                  "status": "completed",
+                  "steps": 128,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 28
+                }
+              ],
+              "horizon": 128,
+              "iqr_raw_return": 0.0,
+              "mean_completed_game_raw_return": null,
+              "mean_raw_return": -2.0,
+              "median_raw_return": -2.0,
+              "schema": "pong_evaluation_v2",
+              "std_raw_return": 0.0,
+              "truncation_fraction": 1.0
+            },
+            "seconds": 1.754312489880249,
+            "training_active_seconds": 3.1941025911364704
+          }
+        ],
+        "game": "Pong",
+        "inventory": {
+          "artifacts": [
+            {
+              "bytes": 25302,
+              "confirmed": true,
+              "path": "checkpoints/0-418f7535de5a47c285aee23c93b8f364356a18662829b2c51c99b9102fa41f34.pkl",
+              "protected": true,
+              "removable": false
+            },
+            {
+              "bytes": 47241,
+              "confirmed": true,
+              "path": "checkpoints/16-de3db62aa41f09ed94a3185191373c9ec69122a4ad0c5f96288f7d2a2a2941fb.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 62745,
+              "confirmed": true,
+              "path": "checkpoints/32-1f8615786a63cf984bbda84eb0e1a0cf451994af6a07f9a53257fd824db245f9.pkl",
+              "protected": true,
+              "removable": false
+            },
+            {
+              "bytes": 68891,
+              "confirmed": true,
+              "path": "checkpoints/48-1b7e84f7147c8a2d907088c1bf1b5a744bb6fbb2dcaeda26552ba055d9439331.pkl",
+              "protected": true,
+              "removable": false
+            },
+            {
+              "bytes": 74442,
+              "confirmed": true,
+              "path": "checkpoints/64-51a2cee8c89e8ee27776163cc5ac4cbf924dc21c668ad4a3eaccda2d41175dda.pkl",
+              "protected": true,
+              "removable": false
+            }
+          ],
+          "checkpoint_bytes": 278621,
+          "log_bytes": 40053,
+          "schema": "pong_retention_v2",
+          "unconfirmed_logs": []
+        },
+        "logs": {
+          "decisions": 64,
+          "ended_episodes": 0,
+          "points_lost": 1.0,
+          "points_won": 0.0,
+          "raw_return": -1.0
+        },
+        "metrics": {
+          "completed_games": 0,
+          "ended_episodes": 0,
+          "epsilon": 0.9970570301320116,
+          "interactions": 64,
+          "learner": {
+            "cache_bytes": 0,
+            "complexity": {
+              "FIRE": {
+                "diagnostics": {
+                  "burn_in": 2,
+                  "elapsed_seconds": 0.01980821485631168,
+                  "m": 2,
+                  "max_cache_error": null,
+                  "moves": {
+                    "change": {
+                      "acceptance_given_possible": null,
+                      "accepted": 0,
+                      "impossible": 0,
+                      "rejected": 0,
+                      "selected": 0
+                    },
+                    "grow": {
+                      "acceptance_given_possible": 0.0,
+                      "accepted": 0,
+                      "impossible": 0,
+                      "rejected": 5,
+                      "selected": 5
+                    },
+                    "prune": {
+                      "acceptance_given_possible": null,
+                      "accepted": 0,
+                      "impossible": 5,
+                      "rejected": 0,
+                      "selected": 5
+                    },
+                    "swap": {
+                      "acceptance_given_possible": null,
+                      "accepted": 0,
+                      "impossible": 0,
+                      "rejected": 0,
+                      "selected": 0
+                    }
+                  },
+                  "retained": 3,
+                  "sweeps": 5,
+                  "targets_outside_scale": 0
+                },
+                "draws": 3,
+                "leaves_last_draw": 2,
+                "max_depth_last_draw": 0,
+                "trees": 2
+              },
+              "LEFT": {
+                "diagnostics": {
+                  "burn_in": 2,
+                  "elapsed_seconds": 0.02126154606230557,
+                  "m": 2,
+                  "max_cache_error": null,
+                  "moves": {
+                    "change": {
+                      "acceptance_given_possible": null,
+                      "accepted": 0,
+                      "impossible": 0,
+                      "rejected": 0,
+                      "selected": 0
+                    },
+                    "grow": {
+                      "acceptance_given_possible": 0.25,
+                      "accepted": 1,
+                      "impossible": 0,
+                      "rejected": 3,
+                      "selected": 4
+                    },
+                    "prune": {
+                      "acceptance_given_possible": 1.0,
+                      "accepted": 1,
+                      "impossible": 5,
+                      "rejected": 0,
+                      "selected": 6
+                    },
+                    "swap": {
+                      "acceptance_given_possible": null,
+                      "accepted": 0,
+                      "impossible": 0,
+                      "rejected": 0,
+                      "selected": 0
+                    }
+                  },
+                  "retained": 3,
+                  "sweeps": 5,
+                  "targets_outside_scale": 0
+                },
+                "draws": 3,
+                "leaves_last_draw": 2,
+                "max_depth_last_draw": 0,
+                "trees": 2
+              },
+              "LEFTFIRE": {
+                "diagnostics": {
+                  "burn_in": 2,
+                  "elapsed_seconds": 0.017799823777750134,
+                  "m": 2,
+                  "max_cache_error": null,
+                  "moves": {
+                    "change": {
+                      "acceptance_given_possible": null,
+                      "accepted": 0,
+                      "impossible": 0,
+                      "rejected": 0,
+                      "selected": 0
+                    },
+                    "grow": {
+                      "acceptance_given_possible": 0.0,
+                      "accepted": 0,
+                      "impossible": 0,
+                      "rejected": 4,
+                      "selected": 4
+                    },
+                    "prune": {
+                      "acceptance_given_possible": null,
+                      "accepted": 0,
+                      "impossible": 6,
+                      "rejected": 0,
+                      "selected": 6
+                    },
+                    "swap": {
+                      "acceptance_given_possible": null,
+                      "accepted": 0,
+                      "impossible": 0,
+                      "rejected": 0,
+                      "selected": 0
+                    }
+                  },
+                  "retained": 3,
+                  "sweeps": 5,
+                  "targets_outside_scale": 0
+                },
+                "draws": 3,
+                "leaves_last_draw": 2,
+                "max_depth_last_draw": 0,
+                "trees": 2
+              },
+              "NOOP": {
+                "diagnostics": {
+                  "burn_in": 2,
+                  "elapsed_seconds": 0.01459998288191855,
+                  "m": 2,
+                  "max_cache_error": null,
+                  "moves": {
+                    "change": {
+                      "acceptance_given_possible": null,
+                      "accepted": 0,
+                      "impossible": 0,
+                      "rejected": 0,
+                      "selected": 0
+                    },
+                    "grow": {
+                      "acceptance_given_possible": 0.0,
+                      "accepted": 0,
+                      "impossible": 0,
+                      "rejected": 3,
+                      "selected": 3
+                    },
+                    "prune": {
+                      "acceptance_given_possible": null,
+                      "accepted": 0,
+                      "impossible": 7,
+                      "rejected": 0,
+                      "selected": 7
+                    },
+                    "swap": {
+                      "acceptance_given_possible": null,
+                      "accepted": 0,
+                      "impossible": 0,
+                      "rejected": 0,
+                      "selected": 0
+                    }
+                  },
+                  "retained": 3,
+                  "sweeps": 5,
+                  "targets_outside_scale": 0
+                },
+                "draws": 3,
+                "leaves_last_draw": 2,
+                "max_depth_last_draw": 0,
+                "trees": 2
+              },
+              "RIGHT": {
+                "diagnostics": {
+                  "burn_in": 2,
+                  "elapsed_seconds": 0.017894542077556252,
+                  "m": 2,
+                  "max_cache_error": null,
+                  "moves": {
+                    "change": {
+                      "acceptance_given_possible": null,
+                      "accepted": 0,
+                      "impossible": 0,
+                      "rejected": 0,
+                      "selected": 0
+                    },
+                    "grow": {
+                      "acceptance_given_possible": 0.0,
+                      "accepted": 0,
+                      "impossible": 0,
+                      "rejected": 4,
+                      "selected": 4
+                    },
+                    "prune": {
+                      "acceptance_given_possible": null,
+                      "accepted": 0,
+                      "impossible": 6,
+                      "rejected": 0,
+                      "selected": 6
+                    },
+                    "swap": {
+                      "acceptance_given_possible": null,
+                      "accepted": 0,
+                      "impossible": 0,
+                      "rejected": 0,
+                      "selected": 0
+                    }
+                  },
+                  "retained": 3,
+                  "sweeps": 5,
+                  "targets_outside_scale": 0
+                },
+                "draws": 3,
+                "leaves_last_draw": 2,
+                "max_depth_last_draw": 0,
+                "trees": 2
+              },
+              "RIGHTFIRE": {
+                "diagnostics": {
+                  "burn_in": 2,
+                  "elapsed_seconds": 0.022611893014982343,
+                  "m": 2,
+                  "max_cache_error": null,
+                  "moves": {
+                    "change": {
+                      "acceptance_given_possible": null,
+                      "accepted": 0,
+                      "impossible": 0,
+                      "rejected": 0,
+                      "selected": 0
+                    },
+                    "grow": {
+                      "acceptance_given_possible": 0.0,
+                      "accepted": 0,
+                      "impossible": 0,
+                      "rejected": 6,
+                      "selected": 6
+                    },
+                    "prune": {
+                      "acceptance_given_possible": null,
+                      "accepted": 0,
+                      "impossible": 4,
+                      "rejected": 0,
+                      "selected": 4
+                    },
+                    "swap": {
+                      "acceptance_given_possible": null,
+                      "accepted": 0,
+                      "impossible": 0,
+                      "rejected": 0,
+                      "selected": 0
+                    }
+                  },
+                  "retained": 3,
+                  "sweeps": 5,
+                  "targets_outside_scale": 0
+                },
+                "draws": 3,
+                "leaves_last_draw": 2,
+                "max_depth_last_draw": 0,
+                "trees": 2
+              }
+            },
+            "fits": 4,
+            "kind": "bart",
+            "phase_seconds": {
+              "encoding": 0.1289356080815196,
+              "fit": 0.3866831921041012,
+              "prediction": 0.0,
+              "selection_targets": 0.05206777714192867
+            },
+            "replay_size": 64
+          },
+          "phase_seconds": {
+            "checkpoint_logs": 2.769039739156142,
+            "emulation_extraction": 0.3372190597001463,
+            "fit": 0.3866831921041012,
+            "policy_collection_td": 0.0034319504629820585,
+            "prediction": 0.0,
+            "relations_encoding": 0.1651924387551844,
+            "selection_targets": 0.05206777714192867
+          },
+          "relations": 20,
+          "truncated_episodes": 0
+        },
+        "peak_rss_bytes": 213426176,
+        "pending_evaluations": [],
+        "reason": null,
+        "training_attempts": 2,
+        "training_seconds": 6.436385117936879,
+        "training_state": "completed",
+        "unfinished_evaluation_attempts": 0
+      }
+    ],
+    "completed": true,
+    "limitations": [
+      "A floor result does not establish equivalence.",
+      "Smoke is technical only; primary result is frozen final checkpoint.",
+      "Operational sums are resource consumption, not concurrent wall time."
+    ],
+    "reserved_test_executed": false,
+    "reserved_test_executed_by_report": false,
+    "schema": "pong_progressive_report_v2"
+  },
+  "schema": "pong_analysis_unit_v2",
+  "sha256": "33b3dccaf102816edf7d112ca593ad034939b8b0f901e291138f040f8aa41e94"
+}

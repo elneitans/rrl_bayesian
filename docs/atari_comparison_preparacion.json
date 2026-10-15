@@ -1,0 +1,1760 @@
+{
+  "schema": "atari_block_c_preparation_v1",
+  "date": "2026-10-14",
+  "status": {
+    "C13": "implemented_and_real_integration_verified",
+    "C14": "implemented_and_real_integration_verified",
+    "C15": "implemented_small_campaign_completed_scientific_campaign_pending"
+  },
+  "runtime_observed": {
+    "ale-py": "0.10.2",
+    "gymnasium": "1.1.1",
+    "machine": "arm64",
+    "numeric_threads": {
+      "MKL_NUM_THREADS": null,
+      "NUMEXPR_NUM_THREADS": null,
+      "OMP_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null
+    },
+    "numpy": "1.26.4",
+    "ocatari": "2.2.1",
+    "platform": "darwin",
+    "python": "3.11.7",
+    "scipy": "1.12.0"
+  },
+  "runtime_note": "macOS source-loading launcher avoided filesystem bytecode stalls; cached pinned OCAtari wheel extracted without installing/updating packages. Not Linux certification.",
+  "historical_preservation": [
+    {
+      "path": "historical/pong_online_B_20261014_code/historical-preservation.json",
+      "sha256": "92ae9a2ae74d71f45e9c0a5f74d2fd343fc3cbec37f92e18c949676349eeb0d9",
+      "verified_sources": 77,
+      "all_match": true,
+      "source_campaign": "/Users/natanzamorano/Documents/Universidad/capstone/rrl_bayesian/results/pong_online_recovery_sim_20261014_01/resumed"
+    },
+    {
+      "path": "historical/pong_pilot_linux_01_code/historical-preservation.json",
+      "sha256": "def3008e4465f30054a34fa5e16f3a244b9a9436e89c3c37a448ae6d834e1192",
+      "verified_sources": 40,
+      "all_match": true,
+      "source_campaign": "/Users/natanzamorano/Documents/Universidad/capstone/rrl_bayesian/results_cluster/pong_pilot_linux_01"
+    }
+  ],
+  "detector_audit": {
+    "path": "docs/ocatari_detector_audit_c.json",
+    "sha256": "909063b680445c76062e383a1cebca0eadd1c30f7c49c92c928b979be1c331d7"
+  },
+  "tests": [
+    {
+      "suite": "C unit + B online + protocol/training + baseline + A runtime/blocks + cluster",
+      "passed": 179,
+      "skipped": 1,
+      "deselected": 2,
+      "seconds": 42.06,
+      "note": "Includes C tests; overlapping suites must not be added as unique tests."
+    },
+    {
+      "suite": "C unit + historical OCAtari backend/integration/pipeline/resume/validation + Pong relations/comparison pipeline",
+      "passed": 142,
+      "seconds": 136.89,
+      "warnings": 1
+    },
+    {
+      "suite": "C real pinned emulator: two cross-process continuation tests + two action/FIRE tests",
+      "passed": 4,
+      "seconds": 16.05,
+      "warnings": 1,
+      "opt_in": "RRL_C_REAL_TEST=1"
+    },
+    {
+      "suite": "Sealed synthetic test interruption: first complete, second partial, third pending; exact retry without duplicate steps",
+      "passed": 1,
+      "seconds": 5.62
+    },
+    {
+      "suite": "Ruff on changed C/B integration modules",
+      "result": "passed"
+    },
+    {
+      "suite": "bash -n and required SBATCH comment",
+      "scripts": 17,
+      "result": "passed"
+    }
+  ],
+  "real_continuity": [
+    {
+      "path": "results/c13_breakout_continuity_01/continuity.json",
+      "sha256": "55362f32aac363dc96dcf294bbad5239bca244efcd747ea6526562853c44e860",
+      "game": "Breakout",
+      "exact_resume_between_processes": true,
+      "compared_steps": 64,
+      "snapshot_sha256": "d423dd0740cff3aa42fa48e28139dc02f23b61563fb5135ababab3f3eb7464ff",
+      "trace_sha256": "4828819df230adb77df7318988409c3ce29786709d0ac520012340b5d9f7ee16",
+      "note": "Artifact from integration; final opt-in process/action tests repeated and passed."
+    },
+    {
+      "path": "results/c14_demonattack_continuity_01/continuity.json",
+      "sha256": "a4141b2f4f09d85335f40e812e197c38ee7492f9a85c0428ae4c7ce29891946a",
+      "game": "DemonAttack",
+      "exact_resume_between_processes": true,
+      "compared_steps": 64,
+      "snapshot_sha256": "bcc808d2f02f2faae5376f757aeca1831b98c8a310202b06708004b83e6085f3",
+      "trace_sha256": "9962c67ce2e5e6e1425c6919bcb2a57fe9192ed9fd8775422ce2ede12b622bec",
+      "note": "Artifact from integration; final opt-in process/action tests repeated and passed."
+    }
+  ],
+  "fact_only_development_controls": [
+    {
+      "path": "results/c13_breakout_controls_01/controls.json",
+      "sha256": "c9e0f714d2a22e3f49c632d6bec7d2e39bbc524c4a86e4fa9d00a8cee20180d2",
+      "game": "Breakout",
+      "state": "completed",
+      "rows": [
+        {
+          "actions": {
+            "NOOP": 1024
+          },
+          "policy": "noop",
+          "raw_return": 0.0,
+          "reason": null,
+          "return_scope": "horizon_limited",
+          "seconds": 1.1018277500006661,
+          "seed": 640201,
+          "status": "completed",
+          "steps": 1024,
+          "terminated": false,
+          "truncated": true,
+          "unique_encoded_states": 2,
+          "decisions_with_incomplete_state": 1024
+        },
+        {
+          "actions": {
+            "NOOP": 1024
+          },
+          "policy": "noop",
+          "raw_return": 0.0,
+          "reason": null,
+          "return_scope": "horizon_limited",
+          "seconds": 1.1080174590006209,
+          "seed": 640202,
+          "status": "completed",
+          "steps": 1024,
+          "terminated": false,
+          "truncated": true,
+          "unique_encoded_states": 2,
+          "decisions_with_incomplete_state": 1024
+        },
+        {
+          "actions": {
+            "FIRE": 33,
+            "LEFT": 32,
+            "NOOP": 32,
+            "RIGHT": 30
+          },
+          "policy": "random",
+          "raw_return": 0.0,
+          "reason": null,
+          "return_scope": "complete_game",
+          "seconds": 0.23715416600043682,
+          "seed": 640201,
+          "status": "completed",
+          "steps": 127,
+          "terminated": true,
+          "truncated": false,
+          "unique_encoded_states": 32,
+          "decisions_with_incomplete_state": 40
+        },
+        {
+          "actions": {
+            "FIRE": 37,
+            "LEFT": 31,
+            "NOOP": 29,
+            "RIGHT": 31
+          },
+          "policy": "random",
+          "raw_return": 0.0,
+          "reason": null,
+          "return_scope": "complete_game",
+          "seconds": 0.23785283299912408,
+          "seed": 640202,
+          "status": "completed",
+          "steps": 128,
+          "terminated": true,
+          "truncated": false,
+          "unique_encoded_states": 35,
+          "decisions_with_incomplete_state": 41
+        },
+        {
+          "actions": {
+            "FIRE": 9,
+            "LEFT": 324,
+            "NOOP": 394,
+            "RIGHT": 297
+          },
+          "policy": "heuristic",
+          "raw_return": 41.0,
+          "reason": null,
+          "return_scope": "horizon_limited",
+          "seconds": 1.1375402499998017,
+          "seed": 640201,
+          "status": "completed",
+          "steps": 1024,
+          "terminated": false,
+          "truncated": true,
+          "unique_encoded_states": 69,
+          "decisions_with_incomplete_state": 13
+        },
+        {
+          "actions": {
+            "FIRE": 9,
+            "LEFT": 324,
+            "NOOP": 394,
+            "RIGHT": 297
+          },
+          "policy": "heuristic",
+          "raw_return": 41.0,
+          "reason": null,
+          "return_scope": "horizon_limited",
+          "seconds": 1.1366524999993999,
+          "seed": 640202,
+          "status": "completed",
+          "steps": 1024,
+          "terminated": false,
+          "truncated": true,
+          "unique_encoded_states": 69,
+          "decisions_with_incomplete_state": 13
+        }
+      ]
+    },
+    {
+      "path": "results/c14_demonattack_controls_01/controls.json",
+      "sha256": "0faad4d6914d08ac87ead1d9affeda96de06687c3ea80e95a2b65e5ba3e12ca6",
+      "game": "DemonAttack",
+      "state": "completed",
+      "rows": [
+        {
+          "actions": {
+            "NOOP": 1024
+          },
+          "policy": "noop",
+          "raw_return": 0.0,
+          "reason": null,
+          "return_scope": "horizon_limited",
+          "seconds": 4.967986208999719,
+          "seed": 640201,
+          "status": "completed",
+          "steps": 1024,
+          "terminated": false,
+          "truncated": true,
+          "unique_encoded_states": 66,
+          "decisions_with_incomplete_state": 1024
+        },
+        {
+          "actions": {
+            "NOOP": 1024
+          },
+          "policy": "noop",
+          "raw_return": 0.0,
+          "reason": null,
+          "return_scope": "horizon_limited",
+          "seconds": 4.440997499999867,
+          "seed": 640202,
+          "status": "completed",
+          "steps": 1024,
+          "terminated": false,
+          "truncated": true,
+          "unique_encoded_states": 66,
+          "decisions_with_incomplete_state": 1024
+        },
+        {
+          "actions": {
+            "FIRE": 160,
+            "LEFT": 187,
+            "LEFTFIRE": 162,
+            "NOOP": 169,
+            "RIGHT": 161,
+            "RIGHTFIRE": 143
+          },
+          "policy": "random",
+          "raw_return": 80.0,
+          "reason": null,
+          "return_scope": "complete_game",
+          "seconds": 4.39794695799992,
+          "seed": 640201,
+          "status": "completed",
+          "steps": 982,
+          "terminated": true,
+          "truncated": false,
+          "unique_encoded_states": 297,
+          "decisions_with_incomplete_state": 982
+        },
+        {
+          "actions": {
+            "FIRE": 178,
+            "LEFT": 176,
+            "LEFTFIRE": 157,
+            "NOOP": 158,
+            "RIGHT": 185,
+            "RIGHTFIRE": 170
+          },
+          "policy": "random",
+          "raw_return": 100.0,
+          "reason": null,
+          "return_scope": "horizon_limited",
+          "seconds": 4.7496560000008685,
+          "seed": 640202,
+          "status": "completed",
+          "steps": 1024,
+          "terminated": false,
+          "truncated": true,
+          "unique_encoded_states": 391,
+          "decisions_with_incomplete_state": 1024
+        },
+        {
+          "actions": {
+            "FIRE": 244,
+            "LEFTFIRE": 239,
+            "RIGHTFIRE": 286
+          },
+          "policy": "heuristic",
+          "raw_return": 250.0,
+          "reason": null,
+          "return_scope": "complete_game",
+          "seconds": 3.485945958999764,
+          "seed": 640201,
+          "status": "completed",
+          "steps": 769,
+          "terminated": true,
+          "truncated": false,
+          "unique_encoded_states": 470,
+          "decisions_with_incomplete_state": 769
+        },
+        {
+          "actions": {
+            "FIRE": 244,
+            "LEFTFIRE": 239,
+            "RIGHTFIRE": 286
+          },
+          "policy": "heuristic",
+          "raw_return": 250.0,
+          "reason": null,
+          "return_scope": "complete_game",
+          "seconds": 3.7652628340001684,
+          "seed": 640202,
+          "status": "completed",
+          "steps": 769,
+          "terminated": true,
+          "truncated": false,
+          "unique_encoded_states": 470,
+          "decisions_with_incomplete_state": 769
+        }
+      ]
+    }
+  ],
+  "small_campaign": {
+    "path": "results/c15_three_games_smoke_02",
+    "campaign_digest": "cb71acc3c57378327140641ed5dfd787f57000ed330531c86191edb2c6c7e684",
+    "manifest": {
+      "path": "results/c15_three_games_smoke_02/campaign.json",
+      "sha256": "bc7b1ed350aa58a61d0963323346a25ece84686995b7db13925e50640796fcb1"
+    },
+    "report": {
+      "path": "results/c15_three_games_smoke_02/reports/report.json",
+      "sha256": "555ba98dd76b45e7ab97dc6d6294ddb1e2164c14836562a831f32516a1283c85"
+    },
+    "inventory": {
+      "path": "results/c15_three_games_smoke_02/reports/inventory.json",
+      "sha256": "c5213926364471125e08825e172d8f09a021401a815745d66c8f7cd7a64de68d"
+    },
+    "validation": {
+      "path": "results/c15_three_games_smoke_02/reports/smoke_validation.json",
+      "sha256": "fd703ff7234a104f5643fa68e18ffce7cb158b4c2599e1d4f2bd9bdffda861d1"
+    },
+    "n_trainings": 9,
+    "n_development_evaluation_episodes": 36,
+    "runs": [
+      {
+        "cell": "Breakout/ocatari/corrected_common/710501",
+        "state": "completed",
+        "decisions": 64,
+        "fits": null,
+        "fits_note": "Incremental TD; not a batch fit count",
+        "relations": 11,
+        "phase_seconds": {
+          "checkpoint_logs": 0.08662679400003981,
+          "emulation_extraction": 0.09583720499540505,
+          "fit": 0.0,
+          "policy_collection_td": 0.007619709997015889,
+          "prediction": 0.0,
+          "relations_encoding": 0.018756579008368135,
+          "selection_targets": 0.0
+        },
+        "learner_complexity": {
+          "FIRE": {
+            "leaves": 1,
+            "max_depth": 0
+          },
+          "LEFT": {
+            "leaves": 1,
+            "max_depth": 0
+          },
+          "NOOP": {
+            "leaves": 1,
+            "max_depth": 0
+          },
+          "RIGHT": {
+            "leaves": 1,
+            "max_depth": 0
+          }
+        },
+        "training_seconds": 3.4303705829997853,
+        "evaluation_seconds": 1.2556456660004187,
+        "training_attempts": 2,
+        "peak_rss_bytes": 391659520,
+        "final_checkpoint": {
+          "path": "checkpoints/64-64489aa0a3e7e21f408f78bdb1c334b491594922a406ee982f3532b66c2d4557.pkl",
+          "sha256": "64489aa0a3e7e21f408f78bdb1c334b491594922a406ee982f3532b66c2d4557"
+        },
+        "final_development_raw_return": 1.0,
+        "final_development_truncation_fraction": 1.0,
+        "interpretation": "Technical smoke: one training seed, horizon 128; not performance evidence."
+      },
+      {
+        "cell": "Breakout/ocatari/cart/710501",
+        "state": "completed",
+        "decisions": 64,
+        "fits": 4,
+        "fits_note": null,
+        "relations": 11,
+        "phase_seconds": {
+          "checkpoint_logs": 0.10125771000093664,
+          "emulation_extraction": 0.1198521229907783,
+          "fit": 0.004427792001479247,
+          "policy_collection_td": 0.000753576997340133,
+          "prediction": 0.0,
+          "relations_encoding": 0.019056341003306443,
+          "selection_targets": 0.005293791000440251
+        },
+        "learner_complexity": {
+          "FIRE": {
+            "leaves": 1,
+            "max_depth": 0
+          },
+          "LEFT": {
+            "leaves": 1,
+            "max_depth": 0
+          },
+          "NOOP": {
+            "leaves": 1,
+            "max_depth": 0
+          },
+          "RIGHT": {
+            "leaves": 1,
+            "max_depth": 0
+          }
+        },
+        "training_seconds": 0.4954792489997999,
+        "evaluation_seconds": 1.2485479580000174,
+        "training_attempts": 2,
+        "peak_rss_bytes": 392773632,
+        "final_checkpoint": {
+          "path": "checkpoints/64-fa087a97aca1c0b2cfbd55420d7284b9b33b92e4d9f85a2770a40edb10886c4c.pkl",
+          "sha256": "fa087a97aca1c0b2cfbd55420d7284b9b33b92e4d9f85a2770a40edb10886c4c"
+        },
+        "final_development_raw_return": 1.0,
+        "final_development_truncation_fraction": 1.0,
+        "interpretation": "Technical smoke: one training seed, horizon 128; not performance evidence."
+      },
+      {
+        "cell": "Breakout/ocatari/bart/710501",
+        "state": "completed",
+        "decisions": 64,
+        "fits": 4,
+        "fits_note": null,
+        "relations": 11,
+        "phase_seconds": {
+          "checkpoint_logs": 0.0889770009989661,
+          "emulation_extraction": 0.0906398290044308,
+          "fit": 0.05857908200050588,
+          "policy_collection_td": 0.0007256320041051367,
+          "prediction": 0.0,
+          "relations_encoding": 0.018851752993214177,
+          "selection_targets": 0.006262748999688483
+        },
+        "learner_complexity": {
+          "FIRE": {
+            "diagnostics": {
+              "burn_in": 2,
+              "elapsed_seconds": 0.005083207999632577,
+              "m": 2,
+              "max_cache_error": null,
+              "moves": {
+                "change": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                },
+                "grow": {
+                  "acceptance_given_possible": 0.0,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 8,
+                  "selected": 8
+                },
+                "prune": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 2,
+                  "rejected": 0,
+                  "selected": 2
+                },
+                "swap": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                }
+              },
+              "retained": 3,
+              "sweeps": 5,
+              "targets_outside_scale": 0
+            },
+            "draws": 3,
+            "leaves_last_draw": 2,
+            "max_depth_last_draw": 0,
+            "trees": 2
+          },
+          "LEFT": {
+            "diagnostics": {
+              "burn_in": 2,
+              "elapsed_seconds": 0.0024137910004355945,
+              "m": 2,
+              "max_cache_error": null,
+              "moves": {
+                "change": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                },
+                "grow": {
+                  "acceptance_given_possible": 0.0,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 3,
+                  "selected": 3
+                },
+                "prune": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 7,
+                  "rejected": 0,
+                  "selected": 7
+                },
+                "swap": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                }
+              },
+              "retained": 3,
+              "sweeps": 5,
+              "targets_outside_scale": 0
+            },
+            "draws": 3,
+            "leaves_last_draw": 2,
+            "max_depth_last_draw": 0,
+            "trees": 2
+          },
+          "NOOP": {
+            "diagnostics": {
+              "burn_in": 2,
+              "elapsed_seconds": 0.0029402919999483856,
+              "m": 2,
+              "max_cache_error": null,
+              "moves": {
+                "change": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                },
+                "grow": {
+                  "acceptance_given_possible": 0.0,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 4,
+                  "selected": 4
+                },
+                "prune": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 6,
+                  "rejected": 0,
+                  "selected": 6
+                },
+                "swap": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                }
+              },
+              "retained": 3,
+              "sweeps": 5,
+              "targets_outside_scale": 0
+            },
+            "draws": 3,
+            "leaves_last_draw": 2,
+            "max_depth_last_draw": 0,
+            "trees": 2
+          },
+          "RIGHT": {
+            "diagnostics": {
+              "burn_in": 2,
+              "elapsed_seconds": 0.003726417000507354,
+              "m": 2,
+              "max_cache_error": null,
+              "moves": {
+                "change": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                },
+                "grow": {
+                  "acceptance_given_possible": 0.0,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 6,
+                  "selected": 6
+                },
+                "prune": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 4,
+                  "rejected": 0,
+                  "selected": 4
+                },
+                "swap": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                }
+              },
+              "retained": 3,
+              "sweeps": 5,
+              "targets_outside_scale": 0
+            },
+            "draws": 3,
+            "leaves_last_draw": 2,
+            "max_depth_last_draw": 0,
+            "trees": 2
+          }
+        },
+        "training_seconds": 0.47875904199918295,
+        "evaluation_seconds": 1.1485980839997865,
+        "training_attempts": 2,
+        "peak_rss_bytes": 392773632,
+        "final_checkpoint": {
+          "path": "checkpoints/64-d1cceb4cc204b5811d14bcf76e7639c111633cd8d4848635686a639014293481.pkl",
+          "sha256": "d1cceb4cc204b5811d14bcf76e7639c111633cd8d4848635686a639014293481"
+        },
+        "final_development_raw_return": 0.0,
+        "final_development_truncation_fraction": 1.0,
+        "interpretation": "Technical smoke: one training seed, horizon 128; not performance evidence."
+      },
+      {
+        "cell": "DemonAttack/ocatari/corrected_common/720501",
+        "state": "completed",
+        "decisions": 64,
+        "fits": null,
+        "fits_note": "Incremental TD; not a batch fit count",
+        "relations": 134,
+        "phase_seconds": {
+          "checkpoint_logs": 0.11042949799957569,
+          "emulation_extraction": 0.07708487300351408,
+          "fit": 0.0,
+          "policy_collection_td": 0.0583324260005611,
+          "prediction": 0.0,
+          "relations_encoding": 0.16812453499733238,
+          "selection_targets": 0.0
+        },
+        "learner_complexity": {
+          "FIRE": {
+            "leaves": 1,
+            "max_depth": 0
+          },
+          "LEFT": {
+            "leaves": 1,
+            "max_depth": 0
+          },
+          "LEFTFIRE": {
+            "leaves": 1,
+            "max_depth": 0
+          },
+          "NOOP": {
+            "leaves": 1,
+            "max_depth": 0
+          },
+          "RIGHT": {
+            "leaves": 1,
+            "max_depth": 0
+          },
+          "RIGHTFIRE": {
+            "leaves": 1,
+            "max_depth": 0
+          }
+        },
+        "training_seconds": 0.618948124999406,
+        "evaluation_seconds": 2.9281887090000964,
+        "training_attempts": 2,
+        "peak_rss_bytes": 399654912,
+        "final_checkpoint": {
+          "path": "checkpoints/64-afa12dd4fd10e1fb69ebd19d61e5bc68c15b5f7a17e7436004da10f4fbfe55ed.pkl",
+          "sha256": "afa12dd4fd10e1fb69ebd19d61e5bc68c15b5f7a17e7436004da10f4fbfe55ed"
+        },
+        "final_development_raw_return": 30.0,
+        "final_development_truncation_fraction": 1.0,
+        "interpretation": "Technical smoke: one training seed, horizon 128; not performance evidence."
+      },
+      {
+        "cell": "DemonAttack/ocatari/cart/720501",
+        "state": "completed",
+        "decisions": 64,
+        "fits": 4,
+        "fits_note": null,
+        "relations": 134,
+        "phase_seconds": {
+          "checkpoint_logs": 0.10718816600183345,
+          "emulation_extraction": 0.0755349919991204,
+          "fit": 0.07608808200075146,
+          "policy_collection_td": 0.001135699008955271,
+          "prediction": 0.0,
+          "relations_encoding": 0.16695376099505665,
+          "selection_targets": 0.05674012399958883
+        },
+        "learner_complexity": {
+          "FIRE": {
+            "leaves": 3,
+            "max_depth": 2
+          },
+          "LEFT": {
+            "leaves": 1,
+            "max_depth": 0
+          },
+          "LEFTFIRE": {
+            "leaves": 1,
+            "max_depth": 0
+          },
+          "NOOP": {
+            "leaves": 2,
+            "max_depth": 1
+          },
+          "RIGHT": {
+            "leaves": 2,
+            "max_depth": 1
+          },
+          "RIGHTFIRE": {
+            "leaves": 1,
+            "max_depth": 0
+          }
+        },
+        "training_seconds": 0.685619458000474,
+        "evaluation_seconds": 2.5229776249998395,
+        "training_attempts": 2,
+        "peak_rss_bytes": 399654912,
+        "final_checkpoint": {
+          "path": "checkpoints/64-add8c153b6785d181454240f12cf036b97a13d5970095da75cd1e09a6013546f.pkl",
+          "sha256": "add8c153b6785d181454240f12cf036b97a13d5970095da75cd1e09a6013546f"
+        },
+        "final_development_raw_return": 30.0,
+        "final_development_truncation_fraction": 1.0,
+        "interpretation": "Technical smoke: one training seed, horizon 128; not performance evidence."
+      },
+      {
+        "cell": "DemonAttack/ocatari/bart/720501",
+        "state": "completed",
+        "decisions": 64,
+        "fits": 4,
+        "fits_note": null,
+        "relations": 134,
+        "phase_seconds": {
+          "checkpoint_logs": 0.10507504300039727,
+          "emulation_extraction": 0.07271070899423648,
+          "fit": 0.6326376659981179,
+          "policy_collection_td": 0.0007469129986930056,
+          "prediction": 0.0,
+          "relations_encoding": 0.16203329400286748,
+          "selection_targets": 0.05914508299974841
+        },
+        "learner_complexity": {
+          "FIRE": {
+            "diagnostics": {
+              "burn_in": 2,
+              "elapsed_seconds": 0.02619679199960956,
+              "m": 2,
+              "max_cache_error": null,
+              "moves": {
+                "change": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                },
+                "grow": {
+                  "acceptance_given_possible": 0.0,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 4,
+                  "selected": 4
+                },
+                "prune": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 6,
+                  "rejected": 0,
+                  "selected": 6
+                },
+                "swap": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                }
+              },
+              "retained": 3,
+              "sweeps": 5,
+              "targets_outside_scale": 0
+            },
+            "draws": 3,
+            "leaves_last_draw": 2,
+            "max_depth_last_draw": 0,
+            "trees": 2
+          },
+          "LEFT": {
+            "diagnostics": {
+              "burn_in": 2,
+              "elapsed_seconds": 0.026148334000026807,
+              "m": 2,
+              "max_cache_error": null,
+              "moves": {
+                "change": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                },
+                "grow": {
+                  "acceptance_given_possible": 0.0,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 4,
+                  "selected": 4
+                },
+                "prune": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 6,
+                  "rejected": 0,
+                  "selected": 6
+                },
+                "swap": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                }
+              },
+              "retained": 3,
+              "sweeps": 5,
+              "targets_outside_scale": 0
+            },
+            "draws": 3,
+            "leaves_last_draw": 2,
+            "max_depth_last_draw": 0,
+            "trees": 2
+          },
+          "LEFTFIRE": {
+            "diagnostics": {
+              "burn_in": 2,
+              "elapsed_seconds": 0.021563458999480645,
+              "m": 2,
+              "max_cache_error": null,
+              "moves": {
+                "change": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                },
+                "grow": {
+                  "acceptance_given_possible": 0.0,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 3,
+                  "selected": 3
+                },
+                "prune": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 7,
+                  "rejected": 0,
+                  "selected": 7
+                },
+                "swap": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                }
+              },
+              "retained": 3,
+              "sweeps": 5,
+              "targets_outside_scale": 0
+            },
+            "draws": 3,
+            "leaves_last_draw": 2,
+            "max_depth_last_draw": 0,
+            "trees": 2
+          },
+          "NOOP": {
+            "diagnostics": {
+              "burn_in": 2,
+              "elapsed_seconds": 0.03997008299938898,
+              "m": 2,
+              "max_cache_error": null,
+              "moves": {
+                "change": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                },
+                "grow": {
+                  "acceptance_given_possible": 0.16666666666666666,
+                  "accepted": 1,
+                  "impossible": 0,
+                  "rejected": 5,
+                  "selected": 6
+                },
+                "prune": {
+                  "acceptance_given_possible": 1.0,
+                  "accepted": 1,
+                  "impossible": 3,
+                  "rejected": 0,
+                  "selected": 4
+                },
+                "swap": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                }
+              },
+              "retained": 3,
+              "sweeps": 5,
+              "targets_outside_scale": 0
+            },
+            "draws": 3,
+            "leaves_last_draw": 2,
+            "max_depth_last_draw": 0,
+            "trees": 2
+          },
+          "RIGHT": {
+            "diagnostics": {
+              "burn_in": 2,
+              "elapsed_seconds": 0.030863167000461544,
+              "m": 2,
+              "max_cache_error": null,
+              "moves": {
+                "change": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                },
+                "grow": {
+                  "acceptance_given_possible": 0.25,
+                  "accepted": 1,
+                  "impossible": 0,
+                  "rejected": 3,
+                  "selected": 4
+                },
+                "prune": {
+                  "acceptance_given_possible": 1.0,
+                  "accepted": 1,
+                  "impossible": 5,
+                  "rejected": 0,
+                  "selected": 6
+                },
+                "swap": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                }
+              },
+              "retained": 3,
+              "sweeps": 5,
+              "targets_outside_scale": 0
+            },
+            "draws": 3,
+            "leaves_last_draw": 2,
+            "max_depth_last_draw": 0,
+            "trees": 2
+          },
+          "RIGHTFIRE": {
+            "diagnostics": {
+              "burn_in": 2,
+              "elapsed_seconds": 0.022223334000045725,
+              "m": 2,
+              "max_cache_error": null,
+              "moves": {
+                "change": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                },
+                "grow": {
+                  "acceptance_given_possible": 0.5,
+                  "accepted": 1,
+                  "impossible": 0,
+                  "rejected": 1,
+                  "selected": 2
+                },
+                "prune": {
+                  "acceptance_given_possible": 1.0,
+                  "accepted": 1,
+                  "impossible": 7,
+                  "rejected": 0,
+                  "selected": 8
+                },
+                "swap": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                }
+              },
+              "retained": 3,
+              "sweeps": 5,
+              "targets_outside_scale": 0
+            },
+            "draws": 3,
+            "leaves_last_draw": 2,
+            "max_depth_last_draw": 0,
+            "trees": 2
+          }
+        },
+        "training_seconds": 1.2290162500003134,
+        "evaluation_seconds": 2.4415521660002923,
+        "training_attempts": 2,
+        "peak_rss_bytes": 399654912,
+        "final_checkpoint": {
+          "path": "checkpoints/64-663f2ece0afff37a02c2c0ab1de65ddd60c8136353f1aebdacf1c8ef18f77991.pkl",
+          "sha256": "663f2ece0afff37a02c2c0ab1de65ddd60c8136353f1aebdacf1c8ef18f77991"
+        },
+        "final_development_raw_return": 0.0,
+        "final_development_truncation_fraction": 1.0,
+        "interpretation": "Technical smoke: one training seed, horizon 128; not performance evidence."
+      },
+      {
+        "cell": "Pong/ocatari/corrected_common/730501",
+        "state": "completed",
+        "decisions": 64,
+        "fits": null,
+        "fits_note": "Incremental TD; not a batch fit count",
+        "relations": 20,
+        "phase_seconds": {
+          "checkpoint_logs": 0.08182483400014462,
+          "emulation_extraction": 0.07124191399998381,
+          "fit": 0.0,
+          "policy_collection_td": 0.00910958299664344,
+          "prediction": 0.0,
+          "relations_encoding": 0.03663291199791274,
+          "selection_targets": 0.0
+        },
+        "learner_complexity": {
+          "FIRE": {
+            "leaves": 1,
+            "max_depth": 0
+          },
+          "LEFT": {
+            "leaves": 1,
+            "max_depth": 0
+          },
+          "LEFTFIRE": {
+            "leaves": 1,
+            "max_depth": 0
+          },
+          "NOOP": {
+            "leaves": 1,
+            "max_depth": 0
+          },
+          "RIGHT": {
+            "leaves": 1,
+            "max_depth": 0
+          },
+          "RIGHTFIRE": {
+            "leaves": 1,
+            "max_depth": 0
+          }
+        },
+        "training_seconds": 0.3892025829991326,
+        "evaluation_seconds": 1.0891237079995335,
+        "training_attempts": 2,
+        "peak_rss_bytes": 399654912,
+        "final_checkpoint": {
+          "path": "checkpoints/64-b0c90fe2f671c0dc7ac00d740c09eed344a28b019710292a5a3773216c51631a.pkl",
+          "sha256": "b0c90fe2f671c0dc7ac00d740c09eed344a28b019710292a5a3773216c51631a"
+        },
+        "final_development_raw_return": -2.0,
+        "final_development_truncation_fraction": 1.0,
+        "interpretation": "Technical smoke: one training seed, horizon 128; not performance evidence."
+      },
+      {
+        "cell": "Pong/ocatari/cart/730501",
+        "state": "completed",
+        "decisions": 64,
+        "fits": 4,
+        "fits_note": null,
+        "relations": 20,
+        "phase_seconds": {
+          "checkpoint_logs": 0.08122033400013606,
+          "emulation_extraction": 0.06977566700606985,
+          "fit": 0.01485133200094424,
+          "policy_collection_td": 0.0006274020006458159,
+          "prediction": 0.0,
+          "relations_encoding": 0.03665383399493294,
+          "selection_targets": 0.010077541001010104
+        },
+        "learner_complexity": {
+          "FIRE": {
+            "leaves": 1,
+            "max_depth": 0
+          },
+          "LEFT": {
+            "leaves": 1,
+            "max_depth": 0
+          },
+          "LEFTFIRE": {
+            "leaves": 1,
+            "max_depth": 0
+          },
+          "NOOP": {
+            "leaves": 1,
+            "max_depth": 0
+          },
+          "RIGHT": {
+            "leaves": 2,
+            "max_depth": 1
+          },
+          "RIGHTFIRE": {
+            "leaves": 1,
+            "max_depth": 0
+          }
+        },
+        "training_seconds": 0.4010484169994015,
+        "evaluation_seconds": 1.079396333000659,
+        "training_attempts": 2,
+        "peak_rss_bytes": 399654912,
+        "final_checkpoint": {
+          "path": "checkpoints/64-b57c8250fc1c2b8f024a5c30e2d1b7ec2acc576f8bbd6189ec16d69f15f1ecd7.pkl",
+          "sha256": "b57c8250fc1c2b8f024a5c30e2d1b7ec2acc576f8bbd6189ec16d69f15f1ecd7"
+        },
+        "final_development_raw_return": -2.0,
+        "final_development_truncation_fraction": 1.0,
+        "interpretation": "Technical smoke: one training seed, horizon 128; not performance evidence."
+      },
+      {
+        "cell": "Pong/ocatari/bart/730501",
+        "state": "completed",
+        "decisions": 64,
+        "fits": 4,
+        "fits_note": null,
+        "relations": 20,
+        "phase_seconds": {
+          "checkpoint_logs": 0.08588587599933817,
+          "emulation_extraction": 0.07001267000305234,
+          "fit": 0.11952345700137812,
+          "policy_collection_td": 0.000665367007968598,
+          "prediction": 0.0,
+          "relations_encoding": 0.03681321499061596,
+          "selection_targets": 0.013151082000149472
+        },
+        "learner_complexity": {
+          "FIRE": {
+            "diagnostics": {
+              "burn_in": 2,
+              "elapsed_seconds": 0.005591207999714243,
+              "m": 2,
+              "max_cache_error": null,
+              "moves": {
+                "change": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                },
+                "grow": {
+                  "acceptance_given_possible": 0.0,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 5,
+                  "selected": 5
+                },
+                "prune": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 5,
+                  "rejected": 0,
+                  "selected": 5
+                },
+                "swap": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                }
+              },
+              "retained": 3,
+              "sweeps": 5,
+              "targets_outside_scale": 0
+            },
+            "draws": 3,
+            "leaves_last_draw": 2,
+            "max_depth_last_draw": 0,
+            "trees": 2
+          },
+          "LEFT": {
+            "diagnostics": {
+              "burn_in": 2,
+              "elapsed_seconds": 0.006519416000628553,
+              "m": 2,
+              "max_cache_error": null,
+              "moves": {
+                "change": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                },
+                "grow": {
+                  "acceptance_given_possible": 0.0,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 6,
+                  "selected": 6
+                },
+                "prune": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 4,
+                  "rejected": 0,
+                  "selected": 4
+                },
+                "swap": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                }
+              },
+              "retained": 3,
+              "sweeps": 5,
+              "targets_outside_scale": 0
+            },
+            "draws": 3,
+            "leaves_last_draw": 2,
+            "max_depth_last_draw": 0,
+            "trees": 2
+          },
+          "LEFTFIRE": {
+            "diagnostics": {
+              "burn_in": 2,
+              "elapsed_seconds": 0.004071125000336906,
+              "m": 2,
+              "max_cache_error": null,
+              "moves": {
+                "change": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                },
+                "grow": {
+                  "acceptance_given_possible": 0.0,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 3,
+                  "selected": 3
+                },
+                "prune": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 7,
+                  "rejected": 0,
+                  "selected": 7
+                },
+                "swap": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                }
+              },
+              "retained": 3,
+              "sweeps": 5,
+              "targets_outside_scale": 0
+            },
+            "draws": 3,
+            "leaves_last_draw": 2,
+            "max_depth_last_draw": 0,
+            "trees": 2
+          },
+          "NOOP": {
+            "diagnostics": {
+              "burn_in": 2,
+              "elapsed_seconds": 0.005101249999825086,
+              "m": 2,
+              "max_cache_error": null,
+              "moves": {
+                "change": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                },
+                "grow": {
+                  "acceptance_given_possible": 0.0,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 4,
+                  "selected": 4
+                },
+                "prune": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 6,
+                  "rejected": 0,
+                  "selected": 6
+                },
+                "swap": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                }
+              },
+              "retained": 3,
+              "sweeps": 5,
+              "targets_outside_scale": 0
+            },
+            "draws": 3,
+            "leaves_last_draw": 2,
+            "max_depth_last_draw": 0,
+            "trees": 2
+          },
+          "RIGHT": {
+            "diagnostics": {
+              "burn_in": 2,
+              "elapsed_seconds": 0.010459125000124914,
+              "m": 2,
+              "max_cache_error": null,
+              "moves": {
+                "change": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                },
+                "grow": {
+                  "acceptance_given_possible": 0.3333333333333333,
+                  "accepted": 2,
+                  "impossible": 0,
+                  "rejected": 4,
+                  "selected": 6
+                },
+                "prune": {
+                  "acceptance_given_possible": 0.3333333333333333,
+                  "accepted": 1,
+                  "impossible": 1,
+                  "rejected": 2,
+                  "selected": 4
+                },
+                "swap": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                }
+              },
+              "retained": 3,
+              "sweeps": 5,
+              "targets_outside_scale": 0
+            },
+            "draws": 3,
+            "leaves_last_draw": 3,
+            "max_depth_last_draw": 1,
+            "trees": 2
+          },
+          "RIGHTFIRE": {
+            "diagnostics": {
+              "burn_in": 2,
+              "elapsed_seconds": 0.00676374999966356,
+              "m": 2,
+              "max_cache_error": null,
+              "moves": {
+                "change": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                },
+                "grow": {
+                  "acceptance_given_possible": 0.0,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 7,
+                  "selected": 7
+                },
+                "prune": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 3,
+                  "rejected": 0,
+                  "selected": 3
+                },
+                "swap": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                }
+              },
+              "retained": 3,
+              "sweeps": 5,
+              "targets_outside_scale": 0
+            },
+            "draws": 3,
+            "leaves_last_draw": 2,
+            "max_depth_last_draw": 0,
+            "trees": 2
+          }
+        },
+        "training_seconds": 0.5160601669995231,
+        "evaluation_seconds": 1.1034509589999288,
+        "training_attempts": 2,
+        "peak_rss_bytes": 399998976,
+        "final_checkpoint": {
+          "path": "checkpoints/64-671cd70f3b255dbc849db115fd14a2cbfaac3dabd12bcd175ccd474a15ba6bdc.pkl",
+          "sha256": "671cd70f3b255dbc849db115fd14a2cbfaac3dabd12bcd175ccd474a15ba6bdc"
+        },
+        "final_development_raw_return": -2.0,
+        "final_development_truncation_fraction": 1.0,
+        "interpretation": "Technical smoke: one training seed, horizon 128; not performance evidence."
+      }
+    ],
+    "seed_summaries": [
+      {
+        "game": "Breakout",
+        "independent_unit": "training_seed",
+        "iqr": 0.0,
+        "learner": "bart",
+        "mean": 0.0,
+        "median": 0.0,
+        "n_training_seeds": 1,
+        "per_training_seed": {
+          "710501": 0.0
+        },
+        "pipeline": "ocatari",
+        "return_scope_composition": {
+          "710501": {
+            "completed_games": 0,
+            "mean_by_scope": {
+              "horizon_limited": 0.0
+            },
+            "truncation_fraction": 1.0
+          }
+        },
+        "std": null
+      },
+      {
+        "game": "Breakout",
+        "independent_unit": "training_seed",
+        "iqr": 0.0,
+        "learner": "cart",
+        "mean": 1.0,
+        "median": 1.0,
+        "n_training_seeds": 1,
+        "per_training_seed": {
+          "710501": 1.0
+        },
+        "pipeline": "ocatari",
+        "return_scope_composition": {
+          "710501": {
+            "completed_games": 0,
+            "mean_by_scope": {
+              "horizon_limited": 1.0
+            },
+            "truncation_fraction": 1.0
+          }
+        },
+        "std": null
+      },
+      {
+        "game": "Breakout",
+        "independent_unit": "training_seed",
+        "iqr": 0.0,
+        "learner": "corrected_common",
+        "mean": 1.0,
+        "median": 1.0,
+        "n_training_seeds": 1,
+        "per_training_seed": {
+          "710501": 1.0
+        },
+        "pipeline": "ocatari",
+        "return_scope_composition": {
+          "710501": {
+            "completed_games": 0,
+            "mean_by_scope": {
+              "horizon_limited": 1.0
+            },
+            "truncation_fraction": 1.0
+          }
+        },
+        "std": null
+      },
+      {
+        "game": "DemonAttack",
+        "independent_unit": "training_seed",
+        "iqr": 0.0,
+        "learner": "bart",
+        "mean": 0.0,
+        "median": 0.0,
+        "n_training_seeds": 1,
+        "per_training_seed": {
+          "720501": 0.0
+        },
+        "pipeline": "ocatari",
+        "return_scope_composition": {
+          "720501": {
+            "completed_games": 0,
+            "mean_by_scope": {
+              "horizon_limited": 0.0
+            },
+            "truncation_fraction": 1.0
+          }
+        },
+        "std": null
+      },
+      {
+        "game": "DemonAttack",
+        "independent_unit": "training_seed",
+        "iqr": 0.0,
+        "learner": "cart",
+        "mean": 30.0,
+        "median": 30.0,
+        "n_training_seeds": 1,
+        "per_training_seed": {
+          "720501": 30.0
+        },
+        "pipeline": "ocatari",
+        "return_scope_composition": {
+          "720501": {
+            "completed_games": 0,
+            "mean_by_scope": {
+              "horizon_limited": 30.0
+            },
+            "truncation_fraction": 1.0
+          }
+        },
+        "std": null
+      },
+      {
+        "game": "DemonAttack",
+        "independent_unit": "training_seed",
+        "iqr": 0.0,
+        "learner": "corrected_common",
+        "mean": 30.0,
+        "median": 30.0,
+        "n_training_seeds": 1,
+        "per_training_seed": {
+          "720501": 30.0
+        },
+        "pipeline": "ocatari",
+        "return_scope_composition": {
+          "720501": {
+            "completed_games": 0,
+            "mean_by_scope": {
+              "horizon_limited": 30.0
+            },
+            "truncation_fraction": 1.0
+          }
+        },
+        "std": null
+      },
+      {
+        "game": "Pong",
+        "independent_unit": "training_seed",
+        "iqr": 0.0,
+        "learner": "bart",
+        "mean": -2.0,
+        "median": -2.0,
+        "n_training_seeds": 1,
+        "per_training_seed": {
+          "730501": -2.0
+        },
+        "pipeline": "ocatari",
+        "return_scope_composition": {
+          "730501": {
+            "completed_games": 0,
+            "mean_by_scope": {
+              "horizon_limited": -2.0
+            },
+            "truncation_fraction": 1.0
+          }
+        },
+        "std": null
+      },
+      {
+        "game": "Pong",
+        "independent_unit": "training_seed",
+        "iqr": 0.0,
+        "learner": "cart",
+        "mean": -2.0,
+        "median": -2.0,
+        "n_training_seeds": 1,
+        "per_training_seed": {
+          "730501": -2.0
+        },
+        "pipeline": "ocatari",
+        "return_scope_composition": {
+          "730501": {
+            "completed_games": 0,
+            "mean_by_scope": {
+              "horizon_limited": -2.0
+            },
+            "truncation_fraction": 1.0
+          }
+        },
+        "std": null
+      },
+      {
+        "game": "Pong",
+        "independent_unit": "training_seed",
+        "iqr": 0.0,
+        "learner": "corrected_common",
+        "mean": -2.0,
+        "median": -2.0,
+        "n_training_seeds": 1,
+        "per_training_seed": {
+          "730501": -2.0
+        },
+        "pipeline": "ocatari",
+        "return_scope_composition": {
+          "730501": {
+            "completed_games": 0,
+            "mean_by_scope": {
+              "horizon_limited": -2.0
+            },
+            "truncation_fraction": 1.0
+          }
+        },
+        "std": null
+      }
+    ],
+    "accounting": {
+      "evaluation_budget_seconds_per_episode_sum": 13.25937491500008,
+      "evaluation_worker_seconds_known_sum": 14.817481208000572,
+      "training_seconds_per_unit_sum": 8.244503873997019
+    },
+    "artifact_count": 15,
+    "reports_regenerated_without_environment_or_learning": true
+  },
+  "final_campaign_pending": {
+    "config": {
+      "path": "configs/atari_comparison_final_pending.json",
+      "sha256": "7e55a7f3d6b29ac31841e654ac98a62a786d5ca71c751e1bb1d301bfe4031360"
+    },
+    "explicit_trainings": 45,
+    "pending": [
+      "Breakout:auc_interval/calendar",
+      "Breakout:bart_review:A6/A7",
+      "Breakout:budgets.evaluation_seconds_per_episode",
+      "Breakout:budgets.training_seconds_per_cell",
+      "Breakout:learners.bart",
+      "Breakout:max_decisions",
+      "DemonAttack:auc_interval/calendar",
+      "DemonAttack:bart_review:A6/A7",
+      "DemonAttack:budgets.evaluation_seconds_per_episode",
+      "DemonAttack:budgets.training_seconds_per_cell",
+      "DemonAttack:learners.bart",
+      "DemonAttack:max_decisions",
+      "Pong:auc_interval/calendar",
+      "Pong:bart_review:A6/A7",
+      "Pong:budgets.evaluation_seconds_per_episode",
+      "Pong:budgets.training_seconds_per_cell",
+      "Pong:learners.bart",
+      "Pong:max_decisions",
+      "explicit game milestones"
+    ],
+    "compatible_linux_cost": "unknown",
+    "estimated_long_time": null,
+    "long_authorized": false,
+    "long_executed": false
+  },
+  "reserved_test": {
+    "real_executed": false,
+    "slurm_submitted": false,
+    "seal_and_resume_tests": "Synthetic environments and non-reserved synthetic seeds only",
+    "ordinary_report_starts_test": false
+  },
+  "limits": [
+    "Correct integration, completed smoke and useful learned policies are different outcomes.",
+    "One training seed and 64 decisions do not establish comparative learning performance.",
+    "Control returns preserve complete/horizon scopes and are not independent training seeds.",
+    "No raw-score average across games; no equivalence claim from degenerate intervals.",
+    "Clipped training reward and raw evaluation score are not identical objectives.",
+    "Measured active phases exclude queue/startup; cell sums are not parallel calendar time.",
+    "Observed RSS and small-smoke times do not bound a long campaign.",
+    "Linux preflight and compatible cost measurements are still required.",
+    "A6/A7 review, resolved protocol, long authorization, development selection and explicit test authorization remain pending."
+  ]
+}

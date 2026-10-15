@@ -3,11 +3,13 @@ import argparse
 from dataclasses import asdict
 from pathlib import Path
 import json
+import io
 
 import numpy as np
 
 from experiments.pong_analysis_common import (ROOT, config, create_manifest, episode_split,
-    load_manifest, save_npz, sha, source_path, source_versions, write_new)
+    load_manifest, sha, source_path, source_versions, source_hashes)
+from experiments.pong_analysis_runtime import (WorkUnit, atomic_bytes, atomic_json, bytes_hash, unit_lock)
 
 
 def _transition_arrays(transitions, encoder):
@@ -60,9 +62,9 @@ def fixed_fit(agent, checkpoint, output, *, episode_fraction):
             'samples': len(dataset.batch), 'data_hash': dataset.data_hash,
             'regression_holdout_episodes': holdout,
             'regression_train_samples': int(train.sum()), 'calibration': asdict(calibration) if calibration else None})
-    output.mkdir(parents=True, exist_ok=False)
-    npz = output / 'fixed_fit.npz'
-    npz_hash = save_npz(npz, **arrays)
+    stream = io.BytesIO()
+    np.savez_compressed(stream, **arrays)
+    npz_hash = bytes_hash(stream.getvalue())
     metadata = {'schema': 'pong_fixed_fit_v1', 'kind': 'fixed_fit',
         'checkpoint_sha256': sha(checkpoint), 'config': agent.config.to_dict(),
         'encoder': agent.encoder.to_dict(), 'fit_id': fit.fit_id,
@@ -71,9 +73,9 @@ def fixed_fit(agent, checkpoint, output, *, episode_fraction):
         'noise_prior_parameters': {'nu': agent.config.nu, 'q': agent.config.noise_quantile,
                                    'variance_floor': agent.config.variance_floor},
         'actions': actions, 'npz_sha256': npz_hash, 'runtime': source_versions(),
-        'target_meaning': 'Last pilot fit Bellman targets, never recomputed in this artifact'}
-    write_new(output / 'metadata.json', metadata)
-    return metadata
+        'target_meaning': 'Last pilot fit Bellman targets, never recomputed in this artifact',
+        'holdout_limitation': 'Historical target generator may have trained on these episodes; splitting its last batch does not remove generator contamination'}
+    return publish_portable(output, metadata, stream.getvalue())
 
 
 def fixed_transitions(agent, checkpoint, output, *, batch_per_action, fraction, seed,
@@ -82,35 +84,41 @@ def fixed_transitions(agent, checkpoint, output, *, batch_per_action, fraction, 
     if not transitions:
         raise ValueError('Empty replay')
     arrays = _transition_arrays(transitions, agent.encoder)
-    train, holdout = episode_split(arrays['episode_ids'], fraction)
-    select = np.zeros(len(transitions), dtype=bool)
-    rng = np.random.default_rng(seed)
-    coverage = []
-    for action, name in enumerate(agent.config.actions):
-        candidates = np.flatnonzero((arrays['actions'] == action) & train)
-        chosen = np.sort(rng.choice(candidates, min(batch_per_action, len(candidates)), replace=False))
-        select[chosen] = True
-        rewards = arrays['raw_rewards'][chosen]
-        coverage.append({'action': name, 'replay_total': int(np.sum(arrays['actions'] == action)),
-            'selected_train': len(chosen), 'positive': int(np.sum(rewards > 0)),
-            'negative': int(np.sum(rewards < 0)),
-            'missing_states': int(np.sum(~arrays['state_observed'][chosen].any(axis=1))),
-            'episodes': sorted(set(arrays['episode_ids'][chosen].tolist()))})
+    from experiments.pong_dataset_selection import partition, select
+    train, heldout_mask, partition_meta = partition(arrays, fraction)
+    chosen, selection = select(arrays, train, actions=len(agent.config.actions),
+                              per_action=batch_per_action, seed=seed)
+    holdout = partition_meta['holdout']
+    coverage = selection['coverage']
+    select_mask = chosen
+    arrays['episode_holdout'] = heldout_mask
     arrays['episode_train'] = train
-    arrays['fqi_selected'] = select
-    output.mkdir(parents=True, exist_ok=False)
-    npz = output / 'fixed_transitions.npz'
-    npz_hash = save_npz(npz, **arrays)
+    arrays['fqi_selected'] = select_mask
+    stream = io.BytesIO()
+    np.savez_compressed(stream, **arrays)
+    npz_hash = bytes_hash(stream.getvalue())
     metadata = {'schema': 'pong_fixed_transitions_v1', 'kind': 'fixed_transitions',
         'behavior': behavior, 'checkpoint_sha256': sha(checkpoint) if checkpoint else None,
         'encoder': agent.encoder.to_dict(), 'config': agent.config.to_dict(),
-        'replay_count': len(transitions), 'fqi_selected_count': int(select.sum()),
-        'holdout_episodes': holdout, 'coverage': coverage,
+        'replay_count': len(transitions), 'fqi_selected_count': int(select_mask.sum()),
+        'holdout_episodes': holdout, 'episode_partition': partition_meta, 'selection': selection, 'coverage': coverage,
         'npz_sha256': npz_hash, 'runtime': source_versions(),
         'selection_seed': seed,
         'target_meaning': 'No Bellman labels stored; targets recomputed per learner and epoch'}
-    write_new(output / 'metadata.json', metadata)
-    return metadata
+    return publish_portable(output, metadata, stream.getvalue())
+
+
+
+def publish_portable(output, metadata, raw):
+    metadata = {**metadata, 'export_source_hashes': source_hashes()}
+    with unit_lock(output):
+        unit = WorkUnit(output/'_publication', metadata)
+        saved = unit.load()
+        if not saved:
+            saved = unit.commit('completed', result=metadata, artifacts={'dataset': raw})
+        atomic_bytes(output/(metadata['kind']+'.npz'), unit.read_blob(saved['artifacts']['dataset']))
+        atomic_json(output/'metadata.json', saved['result'])
+        return saved['result']
 
 
 def export_pilot(specification, output, pipeline):
@@ -135,17 +143,15 @@ def export_pilot(specification, output, pipeline):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--config', type=Path, default=ROOT / 'configs/pong_bart_analysis_v1.json')
+    parser.add_argument('--config', type=Path, default=ROOT / 'configs/pong_bart_analysis_v2.json')
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--pipeline', choices=('ocatari', 'visual'), required=True)
     args = parser.parse_args()
     specification = config(args.config)
-    if not args.output.exists():
-        create_manifest(args.config, args.output)
-    else:
-        load_manifest(args.output)
+    create_manifest(args.config, args.output)
+    load_manifest(args.output, writable=True)
     result = export_pilot(specification, args.output, args.pipeline)
-    write_new(args.output / args.pipeline / 'freeze_report.json', result)
+    atomic_json(args.output / args.pipeline / 'freeze_report.json', result)
     print(json.dumps({'pipeline': args.pipeline, 'fixed_fit': result['fixed_fit']['npz_sha256'],
                       'fixed_transitions': result['fixed_transitions']['npz_sha256']}))
 

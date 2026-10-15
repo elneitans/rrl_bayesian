@@ -1,0 +1,74 @@
+{
+  "actions": {
+    "FIRE": [
+      {
+        "conditions": [],
+        "internal_fallback": 0.0,
+        "q": 0.0
+      }
+    ],
+    "LEFT": [
+      {
+        "conditions": [],
+        "internal_fallback": 0.0,
+        "q": 0.0
+      }
+    ],
+    "LEFTFIRE": [
+      {
+        "conditions": [],
+        "internal_fallback": 0.0,
+        "q": 0.0
+      }
+    ],
+    "NOOP": [
+      {
+        "conditions": [],
+        "internal_fallback": 0.0,
+        "q": 0.0
+      }
+    ],
+    "RIGHT": [
+      {
+        "conditions": [],
+        "internal_fallback": -0.025,
+        "q": -0.025
+      }
+    ],
+    "RIGHTFIRE": [
+      {
+        "conditions": [],
+        "internal_fallback": 0.0,
+        "q": 0.0
+      }
+    ]
+  },
+  "cell": "Pong/ocatari/corrected_common/730501",
+  "checkpoint": {
+    "path": "checkpoints/64-8a98343b2c4bb30da064c178ff40b30912875a847c3193f0fd5a8d286ef495e9.pkl",
+    "sha256": "8a98343b2c4bb30da064c178ff40b30912875a847c3193f0fd5a8d286ef495e9"
+  },
+  "learner": "corrected_common",
+  "policy": "argmax over all action Q; uniform RNG tie breaking",
+  "reference_q": [
+    [
+      0.0,
+      0.0,
+      -0.025,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      -0.025,
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "references": "empty and current training observation; not a separate fidelity dataset",
+  "units": "training clipped reward Q",
+  "warning": "One action-tree path is not the complete decision policy."
+}

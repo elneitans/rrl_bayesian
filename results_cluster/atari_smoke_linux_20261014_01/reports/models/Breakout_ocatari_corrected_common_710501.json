@@ -1,0 +1,56 @@
+{
+  "actions": {
+    "FIRE": [
+      {
+        "conditions": [],
+        "internal_fallback": 0.0,
+        "q": 0.0
+      }
+    ],
+    "LEFT": [
+      {
+        "conditions": [],
+        "internal_fallback": 0.0,
+        "q": 0.0
+      }
+    ],
+    "NOOP": [
+      {
+        "conditions": [],
+        "internal_fallback": 0.0,
+        "q": 0.0
+      }
+    ],
+    "RIGHT": [
+      {
+        "conditions": [],
+        "internal_fallback": 0.0,
+        "q": 0.0
+      }
+    ]
+  },
+  "cell": "Breakout/ocatari/corrected_common/710501",
+  "checkpoint": {
+    "path": "checkpoints/64-cbf815e6c9102457801b00dea4544738191f370d4217652aeab39a77a8c81836.pkl",
+    "sha256": "cbf815e6c9102457801b00dea4544738191f370d4217652aeab39a77a8c81836"
+  },
+  "learner": "corrected_common",
+  "policy": "argmax over all action Q; uniform RNG tie breaking",
+  "reference_q": [
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "references": "empty and current training observation; not a separate fidelity dataset",
+  "units": "training clipped reward Q",
+  "warning": "One action-tree path is not the complete decision policy."
+}

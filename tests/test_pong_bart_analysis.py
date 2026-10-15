@@ -39,7 +39,8 @@ def test_development_seed_and_episode_boundaries():
     value['action_probe_seed'] = value['development_seeds'][0]
     broken = path.parent / 'nonexistent.json'
     # Validate duplicate detection without changing the versioned config.
-    import tempfile, json
+    import tempfile
+    import json
     with tempfile.TemporaryDirectory() as folder:
         broken = Path(folder) / 'config.json'
         broken.write_text(json.dumps(value))
@@ -57,8 +58,11 @@ def test_false_and_missing_are_distinct_for_extra_trees():
         reward_min=0., reward_max=1., max_depth=2, min_child=1))
     values = encoder.transform([[], [],
         [Fact('logical', False, 'present', 'player_t')]]).take([0, 1, 2])
-    fitted1, _ = fit_action('extra_trees', values, np.array([2., 2., 0.]), config_data, 88)
-    fitted2, _ = fit_action('extra_trees', values, np.array([2., 2., 0.]), config_data, 88)
+    from importlib.metadata import version
+    pytest.importorskip('sklearn')
+    options = {'sklearn_version': version('scikit-learn')}
+    fitted1, _ = fit_action('extra_trees', values, np.array([2., 2., 0.]), config_data, 88, extra_trees_config=options)
+    fitted2, _ = fit_action('extra_trees', values, np.array([2., 2., 0.]), config_data, 88, extra_trees_config=options)
     np.testing.assert_array_equal(fitted1.predict(values), fitted2.predict(values))
 
 
@@ -89,7 +93,7 @@ def test_portable_transitions_keep_episode_ids_and_flags(tmp_path):
     for i in range(4):
         replay.append(state=state(encoder, bool(i % 2)), action=0, reward=float(i),
             raw_reward=float(i), next_state=None if i == 3 else state(encoder, True),
-            terminated=i == 3, truncated=i == 2, episode_id=i, step_id=0)
+            terminated=i != 2, truncated=i == 2, episode_id=i, step_id=0)
     agent = SimpleNamespace(replay=replay, encoder=encoder,
         config=BayesianQConfig(actions=('a',), gamma=.5, reward_min=0., reward_max=1.))
     meta = fixed_transitions(agent, None, tmp_path / 'frozen', batch_per_action=3,
@@ -154,6 +158,8 @@ def test_evaluation_does_not_fit_or_mutate_frozen_model():
         def step(self, action):
             self.steps += 1
             return [], 0., -1., self.steps == 2, False
+        def snapshot(self): return {'steps': self.steps}
+        def restore(self, saved): self.steps = saved['steps']
         def close(self): pass
     rows = evaluate_model(model, Env, (56, 57), 5, 10)
     assert len(rows) == 2 and all(r['raw_return'] == -2. for r in rows)

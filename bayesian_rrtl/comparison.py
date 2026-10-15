@@ -156,6 +156,8 @@ class ComparisonSessionReporting:
 
     def evaluate(self, seeds, *, horizon=None, environment_factory=None):
         """Greedy frozen copy, private RNG, fresh environment per evaluation seed."""
+        if type(self.agent) not in (RelationalBaselineAgent, BayesianQAgent):
+            raise ValueError('Unknown historic evaluation learner; use progressive evaluation')
         seeds = tuple(seeds)
         if (not seeds or len(set(seeds)) != len(seeds)
                 or any(type(s) is not int or not 0 <= s < 2**32 for s in seeds)):
@@ -191,8 +193,10 @@ class ComparisonSessionReporting:
                 for step in range(1, horizon + 1):
                     if isinstance(private, RelationalBaselineAgent):
                         action = private.select_action(state, epsilon=0., rng=rng)
-                    else:
+                    elif type(private) is BayesianQAgent:
                         action = private.select_action(state, explore=False)
+                    else:
+                        raise ValueError('Unknown evaluation learner')
                     state, _, raw, terminated, truncated = environment.step(action)
                     total += raw
                     points_won += max(float(raw), 0.)
@@ -282,3 +286,18 @@ def make_comparison_session(learner, environment_config, learner_config, *, poli
     except Exception:
         environment.close()
         raise
+
+
+def make_progressive_session(cell, environment, *, cache_bytes=1048576):
+    """Common A3 session for explicitly identified baseline, batch CART and BART.
+
+    V1 constructors and fixed policy constraints above remain a historical API.
+    """
+    from .online.session import OnlineSession
+    return OnlineSession(cell, environment, cache_bytes=cache_bytes)
+
+
+def comparison_capabilities():
+    from .online.learners import LEARNERS
+    return {name: {'batch': item.batch, 'posterior': item.posterior}
+            for name, item in LEARNERS.items()}

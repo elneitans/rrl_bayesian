@@ -1,0 +1,100 @@
+{
+  "payload": {
+    "binding": {
+      "campaign": "99e76c6332f06bcfe87be6a3262dc0728622fbf9e01c6d55db63205452202ae5",
+      "cell": "43a1de60ef0faaae0749285a353ef65e2395495d592ff74117b72e761286171c",
+      "learner": "corrected_common",
+      "runtime": {
+        "ale-py": "0.10.2",
+        "gymnasium": "1.1.1",
+        "machine": "x86_64",
+        "numeric_threads": {
+          "MKL_NUM_THREADS": "1",
+          "NUMEXPR_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "numpy": "1.26.4",
+        "ocatari": "2.2.1",
+        "platform": "linux",
+        "python": "3.11.7",
+        "scipy": "1.12.0"
+      }
+    },
+    "checkpoint": {
+      "path": "checkpoints/64-8a98343b2c4bb30da064c178ff40b30912875a847c3193f0fd5a8d286ef495e9.pkl",
+      "sha256": "8a98343b2c4bb30da064c178ff40b30912875a847c3193f0fd5a8d286ef495e9"
+    },
+    "counter": 64,
+    "log_head": {
+      "end": 64,
+      "path": "logs/64-9933df736669cb749d0cb2d768cabf75bdf6344a506599412cab33f76e8447c0.jsonl",
+      "sha256": "9933df736669cb749d0cb2d768cabf75bdf6344a506599412cab33f76e8447c0"
+    },
+    "metrics": {
+      "completed_games": 0,
+      "ended_episodes": 0,
+      "epsilon": 0.9970570301320116,
+      "interactions": 64,
+      "learner": {
+        "complexity": {
+          "FIRE": {
+            "leaves": 1,
+            "max_depth": 0
+          },
+          "LEFT": {
+            "leaves": 1,
+            "max_depth": 0
+          },
+          "LEFTFIRE": {
+            "leaves": 1,
+            "max_depth": 0
+          },
+          "NOOP": {
+            "leaves": 1,
+            "max_depth": 0
+          },
+          "RIGHT": {
+            "leaves": 1,
+            "max_depth": 0
+          },
+          "RIGHTFIRE": {
+            "leaves": 1,
+            "max_depth": 0
+          }
+        },
+        "fallback": {
+          "bootstrap": {
+            "internal_fallbacks": 0,
+            "queries": 384
+          },
+          "prediction": {
+            "internal_fallbacks": 0,
+            "queries": 0
+          },
+          "update": {
+            "internal_fallbacks": 0,
+            "queries": 64
+          }
+        },
+        "kind": "rrtl_corrected_common_v1",
+        "splits": 0
+      },
+      "phase_seconds": {
+        "checkpoint_logs": 2.8869975255802274,
+        "emulation_extraction": 0.34342573722824454,
+        "fit": 0.0,
+        "policy_collection_td": 0.03629645728506148,
+        "prediction": 0.0,
+        "relations_encoding": 0.1652819577138871,
+        "selection_targets": 0.0
+      },
+      "relations": 20,
+      "truncated_episodes": 0
+    },
+    "reason": null,
+    "state": "completed"
+  },
+  "schema": "pong_analysis_unit_v2",
+  "sha256": "554b2ee7f30b7bd7cdc94c24fc3ecd1c940060a31ea1c60cc9e464077ea37029"
+}

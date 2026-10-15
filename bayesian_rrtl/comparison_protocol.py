@@ -33,6 +33,9 @@ def sources():
 
 
 def resolve_protocol(raw):
+    if raw.get('schema') == 'pong_progressive_v2':
+        from .online.protocol import resolve
+        return resolve(raw)
     p = copy.deepcopy(raw)
     required = {'schema', 'purpose', 'environments', 'learners', 'training_seeds', 'validation_seeds',
                 'test_seeds', 'interactions', 'curve_checkpoints', 'evaluation_episodes', 'evaluation_horizon',

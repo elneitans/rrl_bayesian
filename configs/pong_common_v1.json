@@ -1,0 +1,24 @@
+{
+  "schema": "pong_common_v1",
+  "purpose": "development",
+  "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+  "env_id": "ALE/Pong-v5",
+  "frameskip": 4,
+  "repeat_action_probability": 0.0,
+  "actions": [
+    "NOOP",
+    "FIRE",
+    "RIGHT",
+    "LEFT",
+    "RIGHTFIRE",
+    "LEFTFIRE"
+  ],
+  "reset_policy": "none",
+  "reward_transform": "sign",
+  "horizon": 27000,
+  "relation_schema": "pong_relational_v1",
+  "pipelines": {
+    "visual": "pong_common_rgb_v1",
+    "ocatari": "pong_common_ram_v1"
+  }
+}

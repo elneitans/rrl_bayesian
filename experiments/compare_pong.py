@@ -33,6 +33,8 @@ def write(path, data):
 
 
 def freeze(raw, output):
+    if raw.get('schema') == 'pong_progressive_v2':
+        raise ValueError('Progressive protocols require --progressive --stage freeze --campaign')
     resolved = resolve_protocol(raw)  # all cells validated before any directory/run
     output = Path(output)
     output.mkdir(parents=True, exist_ok=False)
@@ -108,7 +110,10 @@ def extend_budgets(output, manifest, *, training_seconds=None, evaluation_second
 
 
 def config_for(cell):
-    return (BaselineLearnerConfig if cell['learner'] == 'corrected_common' else BayesianQConfig)(**cell['config'])
+    constructors = {'corrected_common': BaselineLearnerConfig, 'bart': BayesianQConfig}
+    if cell['learner'] not in constructors:
+        raise ValueError('Unknown historic comparison learner; CART uses progressive v2')
+    return constructors[cell['learner']](**cell['config'])
 
 
 def load_session(cell, path):
@@ -116,7 +121,9 @@ def load_session(cell, path):
         return BaselineTrainingSession.load(path, expected_config=config_for(cell),
             expected_policy=ComparisonPolicyConfig(**cell['policy']),
             expected_environment=AtariConfig(**cell['environment']))
-    return BayesianComparisonSession.load(path, expected_config=config_for(cell))
+    if cell['learner'] == 'bart':
+        return BayesianComparisonSession.load(path, expected_config=config_for(cell))
+    raise ValueError('Unknown historic checkpoint learner')
 
 
 def binding(manifest, cell, path, split, seeds, horizon):
@@ -185,6 +192,11 @@ def evaluate_saved(manifest, cell, checkpoint, split, *, evaluation_budget=None)
 
 
 def run_metrics(session):
+    from bayesian_rrtl.online.session import OnlineSession
+    if isinstance(session, OnlineSession):
+        return session.metrics()
+    if type(session.agent).__name__ not in ('RelationalBaselineAgent', 'BayesianQAgent'):
+        raise ValueError('Unknown historic metrics learner')
     agent = session.agent
     common = session.metrics()
     actions = agent.actions if hasattr(agent, 'actions') else agent.config.actions
@@ -483,6 +495,9 @@ def campaign(output, *, raw=None, training_seconds=None, evaluation_seconds=None
 
 
 def main():
+    if '--progressive' in sys.argv:
+        from experiments.compare_pong_progressive import main as progressive_main
+        raise SystemExit(progressive_main([v for v in sys.argv[1:] if v != '--progressive']))
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--protocol', type=Path)
     parser.add_argument('--output', type=Path)

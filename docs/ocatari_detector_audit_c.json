@@ -1,0 +1,1726 @@
+{
+  "Breakout": {
+    "actions": [
+      "NOOP",
+      "FIRE",
+      "RIGHT",
+      "LEFT"
+    ],
+    "slots": 110,
+    "fields": {
+      "Player": [
+        "_orientation",
+        "_prev_xy",
+        "_rgb",
+        "_visible",
+        "_xy",
+        "hud",
+        "wh"
+      ],
+      "NoObject": [
+        "_orientation",
+        "_prev_xy",
+        "_rgb",
+        "_visible",
+        "_xy",
+        "hud",
+        "nslen",
+        "wh"
+      ],
+      "Block": [
+        "_orientation",
+        "_prev_xy",
+        "_rgb",
+        "_visible",
+        "_xy",
+        "hud",
+        "wh"
+      ],
+      "Ball": [
+        "_orientation",
+        "_prev_xy",
+        "_rgb",
+        "_visible",
+        "_xy",
+        "hud",
+        "wh"
+      ]
+    },
+    "rom_sha256": "376323f051c3c373c887fd83abead39d87d844ff283d435f4addbfc1710c6fd5",
+    "action_probe": {
+      "NOOP": {
+        "before": [
+          99,
+          189,
+          16,
+          4
+        ],
+        "trace": [
+          {
+            "player": [
+              99,
+              189,
+              16,
+              4
+            ],
+            "secondary": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "secondary_present": false,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 5
+          },
+          {
+            "player": [
+              99,
+              189,
+              16,
+              4
+            ],
+            "secondary": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "secondary_present": false,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 5
+          },
+          {
+            "player": [
+              99,
+              189,
+              16,
+              4
+            ],
+            "secondary": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "secondary_present": false,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 5
+          },
+          {
+            "player": [
+              99,
+              189,
+              16,
+              4
+            ],
+            "secondary": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "secondary_present": false,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 5
+          },
+          {
+            "player": [
+              99,
+              189,
+              16,
+              4
+            ],
+            "secondary": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "secondary_present": false,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 5
+          },
+          {
+            "player": [
+              99,
+              189,
+              16,
+              4
+            ],
+            "secondary": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "secondary_present": false,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 5
+          },
+          {
+            "player": [
+              99,
+              189,
+              16,
+              4
+            ],
+            "secondary": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "secondary_present": false,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 5
+          },
+          {
+            "player": [
+              99,
+              189,
+              16,
+              4
+            ],
+            "secondary": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "secondary_present": false,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 5
+          }
+        ]
+      },
+      "FIRE": {
+        "before": [
+          99,
+          189,
+          16,
+          4
+        ],
+        "trace": [
+          {
+            "player": [
+              99,
+              189,
+              16,
+              4
+            ],
+            "secondary": [
+              75,
+              125,
+              2,
+              4
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 5
+          },
+          {
+            "player": [
+              99,
+              189,
+              16,
+              4
+            ],
+            "secondary": [
+              71,
+              129,
+              2,
+              4
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 5
+          },
+          {
+            "player": [
+              99,
+              189,
+              16,
+              4
+            ],
+            "secondary": [
+              67,
+              133,
+              2,
+              4
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 5
+          },
+          {
+            "player": [
+              99,
+              189,
+              16,
+              4
+            ],
+            "secondary": [
+              63,
+              137,
+              2,
+              4
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 5
+          },
+          {
+            "player": [
+              99,
+              189,
+              16,
+              4
+            ],
+            "secondary": [
+              59,
+              141,
+              2,
+              4
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 5
+          },
+          {
+            "player": [
+              99,
+              189,
+              16,
+              4
+            ],
+            "secondary": [
+              55,
+              145,
+              2,
+              4
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 5
+          },
+          {
+            "player": [
+              99,
+              189,
+              16,
+              4
+            ],
+            "secondary": [
+              51,
+              149,
+              2,
+              4
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 5
+          },
+          {
+            "player": [
+              99,
+              189,
+              16,
+              4
+            ],
+            "secondary": [
+              47,
+              153,
+              2,
+              4
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 5
+          }
+        ]
+      },
+      "RIGHT": {
+        "before": [
+          99,
+          189,
+          16,
+          4
+        ],
+        "trace": [
+          {
+            "player": [
+              111,
+              189,
+              16,
+              4
+            ],
+            "secondary": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "secondary_present": false,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 5
+          },
+          {
+            "player": [
+              134,
+              189,
+              16,
+              4
+            ],
+            "secondary": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "secondary_present": false,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 5
+          },
+          {
+            "player": [
+              144,
+              189,
+              16,
+              4
+            ],
+            "secondary": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "secondary_present": false,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 5
+          },
+          {
+            "player": [
+              144,
+              189,
+              16,
+              4
+            ],
+            "secondary": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "secondary_present": false,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 5
+          },
+          {
+            "player": [
+              144,
+              189,
+              16,
+              4
+            ],
+            "secondary": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "secondary_present": false,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 5
+          },
+          {
+            "player": [
+              144,
+              189,
+              16,
+              4
+            ],
+            "secondary": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "secondary_present": false,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 5
+          },
+          {
+            "player": [
+              144,
+              189,
+              16,
+              4
+            ],
+            "secondary": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "secondary_present": false,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 5
+          },
+          {
+            "player": [
+              144,
+              189,
+              16,
+              4
+            ],
+            "secondary": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "secondary_present": false,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 5
+          }
+        ]
+      },
+      "LEFT": {
+        "before": [
+          99,
+          189,
+          16,
+          4
+        ],
+        "trace": [
+          {
+            "player": [
+              87,
+              189,
+              16,
+              4
+            ],
+            "secondary": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "secondary_present": false,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 5
+          },
+          {
+            "player": [
+              65,
+              189,
+              16,
+              4
+            ],
+            "secondary": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "secondary_present": false,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 5
+          },
+          {
+            "player": [
+              41,
+              189,
+              16,
+              4
+            ],
+            "secondary": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "secondary_present": false,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 5
+          },
+          {
+            "player": [
+              19,
+              189,
+              16,
+              4
+            ],
+            "secondary": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "secondary_present": false,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 5
+          },
+          {
+            "player": [
+              8,
+              189,
+              16,
+              4
+            ],
+            "secondary": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "secondary_present": false,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 5
+          },
+          {
+            "player": [
+              8,
+              189,
+              16,
+              4
+            ],
+            "secondary": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "secondary_present": false,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 5
+          },
+          {
+            "player": [
+              8,
+              189,
+              16,
+              4
+            ],
+            "secondary": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "secondary_present": false,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 5
+          },
+          {
+            "player": [
+              8,
+              189,
+              16,
+              4
+            ],
+            "secondary": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "secondary_present": false,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 5
+          }
+        ]
+      }
+    }
+  },
+  "DemonAttack": {
+    "actions": [
+      "NOOP",
+      "FIRE",
+      "RIGHT",
+      "LEFT",
+      "RIGHTFIRE",
+      "LEFTFIRE"
+    ],
+    "slots": 30,
+    "fields": {
+      "Player": [
+        "_orientation",
+        "_prev_xy",
+        "_rgb",
+        "_visible",
+        "_xy",
+        "hud",
+        "wh"
+      ],
+      "PlayerMissile": [
+        "_orientation",
+        "_prev_xy",
+        "_rgb",
+        "_visible",
+        "_xy",
+        "hud",
+        "wh"
+      ],
+      "NoObject": [
+        "_orientation",
+        "_prev_xy",
+        "_rgb",
+        "_visible",
+        "_xy",
+        "hud",
+        "nslen",
+        "wh"
+      ],
+      "EnemyPart": [
+        "_orientation",
+        "_prev_xy",
+        "_rgb",
+        "_visible",
+        "_xy",
+        "hud",
+        "wh"
+      ]
+    },
+    "rom_sha256": "8d72feeb267d23cb5d58bb4511566414884c572d2b4dcba8f6893ad7426442d4",
+    "action_probe": {
+      "NOOP": {
+        "before": [
+          128,
+          174,
+          7,
+          12
+        ],
+        "trace": [
+          {
+            "player": [
+              87,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              90,
+              175,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          },
+          {
+            "player": [
+              87,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              90,
+              175,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          },
+          {
+            "player": [
+              87,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              90,
+              175,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          },
+          {
+            "player": [
+              87,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              90,
+              175,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          },
+          {
+            "player": [
+              87,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              90,
+              175,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          },
+          {
+            "player": [
+              87,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              90,
+              175,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          },
+          {
+            "player": [
+              87,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              90,
+              175,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          },
+          {
+            "player": [
+              87,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              90,
+              175,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          }
+        ]
+      },
+      "FIRE": {
+        "before": [
+          128,
+          174,
+          7,
+          12
+        ],
+        "trace": [
+          {
+            "player": [
+              87,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              90,
+              166,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          },
+          {
+            "player": [
+              87,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              90,
+              154,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          },
+          {
+            "player": [
+              87,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              90,
+              142,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          },
+          {
+            "player": [
+              87,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              90,
+              130,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          },
+          {
+            "player": [
+              87,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              90,
+              118,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          },
+          {
+            "player": [
+              87,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              90,
+              106,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          },
+          {
+            "player": [
+              87,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              90,
+              94,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          },
+          {
+            "player": [
+              87,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              90,
+              80,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          }
+        ]
+      },
+      "RIGHT": {
+        "before": [
+          128,
+          174,
+          7,
+          12
+        ],
+        "trace": [
+          {
+            "player": [
+              91,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              94,
+              175,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          },
+          {
+            "player": [
+              95,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              98,
+              175,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          },
+          {
+            "player": [
+              99,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              102,
+              175,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          },
+          {
+            "player": [
+              103,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              106,
+              175,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          },
+          {
+            "player": [
+              107,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              110,
+              175,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          },
+          {
+            "player": [
+              111,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              114,
+              175,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          },
+          {
+            "player": [
+              115,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              118,
+              175,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          },
+          {
+            "player": [
+              119,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              122,
+              175,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          }
+        ]
+      },
+      "LEFT": {
+        "before": [
+          128,
+          174,
+          7,
+          12
+        ],
+        "trace": [
+          {
+            "player": [
+              83,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              86,
+              175,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          },
+          {
+            "player": [
+              79,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              82,
+              175,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          },
+          {
+            "player": [
+              75,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              78,
+              175,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          },
+          {
+            "player": [
+              71,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              74,
+              175,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          },
+          {
+            "player": [
+              67,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              70,
+              175,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          },
+          {
+            "player": [
+              63,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              66,
+              175,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          },
+          {
+            "player": [
+              59,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              62,
+              175,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          },
+          {
+            "player": [
+              55,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              58,
+              175,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          }
+        ]
+      },
+      "RIGHTFIRE": {
+        "before": [
+          128,
+          174,
+          7,
+          12
+        ],
+        "trace": [
+          {
+            "player": [
+              91,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              91,
+              166,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          },
+          {
+            "player": [
+              95,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              91,
+              154,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          },
+          {
+            "player": [
+              99,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              91,
+              142,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          },
+          {
+            "player": [
+              103,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              91,
+              130,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          },
+          {
+            "player": [
+              107,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              91,
+              118,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          },
+          {
+            "player": [
+              111,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              91,
+              106,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          },
+          {
+            "player": [
+              115,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              91,
+              94,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          },
+          {
+            "player": [
+              119,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              91,
+              80,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          }
+        ]
+      },
+      "LEFTFIRE": {
+        "before": [
+          128,
+          174,
+          7,
+          12
+        ],
+        "trace": [
+          {
+            "player": [
+              83,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              89,
+              166,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          },
+          {
+            "player": [
+              79,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              89,
+              154,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          },
+          {
+            "player": [
+              75,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              89,
+              142,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          },
+          {
+            "player": [
+              71,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              89,
+              130,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          },
+          {
+            "player": [
+              67,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              89,
+              118,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          },
+          {
+            "player": [
+              63,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              89,
+              106,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          },
+          {
+            "player": [
+              59,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              89,
+              94,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          },
+          {
+            "player": [
+              55,
+              174,
+              7,
+              12
+            ],
+            "secondary": [
+              89,
+              80,
+              1,
+              8
+            ],
+            "secondary_present": true,
+            "raw": 0.0,
+            "terminated": false,
+            "truncated": false,
+            "lives": 4
+          }
+        ]
+      }
+    }
+  }
+}

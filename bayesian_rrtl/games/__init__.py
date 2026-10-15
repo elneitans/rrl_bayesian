@@ -6,8 +6,13 @@ from ..game_registry import GameRegistry, GameSpec, SlotSpec
 from ..objects import BreakoutRelations, DEMON_SLOTS, MultiGameRelations
 from .pong import PONG_ACTIONS, PONG_OCATARI
 
+from .breakout import BREAKOUT_OCATARI
+from .demonattack import DEMONATTACK_OCATARI
+
 REGISTRY = GameRegistry()
 REGISTRY.register(PONG_OCATARI)
+REGISTRY.register(BREAKOUT_OCATARI)
+REGISTRY.register(DEMONATTACK_OCATARI)
 for game, names, actions in (
     ("Breakout", ("player", "ball"), PONG_ACTIONS[:4]),
     ("Pong", ("enemy", "player", "ball"), PONG_ACTIONS),

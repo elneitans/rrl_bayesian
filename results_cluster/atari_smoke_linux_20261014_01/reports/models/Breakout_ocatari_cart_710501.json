@@ -1,0 +1,255 @@
+{
+  "actions": {
+    "FIRE": {
+      "fitted": true,
+      "frequency_kind": "point model inclusion",
+      "last_draw_contributions": [
+        {
+          "reference_contribution": [
+            0.0,
+            0.0
+          ],
+          "tree": 0
+        }
+      ],
+      "missing": "equals on missing routes false; is_missing can split explicitly",
+      "paths": [
+        {
+          "conditions": [],
+          "q": 0.0
+        }
+      ],
+      "rules": [],
+      "units": "original reward units"
+    },
+    "LEFT": {
+      "fitted": true,
+      "frequency_kind": "point model inclusion",
+      "last_draw_contributions": [
+        {
+          "reference_contribution": [
+            0.0,
+            0.0
+          ],
+          "tree": 0
+        }
+      ],
+      "missing": "equals on missing routes false; is_missing can split explicitly",
+      "paths": [
+        {
+          "conditions": [],
+          "q": 0.0
+        }
+      ],
+      "rules": [],
+      "units": "original reward units"
+    },
+    "NOOP": {
+      "fitted": true,
+      "frequency_kind": "point model inclusion",
+      "last_draw_contributions": [
+        {
+          "reference_contribution": [
+            0.0,
+            0.0
+          ],
+          "tree": 0
+        }
+      ],
+      "missing": "equals on missing routes false; is_missing can split explicitly",
+      "paths": [
+        {
+          "conditions": [],
+          "q": 0.0
+        }
+      ],
+      "rules": [],
+      "units": "original reward units"
+    },
+    "RIGHT": {
+      "fitted": true,
+      "frequency_kind": "point model inclusion",
+      "last_draw_contributions": [
+        {
+          "reference_contribution": [
+            0.0,
+            0.0
+          ],
+          "tree": 0
+        }
+      ],
+      "missing": "equals on missing routes false; is_missing can split explicitly",
+      "paths": [
+        {
+          "conditions": [],
+          "q": 0.0
+        }
+      ],
+      "rules": [],
+      "units": "original reward units"
+    }
+  },
+  "catalog": {
+    "catalog": [
+      {
+        "name": "x",
+        "obj1": "ball_t",
+        "obj2": "ball_t-1",
+        "obj3": null,
+        "type": "comparative"
+      },
+      {
+        "name": "x",
+        "obj1": "player_t",
+        "obj2": "ball_t",
+        "obj3": null,
+        "type": "comparative"
+      },
+      {
+        "name": "x",
+        "obj1": "player_t",
+        "obj2": "player_t-1",
+        "obj3": null,
+        "type": "comparative"
+      },
+      {
+        "name": "y",
+        "obj1": "ball_t",
+        "obj2": "ball_t-1",
+        "obj3": null,
+        "type": "comparative"
+      },
+      {
+        "name": "y",
+        "obj1": "player_t",
+        "obj2": "ball_t",
+        "obj3": null,
+        "type": "comparative"
+      },
+      {
+        "name": "y",
+        "obj1": "player_t",
+        "obj2": "player_t-1",
+        "obj3": null,
+        "type": "comparative"
+      },
+      {
+        "name": "incontact",
+        "obj1": "player_t",
+        "obj2": "ball_t",
+        "obj3": null,
+        "type": "logical"
+      },
+      {
+        "name": "present",
+        "obj1": "ball_t",
+        "obj2": null,
+        "obj3": null,
+        "type": "logical"
+      },
+      {
+        "name": "present",
+        "obj1": "ball_t-1",
+        "obj2": null,
+        "obj3": null,
+        "type": "logical"
+      },
+      {
+        "name": "present",
+        "obj1": "player_t",
+        "obj2": null,
+        "obj3": null,
+        "type": "logical"
+      },
+      {
+        "name": "present",
+        "obj1": "player_t-1",
+        "obj2": null,
+        "obj3": null,
+        "type": "logical"
+      }
+    ],
+    "catalog_hash": "d89f5773ad0bc3aae285478ca4b4cb156099bd2adeff32d1048052ceab89ab1a",
+    "version": 1
+  },
+  "cell": "Breakout/ocatari/cart/710501",
+  "checkpoint": {
+    "path": "checkpoints/64-fb6a4b8bfc47302eb02cd26b8419570607333df84a931067eacf2242cdadd71b.pkl",
+    "sha256": "fb6a4b8bfc47302eb02cd26b8419570607333df84a931067eacf2242cdadd71b"
+  },
+  "learner": "cart",
+  "policy": "argmax over all action Q; uniform RNG tie breaking",
+  "reference_observed": [
+    [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ]
+  ],
+  "reference_q": [
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "reference_values": [
+    [
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      0,
+      2,
+      1,
+      2,
+      2,
+      1,
+      0,
+      1,
+      1,
+      1,
+      1
+    ]
+  ],
+  "references": "empty and current training observation; not a separate fidelity dataset",
+  "units": "training clipped reward Q",
+  "warning": "Frequent splits are not an equivalent policy; prediction combines all trees and posterior draws."
+}

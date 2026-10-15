@@ -9,6 +9,8 @@ from .comparison import BayesianComparisonSession, ComparisonPolicyConfig, PongE
 
 
 def save_session(session, path):
+    if type(session.agent) is not BayesianQAgent:
+        raise ValueError('Historic comparison checkpoint requires BART; use save_online_session for v2')
     if not session._checkpoint_ready:
         raise ValueError('Checkpoint requires a completed comparison update')
     collector = {k: copy.deepcopy(v) for k, v in vars(session).items()
@@ -69,3 +71,55 @@ def load_session(path, *, expected_config=None):
     except Exception:
         env.close()
         raise
+
+
+def save_online_session(session, path):
+    """Standalone v2 collector; legacy H5/BART payloads use save_session above."""
+    import pickle
+    from pathlib import Path
+    from experiments.pong_analysis_runtime import atomic_bytes, bytes_hash, checked_write
+    from .online.protocol import runtime, source_hashes
+    raw = pickle.dumps(session.state_dict(), protocol=pickle.HIGHEST_PROTOCOL)
+    path = Path(path)
+    atomic_bytes(path, raw, replace=False)
+    checked_write(str(path)+'.json', {'schema': 'pong_online_session_v2',
+        'sha256': bytes_hash(raw), 'runtime': runtime(session.learner),
+        'sources': source_hashes(), 'cell': session.cell}, replace=False)
+    return path
+
+
+def load_online_session(path, *, cell, environment):
+    import pickle
+    from pathlib import Path
+    from experiments.pong_analysis_runtime import bytes_hash, checked_read, digest
+    from .online.protocol import runtime, source_hashes
+    from .online.session import OnlineSession
+    meta = checked_read(str(path)+'.json')
+    raw = Path(path).read_bytes()
+    if (meta['schema'] != 'pong_online_session_v2' or meta['sha256'] != bytes_hash(raw)
+            or meta['runtime'] != runtime(cell['learner']) or meta['sources'] != source_hashes()
+            or digest(meta['cell']) != digest(cell)):
+        raise ValueError('Incompatible online checkpoint')
+    return OnlineSession.restore(pickle.loads(raw), cell, environment)
+
+
+def checkpoint_format(path):
+    """Recognize historical formats explicitly, without migrating or relaxing hashes."""
+    from pathlib import Path
+    from .checkpoint import MAGIC as bart_magic
+    from .baseline_checkpoint import MAGIC as baseline_magic
+    from experiments.pong_analysis_runtime import checked_read
+    with Path(path).open('rb') as stream:
+        prefix = stream.read(max(len(bart_magic), len(baseline_magic)))
+    if prefix.startswith(bart_magic):
+        return 'bart_historic_v1'
+    if prefix.startswith(baseline_magic):
+        return 'rrtl_common_historic_v1'
+    sidecar = Path(str(path)+'.json')
+    if sidecar.exists():
+        schema = checked_read(sidecar).get('schema')
+        if schema == 'pong_online_session_v2':
+            return schema
+        if 'binding' in checked_read(sidecar):
+            return 'pong_progressive_checkpoint_v2'
+    raise ValueError('Unknown checkpoint format')

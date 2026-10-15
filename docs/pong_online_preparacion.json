@@ -1,0 +1,728 @@
+{
+  "date": "2026-10-14",
+  "scope": "B8-B12 only; C not started",
+  "learners": [
+    "corrected_common",
+    "cart",
+    "bart",
+    "extra_trees (optional)"
+  ],
+  "protocols": {
+    "pong_online_baseline.json": {
+      "sha256": "74c94f4a65a9fd77cb98bf91ed9d850109b4586e24faedebe55265730392de3f",
+      "protocol": {
+        "schema": "pong_progressive_v2",
+        "name": "pong_baseline_progressive_v1",
+        "level": "baseline",
+        "pipelines": [
+          "visual",
+          "ocatari"
+        ],
+        "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+        "training_horizon": 27000,
+        "learners": {
+          "corrected_common": {
+            "eta_q": 0.025,
+            "max_depth": 4,
+            "min_sample_size": 128,
+            "significance_level": 0.0001,
+            "best_literal_criteria": "p-value",
+            "inherit_q_values": true
+          }
+        },
+        "learning": {
+          "gamma": 0.99,
+          "replay_capacity": 50000,
+          "batch_size_per_action": 128,
+          "fit_interval": 512,
+          "warmup_interactions": 512,
+          "bootstrap_on_truncation": true
+        },
+        "exploration": {
+          "epsilon_init": 1.0,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000
+        },
+        "training_seeds": [
+          501601,
+          501602,
+          501603
+        ],
+        "evaluation": {
+          "intermediate": {
+            "seeds": [
+              501801,
+              501802
+            ],
+            "horizon": 27000,
+            "checkpoints": [
+              0,
+              10000,
+              100000,
+              500000,
+              2000000
+            ]
+          },
+          "final_development": {
+            "seeds": [
+              501901,
+              501902,
+              501903,
+              501904,
+              501905,
+              501906,
+              501907,
+              501908,
+              501909,
+              501910
+            ],
+            "horizon": 27000,
+            "checkpoints": [
+              100000,
+              500000,
+              2000000
+            ]
+          },
+          "reserved_test": {
+            "seeds": [
+              420101,
+              420102,
+              420103,
+              420104,
+              420105,
+              420106,
+              420107,
+              420108,
+              420109,
+              420110,
+              420111,
+              420112,
+              420113,
+              420114,
+              420115,
+              420116,
+              420117,
+              420118,
+              420119,
+              420120
+            ],
+            "horizon": 27000,
+            "checkpoints": []
+          }
+        },
+        "max_decisions": 2000000,
+        "milestones": [
+          100000,
+          500000,
+          2000000
+        ],
+        "checkpoint_interval": 512,
+        "budgets": {
+          "training_seconds_per_cell": 3600,
+          "evaluation_seconds_per_episode": 600,
+          "fit_margin_seconds": 10
+        },
+        "cache_bytes": 1048576,
+        "bart_review": null,
+        "primary_checkpoint": "final"
+      }
+    },
+    "pong_online_long_pending.json": {
+      "sha256": "ef2b5c336143834b4963b836e06b0c66e8e54c1e83df29ae62dcecdb180f7be1",
+      "protocol": {
+        "schema": "pong_progressive_v2",
+        "name": "pong_online_long_PENDING_v1",
+        "level": "long",
+        "pipelines": [
+          "visual",
+          "ocatari"
+        ],
+        "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+        "training_horizon": 27000,
+        "learners": {
+          "corrected_common": {
+            "eta_q": 0.025,
+            "max_depth": 4,
+            "min_sample_size": 128,
+            "significance_level": 0.0001,
+            "best_literal_criteria": "p-value",
+            "inherit_q_values": true
+          },
+          "cart": {
+            "max_depth": 4,
+            "min_child": 2,
+            "criterion": "SSE"
+          },
+          "bart": null
+        },
+        "learning": {
+          "gamma": 0.99,
+          "replay_capacity": 50000,
+          "batch_size_per_action": 128,
+          "fit_interval": 512,
+          "warmup_interactions": 512,
+          "bootstrap_on_truncation": true
+        },
+        "exploration": {
+          "epsilon_init": 1.0,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000
+        },
+        "training_seeds": [
+          501701,
+          501702,
+          501703,
+          501704,
+          501705
+        ],
+        "evaluation": {
+          "intermediate": {
+            "seeds": [
+              501801,
+              501802
+            ],
+            "horizon": 27000,
+            "checkpoints": []
+          },
+          "final_development": {
+            "seeds": [
+              501901,
+              501902,
+              501903,
+              501904,
+              501905,
+              501906,
+              501907,
+              501908,
+              501909,
+              501910
+            ],
+            "horizon": 27000,
+            "checkpoints": []
+          },
+          "reserved_test": {
+            "seeds": [
+              420101,
+              420102,
+              420103,
+              420104,
+              420105,
+              420106,
+              420107,
+              420108,
+              420109,
+              420110,
+              420111,
+              420112,
+              420113,
+              420114,
+              420115,
+              420116,
+              420117,
+              420118,
+              420119,
+              420120
+            ],
+            "horizon": 27000,
+            "checkpoints": []
+          }
+        },
+        "max_decisions": null,
+        "milestones": [],
+        "checkpoint_interval": 512,
+        "budgets": {
+          "training_seconds_per_cell": null,
+          "evaluation_seconds_per_episode": null,
+          "fit_margin_seconds": 10
+        },
+        "cache_bytes": 1048576,
+        "bart_review": null,
+        "primary_checkpoint": "final"
+      }
+    },
+    "pong_online_smoke.json": {
+      "sha256": "24623552b23fa8501e121c44f44a774e667e91a206252ce4646973c2039d75a7",
+      "protocol": {
+        "schema": "pong_progressive_v2",
+        "name": "pong_online_technical_smoke_v1",
+        "level": "smoke",
+        "pipelines": [
+          "visual",
+          "ocatari"
+        ],
+        "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+        "training_horizon": 128,
+        "learners": {
+          "corrected_common": {
+            "eta_q": 0.025,
+            "max_depth": 4,
+            "min_sample_size": 128,
+            "significance_level": 0.0001,
+            "best_literal_criteria": "p-value",
+            "inherit_q_values": true
+          },
+          "cart": {
+            "max_depth": 2,
+            "min_child": 2,
+            "criterion": "SSE"
+          },
+          "bart": {
+            "kernel": "grow_prune",
+            "m": 2,
+            "burn_in": 2,
+            "draws": 3,
+            "k": 2.0,
+            "alpha_tree": 0.95,
+            "beta_tree": 2.0,
+            "max_depth": 2,
+            "min_child": 2,
+            "nu": 3.0,
+            "noise_quantile": 0.9,
+            "variance_floor": 1e-08
+          }
+        },
+        "learning": {
+          "gamma": 0.99,
+          "replay_capacity": 128,
+          "batch_size_per_action": 8,
+          "fit_interval": 16,
+          "warmup_interactions": 16,
+          "bootstrap_on_truncation": true
+        },
+        "exploration": {
+          "epsilon_init": 1.0,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000
+        },
+        "training_seeds": [
+          501501
+        ],
+        "evaluation": {
+          "intermediate": {
+            "seeds": [
+              501801
+            ],
+            "horizon": 128,
+            "checkpoints": [
+              0,
+              32,
+              64
+            ]
+          },
+          "final_development": {
+            "seeds": [
+              501901
+            ],
+            "horizon": 128,
+            "checkpoints": [
+              64
+            ]
+          },
+          "reserved_test": {
+            "seeds": [
+              420101,
+              420102,
+              420103,
+              420104,
+              420105,
+              420106,
+              420107,
+              420108,
+              420109,
+              420110,
+              420111,
+              420112,
+              420113,
+              420114,
+              420115,
+              420116,
+              420117,
+              420118,
+              420119,
+              420120
+            ],
+            "horizon": 27000,
+            "checkpoints": []
+          }
+        },
+        "max_decisions": 64,
+        "milestones": [
+          32,
+          64
+        ],
+        "checkpoint_interval": 16,
+        "budgets": {
+          "training_seconds_per_cell": 120,
+          "evaluation_seconds_per_episode": 60,
+          "fit_margin_seconds": 1
+        },
+        "cache_bytes": 1048576,
+        "bart_review": null,
+        "primary_checkpoint": "final"
+      }
+    }
+  },
+  "recovery": {
+    "report": "results/pong_online_recovery_sim_20261014_01/recovery_report.json",
+    "report_sha256": "3c923b453c4821fb243c68d2a0369fe5e8fe5a131143c9814c47c108e46c00d2",
+    "environment": "simulated; the visual/ocatari labels exercise cell isolation, not real extractors",
+    "verified_cells": [
+      {
+        "cell": "visual/corrected_common/501501",
+        "completed_evaluation_reused": true,
+        "decisions": 64,
+        "ended_episodes": 9,
+        "exact_decisions_models_rng": true,
+        "no_duplicate_transitions": true,
+        "second_writer_rejected": true,
+        "signal_recovery": true
+      },
+      {
+        "cache_benchmark": {
+          "exact_prediction": true,
+          "limitation": "Microbenchmark includes exact-array assertions; repeated states do not represent Atari hit rate.",
+          "measurements": [
+            {
+              "accounted_bytes": 0,
+              "cache_limit_bytes": 0,
+              "hits": 0,
+              "misses": 200,
+              "seconds": 0.008873833000507148
+            },
+            {
+              "accounted_bytes": 1188,
+              "cache_limit_bytes": 1048576,
+              "hits": 199,
+              "misses": 1,
+              "seconds": 0.002906417000303918
+            }
+          ],
+          "repetitions": 200,
+          "rows_per_prediction": 2,
+          "same_fixed_model_and_batch": true
+        },
+        "cell": "visual/cart/501501",
+        "completed_evaluation_reused": true,
+        "decisions": 64,
+        "ended_episodes": 9,
+        "exact_decisions_models_rng": true,
+        "no_duplicate_transitions": true,
+        "second_writer_rejected": true,
+        "signal_recovery": true
+      },
+      {
+        "cache_benchmark": {
+          "exact_prediction": true,
+          "limitation": "Microbenchmark includes exact-array assertions; repeated states do not represent Atari hit rate.",
+          "measurements": [
+            {
+              "accounted_bytes": 0,
+              "cache_limit_bytes": 0,
+              "hits": 0,
+              "misses": 200,
+              "seconds": 0.0427378750000571
+            },
+            {
+              "accounted_bytes": 1188,
+              "cache_limit_bytes": 1048576,
+              "hits": 199,
+              "misses": 1,
+              "seconds": 0.0030670409996673698
+            }
+          ],
+          "repetitions": 200,
+          "rows_per_prediction": 2,
+          "same_fixed_model_and_batch": true
+        },
+        "cell": "visual/bart/501501",
+        "completed_evaluation_reused": true,
+        "decisions": 64,
+        "ended_episodes": 9,
+        "exact_decisions_models_rng": true,
+        "no_duplicate_transitions": true,
+        "second_writer_rejected": true,
+        "signal_recovery": true
+      },
+      {
+        "cell": "ocatari/corrected_common/501501",
+        "completed_evaluation_reused": true,
+        "decisions": 64,
+        "ended_episodes": 9,
+        "exact_decisions_models_rng": true,
+        "no_duplicate_transitions": true,
+        "second_writer_rejected": true,
+        "signal_recovery": true
+      },
+      {
+        "cache_benchmark": {
+          "exact_prediction": true,
+          "limitation": "Microbenchmark includes exact-array assertions; repeated states do not represent Atari hit rate.",
+          "measurements": [
+            {
+              "accounted_bytes": 0,
+              "cache_limit_bytes": 0,
+              "hits": 0,
+              "misses": 200,
+              "seconds": 0.008702582999831066
+            },
+            {
+              "accounted_bytes": 1188,
+              "cache_limit_bytes": 1048576,
+              "hits": 199,
+              "misses": 1,
+              "seconds": 0.0029494169993995456
+            }
+          ],
+          "repetitions": 200,
+          "rows_per_prediction": 2,
+          "same_fixed_model_and_batch": true
+        },
+        "cell": "ocatari/cart/501501",
+        "completed_evaluation_reused": true,
+        "decisions": 64,
+        "ended_episodes": 9,
+        "exact_decisions_models_rng": true,
+        "no_duplicate_transitions": true,
+        "second_writer_rejected": true,
+        "signal_recovery": true
+      },
+      {
+        "cache_benchmark": {
+          "exact_prediction": true,
+          "limitation": "Microbenchmark includes exact-array assertions; repeated states do not represent Atari hit rate.",
+          "measurements": [
+            {
+              "accounted_bytes": 0,
+              "cache_limit_bytes": 0,
+              "hits": 0,
+              "misses": 200,
+              "seconds": 0.044182249999721535
+            },
+            {
+              "accounted_bytes": 1188,
+              "cache_limit_bytes": 1048576,
+              "hits": 199,
+              "misses": 1,
+              "seconds": 0.0031458749999728752
+            }
+          ],
+          "repetitions": 200,
+          "rows_per_prediction": 2,
+          "same_fixed_model_and_batch": true
+        },
+        "cell": "ocatari/bart/501501",
+        "completed_evaluation_reused": true,
+        "decisions": 64,
+        "ended_episodes": 9,
+        "exact_decisions_models_rng": true,
+        "no_duplicate_transitions": true,
+        "second_writer_rejected": true,
+        "signal_recovery": true
+      }
+    ],
+    "completed": true,
+    "reserved_test_executed": false
+  },
+  "measurements": [
+    {
+      "cell": "visual/corrected_common/501501",
+      "decisions": 64,
+      "training_seconds": 0.1580951659989296,
+      "evaluation_worker_seconds": 0.2598496239997985,
+      "evaluation_episode_budget_seconds": 0.01224187499974505,
+      "log_bytes": 27675,
+      "all_checkpoint_bytes": 29241,
+      "checkpoint_blob_bytes_range": [
+        5393,
+        6007
+      ],
+      "peak_rss_bytes": 217923584,
+      "phase_seconds": {
+        "checkpoint_logs": 0.05940854200071044,
+        "emulation_extraction": 0.0001530780045868596,
+        "fit": 0.0,
+        "policy_collection_td": 0.0016807100064397673,
+        "prediction": 0.0,
+        "relations_encoding": 0.004738879996693868,
+        "selection_targets": 0.0
+      },
+      "state": "completed"
+    },
+    {
+      "cell": "visual/cart/501501",
+      "decisions": 64,
+      "training_seconds": 0.16772520799986523,
+      "evaluation_worker_seconds": 0.28144574999987526,
+      "evaluation_episode_budget_seconds": 0.014457958999628318,
+      "log_bytes": 28027,
+      "all_checkpoint_bytes": 73011,
+      "checkpoint_blob_bytes_range": [
+        4461,
+        22676
+      ],
+      "peak_rss_bytes": 243908608,
+      "phase_seconds": {
+        "checkpoint_logs": 0.05663812400052848,
+        "emulation_extraction": 0.00013966000005893875,
+        "fit": 0.0017606239998713136,
+        "policy_collection_td": 0.0005319530009728624,
+        "prediction": 0.0,
+        "relations_encoding": 0.0032463760016980814,
+        "selection_targets": 0.0039171250000435975
+      },
+      "state": "completed"
+    },
+    {
+      "cell": "visual/bart/501501",
+      "decisions": 64,
+      "training_seconds": 0.1937471250003,
+      "evaluation_worker_seconds": 0.3292267090000678,
+      "evaluation_episode_budget_seconds": 0.01634966500023438,
+      "log_bytes": 40064,
+      "all_checkpoint_bytes": 141247,
+      "checkpoint_blob_bytes_range": [
+        4693,
+        42145
+      ],
+      "peak_rss_bytes": 226082816,
+      "phase_seconds": {
+        "checkpoint_logs": 0.05838874999790278,
+        "emulation_extraction": 0.00013554100132751046,
+        "fit": 0.018412665999676392,
+        "policy_collection_td": 0.0005344939945644001,
+        "prediction": 0.0,
+        "relations_encoding": 0.003221668003789091,
+        "selection_targets": 0.0067336260008232784
+      },
+      "state": "completed"
+    },
+    {
+      "cell": "ocatari/corrected_common/501501",
+      "decisions": 64,
+      "training_seconds": 0.15772458299943537,
+      "evaluation_worker_seconds": 0.2595437489990218,
+      "evaluation_episode_budget_seconds": 0.012248457999703533,
+      "log_bytes": 27675,
+      "all_checkpoint_bytes": 29256,
+      "checkpoint_blob_bytes_range": [
+        5396,
+        6010
+      ],
+      "peak_rss_bytes": 247758848,
+      "phase_seconds": {
+        "checkpoint_logs": 0.05318429199996899,
+        "emulation_extraction": 0.0001400379978804267,
+        "fit": 0.0,
+        "policy_collection_td": 0.001617745997464226,
+        "prediction": 0.0,
+        "relations_encoding": 0.004631005001101585,
+        "selection_targets": 0.0
+      },
+      "state": "completed"
+    },
+    {
+      "cell": "ocatari/cart/501501",
+      "decisions": 64,
+      "training_seconds": 0.17157499999939319,
+      "evaluation_worker_seconds": 0.27541570799894544,
+      "evaluation_episode_budget_seconds": 0.013847707999047998,
+      "log_bytes": 28027,
+      "all_checkpoint_bytes": 73026,
+      "checkpoint_blob_bytes_range": [
+        4464,
+        22679
+      ],
+      "peak_rss_bytes": 244039680,
+      "phase_seconds": {
+        "checkpoint_logs": 0.057348292000824586,
+        "emulation_extraction": 0.000142209997648024,
+        "fit": 0.0019092090005869977,
+        "policy_collection_td": 0.000676044997817371,
+        "prediction": 0.0,
+        "relations_encoding": 0.003734288007763098,
+        "selection_targets": 0.004094875000191678
+      },
+      "state": "completed"
+    },
+    {
+      "cell": "ocatari/bart/501501",
+      "decisions": 64,
+      "training_seconds": 0.19046950099982496,
+      "evaluation_worker_seconds": 0.3012081670003681,
+      "evaluation_episode_budget_seconds": 0.01686137399974541,
+      "log_bytes": 40065,
+      "all_checkpoint_bytes": 141262,
+      "checkpoint_blob_bytes_range": [
+        4696,
+        42148
+      ],
+      "peak_rss_bytes": 246628352,
+      "phase_seconds": {
+        "checkpoint_logs": 0.056061583999508,
+        "emulation_extraction": 0.0001352479976048926,
+        "fit": 0.018332708001253195,
+        "policy_collection_td": 0.000540580002052593,
+        "prediction": 0.0,
+        "relations_encoding": 0.0032883800004128716,
+        "selection_targets": 0.0064332080000895076
+      },
+      "state": "completed"
+    }
+  ],
+  "accounting": {
+    "evaluation_budget_seconds_per_episode_sum": 0.08600703899810469,
+    "evaluation_worker_seconds_known_sum": 1.7066897069980769,
+    "training_seconds_per_unit_sum": 1.0393365829977483
+  },
+  "historical_preservation": {
+    "path": "historical/pong_pilot_linux_01_code/historical-preservation.json",
+    "verified_sources": 40,
+    "mismatches": []
+  },
+  "Linux_Atari_projection": {
+    "training_seconds": null,
+    "evaluation_seconds": null,
+    "peak_rss_bytes": null,
+    "checkpoint_bytes": null,
+    "reason": "No compatible Linux Atari measurements; simulated rates are rejected by dry-run."
+  },
+  "pending_before_long_campaign": [
+    "Linux common RGB/RAM recovery validation",
+    "A6/A7 diagnostic conclusions and hashes; definitive BART estimator configuration",
+    "Compatible Linux cost measurements for every pipeline/learner and evaluation horizon",
+    "Resolved maximum, evaluation calendar, per-unit budgets and explicit milestone authorization"
+  ],
+  "limits": [
+    "Local import/cache and filesystem latency; timing excludes process startup and code validation before unit budgets.",
+    "Evaluation worker cost includes checkpoint verification and repeated completed evaluation calls.",
+    "Repeated-state cache benchmark is not an Atari speedup guarantee.",
+    "RSS is observed process peak, not a memory limit or Linux projection."
+  ],
+  "verification": {
+    "passed": 162,
+    "skipped": 1,
+    "deselected": 11,
+    "skip_reason": "Opt-in real OCAtari emulator parity; backend unavailable locally",
+    "deselection": "not atari and not ocatari",
+    "lint": "ruff passed",
+    "shell_syntax": "8 online batches passed",
+    "local_environment": {
+      "ale-py": "0.10.2",
+      "gymnasium": "1.3.0",
+      "machine": "arm64",
+      "numeric_threads": {
+        "MKL_NUM_THREADS": null,
+        "NUMEXPR_NUM_THREADS": null,
+        "OMP_NUM_THREADS": null,
+        "OPENBLAS_NUM_THREADS": null
+      },
+      "numpy": "1.26.4",
+      "ocatari": "2.2.1",
+      "platform": "darwin",
+      "python": "3.11.7",
+      "scipy": "1.12.0"
+    },
+    "extra_trees_local_test_version": "1.5.0",
+    "note": "Used installed source without bytecode and temporary import paths because local cache reads stalled; no dependencies installed or upgraded. ExtraTrees tests declare their installed version explicitly; production default remains 1.9.1."
+  }
+}

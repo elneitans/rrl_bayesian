@@ -1,0 +1,86 @@
+{
+  "payload": {
+    "binding": {
+      "campaign": "99e76c6332f06bcfe87be6a3262dc0728622fbf9e01c6d55db63205452202ae5",
+      "cell": "3997b160639051c43c0f8b31da585de060b6151dc0c8fe6df102542cd0b2b986",
+      "learner": "cart",
+      "runtime": {
+        "ale-py": "0.10.2",
+        "gymnasium": "1.1.1",
+        "machine": "x86_64",
+        "numeric_threads": {
+          "MKL_NUM_THREADS": "1",
+          "NUMEXPR_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "numpy": "1.26.4",
+        "ocatari": "2.2.1",
+        "platform": "linux",
+        "python": "3.11.7",
+        "scipy": "1.12.0"
+      }
+    },
+    "checkpoint": {
+      "path": "checkpoints/64-fb6a4b8bfc47302eb02cd26b8419570607333df84a931067eacf2242cdadd71b.pkl",
+      "sha256": "fb6a4b8bfc47302eb02cd26b8419570607333df84a931067eacf2242cdadd71b"
+    },
+    "counter": 64,
+    "log_head": {
+      "end": 64,
+      "path": "logs/64-5fc822ab1cc5c2d67ecb89f271f6c55650643cc9131b9f2274780e4a3210fcb2.jsonl",
+      "sha256": "5fc822ab1cc5c2d67ecb89f271f6c55650643cc9131b9f2274780e4a3210fcb2"
+    },
+    "metrics": {
+      "completed_games": 0,
+      "ended_episodes": 0,
+      "epsilon": 0.9970570301320116,
+      "interactions": 64,
+      "learner": {
+        "cache_bytes": 0,
+        "complexity": {
+          "FIRE": {
+            "leaves": 1,
+            "max_depth": 0
+          },
+          "LEFT": {
+            "leaves": 1,
+            "max_depth": 0
+          },
+          "NOOP": {
+            "leaves": 1,
+            "max_depth": 0
+          },
+          "RIGHT": {
+            "leaves": 1,
+            "max_depth": 0
+          }
+        },
+        "fits": 4,
+        "kind": "cart",
+        "phase_seconds": {
+          "encoding": 0.08282137964852154,
+          "fit": 0.01630733977071941,
+          "prediction": 0.0,
+          "selection_targets": 0.018082550959661603
+        },
+        "replay_size": 64
+      },
+      "phase_seconds": {
+        "checkpoint_logs": 2.753698736662045,
+        "emulation_extraction": 0.39948679436929524,
+        "fit": 0.01630733977071941,
+        "policy_collection_td": 0.003697215346619487,
+        "prediction": 0.0,
+        "relations_encoding": 0.08959850994870067,
+        "selection_targets": 0.018082550959661603
+      },
+      "relations": 11,
+      "truncated_episodes": 0
+    },
+    "reason": null,
+    "state": "completed"
+  },
+  "schema": "pong_analysis_unit_v2",
+  "sha256": "e7667058b55216f92f42adb8dbe778d96cb77487b9fb3f322f6876d254543704"
+}

@@ -258,3 +258,71 @@ class OCAtariBackend:
             self.env.close()
             self.closed = True
             self.done = True
+
+
+class OCAtariBackendV2(OCAtariBackend):
+    """Versioned codec extension. Historical Pong v1 remains the class above."""
+    backend_id = 'ocatari_ram_v2'
+    compatibility_id = 'ocatari_221_game_codecs_v2'
+
+    def __init__(self, game, *, max_episode_steps=1000):
+        super().__init__(game,max_episode_steps=max_episode_steps)
+        self.codec = self.spec.detector_codec_factory()
+
+    def manifest(self):
+        from ale_py.roms import get_rom_path
+        rom = {'DemonAttack':'demon_attack','Breakout':'breakout'}[self.spec.game]
+        modules = ('ocatari.core',self.spec.detector_module,'ocatari.ram.game_objects',
+                   'ocatari.ram.extract_ram_info','ocatari.ram._helper_methods','ale_py.env',
+                   'bayesian_rrtl.ocatari_backend','bayesian_rrtl.detector_codec',
+                   'bayesian_rrtl.games.slot_relations',f'bayesian_rrtl.games.{self.spec.game.lower()}')
+        return {'backend':self.backend_id,'compatibility_id':self.compatibility_id,
+                'codec':self.codec.version,'game':self.spec.game,'env_id':self.env._env.spec.id,
+                'versions':dict(self.versions),'actions':list(self.actions),
+                'source_hashes':{m:hashlib.sha256(Path(importlib.import_module(m).__file__).read_bytes()).hexdigest() for m in modules},
+                'rom_sha256':hashlib.sha256(get_rom_path(rom).read_bytes()).hexdigest(),
+                'mode':'ram','hud':False,'obs_mode':'ori','buffers':[],'render_mode':None,
+                'reset_policy':'none','frameskip':4,'repeat_action_probability':0.,
+                'full_action_space':False,'max_episode_steps':self.max_episode_steps}
+
+    def detector_state(self):
+        return self.codec.encode(self.env.objects)
+
+    def snapshot(self):
+        saved=super().snapshot()
+        saved['kind']='ocatari_ram_state_v2'
+        return saved
+
+    def validate_snapshot(self, saved):
+        if saved.get('kind') != 'ocatari_ram_state_v2':
+            raise ValueError('Versioned game codec requires v2 snapshot')
+        base=dict(saved,kind='ocatari_ram_state_v1')
+        super().validate_snapshot(base)
+        restored=self.codec.decode(saved['objects'])
+        if saved['frame'] is not None:
+            frame=ObjectFrame(tuple(DetectedObject(**o) for o in saved['frame']['objects']),
+                              saved['frame']['width'],saved['frame']['height'])
+            if self.spec.object_adapter(restored) != frame:
+                raise ValueError('Detector snapshot/frame mismatch')
+
+    def restore(self, saved):
+        if self.closed:
+            raise ValueError('Backend is closed')
+        self.validate_snapshot(saved)
+        from ale_py import ALEState
+        restored=self.codec.decode(saved['objects'])
+        self.env._env.reset(seed=0)
+        base=self.env._env.unwrapped
+        state=ALEState.__new__(ALEState)
+        state.__setstate__(saved['ale_state'])
+        base.ale.restoreSystemState(state)
+        self._restore_rng(base,saved['rng'])
+        self._restore_rng(base.action_space,saved['action_rng'])
+        self._restore_rng(base.observation_space,saved['observation_rng'])
+        for wrapper,(_,fields) in zip(self._wrappers(),saved['wrappers']):
+            for key,value in fields.items():
+                setattr(wrapper,key,value)
+        self.env.objects=restored
+        self.current_frame=None if saved['frame'] is None else self.spec.object_adapter(restored)
+        self.done=saved['done']
+        self.profile=copy.deepcopy(saved['profile'])

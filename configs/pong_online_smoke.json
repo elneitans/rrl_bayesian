@@ -1,0 +1,118 @@
+{
+  "schema": "pong_progressive_v2",
+  "name": "pong_online_technical_smoke_v1",
+  "level": "smoke",
+  "pipelines": [
+    "visual",
+    "ocatari"
+  ],
+  "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+  "training_horizon": 128,
+  "learners": {
+    "corrected_common": {
+      "eta_q": 0.025,
+      "max_depth": 4,
+      "min_sample_size": 128,
+      "significance_level": 0.0001,
+      "best_literal_criteria": "p-value",
+      "inherit_q_values": true
+    },
+    "cart": {
+      "max_depth": 2,
+      "min_child": 2,
+      "criterion": "SSE"
+    },
+    "bart": {
+      "kernel": "grow_prune",
+      "m": 2,
+      "burn_in": 2,
+      "draws": 3,
+      "k": 2.0,
+      "alpha_tree": 0.95,
+      "beta_tree": 2.0,
+      "max_depth": 2,
+      "min_child": 2,
+      "nu": 3.0,
+      "noise_quantile": 0.9,
+      "variance_floor": 1e-08
+    }
+  },
+  "learning": {
+    "gamma": 0.99,
+    "replay_capacity": 128,
+    "batch_size_per_action": 8,
+    "fit_interval": 16,
+    "warmup_interactions": 16,
+    "bootstrap_on_truncation": true
+  },
+  "exploration": {
+    "epsilon_init": 1.0,
+    "epsilon_min": 0.1,
+    "epsilon_decay_steps": 50000
+  },
+  "training_seeds": [
+    501501
+  ],
+  "evaluation": {
+    "intermediate": {
+      "seeds": [
+        501801
+      ],
+      "horizon": 128,
+      "checkpoints": [
+        0,
+        32,
+        64
+      ]
+    },
+    "final_development": {
+      "seeds": [
+        501901
+      ],
+      "horizon": 128,
+      "checkpoints": [
+        64
+      ]
+    },
+    "reserved_test": {
+      "seeds": [
+        420101,
+        420102,
+        420103,
+        420104,
+        420105,
+        420106,
+        420107,
+        420108,
+        420109,
+        420110,
+        420111,
+        420112,
+        420113,
+        420114,
+        420115,
+        420116,
+        420117,
+        420118,
+        420119,
+        420120
+      ],
+      "horizon": 27000,
+      "checkpoints": []
+    }
+  },
+  "max_decisions": 64,
+  "milestones": [
+    32,
+    64
+  ],
+  "checkpoint_interval": 16,
+  "budgets": {
+    "training_seconds_per_cell": 120,
+    "evaluation_seconds_per_episode": 60,
+    "fit_margin_seconds": 1
+  },
+  "cache_bytes": 1048576,
+  "bart_review": null,
+  "primary_checkpoint": "final"
+}
