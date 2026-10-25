@@ -1,0 +1,679 @@
+No broken requirements found.
+hydra
+Python 3.11.7
+job=34257 root=/home/natan.brugueras/projects/rrl_bayesian
+A.L.E: Arcade Learning Environment (version 0.10.2+c9d4b19)
+[Powered by Stella]
+[
+  {
+    "group": "intermediate",
+    "counter": 0,
+    "checkpoint": {
+      "path": "checkpoints/0-dd929250dd13e209e036349038a90556c7696b10ff9a263c893a9e1509335df5.pkl",
+      "sha256": "dd929250dd13e209e036349038a90556c7696b10ff9a263c893a9e1509335df5"
+    },
+    "state": "completed",
+    "episodes": [
+      {
+        "actions": {
+          "FIRE": 114,
+          "LEFT": 137,
+          "LEFTFIRE": 138,
+          "NOOP": 130,
+          "RIGHT": 135,
+          "RIGHTFIRE": 150
+        },
+        "points_lost": 21.0,
+        "points_won": 0.0,
+        "raw_return": -21.0,
+        "reason": null,
+        "return_scope": "complete_game",
+        "seconds": 5.438757350028027,
+        "seed": 501801,
+        "status": "completed",
+        "steps": 804,
+        "terminated": true,
+        "truncated": false,
+        "unique_encoded_states": 81
+      },
+      {
+        "actions": {
+          "FIRE": 131,
+          "LEFT": 140,
+          "LEFTFIRE": 112,
+          "NOOP": 126,
+          "RIGHT": 126,
+          "RIGHTFIRE": 129
+        },
+        "points_lost": 21.0,
+        "points_won": 0.0,
+        "raw_return": -21.0,
+        "reason": null,
+        "return_scope": "complete_game",
+        "seconds": 5.368342652975116,
+        "seed": 501802,
+        "status": "completed",
+        "steps": 764,
+        "terminated": true,
+        "truncated": false,
+        "unique_encoded_states": 70
+      }
+    ]
+  },
+  {
+    "group": "intermediate",
+    "counter": 10000,
+    "checkpoint": {
+      "path": "checkpoints/10000-2e1cc787ce7bc92b67ee5fce30750deb922747cd6edf7f99d8d8d45b801632ca.pkl",
+      "sha256": "2e1cc787ce7bc92b67ee5fce30750deb922747cd6edf7f99d8d8d45b801632ca"
+    },
+    "state": "completed",
+    "episodes": [
+      {
+        "actions": {
+          "RIGHT": 764
+        },
+        "points_lost": 21.0,
+        "points_won": 0.0,
+        "raw_return": -21.0,
+        "reason": null,
+        "return_scope": "complete_game",
+        "seconds": 7.615810590039473,
+        "seed": 501801,
+        "status": "completed",
+        "steps": 764,
+        "terminated": true,
+        "truncated": false,
+        "unique_encoded_states": 23
+      },
+      {
+        "actions": {
+          "RIGHT": 764
+        },
+        "points_lost": 21.0,
+        "points_won": 0.0,
+        "raw_return": -21.0,
+        "reason": null,
+        "return_scope": "complete_game",
+        "seconds": 4.623622338986024,
+        "seed": 501802,
+        "status": "completed",
+        "steps": 764,
+        "terminated": true,
+        "truncated": false,
+        "unique_encoded_states": 23
+      }
+    ]
+  },
+  {
+    "group": "intermediate",
+    "counter": 100000,
+    "checkpoint": {
+      "path": "checkpoints/100000-652e59dae0b95510d359cdb5f96c4cfe438fe8346821e16b2138452744ad7a75.pkl",
+      "sha256": "652e59dae0b95510d359cdb5f96c4cfe438fe8346821e16b2138452744ad7a75"
+    },
+    "state": "completed",
+    "episodes": [
+      {
+        "actions": {
+          "FIRE": 41,
+          "LEFT": 314,
+          "LEFTFIRE": 15,
+          "NOOP": 368,
+          "RIGHT": 26
+        },
+        "points_lost": 21.0,
+        "points_won": 0.0,
+        "raw_return": -21.0,
+        "reason": null,
+        "return_scope": "complete_game",
+        "seconds": 4.774653015017975,
+        "seed": 501801,
+        "status": "completed",
+        "steps": 764,
+        "terminated": true,
+        "truncated": false,
+        "unique_encoded_states": 29
+      },
+      {
+        "actions": {
+          "FIRE": 41,
+          "LEFT": 314,
+          "LEFTFIRE": 15,
+          "NOOP": 368,
+          "RIGHT": 26
+        },
+        "points_lost": 21.0,
+        "points_won": 0.0,
+        "raw_return": -21.0,
+        "reason": null,
+        "return_scope": "complete_game",
+        "seconds": 6.212462579016574,
+        "seed": 501802,
+        "status": "completed",
+        "steps": 764,
+        "terminated": true,
+        "truncated": false,
+        "unique_encoded_states": 29
+      }
+    ]
+  },
+  {
+    "group": "intermediate",
+    "counter": 500000,
+    "checkpoint": {
+      "path": "checkpoints/500000-1c4677954b5138f5925c51b24dbc22269874d5a1f991aa9ca0249151f0cda74e.pkl",
+      "sha256": "1c4677954b5138f5925c51b24dbc22269874d5a1f991aa9ca0249151f0cda74e"
+    },
+    "state": "completed",
+    "episodes": [
+      {
+        "seed": 501801,
+        "status": "completed",
+        "steps": 872,
+        "raw_return": -20.0,
+        "points_won": 1.0,
+        "points_lost": 21.0,
+        "actions": {
+          "RIGHT": 298,
+          "LEFT": 119,
+          "RIGHTFIRE": 177,
+          "LEFTFIRE": 255,
+          "FIRE": 22,
+          "NOOP": 1
+        },
+        "terminated": true,
+        "truncated": false,
+        "reason": null,
+        "return_scope": "complete_game",
+        "unique_encoded_states": 99,
+        "seconds": 12.569462649989873
+      },
+      {
+        "seed": 501802,
+        "status": "completed",
+        "steps": 872,
+        "raw_return": -20.0,
+        "points_won": 1.0,
+        "points_lost": 21.0,
+        "actions": {
+          "RIGHT": 298,
+          "LEFT": 119,
+          "RIGHTFIRE": 177,
+          "LEFTFIRE": 255,
+          "FIRE": 22,
+          "NOOP": 1
+        },
+        "terminated": true,
+        "truncated": false,
+        "reason": null,
+        "return_scope": "complete_game",
+        "unique_encoded_states": 99,
+        "seconds": 10.971889852022287
+      }
+    ]
+  },
+  {
+    "group": "final_development",
+    "counter": 100000,
+    "checkpoint": {
+      "path": "checkpoints/100000-652e59dae0b95510d359cdb5f96c4cfe438fe8346821e16b2138452744ad7a75.pkl",
+      "sha256": "652e59dae0b95510d359cdb5f96c4cfe438fe8346821e16b2138452744ad7a75"
+    },
+    "state": "completed",
+    "episodes": [
+      {
+        "actions": {
+          "FIRE": 41,
+          "LEFT": 314,
+          "LEFTFIRE": 15,
+          "NOOP": 368,
+          "RIGHT": 26
+        },
+        "points_lost": 21.0,
+        "points_won": 0.0,
+        "raw_return": -21.0,
+        "reason": null,
+        "return_scope": "complete_game",
+        "seconds": 5.3648667960078456,
+        "seed": 501901,
+        "status": "completed",
+        "steps": 764,
+        "terminated": true,
+        "truncated": false,
+        "unique_encoded_states": 29
+      },
+      {
+        "actions": {
+          "FIRE": 41,
+          "LEFT": 314,
+          "LEFTFIRE": 15,
+          "NOOP": 368,
+          "RIGHT": 26
+        },
+        "points_lost": 21.0,
+        "points_won": 0.0,
+        "raw_return": -21.0,
+        "reason": null,
+        "return_scope": "complete_game",
+        "seconds": 5.297125495038927,
+        "seed": 501902,
+        "status": "completed",
+        "steps": 764,
+        "terminated": true,
+        "truncated": false,
+        "unique_encoded_states": 29
+      },
+      {
+        "actions": {
+          "FIRE": 41,
+          "LEFT": 314,
+          "LEFTFIRE": 15,
+          "NOOP": 368,
+          "RIGHT": 26
+        },
+        "points_lost": 21.0,
+        "points_won": 0.0,
+        "raw_return": -21.0,
+        "reason": null,
+        "return_scope": "complete_game",
+        "seconds": 4.795069668034557,
+        "seed": 501903,
+        "status": "completed",
+        "steps": 764,
+        "terminated": true,
+        "truncated": false,
+        "unique_encoded_states": 29
+      },
+      {
+        "actions": {
+          "FIRE": 41,
+          "LEFT": 314,
+          "LEFTFIRE": 15,
+          "NOOP": 368,
+          "RIGHT": 26
+        },
+        "points_lost": 21.0,
+        "points_won": 0.0,
+        "raw_return": -21.0,
+        "reason": null,
+        "return_scope": "complete_game",
+        "seconds": 6.022514504031278,
+        "seed": 501904,
+        "status": "completed",
+        "steps": 764,
+        "terminated": true,
+        "truncated": false,
+        "unique_encoded_states": 29
+      },
+      {
+        "actions": {
+          "FIRE": 41,
+          "LEFT": 314,
+          "LEFTFIRE": 15,
+          "NOOP": 368,
+          "RIGHT": 26
+        },
+        "points_lost": 21.0,
+        "points_won": 0.0,
+        "raw_return": -21.0,
+        "reason": null,
+        "return_scope": "complete_game",
+        "seconds": 5.260184020968154,
+        "seed": 501905,
+        "status": "completed",
+        "steps": 764,
+        "terminated": true,
+        "truncated": false,
+        "unique_encoded_states": 29
+      },
+      {
+        "actions": {
+          "FIRE": 41,
+          "LEFT": 314,
+          "LEFTFIRE": 15,
+          "NOOP": 368,
+          "RIGHT": 26
+        },
+        "points_lost": 21.0,
+        "points_won": 0.0,
+        "raw_return": -21.0,
+        "reason": null,
+        "return_scope": "complete_game",
+        "seconds": 5.71381552197272,
+        "seed": 501906,
+        "status": "completed",
+        "steps": 764,
+        "terminated": true,
+        "truncated": false,
+        "unique_encoded_states": 29
+      },
+      {
+        "actions": {
+          "FIRE": 41,
+          "LEFT": 314,
+          "LEFTFIRE": 15,
+          "NOOP": 368,
+          "RIGHT": 26
+        },
+        "points_lost": 21.0,
+        "points_won": 0.0,
+        "raw_return": -21.0,
+        "reason": null,
+        "return_scope": "complete_game",
+        "seconds": 5.605857721995562,
+        "seed": 501907,
+        "status": "completed",
+        "steps": 764,
+        "terminated": true,
+        "truncated": false,
+        "unique_encoded_states": 29
+      },
+      {
+        "actions": {
+          "FIRE": 41,
+          "LEFT": 314,
+          "LEFTFIRE": 15,
+          "NOOP": 368,
+          "RIGHT": 26
+        },
+        "points_lost": 21.0,
+        "points_won": 0.0,
+        "raw_return": -21.0,
+        "reason": null,
+        "return_scope": "complete_game",
+        "seconds": 4.880744894966483,
+        "seed": 501908,
+        "status": "completed",
+        "steps": 764,
+        "terminated": true,
+        "truncated": false,
+        "unique_encoded_states": 29
+      },
+      {
+        "actions": {
+          "FIRE": 41,
+          "LEFT": 314,
+          "LEFTFIRE": 15,
+          "NOOP": 368,
+          "RIGHT": 26
+        },
+        "points_lost": 21.0,
+        "points_won": 0.0,
+        "raw_return": -21.0,
+        "reason": null,
+        "return_scope": "complete_game",
+        "seconds": 5.580103002954274,
+        "seed": 501909,
+        "status": "completed",
+        "steps": 764,
+        "terminated": true,
+        "truncated": false,
+        "unique_encoded_states": 29
+      },
+      {
+        "actions": {
+          "FIRE": 41,
+          "LEFT": 314,
+          "LEFTFIRE": 15,
+          "NOOP": 368,
+          "RIGHT": 26
+        },
+        "points_lost": 21.0,
+        "points_won": 0.0,
+        "raw_return": -21.0,
+        "reason": null,
+        "return_scope": "complete_game",
+        "seconds": 5.176405743986834,
+        "seed": 501910,
+        "status": "completed",
+        "steps": 764,
+        "terminated": true,
+        "truncated": false,
+        "unique_encoded_states": 29
+      }
+    ]
+  },
+  {
+    "group": "final_development",
+    "counter": 500000,
+    "checkpoint": {
+      "path": "checkpoints/500000-1c4677954b5138f5925c51b24dbc22269874d5a1f991aa9ca0249151f0cda74e.pkl",
+      "sha256": "1c4677954b5138f5925c51b24dbc22269874d5a1f991aa9ca0249151f0cda74e"
+    },
+    "state": "completed",
+    "episodes": [
+      {
+        "seed": 501901,
+        "status": "completed",
+        "steps": 872,
+        "raw_return": -20.0,
+        "points_won": 1.0,
+        "points_lost": 21.0,
+        "actions": {
+          "RIGHT": 298,
+          "LEFT": 119,
+          "RIGHTFIRE": 177,
+          "LEFTFIRE": 255,
+          "FIRE": 22,
+          "NOOP": 1
+        },
+        "terminated": true,
+        "truncated": false,
+        "reason": null,
+        "return_scope": "complete_game",
+        "unique_encoded_states": 99,
+        "seconds": 10.005865675979294
+      },
+      {
+        "seed": 501902,
+        "status": "completed",
+        "steps": 872,
+        "raw_return": -20.0,
+        "points_won": 1.0,
+        "points_lost": 21.0,
+        "actions": {
+          "RIGHT": 298,
+          "LEFT": 119,
+          "RIGHTFIRE": 177,
+          "LEFTFIRE": 255,
+          "FIRE": 22,
+          "NOOP": 1
+        },
+        "terminated": true,
+        "truncated": false,
+        "reason": null,
+        "return_scope": "complete_game",
+        "unique_encoded_states": 99,
+        "seconds": 10.168969271006063
+      },
+      {
+        "seed": 501903,
+        "status": "completed",
+        "steps": 872,
+        "raw_return": -20.0,
+        "points_won": 1.0,
+        "points_lost": 21.0,
+        "actions": {
+          "RIGHT": 298,
+          "LEFT": 119,
+          "RIGHTFIRE": 177,
+          "LEFTFIRE": 255,
+          "FIRE": 22,
+          "NOOP": 1
+        },
+        "terminated": true,
+        "truncated": false,
+        "reason": null,
+        "return_scope": "complete_game",
+        "unique_encoded_states": 99,
+        "seconds": 10.72905201499816
+      },
+      {
+        "seed": 501904,
+        "status": "completed",
+        "steps": 872,
+        "raw_return": -20.0,
+        "points_won": 1.0,
+        "points_lost": 21.0,
+        "actions": {
+          "RIGHT": 298,
+          "LEFT": 119,
+          "RIGHTFIRE": 177,
+          "LEFTFIRE": 255,
+          "FIRE": 22,
+          "NOOP": 1
+        },
+        "terminated": true,
+        "truncated": false,
+        "reason": null,
+        "return_scope": "complete_game",
+        "unique_encoded_states": 99,
+        "seconds": 9.791891499015037
+      },
+      {
+        "seed": 501905,
+        "status": "completed",
+        "steps": 872,
+        "raw_return": -20.0,
+        "points_won": 1.0,
+        "points_lost": 21.0,
+        "actions": {
+          "RIGHT": 298,
+          "LEFT": 119,
+          "RIGHTFIRE": 177,
+          "LEFTFIRE": 255,
+          "FIRE": 22,
+          "NOOP": 1
+        },
+        "terminated": true,
+        "truncated": false,
+        "reason": null,
+        "return_scope": "complete_game",
+        "unique_encoded_states": 99,
+        "seconds": 10.916351017949637
+      },
+      {
+        "seed": 501906,
+        "status": "completed",
+        "steps": 872,
+        "raw_return": -20.0,
+        "points_won": 1.0,
+        "points_lost": 21.0,
+        "actions": {
+          "RIGHT": 298,
+          "LEFT": 119,
+          "RIGHTFIRE": 177,
+          "LEFTFIRE": 255,
+          "FIRE": 22,
+          "NOOP": 1
+        },
+        "terminated": true,
+        "truncated": false,
+        "reason": null,
+        "return_scope": "complete_game",
+        "unique_encoded_states": 99,
+        "seconds": 11.206155088031664
+      },
+      {
+        "seed": 501907,
+        "status": "completed",
+        "steps": 872,
+        "raw_return": -20.0,
+        "points_won": 1.0,
+        "points_lost": 21.0,
+        "actions": {
+          "RIGHT": 298,
+          "LEFT": 119,
+          "RIGHTFIRE": 177,
+          "LEFTFIRE": 255,
+          "FIRE": 22,
+          "NOOP": 1
+        },
+        "terminated": true,
+        "truncated": false,
+        "reason": null,
+        "return_scope": "complete_game",
+        "unique_encoded_states": 99,
+        "seconds": 11.112260424008127
+      },
+      {
+        "seed": 501908,
+        "status": "completed",
+        "steps": 872,
+        "raw_return": -20.0,
+        "points_won": 1.0,
+        "points_lost": 21.0,
+        "actions": {
+          "RIGHT": 298,
+          "LEFT": 119,
+          "RIGHTFIRE": 177,
+          "LEFTFIRE": 255,
+          "FIRE": 22,
+          "NOOP": 1
+        },
+        "terminated": true,
+        "truncated": false,
+        "reason": null,
+        "return_scope": "complete_game",
+        "unique_encoded_states": 99,
+        "seconds": 11.326956091972534
+      },
+      {
+        "seed": 501909,
+        "status": "completed",
+        "steps": 872,
+        "raw_return": -20.0,
+        "points_won": 1.0,
+        "points_lost": 21.0,
+        "actions": {
+          "RIGHT": 298,
+          "LEFT": 119,
+          "RIGHTFIRE": 177,
+          "LEFTFIRE": 255,
+          "FIRE": 22,
+          "NOOP": 1
+        },
+        "terminated": true,
+        "truncated": false,
+        "reason": null,
+        "return_scope": "complete_game",
+        "unique_encoded_states": 99,
+        "seconds": 11.30934924603207
+      },
+      {
+        "seed": 501910,
+        "status": "completed",
+        "steps": 872,
+        "raw_return": -20.0,
+        "points_won": 1.0,
+        "points_lost": 21.0,
+        "actions": {
+          "RIGHT": 298,
+          "LEFT": 119,
+          "RIGHTFIRE": 177,
+          "LEFTFIRE": 255,
+          "FIRE": 22,
+          "NOOP": 1
+        },
+        "terminated": true,
+        "truncated": false,
+        "reason": null,
+        "return_scope": "complete_game",
+        "unique_encoded_states": 99,
+        "seconds": 11.585141537012532
+      }
+    ]
+  }
+]
+
+------------------------------------------------------------------------
+[Slurm] Este trabajo (#34257) terminó SIN reporte de rendimiento por correo.
+Puedes recibir un correo con el uso de CPU, RAM y GPU de tus trabajos
+(y sugerencias para que esperen menos en cola) agregando esta línea
+en tu script de sbatch, junto a las líneas #SBATCH:
+
+    #SENDJOBREPORT
+
+Dudas: slurmjobs@cenia.cl
+------------------------------------------------------------------------
