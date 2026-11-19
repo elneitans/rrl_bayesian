@@ -1,0 +1,27 @@
+{"verified": ["anova", 721101, "baseline"], "trace_rows": 500000, "evaluations": 252}
+{"verified": ["anova", 721101, "slow_td"], "trace_rows": 1000000, "evaluations": 504}
+{"verified": ["anova", 721101, "refit_only"], "trace_rows": 1500000, "evaluations": 756}
+{"verified": ["anova", 721102, "baseline"], "trace_rows": 2000000, "evaluations": 1008}
+{"verified": ["anova", 721102, "slow_td"], "trace_rows": 2500000, "evaluations": 1260}
+{"verified": ["anova", 721102, "refit_only"], "trace_rows": 3000000, "evaluations": 1512}
+{"verified": ["anova", 721103, "baseline"], "trace_rows": 3500000, "evaluations": 1764}
+{"verified": ["anova", 721103, "slow_td"], "trace_rows": 4000000, "evaluations": 2016}
+{"verified": ["anova", 721103, "refit_only"], "trace_rows": 4500000, "evaluations": 2268}
+{"verified": ["anova", 721104, "baseline"], "trace_rows": 5000000, "evaluations": 2520}
+{"verified": ["anova", 721104, "slow_td"], "trace_rows": 5500000, "evaluations": 2772}
+{"verified": ["anova", 721104, "refit_only"], "trace_rows": 6000000, "evaluations": 3024}
+{"verified": ["anova", 721105, "baseline"], "trace_rows": 6500000, "evaluations": 3276}
+{"verified": ["anova", 721105, "slow_td"], "trace_rows": 7000000, "evaluations": 3528}
+{"verified": ["anova", 721105, "refit_only"], "trace_rows": 7500000, "evaluations": 3780}
+{
+  "complete": true,
+  "campaign": "47cc2276291ba5507aa097850cbd7e3d2332c6d09fa10e0fbd56d4fb6ef81664",
+  "continuations": 15,
+  "verified_trace_rows": 7500000,
+  "verified_trace_segments": 300,
+  "verified_evaluation_rollouts": 3780,
+  "reproduced_training_windows": 1500,
+  "verified_review_documents": 100,
+  "banks_ram_disjoint": true,
+  "scope": "All downloaded committed JSON, trace bytes/rows and training summaries. Large model/probe/emulator blobs remain on cluster; their report and independent refit audit must also pass the closure verifier."
+}

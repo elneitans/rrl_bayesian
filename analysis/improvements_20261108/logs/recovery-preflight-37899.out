@@ -1,0 +1,16 @@
+No broken requirements found.
+scylla
+Python 3.11.7
+job=37899 root=/home/natan.brugueras/archive/rrl_improvement_code_20261108_v1
+{'recovery_preflight_passed': True, 'restored': [{'criterion': 'anova', 'role': 'confirmation', 'seed': 710608, 'mode': 'stable_td', 'counter': 600000, 'checkpoint_sha256': '75d8e34869976284e0a9a09809ae6936c2764113d97e614a9faf6ea9b6d5fce1'}, {'criterion': 'anova', 'role': 'development', 'seed': 710610, 'mode': 'double_td', 'counter': 585000, 'checkpoint_sha256': '781c88f860814a2992e1dde78b45a381dd70cb596a436b54d003fdd2cc63cbbc'}]}
+
+------------------------------------------------------------------------
+[Slurm] Este trabajo (#37899) terminó SIN reporte de rendimiento por correo.
+Puedes recibir un correo con el uso de CPU, RAM y GPU de tus trabajos
+(y sugerencias para que esperen menos en cola) agregando esta línea
+en tu script de sbatch, junto a las líneas #SBATCH:
+
+    #SENDJOBREPORT
+
+Dudas: slurmjobs@cenia.cl
+------------------------------------------------------------------------

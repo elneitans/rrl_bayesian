@@ -1,0 +1,31 @@
+No broken requirements found.
+scylla
+Python 3.11.7
+job=37906 root=/home/natan.brugueras/archive/rrl_improvement_code_20261108_v1
+{'preserved_complete_unit': ['anova', 710608, 'baseline']}
+{'preserved_complete_unit': ['anova', 710608, 'slow_td']}
+{'preserved_complete_unit': ['anova', 710608, 'double_td']}
+{"continued": ["anova", 710608, "guarded", 25000], "metrics": {"mode": "guarded", "active_splits": 83, "initial_splits": 91, "grows_total": 2, "prunes_total": 1, "replacements_total": 0, "structure_version": 3, "leaves": 167, "target_syncs": 0, "target_counter": 500000, "refits_total": 0, "parameter_version": 1}}
+{"continued": ["anova", 710608, "guarded", 50000], "metrics": {"mode": "guarded", "active_splits": 89, "initial_splits": 91, "grows_total": 8, "prunes_total": 1, "replacements_total": 0, "structure_version": 9, "leaves": 179, "target_syncs": 0, "target_counter": 500000, "refits_total": 0, "parameter_version": 1}}
+{"continued": ["anova", 710608, "guarded", 75000], "metrics": {"mode": "guarded", "active_splits": 90, "initial_splits": 91, "grows_total": 9, "prunes_total": 1, "replacements_total": 0, "structure_version": 10, "leaves": 181, "target_syncs": 0, "target_counter": 500000, "refits_total": 0, "parameter_version": 1}}
+{"continued": ["anova", 710608, "guarded", 100000], "metrics": {"mode": "guarded", "active_splits": 92, "initial_splits": 91, "grows_total": 12, "prunes_total": 2, "replacements_total": 0, "structure_version": 14, "leaves": 185, "target_syncs": 0, "target_counter": 500000, "refits_total": 0, "parameter_version": 2}}
+{"continued": ["anova", 710608, "stable_guarded", 25000], "metrics": {"mode": "stable_guarded", "active_splits": 93, "initial_splits": 91, "grows_total": 2, "prunes_total": 0, "replacements_total": 0, "structure_version": 2, "leaves": 187, "target_syncs": 5, "target_counter": 525000, "refits_total": 0, "parameter_version": 0}}
+{"continued": ["anova", 710608, "stable_guarded", 50000], "metrics": {"mode": "stable_guarded", "active_splits": 93, "initial_splits": 91, "grows_total": 2, "prunes_total": 0, "replacements_total": 0, "structure_version": 2, "leaves": 187, "target_syncs": 10, "target_counter": 550000, "refits_total": 0, "parameter_version": 0}}
+{"continued": ["anova", 710608, "stable_guarded", 75000], "metrics": {"mode": "stable_guarded", "active_splits": 94, "initial_splits": 91, "grows_total": 3, "prunes_total": 0, "replacements_total": 0, "structure_version": 3, "leaves": 189, "target_syncs": 15, "target_counter": 575000, "refits_total": 0, "parameter_version": 0}}
+{"continued": ["anova", 710608, "stable_guarded", 100000], "metrics": {"mode": "stable_guarded", "active_splits": 94, "initial_splits": 91, "grows_total": 3, "prunes_total": 0, "replacements_total": 0, "structure_version": 3, "leaves": 189, "target_syncs": 20, "target_counter": 600000, "refits_total": 0, "parameter_version": 0}}
+{"continued": ["anova", 710608, "refit_only", 25000], "metrics": {"mode": "refit_only", "active_splits": 93, "initial_splits": 91, "grows_total": 2, "prunes_total": 0, "replacements_total": 0, "structure_version": 2, "leaves": 187, "target_syncs": 0, "target_counter": 500000, "refits_total": 1, "parameter_version": 1}}
+{"continued": ["anova", 710608, "refit_only", 50000], "metrics": {"mode": "refit_only", "active_splits": 93, "initial_splits": 91, "grows_total": 2, "prunes_total": 0, "replacements_total": 0, "structure_version": 2, "leaves": 187, "target_syncs": 0, "target_counter": 500000, "refits_total": 2, "parameter_version": 2}}
+{"continued": ["anova", 710608, "refit_only", 75000], "metrics": {"mode": "refit_only", "active_splits": 95, "initial_splits": 91, "grows_total": 4, "prunes_total": 0, "replacements_total": 0, "structure_version": 4, "leaves": 191, "target_syncs": 0, "target_counter": 500000, "refits_total": 3, "parameter_version": 3}}
+{"continued": ["anova", 710608, "refit_only", 100000], "metrics": {"mode": "refit_only", "active_splits": 96, "initial_splits": 91, "grows_total": 5, "prunes_total": 0, "replacements_total": 0, "structure_version": 5, "leaves": 193, "target_syncs": 0, "target_counter": 500000, "refits_total": 3, "parameter_version": 3}}
+{'recovered_group': 8, 'complete': True}
+
+------------------------------------------------------------------------
+[Slurm] Este trabajo (#37906) terminó SIN reporte de rendimiento por correo.
+Puedes recibir un correo con el uso de CPU, RAM y GPU de tus trabajos
+(y sugerencias para que esperen menos en cola) agregando esta línea
+en tu script de sbatch, junto a las líneas #SBATCH:
+
+    #SENDJOBREPORT
+
+Dudas: slurmjobs@cenia.cl
+------------------------------------------------------------------------

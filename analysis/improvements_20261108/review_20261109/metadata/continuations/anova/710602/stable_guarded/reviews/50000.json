@@ -1,0 +1,105 @@
+{
+  "payload": {
+    "evaluation_bank_used_for_gate": false,
+    "holdout": {
+      "path": "probe_50000-0633b93438654c210dc156f00e5918936485c75f2ac8ca3dba818d990f6468d9.pkl",
+      "sha256": "0633b93438654c210dc156f00e5918936485c75f2ac8ca3dba818d990f6468d9"
+    },
+    "identity": {
+      "campaign": "5c68a97ac3ddd52553a705703ef4faf12d014108b41ca16e7b3b84d7eff805b4",
+      "criterion": "anova",
+      "mode": "stable_guarded",
+      "parent": {
+        "path": "checkpoints/500000-7cb100a8e4d0150f9834f22c63aeaca6490cd5e11c0ad15f069ac5806c6e3d4e.pkl",
+        "sha256": "7cb100a8e4d0150f9834f22c63aeaca6490cd5e11c0ad15f069ac5806c6e3d4e"
+      },
+      "parent_counter": 500000,
+      "seed": 710602
+    },
+    "point": 50000,
+    "reference": {
+      "path": "reference_50000-73b353724332e9ec44d903e1d857b449c2ae6fdb54c9fb00e15b318aaa610c69.pkl",
+      "sha256": "73b353724332e9ec44d903e1d857b449c2ae6fdb54c9fb00e15b318aaa610c69"
+    },
+    "return_bank": {
+      "path": "return_bank_50000-ef99d51b504939fe9b6d4bfb7be209f701e27eec80df9b2124056e7c96910ee9.pkl",
+      "sha256": "ef99d51b504939fe9b6d4bfb7be209f701e27eec80df9b2124056e7c96910ee9"
+    },
+    "reviews": [
+      {
+        "action": "RIGHT",
+        "bounded_q": true,
+        "candidate_mse": 0.03317459855920514,
+        "counter": 550000,
+        "current_mse": 0.034673569102226354,
+        "gate": {
+          "accepted": false,
+          "blocks": 6,
+          "mean_difference": 0.006370555579995708,
+          "reason": "loss_gate",
+          "samples": 68,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": 0.0025,
+          "upper_bound": 0.0311613141446835
+        },
+        "kind": "prune_review",
+        "loss_gate": {
+          "accepted": false,
+          "blocks": 6,
+          "mean_difference": 0.006370555579995708,
+          "reason": "loss_gate",
+          "samples": 68,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": 0.0025,
+          "upper_bound": 0.0311613141446835
+        },
+        "new_leaves": 1,
+        "new_literal": "None",
+        "node": 186,
+        "old_leaves": 19,
+        "old_literal": "Literal(name='x', type='comparative', obj1='ball_t', obj2='ball_t-1', obj3=None)",
+        "path": "root/less",
+        "train_samples": 339
+      },
+      {
+        "action": "LEFT",
+        "bounded_q": true,
+        "candidate_mse": 0.010338888121027453,
+        "counter": 550000,
+        "current_mse": 0.015891242993309768,
+        "gate": {
+          "accepted": false,
+          "blocks": 8,
+          "mean_difference": 0.0027517251429908475,
+          "reason": "loss_gate",
+          "samples": 94,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": -0.001,
+          "upper_bound": 0.01661951081785283
+        },
+        "kind": "replacement_review",
+        "loss_gate": {
+          "accepted": false,
+          "blocks": 8,
+          "mean_difference": 0.0027517251429908475,
+          "reason": "loss_gate",
+          "samples": 94,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": -0.001,
+          "upper_bound": 0.01661951081785283
+        },
+        "new_leaves": 4,
+        "new_literal": "Literal(name='incontact', type='logical', obj1='player_t', obj2='ball_t', obj3=None)",
+        "node": 229,
+        "old_leaves": 9,
+        "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+        "path": "root/more/less",
+        "train_samples": 910
+      }
+    ],
+    "validation_samples": 848,
+    "validation_used_for_td": false
+  },
+  "schema": "pong_analysis_unit_v2",
+  "sha256": "82fed2a0ee409ec413b08e9d5a4bfee279ebce67aac144e44331ce73a54090f3"
+}

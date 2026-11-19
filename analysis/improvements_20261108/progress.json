@@ -1,0 +1,156 @@
+{
+  "status": "evaluation_complete_verified",
+  "objective": "Proponer, implementar y poner a correr mejoras del algoritmo",
+  "source_archive_sha256": "f2edc165d455ca94435a932d1f49e6aa4d9ecab4bb39fb906116a55fd67ac604",
+  "remote_source": "~/archive/rrl_improvement_code_20261108_v1",
+  "remote_control": "~/archive/rrl_improvements_20261108_01",
+  "proposal": "docs/rrtl_mejoras_20261108.md",
+  "config": "configs/breakout_rrtl_improvements_20261108.json",
+  "variants": [
+    "baseline",
+    "slow_td",
+    "double_td",
+    "stable_td",
+    "guarded",
+    "stable_guarded",
+    "refit_only"
+  ],
+  "main_counts": {
+    "groups": 10,
+    "continuations": 70,
+    "new_transitions": 7000000,
+    "evaluation_rollouts": 4200
+  },
+  "local_validation": {
+    "core_and_resume_tests_passed": 28,
+    "broader_cases_passed": 121,
+    "ocatari_case": "Optional dependency absent locally; corresponding Linux test passed in the 122-case preparation suite."
+  },
+  "next": "No required work remains within this evaluation. Further algorithms/seeds/horizons are separate prospective experiments.",
+  "goal_completion_scope": "Implemented documented improvements, meaningful tests including real Linux integration, and requested campaign actually submitted/running. Performance results are prospective.",
+  "prepare_job": 37518,
+  "submission_shell_session_closed": true,
+  "observed_at_utc": "2026-11-08T21:47:12Z",
+  "jobs": {
+    "prepare": 37518,
+    "guard_smoke": 37603,
+    "continuation_array": 37604,
+    "report": 37605,
+    "analysis": 37606,
+    "guard_final": 37611
+  },
+  "main_manifest_sha256": "5c68a97ac3ddd52553a705703ef4faf12d014108b41ca16e7b3b84d7eff805b4",
+  "operational_launcher_sha256": "eea048af376f0b5940a3adebd962ecbf0f0a30eded31bbc10de9e61d463192b0",
+  "implementation_review": "analysis/improvements_20261108/implementation_review.json",
+  "main_results_complete": true,
+  "performance_improvement_demonstrated": false,
+  "first_observed_continuations": [
+    {
+      "criterion": "historical_f",
+      "seed": 710602,
+      "variant": "baseline",
+      "state": "completed",
+      "counter": 600000,
+      "new_decisions": 100000,
+      "status_path": "analysis/improvements_20261108/main_progress/710602.json",
+      "status_payload_sha256": "8c2f27f3124b03e52bef0cef9c1d71b24506d056b9c24db66e720e3fc0cead09",
+      "validation_scope": "Checksummed status identity and declared contiguous trace frontiers; main trace contents are audited later by the report."
+    },
+    {
+      "criterion": "historical_f",
+      "seed": 710603,
+      "variant": "baseline",
+      "state": "partial",
+      "counter": 600000,
+      "new_decisions": 100000,
+      "status_path": "analysis/improvements_20261108/main_progress/710603.json",
+      "status_payload_sha256": "8bb5e78f981539950f3392a1ad102e44d72ddaa6c0995eb3ff71206ae55a5e63",
+      "validation_scope": "Checksummed status identity and declared contiguous trace frontiers; main trace contents are audited later by the report."
+    }
+  ],
+  "linux_validation": {
+    "linux_suite_passed": 122,
+    "linux_supplementary_replacement_test_passed": 1,
+    "real_atari_smoke_continuations": 14,
+    "real_atari_smoke_trace_rows": 14000,
+    "real_atari_smoke_rollouts": 140,
+    "exact_original_baseline_transitions": 2000,
+    "independently_reconstructed_accepted_changes": 13,
+    "identity_return_validation": "Zero difference and identical paired trajectory hashes",
+    "smoke_manifest_sha256": "40c40ed36246d3b3a55e6a1e4a78453fb4d979e94743c4a98ea54c2acaae477c",
+    "smoke_report_sha256": "67c4c22ba0c1a83a3209b8454f950869aa0834832d7ccbce4139be075d3e95f9",
+    "smoke_completion_payload_sha256": "4634d47768d69652fe87dc2c47c06cf92d4c66a6523f6778259202701165136b",
+    "smoke_guard_audit_payload_sha256": "36b3d41e0ec81e2b005579b138bcb201e27433dd6be0b0e1f4622db33ce82f3a",
+    "identity_validation_payload_sha256": "8ca6c9dfa8b868b0e19c036d00d57ac47bbbc3ca194995d16f6bc781ce56c1a2",
+    "integration_scope": "Reduced budgets verify operation, not efficacy."
+  },
+  "last_review_date": "2026-11-09",
+  "general_improvement_demonstrated": false,
+  "latest_review": "analysis/improvements_20261108/informe.md",
+  "latest_review_completion": "analysis/improvements_20261108/final/closure_verification.json",
+  "actual_counts": {
+    "completed": 70,
+    "partial": 0,
+    "not_started": 0,
+    "verified_transitions": 7000000,
+    "verified_evaluation_rollouts": 4200,
+    "exact_original_baseline_transitions": 1000000,
+    "independently_reconstructed_changes": 63
+  },
+  "active_evaluation_goal": null,
+  "confirmed_failure_cause": "Archive write probe returned Disk quota exceeded on 2026-11-09.",
+  "recovery_control": "~/projects/rrl_evaluation_recovery_20261109_02",
+  "recovery_jobs": {
+    "preflight": 37899,
+    "resume": 37900,
+    "report": 37901,
+    "analysis": 37902,
+    "guard_final": 37903
+  },
+  "superseded_jobs_cancelled": [
+    37606,
+    37611
+  ],
+  "recovery_preflight": {
+    "job": 37899,
+    "state": "COMPLETED",
+    "exit": "0:0",
+    "runtime": "Linux Conda unchanged",
+    "restored_counters": {
+      "anova/710608/stable_td": 600000,
+      "anova/710610/double_td": 585000
+    },
+    "durable_space_probe_bytes": 67108864
+  },
+  "verified_recovery_progress": {
+    "timestamp_utc": "2026-11-09T16:28:55Z",
+    "completed": 65,
+    "running_units": 2,
+    "not_started_units": 3,
+    "array_job": 37900,
+    "node": "scylla",
+    "original_status_files_unchanged": 63
+  },
+  "recovery_worker_states": {
+    "37900_8": {
+      "state": "COMPLETED",
+      "exit": "0:0",
+      "elapsed": "00:35:35"
+    },
+    "37900_9": {
+      "state": "COMPLETED",
+      "exit": "0:0",
+      "elapsed": "00:43:33"
+    }
+  },
+  "evaluation_completion_scope": "All70 continuations,7M trace rows,4200 evaluations, exact1M original controls, independent63-change audit, downloaded artifacts, final report and plots verified.",
+  "final_jobs": {
+    "37899": "COMPLETED 0:0",
+    "37900_8": "COMPLETED 0:0",
+    "37900_9": "COMPLETED 0:0",
+    "37901": "COMPLETED 0:0",
+    "37902": "COMPLETED 0:0",
+    "37903": "COMPLETED 0:0"
+  },
+  "evaluation_request": "termina la evaluación; verificar descarga y cerrar informe"
+}

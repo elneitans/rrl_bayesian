@@ -1,0 +1,138 @@
+{
+  "schema": "rrtl_confirmation_local_download_verification_v1",
+  "payload": {
+    "complete": true,
+    "campaign": "47cc2276291ba5507aa097850cbd7e3d2332c6d09fa10e0fbd56d4fb6ef81664",
+    "continuations": 15,
+    "verified_trace_rows": 7500000,
+    "verified_trace_segments": 300,
+    "verified_evaluation_rollouts": 3780,
+    "reproduced_training_windows": 1500,
+    "verified_review_documents": 100,
+    "banks_ram_disjoint": true,
+    "records": [
+      {
+        "criterion": "anova",
+        "seed": 721101,
+        "mode": "baseline",
+        "trace_rows": 500000,
+        "evaluation_rollouts": 252,
+        "status_payload_sha256": "8b15f4291a6cc3211004a5fcffcab967bf06682a29d1f5d5fbacdc3110d94376"
+      },
+      {
+        "criterion": "anova",
+        "seed": 721101,
+        "mode": "slow_td",
+        "trace_rows": 500000,
+        "evaluation_rollouts": 252,
+        "status_payload_sha256": "04a5e4198d558084fbad13166078fcce9690b95ea63ec3ea06f1091f43244ca7"
+      },
+      {
+        "criterion": "anova",
+        "seed": 721101,
+        "mode": "refit_only",
+        "trace_rows": 500000,
+        "evaluation_rollouts": 252,
+        "status_payload_sha256": "09ed4f7fe2766adfa155e0f3bec4d1e3042d31cb27abd6f0f2ae2cf0cbaedb4a"
+      },
+      {
+        "criterion": "anova",
+        "seed": 721102,
+        "mode": "baseline",
+        "trace_rows": 500000,
+        "evaluation_rollouts": 252,
+        "status_payload_sha256": "8f7648baba12e87069573c80ae67413a97e654013324b4d5e27a14303d406d18"
+      },
+      {
+        "criterion": "anova",
+        "seed": 721102,
+        "mode": "slow_td",
+        "trace_rows": 500000,
+        "evaluation_rollouts": 252,
+        "status_payload_sha256": "7461e3ca1a433fb41c2e0add6ab593e90c16e031ed71cdbd39feedbee78a81bd"
+      },
+      {
+        "criterion": "anova",
+        "seed": 721102,
+        "mode": "refit_only",
+        "trace_rows": 500000,
+        "evaluation_rollouts": 252,
+        "status_payload_sha256": "c1d7f906d57356c43358baf251a878e99dc98afec8b21c3022e47de263cfc15e"
+      },
+      {
+        "criterion": "anova",
+        "seed": 721103,
+        "mode": "baseline",
+        "trace_rows": 500000,
+        "evaluation_rollouts": 252,
+        "status_payload_sha256": "fb7d687dce6f729ddd2a3d674d4c2ca1d33137df3888bac50dbfa2226e339752"
+      },
+      {
+        "criterion": "anova",
+        "seed": 721103,
+        "mode": "slow_td",
+        "trace_rows": 500000,
+        "evaluation_rollouts": 252,
+        "status_payload_sha256": "06c23538e1e70f73a7d0a0c8d510efc4905270015dc5c237a0f93640073753d8"
+      },
+      {
+        "criterion": "anova",
+        "seed": 721103,
+        "mode": "refit_only",
+        "trace_rows": 500000,
+        "evaluation_rollouts": 252,
+        "status_payload_sha256": "548c002349adc5c9b7cfc17d55444539138ea7cd5b80b60eee005c7318338b14"
+      },
+      {
+        "criterion": "anova",
+        "seed": 721104,
+        "mode": "baseline",
+        "trace_rows": 500000,
+        "evaluation_rollouts": 252,
+        "status_payload_sha256": "ee66c2405f113aa158200dd18d3a41425e032946e6983e5f80e4bc58a7448765"
+      },
+      {
+        "criterion": "anova",
+        "seed": 721104,
+        "mode": "slow_td",
+        "trace_rows": 500000,
+        "evaluation_rollouts": 252,
+        "status_payload_sha256": "dc2e3364307a5adf5009bc74491a1688d9573b0fc0a3a13c5cd081f046b5acfb"
+      },
+      {
+        "criterion": "anova",
+        "seed": 721104,
+        "mode": "refit_only",
+        "trace_rows": 500000,
+        "evaluation_rollouts": 252,
+        "status_payload_sha256": "f8dd3b0b71a7c910e134134db5119482f2453d0ba8dd34afb908607d3a5e6708"
+      },
+      {
+        "criterion": "anova",
+        "seed": 721105,
+        "mode": "baseline",
+        "trace_rows": 500000,
+        "evaluation_rollouts": 252,
+        "status_payload_sha256": "4c09515da3a05922046e2ef0daa02f41a764fcb765f76222b25df090039b2134"
+      },
+      {
+        "criterion": "anova",
+        "seed": 721105,
+        "mode": "slow_td",
+        "trace_rows": 500000,
+        "evaluation_rollouts": 252,
+        "status_payload_sha256": "49f69256a6bd872217eb5f7f92972836bad7a494b7b533072cc0e0f89634b9e2"
+      },
+      {
+        "criterion": "anova",
+        "seed": 721105,
+        "mode": "refit_only",
+        "trace_rows": 500000,
+        "evaluation_rollouts": 252,
+        "status_payload_sha256": "ac27a907d17914ee257bda17dc7c44f005ccbe2679fe7314b11576d34b474350"
+      }
+    ],
+    "scope": "All downloaded committed JSON, trace bytes/rows and training summaries. Large model/probe/emulator blobs remain on cluster; their report and independent refit audit must also pass the closure verifier."
+  },
+  "sha256": "d05f8a91ada6e6affda0cc8047fdffcef1c0a2ab2e168cf330f61d0f35e36562"
+}

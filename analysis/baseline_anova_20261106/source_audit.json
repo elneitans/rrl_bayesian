@@ -1,0 +1,387 @@
+{
+  "schema": "baseline_anova_source_audit_v1",
+  "date": "2026-11-06",
+  "manifests": {
+    "historical": {
+      "path": "/Users/natanzamorano/Documents/Universidad/capstone/tmp/baseline_analysis_20261101/remote/campaign.json",
+      "payload_sha256": "bea23a96c24f3e9ce58363b314c59ed84742c13bfa48b2b580235eaeac027370",
+      "payload_hash_verified": true
+    },
+    "anova": {
+      "path": "/Users/natanzamorano/Documents/Universidad/capstone/tmp/anova_analysis_20261106/remote/corrected_common/campaign.json",
+      "payload_sha256": "db084abfe98c905ee21c9bb51bce6710b1e12351d4aaae37144829d28a0659a6",
+      "payload_hash_verified": true
+    }
+  },
+  "anova_commit": "c2b4faa460904e67ec5ffd5203e54d9df51485bf",
+  "runtime_equal": true,
+  "runtime": {
+    "ale-py": "0.10.2",
+    "gymnasium": "1.1.1",
+    "machine": "x86_64",
+    "numeric_threads": {
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "numpy": "1.26.4",
+    "ocatari": "2.2.1",
+    "platform": "linux",
+    "python": "3.11.7",
+    "scipy": "1.12.0"
+  },
+  "source_count": {
+    "historical": 88,
+    "anova": 90
+  },
+  "difference_count": 13,
+  "modified_count": 11,
+  "added_count": 2,
+  "source_differences": [
+    {
+      "path": "bayesian_rrtl/baseline.py",
+      "change": "modified",
+      "historical_sha256": "e31755759d7ba5bc51a094a55a7e435d4dd2eb9270aa6c3b9865414e5fdacb12",
+      "anova_sha256": "b34c3c5ed8471c9477b4d1169ec31c00cfce8515fdf9dc4da6b9b8db93f59a1e",
+      "historical_exact_source": "/Users/natanzamorano/Documents/Universidad/capstone/rrl_bayesian/historical/pre_rrtl_anova_20261101_code/bayesian_rrtl/baseline.py",
+      "historical_bytes_match_manifest": true,
+      "anova_exact_source": {
+        "git_commit": "c2b4faa460904e67ec5ffd5203e54d9df51485bf",
+        "path": "bayesian_rrtl/baseline.py"
+      },
+      "anova_bytes_match_manifest": true,
+      "effect_category": "criterion_dispatch",
+      "effect": "Selecciona ANOVANode; no cambia fórmula TD, siguiente estado, terminales ni orden TD/estadísticas/split."
+    },
+    {
+      "path": "bayesian_rrtl/baseline_adapter.py",
+      "change": "modified",
+      "historical_sha256": "240e22bf0b5e0493e8e2b3640ee00306c43369877fc18cf7a62502a746ec7436",
+      "anova_sha256": "9b7a992d16c0dca1c1fc3ab3a89fc7b8c316b5766a2ee3f328c41c028d7d9d00",
+      "historical_exact_source": "/Users/natanzamorano/Documents/Universidad/capstone/rrl_bayesian/historical/pre_rrtl_anova_20261101_code/bayesian_rrtl/baseline_adapter.py",
+      "historical_bytes_match_manifest": true,
+      "anova_exact_source": {
+        "git_commit": "c2b4faa460904e67ec5ffd5203e54d9df51485bf",
+        "path": "bayesian_rrtl/baseline_adapter.py"
+      },
+      "anova_bytes_match_manifest": true,
+      "effect_category": "criterion_configuration",
+      "effect": "Añade split_test, validaciones y clase de nodos; conserva normalización, catálogo y política."
+    },
+    {
+      "path": "bayesian_rrtl/baseline_anova.py",
+      "change": "added",
+      "historical_sha256": null,
+      "anova_sha256": "9fecf33aeb156d9b9c58f8c327c73bb56a7edb2a41985e5ef407527714cba5cd",
+      "historical_exact_source": null,
+      "historical_bytes_match_manifest": null,
+      "anova_exact_source": {
+        "git_commit": "c2b4faa460904e67ec5ffd5203e54d9df51485bf",
+        "path": "bayesian_rrtl/baseline_anova.py"
+      },
+      "anova_bytes_match_manifest": true,
+      "effect_category": "new_growth_rule",
+      "effect": "Nueva regla ANOVA sobre Q actualizado, con validación de momentos, degeneraciones, selección y crecimiento."
+    },
+    {
+      "path": "bayesian_rrtl/baseline_checkpoint.py",
+      "change": "modified",
+      "historical_sha256": "5d7e124f70f18182064d0a7a950e2e42d342098e7eea16d90118473a68d52b2b",
+      "anova_sha256": "f7d3210ca6bcc90bf84816f7424681c7e68ae63ee6caa950d1c5253543e72b57",
+      "historical_exact_source": "/Users/natanzamorano/Documents/Universidad/capstone/rrl_bayesian/historical/pre_rrtl_anova_20261101_code/bayesian_rrtl/baseline_checkpoint.py",
+      "historical_bytes_match_manifest": true,
+      "anova_exact_source": {
+        "git_commit": "c2b4faa460904e67ec5ffd5203e54d9df51485bf",
+        "path": "bayesian_rrtl/baseline_checkpoint.py"
+      },
+      "anova_bytes_match_manifest": true,
+      "effect_category": "restoration_validation",
+      "effect": "Añade fuentes/tipos ANOVA y comprueba coherencia de momentos al validar checkpoints; sin modificar Q, estructura o RNG válidos."
+    },
+    {
+      "path": "bayesian_rrtl/config.py",
+      "change": "modified",
+      "historical_sha256": "7da2ea2e139c648a9215bcbdeab18934d01386d18f4ffe692b1d7de23d1d0bce",
+      "anova_sha256": "de9178914683e5e3d3a6a3b8f80d21a21ee8cc652e7e73ab809bac437193d433",
+      "historical_exact_source": "/Users/natanzamorano/Documents/Universidad/capstone/rrl_bayesian/historical/pre_rrtl_anova_20261101_code/bayesian_rrtl/config.py",
+      "historical_bytes_match_manifest": true,
+      "anova_exact_source": {
+        "git_commit": "c2b4faa460904e67ec5ffd5203e54d9df51485bf",
+        "path": "bayesian_rrtl/config.py"
+      },
+      "anova_bytes_match_manifest": true,
+      "effect_category": "criterion_configuration",
+      "effect": "Añade split_test y rechaza combinaciones incompatibles; valor predeterminado historical_f."
+    },
+    {
+      "path": "bayesian_rrtl/evaluation.py",
+      "change": "modified",
+      "historical_sha256": "c3e8b9a834749579d9d666a7975b089fc3a59ed0dd2d788f683d13b934e5d7d2",
+      "anova_sha256": "aa4c9ef3291ce1b1deedcaf42a590a6e9efb38bf2d0eb91119625ab9f66a1a00",
+      "historical_exact_source": "/Users/natanzamorano/Documents/Universidad/capstone/rrl_bayesian/historical/atari_common_C_20261014_code/bayesian_rrtl/evaluation.py",
+      "historical_bytes_match_manifest": true,
+      "anova_exact_source": {
+        "git_commit": "c2b4faa460904e67ec5ffd5203e54d9df51485bf",
+        "path": "bayesian_rrtl/evaluation.py"
+      },
+      "anova_bytes_match_manifest": true,
+      "effect_category": "cost_reporting",
+      "effect": "Presenta costes incompletos como desconocidos y conserva sumas registradas como límite inferior."
+    },
+    {
+      "path": "bayesian_rrtl/online/final_test.py",
+      "change": "modified",
+      "historical_sha256": "1e749a896da659c9269835f41edb1e63a2d0ffebaf15db56b019f37cedcef5b2",
+      "anova_sha256": "af9cc4293898d43063f364547d4460a674022253728c49112410c006b5f651af",
+      "historical_exact_source": "/Users/natanzamorano/Documents/Universidad/capstone/rrl_bayesian/historical/atari_common_C_20261014_code/bayesian_rrtl/online/final_test.py",
+      "historical_bytes_match_manifest": true,
+      "anova_exact_source": {
+        "git_commit": "c2b4faa460904e67ec5ffd5203e54d9df51485bf",
+        "path": "bayesian_rrtl/online/final_test.py"
+      },
+      "anova_bytes_match_manifest": true,
+      "effect_category": "reserved_report_locking",
+      "effect": "Reporte de test reservado distingue unidades pendientes/en ejecución mediante lock; no cambia simulación. Sin reservado ejecutado en esta comparación."
+    },
+    {
+      "path": "bayesian_rrtl/online/learners.py",
+      "change": "modified",
+      "historical_sha256": "3ce155e288d391e7426fa4cae97c51f4e7243ba077a688d59c0bec19922cbf3a",
+      "anova_sha256": "74e1928d5e7602b05f6e492715d849dccb9f0342f97c0aeb310d62f9a66e23e2",
+      "historical_exact_source": "/Users/natanzamorano/Documents/Universidad/capstone/rrl_bayesian/historical/pre_rrtl_anova_20261101_code/bayesian_rrtl/online/learners.py",
+      "historical_bytes_match_manifest": true,
+      "anova_exact_source": {
+        "git_commit": "c2b4faa460904e67ec5ffd5203e54d9df51485bf",
+        "path": "bayesian_rrtl/online/learners.py"
+      },
+      "anova_bytes_match_manifest": true,
+      "effect_category": "factory_refactor_and_metrics",
+      "effect": "Extrae baseline_config con los mismos argumentos compartidos; añade split_test a métricas."
+    },
+    {
+      "path": "bayesian_rrtl/online/protocol.py",
+      "change": "modified",
+      "historical_sha256": "1ea22225234182e4f50c6d2767860f089cf07a5d939b451df6966fded2724813",
+      "anova_sha256": "ed6924b62a424f255d9b31bdc6f07c37347dd28b0d66eb6e0ae85faf7afc15fb",
+      "historical_exact_source": "/Users/natanzamorano/Documents/Universidad/capstone/rrl_bayesian/historical/atari_common_C_20261014_code/bayesian_rrtl/online/protocol.py",
+      "historical_bytes_match_manifest": true,
+      "anova_exact_source": {
+        "git_commit": "c2b4faa460904e67ec5ffd5203e54d9df51485bf",
+        "path": "bayesian_rrtl/online/protocol.py"
+      },
+      "anova_bytes_match_manifest": true,
+      "effect_category": "cost_projection",
+      "effect": "Excluye tiempos/RSS desconocidos de proyecciones y registra conteos incompletos."
+    },
+    {
+      "path": "bayesian_rrtl/online/session.py",
+      "change": "modified",
+      "historical_sha256": "f0709e19594ae6b15bf16e166df0e7cd93f4b77cce80d30d1e12d896141917e0",
+      "anova_sha256": "efc4a8c5dbbf564e69a9c8ec65bc4929679334544af616e5f20b004db0f18290",
+      "historical_exact_source": "/Users/natanzamorano/Documents/Universidad/capstone/rrl_bayesian/historical/pre_rrtl_anova_20261101_code/bayesian_rrtl/online/session.py",
+      "historical_bytes_match_manifest": true,
+      "anova_exact_source": {
+        "git_commit": "c2b4faa460904e67ec5ffd5203e54d9df51485bf",
+        "path": "bayesian_rrtl/online/session.py"
+      },
+      "anova_bytes_match_manifest": true,
+      "effect_category": "restoration_validation",
+      "effect": "Al restaurar baseline contrasta configuración y valida árbol; no cambia step, selección ni epsilon."
+    },
+    {
+      "path": "experiments/audit_pong_representation.py",
+      "change": "modified",
+      "historical_sha256": "ac70d2e4616185d3883b25d4693accd3a5093f46dde2ac15411519ff009f1512",
+      "anova_sha256": "72b705521d5fa2219b76a4ca33716004978f003a8778b9c3c197cd3c5b90a44a",
+      "historical_exact_source": "/Users/natanzamorano/Documents/Universidad/capstone/rrl_bayesian/historical/atari_common_C_20261014_code/experiments/audit_pong_representation.py",
+      "historical_bytes_match_manifest": true,
+      "anova_exact_source": {
+        "git_commit": "c2b4faa460904e67ec5ffd5203e54d9df51485bf",
+        "path": "experiments/audit_pong_representation.py"
+      },
+      "anova_bytes_match_manifest": true,
+      "effect_category": "offline_audit",
+      "effect": "Auditoría offline compara evolución a igual estado y acción y distingue diferencias geométricas; no cambia campañas."
+    },
+    {
+      "path": "experiments/compare_pong_progressive.py",
+      "change": "modified",
+      "historical_sha256": "57e0ca8545b828c818dec943b65e9ecfd4edcd4dec8baa72da908d266fa834ad",
+      "anova_sha256": "578dd7fce2084c2e73b710862e8352dc20676fd353424e8a73d7607ca41b9905",
+      "historical_exact_source": "/Users/natanzamorano/Documents/Universidad/capstone/rrl_bayesian/historical/atari_common_C_20261014_code/experiments/compare_pong_progressive.py",
+      "historical_bytes_match_manifest": true,
+      "anova_exact_source": {
+        "git_commit": "c2b4faa460904e67ec5ffd5203e54d9df51485bf",
+        "path": "experiments/compare_pong_progressive.py"
+      },
+      "anova_bytes_match_manifest": true,
+      "effect_category": "attempt_metadata_and_reporting",
+      "effect": "Inicializa metadata de intentos y reporta costes incompletos; GreedyController y simulación de evaluación sin cambios."
+    },
+    {
+      "path": "experiments/report_rrtl_split_tests.py",
+      "change": "added",
+      "historical_sha256": null,
+      "anova_sha256": "5d19e54be06c6a9c1d6402138012d1befec1a3f3416a14197deac80b6cdf76aa",
+      "historical_exact_source": null,
+      "historical_bytes_match_manifest": null,
+      "anova_exact_source": {
+        "git_commit": "c2b4faa460904e67ec5ffd5203e54d9df51485bf",
+        "path": "experiments/report_rrtl_split_tests.py"
+      },
+      "anova_bytes_match_manifest": true,
+      "effect_category": "new_readonly_reporter",
+      "effect": "Nuevo reporte pareado de artefactos; exige fuentes y runtime idénticos, por lo que rechaza estas dos campañas."
+    }
+  ],
+  "critical_unchanged_sources": {
+    "relational_regresion_tree.py": "5e6fb6015eddb875dc3a38a1981e0da1502fa2bcdeb1db59aba362635eab1a60",
+    "preprocessing.py": "112276f01b888eb5c45e1ae47ca9ea0078d7e1ca623c56f875eec270fc68e5cd",
+    "bayesian_rrtl/targets.py": "5276110077c1011c2dda184ba6ab473b3f87e5aef5336954a7796f7b2f1f46da",
+    "bayesian_rrtl/encoding.py": "32752fd93792c35937baae455566fe04cf99836024e2bc43802923b5257b0857",
+    "bayesian_rrtl/online/environments.py": "5b749728f3b12d3930cd2f3c170b1e69e4b543040850564449d6ba651d0bb0cd",
+    "bayesian_rrtl/ocatari_backend.py": "0b06e76cf25621d08b5f076ab070383744870cc0fe878868cc818683000bda8e",
+    "bayesian_rrtl/games/breakout.py": "9982a559fbe686c35cf680c800cb8a57c365b40be12725b2dea095cbcefb89a2",
+    "bayesian_rrtl/games/slot_relations.py": "27e932e926b304ef5235b013cc7e98268d700b87c9e199e09d96c5b5b356772f",
+    "bayesian_rrtl/online/storage.py": "4353bc2cccdd3508e7c3b1f682560be5cda19b6919a43a61baf4bcacbb881dc5"
+  },
+  "protocol_differences": [
+    {
+      "path": "protocol/learners/corrected_common/split_test",
+      "historical": null,
+      "anova": "anova",
+      "historical_missing": true,
+      "anova_missing": false
+    },
+    {
+      "path": "protocol/name",
+      "historical": "breakout_corrected_common_1m_then_2m_20261028",
+      "anova": "breakout_baseline_anova_10seeds_1m_20261102"
+    }
+  ],
+  "cell_differences": [
+    {
+      "path": "cells/0/estimator/split_test",
+      "historical": null,
+      "anova": "anova",
+      "historical_missing": true,
+      "anova_missing": false
+    },
+    {
+      "path": "cells/0/hash",
+      "historical": "0b81a9c49a35ec5ec94865c885d33c62aa05986765ac15af4c532b982a394930",
+      "anova": "b651f5e8090f78fcc11a6b0f13b02773af78a1689f446521209ebf8ef6daac62"
+    },
+    {
+      "path": "cells/1/estimator/split_test",
+      "historical": null,
+      "anova": "anova",
+      "historical_missing": true,
+      "anova_missing": false
+    },
+    {
+      "path": "cells/1/hash",
+      "historical": "6de6e7d0ebd38861af4d73ae646cc7fdfda614db61a5610a2c944c3d442f3de9",
+      "anova": "dd759a6d979110e46e627ea97fda06ea8f3c033f25610b1295875389961dc09b"
+    },
+    {
+      "path": "cells/2/estimator/split_test",
+      "historical": null,
+      "anova": "anova",
+      "historical_missing": true,
+      "anova_missing": false
+    },
+    {
+      "path": "cells/2/hash",
+      "historical": "75bfcfb48d0bfbcbaba0f690598bc92e97af3bd9a6691bb22472b886a0645945",
+      "anova": "ae83e67d32ae2c7717941731c92c6ee2572636d255e165e4731120d27ebd1e06"
+    },
+    {
+      "path": "cells/3/estimator/split_test",
+      "historical": null,
+      "anova": "anova",
+      "historical_missing": true,
+      "anova_missing": false
+    },
+    {
+      "path": "cells/3/hash",
+      "historical": "0399734d8fd78d04905a16cb1c71b8a42dd39bf70263bdf731d28ed52df6442d",
+      "anova": "06ccc8f5d3e587594d2c03e08cfbeb62ac777714b1843c40ba6d00d46c22c4df"
+    },
+    {
+      "path": "cells/4/estimator/split_test",
+      "historical": null,
+      "anova": "anova",
+      "historical_missing": true,
+      "anova_missing": false
+    },
+    {
+      "path": "cells/4/hash",
+      "historical": "18ef4661cf89a0163f83d0813791cbfa9d1a3925416ce6fadd440986ae3d01db",
+      "anova": "9c27aec82e71e33383b76c28c49fc0a02e5516c2560fc9368864d07e5250ad36"
+    },
+    {
+      "path": "cells/5/estimator/split_test",
+      "historical": null,
+      "anova": "anova",
+      "historical_missing": true,
+      "anova_missing": false
+    },
+    {
+      "path": "cells/5/hash",
+      "historical": "96e49a429ab76e55c15537d7026571679d4704807ca415b04dae3d48a3663919",
+      "anova": "33fc560a267a303b74b6d360caf3a47034f5d414e4747619d37a75ec6e94486d"
+    },
+    {
+      "path": "cells/6/estimator/split_test",
+      "historical": null,
+      "anova": "anova",
+      "historical_missing": true,
+      "anova_missing": false
+    },
+    {
+      "path": "cells/6/hash",
+      "historical": "c5dc840da803a3ef379b860b77fbb0adca2984ee81634a53df88491edeb452ef",
+      "anova": "d9c31226e8d7a13fe3fed1b2081f3f9af8bef0050e0e9e89f22d2e799611f1f0"
+    },
+    {
+      "path": "cells/7/estimator/split_test",
+      "historical": null,
+      "anova": "anova",
+      "historical_missing": true,
+      "anova_missing": false
+    },
+    {
+      "path": "cells/7/hash",
+      "historical": "353366540db20d4af3740c5188c5e9c562082a9f13f006d3f2698a9b65a91b66",
+      "anova": "4d43e1ce6f0537e8908872e6841282f8e494f2b7e2b92f84c9f183f201724d6c"
+    },
+    {
+      "path": "cells/8/estimator/split_test",
+      "historical": null,
+      "anova": "anova",
+      "historical_missing": true,
+      "anova_missing": false
+    },
+    {
+      "path": "cells/8/hash",
+      "historical": "45b285409be7743ffe7f9a4871d779c4005539bb3fb2371888943a7d90c4d754",
+      "anova": "4f15af9072670354e49607c90befcb45f39b04b47589df091981c6870f7efebf"
+    },
+    {
+      "path": "cells/9/estimator/split_test",
+      "historical": null,
+      "anova": "anova",
+      "historical_missing": true,
+      "anova_missing": false
+    },
+    {
+      "path": "cells/9/hash",
+      "historical": "2c88a1d90781efc9db393726bf90d1ae08bb3092988f4d53bfccec195fdf98a9",
+      "anova": "e18f9cf7aa47fd0e23982e99c91d452f3cf971231769755a7f32867e1bd10d1b"
+    }
+  ],
+  "interpretation": "Protocolos iguales salvo nombre y criterio; celdas iguales salvo split_test y hashes derivados. No se detectan cambios simultáneos de TD, recompensa, entorno, representación o simulación de evaluación. Distintos bytes impiden usar el exportador estricto como validación pareada sin réplica a idéntica versión.",
+  "scope": "Auditoría estática de bytes/protocolos; no reejecuta entrenamiento/evaluación ni prueba causalidad sobre caídas."
+}

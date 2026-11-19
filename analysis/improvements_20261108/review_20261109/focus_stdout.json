@@ -1,0 +1,44 @@
+{
+  "prefix_checks": [
+    {
+      "criterion": "historical_f",
+      "seed": 710607,
+      "method": "guarded",
+      "control": "baseline",
+      "exact_prefix_transitions": 25000,
+      "scope": "Actions, TD, Q before/after, rewards and episode fields coincide until the first accepted structural intervention at 525k. Later returns include subsequent learning."
+    },
+    {
+      "criterion": "anova",
+      "seed": 710602,
+      "method": "stable_guarded",
+      "control": "stable_td",
+      "exact_prefix_transitions": 25000,
+      "scope": "Actions, TD, Q before/after, rewards and episode fields coincide until the first accepted structural intervention at 525k. Later returns include subsequent learning."
+    }
+  ],
+  "descriptive_intervals": [
+    {
+      "criterion": "historical_f",
+      "variant": "slow_td",
+      "seeds": 5,
+      "mean_paired_difference": 1.6833333333333333,
+      "bootstrap_descriptive_95": [
+        -0.15,
+        4.799999999999999
+      ],
+      "scope": "Post-hoc descriptive interval by training seed; five selected seeds, no confirmatory significance claim."
+    },
+    {
+      "criterion": "anova",
+      "variant": "slow_td",
+      "seeds": 5,
+      "mean_paired_difference": 10.55,
+      "bootstrap_descriptive_95": [
+        -13.166666666666666,
+        35.016666666666666
+      ],
+      "scope": "Post-hoc descriptive interval by training seed; five selected seeds, no confirmatory significance claim."
+    }
+  ]
+}

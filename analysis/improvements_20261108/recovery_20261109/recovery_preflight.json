@@ -1,0 +1,29 @@
+{
+  "payload": {
+    "campaign": "5c68a97ac3ddd52553a705703ef4faf12d014108b41ca16e7b3b84d7eff805b4",
+    "complete": true,
+    "durable_allocation_probe_bytes": 67108864,
+    "original_campaign_untouched": true,
+    "protocol_changed": false,
+    "restored": [
+      {
+        "checkpoint_sha256": "75d8e34869976284e0a9a09809ae6936c2764113d97e614a9faf6ea9b6d5fce1",
+        "counter": 600000,
+        "criterion": "anova",
+        "mode": "stable_td",
+        "role": "confirmation",
+        "seed": 710608
+      },
+      {
+        "checkpoint_sha256": "781c88f860814a2992e1dde78b45a381dd70cb596a436b54d003fdd2cc63cbbc",
+        "counter": 585000,
+        "criterion": "anova",
+        "mode": "double_td",
+        "role": "development",
+        "seed": 710610
+      }
+    ]
+  },
+  "schema": "pong_analysis_unit_v2",
+  "sha256": "ad3d69eeed00fdd7d6895fa648bc104ec793ed357aa3071adb4943bd397e0ab1"
+}

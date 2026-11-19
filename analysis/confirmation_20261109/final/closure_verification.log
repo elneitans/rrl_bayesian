@@ -1,0 +1,61 @@
+{
+  "complete": true,
+  "campaign": "47cc2276291ba5507aa097850cbd7e3d2332c6d09fa10e0fbd56d4fb6ef81664",
+  "counts": {
+    "continuations": 15,
+    "verified_trace_rows": 7500000,
+    "evaluation_rollouts": 3780,
+    "exact_baseline_transitions": 2500000
+  },
+  "parent_transitions": 5000000,
+  "parent_development_rollouts": 55,
+  "technical_integration_verified": true,
+  "local_trace_and_evaluation_verification": "d05f8a91ada6e6affda0cc8047fdffcef1c0a2ab2e168cf330f61d0f35e36562",
+  "parent_verification": "2f1994d620ea39f74770367b6ba26c9a04bcd9f6982bc581cf763f9c63972dc1",
+  "independently_reconstructed_changes": 93,
+  "summaries": [
+    {
+      "mode": "baseline",
+      "training_seeds": 5,
+      "mean_final_return": 16.650000000000002,
+      "median_seed_final_mean": 12.75,
+      "mean_paired_difference": 0.0,
+      "seed_wins": 0,
+      "seed_ties": 5,
+      "seed_losses": 0,
+      "bootstrap_descriptive_95_lower": 0.0,
+      "bootstrap_descriptive_95_upper": 0.0,
+      "seeds_final_below_parent": 5,
+      "seeds_final_below_observed_peak": 5
+    },
+    {
+      "mode": "slow_td",
+      "training_seeds": 5,
+      "mean_final_return": 32.233333333333334,
+      "median_seed_final_mean": 6.833333333333333,
+      "mean_paired_difference": 15.583333333333332,
+      "seed_wins": 3,
+      "seed_ties": 0,
+      "seed_losses": 2,
+      "bootstrap_descriptive_95_lower": -5.35,
+      "bootstrap_descriptive_95_upper": 40.25,
+      "seeds_final_below_parent": 3,
+      "seeds_final_below_observed_peak": 3
+    },
+    {
+      "mode": "refit_only",
+      "training_seeds": 5,
+      "mean_final_return": 27.1,
+      "median_seed_final_mean": 20.083333333333332,
+      "mean_paired_difference": 10.45,
+      "seed_wins": 3,
+      "seed_ties": 0,
+      "seed_losses": 2,
+      "bootstrap_descriptive_95_lower": -3.0833333333333344,
+      "bootstrap_descriptive_95_upper": 26.5,
+      "seeds_final_below_parent": 4,
+      "seeds_final_below_observed_peak": 5
+    }
+  ],
+  "scope": "Five prospectively fixed new training seeds, shared early snapshots. Post-hoc descriptive bootstrap by training seed; no reserved test or automatic winner selection."
+}

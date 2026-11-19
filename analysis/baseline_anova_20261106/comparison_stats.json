@@ -1,0 +1,341 @@
+{
+  "scope": "Descriptive matched-seed comparison of final_development returns at 1M rederived from audit.py CSV outputs. audit.py verified individual evaluation/checkpoint units and hashes. This script asserts agreement with ANOVA closure and prior historical summary. Source versions differ; supplied protocol/source comparison is outside this script.",
+  "sources": {
+    "anova_closure": "/Users/natanzamorano/Documents/Universidad/capstone/rrl_bayesian/analysis/baseline_anova_20261106/anova_calendar_remote.json",
+    "anova_closure_sha256": "06bcb7b9c1e59b4f51c2aa99e5d96d90070c1c15a626482a1fdf2dbe93ed8c8f",
+    "historical_summary": "/Users/natanzamorano/Documents/Universidad/capstone/rrl_bayesian/analysis/baseline_10_seeds_20261102/evaluation_summary.csv",
+    "audited_csv": {
+      "historical": {
+        "path": "/Users/natanzamorano/Documents/Universidad/capstone/rrl_bayesian/analysis/baseline_anova_20261106/historical_evaluations.csv",
+        "sha256": "c97dcb9e6ac5b2accf9493d6488af9e2f461b9f53e49d04c4dffaa795b5d2d31"
+      },
+      "anova": {
+        "path": "/Users/natanzamorano/Documents/Universidad/capstone/rrl_bayesian/analysis/baseline_anova_20261106/anova_evaluations.csv",
+        "sha256": "54cac616a1a7fe2b2fbcb9ff2ecd5b1e7816efea1dafe23bc4a1a11fc45101bb"
+      }
+    },
+    "audit_script": "/Users/natanzamorano/Documents/Universidad/capstone/rrl_bayesian/analysis/baseline_anova_20261106/audit.py"
+  },
+  "experimental_unit": "trained agent / training seed, n=10 per criterion; not the 100 evaluation episodes",
+  "seeds": [
+    710601,
+    710602,
+    710603,
+    710604,
+    710605,
+    710606,
+    710607,
+    710608,
+    710609,
+    710610
+  ],
+  "paired_by_seed": [
+    {
+      "seed": 710601,
+      "baseline_historical_f": 101.0,
+      "baseline_anova": 17.0,
+      "difference_anova_minus_historical": -84.0,
+      "anova_evaluations": 10,
+      "anova_unique_episode_returns": 1,
+      "anova_unique_durations": 1,
+      "anova_truncations": 0,
+      "anova_training_active_seconds": 5441.1834836816415
+    },
+    {
+      "seed": 710602,
+      "baseline_historical_f": 3.0,
+      "baseline_anova": 160.0,
+      "difference_anova_minus_historical": 157.0,
+      "anova_evaluations": 10,
+      "anova_unique_episode_returns": 1,
+      "anova_unique_durations": 1,
+      "anova_truncations": 0,
+      "anova_training_active_seconds": 5085.467295499984
+    },
+    {
+      "seed": 710603,
+      "baseline_historical_f": 25.0,
+      "baseline_anova": 3.0,
+      "difference_anova_minus_historical": -22.0,
+      "anova_evaluations": 10,
+      "anova_unique_episode_returns": 1,
+      "anova_unique_durations": 1,
+      "anova_truncations": 0,
+      "anova_training_active_seconds": 5249.993258193601
+    },
+    {
+      "seed": 710604,
+      "baseline_historical_f": 29.0,
+      "baseline_anova": 27.0,
+      "difference_anova_minus_historical": -2.0,
+      "anova_evaluations": 10,
+      "anova_unique_episode_returns": 1,
+      "anova_unique_durations": 1,
+      "anova_truncations": 0,
+      "anova_training_active_seconds": 5066.260130911134
+    },
+    {
+      "seed": 710605,
+      "baseline_historical_f": 0.0,
+      "baseline_anova": 6.0,
+      "difference_anova_minus_historical": 6.0,
+      "anova_evaluations": 10,
+      "anova_unique_episode_returns": 1,
+      "anova_unique_durations": 1,
+      "anova_truncations": 0,
+      "anova_training_active_seconds": 5277.112136987271
+    },
+    {
+      "seed": 710606,
+      "baseline_historical_f": 25.0,
+      "baseline_anova": 139.0,
+      "difference_anova_minus_historical": 114.0,
+      "anova_evaluations": 10,
+      "anova_unique_episode_returns": 1,
+      "anova_unique_durations": 1,
+      "anova_truncations": 0,
+      "anova_training_active_seconds": 5133.290176233742
+    },
+    {
+      "seed": 710607,
+      "baseline_historical_f": 55.0,
+      "baseline_anova": 87.0,
+      "difference_anova_minus_historical": 32.0,
+      "anova_evaluations": 10,
+      "anova_unique_episode_returns": 1,
+      "anova_unique_durations": 1,
+      "anova_truncations": 0,
+      "anova_training_active_seconds": 5044.539899704978
+    },
+    {
+      "seed": 710608,
+      "baseline_historical_f": 1.0,
+      "baseline_anova": 42.0,
+      "difference_anova_minus_historical": 41.0,
+      "anova_evaluations": 10,
+      "anova_unique_episode_returns": 1,
+      "anova_unique_durations": 1,
+      "anova_truncations": 0,
+      "anova_training_active_seconds": 5020.098060374847
+    },
+    {
+      "seed": 710609,
+      "baseline_historical_f": 37.0,
+      "baseline_anova": 95.0,
+      "difference_anova_minus_historical": 58.0,
+      "anova_evaluations": 10,
+      "anova_unique_episode_returns": 1,
+      "anova_unique_durations": 1,
+      "anova_truncations": 0,
+      "anova_training_active_seconds": 4628.624696000712
+    },
+    {
+      "seed": 710610,
+      "baseline_historical_f": 3.0,
+      "baseline_anova": 8.0,
+      "difference_anova_minus_historical": 5.0,
+      "anova_evaluations": 10,
+      "anova_unique_episode_returns": 1,
+      "anova_unique_durations": 1,
+      "anova_truncations": 0,
+      "anova_training_active_seconds": 4954.180338849314
+    }
+  ],
+  "summary": {
+    "historical_mean": 27.9,
+    "anova_mean": 58.4,
+    "historical_median": 25.0,
+    "anova_median": 34.5,
+    "historical_sample_sd": 31.48350538156625,
+    "anova_sample_sd": 58.02336694049313,
+    "mean_difference": 30.5,
+    "median_paired_difference": 19.0,
+    "difference_of_medians": 9.5,
+    "mean_ratio_anova_over_historical": 2.0931899641577063,
+    "wins_anova": 7,
+    "losses_anova": 3,
+    "ties": 0,
+    "historical_return_at_most_3": 4,
+    "anova_return_at_most_3": 1,
+    "historical_at_least_10": 6,
+    "anova_at_least_10": 7
+  },
+  "paired_seed_percentile_bootstrap": {
+    "iterations": 100000,
+    "random_seed": 20261106,
+    "quantile": "linear interpolation at (N-1)*p",
+    "confidence_level": 0.95,
+    "resample": "same sampled seed indices applied jointly to both criteria; ten seeds sampled with replacement",
+    "intervals": {
+      "mean_difference": {
+        "low": -8.600000000000001,
+        "high": 71.4,
+        "finite_resamples": 100000
+      },
+      "median_paired_difference": {
+        "low": -8.5,
+        "high": 77.5,
+        "finite_resamples": 100000
+      },
+      "mean_ratio_anova_over_historical": {
+        "low": 0.7801262964479817,
+        "high": 5.7301613408521295,
+        "finite_resamples": 100000
+      },
+      "difference_of_medians": {
+        "low": -17.0,
+        "high": 88.0,
+        "finite_resamples": 100000
+      },
+      "anova_mean": {
+        "low": 26.1,
+        "high": 93.8,
+        "finite_resamples": 100000
+      },
+      "historical_mean": {
+        "low": 11.6,
+        "high": 48.0,
+        "finite_resamples": 100000
+      }
+    },
+    "caution": "Small n; percentile bootstrap and observed matching do not remove source-version confounding or provide population certainty."
+  },
+  "exact_sign_test": {
+    "wins": 7,
+    "losses": 3,
+    "ties_excluded": 0,
+    "p_one_sided_anova_better": 0.171875,
+    "p_two_sided": 0.34375,
+    "null": "conditional on non-tie paired differences, positive and negative signs independent and equally likely",
+    "interpretation": "Descriptive exploratory test; no pre-registered multiplicity control or strict randomized attribution of criterion alone."
+  },
+  "sensitivity": {
+    "leave_one_seed_out": [
+      {
+        "excluded_seed": 710601,
+        "remaining_n": 9,
+        "mean_difference": 43.22222222222222
+      },
+      {
+        "excluded_seed": 710602,
+        "remaining_n": 9,
+        "mean_difference": 16.444444444444443
+      },
+      {
+        "excluded_seed": 710603,
+        "remaining_n": 9,
+        "mean_difference": 36.333333333333336
+      },
+      {
+        "excluded_seed": 710604,
+        "remaining_n": 9,
+        "mean_difference": 34.111111111111114
+      },
+      {
+        "excluded_seed": 710605,
+        "remaining_n": 9,
+        "mean_difference": 33.22222222222222
+      },
+      {
+        "excluded_seed": 710606,
+        "remaining_n": 9,
+        "mean_difference": 21.22222222222222
+      },
+      {
+        "excluded_seed": 710607,
+        "remaining_n": 9,
+        "mean_difference": 30.333333333333332
+      },
+      {
+        "excluded_seed": 710608,
+        "remaining_n": 9,
+        "mean_difference": 29.333333333333332
+      },
+      {
+        "excluded_seed": 710609,
+        "remaining_n": 9,
+        "mean_difference": 27.444444444444443
+      },
+      {
+        "excluded_seed": 710610,
+        "remaining_n": 9,
+        "mean_difference": 33.333333333333336
+      }
+    ],
+    "leave_one_out_mean_difference_range": [
+      16.444444444444443,
+      43.22222222222222
+    ],
+    "exclude_two_largest_positive_differences": {
+      "excluded_seeds": [
+        710606,
+        710602
+      ],
+      "remaining_n": 8,
+      "historical_mean": 31.375,
+      "anova_mean": 35.625,
+      "mean_difference": 4.25,
+      "note": "Post-hoc sensitivity, not an alternate unbiased effect estimate."
+    },
+    "paired_difference_trimmed_mean_10pct": 29.0,
+    "paired_difference_trimmed_mean_20pct": 23.333333333333332,
+    "two_largest_positive_differences_sum": 271.0,
+    "total_paired_difference_sum": 305.0
+  },
+  "learning_curves": {
+    "audited_intermediate": {
+      "historical": {
+        "0": {
+          "mean": 1.0,
+          "median": 1.0,
+          "training_seeds": 10
+        },
+        "100000": {
+          "mean": 20.6,
+          "median": 4.5,
+          "training_seeds": 10
+        },
+        "500000": {
+          "mean": 15.2,
+          "median": 3.0,
+          "training_seeds": 10
+        },
+        "1000000": {
+          "mean": 27.9,
+          "median": 25.0,
+          "training_seeds": 10
+        }
+      },
+      "anova": {
+        "0": {
+          "mean": 1.0,
+          "median": 1.0,
+          "training_seeds": 10
+        },
+        "100000": {
+          "mean": 25.6,
+          "median": 20.0,
+          "training_seeds": 10
+        },
+        "500000": {
+          "mean": 58.9,
+          "median": 24.5,
+          "training_seeds": 10
+        },
+        "1000000": {
+          "mean": 58.4,
+          "median": 34.5,
+          "training_seeds": 10
+        }
+      }
+    },
+    "anova_intermediate_available_in_closure": false,
+    "note": "Intermediate curves are rederived from audited individual evaluation CSV, not from the closure report. Sparse checkpoint observations do not establish a continuous trajectory."
+  },
+  "limitations": [
+    "All ten ANOVA episodes per agent have identical return and duration; they do not supply ten independent trained-agent replicates.",
+    "Same seed IDs allow a descriptive matched comparison, but trajectories and episode boundaries diverge after different decisions.",
+    "Final_development is inspected development evaluation, not reserved test.",
+    "Statistical intervals ignore uncertainty due to protocol/source differences and deterministic-start coverage."
+  ]
+}

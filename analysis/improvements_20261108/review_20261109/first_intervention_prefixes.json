@@ -1,0 +1,18 @@
+[
+  {
+    "criterion": "historical_f",
+    "seed": 710607,
+    "method": "guarded",
+    "control": "baseline",
+    "exact_prefix_transitions": 25000,
+    "scope": "Actions, TD, Q before/after, rewards and episode fields coincide until the first accepted structural intervention at 525k. Later returns include subsequent learning."
+  },
+  {
+    "criterion": "anova",
+    "seed": 710602,
+    "method": "stable_guarded",
+    "control": "stable_td",
+    "exact_prefix_transitions": 25000,
+    "scope": "Actions, TD, Q before/after, rewards and episode fields coincide until the first accepted structural intervention at 525k. Later returns include subsequent learning."
+  }
+]

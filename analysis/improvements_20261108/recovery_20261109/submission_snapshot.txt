@@ -1,0 +1,41 @@
+2026-11-09T16:14:51Z
+ORIGINAL=/home/natan.brugueras/archive/rrl_improvements_20261108_01
+RECOVERY=/home/natan.brugueras/projects/rrl_evaluation_recovery_20261109_02
+STRATEGY=Private copies of both partial units; completed units and immutable banks read from original; completed units must not be opened for writing.
+MANIFEST=Byte-identical; both private partial unit copies compared recursively by checksum.
+cf8b53653a11262ba2c22d06675d308230c845bad7f4ff1328c4ce11149f5d20  /home/natan.brugueras/projects/rrl_evaluation_recovery_20261109_02/59_recover_rrtl_improvements.sh
+3acbf4ea2c63de533ee62c2dfdcbdd4301798b53202a1caef03f9b8a54965f87  /home/natan.brugueras/projects/rrl_evaluation_recovery_20261109_02/60_preflight_rrtl_recovery.sbatch
+5cb6d5b1d4a3230dc3e11eda37512fd3e578094fe17b95b4115a8bb9ee6b3c1f  /home/natan.brugueras/projects/rrl_evaluation_recovery_20261109_02/61_resume_rrtl_incomplete.sbatch
+preflight	37899
+resume	37900
+report	37901
+analysis	37902
+guard_final	37903
+                   JOBID                   NAME        STATE         TIME                    NODELIST(REASON)
+                   37903        rrl-guard-audit      PENDING         0:00                        (Dependency)
+                   37902   rrl-improve-analysis      PENDING         0:00                        (Dependency)
+                   37901            rrl-improve      PENDING         0:00                        (Dependency)
+           37900_[8-9%2]    rrl-improve-recover      PENDING         0:00                        (Dependency)
+                   37899              COMPLETED      0:0   00:00:34 
+                   37901                PENDING      0:0   00:00:00 
+           37900_[8-9%2]                PENDING      0:0   00:00:00 
+                   37902                PENDING      0:0   00:00:00 
+                   37903                PENDING      0:0   00:00:00 
+No broken requirements found.
+scylla
+Python 3.11.7
+job=37899 root=/home/natan.brugueras/archive/rrl_improvement_code_20261108_v1
+{'recovery_preflight_passed': True, 'restored': [{'criterion': 'anova', 'role': 'confirmation', 'seed': 710608, 'mode': 'stable_td', 'counter': 600000, 'checkpoint_sha256': '75d8e34869976284e0a9a09809ae6936c2764113d97e614a9faf6ea9b6d5fce1'}, {'criterion': 'anova', 'role': 'development', 'seed': 710610, 'mode': 'double_td', 'counter': 585000, 'checkpoint_sha256': '781c88f860814a2992e1dde78b45a381dd70cb596a436b54d003fdd2cc63cbbc'}]}
+
+------------------------------------------------------------------------
+[Slurm] Este trabajo (#37899) terminó SIN reporte de rendimiento por correo.
+Puedes recibir un correo con el uso de CPU, RAM y GPU de tus trabajos
+(y sugerencias para que esperen menos en cola) agregando esta línea
+en tu script de sbatch, junto a las líneas #SBATCH:
+
+    #SENDJOBREPORT
+
+Dudas: slurmjobs@cenia.cl
+------------------------------------------------------------------------
+A.L.E: Arcade Learning Environment (version 0.10.2+c9d4b19)
+[Powered by Stella]

@@ -1,0 +1,127 @@
+{
+  "status": "complete",
+  "archive": "/tmp/rrl_confirmation_source_20261109_v2.tar.gz",
+  "sha256": "ccd1a98eb65c40d085d9d0fc7cdc31e7ca0534819296dbe0ce2e7f4bdc602f8a",
+  "files": 197,
+  "objective": "New-seed longer confirmation of baseline vs slow_td vs refit_only ANOVA",
+  "goal_complete": true,
+  "expected": {
+    "parents": 5,
+    "parent_transitions": 5000000,
+    "continuations": 15,
+    "continuation_transitions": 7500000,
+    "evaluation_rollouts": 3780
+  },
+  "local_test_session": 90731,
+  "source_archive": "/tmp/rrl_confirmation_source_20261109_v2.tar.gz",
+  "source_archive_sha256": "ccd1a98eb65c40d085d9d0fc7cdc31e7ca0534819296dbe0ce2e7f4bdc602f8a",
+  "source_files": 197,
+  "source_root": "~/projects/rrl_confirmation_code_20261109_v2",
+  "control_root": "~/projects/rrl_confirmation_20261109_01",
+  "preflight_job": 38115,
+  "remote_transfer_executed": true,
+  "approval_review_failure_resolved": true,
+  "local_test_sessions": [
+    90731,
+    85471
+  ],
+  "next": null,
+  "linux_test_results": {
+    "job": 38115,
+    "passed": 26,
+    "warnings": 13,
+    "seconds": 13.96
+  },
+  "integration_batch": "slurm/65_confirmation_integration.sbatch",
+  "main_submission_requires_integration_dependency": true,
+  "local_test_outcome": "Local Python stalled while importing pandas/dateutil files before collection; diagnostic run deliberately interrupted after stack capture. Linux26 tests passed and are authoritative.",
+  "control_operational_batches": [
+    "slurm/63_confirmation_worker.sbatch",
+    "slurm/64_submit_confirmation.sh",
+    "slurm/65_confirmation_integration.sbatch"
+  ],
+  "parent_setup_serialization": "Blocking setup lock only around freeze/authorize; training remains two-way parallel.",
+  "remaining_work": [],
+  "preflight_completed": {
+    "job": 38115,
+    "state": "COMPLETED",
+    "exit": "0:0",
+    "elapsed_seconds": 406,
+    "tests_passed": 26,
+    "real_cost_decisions": 20480,
+    "real_cost_evaluations": 9
+  },
+  "resource_review": {
+    "home_du_bytes": 22860912128,
+    "home_quota_reference_bytes": 50000000000,
+    "quota_reference_scope": "User-provided quota from earlier session, not independently queried now. Current home writes and real cost run succeeded.",
+    "estimated_parent_training_seconds_each": [
+      4017.2112741174715,
+      4017.2112741174715
+    ],
+    "estimated_total_parent_log_bytes": 2095923339.84375,
+    "planning_additional_storage_bytes": 12000000000,
+    "projection_limit": "Observed early model sizes are not an upper bound; monitor growth and space."
+  },
+  "operational_sources": {
+    "slurm/63_confirmation_worker.sbatch": "9306f8e1a6d8aa0b8a46227e254c1815452081eb3f2a9d55bec2ddecb7cbee51",
+    "slurm/64_submit_confirmation.sh": "15f3447273fa818ba36cdfb7be48f39590eadff26785b78f5630289a02aae4a8",
+    "slurm/65_confirmation_integration.sbatch": "effa4c857401a98f00a8e03e35570756b795bef5e97e1dbba602d5a97db70aab"
+  },
+  "jobs": {
+    "parents": 38120,
+    "integration": 38121,
+    "prepare": 38122,
+    "continue": 38123,
+    "report": 38124,
+    "analyze": 38127,
+    "audit": 38128,
+    "parents_audit": 38132,
+    "figures": 38390,
+    "figures_corrected": 38393
+  },
+  "verified_live_parent_workers": [],
+  "submission_snapshot": "analysis/confirmation_20261109/submission_snapshot.txt",
+  "verified_at_utc": "2026-11-10T13:31:57Z",
+  "verified_parent_frontiers": {
+    "721101": 1000000,
+    "721102": 1000000,
+    "721103": 1000000,
+    "721104": 1000000,
+    "721105": 1000000
+  },
+  "verified_running_jobs": [],
+  "monitor_session": null,
+  "monitor_limit_note": "80 polls at45s. An observation limit is not a job failure; query Slurm before deciding next action.",
+  "closure_verifier": "analysis/confirmation_20261109/verify_results.py",
+  "local_download_verifier": "analysis/confirmation_20261109/verify_download.py",
+  "verifier_syntax_checked": true,
+  "parent_closure_verifier": "analysis/confirmation_20261109/verify_parents.py",
+  "closure_verifiers_run_on_complete_data": true,
+  "parent_audit_state": "COMPLETED0:0;5M parent transitions and55 development evaluations verified",
+  "goal_turn_classification": "progress: all runs and independent audits completed; complete download verified; all5seed results analyzed; figures visually checked; report and10-requirement closure certificate finalized.",
+  "parent_audit_frozen_sources": {
+    "audit_tools/verify_parents.py": "857f4cb1cb9b56d51d6bb310a0f74cce47bf0674266d224592646a46581d9c42",
+    "audit_tools/verify_results.py": "04951cd105f4e9043d8d424472e8b4ba364868012446290806b13ca73d5562c5",
+    "66_confirmation_verify_parents.sbatch": "fe19b9304ca8e0db0126a28a2f8a29101448d38bfa5e7bfafcb1ad932110b933"
+  },
+  "operational_note": "First30-minute attempt boundaries checkpointed and automatically resumed in same live parent jobs. No resubmission. Parent audit38132 waits for all five parents.",
+  "download_root": "results_cluster/rrtl_confirmation_20261109_01",
+  "download_completed": true,
+  "verified_final_counts": {
+    "continuations": 15,
+    "verified_trace_rows": 7500000,
+    "evaluation_rollouts": 3780,
+    "exact_baseline_transitions": 2500000,
+    "independently_audited_refits": 93
+  },
+  "scientific_closure_complete": true,
+  "completed_at_utc": "2026-11-10T13:54:57.295240+00:00",
+  "report": "analysis/confirmation_20261109/informe.md",
+  "certificate": "analysis/confirmation_20261109/final/closure_verification.json",
+  "final_means": {
+    "baseline": 16.650000000000002,
+    "slow_td": 32.233333333333334,
+    "refit_only": 27.1
+  }
+}

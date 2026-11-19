@@ -1,0 +1,135 @@
+{
+  "summary": {
+    "historical_mean": 27.9,
+    "anova_mean": 58.4,
+    "historical_median": 25.0,
+    "anova_median": 34.5,
+    "historical_sample_sd": 31.48350538156625,
+    "anova_sample_sd": 58.02336694049313,
+    "mean_difference": 30.5,
+    "median_paired_difference": 19.0,
+    "difference_of_medians": 9.5,
+    "mean_ratio_anova_over_historical": 2.0931899641577063,
+    "wins_anova": 7,
+    "losses_anova": 3,
+    "ties": 0,
+    "historical_return_at_most_3": 4,
+    "anova_return_at_most_3": 1,
+    "historical_at_least_10": 6,
+    "anova_at_least_10": 7
+  },
+  "bootstrap": {
+    "mean_difference": {
+      "low": -8.600000000000001,
+      "high": 71.4,
+      "finite_resamples": 100000
+    },
+    "median_paired_difference": {
+      "low": -8.5,
+      "high": 77.5,
+      "finite_resamples": 100000
+    },
+    "mean_ratio_anova_over_historical": {
+      "low": 0.7801262964479817,
+      "high": 5.7301613408521295,
+      "finite_resamples": 100000
+    },
+    "difference_of_medians": {
+      "low": -17.0,
+      "high": 88.0,
+      "finite_resamples": 100000
+    },
+    "anova_mean": {
+      "low": 26.1,
+      "high": 93.8,
+      "finite_resamples": 100000
+    },
+    "historical_mean": {
+      "low": 11.6,
+      "high": 48.0,
+      "finite_resamples": 100000
+    }
+  },
+  "sign": {
+    "wins": 7,
+    "losses": 3,
+    "ties_excluded": 0,
+    "p_one_sided_anova_better": 0.171875,
+    "p_two_sided": 0.34375,
+    "null": "conditional on non-tie paired differences, positive and negative signs independent and equally likely",
+    "interpretation": "Descriptive exploratory test; no pre-registered multiplicity control or strict randomized attribution of criterion alone."
+  },
+  "sensitivity": {
+    "leave_one_seed_out": [
+      {
+        "excluded_seed": 710601,
+        "remaining_n": 9,
+        "mean_difference": 43.22222222222222
+      },
+      {
+        "excluded_seed": 710602,
+        "remaining_n": 9,
+        "mean_difference": 16.444444444444443
+      },
+      {
+        "excluded_seed": 710603,
+        "remaining_n": 9,
+        "mean_difference": 36.333333333333336
+      },
+      {
+        "excluded_seed": 710604,
+        "remaining_n": 9,
+        "mean_difference": 34.111111111111114
+      },
+      {
+        "excluded_seed": 710605,
+        "remaining_n": 9,
+        "mean_difference": 33.22222222222222
+      },
+      {
+        "excluded_seed": 710606,
+        "remaining_n": 9,
+        "mean_difference": 21.22222222222222
+      },
+      {
+        "excluded_seed": 710607,
+        "remaining_n": 9,
+        "mean_difference": 30.333333333333332
+      },
+      {
+        "excluded_seed": 710608,
+        "remaining_n": 9,
+        "mean_difference": 29.333333333333332
+      },
+      {
+        "excluded_seed": 710609,
+        "remaining_n": 9,
+        "mean_difference": 27.444444444444443
+      },
+      {
+        "excluded_seed": 710610,
+        "remaining_n": 9,
+        "mean_difference": 33.333333333333336
+      }
+    ],
+    "leave_one_out_mean_difference_range": [
+      16.444444444444443,
+      43.22222222222222
+    ],
+    "exclude_two_largest_positive_differences": {
+      "excluded_seeds": [
+        710606,
+        710602
+      ],
+      "remaining_n": 8,
+      "historical_mean": 31.375,
+      "anova_mean": 35.625,
+      "mean_difference": 4.25,
+      "note": "Post-hoc sensitivity, not an alternate unbiased effect estimate."
+    },
+    "paired_difference_trimmed_mean_10pct": 29.0,
+    "paired_difference_trimmed_mean_20pct": 23.333333333333332,
+    "two_largest_positive_differences_sum": 271.0,
+    "total_paired_difference_sum": 305.0
+  }
+}

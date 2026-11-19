@@ -1,0 +1,32 @@
+2026-11-08T21:47:12Z
+prepare	37518
+guard_smoke	37603
+continuation	37604
+report	37605
+analysis	37606
+guard_final	37611
+eea048af376f0b5940a3adebd962ecbf0f0a30eded31bbc10de9e61d463192b0  /home/natan.brugueras/archive/rrl_improvements_20261108_01/56_submit_rrtl_improvements.sh
+                 JOBID           NAME       STATE         TIME                    NODELIST(REASON)
+         37604_[2-9%2]    rrl-improve     PENDING         0:00                 (JobArrayTaskLimit)
+                 37611 rrl-guard-audi     PENDING         0:00                        (Dependency)
+                 37606 rrl-improve-an     PENDING         0:00                        (Dependency)
+                 37605    rrl-improve     PENDING         0:00                        (Dependency)
+               37604_0    rrl-improve     RUNNING        12:00                               hydra
+               37604_1    rrl-improve     RUNNING        12:00                               hydra
+37518         COMPLETED      0:0   00:17:40 
+37603         COMPLETED      0:0   00:00:14 
+37605           PENDING      0:0   00:00:00 
+37606           PENDING      0:0   00:00:00 
+37604_0         RUNNING      0:0   00:12:00 
+37604_1         RUNNING      0:0   00:12:00 
+37604_[2-9%+    PENDING      0:0   00:00:00 
+37611           PENDING      0:0   00:00:00 
+   JobState=PENDING Reason=Dependency Dependency=afterany:37604_*(unfulfilled)
+   JobState=PENDING Reason=Dependency Dependency=afterany:37604_*(unfulfilled)
+   Command=/home/natan.brugueras/archive/rrl_improvement_code_20261108_v1/slurm/55_rrtl_improvement_worker.sbatch
+   JobState=PENDING Reason=Dependency Dependency=afterok:37605(unfulfilled)
+   JobState=PENDING Reason=Dependency Dependency=afterok:37605(unfulfilled)
+   Command=/home/natan.brugueras/archive/rrl_improvement_code_20261108_v1/slurm/57_analyze_rrtl_improvements.sbatch
+   JobState=PENDING Reason=Dependency Dependency=afterok:37605(unfulfilled)
+   JobState=PENDING Reason=Dependency Dependency=afterok:37605(unfulfilled)
+   Command=/mnt/wapol/archive/gilureta/natan.brugueras/rrl_improvements_20261108_01/58_audit_rrtl_improvement_guards.sbatch

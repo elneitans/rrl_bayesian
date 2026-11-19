@@ -1,0 +1,64 @@
+{
+  "schema": "rrtl_improvement_closure_v1",
+  "payload": {
+    "request": "Verificar los archivos descargados y cerrar el informe con los resultados completos.",
+    "complete": true,
+    "completed_at_utc": "2026-11-09T19:31:31.541493+00:00",
+    "campaign": "5c68a97ac3ddd52553a705703ef4faf12d014108b41ca16e7b3b84d7eff805b4",
+    "full_campaign_evaluation_complete": true,
+    "report_missing_units": 0,
+    "verified_counts": {
+      "continuations": 70,
+      "verified_trace_rows": 7000000,
+      "evaluation_rollouts": 4200,
+      "exact_baseline_transitions": 1000000
+    },
+    "verified_trace_segments": 1400,
+    "verified_review_documents": 120,
+    "reproduced_training_windows": 1400,
+    "downloaded_remote_artifacts_verified": 10,
+    "original_status_files_unchanged": 63,
+    "independently_reconstructed_changes": 63,
+    "scientific_operations": {
+      "grows_total": 187,
+      "prunes_total": 22,
+      "replacements_total": 4,
+      "refits_total": 37,
+      "target_syncs": 600
+    },
+    "linux_final_jobs": {
+      "37899": "COMPLETED 0:0",
+      "37900_8": "COMPLETED 0:0",
+      "37900_9": "COMPLETED 0:0",
+      "37901": "COMPLETED 0:0",
+      "37902": "COMPLETED 0:0",
+      "37903": "COMPLETED 0:0"
+    },
+    "all_variants_use_five_training_seeds_per_criterion": true,
+    "final_figures_visually_checked": true,
+    "figure_qa": "Regenerated readable plots separately; full paired range includes ANOVA710608=176.17. Original downloaded plot preserved for SHA comparison.",
+    "scientific_sources_changed_during_closure": false,
+    "new_training_or_evaluation_submitted_during_closure": false,
+    "reserved_test_run": false,
+    "general_policy_superiority_demonstrated": false,
+    "limitations": "Five selected training seeds per criterion, related early snapshots, 3000-decision snapshot-return horizon, descriptive bootstrap only. Large checkpoint/probe/emulator blobs remain on cluster and were independently audited there.",
+    "artifacts_sha256": {
+      "analysis/improvements_20261108/informe.md": "427a9dd60d7df0cb05ff844644435307d958282da39d8bf77216d53cf11771da",
+      "analysis/improvements_20261108/final/resultados.md": "61f196220286fa3977ec018214370702f03ed3bc08d8e95f5233e98df7db0462",
+      "analysis/improvements_20261108/final/completion.json": "c730c73645dfe269a59d241a594810f69de686658a6763d6797e0544beeb074e",
+      "analysis/improvements_20261108/final/campaign_guard_audit.json": "03ef63a7ff4cb5fb5ced3ad006903ac11d1b8f46599b73262d5b828983a9c384",
+      "analysis/improvements_20261108/final/download_integrity.json": "34b6bfa1aca2782b98e6be8d5234b50ffc4b6c93c717d8bb444a339c128c0b19",
+      "analysis/improvements_20261108/final/local_data_verification.json": "ab537f3d699a31e000f7aa83c107a8ae26077f513e576f40d1a11be7020c12cc",
+      "analysis/improvements_20261108/final/summary.json": "44985cc5a68196b972e5041d299bc8e173de57b358522ca9b268e90a0d8881af",
+      "analysis/improvements_20261108/final/method_summary.csv": "645742268a35f9c652649268191ee5fcc96cba1573c43b8a28e327c562be89f1",
+      "analysis/improvements_20261108/final/role_summary.csv": "7f2256a7dceeaaf9fda24f7effa38b95496cd825faf42f1eea8e9fb47c6f3d8f",
+      "analysis/improvements_20261108/final/incremental_ablations.csv": "16c90c6f51b84d0c52a3aed05b8c9167af6444d4c6cf346bde667853eb495547",
+      "analysis/improvements_20261108/final/curvas_finales.png": "93490e67fd7e53ec1dbb27660c08509ef0f7ca990de8f8398e1c5c551d26fa1f",
+      "analysis/improvements_20261108/final/comparaciones_pareadas.png": "4508a2de3479f217cb0ac3c09008db2effb2501c0e9716bba4f1589cc91c11ca",
+      "analysis/improvements_20261108/recovery_20261109/summarize_complete.py": "6a6a67b8cda015ce33c4173faa22b1cb3415a9ab71085fc7a905207f43272856",
+      "analysis/improvements_20261108/recovery_20261109/verify_download.py": "59bae0f43d6b9e7a8314e0b57a746b127842159798e089cf895f34bd7ae3d54d",
+      "analysis/improvements_20261108/recovery_20261109/plot_final.py": "cb57ddd31479dfc33361f61c75bd17dc868777e2e793a453b07e008fe0144956"
+    }
+  },
+  "sha256": "8ca0d27f2a3a51ff78689fe665d68b87a1de4eea4e0dc1ab6081eb7f286953b7"
+}

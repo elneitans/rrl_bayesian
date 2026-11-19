@@ -1,0 +1,30 @@
+{
+  "objective": "termina la evaluaci\u00f3n",
+  "scope": "Complete the unchanged 70-continuation/7M-transition/4200-evaluation prospective RRTL improvement campaign and its final scientific audit.",
+  "expected": {
+    "continuations": 70,
+    "groups": 10,
+    "variants": 7,
+    "seeds_per_criterion": 5,
+    "parent_counter": 500000,
+    "final_counter": 600000,
+    "new_trace_rows": 7000000,
+    "evaluation_rollouts": 4200,
+    "exact_original_baseline_transitions": 1000000
+  },
+  "requirements": [
+    "Verified byte-identical manifest and checksum-identical private copies of both partial units; completed units/banks remain at original immutable paths and are not mutated.",
+    "Restore and resume groups8/9 with original manifest, scientific source hashes, Conda runtime and frozen parameters.",
+    "Complete report with empty missing list, expected evaluation identities and exact original baseline control histories.",
+    "Complete analysis with SHA/continuity/counts for all7M trace rows and matched curves at all declared points.",
+    "Independent reconstruction of every accepted structural/value revision from immediate pre/post checkpoints and saved probes.",
+    "Download and verify final evidence; update final report with all five seeds per criterion and explicit limitations."
+  ],
+  "original_control": "~/archive/rrl_improvements_20261108_01",
+  "recovery_control": "~/projects/rrl_evaluation_recovery_20261109_02",
+  "frozen_source": "~/archive/rrl_improvement_code_20261108_v1",
+  "main_manifest_sha256": "5c68a97ac3ddd52553a705703ef4faf12d014108b41ca16e7b3b84d7eff805b4",
+  "blocking_cause_confirmed": "Archive write probe failed with Disk quota exceeded; home write probe succeeded.",
+  "completion_is_not_submission": true,
+  "recovery_strategy": "Keep completed units and immutable banks at original location for read-only access; duplicate both partial units into home and create all new results there. Recovery wrapper verifies completed evaluations and skips opening completed units for writing. Frozen scientific continuation/report/analysis remain unchanged."
+}

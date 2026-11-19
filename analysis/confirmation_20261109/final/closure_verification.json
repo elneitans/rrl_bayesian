@@ -1,0 +1,277 @@
+{
+  "schema": "rrtl_anova_confirmation_closure_v1",
+  "payload": {
+    "complete": true,
+    "completed_at_utc": "2026-11-10T13:54:07.435581+00:00",
+    "objective_scope": "Complete prospective fresh-seed longer ANOVA baseline versus slow_td versus refit_only experiment, download,independent audit and scientific report.",
+    "campaign": "47cc2276291ba5507aa097850cbd7e3d2332c6d09fa10e0fbd56d4fb6ef81664",
+    "requirements": [
+      {
+        "requirement": "Five fresh ANOVA parents to1M, histories,500k checkpoints and55 development evaluations",
+        "status": "proven",
+        "evidence": "parents_verification.json; unchanged parent status digests; parent jobs38120_0..4 and audit38132 completed"
+      },
+      {
+        "requirement": "Real three-variant integration before principal campaign",
+        "status": "proven",
+        "evidence": "integration manifest/report and1000 exact baseline transitions; integration38121 completed"
+      },
+      {
+        "requirement": "Fifteen500k continuations on five new seeds, preserving declared variant settings",
+        "status": "proven",
+        "evidence": "manifest47cc2276;15 complete status digests;7.5M locally verified transition rows"
+      },
+      {
+        "requirement": "All21x12 snapshot evaluations per continuation and disjoint banks",
+        "status": "proven",
+        "evidence": "3780 identities/checkpoints/results checked locally; banks_ram_disjoint true"
+      },
+      {
+        "requirement": "Baseline equivalence to original parent second-half histories",
+        "status": "proven",
+        "evidence": "report38124 compares2.5M interactions,actions,rewards,episode metadata andTD dictionaries exactly"
+      },
+      {
+        "requirement": "Independent audit of every accepted maintenance update",
+        "status": "proven",
+        "evidence": "audit38128 reconstructs all93 losses and policy distances from independent probes and pre/post weights"
+      },
+      {
+        "requirement": "Download integrity and reproducible training diagnostics",
+        "status": "proven",
+        "evidence": "14 remote hashes,300 trace segments,1500 reproduced windows,100 review documents;verify_download.py completed"
+      },
+      {
+        "requirement": "Final report on all five seeds, uncertainty,conservation,training and limitations",
+        "status": "proven",
+        "evidence": "informe.md;method_summary.csv;per_seed_diagnostics.csv;training_summary.csv;extended_summary.json;per-seed table cross-checked against report"
+      },
+      {
+        "requirement": "Readable figures and provenance",
+        "status": "proven",
+        "evidence": "Two figures visually inspected; all315 points included with common upper bound; corrected plotting job38393 completed; remote source/image hashes matched"
+      },
+      {
+        "requirement": "Preserve original scientific sources and avoid reserved test",
+        "status": "proven",
+        "evidence": "All scientific source hashes match197-file original archive and current worktree; no reserved test schedule or execution in this campaign"
+      }
+    ],
+    "verified_counts": {
+      "continuations": 15,
+      "verified_trace_rows": 7500000,
+      "evaluation_rollouts": 3780,
+      "exact_baseline_transitions": 2500000
+    },
+    "parent_transitions": 5000000,
+    "parent_development_rollouts": 55,
+    "independent_refits_audited": 93,
+    "linux_design_tests_passed": 26,
+    "source_archive_sha256": "ccd1a98eb65c40d085d9d0fc7cdc31e7ca0534819296dbe0ce2e7f4bdc602f8a",
+    "source_archive_files": 197,
+    "scientific_source_files_matched": 98,
+    "all_original_scientific_jobs_completed": true,
+    "terminal_jobs": {
+      "38115": {
+        "JobID": "38115",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "Elapsed": "00:06:46",
+        "Start": "2026-11-09T22:11:07",
+        "End": "2026-11-09T22:17:53"
+      },
+      "38121": {
+        "JobID": "38121",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "Elapsed": "00:01:55",
+        "Start": "2026-11-10T01:27:35",
+        "End": "2026-11-10T01:29:30"
+      },
+      "38122": {
+        "JobID": "38122",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "Elapsed": "00:02:37",
+        "Start": "2026-11-10T01:29:35",
+        "End": "2026-11-10T01:32:12"
+      },
+      "38124": {
+        "JobID": "38124",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "Elapsed": "00:11:06",
+        "Start": "2026-11-10T08:48:13",
+        "End": "2026-11-10T08:59:19"
+      },
+      "38127": {
+        "JobID": "38127",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "Elapsed": "00:07:06",
+        "Start": "2026-11-10T08:59:22",
+        "End": "2026-11-10T09:06:28"
+      },
+      "38128": {
+        "JobID": "38128",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "Elapsed": "00:01:43",
+        "Start": "2026-11-10T08:59:22",
+        "End": "2026-11-10T09:01:05"
+      },
+      "38132": {
+        "JobID": "38132",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "Elapsed": "00:01:22",
+        "Start": "2026-11-10T01:27:35",
+        "End": "2026-11-10T01:28:57"
+      },
+      "38390": {
+        "JobID": "38390",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "Elapsed": "00:00:10",
+        "Start": "2026-11-10T13:39:33",
+        "End": "2026-11-10T13:39:43"
+      },
+      "38393": {
+        "JobID": "38393",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "Elapsed": "00:00:09",
+        "Start": "2026-11-10T13:43:25",
+        "End": "2026-11-10T13:43:34"
+      },
+      "38120_0": {
+        "JobID": "38120_0",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "Elapsed": "01:01:42",
+        "Start": "2026-11-09T22:20:07",
+        "End": "2026-11-09T23:21:49"
+      },
+      "38120_1": {
+        "JobID": "38120_1",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "Elapsed": "01:02:18",
+        "Start": "2026-11-09T22:20:07",
+        "End": "2026-11-09T23:22:25"
+      },
+      "38120_2": {
+        "JobID": "38120_2",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "Elapsed": "01:00:20",
+        "Start": "2026-11-09T23:22:01",
+        "End": "2026-11-10T00:22:21"
+      },
+      "38120_3": {
+        "JobID": "38120_3",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "Elapsed": "01:02:25",
+        "Start": "2026-11-09T23:22:31",
+        "End": "2026-11-10T00:24:56"
+      },
+      "38120_4": {
+        "JobID": "38120_4",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "Elapsed": "01:05:00",
+        "Start": "2026-11-10T00:22:33",
+        "End": "2026-11-10T01:27:33"
+      },
+      "38123_0": {
+        "JobID": "38123_0",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "Elapsed": "02:24:18",
+        "Start": "2026-11-10T01:32:21",
+        "End": "2026-11-10T03:56:39"
+      },
+      "38123_1": {
+        "JobID": "38123_1",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "Elapsed": "02:30:45",
+        "Start": "2026-11-10T01:32:21",
+        "End": "2026-11-10T04:03:06"
+      },
+      "38123_2": {
+        "JobID": "38123_2",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "Elapsed": "02:28:41",
+        "Start": "2026-11-10T03:56:57",
+        "End": "2026-11-10T06:25:38"
+      },
+      "38123_3": {
+        "JobID": "38123_3",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "Elapsed": "02:54:23",
+        "Start": "2026-11-10T04:03:21",
+        "End": "2026-11-10T06:57:44"
+      },
+      "38123_4": {
+        "JobID": "38123_4",
+        "State": "COMPLETED",
+        "ExitCode": "0:0",
+        "Elapsed": "02:22:02",
+        "Start": "2026-11-10T06:25:40",
+        "End": "2026-11-10T08:47:42"
+      }
+    },
+    "final_figures_visually_checked": true,
+    "reserved_test_run": false,
+    "general_policy_superiority_demonstrated": false,
+    "final_means": {
+      "baseline": 16.650000000000002,
+      "slow_td": 32.233333333333334,
+      "refit_only": 27.1
+    },
+    "remaining_required_work": [],
+    "limitations": "Five training seeds,related early snapshots,horizon3000; bootstrap descriptive; model/probe/emulator blobs audited on cluster and not downloaded. No claim of unique failure cause,global stability or superior general policy.",
+    "artifacts_sha256": {
+      "analysis/confirmation_20261109/informe.md": "d65003ae7bcb8b9ea1a51c26a14c844004cb3911eb0a35163241f46b61ae7793",
+      "docs/confirmacion_anova_20261109.md": "178290ad4317984923276abf11d268f55d93a6db0bcdf0ba60678d8670b53d90",
+      "analysis/confirmation_20261109/final_scheduler_snapshot_utc.txt": "0583cfa6f3969073d5dd62428ebcc355516606ab58ecb216f33af463817796c8",
+      "analysis/confirmation_20261109/remote_hashes.sha256": "b8c49626052fc527b0530597e4bf590f231e59fb50199d5cabe03702e1da703a",
+      "analysis/confirmation_20261109/verify_results.py": "15540519e6daf233031275d5df4b311775ece3159271b4362bdb6feaa00bb1be",
+      "analysis/confirmation_20261109/analyze_complete.py": "542ff3712f02c6f871887d78996cbd9e5fb2a77b408d8f386ef8e094a8eda9af",
+      "analysis/confirmation_20261109/verify_download.py": "eb17d0ba052435321ca88231f9734cbdaa32a69c892be4ecad4a9a8ed7a6cbd6",
+      "analysis/confirmation_20261109/verify_parents.py": "857f4cb1cb9b56d51d6bb310a0f74cce47bf0674266d224592646a46581d9c42",
+      "analysis/confirmation_20261109/audit_guards.py": "a441900895f8d7b7ea04e3e611df88b334eb2c89baef2bff28b08e956ab203f4",
+      "analysis/confirmation_20261109/plot_results.py": "bf61fcb58c39aee209a29386a909f62a24ca9297e54a2029d670e95a427413f7",
+      "analysis/confirmation_20261109/final/download_integrity.json": "72b8d807c9ef3dbe96977c3e4f210b65c857768d684fa18d5bc935bde74a7a54",
+      "analysis/confirmation_20261109/final/seed_role_summary.csv": "4a2426fc2fb22c128fe0aebf91f16023cc8504077b4cad7bf36aa239e7985ce1",
+      "analysis/confirmation_20261109/final/FIGURES_SHA256": "2b6f06beb5bb4a5a03cd81a64c08178924190120e23f5a12ff810d9df75f39ae",
+      "analysis/confirmation_20261109/final/confirmation_guard_audit.json": "c5d816519ceca7880ee21f429c9da24eec9c59fced21dd7fe45affde9ce77b21",
+      "analysis/confirmation_20261109/final/per_seed_curves.csv": "a678a3ea88838233e0ceff593148e195e3b9ffe46819e73b979a9448c6757106",
+      "analysis/confirmation_20261109/final/integration_complete.json": "5bda6bf2f414bdf69efd4d13fad6ad214b44b33831b50a1a256d1027824efc13",
+      "analysis/confirmation_20261109/final/evaluations.csv": "ffe1ac36323ff2f6b1a4e84cc46ce0fe2a323808d74afeb5c77ab3d7638de37a",
+      "analysis/confirmation_20261109/final/verified_summary.json": "f41bbc6b2df6c4bbcbf6cc93eb4ee51037f5dc760974ccd6e99596cb9516fd25",
+      "analysis/confirmation_20261109/final/events.json": "6b761e5aef9b4efeba0a243943d979d6301d7a76abb76e5c1a3d7cb206a317ae",
+      "analysis/confirmation_20261109/final/method_summary.csv": "97e63b210f88ead85cae38678291cced59dc97212f300b39c102795904ef45b3",
+      "analysis/confirmation_20261109/final/continuaciones.png": "340460c0d37b383e05270991d213aa463d860fd9967d38a75d45ee3071805f1f",
+      "analysis/confirmation_20261109/final/per_seed_diagnostics.csv": "91f99785c7bc97426ed53bc0da3b2ef05d9f79b6162c89522ee67ec602bef61d",
+      "analysis/confirmation_20261109/final/local_verification.log": "9cf737e543661d215720f7e67ae3e9d9e0612ea809aa6be1471ea927f5a045de",
+      "analysis/confirmation_20261109/final/extended_summary.json": "03788d3857dea1f1fb8fdf7f2132ea9a46b8ac500f5349b00ab39cfd4acf1c2e",
+      "analysis/confirmation_20261109/final/extended_analysis.log": "03788d3857dea1f1fb8fdf7f2132ea9a46b8ac500f5349b00ab39cfd4acf1c2e",
+      "analysis/confirmation_20261109/final/local_data_verification.json": "c0eef5a0a356d12ee0097232f7f95205e911487cd0fe863a1b13171c83ab6cd3",
+      "analysis/confirmation_20261109/final/parents_verification.json": "ca1a4f8c4a77334bf0aa82332e38a87f7193a959c129cbbea4a65b4e98899439",
+      "analysis/confirmation_20261109/final/closure_verification.log": "f41bbc6b2df6c4bbcbf6cc93eb4ee51037f5dc760974ccd6e99596cb9516fd25",
+      "analysis/confirmation_20261109/final/curvas_finales.png": "241761af1dfaa456686c6df570344d8df11d9ef0aa64bbdcf08d7847a0d709f9",
+      "analysis/confirmation_20261109/final/matched_vs_baseline.csv": "5df855ec043bb92224707209959cdaf8cd89d517f1fb3a5bb7faa20964301f12",
+      "analysis/confirmation_20261109/final/training_windows.csv": "1fa0bbc0d8a1191b798216ca0545c8cffa06660bb4b3a032f26dc0d1cdfa0fdc",
+      "analysis/confirmation_20261109/final/resultados.md": "0610f4f0dd7b2748c5ce390486679d164f373b769be69b2bc87eccb3d305bf10",
+      "analysis/confirmation_20261109/final/comparaciones_finales.png": "dbf35c5a4f58d8bd2037d53338788ea9b16b5009fa11e70f59594bcdb3753a0b",
+      "analysis/confirmation_20261109/final/completion.json": "1b8c1ee11e82616f3e50e5a82941280d6902f0bb18f6a2b03de24c5895d23d73",
+      "analysis/confirmation_20261109/final/training_summary.csv": "0348c29817f93c5581497811565cbb996491af3afa311932c8f5e6c399aaf803"
+    }
+  },
+  "sha256": "7f121a9bd64487cb482fb00347660ed6cf5730f9116d037b45cb139272775eea"
+}
