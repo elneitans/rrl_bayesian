@@ -1,0 +1,120 @@
+{
+  "payload": {
+    "analysis_config": "ae26a41c8928dce0c27b9edad03cd1a3ce3b7059a980cc4e3f9b3e32b068afcc",
+    "code": {
+      "bayesian_rrtl/agent.py": "fb83e747a487ecf1769200db3b9cc29d1df404fe2c77684aafca19796ba8601c",
+      "bayesian_rrtl/controls.py": "b99cb67c080fe57a07820b3bebc634eef8db5b1f39867dab7158b7b4f35f0e5e",
+      "bayesian_rrtl/diagnostics.py": "1fcea2be086a94dc76e8bb5b0c69141118773273b1d15a37bcaab1ee9c790f43",
+      "bayesian_rrtl/ensemble.py": "172d5e991a82826070037f55fb522f0383b42dd5c45c77a06615ddebfe1659be",
+      "bayesian_rrtl/games/pong.py": "413681aa1064c55b574adcb86466d00002d9c40c8651d17eb5ae63aede8c7ad4",
+      "bayesian_rrtl/replay.py": "e4de5bbecb011fa860bfce5ced13242ede6f31e0a00606aba078effc52fb835c",
+      "bayesian_rrtl/targets.py": "5276110077c1011c2dda184ba6ab473b3f87e5aef5336954a7796f7b2f1f46da",
+      "configs/pong_bart_analysis_v1.json": "dded7c9554c8889fe7f666fc9db88586910bb6621ca70defe33432552ec9ad38",
+      "environment-pong-analysis.yml": "9562d6b4cf1d0c41ee43c77f6d65132a344efcc0af330d60626d9906b3d6d5a9",
+      "experiments/audit_bart_fixed_data.py": "819e146afd54fe97db22b38a64df7caab8b9cced2c2cd16e25f0e85c79b28064",
+      "experiments/audit_pong_readiness.py": "69605e5308d3dae1aa2ce80e9bcecae7597d2f9107d9a1b239b484e129ff9503",
+      "experiments/audit_pong_representation.py": "ac70d2e4616185d3883b25d4693accd3a5093f46dde2ac15411519ff009f1512",
+      "experiments/collect_pong_assisted.py": "88bfe47f6342251549e3b9652ceb11d3902f934f0e82617b1e48a9a4193bcb49",
+      "experiments/collect_pong_dataset.py": "1121afe9c2b33c134a865d33001694f6bce7aaa02d6998ca24244cb4123aaf1c",
+      "experiments/compare_fqi_trees.py": "02f23c3103caf555b57253b5f6c5a4d7d1cb67d649bcecf6b613ff034cd837ad",
+      "experiments/compare_pong.py": "e95bdd30988decb58726b026b44d73405a626bc85d826badee379c54a8821908",
+      "experiments/diagnose_pong_policy.py": "491ab5e42cbd4dd117b81901b9f302a98197c791c96800d51db854ad1881576d",
+      "experiments/evaluate_pong_heuristics.py": "dd301b34a70e8f117f42d1fc059a4d72eae3553acffd2c5a505b0c631cbb4725",
+      "experiments/freeze_pong_analysis_data.py": "bf680e2a7f78d75350d6c816dc063026483ea9f8fa8f6f01261c79b5b2809006",
+      "experiments/freeze_pong_regression.py": "3ab677a4043849a83625cd42c6f78e4952293a472a00c1b5f52a2ff8a67cbf2a",
+      "experiments/pong_analysis_common.py": "93c9816e101591f01e0611843c24a204b748f4bb13a2d26b047bb310ec572831",
+      "experiments/pong_analysis_runtime.py": "66c13224b9ec79dfcdcc229de831fc34f7d50bd6b1128183b867fd3a66d49e22",
+      "experiments/pong_common_contract.py": "087f113a2a87279a038ff4bbe7bdd188dd4df24e5c7baa97ca39b7a2cbb4b315",
+      "experiments/pong_dataset_selection.py": "4ceed9ff6981da01672f3045be287f17f1825b594cd11498d05d37f1635ed548",
+      "experiments/preserve_pong_history.py": "019dd597e418af8a2d50067d09b75ff6bad6e59d0ca780789bda8fd559a7bdd1",
+      "experiments/validate_ocatari_pong.py": "19aad9dbcafb1a2dccd745ab8a1cc6e460324a41810c9f3afdf0589981e7325b",
+      "experiments/validate_pong_comparison_inputs.py": "f296a40d83740c7dc82eb9bc28d1711e0e526bb8b58836ac82d9d83e652f9cc4",
+      "requirements-pong-analysis.txt": "bc7aa65a6f28f82a3145d1ae971fbb8be0e0ce43e9305d0caa4a7803b14dce36",
+      "slurm/05_pong_analysis.sbatch": "2fcf0ca9a41890d3eb377b2b2669d5b446dfffbbcf85a570b410008388b9be38"
+    },
+    "dataset": "new_development_episodes",
+    "effective": {
+      "directions": {
+        "coordinate_system": "screen y increases downward",
+        "displacements_y_pixels": {
+          "LEFT": 80.0,
+          "RIGHT": -57.0
+        },
+        "down": "LEFT",
+        "seed": 560101,
+        "up": "RIGHT"
+      },
+      "environment": {
+        "actions": [
+          "NOOP",
+          "FIRE",
+          "RIGHT",
+          "LEFT",
+          "RIGHTFIRE",
+          "LEFTFIRE"
+        ],
+        "env_id": "ALE/Pong-v5",
+        "frameskip": 4,
+        "horizon": 27000,
+        "pipelines": {
+          "ocatari": "pong_common_ram_v1",
+          "visual": "pong_common_rgb_v1"
+        },
+        "purpose": "development",
+        "relation_schema": "pong_relational_v1",
+        "repeat_action_probability": 0.0,
+        "reset_policy": "none",
+        "reward_transform": "sign",
+        "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+        "schema": "pong_common_v1"
+      }
+    },
+    "evaluation": {
+      "horizon": 27000,
+      "model": "26080772772868d6ff63d82eb38611fdd1c974bf46fb79eb5a37d1de4c5c14e7",
+      "policy": "random"
+    },
+    "hashes": {
+      "catalog": "fd40d7f407a3ea2b3634712e212e0d35c591626e41f8fbe3d64ce8073ff2de42",
+      "data": null,
+      "targets": null
+    },
+    "input_runtime": {
+      "executable": "/home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/bin/python",
+      "packages": {
+        "ale-py": "0.10.2",
+        "gymnasium": "1.1.1",
+        "numpy": "1.26.4",
+        "ocatari": "2.2.1",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.12.0"
+      },
+      "python": "3.11.7"
+    },
+    "mcmc": null,
+    "method": "random",
+    "mode": "full",
+    "pipeline": "common_visual",
+    "protocol": "5af328465cbeeefc79f092485df4203d6e5f7af49a8ad47b95b7c6c7a57d315a",
+    "runtime": {
+      "executable": "/home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/bin/python",
+      "packages": {
+        "ale-py": "0.10.2",
+        "gymnasium": "1.1.1",
+        "numpy": "1.26.4",
+        "ocatari": "2.2.1",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.12.0"
+      },
+      "python": "3.11.7"
+    },
+    "schema": "pong_analysis_unit_v2",
+    "seeds": [
+      560010
+    ],
+    "stage": "heuristics",
+    "variant": "heuristic_v2"
+  },
+  "schema": "pong_analysis_unit_v2",
+  "sha256": "317dee93a51b8e72ec82f8c7d8a8f84322ee1c5d10b3f6151fee0a4580db44e3"
+}

@@ -1,0 +1,487 @@
+{
+  "payload": {
+    "manifest": "70158ec886a6df92d88086d4ff2035f5d59883bdfd94e303dbd146b9d94c45e7",
+    "metadata": {
+      "auxiliary_model_input": false,
+      "common_protocol": {
+        "actions": [
+          "NOOP",
+          "FIRE",
+          "RIGHT",
+          "LEFT",
+          "RIGHTFIRE",
+          "LEFTFIRE"
+        ],
+        "env_id": "ALE/Pong-v5",
+        "frameskip": 4,
+        "horizon": 27000,
+        "pipelines": {
+          "ocatari": "pong_common_ram_v1",
+          "visual": "pong_common_rgb_v1"
+        },
+        "purpose": "development",
+        "relation_schema": "pong_relational_v1",
+        "repeat_action_probability": 0.0,
+        "reset_policy": "none",
+        "reward_transform": "sign",
+        "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+        "schema": "pong_common_v1"
+      },
+      "config": {
+        "action_buffer_capacity": 10,
+        "actions": [
+          "NOOP",
+          "FIRE",
+          "RIGHT",
+          "LEFT",
+          "RIGHTFIRE",
+          "LEFTFIRE"
+        ],
+        "alpha_tree": 0.95,
+        "batch_size_per_action": 128,
+        "beta_tree": 2.0,
+        "bootstrap_on_truncation": true,
+        "burn_in": 100,
+        "draws": 100,
+        "epsilon_decay_steps": 1000,
+        "epsilon_init": 1.0,
+        "epsilon_min": 0.1,
+        "fit_interval": 100,
+        "gamma": 0.8,
+        "k": 2.0,
+        "kernel": "grow_prune",
+        "m": 5,
+        "max_depth": 4,
+        "min_child": 1,
+        "noise_quantile": 0.9,
+        "nu": 3.0,
+        "replay_capacity": 2000,
+        "resample_repeated_actions": false,
+        "reward_max": 1.0,
+        "reward_min": -1.0,
+        "seed": 1,
+        "test_seeds": [
+          200001,
+          200002
+        ],
+        "validation_seeds": [
+          100001,
+          100002
+        ],
+        "variance_floor": 1e-08,
+        "warmup_interactions": 0
+      },
+      "dataset_kind": "new_common",
+      "encoder": {
+        "catalog": [
+          {
+            "name": "x",
+            "obj1": "ball_t",
+            "obj2": "ball_t-1",
+            "obj3": null,
+            "type": "comparative"
+          },
+          {
+            "name": "x",
+            "obj1": "ball_t",
+            "obj2": "enemy_t",
+            "obj3": null,
+            "type": "comparative"
+          },
+          {
+            "name": "x",
+            "obj1": "enemy_t",
+            "obj2": "enemy_t-1",
+            "obj3": null,
+            "type": "comparative"
+          },
+          {
+            "name": "x",
+            "obj1": "player_t",
+            "obj2": "ball_t",
+            "obj3": null,
+            "type": "comparative"
+          },
+          {
+            "name": "x",
+            "obj1": "player_t",
+            "obj2": "enemy_t",
+            "obj3": null,
+            "type": "comparative"
+          },
+          {
+            "name": "x",
+            "obj1": "player_t",
+            "obj2": "player_t-1",
+            "obj3": null,
+            "type": "comparative"
+          },
+          {
+            "name": "y",
+            "obj1": "ball_t",
+            "obj2": "ball_t-1",
+            "obj3": null,
+            "type": "comparative"
+          },
+          {
+            "name": "y",
+            "obj1": "ball_t",
+            "obj2": "enemy_t",
+            "obj3": null,
+            "type": "comparative"
+          },
+          {
+            "name": "y",
+            "obj1": "enemy_t",
+            "obj2": "enemy_t-1",
+            "obj3": null,
+            "type": "comparative"
+          },
+          {
+            "name": "y",
+            "obj1": "player_t",
+            "obj2": "ball_t",
+            "obj3": null,
+            "type": "comparative"
+          },
+          {
+            "name": "y",
+            "obj1": "player_t",
+            "obj2": "enemy_t",
+            "obj3": null,
+            "type": "comparative"
+          },
+          {
+            "name": "y",
+            "obj1": "player_t",
+            "obj2": "player_t-1",
+            "obj3": null,
+            "type": "comparative"
+          },
+          {
+            "name": "incontact",
+            "obj1": "ball_t",
+            "obj2": "enemy_t",
+            "obj3": null,
+            "type": "logical"
+          },
+          {
+            "name": "incontact",
+            "obj1": "player_t",
+            "obj2": "ball_t",
+            "obj3": null,
+            "type": "logical"
+          },
+          {
+            "name": "present",
+            "obj1": "ball_t",
+            "obj2": null,
+            "obj3": null,
+            "type": "logical"
+          },
+          {
+            "name": "present",
+            "obj1": "ball_t-1",
+            "obj2": null,
+            "obj3": null,
+            "type": "logical"
+          },
+          {
+            "name": "present",
+            "obj1": "enemy_t",
+            "obj2": null,
+            "obj3": null,
+            "type": "logical"
+          },
+          {
+            "name": "present",
+            "obj1": "enemy_t-1",
+            "obj2": null,
+            "obj3": null,
+            "type": "logical"
+          },
+          {
+            "name": "present",
+            "obj1": "player_t",
+            "obj2": null,
+            "obj3": null,
+            "type": "logical"
+          },
+          {
+            "name": "present",
+            "obj1": "player_t-1",
+            "obj2": null,
+            "obj3": null,
+            "type": "logical"
+          }
+        ],
+        "catalog_hash": "fd40d7f407a3ea2b3634712e212e0d35c591626e41f8fbe3d64ce8073ff2de42",
+        "version": 1
+      },
+      "episode_partition": {
+        "complete": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "excluded_incomplete": [],
+        "holdout": [
+          6,
+          7
+        ],
+        "status": "frozen"
+      },
+      "episodes": [
+        {
+          "actions": {
+            "FIRE": 150,
+            "LEFT": 131,
+            "LEFTFIRE": 126,
+            "NOOP": 142,
+            "RIGHT": 126,
+            "RIGHTFIRE": 145
+          },
+          "points_lost": 21.0,
+          "points_won": 0.0,
+          "raw_return": -21.0,
+          "reason": null,
+          "return_scope": "complete_game",
+          "seconds": 13.429011169006117,
+          "seed": 560601,
+          "status": "completed",
+          "steps": 820,
+          "terminated": true,
+          "truncated": false,
+          "unique_encoded_states": 97
+        },
+        {
+          "actions": {
+            "FIRE": 145,
+            "LEFT": 181,
+            "LEFTFIRE": 170,
+            "NOOP": 177,
+            "RIGHT": 153,
+            "RIGHTFIRE": 168
+          },
+          "points_lost": 21.0,
+          "points_won": 0.0,
+          "raw_return": -21.0,
+          "reason": null,
+          "return_scope": "complete_game",
+          "seconds": 17.087918361008633,
+          "seed": 560602,
+          "status": "completed",
+          "steps": 994,
+          "terminated": true,
+          "truncated": false,
+          "unique_encoded_states": 175
+        },
+        {
+          "actions": {
+            "FIRE": 143,
+            "LEFT": 133,
+            "LEFTFIRE": 138,
+            "NOOP": 134,
+            "RIGHT": 134,
+            "RIGHTFIRE": 142
+          },
+          "points_lost": 21.0,
+          "points_won": 0.0,
+          "raw_return": -21.0,
+          "reason": null,
+          "return_scope": "complete_game",
+          "seconds": 12.329837736964691,
+          "seed": 560603,
+          "status": "completed",
+          "steps": 824,
+          "terminated": true,
+          "truncated": false,
+          "unique_encoded_states": 96
+        },
+        {
+          "actions": {
+            "FIRE": 151,
+            "LEFT": 178,
+            "LEFTFIRE": 164,
+            "NOOP": 176,
+            "RIGHT": 176,
+            "RIGHTFIRE": 160
+          },
+          "points_lost": 21.0,
+          "points_won": 1.0,
+          "raw_return": -20.0,
+          "reason": null,
+          "return_scope": "complete_game",
+          "seconds": 16.309810884005856,
+          "seed": 560604,
+          "status": "completed",
+          "steps": 1005,
+          "terminated": true,
+          "truncated": false,
+          "unique_encoded_states": 169
+        },
+        {
+          "actions": {
+            "FIRE": 142,
+            "LEFT": 138,
+            "LEFTFIRE": 112,
+            "NOOP": 142,
+            "RIGHT": 142,
+            "RIGHTFIRE": 118
+          },
+          "points_lost": 21.0,
+          "points_won": 0.0,
+          "raw_return": -21.0,
+          "reason": null,
+          "return_scope": "complete_game",
+          "seconds": 11.893966397969052,
+          "seed": 560605,
+          "status": "completed",
+          "steps": 794,
+          "terminated": true,
+          "truncated": false,
+          "unique_encoded_states": 99
+        },
+        {
+          "actions": {
+            "FIRE": 122,
+            "LEFT": 128,
+            "LEFTFIRE": 120,
+            "NOOP": 130,
+            "RIGHT": 128,
+            "RIGHTFIRE": 136
+          },
+          "points_lost": 21.0,
+          "points_won": 0.0,
+          "raw_return": -21.0,
+          "reason": null,
+          "return_scope": "complete_game",
+          "seconds": 11.728915646031965,
+          "seed": 560606,
+          "status": "completed",
+          "steps": 764,
+          "terminated": true,
+          "truncated": false,
+          "unique_encoded_states": 77
+        },
+        {
+          "actions": {
+            "FIRE": 131,
+            "LEFT": 122,
+            "LEFTFIRE": 133,
+            "NOOP": 141,
+            "RIGHT": 142,
+            "RIGHTFIRE": 155
+          },
+          "points_lost": 21.0,
+          "points_won": 0.0,
+          "raw_return": -21.0,
+          "reason": null,
+          "return_scope": "complete_game",
+          "seconds": 11.940179554978386,
+          "seed": 560607,
+          "status": "completed",
+          "steps": 824,
+          "terminated": true,
+          "truncated": false,
+          "unique_encoded_states": 98
+        },
+        {
+          "actions": {
+            "FIRE": 119,
+            "LEFT": 137,
+            "LEFTFIRE": 130,
+            "NOOP": 127,
+            "RIGHT": 129,
+            "RIGHTFIRE": 150
+          },
+          "points_lost": 21.0,
+          "points_won": 0.0,
+          "raw_return": -21.0,
+          "reason": null,
+          "return_scope": "complete_game",
+          "seconds": 13.070946416002698,
+          "seed": 560608,
+          "status": "completed",
+          "steps": 792,
+          "terminated": true,
+          "truncated": false,
+          "unique_encoded_states": 80
+        }
+      ],
+      "fqi_selected_count": 768,
+      "kind": "fixed_transitions",
+      "mode": "full",
+      "npz_sha256": "4746f2ada53d6a6617f87ec12b3e1079fdba70ccfdf0b5c0279f95d842f41ca5",
+      "replay_count": 6817,
+      "runtime": null,
+      "schema": "pong_fixed_transitions_v2",
+      "selection": {
+        "coverage": [
+          {
+            "action": 0,
+            "available": 901,
+            "insufficient_samples": false,
+            "no_positive_signal": true,
+            "positive_count": 0,
+            "selected": 128
+          },
+          {
+            "action": 1,
+            "available": 853,
+            "insufficient_samples": false,
+            "no_positive_signal": false,
+            "positive_count": 1,
+            "selected": 128
+          },
+          {
+            "action": 2,
+            "available": 859,
+            "insufficient_samples": false,
+            "no_positive_signal": true,
+            "positive_count": 0,
+            "selected": 128
+          },
+          {
+            "action": 3,
+            "available": 889,
+            "insufficient_samples": false,
+            "no_positive_signal": true,
+            "positive_count": 0,
+            "selected": 128
+          },
+          {
+            "action": 4,
+            "available": 869,
+            "insufficient_samples": false,
+            "no_positive_signal": true,
+            "positive_count": 0,
+            "selected": 128
+          },
+          {
+            "action": 5,
+            "available": 830,
+            "insufficient_samples": false,
+            "no_positive_signal": true,
+            "positive_count": 0,
+            "selected": 128
+          }
+        ],
+        "distribution_changed": false,
+        "duplicates": false,
+        "per_action": 128,
+        "rule": "uniform_action",
+        "selected_ids_sha256": "bd9cb20f8138b5d76b9ad994ff1f4fbfcfc9c3eaae12c53c9b61352ac33fe7bd",
+        "selection_seed": 560702
+      },
+      "selection_seed": 560702
+    }
+  },
+  "schema": "pong_analysis_unit_v2",
+  "sha256": "edcf096ee648792c94ce55eb91385847796c70f4372fd5a6c941f191d9ebe0bb"
+}

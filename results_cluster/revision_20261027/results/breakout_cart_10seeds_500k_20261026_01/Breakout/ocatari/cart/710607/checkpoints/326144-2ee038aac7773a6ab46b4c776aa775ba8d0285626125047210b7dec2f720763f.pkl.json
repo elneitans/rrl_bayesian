@@ -1,0 +1,42 @@
+{
+  "payload": {
+    "binding": {
+      "campaign": "8e0a20e44801226764bfae7c5ab0b32aea455acfc48e7760704e2dc711fcf84d",
+      "cell": "68ebd9eb5af5d1c253b7610a775a624c27b9628a3b54a227ac845e2ad5488c59",
+      "learner": "cart",
+      "runtime": {
+        "ale-py": "0.10.2",
+        "gymnasium": "1.1.1",
+        "machine": "x86_64",
+        "numeric_threads": {
+          "MKL_NUM_THREADS": "1",
+          "NUMEXPR_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "numpy": "1.26.4",
+        "ocatari": "2.2.1",
+        "platform": "linux",
+        "python": "3.11.7",
+        "scipy": "1.12.0"
+      }
+    },
+    "checkpoint": {
+      "path": "checkpoints/326144-2ee038aac7773a6ab46b4c776aa775ba8d0285626125047210b7dec2f720763f.pkl",
+      "sha256": "2ee038aac7773a6ab46b4c776aa775ba8d0285626125047210b7dec2f720763f"
+    },
+    "counter": 326144,
+    "log_head": {
+      "end": 326144,
+      "path": "logs/326144-e177ab68fc3f2d3f81945bc8a5f81a5f8d841d87c7412239bb42c378c3b9b347.jsonl",
+      "sha256": "e177ab68fc3f2d3f81945bc8a5f81a5f8d841d87c7412239bb42c378c3b9b347"
+    },
+    "previous": {
+      "path": "checkpoints/325632-84b73df4a1a04cabaedf32aa01914f63189d504b551d108768bff85b5cd5c111.pkl",
+      "sha256": "84b73df4a1a04cabaedf32aa01914f63189d504b551d108768bff85b5cd5c111"
+    },
+    "training_active_seconds": 3257.124195693992
+  },
+  "schema": "pong_analysis_unit_v2",
+  "sha256": "554b860884f5030224d9141bf6fe99319dcb82a50db962ee1683f67a5524ac8e"
+}
