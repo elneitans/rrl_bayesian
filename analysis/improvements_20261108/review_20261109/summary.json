@@ -1,0 +1,396 @@
+{
+  "campaign": "5c68a97ac3ddd52553a705703ef4faf12d014108b41ca16e7b3b84d7eff805b4",
+  "campaign_complete": false,
+  "planned_continuations": 70,
+  "states": {
+    "completed": 61,
+    "partial": 2,
+    "not_started": 7
+  },
+  "recorded_new_decisions": 6285000,
+  "checked_evaluation_rollouts": 3756,
+  "complete_final_panels": 61,
+  "common_complete_cohorts": {
+    "historical_f": [
+      710602,
+      710603,
+      710607,
+      710608,
+      710610
+    ],
+    "anova": [
+      710602,
+      710603,
+      710607
+    ]
+  },
+  "method_summary": [
+    {
+      "criterion": "historical_f",
+      "mode": "baseline",
+      "seeds": 5,
+      "mean_seed_return": 27.966666666666665,
+      "median_seed_return": 2.8333333333333335,
+      "mean_paired_difference": 0.0,
+      "seed_wins": 0,
+      "seed_ties": 5,
+      "seed_losses": 0
+    },
+    {
+      "criterion": "historical_f",
+      "mode": "slow_td",
+      "seeds": 5,
+      "mean_seed_return": 29.650000000000002,
+      "median_seed_return": 2.9166666666666665,
+      "mean_paired_difference": 1.6833333333333333,
+      "seed_wins": 3,
+      "seed_ties": 1,
+      "seed_losses": 1
+    },
+    {
+      "criterion": "historical_f",
+      "mode": "double_td",
+      "seeds": 5,
+      "mean_seed_return": 4.666666666666667,
+      "median_seed_return": 2.75,
+      "mean_paired_difference": -23.3,
+      "seed_wins": 2,
+      "seed_ties": 0,
+      "seed_losses": 3
+    },
+    {
+      "criterion": "historical_f",
+      "mode": "stable_td",
+      "seeds": 5,
+      "mean_seed_return": 14.533333333333333,
+      "median_seed_return": 2.75,
+      "mean_paired_difference": -13.433333333333334,
+      "seed_wins": 1,
+      "seed_ties": 1,
+      "seed_losses": 3
+    },
+    {
+      "criterion": "historical_f",
+      "mode": "guarded",
+      "seeds": 5,
+      "mean_seed_return": 10.333333333333334,
+      "median_seed_return": 2.0833333333333335,
+      "mean_paired_difference": -17.633333333333333,
+      "seed_wins": 1,
+      "seed_ties": 1,
+      "seed_losses": 3
+    },
+    {
+      "criterion": "historical_f",
+      "mode": "stable_guarded",
+      "seeds": 5,
+      "mean_seed_return": 14.366666666666667,
+      "median_seed_return": 2.5833333333333335,
+      "mean_paired_difference": -13.6,
+      "seed_wins": 1,
+      "seed_ties": 1,
+      "seed_losses": 3
+    },
+    {
+      "criterion": "historical_f",
+      "mode": "refit_only",
+      "seeds": 5,
+      "mean_seed_return": 17.28333333333333,
+      "median_seed_return": 2.0833333333333335,
+      "mean_paired_difference": -10.683333333333334,
+      "seed_wins": 1,
+      "seed_ties": 0,
+      "seed_losses": 4
+    },
+    {
+      "criterion": "anova",
+      "mode": "baseline",
+      "seeds": 3,
+      "mean_seed_return": 24.333333333333332,
+      "median_seed_return": 23.083333333333332,
+      "mean_paired_difference": 0.0,
+      "seed_wins": 0,
+      "seed_ties": 3,
+      "seed_losses": 0
+    },
+    {
+      "criterion": "anova",
+      "mode": "slow_td",
+      "seeds": 3,
+      "mean_seed_return": 46.0,
+      "median_seed_return": 53.666666666666664,
+      "mean_paired_difference": 21.666666666666668,
+      "seed_wins": 2,
+      "seed_ties": 0,
+      "seed_losses": 1
+    },
+    {
+      "criterion": "anova",
+      "mode": "double_td",
+      "seeds": 3,
+      "mean_seed_return": 3.6666666666666665,
+      "median_seed_return": 4.083333333333333,
+      "mean_paired_difference": -20.666666666666668,
+      "seed_wins": 0,
+      "seed_ties": 0,
+      "seed_losses": 3
+    },
+    {
+      "criterion": "anova",
+      "mode": "stable_td",
+      "seeds": 3,
+      "mean_seed_return": 45.638888888888886,
+      "median_seed_return": 53.666666666666664,
+      "mean_paired_difference": 21.305555555555557,
+      "seed_wins": 2,
+      "seed_ties": 0,
+      "seed_losses": 1
+    },
+    {
+      "criterion": "anova",
+      "mode": "guarded",
+      "seeds": 3,
+      "mean_seed_return": 29.11111111111111,
+      "median_seed_return": 28.416666666666668,
+      "mean_paired_difference": 4.777777777777778,
+      "seed_wins": 2,
+      "seed_ties": 0,
+      "seed_losses": 1
+    },
+    {
+      "criterion": "anova",
+      "mode": "stable_guarded",
+      "seeds": 3,
+      "mean_seed_return": 53.77777777777778,
+      "median_seed_return": 67.41666666666667,
+      "mean_paired_difference": 29.444444444444443,
+      "seed_wins": 2,
+      "seed_ties": 0,
+      "seed_losses": 1
+    },
+    {
+      "criterion": "anova",
+      "mode": "refit_only",
+      "seeds": 3,
+      "mean_seed_return": 42.333333333333336,
+      "median_seed_return": 40.25,
+      "mean_paired_difference": 18.0,
+      "seed_wins": 2,
+      "seed_ties": 0,
+      "seed_losses": 1
+    }
+  ],
+  "operations": {
+    "grows_total": 142,
+    "prunes_total": 20,
+    "replacements_total": 3,
+    "refits_total": 32,
+    "target_syncs": 537
+  },
+  "review_outcomes": [
+    {
+      "mode": "guarded",
+      "reason": "accepted",
+      "count": 11
+    },
+    {
+      "mode": "guarded",
+      "reason": "loss_gate",
+      "count": 18
+    },
+    {
+      "mode": "guarded",
+      "reason": "policy_trust",
+      "count": 25
+    },
+    {
+      "mode": "guarded",
+      "reason": "return_guard",
+      "count": 2
+    },
+    {
+      "mode": "refit_only",
+      "reason": "accepted",
+      "count": 32
+    },
+    {
+      "mode": "refit_only",
+      "reason": "loss_gate",
+      "count": 3
+    },
+    {
+      "mode": "stable_guarded",
+      "reason": "accepted",
+      "count": 12
+    },
+    {
+      "mode": "stable_guarded",
+      "reason": "loss_gate",
+      "count": 24
+    },
+    {
+      "mode": "stable_guarded",
+      "reason": "policy_trust",
+      "count": 20
+    }
+  ],
+  "validation_scope": "Checksummed manifest/status/evaluation identities, disjoint RAM banks, event counters and recorded gates. No emulator/checkpoint deserialization; no independent reconstruction of candidate losses/targets here.",
+  "trace_rows_verified": 6285000,
+  "limitations": "Partial prospective campaign; dependent early starts, development plus limited confirmation seeds. No reserved test, no winner selection or general superiority claim.",
+  "pairwise_available_summary": [
+    {
+      "criterion": "historical_f",
+      "mode": "baseline",
+      "seeds": 5,
+      "candidate_mean": 27.966666666666665,
+      "matched_baseline_mean": 27.966666666666665,
+      "mean_paired_difference": 0.0,
+      "seed_wins": 0,
+      "seed_ties": 5,
+      "seed_losses": 0
+    },
+    {
+      "criterion": "historical_f",
+      "mode": "slow_td",
+      "seeds": 5,
+      "candidate_mean": 29.650000000000002,
+      "matched_baseline_mean": 27.966666666666665,
+      "mean_paired_difference": 1.6833333333333333,
+      "seed_wins": 3,
+      "seed_ties": 1,
+      "seed_losses": 1
+    },
+    {
+      "criterion": "historical_f",
+      "mode": "double_td",
+      "seeds": 5,
+      "candidate_mean": 4.666666666666667,
+      "matched_baseline_mean": 27.966666666666665,
+      "mean_paired_difference": -23.3,
+      "seed_wins": 2,
+      "seed_ties": 0,
+      "seed_losses": 3
+    },
+    {
+      "criterion": "historical_f",
+      "mode": "stable_td",
+      "seeds": 5,
+      "candidate_mean": 14.533333333333333,
+      "matched_baseline_mean": 27.966666666666665,
+      "mean_paired_difference": -13.433333333333334,
+      "seed_wins": 1,
+      "seed_ties": 1,
+      "seed_losses": 3
+    },
+    {
+      "criterion": "historical_f",
+      "mode": "guarded",
+      "seeds": 5,
+      "candidate_mean": 10.333333333333334,
+      "matched_baseline_mean": 27.966666666666665,
+      "mean_paired_difference": -17.633333333333333,
+      "seed_wins": 1,
+      "seed_ties": 1,
+      "seed_losses": 3
+    },
+    {
+      "criterion": "historical_f",
+      "mode": "stable_guarded",
+      "seeds": 5,
+      "candidate_mean": 14.366666666666667,
+      "matched_baseline_mean": 27.966666666666665,
+      "mean_paired_difference": -13.6,
+      "seed_wins": 1,
+      "seed_ties": 1,
+      "seed_losses": 3
+    },
+    {
+      "criterion": "historical_f",
+      "mode": "refit_only",
+      "seeds": 5,
+      "candidate_mean": 17.28333333333333,
+      "matched_baseline_mean": 27.966666666666665,
+      "mean_paired_difference": -10.683333333333334,
+      "seed_wins": 1,
+      "seed_ties": 0,
+      "seed_losses": 4
+    },
+    {
+      "criterion": "anova",
+      "mode": "baseline",
+      "seeds": 5,
+      "candidate_mean": 27.983333333333334,
+      "matched_baseline_mean": 27.983333333333334,
+      "mean_paired_difference": 0.0,
+      "seed_wins": 0,
+      "seed_ties": 5,
+      "seed_losses": 0
+    },
+    {
+      "criterion": "anova",
+      "mode": "slow_td",
+      "seeds": 5,
+      "candidate_mean": 38.53333333333333,
+      "matched_baseline_mean": 27.983333333333334,
+      "mean_paired_difference": 10.55,
+      "seed_wins": 3,
+      "seed_ties": 0,
+      "seed_losses": 2
+    },
+    {
+      "criterion": "anova",
+      "mode": "double_td",
+      "seeds": 4,
+      "candidate_mean": 6.0625,
+      "matched_baseline_mean": 29.020833333333336,
+      "mean_paired_difference": -22.958333333333332,
+      "seed_wins": 0,
+      "seed_ties": 0,
+      "seed_losses": 4
+    },
+    {
+      "criterion": "anova",
+      "mode": "stable_td",
+      "seeds": 3,
+      "candidate_mean": 45.638888888888886,
+      "matched_baseline_mean": 24.333333333333332,
+      "mean_paired_difference": 21.305555555555557,
+      "seed_wins": 2,
+      "seed_ties": 0,
+      "seed_losses": 1
+    },
+    {
+      "criterion": "anova",
+      "mode": "guarded",
+      "seeds": 3,
+      "candidate_mean": 29.11111111111111,
+      "matched_baseline_mean": 24.333333333333332,
+      "mean_paired_difference": 4.777777777777778,
+      "seed_wins": 2,
+      "seed_ties": 0,
+      "seed_losses": 1
+    },
+    {
+      "criterion": "anova",
+      "mode": "stable_guarded",
+      "seeds": 3,
+      "candidate_mean": 53.77777777777778,
+      "matched_baseline_mean": 24.333333333333332,
+      "mean_paired_difference": 29.444444444444443,
+      "seed_wins": 2,
+      "seed_ties": 0,
+      "seed_losses": 1
+    },
+    {
+      "criterion": "anova",
+      "mode": "refit_only",
+      "seeds": 3,
+      "candidate_mean": 42.333333333333336,
+      "matched_baseline_mean": 24.333333333333332,
+      "mean_paired_difference": 18.0,
+      "seed_wins": 2,
+      "seed_ties": 0,
+      "seed_losses": 1
+    }
+  ]
+}

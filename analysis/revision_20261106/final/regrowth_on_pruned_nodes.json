@@ -1,0 +1,74 @@
+[
+  {
+    "criterion": "historical_f",
+    "seed": 710603,
+    "action": "FIRE",
+    "path": "root/more",
+    "node": 46,
+    "pruned_at": 525000,
+    "grew_at": 540393,
+    "cooldown_elapsed": 15393,
+    "removed_literal": "Literal(name='present', type='logical', obj1='ball_t-1', obj2=None, obj3=None)",
+    "grown_literal": "Literal(name='present', type='logical', obj1='ball_t-1', obj2=None, obj3=None)"
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710603,
+    "action": "LEFT",
+    "path": "root/less",
+    "node": 52,
+    "pruned_at": 550000,
+    "grew_at": 560637,
+    "cooldown_elapsed": 10637,
+    "removed_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)",
+    "grown_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)"
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710610,
+    "action": "LEFT",
+    "path": "root",
+    "node": 23,
+    "pruned_at": 550000,
+    "grew_at": 560046,
+    "cooldown_elapsed": 10046,
+    "removed_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+    "grown_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)"
+  },
+  {
+    "criterion": "anova",
+    "seed": 710603,
+    "action": "NOOP",
+    "path": "root/less",
+    "node": 318,
+    "pruned_at": 525000,
+    "grew_at": 535001,
+    "cooldown_elapsed": 10001,
+    "removed_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)",
+    "grown_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)"
+  },
+  {
+    "criterion": "anova",
+    "seed": 710603,
+    "action": "LEFT",
+    "path": "root/more/less",
+    "node": 331,
+    "pruned_at": 550000,
+    "grew_at": 563285,
+    "cooldown_elapsed": 13285,
+    "removed_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)",
+    "grown_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)"
+  },
+  {
+    "criterion": "anova",
+    "seed": 710603,
+    "action": "LEFT",
+    "path": "root/more/more/less",
+    "node": 335,
+    "pruned_at": 575000,
+    "grew_at": 591729,
+    "cooldown_elapsed": 16729,
+    "removed_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)",
+    "grown_literal": "Literal(name='incontact', type='logical', obj1='player_t', obj2='ball_t', obj3=None)"
+  }
+]

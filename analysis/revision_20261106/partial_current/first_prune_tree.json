@@ -1,0 +1,122 @@
+{
+  "criterion": "historical_f",
+  "seed": 710607,
+  "counter": 525000,
+  "verified_identical_training_prefix_transitions": 25000,
+  "other_action_trees_unchanged": true,
+  "sources": {
+    "frozen": {
+      "path": "results_cluster/rrtl_revision_20261106_02/campaign/continuations/historical_f/710607/frozen/audits/25000.json",
+      "file_sha256": "e989a1786d1469df001b93808418b2a5ccf26fee4ad517ce2cf3dd12954abe61"
+    },
+    "prune": {
+      "path": "results_cluster/rrtl_revision_20261106_02/campaign/continuations/historical_f/710607/prune/audits/25000.json",
+      "file_sha256": "8d2e8554f832656150037a7038eef0740516f17c72031bcfd9fdebf446e03c34"
+    }
+  },
+  "trees": {
+    "frozen": [
+      {
+        "action": "FIRE",
+        "depth": 0,
+        "leaf": false,
+        "literal": {
+          "name": "present",
+          "obj1": "ball_t",
+          "obj2": null,
+          "obj3": null,
+          "type": "logical"
+        },
+        "node": 6,
+        "path": "root",
+        "q": 1.4231395519774366
+      },
+      {
+        "action": "FIRE",
+        "depth": 1,
+        "leaf": false,
+        "literal": {
+          "name": "x",
+          "obj1": "player_t",
+          "obj2": "ball_t",
+          "obj3": null,
+          "type": "comparative"
+        },
+        "node": 7,
+        "path": "root/true",
+        "q": 2.0256257089210905
+      },
+      {
+        "action": "FIRE",
+        "depth": 2,
+        "leaf": true,
+        "literal": null,
+        "node": 8,
+        "path": "root/true/more",
+        "q": 2.279475442982411
+      },
+      {
+        "action": "FIRE",
+        "depth": 2,
+        "leaf": true,
+        "literal": null,
+        "node": 9,
+        "path": "root/true/same",
+        "q": 2.241685692369914
+      },
+      {
+        "action": "FIRE",
+        "depth": 2,
+        "leaf": true,
+        "literal": null,
+        "node": 10,
+        "path": "root/true/less",
+        "q": 2.2583873549474096
+      },
+      {
+        "action": "FIRE",
+        "depth": 1,
+        "leaf": true,
+        "literal": null,
+        "node": 11,
+        "path": "root/false",
+        "q": 1.85493299769584
+      }
+    ],
+    "prune": [
+      {
+        "action": "FIRE",
+        "depth": 0,
+        "leaf": false,
+        "literal": {
+          "name": "present",
+          "obj1": "ball_t",
+          "obj2": null,
+          "obj3": null,
+          "type": "logical"
+        },
+        "node": 6,
+        "path": "root",
+        "q": 1.4231395519774366
+      },
+      {
+        "action": "FIRE",
+        "depth": 1,
+        "leaf": true,
+        "literal": null,
+        "node": 31,
+        "path": "root/true",
+        "q": 2.4525296535095755
+      },
+      {
+        "action": "FIRE",
+        "depth": 1,
+        "leaf": true,
+        "literal": null,
+        "node": 11,
+        "path": "root/false",
+        "q": 1.85493299769584
+      }
+    ]
+  }
+}

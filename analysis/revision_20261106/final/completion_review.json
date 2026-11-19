@@ -1,0 +1,104 @@
+{
+  "complete": true,
+  "review_date": "2026-11-08",
+  "campaign": "2887a3db99f6f303f7b700c837c96b124768a250d6a9523acef8771071c65462",
+  "requirements": [
+    {
+      "id": 1,
+      "requirement": "Implementar poda, poda/recrecimiento y reemplazo local",
+      "status": "verified",
+      "evidence": [
+        "implementation_verified.json",
+        "regrowth_on_pruned_nodes.json",
+        "revision_policy_effects.json"
+      ],
+      "observed": {
+        "prunes": 32,
+        "replacements": 16,
+        "grows": 78,
+        "regrowth_on_new_pruned_leaves": 6,
+        "linux_tests_passed": 107
+      }
+    },
+    {
+      "id": 2,
+      "requirement": "Evaluar checkpoints congelados desde situaciones realmente distintas",
+      "status": "verified",
+      "evidence": [
+        "local_integrity_check.json",
+        "frozen_summary.csv",
+        "politicas_congeladas.png"
+      ],
+      "observed": {
+        "rollouts": 324,
+        "distinct_ram": 6,
+        "distinct_encoded": 6,
+        "minimum_distinct_trajectories_per_six_starts": 6,
+        "validation_ram_disjoint": true
+      }
+    },
+    {
+      "id": 3,
+      "requirement": "Continuaciones cortas con evaluaciones frecuentes",
+      "status": "verified",
+      "evidence": [
+        "completion.json",
+        "local_integrity_check.json",
+        "continuation_summary.csv",
+        "training_windows.csv",
+        "continuaciones.png"
+      ],
+      "observed": {
+        "continuations": 30,
+        "additional_decisions_per_model": 100000,
+        "parent_counter": 500000,
+        "final_counter": 600000,
+        "evaluation_interval": 25000,
+        "save_interval": 5000,
+        "continuation_rollouts": 900,
+        "trace_rows": 3000000
+      }
+    },
+    {
+      "id": 4,
+      "requirement": "Auditar la señal usada por el test de división",
+      "status": "verified",
+      "evidence": [
+        "signal_comparison.json",
+        "paired_signal_summary.csv",
+        "actual_growth_events.csv"
+      ],
+      "observed": {
+        "actual_growth_signal": "updated_q; target and td_error moments were instrumentation only",
+        "paired_candidate_windows": 370856,
+        "actual_grows": 78,
+        "audited_signals": [
+          "updated_q",
+          "target",
+          "td_error"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "requirement": "Revisar los resultados completos, árboles y limitaciones",
+      "status": "verified",
+      "evidence": [
+        "../informe.md",
+        "revision_policy_effects.json",
+        "control_equivalence_full.json",
+        "no_prune_controls.json"
+      ],
+      "observed": {
+        "accepted_revision_losses_reproduced": 48,
+        "exact_first_intervention_prefixes": 14,
+        "exact_original_control_transitions": 600000,
+        "figures_visually_reviewed": 2,
+        "reserved_test_executed": false
+      }
+    }
+  ],
+  "report_sha256": "b158572cef4b5a05e6be990822665f4c25ffd706a5980544d849dde6921448e2",
+  "human_report_sha256": "6cfd5c41af4023e6f643d39a8ff92f8dab0adcdc694d3bdf1915bdeb5a8b7301",
+  "interpretation": "Execution and requested diagnostic review completed. No assertion of general policy superiority."
+}

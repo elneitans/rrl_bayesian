@@ -1,0 +1,60 @@
+{
+  "scope": "Normal control vs pre-existing original continuation; exact observable TD/policy equivalence",
+  "complete": false,
+  "missing": [
+    {
+      "criterion": "historical_f",
+      "seed": 710610
+    },
+    {
+      "criterion": "anova",
+      "seed": 710603
+    },
+    {
+      "criterion": "anova",
+      "seed": 710607
+    },
+    {
+      "criterion": "anova",
+      "seed": 710610
+    }
+  ],
+  "cases": [
+    {
+      "criterion": "historical_f",
+      "seed": 710603,
+      "transitions": 100000,
+      "normal_checkpoint": {
+        "path": "checkpoint_100000-c2dd44e92e8ab5d28c92e16f080859d76cae4b95027a29e7954b10dc9ddc088c.pkl",
+        "sha256": "c2dd44e92e8ab5d28c92e16f080859d76cae4b95027a29e7954b10dc9ddc088c"
+      },
+      "exact": true
+    },
+    {
+      "criterion": "historical_f",
+      "seed": 710607,
+      "transitions": 100000,
+      "normal_checkpoint": {
+        "path": "checkpoint_100000-b0b47ae8b5a0e2ebbade03537b394724208cdbd302822e16fa77dbb85fbb20b4.pkl",
+        "sha256": "b0b47ae8b5a0e2ebbade03537b394724208cdbd302822e16fa77dbb85fbb20b4"
+      },
+      "exact": true
+    }
+  ],
+  "fields": [
+    "interaction",
+    "transition_id",
+    "episode_id",
+    "step_id",
+    "episode_seed",
+    "epsilon",
+    "action",
+    "reward",
+    "raw_reward",
+    "terminated",
+    "truncated",
+    "episode_end",
+    "raw_episode_return",
+    "td"
+  ]
+}

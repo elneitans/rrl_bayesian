@@ -1,0 +1,113 @@
+{
+  "payload": {
+    "evaluation_bank_used_for_gate": false,
+    "holdout": {
+      "path": "probe_100000-6c8aca50f11c6183f3abe435c1d990f22341dcd9d7043db0b03eab6d4fc9b738.pkl",
+      "sha256": "6c8aca50f11c6183f3abe435c1d990f22341dcd9d7043db0b03eab6d4fc9b738"
+    },
+    "identity": {
+      "campaign": "5c68a97ac3ddd52553a705703ef4faf12d014108b41ca16e7b3b84d7eff805b4",
+      "criterion": "historical_f",
+      "mode": "stable_guarded",
+      "parent": {
+        "path": "checkpoints/500000-3061c3f01482034781c4042170d8304bc546d01377f01e6b9ba070c05b82344a.pkl",
+        "sha256": "3061c3f01482034781c4042170d8304bc546d01377f01e6b9ba070c05b82344a"
+      },
+      "parent_counter": 500000,
+      "seed": 710610
+    },
+    "point": 100000,
+    "reference": {
+      "path": "reference_100000-7db1c062e1e9a7fcfc889e9132189066c6ebd41a794bb2df153618c93ee443c0.pkl",
+      "sha256": "7db1c062e1e9a7fcfc889e9132189066c6ebd41a794bb2df153618c93ee443c0"
+    },
+    "return_bank": {
+      "path": "return_bank_100000-f7116450864248c6128587add13fc34c1a5171e270bb0c432df0c4d44c20aa40.pkl",
+      "sha256": "f7116450864248c6128587add13fc34c1a5171e270bb0c432df0c4d44c20aa40"
+    },
+    "reviews": [
+      {
+        "action": "RIGHT",
+        "bounded_q": true,
+        "candidate_mse": 0.05833475806565349,
+        "counter": 600000,
+        "current_mse": 0.054096276344219936,
+        "gate": {
+          "accepted": false,
+          "blocks": 8,
+          "mean_difference": -0.00228578877629579,
+          "reason": "loss_gate",
+          "samples": 83,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": 0.0025,
+          "upper_bound": 0.014690403616117894
+        },
+        "kind": "prune_review",
+        "loss_gate": {
+          "accepted": false,
+          "blocks": 8,
+          "mean_difference": -0.00228578877629579,
+          "reason": "loss_gate",
+          "samples": 83,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": 0.0025,
+          "upper_bound": 0.014690403616117894
+        },
+        "new_leaves": 1,
+        "new_literal": "None",
+        "node": 26,
+        "old_leaves": 3,
+        "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+        "path": "root/true/less",
+        "train_samples": 2321
+      },
+      {
+        "action": "RIGHT",
+        "bounded_q": true,
+        "candidate_mse": 0.0024917814492871936,
+        "counter": 600000,
+        "current_mse": 0.0023753141717365246,
+        "gate": {
+          "accepted": false,
+          "blocks": 8,
+          "mean_difference": 0.0001349504727895354,
+          "reason": "policy_trust",
+          "samples": 152,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": 0.0025,
+          "upper_bound": 0.00022206038018376029
+        },
+        "kind": "prune_review",
+        "loss_gate": {
+          "accepted": true,
+          "blocks": 8,
+          "mean_difference": 0.0001349504727895354,
+          "reason": "loss_gate",
+          "samples": 152,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": 0.0025,
+          "upper_bound": 0.00022206038018376029
+        },
+        "new_leaves": 1,
+        "new_literal": "None",
+        "node": 24,
+        "old_leaves": 3,
+        "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+        "path": "root/true/more",
+        "policy_guard": {
+          "accepted": false,
+          "blocks": 8,
+          "changed_state_fraction": 0.23253388946819603,
+          "limit": 0.05,
+          "mean_tv": 0.24067573051948052,
+          "samples": 959
+        },
+        "train_samples": 540
+      }
+    ],
+    "validation_samples": 959,
+    "validation_used_for_td": false
+  },
+  "schema": "pong_analysis_unit_v2",
+  "sha256": "00fe93af033b7d8ec08e76caeedd85be7fbb9a8aeca246eebd89458275ac8938"
+}

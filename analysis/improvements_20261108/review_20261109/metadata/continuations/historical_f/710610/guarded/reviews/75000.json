@@ -1,0 +1,121 @@
+{
+  "payload": {
+    "evaluation_bank_used_for_gate": false,
+    "holdout": {
+      "path": "probe_75000-38609376b2862ac5764220523cd1f2a31f326deb5823873bcf270d23d4703de4.pkl",
+      "sha256": "38609376b2862ac5764220523cd1f2a31f326deb5823873bcf270d23d4703de4"
+    },
+    "identity": {
+      "campaign": "5c68a97ac3ddd52553a705703ef4faf12d014108b41ca16e7b3b84d7eff805b4",
+      "criterion": "historical_f",
+      "mode": "guarded",
+      "parent": {
+        "path": "checkpoints/500000-3061c3f01482034781c4042170d8304bc546d01377f01e6b9ba070c05b82344a.pkl",
+        "sha256": "3061c3f01482034781c4042170d8304bc546d01377f01e6b9ba070c05b82344a"
+      },
+      "parent_counter": 500000,
+      "seed": 710610
+    },
+    "point": 75000,
+    "reference": {
+      "path": "reference_75000-2c16b354992970242da7843d1a230b48c2d8025627c44ffd011cb004323b2435.pkl",
+      "sha256": "2c16b354992970242da7843d1a230b48c2d8025627c44ffd011cb004323b2435"
+    },
+    "return_bank": {
+      "path": "return_bank_75000-3ec53da817ec9aeb0df2870478258cffcd5f551114503dc9a7d17c90c71570d4.pkl",
+      "sha256": "3ec53da817ec9aeb0df2870478258cffcd5f551114503dc9a7d17c90c71570d4"
+    },
+    "reviews": [
+      {
+        "action": "FIRE",
+        "bounded_q": true,
+        "candidate_mse": 0.11577798352638431,
+        "counter": 575000,
+        "current_mse": 0.21488247452199147,
+        "gate": {
+          "accepted": false,
+          "blocks": 8,
+          "mean_difference": -0.09450253254627891,
+          "reason": "policy_trust",
+          "samples": 200,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": -0.001,
+          "upper_bound": -0.06876115409748973
+        },
+        "kind": "replacement_review",
+        "loss_gate": {
+          "accepted": true,
+          "blocks": 8,
+          "mean_difference": -0.09450253254627891,
+          "reason": "loss_gate",
+          "samples": 200,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": -0.001,
+          "upper_bound": -0.06876115409748973
+        },
+        "new_leaves": 7,
+        "new_literal": "Literal(name='y', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+        "node": 4,
+        "old_leaves": 5,
+        "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+        "path": "root/true",
+        "policy_guard": {
+          "accepted": false,
+          "blocks": 8,
+          "changed_state_fraction": 0.2310838445807771,
+          "limit": 0.05,
+          "mean_tv": 0.23208211776352677,
+          "samples": 978
+        },
+        "train_samples": 1073
+      },
+      {
+        "action": "FIRE",
+        "bounded_q": true,
+        "candidate_mse": 0.11664971913989305,
+        "counter": 575000,
+        "current_mse": 0.21488247452199147,
+        "gate": {
+          "accepted": false,
+          "blocks": 8,
+          "mean_difference": -0.09259488531984605,
+          "reason": "policy_trust",
+          "samples": 200,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": 0.0025,
+          "upper_bound": -0.06579636329350835
+        },
+        "kind": "prune_review",
+        "loss_gate": {
+          "accepted": true,
+          "blocks": 8,
+          "mean_difference": -0.09259488531984605,
+          "reason": "loss_gate",
+          "samples": 200,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": 0.0025,
+          "upper_bound": -0.06579636329350835
+        },
+        "new_leaves": 1,
+        "new_literal": "None",
+        "node": 4,
+        "old_leaves": 5,
+        "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+        "path": "root/true",
+        "policy_guard": {
+          "accepted": false,
+          "blocks": 8,
+          "changed_state_fraction": 0.25153374233128833,
+          "limit": 0.05,
+          "mean_tv": 0.2543746824186992,
+          "samples": 978
+        },
+        "train_samples": 1073
+      }
+    ],
+    "validation_samples": 978,
+    "validation_used_for_td": false
+  },
+  "schema": "pong_analysis_unit_v2",
+  "sha256": "34a3f04670380028df9050b02699453ca0ae8adfb5c886363f56a91345827279"
+}

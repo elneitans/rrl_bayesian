@@ -1,0 +1,375 @@
+{
+  "payload": {
+    "counter": 500000,
+    "events": [],
+    "identity": {
+      "campaign": "5c68a97ac3ddd52553a705703ef4faf12d014108b41ca16e7b3b84d7eff805b4",
+      "criterion": "historical_f",
+      "mode": "baseline",
+      "parent": {
+        "path": "checkpoints/500000-1be22f5f49c4f094d2e2320e482f774fc20922f2a6d91e5fe3afdb065a06db4a.pkl",
+        "sha256": "1be22f5f49c4f094d2e2320e482f774fc20922f2a6d91e5fe3afdb065a06db4a"
+      },
+      "parent_counter": 500000,
+      "seed": 710607
+    },
+    "metrics": {
+      "active_splits": 10,
+      "grows_total": 0,
+      "initial_splits": 10,
+      "leaves": 21,
+      "mode": "baseline",
+      "parameter_version": 0,
+      "prunes_total": 0,
+      "refits_total": 0,
+      "replacements_total": 0,
+      "structure_version": 0,
+      "target_counter": 500000,
+      "target_syncs": 0
+    },
+    "signals": [],
+    "trees": [
+      {
+        "action": "NOOP",
+        "depth": 0,
+        "leaf": false,
+        "literal": {
+          "name": "present",
+          "obj1": "ball_t",
+          "obj2": null,
+          "obj3": null,
+          "type": "logical"
+        },
+        "node": 0,
+        "path": "root",
+        "q": 1.1428799904069502
+      },
+      {
+        "action": "NOOP",
+        "depth": 1,
+        "leaf": false,
+        "literal": {
+          "name": "x",
+          "obj1": "player_t",
+          "obj2": "ball_t",
+          "obj3": null,
+          "type": "comparative"
+        },
+        "node": 1,
+        "path": "root/true",
+        "q": 1.9807918716571578
+      },
+      {
+        "action": "NOOP",
+        "depth": 2,
+        "leaf": true,
+        "literal": null,
+        "node": 2,
+        "path": "root/true/more",
+        "q": 2.0846988218205245
+      },
+      {
+        "action": "NOOP",
+        "depth": 2,
+        "leaf": true,
+        "literal": null,
+        "node": 3,
+        "path": "root/true/same",
+        "q": 2.1078138279246956
+      },
+      {
+        "action": "NOOP",
+        "depth": 2,
+        "leaf": true,
+        "literal": null,
+        "node": 4,
+        "path": "root/true/less",
+        "q": 2.090485498834845
+      },
+      {
+        "action": "NOOP",
+        "depth": 1,
+        "leaf": true,
+        "literal": null,
+        "node": 5,
+        "path": "root/false",
+        "q": 1.662842092312156
+      },
+      {
+        "action": "FIRE",
+        "depth": 0,
+        "leaf": false,
+        "literal": {
+          "name": "present",
+          "obj1": "ball_t",
+          "obj2": null,
+          "obj3": null,
+          "type": "logical"
+        },
+        "node": 6,
+        "path": "root",
+        "q": 1.4231395519774366
+      },
+      {
+        "action": "FIRE",
+        "depth": 1,
+        "leaf": false,
+        "literal": {
+          "name": "x",
+          "obj1": "player_t",
+          "obj2": "ball_t",
+          "obj3": null,
+          "type": "comparative"
+        },
+        "node": 7,
+        "path": "root/true",
+        "q": 2.0256257089210905
+      },
+      {
+        "action": "FIRE",
+        "depth": 2,
+        "leaf": true,
+        "literal": null,
+        "node": 8,
+        "path": "root/true/more",
+        "q": 2.0821093702511604
+      },
+      {
+        "action": "FIRE",
+        "depth": 2,
+        "leaf": true,
+        "literal": null,
+        "node": 9,
+        "path": "root/true/same",
+        "q": 2.1081249558219635
+      },
+      {
+        "action": "FIRE",
+        "depth": 2,
+        "leaf": true,
+        "literal": null,
+        "node": 10,
+        "path": "root/true/less",
+        "q": 2.0829866496880993
+      },
+      {
+        "action": "FIRE",
+        "depth": 1,
+        "leaf": true,
+        "literal": null,
+        "node": 11,
+        "path": "root/false",
+        "q": 1.7339505415263718
+      },
+      {
+        "action": "RIGHT",
+        "depth": 0,
+        "leaf": false,
+        "literal": {
+          "name": "present",
+          "obj1": "ball_t-1",
+          "obj2": null,
+          "obj3": null,
+          "type": "logical"
+        },
+        "node": 12,
+        "path": "root",
+        "q": 1.7037752859262392
+      },
+      {
+        "action": "RIGHT",
+        "depth": 1,
+        "leaf": false,
+        "literal": {
+          "name": "x",
+          "obj1": "player_t",
+          "obj2": "ball_t",
+          "obj3": null,
+          "type": "comparative"
+        },
+        "node": 13,
+        "path": "root/true",
+        "q": 1.6590577088674645
+      },
+      {
+        "action": "RIGHT",
+        "depth": 2,
+        "leaf": true,
+        "literal": null,
+        "node": 14,
+        "path": "root/true/more",
+        "q": 2.084252485220279
+      },
+      {
+        "action": "RIGHT",
+        "depth": 2,
+        "leaf": true,
+        "literal": null,
+        "node": 15,
+        "path": "root/true/same",
+        "q": 2.1080163560598244
+      },
+      {
+        "action": "RIGHT",
+        "depth": 2,
+        "leaf": true,
+        "literal": null,
+        "node": 16,
+        "path": "root/true/less",
+        "q": 2.087752395678846
+      },
+      {
+        "action": "RIGHT",
+        "depth": 1,
+        "leaf": true,
+        "literal": null,
+        "node": 17,
+        "path": "root/false",
+        "q": 1.6929466261865562
+      },
+      {
+        "action": "LEFT",
+        "depth": 0,
+        "leaf": false,
+        "literal": {
+          "name": "x",
+          "obj1": "player_t",
+          "obj2": "ball_t",
+          "obj3": null,
+          "type": "comparative"
+        },
+        "node": 18,
+        "path": "root",
+        "q": 1.5823873873496688
+      },
+      {
+        "action": "LEFT",
+        "depth": 1,
+        "leaf": false,
+        "literal": {
+          "name": "x",
+          "obj1": "player_t",
+          "obj2": "player_t-1",
+          "obj3": null,
+          "type": "comparative"
+        },
+        "node": 19,
+        "path": "root/more",
+        "q": 1.525828926542591
+      },
+      {
+        "action": "LEFT",
+        "depth": 2,
+        "leaf": true,
+        "literal": null,
+        "node": 20,
+        "path": "root/more/more",
+        "q": 2.1145452632062742
+      },
+      {
+        "action": "LEFT",
+        "depth": 2,
+        "leaf": true,
+        "literal": null,
+        "node": 21,
+        "path": "root/more/same",
+        "q": 2.107358912515036
+      },
+      {
+        "action": "LEFT",
+        "depth": 2,
+        "leaf": true,
+        "literal": null,
+        "node": 22,
+        "path": "root/more/less",
+        "q": 2.0984616929569504
+      },
+      {
+        "action": "LEFT",
+        "depth": 1,
+        "leaf": false,
+        "literal": {
+          "name": "x",
+          "obj1": "player_t",
+          "obj2": "player_t-1",
+          "obj3": null,
+          "type": "comparative"
+        },
+        "node": 23,
+        "path": "root/same",
+        "q": 1.374831236254081
+      },
+      {
+        "action": "LEFT",
+        "depth": 2,
+        "leaf": true,
+        "literal": null,
+        "node": 24,
+        "path": "root/same/more",
+        "q": 2.108276078528552
+      },
+      {
+        "action": "LEFT",
+        "depth": 2,
+        "leaf": true,
+        "literal": null,
+        "node": 25,
+        "path": "root/same/same",
+        "q": 2.152208433950302
+      },
+      {
+        "action": "LEFT",
+        "depth": 2,
+        "leaf": true,
+        "literal": null,
+        "node": 26,
+        "path": "root/same/less",
+        "q": 2.1075738548008967
+      },
+      {
+        "action": "LEFT",
+        "depth": 1,
+        "leaf": false,
+        "literal": {
+          "name": "x",
+          "obj1": "player_t",
+          "obj2": "player_t-1",
+          "obj3": null,
+          "type": "comparative"
+        },
+        "node": 27,
+        "path": "root/less",
+        "q": 2.323732278262666
+      },
+      {
+        "action": "LEFT",
+        "depth": 2,
+        "leaf": true,
+        "literal": null,
+        "node": 28,
+        "path": "root/less/more",
+        "q": 2.0975335410156353
+      },
+      {
+        "action": "LEFT",
+        "depth": 2,
+        "leaf": true,
+        "literal": null,
+        "node": 29,
+        "path": "root/less/same",
+        "q": 2.0650886867079787
+      },
+      {
+        "action": "LEFT",
+        "depth": 2,
+        "leaf": true,
+        "literal": null,
+        "node": 30,
+        "path": "root/less/less",
+        "q": 2.0922076410460027
+      }
+    ]
+  },
+  "schema": "pong_analysis_unit_v2",
+  "sha256": "124ab5e99550721f438df0d0d4fd286e3a0d56e61a725c570bbc1b79a0161b3c"
+}

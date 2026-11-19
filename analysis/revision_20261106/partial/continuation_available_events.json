@@ -1,0 +1,44 @@
+[
+  {
+    "criterion": "historical_f",
+    "seed": 710603,
+    "mode": "normal",
+    "action": "LEFT",
+    "counter": 525366,
+    "evidence": {
+      "effect_fraction": 0.027133032569528263,
+      "groups": {
+        "Total": {
+          "J": 9297.199938802738,
+          "mu": 1.6192977043772858,
+          "n": 73194
+        },
+        "less": {
+          "J": 1551.5546909151026,
+          "mu": 1.6136517185756034,
+          "n": 12951
+        },
+        "more": {
+          "J": 1410.2504962313196,
+          "mu": 1.788568883268075,
+          "n": 7765
+        },
+        "same": {
+          "J": 6083.133522911218,
+          "mu": 1.5956445632139595,
+          "n": 52478
+        }
+      },
+      "n": 73194,
+      "observed_categories": 3,
+      "p_anova": 0.0,
+      "p_historical": 9.923558535700047e-05
+    },
+    "inherited_q": 2.3442243535343334,
+    "kind": "grow",
+    "literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)",
+    "node": 45,
+    "path": "root/less",
+    "test": "historical_f"
+  }
+]

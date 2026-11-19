@@ -1,0 +1,115 @@
+{
+  "payload": {
+    "evaluation_bank_used_for_gate": false,
+    "holdout": {
+      "path": "probe_50000-0633b93438654c210dc156f00e5918936485c75f2ac8ca3dba818d990f6468d9.pkl",
+      "sha256": "0633b93438654c210dc156f00e5918936485c75f2ac8ca3dba818d990f6468d9"
+    },
+    "identity": {
+      "campaign": "5c68a97ac3ddd52553a705703ef4faf12d014108b41ca16e7b3b84d7eff805b4",
+      "criterion": "historical_f",
+      "mode": "refit_only",
+      "parent": {
+        "path": "checkpoints/500000-3061c3f01482034781c4042170d8304bc546d01377f01e6b9ba070c05b82344a.pkl",
+        "sha256": "3061c3f01482034781c4042170d8304bc546d01377f01e6b9ba070c05b82344a"
+      },
+      "parent_counter": 500000,
+      "seed": 710610
+    },
+    "point": 50000,
+    "reference": {
+      "path": "reference_50000-e0688d6f513f59647e7a5ecb6ca56851330602b435fa6754872998538d2170ac.pkl",
+      "sha256": "e0688d6f513f59647e7a5ecb6ca56851330602b435fa6754872998538d2170ac"
+    },
+    "return_bank": {
+      "path": "return_bank_50000-ef99d51b504939fe9b6d4bfb7be209f701e27eec80df9b2124056e7c96910ee9.pkl",
+      "sha256": "ef99d51b504939fe9b6d4bfb7be209f701e27eec80df9b2124056e7c96910ee9"
+    },
+    "reviews": [
+      {
+        "action": "RIGHT",
+        "bounded_q": false,
+        "candidate_mse": 0.03783391179511577,
+        "counter": 550000,
+        "current_mse": 0.035499980699755934,
+        "gate": {
+          "accepted": false,
+          "blocks": 8,
+          "mean_difference": 0.002156357579451823,
+          "reason": "loss_gate",
+          "samples": 239,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": 0.0025,
+          "upper_bound": 0.0025208831299088743
+        },
+        "kind": "refit_review",
+        "loss_gate": {
+          "accepted": false,
+          "blocks": 8,
+          "mean_difference": 0.002156357579451823,
+          "reason": "loss_gate",
+          "samples": 239,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": 0.0025,
+          "upper_bound": 0.0025208831299088743
+        },
+        "new_leaves": 4,
+        "new_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)",
+        "node": 12,
+        "old_leaves": 4,
+        "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)",
+        "path": "root",
+        "train_samples": 630
+      },
+      {
+        "action": "FIRE",
+        "bounded_q": false,
+        "candidate_mse": 0.00763858595270872,
+        "counter": 550000,
+        "current_mse": 0.007604694689744217,
+        "gate": {
+          "accepted": true,
+          "blocks": 8,
+          "mean_difference": -1.3033370681306554e-05,
+          "reason": "loss_gate",
+          "samples": 157,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": 0.0025,
+          "upper_bound": 9.948995362715382e-05
+        },
+        "kind": "refit_review",
+        "loss_gate": {
+          "accepted": true,
+          "blocks": 8,
+          "mean_difference": -1.3033370681306554e-05,
+          "reason": "loss_gate",
+          "samples": 157,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": 0.0025,
+          "upper_bound": 9.948995362715382e-05
+        },
+        "new_leaves": 3,
+        "new_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+        "node": 4,
+        "old_leaves": 3,
+        "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+        "parameter_version": 2,
+        "path": "root/true",
+        "policy_guard": {
+          "accepted": true,
+          "blocks": 8,
+          "changed_state_fraction": 0.0,
+          "limit": 0.05,
+          "mean_tv": 0.0,
+          "samples": 848
+        },
+        "structure_version": 0,
+        "train_samples": 2255
+      }
+    ],
+    "validation_samples": 848,
+    "validation_used_for_td": false
+  },
+  "schema": "pong_analysis_unit_v2",
+  "sha256": "840db6b1e1ada910185986c2e27e033d824bf9720b079f7d481bd6b6e0d60671"
+}

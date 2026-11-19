@@ -1,0 +1,80 @@
+{
+  "payload": {
+    "evaluation_bank_used_for_gate": false,
+    "holdout": {
+      "path": "probe_75000-38609376b2862ac5764220523cd1f2a31f326deb5823873bcf270d23d4703de4.pkl",
+      "sha256": "38609376b2862ac5764220523cd1f2a31f326deb5823873bcf270d23d4703de4"
+    },
+    "identity": {
+      "campaign": "5c68a97ac3ddd52553a705703ef4faf12d014108b41ca16e7b3b84d7eff805b4",
+      "criterion": "historical_f",
+      "mode": "refit_only",
+      "parent": {
+        "path": "checkpoints/500000-72a41f9cc3f97a2c74db28beb6cd10fed9c58fd446ff2989a7fb0e9056946802.pkl",
+        "sha256": "72a41f9cc3f97a2c74db28beb6cd10fed9c58fd446ff2989a7fb0e9056946802"
+      },
+      "parent_counter": 500000,
+      "seed": 710608
+    },
+    "point": 75000,
+    "reference": {
+      "path": "reference_75000-69c8f97e74ae4c41881b85ee40a7aa08bd8475323de271156761eb464d2c78aa.pkl",
+      "sha256": "69c8f97e74ae4c41881b85ee40a7aa08bd8475323de271156761eb464d2c78aa"
+    },
+    "return_bank": {
+      "path": "return_bank_75000-3ec53da817ec9aeb0df2870478258cffcd5f551114503dc9a7d17c90c71570d4.pkl",
+      "sha256": "3ec53da817ec9aeb0df2870478258cffcd5f551114503dc9a7d17c90c71570d4"
+    },
+    "reviews": [
+      {
+        "action": "LEFT",
+        "bounded_q": false,
+        "candidate_mse": 0.02774310815394573,
+        "counter": 575000,
+        "current_mse": 0.027810537326465396,
+        "gate": {
+          "accepted": true,
+          "blocks": 8,
+          "mean_difference": -6.683496877903179e-05,
+          "reason": "loss_gate",
+          "samples": 306,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": 0.0025,
+          "upper_bound": 0.0002971734328445222
+        },
+        "kind": "refit_review",
+        "loss_gate": {
+          "accepted": true,
+          "blocks": 8,
+          "mean_difference": -6.683496877903179e-05,
+          "reason": "loss_gate",
+          "samples": 306,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": 0.0025,
+          "upper_bound": 0.0002971734328445222
+        },
+        "new_leaves": 3,
+        "new_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+        "node": 27,
+        "old_leaves": 3,
+        "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+        "parameter_version": 3,
+        "path": "root",
+        "policy_guard": {
+          "accepted": false,
+          "blocks": 8,
+          "changed_state_fraction": 0.21063394683026584,
+          "limit": 0.05,
+          "mean_tv": 0.2102894698801514,
+          "samples": 978
+        },
+        "structure_version": 0,
+        "train_samples": 5161
+      }
+    ],
+    "validation_samples": 978,
+    "validation_used_for_td": false
+  },
+  "schema": "pong_analysis_unit_v2",
+  "sha256": "6e53cbdc912085ee973a21549cc8a7249bb4ca2e28dc63c86c469e5497627946"
+}

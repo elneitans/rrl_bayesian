@@ -1,0 +1,32 @@
+{
+  "criterion": "anova",
+  "seed": 710607,
+  "point": 75000,
+  "prefix_comparison": {
+    "exact": true,
+    "compared_transitions": 75000,
+    "fields": [
+      "interaction",
+      "transition_id",
+      "episode_id",
+      "step_id",
+      "episode_seed",
+      "epsilon",
+      "action",
+      "reward",
+      "raw_reward",
+      "terminated",
+      "truncated",
+      "episode_end",
+      "raw_episode_return",
+      "td",
+      "diagnostic"
+    ]
+  },
+  "reviewed_proposals": 12,
+  "accepted": 0,
+  "rejection_reasons": [
+    "loss_gate"
+  ],
+  "minimum_gate_upper_bound": 0.05205687282724095
+}

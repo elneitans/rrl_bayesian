@@ -1,0 +1,130 @@
+{
+  "payload": {
+    "accepted_changes": 13,
+    "campaign": "40c40ed36246d3b3a55e6a1e4a78453fb4d979e94743c4a98ea54c2acaae477c",
+    "complete": true,
+    "records": [
+      {
+        "criterion": "historical_f",
+        "kind": "prune_review",
+        "loss_reproduced": true,
+        "mode": "guarded",
+        "point": 250,
+        "policy_tv": 0.0,
+        "seed": 710603
+      },
+      {
+        "criterion": "historical_f",
+        "kind": "refit_review",
+        "loss_reproduced": true,
+        "mode": "refit_only",
+        "point": 250,
+        "policy_tv": 0.0,
+        "seed": 710603
+      },
+      {
+        "criterion": "historical_f",
+        "kind": "refit_review",
+        "loss_reproduced": true,
+        "mode": "refit_only",
+        "point": 500,
+        "policy_tv": 0.1328125,
+        "seed": 710603
+      },
+      {
+        "criterion": "historical_f",
+        "kind": "refit_review",
+        "loss_reproduced": true,
+        "mode": "refit_only",
+        "point": 750,
+        "policy_tv": 0.1796875,
+        "seed": 710603
+      },
+      {
+        "criterion": "historical_f",
+        "kind": "refit_review",
+        "loss_reproduced": true,
+        "mode": "refit_only",
+        "point": 1000,
+        "policy_tv": 0.0,
+        "seed": 710603
+      },
+      {
+        "criterion": "anova",
+        "kind": "prune_review",
+        "loss_reproduced": true,
+        "mode": "guarded",
+        "point": 250,
+        "policy_tv": 0.0,
+        "seed": 710603
+      },
+      {
+        "criterion": "anova",
+        "kind": "prune_review",
+        "loss_reproduced": true,
+        "mode": "guarded",
+        "point": 750,
+        "policy_tv": 0.0,
+        "seed": 710603
+      },
+      {
+        "criterion": "anova",
+        "kind": "prune_review",
+        "loss_reproduced": true,
+        "mode": "stable_guarded",
+        "point": 250,
+        "policy_tv": 0.0,
+        "seed": 710603
+      },
+      {
+        "criterion": "anova",
+        "kind": "prune_review",
+        "loss_reproduced": true,
+        "mode": "stable_guarded",
+        "point": 500,
+        "policy_tv": 0.0,
+        "seed": 710603
+      },
+      {
+        "criterion": "anova",
+        "kind": "prune_review",
+        "loss_reproduced": true,
+        "mode": "stable_guarded",
+        "point": 750,
+        "policy_tv": 0.01953125,
+        "seed": 710603
+      },
+      {
+        "criterion": "anova",
+        "kind": "refit_review",
+        "loss_reproduced": true,
+        "mode": "refit_only",
+        "point": 500,
+        "policy_tv": 0.0,
+        "seed": 710603
+      },
+      {
+        "criterion": "anova",
+        "kind": "refit_review",
+        "loss_reproduced": true,
+        "mode": "refit_only",
+        "point": 750,
+        "policy_tv": 0.0,
+        "seed": 710603
+      },
+      {
+        "criterion": "anova",
+        "kind": "refit_review",
+        "loss_reproduced": true,
+        "mode": "refit_only",
+        "point": 1000,
+        "policy_tv": 0.0,
+        "seed": 710603
+      }
+    ],
+    "scope": "Reconstructed from independent probes and immediate pre/post weights; no extra RL training.",
+    "source_sha256": "9e71f8a0c2e32f75995e51f6e52cd9187900267d60cd0ad3ee2817ae1b68653c"
+  },
+  "schema": "pong_analysis_unit_v2",
+  "sha256": "36b3d41e0ec81e2b005579b138bcb201e27433dd6be0b0e1f4622db33ce82f3a"
+}

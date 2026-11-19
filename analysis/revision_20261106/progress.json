@@ -1,0 +1,193 @@
+{
+  "status": "completed_reviewed",
+  "code_archive_sha256": "b525f27011bc2211da328eb0fdf1ccd436bd262c0038a5a772ce4f4fa644ed6e",
+  "remote_source": "~/archive/rrl_revision_code_20261106_v2",
+  "remote_control": "~/archive/rrl_revision_20261106_02",
+  "prepare_job": 36899,
+  "superseded_prepare_job": 36895,
+  "snapshot_debug_job": 36898,
+  "requirements": {
+    "1": {
+      "status": "verified",
+      "requirement": "Implementar poda, poda/recrecimiento y reemplazo local",
+      "evidence": [
+        "implementation_verified.json",
+        "regrowth_on_pruned_nodes.json",
+        "revision_policy_effects.json"
+      ]
+    },
+    "2": {
+      "status": "verified",
+      "requirement": "Evaluar checkpoints congelados desde situaciones realmente distintas",
+      "evidence": [
+        "local_integrity_check.json",
+        "frozen_summary.csv",
+        "politicas_congeladas.png"
+      ]
+    },
+    "3": {
+      "status": "verified",
+      "requirement": "Continuaciones cortas con evaluaciones frecuentes",
+      "evidence": [
+        "completion.json",
+        "local_integrity_check.json",
+        "continuation_summary.csv",
+        "training_windows.csv",
+        "continuaciones.png"
+      ]
+    },
+    "4": {
+      "status": "verified",
+      "requirement": "Auditar la señal usada por el test de división",
+      "evidence": [
+        "signal_comparison.json",
+        "paired_signal_summary.csv",
+        "actual_growth_events.csv"
+      ]
+    },
+    "5": {
+      "status": "verified",
+      "requirement": "Revisar los resultados completos, árboles y limitaciones",
+      "evidence": [
+        "../informe.md",
+        "revision_policy_effects.json",
+        "control_equivalence_full.json",
+        "no_prune_controls.json"
+      ]
+    }
+  },
+  "frozen_job": 36903,
+  "continuation_job": 36904,
+  "report_job": 36905,
+  "real_smoke": {
+    "complete": true,
+    "continuations": 10,
+    "verified_transitions": 10000,
+    "frozen_evaluations": 4,
+    "report": "analysis/revision_20261106/smoke/resultados.md"
+  },
+  "control_equivalence_job": 36906,
+  "main_dependencies": "afterok:36899:36906",
+  "preparation_result": {
+    "job": 36899,
+    "state": "COMPLETED",
+    "exit_code": "0:0",
+    "elapsed": "00:13:47",
+    "linux_tests_passed": 107
+  },
+  "control_equivalence_result": {
+    "job": 36906,
+    "state": "COMPLETED",
+    "exit_code": "0:0",
+    "transitions_per_criterion": 1000,
+    "exact": true
+  },
+  "running_tasks_last_observed": [],
+  "main_first_observed_counters": {
+    "historical_f/710603/normal": 520000,
+    "historical_f/710607/normal": 525000
+  },
+  "pending_main_analysis": false,
+  "frozen_partial_verified_units": 324,
+  "expected_frozen_units": 324,
+  "continuation_throttle": 4,
+  "partial_signals": {
+    "candidate_windows": 218424,
+    "groups": 24,
+    "scope": "Repeated dependent windows from available committed audits; final audit pending"
+  },
+  "analysis_job": 36919,
+  "partial_current_directory": "analysis/revision_20261106/partial_current",
+  "partial_control_equivalence": {
+    "complete": true,
+    "cases": 6,
+    "transitions": 600000,
+    "exact": true
+  },
+  "partial_observations": {
+    "seed710603_historical_normal_snapshot_means": [
+      65.33333333333333,
+      56.5,
+      2.1666666666666665,
+      41.333333333333336,
+      51.5
+    ],
+    "seed710603_historical_fixed_structure_snapshot_means": [
+      65.33333333333333,
+      56.5,
+      1.0,
+      85.83333333333333,
+      1.3333333333333333
+    ],
+    "points": [
+      0,
+      25000,
+      50000,
+      75000,
+      100000
+    ],
+    "scope": "Six shared diagnostic snapshots; partial selected-case observations, not efficacy conclusion for revisions"
+  },
+  "partial_verified_transitions": 2225000,
+  "partial_reported_completed_continuations": 21,
+  "analysis_status": "36905,36919,36931 COMPLETED0; outputs downloaded, bound, inspected and interpreted",
+  "partial_pure_pruning_observation": {
+    "criterion": "historical_f",
+    "seed": 710607,
+    "normal_snapshot_mean": 63.333333333333336,
+    "fixed_structure_snapshot_mean": 63.333333333333336,
+    "pure_prune_snapshot_mean": 2.5,
+    "point": 100000,
+    "starts": 6,
+    "scope": "Selected case, no inference about general efficacy; full comparison pending"
+  },
+  "policy_effects_job": 36931,
+  "policy_effects_scope": "Read-only immediate pre/post policy and loss reproduction on saved validation probes; after successful main analysis",
+  "policy_smoke_job": 36934,
+  "partial_first_prune_prefix_equivalence": {
+    "criterion": "historical_f",
+    "seeds": [
+      710603,
+      710607,
+      710610
+    ],
+    "transitions_per_case": 25000,
+    "exact": true
+  },
+  "interpretation_report": "analysis/revision_20261106/informe.md",
+  "first_prune_tree_audit": {
+    "criterion": "historical_f",
+    "seed": 710607,
+    "counter": 525000,
+    "other_action_trees_unchanged": true,
+    "evidence": "partial_current/first_prune_tree.json"
+  },
+  "policy_smoke_result": {
+    "state": "COMPLETED",
+    "exit_code": "0:0",
+    "accepted_revisions": 15,
+    "predictive_losses_reproduced": true
+  },
+  "historical_continuations_complete": true,
+  "remaining_main_scope": "ANOVA modes and final artifact/policy audits; all six controls already match original 600k transitions",
+  "monitor_session_id": null,
+  "monitor_scope": "Stopped on user pause; no current monitor needed",
+  "partial_rejected_prune_case": {
+    "criterion": "anova",
+    "seed": 710607,
+    "verified_equal_prefix": 75000,
+    "rejected_proposals": 12,
+    "accepted": 0,
+    "evidence": "partial_current/rejected_prune_control.json"
+  },
+  "last_goal_turn_classification": "progress: completed download/integrity/source audits, reviewed all results and rendered figures, finalized human report",
+  "final_counts": {
+    "continuations": 30,
+    "trace_rows": 3000000,
+    "frozen_rollouts": 324,
+    "continuation_rollouts": 900,
+    "accepted_revisions": 48,
+    "signal_windows": 370856
+  },
+  "completion_review": "analysis/revision_20261106/final/completion_review.json"
+}

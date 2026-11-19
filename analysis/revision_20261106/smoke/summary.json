@@ -1,0 +1,224 @@
+{
+  "complete": true,
+  "missing": [],
+  "start_diversity": {
+    "unique_encoded": 2,
+    "unique_physical": 2,
+    "unique_ram": 2
+  },
+  "evaluation_validation_start_ram_disjoint": true,
+  "frozen_rollouts": 4,
+  "continuations": 10,
+  "verified_continuation_transitions": 10000,
+  "matched_vs_normal": [
+    {
+      "criterion": "anova",
+      "seed": 710603,
+      "mode": "normal",
+      "point": 1000,
+      "paired_starts": 2,
+      "mean_difference_vs_normal": 0.0
+    },
+    {
+      "criterion": "anova",
+      "seed": 710603,
+      "mode": "frozen",
+      "point": 1000,
+      "paired_starts": 2,
+      "mean_difference_vs_normal": 0.0
+    },
+    {
+      "criterion": "anova",
+      "seed": 710603,
+      "mode": "prune",
+      "point": 1000,
+      "paired_starts": 2,
+      "mean_difference_vs_normal": 0.0
+    },
+    {
+      "criterion": "anova",
+      "seed": 710603,
+      "mode": "prune_regrow",
+      "point": 1000,
+      "paired_starts": 2,
+      "mean_difference_vs_normal": 0.0
+    },
+    {
+      "criterion": "anova",
+      "seed": 710603,
+      "mode": "replace",
+      "point": 1000,
+      "paired_starts": 2,
+      "mean_difference_vs_normal": 0.0
+    },
+    {
+      "criterion": "historical_f",
+      "seed": 710603,
+      "mode": "normal",
+      "point": 1000,
+      "paired_starts": 2,
+      "mean_difference_vs_normal": 0.0
+    },
+    {
+      "criterion": "historical_f",
+      "seed": 710603,
+      "mode": "frozen",
+      "point": 1000,
+      "paired_starts": 2,
+      "mean_difference_vs_normal": 0.0
+    },
+    {
+      "criterion": "historical_f",
+      "seed": 710603,
+      "mode": "prune",
+      "point": 1000,
+      "paired_starts": 2,
+      "mean_difference_vs_normal": -1.5
+    },
+    {
+      "criterion": "historical_f",
+      "seed": 710603,
+      "mode": "prune_regrow",
+      "point": 1000,
+      "paired_starts": 2,
+      "mean_difference_vs_normal": -1.5
+    },
+    {
+      "criterion": "historical_f",
+      "seed": 710603,
+      "mode": "replace",
+      "point": 1000,
+      "paired_starts": 2,
+      "mean_difference_vs_normal": -2.0
+    }
+  ],
+  "revision_operations": [
+    {
+      "criterion": "historical_f",
+      "seed": 710603,
+      "active_splits": 15,
+      "grows_total": 0,
+      "initial_splits": 15,
+      "leaves": 31,
+      "mode": "normal",
+      "prunes_total": 0,
+      "replacements_total": 0,
+      "structure_version": 0
+    },
+    {
+      "criterion": "historical_f",
+      "seed": 710603,
+      "active_splits": 15,
+      "grows_total": 0,
+      "initial_splits": 15,
+      "leaves": 31,
+      "mode": "frozen",
+      "prunes_total": 0,
+      "replacements_total": 0,
+      "structure_version": 0
+    },
+    {
+      "criterion": "historical_f",
+      "seed": 710603,
+      "active_splits": 8,
+      "grows_total": 0,
+      "initial_splits": 15,
+      "leaves": 18,
+      "mode": "prune",
+      "prunes_total": 4,
+      "replacements_total": 0,
+      "structure_version": 4
+    },
+    {
+      "criterion": "historical_f",
+      "seed": 710603,
+      "active_splits": 8,
+      "grows_total": 0,
+      "initial_splits": 15,
+      "leaves": 18,
+      "mode": "prune_regrow",
+      "prunes_total": 4,
+      "replacements_total": 0,
+      "structure_version": 4
+    },
+    {
+      "criterion": "historical_f",
+      "seed": 710603,
+      "active_splits": 18,
+      "grows_total": 0,
+      "initial_splits": 15,
+      "leaves": 37,
+      "mode": "replace",
+      "prunes_total": 0,
+      "replacements_total": 2,
+      "structure_version": 2
+    },
+    {
+      "criterion": "anova",
+      "seed": 710603,
+      "active_splits": 104,
+      "grows_total": 0,
+      "initial_splits": 104,
+      "leaves": 208,
+      "mode": "normal",
+      "prunes_total": 0,
+      "replacements_total": 0,
+      "structure_version": 0
+    },
+    {
+      "criterion": "anova",
+      "seed": 710603,
+      "active_splits": 104,
+      "grows_total": 0,
+      "initial_splits": 104,
+      "leaves": 208,
+      "mode": "frozen",
+      "prunes_total": 0,
+      "replacements_total": 0,
+      "structure_version": 0
+    },
+    {
+      "criterion": "anova",
+      "seed": 710603,
+      "active_splits": 97,
+      "grows_total": 0,
+      "initial_splits": 104,
+      "leaves": 194,
+      "mode": "prune",
+      "prunes_total": 2,
+      "replacements_total": 0,
+      "structure_version": 2
+    },
+    {
+      "criterion": "anova",
+      "seed": 710603,
+      "active_splits": 97,
+      "grows_total": 0,
+      "initial_splits": 104,
+      "leaves": 194,
+      "mode": "prune_regrow",
+      "prunes_total": 2,
+      "replacements_total": 0,
+      "structure_version": 2
+    },
+    {
+      "criterion": "anova",
+      "seed": 710603,
+      "active_splits": 96,
+      "grows_total": 0,
+      "initial_splits": 104,
+      "leaves": 192,
+      "mode": "replace",
+      "prunes_total": 0,
+      "replacements_total": 1,
+      "structure_version": 1
+    }
+  ],
+  "limitations": [
+    "Diagnostic snapshot continuations, not complete-game benchmark scores.",
+    "Three selected seed case studies do not estimate population superiority.",
+    "Block-bootstrap gates are exploratory and repeated selection is not calibrated.",
+    "Bellman loss improvements do not guarantee return improvement.",
+    "No reserved test executed."
+  ]
+}

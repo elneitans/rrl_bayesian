@@ -1,0 +1,121 @@
+{
+  "payload": {
+    "evaluation_bank_used_for_gate": false,
+    "holdout": {
+      "path": "probe_50000-0633b93438654c210dc156f00e5918936485c75f2ac8ca3dba818d990f6468d9.pkl",
+      "sha256": "0633b93438654c210dc156f00e5918936485c75f2ac8ca3dba818d990f6468d9"
+    },
+    "identity": {
+      "campaign": "5c68a97ac3ddd52553a705703ef4faf12d014108b41ca16e7b3b84d7eff805b4",
+      "criterion": "historical_f",
+      "mode": "guarded",
+      "parent": {
+        "path": "checkpoints/500000-1be22f5f49c4f094d2e2320e482f774fc20922f2a6d91e5fe3afdb065a06db4a.pkl",
+        "sha256": "1be22f5f49c4f094d2e2320e482f774fc20922f2a6d91e5fe3afdb065a06db4a"
+      },
+      "parent_counter": 500000,
+      "seed": 710607
+    },
+    "point": 50000,
+    "reference": {
+      "path": "reference_50000-fed3c4bb0e1fc40dd7f628143a2c6ad163fe575f5951dec0a07585d469ad341c.pkl",
+      "sha256": "fed3c4bb0e1fc40dd7f628143a2c6ad163fe575f5951dec0a07585d469ad341c"
+    },
+    "return_bank": {
+      "path": "return_bank_50000-ef99d51b504939fe9b6d4bfb7be209f701e27eec80df9b2124056e7c96910ee9.pkl",
+      "sha256": "ef99d51b504939fe9b6d4bfb7be209f701e27eec80df9b2124056e7c96910ee9"
+    },
+    "reviews": [
+      {
+        "action": "LEFT",
+        "bounded_q": true,
+        "candidate_mse": 0.03384912338295502,
+        "counter": 550000,
+        "current_mse": 0.03362948917388126,
+        "gate": {
+          "accepted": false,
+          "blocks": 8,
+          "mean_difference": 0.0004209641245747804,
+          "reason": "policy_trust",
+          "samples": 188,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": 0.0025,
+          "upper_bound": 0.0008626111041826964
+        },
+        "kind": "prune_review",
+        "loss_gate": {
+          "accepted": true,
+          "blocks": 8,
+          "mean_difference": 0.0004209641245747804,
+          "reason": "loss_gate",
+          "samples": 188,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": 0.0025,
+          "upper_bound": 0.0008626111041826964
+        },
+        "new_leaves": 1,
+        "new_literal": "None",
+        "node": 19,
+        "old_leaves": 3,
+        "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)",
+        "path": "root/more",
+        "policy_guard": {
+          "accepted": false,
+          "blocks": 8,
+          "changed_state_fraction": 0.29009433962264153,
+          "limit": 0.05,
+          "mean_tv": 0.2892525911131997,
+          "samples": 848
+        },
+        "train_samples": 2312
+      },
+      {
+        "action": "NOOP",
+        "bounded_q": true,
+        "candidate_mse": 0.008672136896113809,
+        "counter": 550000,
+        "current_mse": 0.008659619513678852,
+        "gate": {
+          "accepted": false,
+          "blocks": 8,
+          "mean_difference": 1.3945984558880658e-05,
+          "reason": "policy_trust",
+          "samples": 114,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": 0.0025,
+          "upper_bound": 6.041273484227081e-05
+        },
+        "kind": "prune_review",
+        "loss_gate": {
+          "accepted": true,
+          "blocks": 8,
+          "mean_difference": 1.3945984558880658e-05,
+          "reason": "loss_gate",
+          "samples": 114,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": 0.0025,
+          "upper_bound": 6.041273484227081e-05
+        },
+        "new_leaves": 1,
+        "new_literal": "None",
+        "node": 1,
+        "old_leaves": 3,
+        "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+        "path": "root/true",
+        "policy_guard": {
+          "accepted": false,
+          "blocks": 8,
+          "changed_state_fraction": 0.29245283018867924,
+          "limit": 0.05,
+          "mean_tv": 0.29028169381787805,
+          "samples": 848
+        },
+        "train_samples": 892
+      }
+    ],
+    "validation_samples": 848,
+    "validation_used_for_td": false
+  },
+  "schema": "pong_analysis_unit_v2",
+  "sha256": "482b67d2cbf63468575fdd2bf1fd2e5ad79d5d4e91ad232e33954b8875ab3258"
+}

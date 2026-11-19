@@ -1,0 +1,56 @@
+{
+  "scope": "Paired repeated candidate-window diagnostics, no independence or causal claim",
+  "threshold": 0.0001,
+  "sample_minimum_strict": 128,
+  "summaries": [
+    {
+      "criterion": "historical_f",
+      "seed": 710603,
+      "mode": "normal",
+      "candidate_windows": 3642,
+      "paired_eligible_windows": 520,
+      "median_n": 306.0,
+      "historical_joint_defined": 520,
+      "historical_both_below_threshold": 0,
+      "historical_q_only_below_threshold": 1,
+      "historical_target_only_below_threshold": 1,
+      "anova_joint_defined": 520,
+      "anova_both_below_threshold": 3,
+      "anova_q_only_below_threshold": 10,
+      "anova_target_only_below_threshold": 68,
+      "updated_q_median_effect": 0.004382516915848282,
+      "target_median_effect": 0.003527758434235377,
+      "td_error_median_effect": 0.003375190879049122
+    },
+    {
+      "criterion": "historical_f",
+      "seed": 710607,
+      "mode": "normal",
+      "candidate_windows": 2595,
+      "paired_eligible_windows": 527,
+      "median_n": 339,
+      "historical_joint_defined": 527,
+      "historical_both_below_threshold": 0,
+      "historical_q_only_below_threshold": 1,
+      "historical_target_only_below_threshold": 0,
+      "anova_joint_defined": 527,
+      "anova_both_below_threshold": 1,
+      "anova_q_only_below_threshold": 31,
+      "anova_target_only_below_threshold": 98,
+      "updated_q_median_effect": 0.004012719242513676,
+      "target_median_effect": 0.00412712971043092,
+      "td_error_median_effect": 0.0036540072410550877
+    }
+  ],
+  "growth_events": 1,
+  "actual_signal_used_to_grow": "updated_q; target and td_error moments were instrumentation only",
+  "limitations": [
+    "Windows reset every diagnostic commit; they are not lifetime split statistics.",
+    "Depth-limited candidates remain in diagnostic counts; passing a score does not imply a split is allowed.",
+    "Nodes can grow or be removed during a window; active_at_commit and leaf_at_commit describe its final frontier only.",
+    "Internal-node fallback observations are instrumented too; sample eligibility is not structural eligibility.",
+    "Different policies visit different states; compare signal pairs within each candidate-window.",
+    "Undefined scores are excluded jointly, never imputed as zero or a failed test.",
+    "A target-only or Q-only score does not establish which partition improves future return."
+  ]
+}

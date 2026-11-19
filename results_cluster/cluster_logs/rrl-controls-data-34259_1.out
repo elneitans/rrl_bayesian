@@ -1,0 +1,101 @@
+No broken requirements found.
+hydra
+Python 3.11.7
+job=34259 root=/home/natan.brugueras/projects/rrl_bayesian/historical/pong_pilot_linux_01_code
+A.L.E: Arcade Learning Environment (version 0.10.2+c9d4b19)
+[Powered by Stella]
+visual random 560001 completed
+visual random 560002 completed
+visual random 560003 completed
+visual random 560004 completed
+visual random 560005 completed
+visual random 560006 completed
+visual random 560007 completed
+visual random 560008 completed
+visual random 560009 completed
+visual random 560010 completed
+visual random 560011 completed
+visual random 560012 completed
+visual random 560013 completed
+visual random 560014 completed
+visual random 560015 completed
+visual random 560016 completed
+visual random 560017 completed
+visual random 560018 completed
+visual random 560019 completed
+visual random 560020 completed
+visual noop 560001 completed
+visual noop 560002 completed
+visual noop 560003 completed
+visual noop 560004 completed
+visual noop 560005 completed
+visual noop 560006 completed
+visual noop 560007 completed
+visual noop 560008 completed
+visual noop 560009 completed
+visual noop 560010 completed
+visual noop 560011 completed
+visual noop 560012 completed
+visual noop 560013 completed
+visual noop 560014 completed
+visual noop 560015 completed
+visual noop 560016 completed
+visual noop 560017 completed
+visual noop 560018 completed
+visual noop 560019 completed
+visual noop 560020 completed
+visual object_reactive 560001 completed
+visual object_reactive 560002 completed
+visual object_reactive 560003 completed
+visual object_reactive 560004 completed
+visual object_reactive 560005 completed
+visual object_reactive 560006 completed
+visual object_reactive 560007 completed
+visual object_reactive 560008 completed
+visual object_reactive 560009 completed
+visual object_reactive 560010 completed
+visual object_reactive 560011 completed
+visual object_reactive 560012 completed
+visual object_reactive 560013 completed
+visual object_reactive 560014 completed
+visual object_reactive 560015 completed
+visual object_reactive 560016 completed
+visual object_reactive 560017 completed
+visual object_reactive 560018 completed
+visual object_reactive 560019 completed
+visual object_reactive 560020 completed
+visual fact_reactive 560001 completed
+visual fact_reactive 560002 completed
+visual fact_reactive 560003 completed
+visual fact_reactive 560004 completed
+visual fact_reactive 560005 completed
+visual fact_reactive 560006 completed
+visual fact_reactive 560007 completed
+visual fact_reactive 560008 completed
+visual fact_reactive 560009 completed
+visual fact_reactive 560010 completed
+visual fact_reactive 560011 completed
+visual fact_reactive 560012 completed
+visual fact_reactive 560013 completed
+visual fact_reactive 560014 completed
+visual fact_reactive 560015 completed
+visual fact_reactive 560016 completed
+visual fact_reactive 560017 completed
+visual fact_reactive 560018 completed
+visual fact_reactive 560019 completed
+visual fact_reactive 560020 completed
+{"status": "completed", "assisted_gate": {"enabled": true, "required_results_available": true, "valid_paired_random": true, "positive_points": true, "interpretation": "Operational gate, not conclusive superiority evidence."}}
+A.L.E: Arcade Learning Environment (version 0.10.2+c9d4b19)
+[Powered by Stella]
+{'schema': 'pong_fixed_transitions_v2', 'kind': 'fixed_transitions', 'mode': 'full', 'dataset_kind': 'new_common', 'common_protocol': {'actions': ['NOOP', 'FIRE', 'RIGHT', 'LEFT', 'RIGHTFIRE', 'LEFTFIRE'], 'env_id': 'ALE/Pong-v5', 'frameskip': 4, 'horizon': 27000, 'pipelines': {'ocatari': 'pong_common_ram_v1', 'visual': 'pong_common_rgb_v1'}, 'purpose': 'development', 'relation_schema': 'pong_relational_v1', 'repeat_action_probability': 0.0, 'reset_policy': 'none', 'reward_transform': 'sign', 'rom_sha256': '41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3', 'schema': 'pong_common_v1'}, 'encoder': {'version': 1, 'catalog': [{'type': 'comparative', 'name': 'x', 'obj1': 'ball_t', 'obj2': 'ball_t-1', 'obj3': None}, {'type': 'comparative', 'name': 'x', 'obj1': 'ball_t', 'obj2': 'enemy_t', 'obj3': None}, {'type': 'comparative', 'name': 'x', 'obj1': 'enemy_t', 'obj2': 'enemy_t-1', 'obj3': None}, {'type': 'comparative', 'name': 'x', 'obj1': 'player_t', 'obj2': 'ball_t', 'obj3': None}, {'type': 'comparative', 'name': 'x', 'obj1': 'player_t', 'obj2': 'enemy_t', 'obj3': None}, {'type': 'comparative', 'name': 'x', 'obj1': 'player_t', 'obj2': 'player_t-1', 'obj3': None}, {'type': 'comparative', 'name': 'y', 'obj1': 'ball_t', 'obj2': 'ball_t-1', 'obj3': None}, {'type': 'comparative', 'name': 'y', 'obj1': 'ball_t', 'obj2': 'enemy_t', 'obj3': None}, {'type': 'comparative', 'name': 'y', 'obj1': 'enemy_t', 'obj2': 'enemy_t-1', 'obj3': None}, {'type': 'comparative', 'name': 'y', 'obj1': 'player_t', 'obj2': 'ball_t', 'obj3': None}, {'type': 'comparative', 'name': 'y', 'obj1': 'player_t', 'obj2': 'enemy_t', 'obj3': None}, {'type': 'comparative', 'name': 'y', 'obj1': 'player_t', 'obj2': 'player_t-1', 'obj3': None}, {'type': 'logical', 'name': 'incontact', 'obj1': 'ball_t', 'obj2': 'enemy_t', 'obj3': None}, {'type': 'logical', 'name': 'incontact', 'obj1': 'player_t', 'obj2': 'ball_t', 'obj3': None}, {'type': 'logical', 'name': 'present', 'obj1': 'ball_t', 'obj2': None, 'obj3': None}, {'type': 'logical', 'name': 'present', 'obj1': 'ball_t-1', 'obj2': None, 'obj3': None}, {'type': 'logical', 'name': 'present', 'obj1': 'enemy_t', 'obj2': None, 'obj3': None}, {'type': 'logical', 'name': 'present', 'obj1': 'enemy_t-1', 'obj2': None, 'obj3': None}, {'type': 'logical', 'name': 'present', 'obj1': 'player_t', 'obj2': None, 'obj3': None}, {'type': 'logical', 'name': 'present', 'obj1': 'player_t-1', 'obj2': None, 'obj3': None}], 'catalog_hash': 'fd40d7f407a3ea2b3634712e212e0d35c591626e41f8fbe3d64ce8073ff2de42'}, 'config': {'actions': ('NOOP', 'FIRE', 'RIGHT', 'LEFT', 'RIGHTFIRE', 'LEFTFIRE'), 'seed': 1, 'gamma': 0.8, 'reward_min': -1.0, 'reward_max': 1.0, 'replay_capacity': 2000, 'batch_size_per_action': 128, 'fit_interval': 100, 'warmup_interactions': 0, 'kernel': 'grow_prune', 'm': 5, 'burn_in': 100, 'draws': 100, 'k': 2.0, 'alpha_tree': 0.95, 'beta_tree': 2.0, 'max_depth': 4, 'min_child': 1, 'nu': 3.0, 'noise_quantile': 0.9, 'variance_floor': 1e-08, 'epsilon_init': 1.0, 'epsilon_min': 0.1, 'epsilon_decay_steps': 1000, 'bootstrap_on_truncation': True, 'resample_repeated_actions': False, 'action_buffer_capacity': 10, 'validation_seeds': (100001, 100002), 'test_seeds': (200001, 200002)}, 'npz_sha256': '4746f2ada53d6a6617f87ec12b3e1079fdba70ccfdf0b5c0279f95d842f41ca5', 'replay_count': 6817, 'fqi_selected_count': 768, 'episode_partition': {'status': 'frozen', 'complete': [0, 1, 2, 3, 4, 5, 6, 7], 'holdout': [6, 7], 'excluded_incomplete': []}, 'selection': {'rule': 'uniform_action', 'per_action': 128, 'selection_seed': 560702, 'selected_ids_sha256': 'bd9cb20f8138b5d76b9ad994ff1f4fbfcfc9c3eaae12c53c9b61352ac33fe7bd', 'coverage': [{'action': 0, 'available': 901, 'selected': 128, 'insufficient_samples': False, 'positive_count': 0, 'no_positive_signal': True}, {'action': 1, 'available': 853, 'selected': 128, 'insufficient_samples': False, 'positive_count': 1, 'no_positive_signal': False}, {'action': 2, 'available': 859, 'selected': 128, 'insufficient_samples': False, 'positive_count': 0, 'no_positive_signal': True}, {'action': 3, 'available': 889, 'selected': 128, 'insufficient_samples': False, 'positive_count': 0, 'no_positive_signal': True}, {'action': 4, 'available': 869, 'selected': 128, 'insufficient_samples': False, 'positive_count': 0, 'no_positive_signal': True}, {'action': 5, 'available': 830, 'selected': 128, 'insufficient_samples': False, 'positive_count': 0, 'no_positive_signal': True}], 'distribution_changed': False, 'duplicates': False}, 'selection_seed': 560702, 'runtime': {'python': '3.11.7', 'executable': '/home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/bin/python', 'packages': {'numpy': '1.26.4', 'scipy': '1.12.0', 'scikit-learn': '1.9.1', 'gymnasium': '1.1.1', 'ale-py': '0.10.2', 'ocatari': '2.2.1'}}, 'auxiliary_model_input': False, 'episodes': [{'seed': 560601, 'status': 'completed', 'steps': 820, 'raw_return': -21.0, 'points_won': 0.0, 'points_lost': 21.0, 'actions': {'LEFTFIRE': 126, 'NOOP': 142, 'RIGHTFIRE': 145, 'FIRE': 150, 'LEFT': 131, 'RIGHT': 126}, 'terminated': True, 'truncated': False, 'reason': None, 'return_scope': 'complete_game', 'unique_encoded_states': 97, 'seconds': 13.429011169006117}, {'seed': 560602, 'status': 'completed', 'steps': 994, 'raw_return': -21.0, 'points_won': 0.0, 'points_lost': 21.0, 'actions': {'LEFT': 181, 'FIRE': 145, 'RIGHTFIRE': 168, 'LEFTFIRE': 170, 'NOOP': 177, 'RIGHT': 153}, 'terminated': True, 'truncated': False, 'reason': None, 'return_scope': 'complete_game', 'unique_encoded_states': 175, 'seconds': 17.087918361008633}, {'seed': 560603, 'status': 'completed', 'steps': 824, 'raw_return': -21.0, 'points_won': 0.0, 'points_lost': 21.0, 'actions': {'LEFTFIRE': 138, 'RIGHTFIRE': 142, 'NOOP': 134, 'LEFT': 133, 'FIRE': 143, 'RIGHT': 134}, 'terminated': True, 'truncated': False, 'reason': None, 'return_scope': 'complete_game', 'unique_encoded_states': 96, 'seconds': 12.329837736964691}, {'seed': 560604, 'status': 'completed', 'steps': 1005, 'raw_return': -20.0, 'points_won': 1.0, 'points_lost': 21.0, 'actions': {'NOOP': 176, 'FIRE': 151, 'RIGHTFIRE': 160, 'LEFT': 178, 'RIGHT': 176, 'LEFTFIRE': 164}, 'terminated': True, 'truncated': False, 'reason': None, 'return_scope': 'complete_game', 'unique_encoded_states': 169, 'seconds': 16.309810884005856}, {'seed': 560605, 'status': 'completed', 'steps': 794, 'raw_return': -21.0, 'points_won': 0.0, 'points_lost': 21.0, 'actions': {'LEFTFIRE': 112, 'FIRE': 142, 'LEFT': 138, 'NOOP': 142, 'RIGHTFIRE': 118, 'RIGHT': 142}, 'terminated': True, 'truncated': False, 'reason': None, 'return_scope': 'complete_game', 'unique_encoded_states': 99, 'seconds': 11.893966397969052}, {'seed': 560606, 'status': 'completed', 'steps': 764, 'raw_return': -21.0, 'points_won': 0.0, 'points_lost': 21.0, 'actions': {'LEFTFIRE': 120, 'RIGHT': 128, 'FIRE': 122, 'NOOP': 130, 'RIGHTFIRE': 136, 'LEFT': 128}, 'terminated': True, 'truncated': False, 'reason': None, 'return_scope': 'complete_game', 'unique_encoded_states': 77, 'seconds': 11.728915646031965}, {'seed': 560607, 'status': 'completed', 'steps': 824, 'raw_return': -21.0, 'points_won': 0.0, 'points_lost': 21.0, 'actions': {'LEFTFIRE': 133, 'FIRE': 131, 'NOOP': 141, 'LEFT': 122, 'RIGHT': 142, 'RIGHTFIRE': 155}, 'terminated': True, 'truncated': False, 'reason': None, 'return_scope': 'complete_game', 'unique_encoded_states': 98, 'seconds': 11.940179554978386}, {'seed': 560608, 'status': 'completed', 'steps': 792, 'raw_return': -21.0, 'points_won': 0.0, 'points_lost': 21.0, 'actions': {'LEFTFIRE': 130, 'LEFT': 137, 'RIGHT': 129, 'RIGHTFIRE': 150, 'NOOP': 127, 'FIRE': 119}, 'terminated': True, 'truncated': False, 'reason': None, 'return_scope': 'complete_game', 'unique_encoded_states': 80, 'seconds': 13.070946416002698}]}
+
+------------------------------------------------------------------------
+[Slurm] Este trabajo (#34259) terminó SIN reporte de rendimiento por correo.
+Puedes recibir un correo con el uso de CPU, RAM y GPU de tus trabajos
+(y sugerencias para que esperen menos en cola) agregando esta línea
+en tu script de sbatch, junto a las líneas #SBATCH:
+
+    #SENDJOBREPORT
+
+Dudas: slurmjobs@cenia.cl
+------------------------------------------------------------------------

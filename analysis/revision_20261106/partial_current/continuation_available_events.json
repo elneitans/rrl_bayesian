@@ -1,0 +1,2993 @@
+[
+  {
+    "criterion": "historical_f",
+    "seed": 710603,
+    "mode": "normal",
+    "action": "LEFT",
+    "counter": 525366,
+    "evidence": {
+      "effect_fraction": 0.027133032569528263,
+      "groups": {
+        "Total": {
+          "J": 9297.199938802738,
+          "mu": 1.6192977043772858,
+          "n": 73194
+        },
+        "less": {
+          "J": 1551.5546909151026,
+          "mu": 1.6136517185756034,
+          "n": 12951
+        },
+        "more": {
+          "J": 1410.2504962313196,
+          "mu": 1.788568883268075,
+          "n": 7765
+        },
+        "same": {
+          "J": 6083.133522911218,
+          "mu": 1.5956445632139595,
+          "n": 52478
+        }
+      },
+      "n": 73194,
+      "observed_categories": 3,
+      "p_anova": 0.0,
+      "p_historical": 9.923558535700047e-05
+    },
+    "inherited_q": 2.3442243535343334,
+    "kind": "grow",
+    "literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)",
+    "node": 45,
+    "path": "root/less",
+    "test": "historical_f"
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710603,
+    "mode": "prune",
+    "action": "LEFT",
+    "candidate_mse": 0.0252228247158354,
+    "counter": 550000,
+    "current_mse": 0.026427446759599325,
+    "gate": {
+      "accepted": true,
+      "blocks": 8,
+      "mean_difference": -0.0011817318853105732,
+      "reason": "loss_gate",
+      "samples": 220,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": 0.0025,
+      "upper_bound": -0.0009594733700976212
+    },
+    "kind": "prune_review",
+    "new_leaves": 1,
+    "new_literal": "None",
+    "node": 37,
+    "old_leaves": 3,
+    "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)",
+    "path": "root/more",
+    "structure_version": 2,
+    "train_samples": 2184
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710603,
+    "mode": "prune",
+    "action": "RIGHT",
+    "candidate_mse": 0.01752657012400675,
+    "counter": 600000,
+    "current_mse": 0.01897555123003553,
+    "gate": {
+      "accepted": true,
+      "blocks": 8,
+      "mean_difference": -0.0014437922693990137,
+      "reason": "loss_gate",
+      "samples": 293,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": 0.0025,
+      "upper_bound": -0.00013589091632771024
+    },
+    "kind": "prune_review",
+    "new_leaves": 1,
+    "new_literal": "None",
+    "node": 22,
+    "old_leaves": 5,
+    "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+    "path": "root/true",
+    "structure_version": 4,
+    "train_samples": 3086
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710603,
+    "mode": "prune",
+    "action": "RIGHT",
+    "candidate_mse": 0.0004269951294925914,
+    "counter": 575000,
+    "current_mse": 0.001398192424438265,
+    "gate": {
+      "accepted": true,
+      "blocks": 8,
+      "mean_difference": -0.0009693311397918837,
+      "reason": "loss_gate",
+      "samples": 190,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": 0.0025,
+      "upper_bound": -0.0008866748935124413
+    },
+    "kind": "prune_review",
+    "new_leaves": 1,
+    "new_literal": "None",
+    "node": 28,
+    "old_leaves": 3,
+    "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)",
+    "path": "root/true/less",
+    "structure_version": 3,
+    "train_samples": 1529
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710603,
+    "mode": "prune",
+    "action": "FIRE",
+    "candidate_mse": 0.0427064492861437,
+    "counter": 525000,
+    "current_mse": 0.04860311570306815,
+    "gate": {
+      "accepted": true,
+      "blocks": 8,
+      "mean_difference": -0.006083257543912642,
+      "reason": "loss_gate",
+      "samples": 105,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": 0.0025,
+      "upper_bound": 0.0021340602093558336
+    },
+    "kind": "prune_review",
+    "new_leaves": 1,
+    "new_literal": "None",
+    "node": 13,
+    "old_leaves": 2,
+    "old_literal": "Literal(name='present', type='logical', obj1='ball_t-1', obj2=None, obj3=None)",
+    "path": "root/more",
+    "structure_version": 1,
+    "train_samples": 233
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710603,
+    "mode": "prune_regrow",
+    "action": "LEFT",
+    "candidate_mse": 0.016900420194084824,
+    "counter": 550000,
+    "current_mse": 0.016486619296682874,
+    "gate": {
+      "accepted": true,
+      "blocks": 8,
+      "mean_difference": 0.0005420325328779729,
+      "reason": "loss_gate",
+      "samples": 65,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": 0.0025,
+      "upper_bound": 0.0009236283001864381
+    },
+    "kind": "prune_review",
+    "new_leaves": 1,
+    "new_literal": "None",
+    "node": 45,
+    "old_leaves": 3,
+    "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)",
+    "path": "root/less",
+    "structure_version": 4,
+    "train_samples": 2236
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710603,
+    "mode": "prune_regrow",
+    "action": "NOOP",
+    "candidate_mse": 0.025475480223376628,
+    "counter": 600000,
+    "current_mse": 0.022390269073878383,
+    "gate": {
+      "accepted": false,
+      "blocks": 8,
+      "mean_difference": 0.0031643944199955965,
+      "reason": "loss_gate",
+      "samples": 165,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": 0.0025,
+      "upper_bound": 0.01156608605090081
+    },
+    "kind": "prune_review",
+    "new_leaves": 1,
+    "new_literal": "None",
+    "node": 0,
+    "old_leaves": 8,
+    "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)",
+    "path": "root",
+    "train_samples": 205
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710603,
+    "mode": "prune_regrow",
+    "action": "RIGHT",
+    "candidate_mse": 0.017992197800884673,
+    "counter": 600000,
+    "current_mse": 0.017886655813219937,
+    "gate": {
+      "accepted": true,
+      "blocks": 8,
+      "mean_difference": 0.0001119799420108857,
+      "reason": "loss_gate",
+      "samples": 293,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": 0.0025,
+      "upper_bound": 0.0007442508702034202
+    },
+    "kind": "prune_review",
+    "new_leaves": 1,
+    "new_literal": "None",
+    "node": 22,
+    "old_leaves": 5,
+    "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+    "path": "root/true",
+    "structure_version": 7,
+    "train_samples": 3705
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710603,
+    "mode": "prune_regrow",
+    "action": "LEFT",
+    "counter": 527695,
+    "evidence": {
+      "effect_fraction": 0.027120087710102037,
+      "groups": {
+        "Total": {
+          "J": 9304.908720359359,
+          "mu": 1.619444605813216,
+          "n": 73209
+        },
+        "less": {
+          "J": 1558.9316805108567,
+          "mu": 1.6144359857605541,
+          "n": 12965
+        },
+        "more": {
+          "J": 1410.4935763065012,
+          "mu": 1.7886327843487433,
+          "n": 7766
+        },
+        "same": {
+          "J": 6083.133522911218,
+          "mu": 1.5956445632139595,
+          "n": 52478
+        }
+      },
+      "n": 73209,
+      "observed_categories": 3,
+      "p_anova": 0.0,
+      "p_historical": 9.97946216187927e-05
+    },
+    "inherited_q": 2.3408306230293006,
+    "kind": "grow",
+    "literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)",
+    "node": 45,
+    "path": "root/less",
+    "test": "historical_f"
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710603,
+    "mode": "prune_regrow",
+    "action": "LEFT",
+    "counter": 560637,
+    "evidence": {
+      "effect_fraction": 0.46688646501522885,
+      "groups": {
+        "Total": {
+          "J": 0.2684951065766372,
+          "mu": 2.2400227686949292,
+          "n": 751
+        },
+        "less": {
+          "J": 0.03660938192086613,
+          "mu": 2.233672159860218,
+          "n": 87
+        },
+        "more": {
+          "J": 0.03305394265546264,
+          "mu": 2.2286545119913597,
+          "n": 366
+        },
+        "same": {
+          "J": 0.0734750508168802,
+          "mu": 2.2558391610510724,
+          "n": 298
+        }
+      },
+      "n": 751,
+      "observed_categories": 3,
+      "p_anova": 6.769725860636957e-103,
+      "p_historical": 6.656863515152827e-18
+    },
+    "inherited_q": 2.2335275289916057,
+    "kind": "grow",
+    "literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)",
+    "node": 52,
+    "path": "root/less",
+    "test": "historical_f"
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710603,
+    "mode": "prune_regrow",
+    "action": "RIGHT",
+    "candidate_mse": 0.0005977765233318893,
+    "counter": 575000,
+    "current_mse": 0.0009140832629952031,
+    "gate": {
+      "accepted": true,
+      "blocks": 8,
+      "mean_difference": -0.0003133740593973028,
+      "reason": "loss_gate",
+      "samples": 190,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": 0.0025,
+      "upper_bound": -0.00021008581456117062
+    },
+    "kind": "prune_review",
+    "new_leaves": 1,
+    "new_literal": "None",
+    "node": 28,
+    "old_leaves": 3,
+    "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)",
+    "path": "root/true/less",
+    "structure_version": 6,
+    "train_samples": 1880
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710603,
+    "mode": "prune_regrow",
+    "action": "FIRE",
+    "candidate_mse": 0.0427064492861437,
+    "counter": 525000,
+    "current_mse": 0.04860311570306815,
+    "gate": {
+      "accepted": true,
+      "blocks": 8,
+      "mean_difference": -0.006083257543912642,
+      "reason": "loss_gate",
+      "samples": 105,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": 0.0025,
+      "upper_bound": 0.0021340602093558336
+    },
+    "kind": "prune_review",
+    "new_leaves": 1,
+    "new_literal": "None",
+    "node": 13,
+    "old_leaves": 2,
+    "old_literal": "Literal(name='present', type='logical', obj1='ball_t-1', obj2=None, obj3=None)",
+    "path": "root/more",
+    "structure_version": 1,
+    "train_samples": 233
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710603,
+    "mode": "prune_regrow",
+    "action": "FIRE",
+    "counter": 540393,
+    "evidence": {
+      "effect_fraction": 0.35718585174861855,
+      "groups": {
+        "False": {
+          "J": 0.8274166331670599,
+          "mu": 2.1899481688058717,
+          "n": 134
+        },
+        "Total": {
+          "J": 1.9139853200965165,
+          "mu": 2.2424128886091568,
+          "n": 291
+        },
+        "True": {
+          "J": 0.40292021013639406,
+          "mu": 2.2871916940463533,
+          "n": 157
+        }
+      },
+      "n": 291,
+      "observed_categories": 2,
+      "p_anova": 1.4466606528598623e-29,
+      "p_historical": 9.045509563661221e-05
+    },
+    "inherited_q": 2.117886554729744,
+    "kind": "grow",
+    "literal": "Literal(name='present', type='logical', obj1='ball_t-1', obj2=None, obj3=None)",
+    "node": 46,
+    "path": "root/more",
+    "test": "historical_f"
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710603,
+    "mode": "replace",
+    "action": "NOOP",
+    "candidate_mse": 0.009301050454734361,
+    "counter": 550000,
+    "current_mse": 0.013390374126347563,
+    "gate": {
+      "accepted": true,
+      "blocks": 8,
+      "mean_difference": -0.004391879262353755,
+      "reason": "loss_gate",
+      "samples": 146,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": -0.001,
+      "upper_bound": -0.0024793189345696555
+    },
+    "kind": "replacement_review",
+    "new_leaves": 6,
+    "new_literal": "Literal(name='present', type='logical', obj1='ball_t', obj2=None, obj3=None)",
+    "node": 0,
+    "old_leaves": 8,
+    "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)",
+    "path": "root",
+    "structure_version": 3,
+    "train_samples": 1210
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710603,
+    "mode": "replace",
+    "action": "NOOP",
+    "candidate_mse": 0.015369168880504498,
+    "counter": 600000,
+    "current_mse": 0.01438478664739525,
+    "gate": {
+      "accepted": false,
+      "blocks": 8,
+      "mean_difference": 0.0009584540520391301,
+      "reason": "loss_gate",
+      "samples": 165,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": -0.001,
+      "upper_bound": 0.0024685053541967416
+    },
+    "kind": "replacement_review",
+    "new_leaves": 4,
+    "new_literal": "Literal(name='present', type='logical', obj1='ball_t-1', obj2=None, obj3=None)",
+    "node": 57,
+    "old_leaves": 6,
+    "old_literal": "Literal(name='present', type='logical', obj1='ball_t', obj2=None, obj3=None)",
+    "path": "root",
+    "train_samples": 1377
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710603,
+    "mode": "replace",
+    "action": "FIRE",
+    "candidate_mse": 0.033972589840254454,
+    "counter": 600000,
+    "current_mse": 0.03356878173912849,
+    "gate": {
+      "accepted": false,
+      "blocks": 8,
+      "mean_difference": 0.0003853524753100888,
+      "reason": "loss_gate",
+      "samples": 228,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": -0.001,
+      "upper_bound": 0.001139543152906356
+    },
+    "kind": "replacement_review",
+    "new_leaves": 4,
+    "new_literal": "Literal(name='present', type='logical', obj1='ball_t-1', obj2=None, obj3=None)",
+    "node": 46,
+    "old_leaves": 5,
+    "old_literal": "Literal(name='present', type='logical', obj1='ball_t', obj2=None, obj3=None)",
+    "path": "root",
+    "train_samples": 995
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710603,
+    "mode": "replace",
+    "action": "RIGHT",
+    "candidate_mse": 0.020643959901004143,
+    "counter": 600000,
+    "current_mse": 0.02009977510850403,
+    "gate": {
+      "accepted": false,
+      "blocks": 8,
+      "mean_difference": 0.000530789553096365,
+      "reason": "loss_gate",
+      "samples": 306,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": -0.001,
+      "upper_bound": 0.0014831942172652635
+    },
+    "kind": "replacement_review",
+    "new_leaves": 4,
+    "new_literal": "Literal(name='present', type='logical', obj1='ball_t-1', obj2=None, obj3=None)",
+    "node": 21,
+    "old_leaves": 10,
+    "old_literal": "Literal(name='present', type='logical', obj1='ball_t', obj2=None, obj3=None)",
+    "path": "root",
+    "train_samples": 2477
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710603,
+    "mode": "replace",
+    "action": "RIGHT",
+    "candidate_mse": 0.016622655858950473,
+    "counter": 600000,
+    "current_mse": 0.017744263973913134,
+    "gate": {
+      "accepted": false,
+      "blocks": 8,
+      "mean_difference": -0.0010897095771422523,
+      "reason": "loss_gate",
+      "samples": 190,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": -0.001,
+      "upper_bound": -0.0001475807074832441
+    },
+    "kind": "replacement_review",
+    "new_leaves": 5,
+    "new_literal": "Literal(name='y', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+    "node": 28,
+    "old_leaves": 3,
+    "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)",
+    "path": "root/true/less",
+    "train_samples": 1900
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710603,
+    "mode": "replace",
+    "action": "LEFT",
+    "counter": 528281,
+    "evidence": {
+      "effect_fraction": 0.027120745387752394,
+      "groups": {
+        "Total": {
+          "J": 9299.316199508212,
+          "mu": 1.6193374536860756,
+          "n": 73198
+        },
+        "less": {
+          "J": 1553.1596948193662,
+          "mu": 1.6138211310856219,
+          "n": 12954
+        },
+        "more": {
+          "J": 1410.2584514807077,
+          "mu": 1.7885698049620349,
+          "n": 7765
+        },
+        "same": {
+          "J": 6083.6936662809285,
+          "mu": 1.5956588248118362,
+          "n": 52479
+        }
+      },
+      "n": 73198,
+      "observed_categories": 3,
+      "p_anova": 0.0,
+      "p_historical": 9.986892837592015e-05
+    },
+    "inherited_q": 2.343384259582629,
+    "kind": "grow",
+    "literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)",
+    "node": 45,
+    "path": "root/less",
+    "test": "historical_f"
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710603,
+    "mode": "replace",
+    "action": "FIRE",
+    "candidate_mse": 0.03479956532642492,
+    "counter": 575000,
+    "current_mse": 0.035308141687830946,
+    "gate": {
+      "accepted": false,
+      "blocks": 8,
+      "mean_difference": -0.0004750263425512131,
+      "reason": "loss_gate",
+      "samples": 261,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": -0.001,
+      "upper_bound": -9.252457921132158e-05
+    },
+    "kind": "replacement_review",
+    "new_leaves": 3,
+    "new_literal": "Literal(name='present', type='logical', obj1='ball_t-1', obj2=None, obj3=None)",
+    "node": 46,
+    "old_leaves": 5,
+    "old_literal": "Literal(name='present', type='logical', obj1='ball_t', obj2=None, obj3=None)",
+    "path": "root",
+    "train_samples": 802
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710603,
+    "mode": "replace",
+    "action": "NOOP",
+    "candidate_mse": 0.018504433648788517,
+    "counter": 575000,
+    "current_mse": 0.016562932626860375,
+    "gate": {
+      "accepted": false,
+      "blocks": 8,
+      "mean_difference": 0.0019995836212207884,
+      "reason": "loss_gate",
+      "samples": 172,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": -0.001,
+      "upper_bound": 0.0031131500277158
+    },
+    "kind": "replacement_review",
+    "new_leaves": 4,
+    "new_literal": "Literal(name='present', type='logical', obj1='ball_t-1', obj2=None, obj3=None)",
+    "node": 57,
+    "old_leaves": 6,
+    "old_literal": "Literal(name='present', type='logical', obj1='ball_t', obj2=None, obj3=None)",
+    "path": "root",
+    "train_samples": 2029
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710603,
+    "mode": "replace",
+    "action": "LEFT",
+    "candidate_mse": 0.023576708919733833,
+    "counter": 575000,
+    "current_mse": 0.025172775435943182,
+    "gate": {
+      "accepted": false,
+      "blocks": 8,
+      "mean_difference": -0.0017788017464305103,
+      "reason": "loss_gate",
+      "samples": 313,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": -0.001,
+      "upper_bound": -0.0002761615056518026
+    },
+    "kind": "replacement_review",
+    "new_leaves": 4,
+    "new_literal": "Literal(name='present', type='logical', obj1='ball_t', obj2=None, obj3=None)",
+    "node": 36,
+    "old_leaves": 9,
+    "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+    "path": "root",
+    "train_samples": 3020
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710603,
+    "mode": "replace",
+    "action": "RIGHT",
+    "candidate_mse": 0.0019900077575434223,
+    "counter": 575000,
+    "current_mse": 0.0038714051151862404,
+    "gate": {
+      "accepted": false,
+      "blocks": 8,
+      "mean_difference": -0.0019413922686990811,
+      "reason": "loss_gate",
+      "samples": 190,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": -0.001,
+      "upper_bound": -0.0008582861132769198
+    },
+    "kind": "replacement_review",
+    "new_leaves": 5,
+    "new_literal": "Literal(name='y', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+    "node": 28,
+    "old_leaves": 3,
+    "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)",
+    "path": "root/true/less",
+    "train_samples": 1824
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710603,
+    "mode": "replace",
+    "action": "FIRE",
+    "candidate_mse": 0.010158021041754643,
+    "counter": 525000,
+    "current_mse": 0.010397524310018391,
+    "gate": {
+      "accepted": false,
+      "blocks": 8,
+      "mean_difference": -0.00020115535390685473,
+      "reason": "loss_gate",
+      "samples": 73,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": -0.001,
+      "upper_bound": -6.51031759266061e-05
+    },
+    "kind": "replacement_review",
+    "new_leaves": 2,
+    "new_literal": "Literal(name='present', type='logical', obj1='ball_t', obj2=None, obj3=None)",
+    "node": 16,
+    "old_leaves": 3,
+    "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+    "path": "root/same",
+    "train_samples": 134
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710603,
+    "mode": "replace",
+    "action": "FIRE",
+    "candidate_mse": 0.023102798843006197,
+    "counter": 525000,
+    "current_mse": 0.03796166902343935,
+    "gate": {
+      "accepted": true,
+      "blocks": 8,
+      "mean_difference": -0.015106004589199192,
+      "reason": "loss_gate",
+      "samples": 269,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": -0.001,
+      "upper_bound": -0.009628507146964603
+    },
+    "kind": "replacement_review",
+    "new_leaves": 5,
+    "new_literal": "Literal(name='present', type='logical', obj1='ball_t', obj2=None, obj3=None)",
+    "node": 12,
+    "old_leaves": 6,
+    "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)",
+    "path": "root",
+    "structure_version": 1,
+    "train_samples": 628
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710607,
+    "mode": "prune",
+    "action": "LEFT",
+    "candidate_mse": 0.017779696078190688,
+    "counter": 550000,
+    "current_mse": 0.01777155638674259,
+    "gate": {
+      "accepted": true,
+      "blocks": 8,
+      "mean_difference": 0.0004876914364304217,
+      "reason": "loss_gate",
+      "samples": 65,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": 0.0025,
+      "upper_bound": 0.0021043938681353
+    },
+    "kind": "prune_review",
+    "new_leaves": 1,
+    "new_literal": "None",
+    "node": 27,
+    "old_leaves": 3,
+    "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)",
+    "path": "root/less",
+    "structure_version": 2,
+    "train_samples": 272
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710607,
+    "mode": "prune",
+    "action": "LEFT",
+    "candidate_mse": 0.023218549643900226,
+    "counter": 600000,
+    "current_mse": 0.02352366495668168,
+    "gate": {
+      "accepted": true,
+      "blocks": 8,
+      "mean_difference": -0.0003346150671320098,
+      "reason": "loss_gate",
+      "samples": 235,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": 0.0025,
+      "upper_bound": 0.00010068689485707682
+    },
+    "kind": "prune_review",
+    "new_leaves": 1,
+    "new_literal": "None",
+    "node": 19,
+    "old_leaves": 3,
+    "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)",
+    "path": "root/more",
+    "structure_version": 4,
+    "train_samples": 2803
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710607,
+    "mode": "prune",
+    "action": "NOOP",
+    "candidate_mse": 0.016563572415236694,
+    "counter": 575000,
+    "current_mse": 0.01773478964035315,
+    "gate": {
+      "accepted": true,
+      "blocks": 8,
+      "mean_difference": -0.0011375765857764022,
+      "reason": "loss_gate",
+      "samples": 165,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": 0.0025,
+      "upper_bound": -0.00013930628375892744
+    },
+    "kind": "prune_review",
+    "new_leaves": 1,
+    "new_literal": "None",
+    "node": 1,
+    "old_leaves": 3,
+    "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+    "path": "root/true",
+    "structure_version": 3,
+    "train_samples": 652
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710607,
+    "mode": "prune",
+    "action": "FIRE",
+    "candidate_mse": 0.021131636393443662,
+    "counter": 525000,
+    "current_mse": 0.05960107559411415,
+    "gate": {
+      "accepted": true,
+      "blocks": 8,
+      "mean_difference": -0.038416634801859355,
+      "reason": "loss_gate",
+      "samples": 227,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": 0.0025,
+      "upper_bound": -0.033464058164667375
+    },
+    "kind": "prune_review",
+    "new_leaves": 1,
+    "new_literal": "None",
+    "node": 7,
+    "old_leaves": 3,
+    "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+    "path": "root/true",
+    "structure_version": 1,
+    "train_samples": 313
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710607,
+    "mode": "prune_regrow",
+    "action": "LEFT",
+    "candidate_mse": 0.017779696078190688,
+    "counter": 550000,
+    "current_mse": 0.01777155638674259,
+    "gate": {
+      "accepted": true,
+      "blocks": 8,
+      "mean_difference": 0.0004876914364304217,
+      "reason": "loss_gate",
+      "samples": 65,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": 0.0025,
+      "upper_bound": 0.0021043938681353
+    },
+    "kind": "prune_review",
+    "new_leaves": 1,
+    "new_literal": "None",
+    "node": 27,
+    "old_leaves": 3,
+    "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)",
+    "path": "root/less",
+    "structure_version": 2,
+    "train_samples": 272
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710607,
+    "mode": "prune_regrow",
+    "action": "LEFT",
+    "candidate_mse": 0.023218549643900226,
+    "counter": 600000,
+    "current_mse": 0.02352366495668168,
+    "gate": {
+      "accepted": true,
+      "blocks": 8,
+      "mean_difference": -0.0003346150671320098,
+      "reason": "loss_gate",
+      "samples": 235,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": 0.0025,
+      "upper_bound": 0.00010068689485707682
+    },
+    "kind": "prune_review",
+    "new_leaves": 1,
+    "new_literal": "None",
+    "node": 19,
+    "old_leaves": 3,
+    "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)",
+    "path": "root/more",
+    "structure_version": 4,
+    "train_samples": 2803
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710607,
+    "mode": "prune_regrow",
+    "action": "NOOP",
+    "candidate_mse": 0.016563572415236694,
+    "counter": 575000,
+    "current_mse": 0.01773478964035315,
+    "gate": {
+      "accepted": true,
+      "blocks": 8,
+      "mean_difference": -0.0011375765857764022,
+      "reason": "loss_gate",
+      "samples": 165,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": 0.0025,
+      "upper_bound": -0.00013930628375892744
+    },
+    "kind": "prune_review",
+    "new_leaves": 1,
+    "new_literal": "None",
+    "node": 1,
+    "old_leaves": 3,
+    "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+    "path": "root/true",
+    "structure_version": 3,
+    "train_samples": 652
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710607,
+    "mode": "prune_regrow",
+    "action": "FIRE",
+    "candidate_mse": 0.021131636393443662,
+    "counter": 525000,
+    "current_mse": 0.05960107559411415,
+    "gate": {
+      "accepted": true,
+      "blocks": 8,
+      "mean_difference": -0.038416634801859355,
+      "reason": "loss_gate",
+      "samples": 227,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": 0.0025,
+      "upper_bound": -0.033464058164667375
+    },
+    "kind": "prune_review",
+    "new_leaves": 1,
+    "new_literal": "None",
+    "node": 7,
+    "old_leaves": 3,
+    "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+    "path": "root/true",
+    "structure_version": 1,
+    "train_samples": 313
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710607,
+    "mode": "replace",
+    "action": "FIRE",
+    "candidate_mse": 0.024591493391802027,
+    "counter": 550000,
+    "current_mse": 0.02503295609077518,
+    "gate": {
+      "accepted": false,
+      "blocks": 8,
+      "mean_difference": -0.0005193581381385587,
+      "reason": "loss_gate",
+      "samples": 260,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": -0.001,
+      "upper_bound": 0.0007640034127558513
+    },
+    "kind": "replacement_review",
+    "new_leaves": 5,
+    "new_literal": "Literal(name='present', type='logical', obj1='ball_t', obj2=None, obj3=None)",
+    "node": 31,
+    "old_leaves": 3,
+    "old_literal": "Literal(name='present', type='logical', obj1='ball_t-1', obj2=None, obj3=None)",
+    "path": "root",
+    "train_samples": 1217
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710607,
+    "mode": "replace",
+    "action": "RIGHT",
+    "candidate_mse": 0.02529126746599349,
+    "counter": 550000,
+    "current_mse": 0.033211114147577714,
+    "gate": {
+      "accepted": true,
+      "blocks": 8,
+      "mean_difference": -0.008184574499307058,
+      "reason": "loss_gate",
+      "samples": 288,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": -0.001,
+      "upper_bound": -0.004409204733006869
+    },
+    "kind": "replacement_review",
+    "new_leaves": 4,
+    "new_literal": "Literal(name='present', type='logical', obj1='ball_t', obj2=None, obj3=None)",
+    "node": 12,
+    "old_leaves": 4,
+    "old_literal": "Literal(name='present', type='logical', obj1='ball_t-1', obj2=None, obj3=None)",
+    "path": "root",
+    "structure_version": 2,
+    "train_samples": 2651
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710607,
+    "mode": "replace",
+    "action": "RIGHT",
+    "candidate_mse": 0.22179904309879342,
+    "counter": 600000,
+    "current_mse": 0.0410300482387693,
+    "gate": {
+      "accepted": false,
+      "blocks": 8,
+      "mean_difference": 0.18118568710947142,
+      "reason": "loss_gate",
+      "samples": 306,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": -0.001,
+      "upper_bound": 0.20940003696504222
+    },
+    "kind": "replacement_review",
+    "new_leaves": 5,
+    "new_literal": "Literal(name='present', type='logical', obj1='ball_t-1', obj2=None, obj3=None)",
+    "node": 36,
+    "old_leaves": 4,
+    "old_literal": "Literal(name='present', type='logical', obj1='ball_t', obj2=None, obj3=None)",
+    "path": "root",
+    "train_samples": 2253
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710607,
+    "mode": "replace",
+    "action": "LEFT",
+    "candidate_mse": 0.15995498308056572,
+    "counter": 600000,
+    "current_mse": 0.1565710873525301,
+    "gate": {
+      "accepted": false,
+      "blocks": 8,
+      "mean_difference": 0.003303108815529964,
+      "reason": "loss_gate",
+      "samples": 325,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": -0.001,
+      "upper_bound": 0.008946912072159318
+    },
+    "kind": "replacement_review",
+    "new_leaves": 4,
+    "new_literal": "Literal(name='present', type='logical', obj1='ball_t', obj2=None, obj3=None)",
+    "node": 18,
+    "old_leaves": 9,
+    "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+    "path": "root",
+    "train_samples": 1497
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710607,
+    "mode": "replace",
+    "action": "RIGHT",
+    "candidate_mse": 0.1559326510096597,
+    "counter": 600000,
+    "current_mse": 0.04023668424682189,
+    "gate": {
+      "accepted": false,
+      "blocks": 8,
+      "mean_difference": 0.11580196684561248,
+      "reason": "loss_gate",
+      "samples": 293,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": -0.001,
+      "upper_bound": 0.1359537108552895
+    },
+    "kind": "replacement_review",
+    "new_leaves": 8,
+    "new_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+    "node": 37,
+    "old_leaves": 3,
+    "old_literal": "Literal(name='y', type='comparative', obj1='ball_t', obj2='ball_t-1', obj3=None)",
+    "path": "root/true",
+    "train_samples": 2144
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710607,
+    "mode": "replace",
+    "action": "NOOP",
+    "candidate_mse": 0.028864921219355424,
+    "counter": 600000,
+    "current_mse": 0.19233288496269782,
+    "gate": {
+      "accepted": true,
+      "blocks": 8,
+      "mean_difference": -0.1668400267997096,
+      "reason": "loss_gate",
+      "samples": 165,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": -0.001,
+      "upper_bound": -0.13803417209469238
+    },
+    "kind": "replacement_review",
+    "new_leaves": 6,
+    "new_literal": "Literal(name='present', type='logical', obj1='ball_t-1', obj2=None, obj3=None)",
+    "node": 0,
+    "old_leaves": 4,
+    "old_literal": "Literal(name='present', type='logical', obj1='ball_t', obj2=None, obj3=None)",
+    "path": "root",
+    "structure_version": 5,
+    "train_samples": 1267
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710607,
+    "mode": "replace",
+    "action": "FIRE",
+    "counter": 574028,
+    "evidence": {
+      "effect_fraction": 0.09451751779989222,
+      "groups": {
+        "Total": {
+          "J": 96.56868426946909,
+          "mu": 2.200748042913805,
+          "n": 5616
+        },
+        "less": {
+          "J": 10.224834474143087,
+          "mu": 2.285147130121578,
+          "n": 1021
+        },
+        "more": {
+          "J": 77.0897778599404,
+          "mu": 2.1815427986713702,
+          "n": 4577
+        },
+        "same": {
+          "J": 0.12663960103032068,
+          "mu": 2.29691109060673,
+          "n": 18
+        }
+      },
+      "n": 5616,
+      "observed_categories": 3,
+      "p_anova": 9.635359621364408e-122,
+      "p_historical": 9.999252229637355e-05
+    },
+    "inherited_q": 2.046564252011441,
+    "kind": "grow",
+    "literal": "Literal(name='y', type='comparative', obj1='ball_t', obj2='ball_t-1', obj3=None)",
+    "node": 33,
+    "path": "root/true/true",
+    "test": "historical_f"
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710607,
+    "mode": "replace",
+    "action": "FIRE",
+    "candidate_mse": 0.15786567205557403,
+    "counter": 575000,
+    "current_mse": 0.1663857770493975,
+    "gate": {
+      "accepted": true,
+      "blocks": 8,
+      "mean_difference": -0.008496082975652726,
+      "reason": "loss_gate",
+      "samples": 261,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": -0.001,
+      "upper_bound": -0.006508225520807798
+    },
+    "kind": "replacement_review",
+    "new_leaves": 5,
+    "new_literal": "Literal(name='present', type='logical', obj1='ball_t', obj2=None, obj3=None)",
+    "node": 31,
+    "old_leaves": 5,
+    "old_literal": "Literal(name='present', type='logical', obj1='ball_t-1', obj2=None, obj3=None)",
+    "path": "root",
+    "structure_version": 4,
+    "train_samples": 1452
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710607,
+    "mode": "replace",
+    "action": "FIRE",
+    "candidate_mse": 0.035372962737593334,
+    "counter": 525000,
+    "current_mse": 0.06599587375181565,
+    "gate": {
+      "accepted": true,
+      "blocks": 8,
+      "mean_difference": -0.03127643631514929,
+      "reason": "loss_gate",
+      "samples": 269,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": -0.001,
+      "upper_bound": -0.025018840711928343
+    },
+    "kind": "replacement_review",
+    "new_leaves": 3,
+    "new_literal": "Literal(name='present', type='logical', obj1='ball_t-1', obj2=None, obj3=None)",
+    "node": 6,
+    "old_leaves": 4,
+    "old_literal": "Literal(name='present', type='logical', obj1='ball_t', obj2=None, obj3=None)",
+    "path": "root",
+    "structure_version": 1,
+    "train_samples": 461
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710610,
+    "mode": "prune",
+    "action": "RIGHT",
+    "candidate_mse": 0.04754907038437003,
+    "counter": 550000,
+    "current_mse": 0.04531089753307774,
+    "gate": {
+      "accepted": false,
+      "blocks": 8,
+      "mean_difference": 0.0022382923377153164,
+      "reason": "loss_gate",
+      "samples": 288,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": 0.0025,
+      "upper_bound": 0.004518939913337137
+    },
+    "kind": "prune_review",
+    "new_leaves": 1,
+    "new_literal": "None",
+    "node": 12,
+    "old_leaves": 4,
+    "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)",
+    "path": "root",
+    "train_samples": 714
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710610,
+    "mode": "prune",
+    "action": "LEFT",
+    "candidate_mse": 0.022866386838458857,
+    "counter": 550000,
+    "current_mse": 0.02186783748009463,
+    "gate": {
+      "accepted": true,
+      "blocks": 8,
+      "mean_difference": 0.001010825753195818,
+      "reason": "loss_gate",
+      "samples": 330,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": 0.0025,
+      "upper_bound": 0.0016913764185747463
+    },
+    "kind": "prune_review",
+    "new_leaves": 1,
+    "new_literal": "None",
+    "node": 18,
+    "old_leaves": 3,
+    "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+    "path": "root",
+    "structure_version": 2,
+    "train_samples": 4996
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710610,
+    "mode": "prune",
+    "action": "NOOP",
+    "candidate_mse": 0.012014719424006975,
+    "counter": 600000,
+    "current_mse": 0.01281098143153433,
+    "gate": {
+      "accepted": true,
+      "blocks": 8,
+      "mean_difference": -0.0008402066404398242,
+      "reason": "loss_gate",
+      "samples": 165,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": 0.0025,
+      "upper_bound": -0.00021792297324333827
+    },
+    "kind": "prune_review",
+    "new_leaves": 1,
+    "new_literal": "None",
+    "node": 0,
+    "old_leaves": 2,
+    "old_literal": "Literal(name='present', type='logical', obj1='ball_t', obj2=None, obj3=None)",
+    "path": "root",
+    "structure_version": 4,
+    "train_samples": 3425
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710610,
+    "mode": "prune",
+    "action": "RIGHT",
+    "candidate_mse": 0.022445317273865156,
+    "counter": 575000,
+    "current_mse": 0.018703897544175743,
+    "gate": {
+      "accepted": false,
+      "blocks": 8,
+      "mean_difference": 0.003766987174915838,
+      "reason": "loss_gate",
+      "samples": 106,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": 0.0025,
+      "upper_bound": 0.0061597290270177995
+    },
+    "kind": "prune_review",
+    "new_leaves": 1,
+    "new_literal": "None",
+    "node": 15,
+    "old_leaves": 2,
+    "old_literal": "Literal(name='present', type='logical', obj1='ball_t-1', obj2=None, obj3=None)",
+    "path": "root/less",
+    "train_samples": 180
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710610,
+    "mode": "prune",
+    "action": "RIGHT",
+    "candidate_mse": 0.02780559227912129,
+    "counter": 575000,
+    "current_mse": 0.024678417336595426,
+    "gate": {
+      "accepted": false,
+      "blocks": 8,
+      "mean_difference": 0.0031102566225972373,
+      "reason": "loss_gate",
+      "samples": 278,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": 0.0025,
+      "upper_bound": 0.004478166628917261
+    },
+    "kind": "prune_review",
+    "new_leaves": 1,
+    "new_literal": "None",
+    "node": 12,
+    "old_leaves": 4,
+    "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)",
+    "path": "root",
+    "train_samples": 1235
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710610,
+    "mode": "prune",
+    "action": "FIRE",
+    "candidate_mse": 0.027842905927111233,
+    "counter": 575000,
+    "current_mse": 0.02771685189624608,
+    "gate": {
+      "accepted": true,
+      "blocks": 8,
+      "mean_difference": 0.0001282332930560721,
+      "reason": "loss_gate",
+      "samples": 261,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": 0.0025,
+      "upper_bound": 0.00018642684779537108
+    },
+    "kind": "prune_review",
+    "new_leaves": 1,
+    "new_literal": "None",
+    "node": 3,
+    "old_leaves": 4,
+    "old_literal": "Literal(name='present', type='logical', obj1='ball_t', obj2=None, obj3=None)",
+    "path": "root",
+    "structure_version": 3,
+    "train_samples": 2562
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710610,
+    "mode": "prune",
+    "action": "FIRE",
+    "candidate_mse": 0.017950113652569294,
+    "counter": 525000,
+    "current_mse": 0.017297060987744438,
+    "gate": {
+      "accepted": true,
+      "blocks": 8,
+      "mean_difference": 0.0006233054634605551,
+      "reason": "loss_gate",
+      "samples": 227,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": 0.0025,
+      "upper_bound": 0.0012874514257044448
+    },
+    "kind": "prune_review",
+    "new_leaves": 1,
+    "new_literal": "None",
+    "node": 4,
+    "old_leaves": 3,
+    "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+    "path": "root/true",
+    "structure_version": 1,
+    "train_samples": 3263
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710610,
+    "mode": "prune_regrow",
+    "action": "RIGHT",
+    "candidate_mse": 0.04754907038437003,
+    "counter": 550000,
+    "current_mse": 0.04531089753307774,
+    "gate": {
+      "accepted": false,
+      "blocks": 8,
+      "mean_difference": 0.0022382923377153164,
+      "reason": "loss_gate",
+      "samples": 288,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": 0.0025,
+      "upper_bound": 0.004518939913337137
+    },
+    "kind": "prune_review",
+    "new_leaves": 1,
+    "new_literal": "None",
+    "node": 12,
+    "old_leaves": 4,
+    "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)",
+    "path": "root",
+    "train_samples": 714
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710610,
+    "mode": "prune_regrow",
+    "action": "LEFT",
+    "candidate_mse": 0.022866386838458857,
+    "counter": 550000,
+    "current_mse": 0.02186783748009463,
+    "gate": {
+      "accepted": true,
+      "blocks": 8,
+      "mean_difference": 0.001010825753195818,
+      "reason": "loss_gate",
+      "samples": 330,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": 0.0025,
+      "upper_bound": 0.0016913764185747463
+    },
+    "kind": "prune_review",
+    "new_leaves": 1,
+    "new_literal": "None",
+    "node": 18,
+    "old_leaves": 3,
+    "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+    "path": "root",
+    "structure_version": 2,
+    "train_samples": 4996
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710610,
+    "mode": "prune_regrow",
+    "action": "RIGHT",
+    "candidate_mse": 0.046506483624653476,
+    "counter": 600000,
+    "current_mse": 0.04907413737151804,
+    "gate": {
+      "accepted": true,
+      "blocks": 8,
+      "mean_difference": -0.0027361305134682677,
+      "reason": "loss_gate",
+      "samples": 306,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": 0.0025,
+      "upper_bound": -0.001616093496780931
+    },
+    "kind": "prune_review",
+    "new_leaves": 1,
+    "new_literal": "None",
+    "node": 12,
+    "old_leaves": 4,
+    "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)",
+    "path": "root",
+    "structure_version": 5,
+    "train_samples": 1327
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710610,
+    "mode": "prune_regrow",
+    "action": "LEFT",
+    "counter": 560046,
+    "evidence": {
+      "effect_fraction": 0.6733172301835519,
+      "groups": {
+        "Total": {
+          "J": 4.223891131614617,
+          "mu": 1.0945168908948109,
+          "n": 440
+        },
+        "less": {
+          "J": 0.7890996514781508,
+          "mu": 1.1472066532914638,
+          "n": 277
+        },
+        "more": {
+          "J": 0.5022927377108605,
+          "mu": 0.9703892163128084,
+          "n": 130
+        },
+        "same": {
+          "J": 0.08848006508998171,
+          "mu": 1.1412300276156346,
+          "n": 33
+        }
+      },
+      "n": 440,
+      "observed_categories": 3,
+      "p_anova": 6.864059958911441e-107,
+      "p_historical": 1.5111495633515029e-30
+    },
+    "inherited_q": 0.8918487059798073,
+    "kind": "grow",
+    "literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+    "node": 23,
+    "path": "root",
+    "test": "historical_f"
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710610,
+    "mode": "prune_regrow",
+    "action": "RIGHT",
+    "candidate_mse": 0.04733118942127625,
+    "counter": 575000,
+    "current_mse": 0.04410910441805289,
+    "gate": {
+      "accepted": false,
+      "blocks": 8,
+      "mean_difference": 0.003228129454168081,
+      "reason": "loss_gate",
+      "samples": 278,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": 0.0025,
+      "upper_bound": 0.004595838734492074
+    },
+    "kind": "prune_review",
+    "new_leaves": 1,
+    "new_literal": "None",
+    "node": 12,
+    "old_leaves": 4,
+    "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)",
+    "path": "root",
+    "train_samples": 1630
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710610,
+    "mode": "prune_regrow",
+    "action": "FIRE",
+    "candidate_mse": 0.03302099175996905,
+    "counter": 575000,
+    "current_mse": 0.030136883068864775,
+    "gate": {
+      "accepted": false,
+      "blocks": 8,
+      "mean_difference": 0.0028941490033531354,
+      "reason": "loss_gate",
+      "samples": 261,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": 0.0025,
+      "upper_bound": 0.00370118161617321
+    },
+    "kind": "prune_review",
+    "new_leaves": 1,
+    "new_literal": "None",
+    "node": 3,
+    "old_leaves": 4,
+    "old_literal": "Literal(name='present', type='logical', obj1='ball_t', obj2=None, obj3=None)",
+    "path": "root",
+    "train_samples": 2016
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710610,
+    "mode": "prune_regrow",
+    "action": "NOOP",
+    "candidate_mse": 0.01715897733550604,
+    "counter": 575000,
+    "current_mse": 0.01611373556463415,
+    "gate": {
+      "accepted": true,
+      "blocks": 8,
+      "mean_difference": 0.00103770203552817,
+      "reason": "loss_gate",
+      "samples": 172,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": 0.0025,
+      "upper_bound": 0.0013590271284551392
+    },
+    "kind": "prune_review",
+    "new_leaves": 1,
+    "new_literal": "None",
+    "node": 0,
+    "old_leaves": 2,
+    "old_literal": "Literal(name='present', type='logical', obj1='ball_t', obj2=None, obj3=None)",
+    "path": "root",
+    "structure_version": 4,
+    "train_samples": 1794
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710610,
+    "mode": "prune_regrow",
+    "action": "FIRE",
+    "candidate_mse": 0.017950113652569294,
+    "counter": 525000,
+    "current_mse": 0.017297060987744438,
+    "gate": {
+      "accepted": true,
+      "blocks": 8,
+      "mean_difference": 0.0006233054634605551,
+      "reason": "loss_gate",
+      "samples": 227,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": 0.0025,
+      "upper_bound": 0.0012874514257044448
+    },
+    "kind": "prune_review",
+    "new_leaves": 1,
+    "new_literal": "None",
+    "node": 4,
+    "old_leaves": 3,
+    "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+    "path": "root/true",
+    "structure_version": 1,
+    "train_samples": 3263
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710610,
+    "mode": "replace",
+    "action": "LEFT",
+    "counter": 535700,
+    "evidence": {
+      "effect_fraction": 0.03923890008982641,
+      "groups": {
+        "Total": {
+          "J": 124.92641773797942,
+          "mu": 1.2277873883397818,
+          "n": 34639
+        },
+        "less": {
+          "J": 38.92071208349122,
+          "mu": 1.2493887066742484,
+          "n": 3730
+        },
+        "more": {
+          "J": 20.46246494013332,
+          "mu": 1.2784843219624564,
+          "n": 1005
+        },
+        "same": {
+          "J": 60.64126549016238,
+          "mu": 1.2233892029572742,
+          "n": 29904
+        }
+      },
+      "n": 34639,
+      "observed_categories": 3,
+      "p_anova": 8.583849601882245e-302,
+      "p_historical": 9.771532057395164e-05
+    },
+    "inherited_q": 1.737510178393315,
+    "kind": "grow",
+    "literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)",
+    "node": 20,
+    "path": "root/same",
+    "test": "historical_f"
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710610,
+    "mode": "replace",
+    "action": "FIRE",
+    "candidate_mse": 0.11571489551957771,
+    "counter": 550000,
+    "current_mse": 0.2313667486000815,
+    "gate": {
+      "accepted": true,
+      "blocks": 8,
+      "mean_difference": -0.11630916576306463,
+      "reason": "loss_gate",
+      "samples": 260,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": -0.001,
+      "upper_bound": -0.09272577619891374
+    },
+    "kind": "replacement_review",
+    "new_leaves": 5,
+    "new_literal": "Literal(name='present', type='logical', obj1='ball_t-1', obj2=None, obj3=None)",
+    "node": 3,
+    "old_leaves": 8,
+    "old_literal": "Literal(name='present', type='logical', obj1='ball_t', obj2=None, obj3=None)",
+    "path": "root",
+    "structure_version": 7,
+    "train_samples": 1550
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710610,
+    "mode": "replace",
+    "action": "FIRE",
+    "candidate_mse": 0.09939889054566979,
+    "counter": 600000,
+    "current_mse": 0.039704379014627075,
+    "gate": {
+      "accepted": false,
+      "blocks": 8,
+      "mean_difference": 0.059328168506015834,
+      "reason": "loss_gate",
+      "samples": 228,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": -0.001,
+      "upper_bound": 0.06607608639943839
+    },
+    "kind": "replacement_review",
+    "new_leaves": 5,
+    "new_literal": "Literal(name='present', type='logical', obj1='ball_t-1', obj2=None, obj3=None)",
+    "node": 56,
+    "old_leaves": 5,
+    "old_literal": "Literal(name='present', type='logical', obj1='ball_t', obj2=None, obj3=None)",
+    "path": "root",
+    "train_samples": 739
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710610,
+    "mode": "replace",
+    "action": "FIRE",
+    "candidate_mse": 0.08042617536218302,
+    "counter": 600000,
+    "current_mse": 0.032094224408049515,
+    "gate": {
+      "accepted": false,
+      "blocks": 8,
+      "mean_difference": 0.0483675888531624,
+      "reason": "loss_gate",
+      "samples": 194,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": -0.001,
+      "upper_bound": 0.05524254030715986
+    },
+    "kind": "replacement_review",
+    "new_leaves": 5,
+    "new_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)",
+    "node": 57,
+    "old_leaves": 3,
+    "old_literal": "Literal(name='y', type='comparative', obj1='ball_t', obj2='ball_t-1', obj3=None)",
+    "path": "root/true",
+    "train_samples": 390
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710610,
+    "mode": "replace",
+    "action": "NOOP",
+    "candidate_mse": 0.13074722962385915,
+    "counter": 600000,
+    "current_mse": 0.15228441758244993,
+    "gate": {
+      "accepted": true,
+      "blocks": 8,
+      "mean_difference": -0.022632319648013065,
+      "reason": "loss_gate",
+      "samples": 165,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": -0.001,
+      "upper_bound": -0.014574522659517567
+    },
+    "kind": "replacement_review",
+    "new_leaves": 7,
+    "new_literal": "Literal(name='y', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+    "node": 0,
+    "old_leaves": 4,
+    "old_literal": "Literal(name='present', type='logical', obj1='ball_t', obj2=None, obj3=None)",
+    "path": "root",
+    "structure_version": 10,
+    "train_samples": 1345
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710610,
+    "mode": "replace",
+    "action": "FIRE",
+    "counter": 560001,
+    "evidence": {
+      "effect_fraction": 0.20632274241899307,
+      "groups": {
+        "Total": {
+          "J": 0.74147308747642,
+          "mu": 1.9279597926760028,
+          "n": 1399
+        },
+        "less": {
+          "J": 0.26656866295202025,
+          "mu": 1.9183401015858772,
+          "n": 740
+        },
+        "more": {
+          "J": 0.31162316289421105,
+          "mu": 1.9395039593784669,
+          "n": 629
+        },
+        "same": {
+          "J": 0.010298500792147485,
+          "mu": 1.9232028110374833,
+          "n": 30
+        }
+      },
+      "n": 1399,
+      "observed_categories": 3,
+      "p_anova": 8.942672478307489e-71,
+      "p_historical": 8.000780948644333e-06
+    },
+    "inherited_q": 1.9325562563888823,
+    "kind": "grow",
+    "literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+    "node": 47,
+    "path": "root/true/true",
+    "test": "historical_f"
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710610,
+    "mode": "replace",
+    "action": "FIRE",
+    "candidate_mse": 0.028148212813605522,
+    "counter": 575000,
+    "current_mse": 0.12586313630516732,
+    "gate": {
+      "accepted": true,
+      "blocks": 8,
+      "mean_difference": -0.09765408170328217,
+      "reason": "loss_gate",
+      "samples": 261,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": -0.001,
+      "upper_bound": -0.081730856113158
+    },
+    "kind": "replacement_review",
+    "new_leaves": 5,
+    "new_literal": "Literal(name='present', type='logical', obj1='ball_t', obj2=None, obj3=None)",
+    "node": 45,
+    "old_leaves": 7,
+    "old_literal": "Literal(name='present', type='logical', obj1='ball_t-1', obj2=None, obj3=None)",
+    "path": "root",
+    "structure_version": 9,
+    "train_samples": 1680
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710610,
+    "mode": "replace",
+    "action": "FIRE",
+    "candidate_mse": 0.01820948665388113,
+    "counter": 525000,
+    "current_mse": 0.016266251460475042,
+    "gate": {
+      "accepted": false,
+      "blocks": 8,
+      "mean_difference": 0.0018096612774057693,
+      "reason": "loss_gate",
+      "samples": 269,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": -0.001,
+      "upper_bound": 0.002956676786038611
+    },
+    "kind": "replacement_review",
+    "new_leaves": 5,
+    "new_literal": "Literal(name='present', type='logical', obj1='ball_t-1', obj2=None, obj3=None)",
+    "node": 3,
+    "old_leaves": 6,
+    "old_literal": "Literal(name='present', type='logical', obj1='ball_t', obj2=None, obj3=None)",
+    "path": "root",
+    "train_samples": 3726
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710610,
+    "mode": "replace",
+    "action": "FIRE",
+    "candidate_mse": 0.017945914726781965,
+    "counter": 525000,
+    "current_mse": 0.017297060987744438,
+    "gate": {
+      "accepted": false,
+      "blocks": 8,
+      "mean_difference": 0.0006222353973565867,
+      "reason": "loss_gate",
+      "samples": 227,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": -0.001,
+      "upper_bound": 0.0014308947758651784
+    },
+    "kind": "replacement_review",
+    "new_leaves": 5,
+    "new_literal": "Literal(name='y', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+    "node": 4,
+    "old_leaves": 3,
+    "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+    "path": "root/true",
+    "train_samples": 3263
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710610,
+    "mode": "replace",
+    "action": "RIGHT",
+    "candidate_mse": 0.014790619106771355,
+    "counter": 525000,
+    "current_mse": 0.03807696085092416,
+    "gate": {
+      "accepted": true,
+      "blocks": 8,
+      "mean_difference": -0.02327149740984635,
+      "reason": "loss_gate",
+      "samples": 278,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": -0.001,
+      "upper_bound": -0.01899414540683014
+    },
+    "kind": "replacement_review",
+    "new_leaves": 5,
+    "new_literal": "Literal(name='present', type='logical', obj1='ball_t', obj2=None, obj3=None)",
+    "node": 12,
+    "old_leaves": 4,
+    "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)",
+    "path": "root",
+    "structure_version": 1,
+    "train_samples": 859
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710610,
+    "mode": "replace",
+    "action": "NOOP",
+    "counter": 533660,
+    "evidence": {
+      "effect_fraction": 0.030125469788306686,
+      "groups": {
+        "Total": {
+          "J": 160.2538540716142,
+          "mu": 1.1989977045277729,
+          "n": 59326
+        },
+        "less": {
+          "J": 61.248011374565486,
+          "mu": 1.2206229209421926,
+          "n": 7953
+        },
+        "more": {
+          "J": 89.79719986136861,
+          "mu": 1.1950292740324702,
+          "n": 49533
+        },
+        "same": {
+          "J": 4.380920196374305,
+          "mu": 1.2123579879954478,
+          "n": 1840
+        }
+      },
+      "n": 59326,
+      "observed_categories": 3,
+      "p_anova": 0.0,
+      "p_historical": 9.761968111720971e-05
+    },
+    "inherited_q": 1.5888209428650393,
+    "kind": "grow",
+    "literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+    "node": 1,
+    "path": "root/true",
+    "test": "historical_f"
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710610,
+    "mode": "replace",
+    "action": "FIRE",
+    "counter": 534387,
+    "evidence": {
+      "effect_fraction": 0.11894993739568877,
+      "groups": {
+        "Total": {
+          "J": 62.854700681394995,
+          "mu": 1.2410370006677436,
+          "n": 3455
+        },
+        "less": {
+          "J": 30.856208270980446,
+          "mu": 1.214776545778965,
+          "n": 2608
+        },
+        "more": {
+          "J": 24.179585916777974,
+          "mu": 1.3237918988188504,
+          "n": 829
+        },
+        "same": {
+          "J": 0.3423437825590293,
+          "mu": 1.2345623219270987,
+          "n": 18
+        }
+      },
+      "n": 3455,
+      "observed_categories": 3,
+      "p_anova": 1.1776387898330381e-95,
+      "p_historical": 9.966020189296394e-05
+    },
+    "inherited_q": 1.6563635655017572,
+    "kind": "grow",
+    "literal": "Literal(name='x', type='comparative', obj1='ball_t', obj2='ball_t-1', obj3=None)",
+    "node": 5,
+    "path": "root/true/more",
+    "test": "historical_f"
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710610,
+    "mode": "replace",
+    "action": "LEFT",
+    "counter": 541968,
+    "evidence": {
+      "effect_fraction": 0.05019457477996082,
+      "groups": {
+        "Total": {
+          "J": 618.6023334004311,
+          "mu": 1.2486299874100824,
+          "n": 20911
+        },
+        "less": {
+          "J": 386.51615932526147,
+          "mu": 1.2307479910762882,
+          "n": 17139
+        },
+        "more": {
+          "J": 198.0777304548423,
+          "mu": 1.3322624758334716,
+          "n": 3655
+        },
+        "same": {
+          "J": 2.9579625374287013,
+          "mu": 1.2554914402066764,
+          "n": 117
+        }
+      },
+      "n": 20911,
+      "observed_categories": 3,
+      "p_anova": 1.5580750107741388e-234,
+      "p_historical": 9.83803854714982e-05
+    },
+    "inherited_q": 1.8079935159836946,
+    "kind": "grow",
+    "literal": "Literal(name='x', type='comparative', obj1='ball_t', obj2='ball_t-1', obj3=None)",
+    "node": 19,
+    "path": "root/more",
+    "test": "historical_f"
+  },
+  {
+    "criterion": "historical_f",
+    "seed": 710610,
+    "mode": "replace",
+    "action": "RIGHT",
+    "counter": 543487,
+    "evidence": {
+      "effect_fraction": 0.14305297324266908,
+      "groups": {
+        "Total": {
+          "J": 88.87128332897598,
+          "mu": 1.613131057219587,
+          "n": 2330
+        },
+        "less": {
+          "J": 57.989665129715576,
+          "mu": 1.567474905686002,
+          "n": 1677
+        },
+        "more": {
+          "J": 15.409833086293766,
+          "mu": 1.7178682041375861,
+          "n": 458
+        },
+        "same": {
+          "J": 2.75848379686611,
+          "mu": 1.7597759435445894,
+          "n": 195
+        }
+      },
+      "n": 2330,
+      "observed_categories": 3,
+      "p_anova": 9.81638145861938e-79,
+      "p_historical": 9.84734454100884e-05
+    },
+    "inherited_q": 1.8372141265957038,
+    "kind": "grow",
+    "literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+    "node": 24,
+    "path": "root/true/more",
+    "test": "historical_f"
+  },
+  {
+    "criterion": "anova",
+    "seed": 710603,
+    "mode": "normal",
+    "action": "LEFT",
+    "counter": 514769,
+    "evidence": {
+      "effect_fraction": 0.04256019245474418,
+      "groups": {
+        "Total": {
+          "J": 47.28180905093207,
+          "mu": 1.7791297054850264,
+          "n": 436
+        },
+        "less": {
+          "J": 0.919421884747706,
+          "mu": 2.008930034324771,
+          "n": 35
+        },
+        "more": {
+          "J": 36.78757649567968,
+          "mu": 1.757682738049123,
+          "n": 312
+        },
+        "same": {
+          "J": 7.5624877776883555,
+          "mu": 1.7639436642559347,
+          "n": 89
+        }
+      },
+      "n": 436,
+      "observed_categories": 3,
+      "p_anova": 8.140207331408254e-05,
+      "p_historical": 0.32517544789040365
+    },
+    "inherited_q": 2.128455694273928,
+    "kind": "grow",
+    "literal": "Literal(name='x', type='comparative', obj1='ball_t', obj2='ball_t-1', obj3=None)",
+    "node": 294,
+    "path": "root/less/more/less",
+    "test": "anova"
+  },
+  {
+    "criterion": "anova",
+    "seed": 710603,
+    "mode": "normal",
+    "action": "FIRE",
+    "counter": 595879,
+    "evidence": {
+      "effect_fraction": 0.07524371649927443,
+      "groups": {
+        "Total": {
+          "J": 31.888268140452485,
+          "mu": 1.7180393961884102,
+          "n": 257
+        },
+        "less": {
+          "J": 3.776676519889593,
+          "mu": 1.9037386686436486,
+          "n": 38
+        },
+        "more": {
+          "J": 25.681681729575672,
+          "mu": 1.6752902159657552,
+          "n": 213
+        },
+        "same": {
+          "J": 0.03051808337431565,
+          "mu": 2.059539901876092,
+          "n": 6
+        }
+      },
+      "n": 257,
+      "observed_categories": 3,
+      "p_anova": 4.846921071289208e-05,
+      "p_historical": 0.26594943286315326
+    },
+    "inherited_q": 2.1758929770577033,
+    "kind": "grow",
+    "literal": "Literal(name='x', type='comparative', obj1='ball_t', obj2='ball_t-1', obj3=None)",
+    "node": 134,
+    "path": "root/less/more/less",
+    "test": "anova"
+  },
+  {
+    "criterion": "anova",
+    "seed": 710603,
+    "mode": "normal",
+    "action": "NOOP",
+    "counter": 527447,
+    "evidence": {
+      "effect_fraction": 0.054842023274616396,
+      "groups": {
+        "Total": {
+          "J": 16.172962707483602,
+          "mu": 1.078744710226326,
+          "n": 344
+        },
+        "less": {
+          "J": 0.005271658015180158,
+          "mu": 1.424116400589444,
+          "n": 3
+        },
+        "more": {
+          "J": 14.898014984218724,
+          "mu": 1.069618958021404,
+          "n": 333
+        },
+        "same": {
+          "J": 0.3827180680263947,
+          "mu": 1.3290897618699797,
+          "n": 8
+        }
+      },
+      "n": 344,
+      "observed_categories": 3,
+      "p_anova": 6.660408593701398e-05,
+      "p_historical": 0.3008749291572815
+    },
+    "inherited_q": 1.4759825071267567,
+    "kind": "grow",
+    "literal": "Literal(name='y', type='comparative', obj1='ball_t', obj2='ball_t-1', obj3=None)",
+    "node": 66,
+    "path": "root/less/same/less",
+    "test": "anova"
+  },
+  {
+    "criterion": "anova",
+    "seed": 710603,
+    "mode": "normal",
+    "action": "LEFT",
+    "counter": 506688,
+    "evidence": {
+      "effect_fraction": 0.01642088276200662,
+      "groups": {
+        "Total": {
+          "J": 98.53459932871881,
+          "mu": 1.7481616205826742,
+          "n": 1116
+        },
+        "less": {
+          "J": 84.57060791387175,
+          "mu": 1.7608083466964322,
+          "n": 984
+        },
+        "more": {
+          "J": 10.46698622734145,
+          "mu": 1.6730209475825544,
+          "n": 113
+        },
+        "same": {
+          "J": 1.8789800839279995,
+          "mu": 1.5400835970602216,
+          "n": 19
+        }
+      },
+      "n": 1116,
+      "observed_categories": 3,
+      "p_anova": 9.962656649319808e-05,
+      "p_historical": 0.39113107472471725
+    },
+    "inherited_q": 2.1214358815398837,
+    "kind": "grow",
+    "literal": "Literal(name='y', type='comparative', obj1='ball_t', obj2='ball_t-1', obj3=None)",
+    "node": 272,
+    "path": "root/same/same/same",
+    "test": "anova"
+  },
+  {
+    "criterion": "anova",
+    "seed": 710603,
+    "mode": "prune",
+    "action": "LEFT",
+    "candidate_mse": 0.03885575890555254,
+    "counter": 550000,
+    "current_mse": 0.039677389742201766,
+    "gate": {
+      "accepted": true,
+      "blocks": 8,
+      "mean_difference": -0.0023157394177690228,
+      "reason": "loss_gate",
+      "samples": 77,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": 0.0025,
+      "upper_bound": 0.0020456614330093175
+    },
+    "kind": "prune_review",
+    "new_leaves": 1,
+    "new_literal": "None",
+    "node": 243,
+    "old_leaves": 9,
+    "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)",
+    "path": "root/more/less",
+    "structure_version": 2,
+    "train_samples": 595
+  },
+  {
+    "criterion": "anova",
+    "seed": 710603,
+    "mode": "prune",
+    "action": "RIGHT",
+    "candidate_mse": 0.01932311114202095,
+    "counter": 600000,
+    "current_mse": 0.020467589526246326,
+    "gate": {
+      "accepted": true,
+      "blocks": 8,
+      "mean_difference": -0.0011903241507670382,
+      "reason": "loss_gate",
+      "samples": 68,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": 0.0025,
+      "upper_bound": -0.00028311594028408737
+    },
+    "kind": "prune_review",
+    "new_leaves": 1,
+    "new_literal": "None",
+    "node": 175,
+    "old_leaves": 3,
+    "old_literal": "Literal(name='x', type='comparative', obj1='ball_t', obj2='ball_t-1', obj3=None)",
+    "path": "root/more/less/more",
+    "structure_version": 4,
+    "train_samples": 420
+  },
+  {
+    "criterion": "anova",
+    "seed": 710603,
+    "mode": "prune",
+    "action": "LEFT",
+    "candidate_mse": 0.015632397454314988,
+    "counter": 575000,
+    "current_mse": 0.028934555960296357,
+    "gate": {
+      "accepted": true,
+      "blocks": 8,
+      "mean_difference": -0.010067227857040022,
+      "reason": "loss_gate",
+      "samples": 118,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": 0.0025,
+      "upper_bound": 0.001128228927793708
+    },
+    "kind": "prune_review",
+    "new_leaves": 1,
+    "new_literal": "None",
+    "node": 232,
+    "old_leaves": 5,
+    "old_literal": "Literal(name='x', type='comparative', obj1='ball_t', obj2='ball_t-1', obj3=None)",
+    "path": "root/more/more",
+    "structure_version": 3,
+    "train_samples": 1003
+  },
+  {
+    "criterion": "anova",
+    "seed": 710603,
+    "mode": "prune",
+    "action": "LEFT",
+    "candidate_mse": 0.003600932499221883,
+    "counter": 525000,
+    "current_mse": 0.0035389183060507453,
+    "gate": {
+      "accepted": true,
+      "blocks": 8,
+      "mean_difference": 0.00021191873266470504,
+      "reason": "loss_gate",
+      "samples": 66,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": 0.0025,
+      "upper_bound": 0.0009112558737894202
+    },
+    "kind": "prune_review",
+    "new_leaves": 1,
+    "new_literal": "None",
+    "node": 238,
+    "old_leaves": 3,
+    "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)",
+    "path": "root/more/more/less",
+    "structure_version": 1,
+    "train_samples": 731
+  },
+  {
+    "criterion": "anova",
+    "seed": 710603,
+    "mode": "prune_regrow",
+    "action": "LEFT",
+    "counter": 514769,
+    "evidence": {
+      "effect_fraction": 0.04256019245474418,
+      "groups": {
+        "Total": {
+          "J": 47.28180905093207,
+          "mu": 1.7791297054850264,
+          "n": 436
+        },
+        "less": {
+          "J": 0.919421884747706,
+          "mu": 2.008930034324771,
+          "n": 35
+        },
+        "more": {
+          "J": 36.78757649567968,
+          "mu": 1.757682738049123,
+          "n": 312
+        },
+        "same": {
+          "J": 7.5624877776883555,
+          "mu": 1.7639436642559347,
+          "n": 89
+        }
+      },
+      "n": 436,
+      "observed_categories": 3,
+      "p_anova": 8.140207331408254e-05,
+      "p_historical": 0.32517544789040365
+    },
+    "inherited_q": 2.128455694273928,
+    "kind": "grow",
+    "literal": "Literal(name='x', type='comparative', obj1='ball_t', obj2='ball_t-1', obj3=None)",
+    "node": 294,
+    "path": "root/less/more/less",
+    "test": "anova"
+  },
+  {
+    "criterion": "anova",
+    "seed": 710603,
+    "mode": "prune_regrow",
+    "action": "LEFT",
+    "counter": 506688,
+    "evidence": {
+      "effect_fraction": 0.01642088276200662,
+      "groups": {
+        "Total": {
+          "J": 98.53459932871881,
+          "mu": 1.7481616205826742,
+          "n": 1116
+        },
+        "less": {
+          "J": 84.57060791387175,
+          "mu": 1.7608083466964322,
+          "n": 984
+        },
+        "more": {
+          "J": 10.46698622734145,
+          "mu": 1.6730209475825544,
+          "n": 113
+        },
+        "same": {
+          "J": 1.8789800839279995,
+          "mu": 1.5400835970602216,
+          "n": 19
+        }
+      },
+      "n": 1116,
+      "observed_categories": 3,
+      "p_anova": 9.962656649319808e-05,
+      "p_historical": 0.39113107472471725
+    },
+    "inherited_q": 2.1214358815398837,
+    "kind": "grow",
+    "literal": "Literal(name='y', type='comparative', obj1='ball_t', obj2='ball_t-1', obj3=None)",
+    "node": 272,
+    "path": "root/same/same/same",
+    "test": "anova"
+  },
+  {
+    "criterion": "anova",
+    "seed": 710607,
+    "mode": "normal",
+    "action": "NOOP",
+    "counter": 510937,
+    "evidence": {
+      "effect_fraction": 0.06273639481294375,
+      "groups": {
+        "Total": {
+          "J": 12.329291546223494,
+          "mu": 2.3202931556102144,
+          "n": 292
+        },
+        "less": {
+          "J": 0.8805607705418543,
+          "mu": 2.423095730299777,
+          "n": 32
+        },
+        "more": {
+          "J": 8.589027100660468,
+          "mu": 2.2783587631810005,
+          "n": 166
+        },
+        "same": {
+          "J": 2.0862083728133713,
+          "mu": 2.3593508870270585,
+          "n": 94
+        }
+      },
+      "n": 292,
+      "observed_categories": 3,
+      "p_anova": 8.590597107618605e-05,
+      "p_historical": 0.2904397347161215
+    },
+    "inherited_q": 2.5483917882390537,
+    "kind": "grow",
+    "literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+    "node": 40,
+    "path": "root/same/same",
+    "test": "anova"
+  },
+  {
+    "criterion": "anova",
+    "seed": 710607,
+    "mode": "normal",
+    "action": "FIRE",
+    "counter": 547205,
+    "evidence": {
+      "effect_fraction": 0.04035432077743128,
+      "groups": {
+        "Total": {
+          "J": 49.97710764564356,
+          "mu": 2.2393459273688125,
+          "n": 454
+        },
+        "less": {
+          "J": 37.34463626597427,
+          "mu": 2.21943811639981,
+          "n": 339
+        },
+        "more": {
+          "J": 10.545612873248823,
+          "mu": 2.2458667055404495,
+          "n": 95
+        },
+        "same": {
+          "J": 0.07006627295981194,
+          "mu": 2.5458096269781767,
+          "n": 20
+        }
+      },
+      "n": 454,
+      "observed_categories": 3,
+      "p_anova": 9.247209806082046e-05,
+      "p_historical": 0.33065882878282105
+    },
+    "inherited_q": 2.6562574010715494,
+    "kind": "grow",
+    "literal": "Literal(name='x', type='comparative', obj1='ball_t', obj2='ball_t-1', obj3=None)",
+    "node": 155,
+    "path": "root/less/same/less",
+    "test": "anova"
+  },
+  {
+    "criterion": "anova",
+    "seed": 710607,
+    "mode": "normal",
+    "action": "RIGHT",
+    "counter": 574377,
+    "evidence": {
+      "effect_fraction": 0.04187126974928545,
+      "groups": {
+        "Total": {
+          "J": 122.67158353468787,
+          "mu": 2.36191436655059,
+          "n": 434
+        },
+        "less": {
+          "J": 100.70736991881137,
+          "mu": 2.3685418233228894,
+          "n": 370
+        },
+        "more": {
+          "J": 5.769250079232626,
+          "mu": 2.512537220452116,
+          "n": 44
+        },
+        "same": {
+          "J": 11.058548571891107,
+          "mu": 1.9079361376796382,
+          "n": 20
+        }
+      },
+      "n": 434,
+      "observed_categories": 3,
+      "p_anova": 9.927559121726351e-05,
+      "p_historical": 0.3282495497126374
+    },
+    "inherited_q": 2.755896313644251,
+    "kind": "grow",
+    "literal": "Literal(name='x', type='comparative', obj1='ball_t', obj2='ball_t-1', obj3=None)",
+    "node": 187,
+    "path": "root/more/same/less",
+    "test": "anova"
+  },
+  {
+    "criterion": "anova",
+    "seed": 710607,
+    "mode": "normal",
+    "action": "FIRE",
+    "counter": 569033,
+    "evidence": {
+      "effect_fraction": 0.06840666516670146,
+      "groups": {
+        "Total": {
+          "J": 85.5409222966688,
+          "mu": 2.209011202645692,
+          "n": 263
+        },
+        "less": {
+          "J": 67.43684378807994,
+          "mu": 2.261788377684385,
+          "n": 232
+        },
+        "more": {
+          "J": 5.647085122697826,
+          "mu": 1.906767973536219,
+          "n": 18
+        },
+        "same": {
+          "J": 6.605424156292027,
+          "mu": 1.6856322422606371,
+          "n": 13
+        }
+      },
+      "n": 263,
+      "observed_categories": 3,
+      "p_anova": 9.986848180916197e-05,
+      "p_historical": 0.2833667290941277
+    },
+    "inherited_q": 2.6998319714093046,
+    "kind": "grow",
+    "literal": "Literal(name='x', type='comparative', obj1='ball_t', obj2='ball_t-1', obj3=None)",
+    "node": 115,
+    "path": "root/same/more/less",
+    "test": "anova"
+  },
+  {
+    "criterion": "anova",
+    "seed": 710607,
+    "mode": "prune",
+    "action": "FIRE",
+    "candidate_mse": 0.13604007811409785,
+    "counter": 525000,
+    "current_mse": 0.11045254525012756,
+    "gate": {
+      "accepted": false,
+      "blocks": 8,
+      "mean_difference": 0.026280209007976424,
+      "reason": "loss_gate",
+      "samples": 105,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": 0.0025,
+      "upper_bound": 0.06144050807980401
+    },
+    "kind": "prune_review",
+    "new_leaves": 1,
+    "new_literal": "None",
+    "node": 80,
+    "old_leaves": 19,
+    "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+    "path": "root/more",
+    "train_samples": 404
+  },
+  {
+    "criterion": "anova",
+    "seed": 710607,
+    "mode": "prune",
+    "action": "RIGHT",
+    "candidate_mse": 0.0684172525458207,
+    "counter": 525000,
+    "current_mse": 0.02511268330671566,
+    "gate": {
+      "accepted": false,
+      "blocks": 8,
+      "mean_difference": 0.0421054553317389,
+      "reason": "loss_gate",
+      "samples": 135,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": 0.0025,
+      "upper_bound": 0.05750276559975541
+    },
+    "kind": "prune_review",
+    "new_leaves": 1,
+    "new_literal": "None",
+    "node": 227,
+    "old_leaves": 9,
+    "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)",
+    "path": "root/less/more",
+    "train_samples": 1073
+  },
+  {
+    "criterion": "anova",
+    "seed": 710607,
+    "mode": "prune",
+    "action": "RIGHT",
+    "candidate_mse": 0.10090193477211762,
+    "counter": 525000,
+    "current_mse": 0.06863679402344823,
+    "gate": {
+      "accepted": false,
+      "blocks": 8,
+      "mean_difference": 0.03321781604056451,
+      "reason": "loss_gate",
+      "samples": 278,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": 0.0025,
+      "upper_bound": 0.05205687282724095
+    },
+    "kind": "prune_review",
+    "new_leaves": 1,
+    "new_literal": "None",
+    "node": 169,
+    "old_leaves": 55,
+    "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+    "path": "root",
+    "train_samples": 2150
+  },
+  {
+    "criterion": "anova",
+    "seed": 710607,
+    "mode": "prune",
+    "action": "LEFT",
+    "candidate_mse": 0.12318599479513002,
+    "counter": 525000,
+    "current_mse": 0.05536752347922223,
+    "gate": {
+      "accepted": false,
+      "blocks": 8,
+      "mean_difference": 0.06621985610778391,
+      "reason": "loss_gate",
+      "samples": 305,
+      "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+      "threshold": 0.0025,
+      "upper_bound": 0.08410298758857265
+    },
+    "kind": "prune_review",
+    "new_leaves": 1,
+    "new_literal": "None",
+    "node": 251,
+    "old_leaves": 61,
+    "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+    "path": "root",
+    "train_samples": 2389
+  },
+  {
+    "criterion": "anova",
+    "seed": 710610,
+    "mode": "normal",
+    "action": "LEFT",
+    "counter": 536205,
+    "evidence": {
+      "effect_fraction": 0.014393478059538877,
+      "groups": {
+        "Total": {
+          "J": 3.3423754886048593,
+          "mu": 2.11043160633773,
+          "n": 1048
+        },
+        "less": {
+          "J": 0,
+          "mu": 0,
+          "n": 0
+        },
+        "more": {
+          "J": 3.2227147502418694,
+          "mu": 2.1120261505778495,
+          "n": 993
+        },
+        "same": {
+          "J": 0.07155233010099583,
+          "mu": 2.081642834875227,
+          "n": 55
+        }
+      },
+      "n": 1048,
+      "observed_categories": 2,
+      "p_anova": 9.889200067640883e-05,
+      "p_historical": 0.4072973563119471
+    },
+    "inherited_q": 2.2046167368609124,
+    "kind": "grow",
+    "literal": "Literal(name='y', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+    "node": 237,
+    "path": "root/same/more/more",
+    "test": "anova"
+  },
+  {
+    "criterion": "anova",
+    "seed": 710610,
+    "mode": "normal",
+    "action": "NOOP",
+    "counter": 524972,
+    "evidence": {
+      "effect_fraction": 0.07807368809286779,
+      "groups": {
+        "Total": {
+          "J": 0.11634611431149003,
+          "mu": 2.047189935137867,
+          "n": 254
+        },
+        "less": {
+          "J": 0.018026635912742235,
+          "mu": 2.075297176644835,
+          "n": 11
+        },
+        "more": {
+          "J": 0.08923590815917612,
+          "mu": 2.0459175908721194,
+          "n": 243
+        },
+        "same": {
+          "J": 0,
+          "mu": 0,
+          "n": 0
+        }
+      },
+      "n": 254,
+      "observed_categories": 2,
+      "p_anova": 6.137782495656633e-06,
+      "p_historical": 0.2592138877265658
+    },
+    "inherited_q": 2.155913445602036,
+    "kind": "grow",
+    "literal": "Literal(name='y', type='comparative', obj1='ball_t', obj2='ball_t-1', obj3=None)",
+    "node": 35,
+    "path": "root/same/more/less",
+    "test": "anova"
+  },
+  {
+    "criterion": "anova",
+    "seed": 710610,
+    "mode": "normal",
+    "action": "FIRE",
+    "counter": 530047,
+    "evidence": {
+      "effect_fraction": 0.009800861436560148,
+      "groups": {
+        "Total": {
+          "J": 7.081232795973265,
+          "mu": 2.1430019678274714,
+          "n": 1973
+        },
+        "less": {
+          "J": 2.8182485835886966,
+          "mu": 2.1449270699793934,
+          "n": 830
+        },
+        "more": {
+          "J": 4.156734078281751,
+          "mu": 2.140740518620296,
+          "n": 1128
+        },
+        "same": {
+          "J": 0.036847952669078296,
+          "mu": 2.2065406291340413,
+          "n": 15
+        }
+      },
+      "n": 1973,
+      "observed_categories": 3,
+      "p_anova": 6.119360134358766e-05,
+      "p_historical": 0.41345757234733954
+    },
+    "inherited_q": 2.2392453368433274,
+    "kind": "grow",
+    "literal": "Literal(name='x', type='comparative', obj1='ball_t', obj2='ball_t-1', obj3=None)",
+    "node": 113,
+    "path": "root/same/same/more",
+    "test": "anova"
+  },
+  {
+    "criterion": "anova",
+    "seed": 710610,
+    "mode": "normal",
+    "action": "NOOP",
+    "counter": 531236,
+    "evidence": {
+      "effect_fraction": 0.050636167423657376,
+      "groups": {
+        "Total": {
+          "J": 34.11438540087176,
+          "mu": 1.9060343343699473,
+          "n": 362
+        },
+        "less": {
+          "J": 20.22642992307534,
+          "mu": 1.8535464659058474,
+          "n": 220
+        },
+        "more": {
+          "J": 6.380645885996767,
+          "mu": 1.951014436829124,
+          "n": 70
+        },
+        "same": {
+          "J": 5.779887861085866,
+          "mu": 2.0226832772860526,
+          "n": 72
+        }
+      },
+      "n": 362,
+      "observed_categories": 3,
+      "p_anova": 8.895421419963659e-05,
+      "p_historical": 0.31090715615880216
+    },
+    "inherited_q": 2.351454900207185,
+    "kind": "grow",
+    "literal": "Literal(name='x', type='comparative', obj1='ball_t', obj2='ball_t-1', obj3=None)",
+    "node": 64,
+    "path": "root/less/same/less",
+    "test": "anova"
+  },
+  {
+    "criterion": "anova",
+    "seed": 710610,
+    "mode": "normal",
+    "action": "NOOP",
+    "counter": 582312,
+    "evidence": {
+      "effect_fraction": 0.008992906904763572,
+      "groups": {
+        "Total": {
+          "J": 295.7519857791916,
+          "mu": 1.8555755163287277,
+          "n": 2052
+        },
+        "less": {
+          "J": 0.0941656077737272,
+          "mu": 2.0385773911380785,
+          "n": 23
+        },
+        "more": {
+          "J": 284.11915906940146,
+          "mu": 1.8453729028310943,
+          "n": 1894
+        },
+        "same": {
+          "J": 8.878991027004016,
+          "mu": 1.9675363077650814,
+          "n": 135
+        }
+      },
+      "n": 2052,
+      "observed_categories": 3,
+      "p_anova": 9.564089566535968e-05,
+      "p_historical": 0.41896923744649206
+    },
+    "inherited_q": 2.068488729816678,
+    "kind": "grow",
+    "literal": "Literal(name='y', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+    "node": 60,
+    "path": "root/less/more/less",
+    "test": "anova"
+  }
+]
