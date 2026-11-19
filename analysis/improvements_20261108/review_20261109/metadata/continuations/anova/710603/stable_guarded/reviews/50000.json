@@ -1,0 +1,421 @@
+{
+  "payload": {
+    "evaluation_bank_used_for_gate": false,
+    "holdout": {
+      "path": "probe_50000-0633b93438654c210dc156f00e5918936485c75f2ac8ca3dba818d990f6468d9.pkl",
+      "sha256": "0633b93438654c210dc156f00e5918936485c75f2ac8ca3dba818d990f6468d9"
+    },
+    "identity": {
+      "campaign": "5c68a97ac3ddd52553a705703ef4faf12d014108b41ca16e7b3b84d7eff805b4",
+      "criterion": "anova",
+      "mode": "stable_guarded",
+      "parent": {
+        "path": "checkpoints/500000-e2a41023f952b0cddba35e63e4b2e5313002d07962006b46ed7500c552872e1f.pkl",
+        "sha256": "e2a41023f952b0cddba35e63e4b2e5313002d07962006b46ed7500c552872e1f"
+      },
+      "parent_counter": 500000,
+      "seed": 710603
+    },
+    "point": 50000,
+    "reference": {
+      "path": "reference_50000-2dd7a50fa1c28fa749eb26fb171de5084f76502be7a62da91dd261756e37e95f.pkl",
+      "sha256": "2dd7a50fa1c28fa749eb26fb171de5084f76502be7a62da91dd261756e37e95f"
+    },
+    "return_bank": {
+      "path": "return_bank_50000-ef99d51b504939fe9b6d4bfb7be209f701e27eec80df9b2124056e7c96910ee9.pkl",
+      "sha256": "ef99d51b504939fe9b6d4bfb7be209f701e27eec80df9b2124056e7c96910ee9"
+    },
+    "reviews": [
+      {
+        "action": "LEFT",
+        "bounded_q": true,
+        "candidate_mse": 0.07778678623241951,
+        "counter": 550000,
+        "current_mse": 0.07907387540848382,
+        "gate": {
+          "accepted": true,
+          "blocks": 6,
+          "mean_difference": -0.0017983480361738963,
+          "reason": "return_guard",
+          "samples": 64,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": 0.0025,
+          "upper_bound": -0.0006901261684614892
+        },
+        "kind": "prune_review",
+        "loss_gate": {
+          "accepted": true,
+          "blocks": 6,
+          "mean_difference": -0.0017983480361738963,
+          "reason": "loss_gate",
+          "samples": 64,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": 0.0025,
+          "upper_bound": -0.0006901261684614892
+        },
+        "new_leaves": 1,
+        "new_literal": "None",
+        "node": 243,
+        "old_leaves": 9,
+        "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)",
+        "parameter_version": 2,
+        "path": "root/more/less",
+        "policy_guard": {
+          "accepted": true,
+          "blocks": 8,
+          "changed_state_fraction": 0.0,
+          "limit": 0.05,
+          "mean_tv": 0.0,
+          "samples": 848
+        },
+        "return_guard": {
+          "accepted": true,
+          "allowed_start_drops": [
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0,
+            5.0
+          ],
+          "baseline": [
+            {
+              "actions": {
+                "FIRE": 27,
+                "LEFT": 43,
+                "NOOP": 96,
+                "RIGHT": 14
+              },
+              "epsilon": 0.0,
+              "final_lives": 0,
+              "horizon": 1500,
+              "initial_lives": 5,
+              "life_losses": 5,
+              "no_ball_decisions": 22,
+              "physical_hash": "5ea855faeb2b2eaae225dec41907d789d96ca628791ab4e1dc33619c05dda3a8",
+              "raw_return": 2.0,
+              "return_scope": "snapshot_continuation",
+              "seconds": 0.3888000901788473,
+              "seed": 1104711,
+              "start": 0,
+              "steps": 180,
+              "terminated": true,
+              "trajectory_sha256": "9df9a54e6a97d4c52e1a6f2b6607d98747cb86bec1d23076b7bc290142533b09",
+              "truncated": false,
+              "unique_encoded_states": 26
+            },
+            {
+              "actions": {
+                "FIRE": 36,
+                "LEFT": 37,
+                "NOOP": 77,
+                "RIGHT": 17
+              },
+              "epsilon": 0.0,
+              "final_lives": 0,
+              "horizon": 1500,
+              "initial_lives": 5,
+              "life_losses": 5,
+              "no_ball_decisions": 25,
+              "physical_hash": "60becb5a07f48e7e9cb69ecead7046095a180f684c4ba1c26a795c9b734987ac",
+              "raw_return": 2.0,
+              "return_scope": "snapshot_continuation",
+              "seconds": 0.3478427049703896,
+              "seed": 1104712,
+              "start": 1,
+              "steps": 167,
+              "terminated": true,
+              "trajectory_sha256": "300dbf3fb489ee547b6be770e1c36ab7e3b0c9e7bd70083f6314e295f8a33ade",
+              "truncated": false,
+              "unique_encoded_states": 36
+            },
+            {
+              "actions": {
+                "FIRE": 79,
+                "LEFT": 70,
+                "NOOP": 87,
+                "RIGHT": 64
+              },
+              "epsilon": 0.0,
+              "final_lives": 0,
+              "horizon": 1500,
+              "initial_lives": 5,
+              "life_losses": 5,
+              "no_ball_decisions": 27,
+              "physical_hash": "c9b3f5fcf3b913d0db49acd79ea6c0a47e8ceb0314c7fdec630b9b77d75330ab",
+              "raw_return": 4.0,
+              "return_scope": "snapshot_continuation",
+              "seconds": 0.6245708290953189,
+              "seed": 1104713,
+              "start": 2,
+              "steps": 300,
+              "terminated": true,
+              "trajectory_sha256": "dffafaf391c3d97cfa719b37b8bb251af6f13e4965ad1203534b6c994d35f5f8",
+              "truncated": false,
+              "unique_encoded_states": 51
+            },
+            {
+              "actions": {
+                "FIRE": 23,
+                "LEFT": 37,
+                "NOOP": 82,
+                "RIGHT": 7
+              },
+              "epsilon": 0.0,
+              "final_lives": 0,
+              "horizon": 1500,
+              "initial_lives": 4,
+              "life_losses": 4,
+              "no_ball_decisions": 18,
+              "physical_hash": "503b76d2f0aa596b3b6a9d76dcf327338842a97715e150ca4f07a4e318114740",
+              "raw_return": 2.0,
+              "return_scope": "snapshot_continuation",
+              "seconds": 0.3101221970282495,
+              "seed": 1104714,
+              "start": 3,
+              "steps": 149,
+              "terminated": true,
+              "trajectory_sha256": "7193f8b4d5d8b5837818633e5905f70af24eedbf073c4c9f6d18bf46eb7c39c0",
+              "truncated": false,
+              "unique_encoded_states": 28
+            },
+            {
+              "actions": {
+                "FIRE": 5,
+                "LEFT": 3,
+                "NOOP": 14,
+                "RIGHT": 0
+              },
+              "epsilon": 0.0,
+              "final_lives": 0,
+              "horizon": 1500,
+              "initial_lives": 1,
+              "life_losses": 1,
+              "no_ball_decisions": 5,
+              "physical_hash": "56913fd24c88c7bfc5a6f128d51dc39388e4da943e62b4e6ff8d0df215bcbe08",
+              "raw_return": 0.0,
+              "return_scope": "snapshot_continuation",
+              "seconds": 0.04456030298024416,
+              "seed": 1104715,
+              "start": 4,
+              "steps": 22,
+              "terminated": true,
+              "trajectory_sha256": "2c5ceb025658dbc30f17209d3424b314847b804ac7614d701de448dc1887a9f4",
+              "truncated": false,
+              "unique_encoded_states": 7
+            },
+            {
+              "actions": {
+                "FIRE": 26,
+                "LEFT": 43,
+                "NOOP": 97,
+                "RIGHT": 14
+              },
+              "epsilon": 0.0,
+              "final_lives": 0,
+              "horizon": 1500,
+              "initial_lives": 5,
+              "life_losses": 5,
+              "no_ball_decisions": 22,
+              "physical_hash": "03d2968370704606e1c67bfdc21a367a10c4df9f1d5cc01603f8fa3f9f8af968",
+              "raw_return": 2.0,
+              "return_scope": "snapshot_continuation",
+              "seconds": 0.37765569100156426,
+              "seed": 1104716,
+              "start": 5,
+              "steps": 180,
+              "terminated": true,
+              "trajectory_sha256": "e36ee233758f3da8e25564d81b9a6fa27de9af79f900d70bb8a8c7afe3956e80",
+              "truncated": false,
+              "unique_encoded_states": 23
+            }
+          ],
+          "bootstrap_seed": [
+            1065711,
+            710603,
+            50000,
+            0
+          ],
+          "candidate": [
+            {
+              "actions": {
+                "FIRE": 27,
+                "LEFT": 43,
+                "NOOP": 96,
+                "RIGHT": 14
+              },
+              "epsilon": 0.0,
+              "final_lives": 0,
+              "horizon": 1500,
+              "initial_lives": 5,
+              "life_losses": 5,
+              "no_ball_decisions": 22,
+              "physical_hash": "5ea855faeb2b2eaae225dec41907d789d96ca628791ab4e1dc33619c05dda3a8",
+              "raw_return": 2.0,
+              "return_scope": "snapshot_continuation",
+              "seconds": 0.3667916930280626,
+              "seed": 1104711,
+              "start": 0,
+              "steps": 180,
+              "terminated": true,
+              "trajectory_sha256": "9df9a54e6a97d4c52e1a6f2b6607d98747cb86bec1d23076b7bc290142533b09",
+              "truncated": false,
+              "unique_encoded_states": 26
+            },
+            {
+              "actions": {
+                "FIRE": 36,
+                "LEFT": 37,
+                "NOOP": 77,
+                "RIGHT": 17
+              },
+              "epsilon": 0.0,
+              "final_lives": 0,
+              "horizon": 1500,
+              "initial_lives": 5,
+              "life_losses": 5,
+              "no_ball_decisions": 25,
+              "physical_hash": "60becb5a07f48e7e9cb69ecead7046095a180f684c4ba1c26a795c9b734987ac",
+              "raw_return": 2.0,
+              "return_scope": "snapshot_continuation",
+              "seconds": 0.3432082859799266,
+              "seed": 1104712,
+              "start": 1,
+              "steps": 167,
+              "terminated": true,
+              "trajectory_sha256": "300dbf3fb489ee547b6be770e1c36ab7e3b0c9e7bd70083f6314e295f8a33ade",
+              "truncated": false,
+              "unique_encoded_states": 36
+            },
+            {
+              "actions": {
+                "FIRE": 79,
+                "LEFT": 70,
+                "NOOP": 87,
+                "RIGHT": 64
+              },
+              "epsilon": 0.0,
+              "final_lives": 0,
+              "horizon": 1500,
+              "initial_lives": 5,
+              "life_losses": 5,
+              "no_ball_decisions": 27,
+              "physical_hash": "c9b3f5fcf3b913d0db49acd79ea6c0a47e8ceb0314c7fdec630b9b77d75330ab",
+              "raw_return": 4.0,
+              "return_scope": "snapshot_continuation",
+              "seconds": 0.6264207048807293,
+              "seed": 1104713,
+              "start": 2,
+              "steps": 300,
+              "terminated": true,
+              "trajectory_sha256": "dffafaf391c3d97cfa719b37b8bb251af6f13e4965ad1203534b6c994d35f5f8",
+              "truncated": false,
+              "unique_encoded_states": 51
+            },
+            {
+              "actions": {
+                "FIRE": 23,
+                "LEFT": 37,
+                "NOOP": 82,
+                "RIGHT": 7
+              },
+              "epsilon": 0.0,
+              "final_lives": 0,
+              "horizon": 1500,
+              "initial_lives": 4,
+              "life_losses": 4,
+              "no_ball_decisions": 18,
+              "physical_hash": "503b76d2f0aa596b3b6a9d76dcf327338842a97715e150ca4f07a4e318114740",
+              "raw_return": 2.0,
+              "return_scope": "snapshot_continuation",
+              "seconds": 0.3091276250779629,
+              "seed": 1104714,
+              "start": 3,
+              "steps": 149,
+              "terminated": true,
+              "trajectory_sha256": "7193f8b4d5d8b5837818633e5905f70af24eedbf073c4c9f6d18bf46eb7c39c0",
+              "truncated": false,
+              "unique_encoded_states": 28
+            },
+            {
+              "actions": {
+                "FIRE": 5,
+                "LEFT": 3,
+                "NOOP": 14,
+                "RIGHT": 0
+              },
+              "epsilon": 0.0,
+              "final_lives": 0,
+              "horizon": 1500,
+              "initial_lives": 1,
+              "life_losses": 1,
+              "no_ball_decisions": 5,
+              "physical_hash": "56913fd24c88c7bfc5a6f128d51dc39388e4da943e62b4e6ff8d0df215bcbe08",
+              "raw_return": 0.0,
+              "return_scope": "snapshot_continuation",
+              "seconds": 0.04456070391461253,
+              "seed": 1104715,
+              "start": 4,
+              "steps": 22,
+              "terminated": true,
+              "trajectory_sha256": "2c5ceb025658dbc30f17209d3424b314847b804ac7614d701de448dc1887a9f4",
+              "truncated": false,
+              "unique_encoded_states": 7
+            },
+            {
+              "actions": {
+                "FIRE": 26,
+                "LEFT": 43,
+                "NOOP": 97,
+                "RIGHT": 14
+              },
+              "epsilon": 0.0,
+              "final_lives": 0,
+              "horizon": 1500,
+              "initial_lives": 5,
+              "life_losses": 5,
+              "no_ball_decisions": 22,
+              "physical_hash": "03d2968370704606e1c67bfdc21a367a10c4df9f1d5cc01603f8fa3f9f8af968",
+              "raw_return": 2.0,
+              "return_scope": "snapshot_continuation",
+              "seconds": 0.3618765859864652,
+              "seed": 1104716,
+              "start": 5,
+              "steps": 180,
+              "terminated": true,
+              "trajectory_sha256": "e36ee233758f3da8e25564d81b9a6fa27de9af79f900d70bb8a8c7afe3956e80",
+              "truncated": false,
+              "unique_encoded_states": 23
+            }
+          ],
+          "context": {
+            "action": "LEFT",
+            "kind": "prune",
+            "path": "root/more/less"
+          },
+          "differences": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "evaluation_bank_used": false,
+          "lower_bound": 0.0,
+          "margin": 1.0,
+          "mean_difference": 0.0,
+          "scope": "exploratory_paired_start_gate_not_a_return_guarantee",
+          "starts": 6,
+          "training_updated": false
+        },
+        "structure_version": 4,
+        "train_samples": 339
+      }
+    ],
+    "validation_samples": 848,
+    "validation_used_for_td": false
+  },
+  "schema": "pong_analysis_unit_v2",
+  "sha256": "40d7e9273bd7cb175b6ffa488c45040b963d4362ecf3168fc4e2b545a9b28118"
+}

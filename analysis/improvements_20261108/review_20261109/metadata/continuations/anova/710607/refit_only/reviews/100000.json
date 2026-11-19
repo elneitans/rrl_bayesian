@@ -1,0 +1,115 @@
+{
+  "payload": {
+    "evaluation_bank_used_for_gate": false,
+    "holdout": {
+      "path": "probe_100000-6c8aca50f11c6183f3abe435c1d990f22341dcd9d7043db0b03eab6d4fc9b738.pkl",
+      "sha256": "6c8aca50f11c6183f3abe435c1d990f22341dcd9d7043db0b03eab6d4fc9b738"
+    },
+    "identity": {
+      "campaign": "5c68a97ac3ddd52553a705703ef4faf12d014108b41ca16e7b3b84d7eff805b4",
+      "criterion": "anova",
+      "mode": "refit_only",
+      "parent": {
+        "path": "checkpoints/500000-b941fbf4b1167a946ba59378f88c9424b5181a5dc6974d70ef1fa4143c8a2e5c.pkl",
+        "sha256": "b941fbf4b1167a946ba59378f88c9424b5181a5dc6974d70ef1fa4143c8a2e5c"
+      },
+      "parent_counter": 500000,
+      "seed": 710607
+    },
+    "point": 100000,
+    "reference": {
+      "path": "reference_100000-27a2ad73dab8f94b5e00fdf172b06c551d23e87e17d2fc35fb3586d8848e3e66.pkl",
+      "sha256": "27a2ad73dab8f94b5e00fdf172b06c551d23e87e17d2fc35fb3586d8848e3e66"
+    },
+    "return_bank": {
+      "path": "return_bank_100000-f7116450864248c6128587add13fc34c1a5171e270bb0c432df0c4d44c20aa40.pkl",
+      "sha256": "f7116450864248c6128587add13fc34c1a5171e270bb0c432df0c4d44c20aa40"
+    },
+    "reviews": [
+      {
+        "action": "FIRE",
+        "bounded_q": false,
+        "candidate_mse": 0.09648505889130955,
+        "counter": 600000,
+        "current_mse": 0.0957154223700733,
+        "gate": {
+          "accepted": false,
+          "blocks": 8,
+          "mean_difference": 0.0008088759666475084,
+          "reason": "loss_gate",
+          "samples": 251,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": 0.0025,
+          "upper_bound": 0.002551102591727077
+        },
+        "kind": "refit_review",
+        "loss_gate": {
+          "accepted": false,
+          "blocks": 8,
+          "mean_difference": 0.0008088759666475084,
+          "reason": "loss_gate",
+          "samples": 251,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": 0.0025,
+          "upper_bound": 0.002551102591727077
+        },
+        "new_leaves": 64,
+        "new_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)",
+        "node": 79,
+        "old_leaves": 64,
+        "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)",
+        "path": "root",
+        "train_samples": 1233
+      },
+      {
+        "action": "RIGHT",
+        "bounded_q": false,
+        "candidate_mse": 0.06314966699076621,
+        "counter": 600000,
+        "current_mse": 0.06340361739472727,
+        "gate": {
+          "accepted": true,
+          "blocks": 8,
+          "mean_difference": -0.0001964569984569301,
+          "reason": "loss_gate",
+          "samples": 258,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": 0.0025,
+          "upper_bound": 0.00010219717614510006
+        },
+        "kind": "refit_review",
+        "loss_gate": {
+          "accepted": true,
+          "blocks": 8,
+          "mean_difference": -0.0001964569984569301,
+          "reason": "loss_gate",
+          "samples": 258,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": 0.0025,
+          "upper_bound": 0.00010219717614510006
+        },
+        "new_leaves": 57,
+        "new_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+        "node": 169,
+        "old_leaves": 57,
+        "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+        "parameter_version": 4,
+        "path": "root",
+        "policy_guard": {
+          "accepted": true,
+          "blocks": 8,
+          "changed_state_fraction": 0.0,
+          "limit": 0.05,
+          "mean_tv": 0.0,
+          "samples": 959
+        },
+        "structure_version": 4,
+        "train_samples": 2180
+      }
+    ],
+    "validation_samples": 959,
+    "validation_used_for_td": false
+  },
+  "schema": "pong_analysis_unit_v2",
+  "sha256": "6f8a544fee9ff81a3622607578604771213bda0114c3f8b92343fae8d3460e55"
+}
