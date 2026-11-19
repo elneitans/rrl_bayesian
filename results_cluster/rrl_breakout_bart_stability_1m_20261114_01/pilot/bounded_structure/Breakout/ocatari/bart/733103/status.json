@@ -1,0 +1,442 @@
+{
+  "payload": {
+    "binding": {
+      "campaign": "2bddac57d8090b28afd922b7bcf18ba481550dc832509c79d55b422d043ddd97",
+      "cell": "5410a8a882bbf493a9d91fde076f851c6ef682040fff4588b4bef311d50921ca",
+      "learner": "bart",
+      "runtime": {
+        "ale-py": "0.10.2",
+        "gymnasium": "1.1.1",
+        "machine": "x86_64",
+        "numeric_threads": {
+          "MKL_NUM_THREADS": "1",
+          "NUMEXPR_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "numpy": "1.26.4",
+        "ocatari": "2.2.1",
+        "platform": "linux",
+        "python": "3.11.7",
+        "scipy": "1.12.0"
+      }
+    },
+    "checkpoint": {
+      "path": "checkpoints/1000000-78040956e52eb2e438901d00b826fc5e633c6487496f9e808ea531b55db85211.pkl",
+      "sha256": "78040956e52eb2e438901d00b826fc5e633c6487496f9e808ea531b55db85211"
+    },
+    "counter": 1000000,
+    "log_head": {
+      "end": 1000000,
+      "path": "logs/1000000-49ff0eecc1fd4514838e456d5679aee55fa27d93c4a906ffa1c8e587ee011a26.jsonl",
+      "sha256": "49ff0eecc1fd4514838e456d5679aee55fa27d93c4a906ffa1c8e587ee011a26"
+    },
+    "metrics": {
+      "completed_games": 3796,
+      "ended_episodes": 3796,
+      "epsilon": 0.1,
+      "interactions": 1000000,
+      "learner": {
+        "cache_bytes": 0,
+        "complexity": {
+          "FIRE": {
+            "diagnostics": {
+              "burn_in": 50,
+              "distance_rejections": 37,
+              "elapsed_seconds": 5.710205492097884,
+              "m": 20,
+              "max_cache_error": null,
+              "max_structure_distance_per_tree": [
+                2,
+                1,
+                1,
+                2,
+                1,
+                1,
+                1,
+                2,
+                1,
+                0,
+                1,
+                2,
+                1,
+                2,
+                1,
+                1,
+                1,
+                2,
+                2,
+                1
+              ],
+              "moves": {
+                "change": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                },
+                "grow": {
+                  "acceptance_given_possible": 0.0922279792746114,
+                  "accepted": 89,
+                  "impossible": 37,
+                  "rejected": 876,
+                  "selected": 1002
+                },
+                "prune": {
+                  "acceptance_given_possible": 0.09367945823927765,
+                  "accepted": 83,
+                  "impossible": 112,
+                  "rejected": 803,
+                  "selected": 998
+                },
+                "swap": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                }
+              },
+              "reset_trees": 0,
+              "retained": 50,
+              "reused_trees": 20,
+              "structure_limit": 2,
+              "support_repairs_per_tree": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sweeps": 100,
+              "targets_outside_scale": 128
+            },
+            "draws": 50,
+            "leaves_last_draw": 45,
+            "max_depth_last_draw": 2,
+            "trees": 20
+          },
+          "LEFT": {
+            "diagnostics": {
+              "burn_in": 50,
+              "distance_rejections": 182,
+              "elapsed_seconds": 5.025577104650438,
+              "m": 20,
+              "max_cache_error": null,
+              "max_structure_distance_per_tree": [
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                0,
+                1,
+                2,
+                1,
+                1,
+                2,
+                2,
+                2,
+                1,
+                2,
+                2,
+                1,
+                2,
+                1
+              ],
+              "moves": {
+                "change": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                },
+                "grow": {
+                  "acceptance_given_possible": 0.12702366127023662,
+                  "accepted": 102,
+                  "impossible": 182,
+                  "rejected": 701,
+                  "selected": 985
+                },
+                "prune": {
+                  "acceptance_given_possible": 0.11063372717508056,
+                  "accepted": 103,
+                  "impossible": 84,
+                  "rejected": 828,
+                  "selected": 1015
+                },
+                "swap": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                }
+              },
+              "reset_trees": 0,
+              "retained": 50,
+              "reused_trees": 20,
+              "structure_limit": 2,
+              "support_repairs_per_tree": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sweeps": 100,
+              "targets_outside_scale": 128
+            },
+            "draws": 50,
+            "leaves_last_draw": 42,
+            "max_depth_last_draw": 3,
+            "trees": 20
+          },
+          "NOOP": {
+            "diagnostics": {
+              "burn_in": 50,
+              "distance_rejections": 197,
+              "elapsed_seconds": 5.376685168128461,
+              "m": 20,
+              "max_cache_error": null,
+              "max_structure_distance_per_tree": [
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+              ],
+              "moves": {
+                "change": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                },
+                "grow": {
+                  "acceptance_given_possible": 0.30292397660818715,
+                  "accepted": 259,
+                  "impossible": 168,
+                  "rejected": 596,
+                  "selected": 1023
+                },
+                "prune": {
+                  "acceptance_given_possible": 0.3164251207729469,
+                  "accepted": 262,
+                  "impossible": 149,
+                  "rejected": 566,
+                  "selected": 977
+                },
+                "swap": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                }
+              },
+              "reset_trees": 0,
+              "retained": 50,
+              "reused_trees": 20,
+              "structure_limit": 2,
+              "support_repairs_per_tree": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "sweeps": 100,
+              "targets_outside_scale": 127
+            },
+            "draws": 50,
+            "leaves_last_draw": 39,
+            "max_depth_last_draw": 2,
+            "trees": 20
+          },
+          "RIGHT": {
+            "diagnostics": {
+              "burn_in": 50,
+              "distance_rejections": 162,
+              "elapsed_seconds": 4.763559975195676,
+              "m": 20,
+              "max_cache_error": null,
+              "max_structure_distance_per_tree": [
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+              ],
+              "moves": {
+                "change": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                },
+                "grow": {
+                  "acceptance_given_possible": 0.3168674698795181,
+                  "accepted": 263,
+                  "impossible": 162,
+                  "rejected": 567,
+                  "selected": 992
+                },
+                "prune": {
+                  "acceptance_given_possible": 0.30313588850174217,
+                  "accepted": 261,
+                  "impossible": 147,
+                  "rejected": 600,
+                  "selected": 1008
+                },
+                "swap": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                }
+              },
+              "reset_trees": 0,
+              "retained": 50,
+              "reused_trees": 20,
+              "structure_limit": 2,
+              "support_repairs_per_tree": [
+                0,
+                1,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0
+              ],
+              "sweeps": 100,
+              "targets_outside_scale": 127
+            },
+            "draws": 50,
+            "leaves_last_draw": 38,
+            "max_depth_last_draw": 2,
+            "trees": 20
+          }
+        },
+        "fits": 977,
+        "kind": "bart",
+        "phase_seconds": {
+          "encoding": 1170.9146936084144,
+          "fit": 20570.538858761545,
+          "prediction": 3187.291375377681,
+          "selection_targets": 388.94397663045675
+        },
+        "replay_size": 50000
+      },
+      "phase_seconds": {
+        "checkpoint_logs": 59.58579933689907,
+        "emulation_extraction": 1959.3911875267513,
+        "fit": 20570.538858761545,
+        "policy_collection_td": 80.0572897051461,
+        "prediction": 3187.291375377681,
+        "relations_encoding": 1238.7526354081929,
+        "selection_targets": 388.94397663045675
+      },
+      "relations": 11,
+      "truncated_episodes": 0
+    },
+    "reason": null,
+    "state": "completed"
+  },
+  "schema": "pong_analysis_unit_v2",
+  "sha256": "6d83562fa65fd250b55f0a6d0465fedaad612e85daefb10e16fb8da06d04f0d9"
+}

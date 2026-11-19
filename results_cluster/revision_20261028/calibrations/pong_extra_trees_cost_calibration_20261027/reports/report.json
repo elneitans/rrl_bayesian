@@ -1,0 +1,851 @@
+{
+  "payload": {
+    "accounting": {
+      "evaluation_budget_seconds_per_episode_sum": 238.52505035384092,
+      "evaluation_worker_seconds_known_sum": 263.76886122499127,
+      "training_seconds_per_unit_sum": 168.94607863400597
+    },
+    "campaign": "9e3d058388c09dd188ccb7987455ce8b83bf6152f0fd88ef9f54b6863e0ce290",
+    "cells": [
+      {
+        "cell": "ocatari/extra_trees/501601",
+        "comparison_state": "completed",
+        "counter": 20480,
+        "evaluation_budget_seconds": 238.52505035384092,
+        "evaluation_seconds": 263.76886122499127,
+        "evaluations": [
+          {
+            "checkpoint": {
+              "path": "checkpoints/20480-6b1d7fcc92192465b163035b4711f73cb7536f0ab832bd9bd6dd67fa9d1ce780.pkl",
+              "sha256": "6b1d7fcc92192465b163035b4711f73cb7536f0ab832bd9bd6dd67fa9d1ce780"
+            },
+            "counter": 20480,
+            "floor_result": true,
+            "group": "final_development",
+            "report": {
+              "completed_games": 10,
+              "episodes": [
+                {
+                  "actions": {
+                    "FIRE": 31,
+                    "LEFT": 79,
+                    "LEFTFIRE": 7,
+                    "NOOP": 346,
+                    "RIGHT": 280,
+                    "RIGHTFIRE": 21
+                  },
+                  "points_lost": 21.0,
+                  "points_won": 0.0,
+                  "raw_return": -21.0,
+                  "reason": null,
+                  "return": -21.0,
+                  "return_scope": "complete_game",
+                  "seconds": 17.351103988010436,
+                  "seed": 501901,
+                  "status": "completed",
+                  "steps": 764,
+                  "terminated": true,
+                  "truncated": false,
+                  "unique_encoded_states": 34
+                },
+                {
+                  "actions": {
+                    "FIRE": 31,
+                    "LEFT": 79,
+                    "LEFTFIRE": 7,
+                    "NOOP": 346,
+                    "RIGHT": 280,
+                    "RIGHTFIRE": 21
+                  },
+                  "points_lost": 21.0,
+                  "points_won": 0.0,
+                  "raw_return": -21.0,
+                  "reason": null,
+                  "return": -21.0,
+                  "return_scope": "complete_game",
+                  "seconds": 17.734806530061178,
+                  "seed": 501902,
+                  "status": "completed",
+                  "steps": 764,
+                  "terminated": true,
+                  "truncated": false,
+                  "unique_encoded_states": 34
+                },
+                {
+                  "actions": {
+                    "FIRE": 31,
+                    "LEFT": 79,
+                    "LEFTFIRE": 7,
+                    "NOOP": 346,
+                    "RIGHT": 280,
+                    "RIGHTFIRE": 21
+                  },
+                  "points_lost": 21.0,
+                  "points_won": 0.0,
+                  "raw_return": -21.0,
+                  "reason": null,
+                  "return": -21.0,
+                  "return_scope": "complete_game",
+                  "seconds": 18.24791026802268,
+                  "seed": 501903,
+                  "status": "completed",
+                  "steps": 764,
+                  "terminated": true,
+                  "truncated": false,
+                  "unique_encoded_states": 34
+                },
+                {
+                  "actions": {
+                    "FIRE": 31,
+                    "LEFT": 79,
+                    "LEFTFIRE": 7,
+                    "NOOP": 346,
+                    "RIGHT": 280,
+                    "RIGHTFIRE": 21
+                  },
+                  "points_lost": 21.0,
+                  "points_won": 0.0,
+                  "raw_return": -21.0,
+                  "reason": null,
+                  "return": -21.0,
+                  "return_scope": "complete_game",
+                  "seconds": 18.69737909093965,
+                  "seed": 501904,
+                  "status": "completed",
+                  "steps": 764,
+                  "terminated": true,
+                  "truncated": false,
+                  "unique_encoded_states": 34
+                },
+                {
+                  "actions": {
+                    "FIRE": 31,
+                    "LEFT": 79,
+                    "LEFTFIRE": 7,
+                    "NOOP": 346,
+                    "RIGHT": 280,
+                    "RIGHTFIRE": 21
+                  },
+                  "points_lost": 21.0,
+                  "points_won": 0.0,
+                  "raw_return": -21.0,
+                  "reason": null,
+                  "return": -21.0,
+                  "return_scope": "complete_game",
+                  "seconds": 18.560469643911347,
+                  "seed": 501905,
+                  "status": "completed",
+                  "steps": 764,
+                  "terminated": true,
+                  "truncated": false,
+                  "unique_encoded_states": 34
+                },
+                {
+                  "actions": {
+                    "FIRE": 31,
+                    "LEFT": 79,
+                    "LEFTFIRE": 7,
+                    "NOOP": 346,
+                    "RIGHT": 280,
+                    "RIGHTFIRE": 21
+                  },
+                  "points_lost": 21.0,
+                  "points_won": 0.0,
+                  "raw_return": -21.0,
+                  "reason": null,
+                  "return": -21.0,
+                  "return_scope": "complete_game",
+                  "seconds": 17.598947091959417,
+                  "seed": 501906,
+                  "status": "completed",
+                  "steps": 764,
+                  "terminated": true,
+                  "truncated": false,
+                  "unique_encoded_states": 34
+                },
+                {
+                  "actions": {
+                    "FIRE": 31,
+                    "LEFT": 79,
+                    "LEFTFIRE": 7,
+                    "NOOP": 346,
+                    "RIGHT": 280,
+                    "RIGHTFIRE": 21
+                  },
+                  "points_lost": 21.0,
+                  "points_won": 0.0,
+                  "raw_return": -21.0,
+                  "reason": null,
+                  "return": -21.0,
+                  "return_scope": "complete_game",
+                  "seconds": 19.87807889096439,
+                  "seed": 501907,
+                  "status": "completed",
+                  "steps": 764,
+                  "terminated": true,
+                  "truncated": false,
+                  "unique_encoded_states": 34
+                },
+                {
+                  "actions": {
+                    "FIRE": 31,
+                    "LEFT": 79,
+                    "LEFTFIRE": 7,
+                    "NOOP": 346,
+                    "RIGHT": 280,
+                    "RIGHTFIRE": 21
+                  },
+                  "points_lost": 21.0,
+                  "points_won": 0.0,
+                  "raw_return": -21.0,
+                  "reason": null,
+                  "return": -21.0,
+                  "return_scope": "complete_game",
+                  "seconds": 19.80995557096321,
+                  "seed": 501908,
+                  "status": "completed",
+                  "steps": 764,
+                  "terminated": true,
+                  "truncated": false,
+                  "unique_encoded_states": 34
+                },
+                {
+                  "actions": {
+                    "FIRE": 31,
+                    "LEFT": 79,
+                    "LEFTFIRE": 7,
+                    "NOOP": 346,
+                    "RIGHT": 280,
+                    "RIGHTFIRE": 21
+                  },
+                  "points_lost": 21.0,
+                  "points_won": 0.0,
+                  "raw_return": -21.0,
+                  "reason": null,
+                  "return": -21.0,
+                  "return_scope": "complete_game",
+                  "seconds": 18.923032585065812,
+                  "seed": 501909,
+                  "status": "completed",
+                  "steps": 764,
+                  "terminated": true,
+                  "truncated": false,
+                  "unique_encoded_states": 34
+                },
+                {
+                  "actions": {
+                    "FIRE": 31,
+                    "LEFT": 79,
+                    "LEFTFIRE": 7,
+                    "NOOP": 346,
+                    "RIGHT": 280,
+                    "RIGHTFIRE": 21
+                  },
+                  "points_lost": 21.0,
+                  "points_won": 0.0,
+                  "raw_return": -21.0,
+                  "reason": null,
+                  "return": -21.0,
+                  "return_scope": "complete_game",
+                  "seconds": 19.28608530794736,
+                  "seed": 501910,
+                  "status": "completed",
+                  "steps": 764,
+                  "terminated": true,
+                  "truncated": false,
+                  "unique_encoded_states": 34
+                }
+              ],
+              "horizon": 27000,
+              "iqr_raw_return": 0.0,
+              "mean_completed_game_raw_return": -21.0,
+              "mean_raw_return": -21.0,
+              "median_raw_return": -21.0,
+              "schema": "pong_evaluation_v2",
+              "std_raw_return": 0.0,
+              "truncation_fraction": 0.0
+            },
+            "seconds": 186.08776896784548,
+            "training_active_seconds": 157.3324285534909
+          },
+          {
+            "checkpoint": {
+              "path": "checkpoints/0-d627fc15144570da7edc674bd9fd2ab6e8a038df07d5a2f22816796a3c26e7e6.pkl",
+              "sha256": "d627fc15144570da7edc674bd9fd2ab6e8a038df07d5a2f22816796a3c26e7e6"
+            },
+            "counter": 0,
+            "floor_result": true,
+            "group": "intermediate",
+            "report": {
+              "completed_games": 2,
+              "episodes": [
+                {
+                  "actions": {
+                    "FIRE": 114,
+                    "LEFT": 137,
+                    "LEFTFIRE": 138,
+                    "NOOP": 130,
+                    "RIGHT": 135,
+                    "RIGHTFIRE": 150
+                  },
+                  "points_lost": 21.0,
+                  "points_won": 0.0,
+                  "raw_return": -21.0,
+                  "reason": null,
+                  "return": -21.0,
+                  "return_scope": "complete_game",
+                  "seconds": 7.768892057007179,
+                  "seed": 501801,
+                  "status": "completed",
+                  "steps": 804,
+                  "terminated": true,
+                  "truncated": false,
+                  "unique_encoded_states": 81
+                },
+                {
+                  "actions": {
+                    "FIRE": 131,
+                    "LEFT": 140,
+                    "LEFTFIRE": 112,
+                    "NOOP": 126,
+                    "RIGHT": 126,
+                    "RIGHTFIRE": 129
+                  },
+                  "points_lost": 21.0,
+                  "points_won": 0.0,
+                  "raw_return": -21.0,
+                  "reason": null,
+                  "return": -21.0,
+                  "return_scope": "complete_game",
+                  "seconds": 6.897482782951556,
+                  "seed": 501802,
+                  "status": "completed",
+                  "steps": 764,
+                  "terminated": true,
+                  "truncated": false,
+                  "unique_encoded_states": 70
+                }
+              ],
+              "horizon": 27000,
+              "iqr_raw_return": 0.0,
+              "mean_completed_game_raw_return": -21.0,
+              "mean_raw_return": -21.0,
+              "median_raw_return": -21.0,
+              "schema": "pong_evaluation_v2",
+              "std_raw_return": 0.0,
+              "truncation_fraction": 0.0
+            },
+            "seconds": 14.666374839958735,
+            "training_active_seconds": 0.0
+          },
+          {
+            "checkpoint": {
+              "path": "checkpoints/20480-6b1d7fcc92192465b163035b4711f73cb7536f0ab832bd9bd6dd67fa9d1ce780.pkl",
+              "sha256": "6b1d7fcc92192465b163035b4711f73cb7536f0ab832bd9bd6dd67fa9d1ce780"
+            },
+            "counter": 20480,
+            "floor_result": true,
+            "group": "intermediate",
+            "report": {
+              "completed_games": 2,
+              "episodes": [
+                {
+                  "actions": {
+                    "FIRE": 31,
+                    "LEFT": 79,
+                    "LEFTFIRE": 7,
+                    "NOOP": 346,
+                    "RIGHT": 280,
+                    "RIGHTFIRE": 21
+                  },
+                  "points_lost": 21.0,
+                  "points_won": 0.0,
+                  "raw_return": -21.0,
+                  "reason": null,
+                  "return": -21.0,
+                  "return_scope": "complete_game",
+                  "seconds": 17.77149815193843,
+                  "seed": 501801,
+                  "status": "completed",
+                  "steps": 764,
+                  "terminated": true,
+                  "truncated": false,
+                  "unique_encoded_states": 34
+                },
+                {
+                  "actions": {
+                    "FIRE": 31,
+                    "LEFT": 79,
+                    "LEFTFIRE": 7,
+                    "NOOP": 346,
+                    "RIGHT": 280,
+                    "RIGHTFIRE": 21
+                  },
+                  "points_lost": 21.0,
+                  "points_won": 0.0,
+                  "raw_return": -21.0,
+                  "reason": null,
+                  "return": -21.0,
+                  "return_scope": "complete_game",
+                  "seconds": 17.190593473962508,
+                  "seed": 501802,
+                  "status": "completed",
+                  "steps": 764,
+                  "terminated": true,
+                  "truncated": false,
+                  "unique_encoded_states": 34
+                }
+              ],
+              "horizon": 27000,
+              "iqr_raw_return": 0.0,
+              "mean_completed_game_raw_return": -21.0,
+              "mean_raw_return": -21.0,
+              "median_raw_return": -21.0,
+              "schema": "pong_evaluation_v2",
+              "std_raw_return": 0.0,
+              "truncation_fraction": 0.0
+            },
+            "seconds": 34.96209162590094,
+            "training_active_seconds": 157.3324285534909
+          }
+        ],
+        "game": "Pong",
+        "inventory": {
+          "artifacts": [
+            {
+              "bytes": 25207,
+              "confirmed": true,
+              "path": "checkpoints/0-d627fc15144570da7edc674bd9fd2ab6e8a038df07d5a2f22816796a3c26e7e6.pkl",
+              "protected": true,
+              "removable": false
+            },
+            {
+              "bytes": 599030,
+              "confirmed": true,
+              "path": "checkpoints/1024-64a56ff10b22f2918da9475f08e42502499ea04432f3f1154c2716d38b7d7756.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 4062169,
+              "confirmed": true,
+              "path": "checkpoints/10240-93b48ffa18b3712659eefb1981fda3a0f6052ffa27ef3f1c8bcae44e2536da00.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 4243080,
+              "confirmed": true,
+              "path": "checkpoints/10752-7eda41b722819f77e789c33a078d24584ad9d10d2f1821c74086009f545eb9d0.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 4423701,
+              "confirmed": true,
+              "path": "checkpoints/11264-1ea515bf89483df07227ac4929464cf87f6f44d686ed088d20c6a585aad2a078.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 4618765,
+              "confirmed": true,
+              "path": "checkpoints/11776-6a264cecbe0f9901b9bb3c8b80dc3e52da1f7441e036ae1d796c43f5162511b3.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 4786921,
+              "confirmed": true,
+              "path": "checkpoints/12288-03d7d85f35c11d5bd6ee43b46cb7ff742e8ec670648829f6a9a57dfd87e86284.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 4953436,
+              "confirmed": true,
+              "path": "checkpoints/12800-f411fa2da8befc2e6e631ccd230758b85483ce5f7968338b61cfad783c535fac.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 5164944,
+              "confirmed": true,
+              "path": "checkpoints/13312-836d6e2873ff4ddc7527b2cda4f29054f159b833303a204e8265ad723b1c063d.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 5369265,
+              "confirmed": true,
+              "path": "checkpoints/13824-1450fd5a434388a49d318b4b684553c9679a142fa769f0cb1a2b311408c520d2.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 5511826,
+              "confirmed": true,
+              "path": "checkpoints/14336-602afb55c37b21b98bbc6c6b9fb141fe514641bc9f53c814daf482ffd2620fd0.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 5671577,
+              "confirmed": true,
+              "path": "checkpoints/14848-9f11016dfcbc2dac616009b63ee5faf51eff91d9466ba5955c437a85cf4ccd66.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 788792,
+              "confirmed": true,
+              "path": "checkpoints/1536-177aade10897e4f2710dfb009bb05901a904bf53cf15c9f06013a7c51b1d1f57.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 5869553,
+              "confirmed": true,
+              "path": "checkpoints/15360-997b8b6a82ffa6eed9e623448f6c17d1646ade4a9379934cb31ba70c82ba6b79.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 6046618,
+              "confirmed": true,
+              "path": "checkpoints/15872-66dd48dcf5c1cd1cad41b934f654614059a84d0e7f670d1b99484ced5dee7f4d.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 6212837,
+              "confirmed": true,
+              "path": "checkpoints/16384-80b69a236181ad850f7b5423106c4c4f31b88e19d6fabe3b2c663be0db0e1a21.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 6388028,
+              "confirmed": true,
+              "path": "checkpoints/16896-acbbf5ed0c0a23a2f1a7624ee509077107e62a86a72df264cc698be391f8ef08.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 6563043,
+              "confirmed": true,
+              "path": "checkpoints/17408-b3bfa342f1d3cdb342fad847b5099294125fe923388978312379edcd52aac7cf.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 6737520,
+              "confirmed": true,
+              "path": "checkpoints/17920-e0d172c7ff45c7c6b20af7a0a382c47d71655c7a0040bdf7a5796fb8f5e9ca2f.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 6922520,
+              "confirmed": true,
+              "path": "checkpoints/18432-3bf548fdaf1d22d868e8267febaaaff7246b35b245b1eb2301952ec77093c041.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 7112738,
+              "confirmed": true,
+              "path": "checkpoints/18944-8f24565a251c936176b42078cb4883548af0927b0a27ea150ad980ec8c7ea025.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 7307654,
+              "confirmed": true,
+              "path": "checkpoints/19456-3a307571d9394c9ce1b3ec7e7e0a2a07e8372b344bdd5abd5db3b03a90819606.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 7474105,
+              "confirmed": true,
+              "path": "checkpoints/19968-92293085cc020756e459bf41a2bd4f4ba040d9dd1feaba28962537c082a1ebfb.pkl",
+              "protected": true,
+              "removable": false
+            },
+            {
+              "bytes": 1004408,
+              "confirmed": true,
+              "path": "checkpoints/2048-3428b49713700e98023d085a7bbbf341f1c0bf1b61cf3779471e5adc934918c3.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 7653928,
+              "confirmed": true,
+              "path": "checkpoints/20480-6b1d7fcc92192465b163035b4711f73cb7536f0ab832bd9bd6dd67fa9d1ce780.pkl",
+              "protected": true,
+              "removable": false
+            },
+            {
+              "bytes": 1228728,
+              "confirmed": true,
+              "path": "checkpoints/2560-b41f0831bab4ef3cedb3df1305e6c911d35564e0baee077411574170a64910dd.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 1461250,
+              "confirmed": true,
+              "path": "checkpoints/3072-c77efe69f9e7b927705bd45b0abd65ec2971a930566c3e944fca3bd5e788729b.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 1697095,
+              "confirmed": true,
+              "path": "checkpoints/3584-bc1c43441333c465b998aadcad15587580fdd80d7dab05b51b65d50ddcc5fcf0.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 1900856,
+              "confirmed": true,
+              "path": "checkpoints/4096-fa59fcae19bd4718c9c2ff2356f85fbe6b66a361e5504c5477a18e18a472fbf6.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 2110798,
+              "confirmed": true,
+              "path": "checkpoints/4608-eedb94c69d62a18d24ffa3dc3e2153b4e60dc737ac17c3549f8d4d7adc4163ff.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 319897,
+              "confirmed": true,
+              "path": "checkpoints/512-f473e5073d31163c814ecb9375f926974c5661b1c7a12a88c89669d9cad64c07.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 2274195,
+              "confirmed": true,
+              "path": "checkpoints/5120-5d212b520913e7501d01bb59e8f2a82c54df0162a347f8eeee442684e6cfaeca.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 2434716,
+              "confirmed": true,
+              "path": "checkpoints/5632-7c6fb0e8880aa1b8411dde7800535c03bfa84df0bfd6fffaf60d4a300a0d451e.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 2646809,
+              "confirmed": true,
+              "path": "checkpoints/6144-8ff723a7e47ac5d60fa713343b2d3b01d8159d9a297a1723dc1251c0f4d9868f.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 2831038,
+              "confirmed": true,
+              "path": "checkpoints/6656-0c58fba7c955b2ddb5370d6a0c6143ef33c56a21ff533c1e294d5fdbe6f4e49f.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 3003533,
+              "confirmed": true,
+              "path": "checkpoints/7168-3658a3bfa3f0ed70a53d8d292f84954c3a9aae8471d6ffa49ca9d47d586214bc.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 3167103,
+              "confirmed": true,
+              "path": "checkpoints/7680-59ce8df383c33ddd6324943f992f03f8c8602342d07153434a18dda15eb51440.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 3335158,
+              "confirmed": true,
+              "path": "checkpoints/8192-7f666f7bcaf35c45c693ba91e2011b4f46b214a236e9bf59cbf83cda4c37c924.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 3516714,
+              "confirmed": true,
+              "path": "checkpoints/8704-c5f28cb87e22574a68df4904bbe086ee3838583519d2e2e1656aba49a868560d.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 3716227,
+              "confirmed": true,
+              "path": "checkpoints/9216-033a1abba461bf0842276d41328dc775a04a09dac61c9003b0fafb5d90a570b3.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 3898390,
+              "confirmed": true,
+              "path": "checkpoints/9728-2e80b0346bf450f53a6da8a5a6dc41639b53625b3dcedf75ad5c1c68885d43e5.pkl",
+              "protected": false,
+              "removable": true
+            }
+          ],
+          "checkpoint_bytes": 165054172,
+          "log_bytes": 7362471,
+          "schema": "pong_retention_v2",
+          "unconfirmed_logs": []
+        },
+        "logs": {
+          "decisions": 20480,
+          "ended_episodes": 22,
+          "points_lost": 464.0,
+          "points_won": 15.0,
+          "raw_return": -449.0
+        },
+        "metrics": {
+          "completed_games": 22,
+          "ended_episodes": 22,
+          "epsilon": 0.38940363387971727,
+          "interactions": 20480,
+          "learner": {
+            "cache_bytes": 0,
+            "complexity": {
+              "FIRE": {
+                "config": {
+                  "encoding": "nominal_missing_v1",
+                  "max_depth": 4,
+                  "min_samples_leaf": 2,
+                  "n_estimators": 20,
+                  "n_jobs": 1,
+                  "sklearn_version": "1.9.1"
+                },
+                "estimator": "ExtraTrees",
+                "leaves": 220,
+                "max_depth": 4,
+                "trees": 20
+              },
+              "LEFT": {
+                "config": {
+                  "encoding": "nominal_missing_v1",
+                  "max_depth": 4,
+                  "min_samples_leaf": 2,
+                  "n_estimators": 20,
+                  "n_jobs": 1,
+                  "sklearn_version": "1.9.1"
+                },
+                "estimator": "ExtraTrees",
+                "leaves": 252,
+                "max_depth": 4,
+                "trees": 20
+              },
+              "LEFTFIRE": {
+                "config": {
+                  "encoding": "nominal_missing_v1",
+                  "max_depth": 4,
+                  "min_samples_leaf": 2,
+                  "n_estimators": 20,
+                  "n_jobs": 1,
+                  "sklearn_version": "1.9.1"
+                },
+                "estimator": "ExtraTrees",
+                "leaves": 243,
+                "max_depth": 4,
+                "trees": 20
+              },
+              "NOOP": {
+                "config": {
+                  "encoding": "nominal_missing_v1",
+                  "max_depth": 4,
+                  "min_samples_leaf": 2,
+                  "n_estimators": 20,
+                  "n_jobs": 1,
+                  "sklearn_version": "1.9.1"
+                },
+                "estimator": "ExtraTrees",
+                "leaves": 230,
+                "max_depth": 4,
+                "trees": 20
+              },
+              "RIGHT": {
+                "config": {
+                  "encoding": "nominal_missing_v1",
+                  "max_depth": 4,
+                  "min_samples_leaf": 2,
+                  "n_estimators": 20,
+                  "n_jobs": 1,
+                  "sklearn_version": "1.9.1"
+                },
+                "estimator": "ExtraTrees",
+                "leaves": 240,
+                "max_depth": 4,
+                "trees": 20
+              },
+              "RIGHTFIRE": {
+                "config": {
+                  "encoding": "nominal_missing_v1",
+                  "max_depth": 4,
+                  "min_samples_leaf": 2,
+                  "n_estimators": 20,
+                  "n_jobs": 1,
+                  "sklearn_version": "1.9.1"
+                },
+                "estimator": "ExtraTrees",
+                "leaves": 253,
+                "max_depth": 4,
+                "trees": 20
+              }
+            },
+            "fits": 40,
+            "kind": "extra_trees",
+            "phase_seconds": {
+              "encoding": 31.52732804499101,
+              "fit": 15.187059475341812,
+              "prediction": 44.24598236987367,
+              "selection_targets": 5.601136618875898
+            },
+            "replay_size": 20480
+          },
+          "phase_seconds": {
+            "checkpoint_logs": 32.464738773414865,
+            "emulation_extraction": 20.24760914570652,
+            "fit": 15.187059475341812,
+            "policy_collection_td": 1.06081974809058,
+            "prediction": 44.24598236987367,
+            "relations_encoding": 39.6862699422054,
+            "selection_targets": 5.601136618875898
+          },
+          "relations": 20,
+          "truncated_episodes": 0
+        },
+        "peak_rss_bytes": 321540096,
+        "pending_evaluations": [],
+        "reason": null,
+        "training_attempts": 1,
+        "training_seconds": 168.94607863400597,
+        "training_state": "completed",
+        "unfinished_evaluation_attempts": 0
+      }
+    ],
+    "completed": true,
+    "limitations": [
+      "A floor result does not establish equivalence.",
+      "Smoke is technical only; primary result is frozen final checkpoint.",
+      "Operational sums are resource consumption, not concurrent wall time."
+    ],
+    "reserved_test_executed": false,
+    "reserved_test_executed_by_report": false,
+    "schema": "pong_progressive_report_v2"
+  },
+  "schema": "pong_analysis_unit_v2",
+  "sha256": "ac7d8e9964aa627fffe2814f142f75d78b570b925aa49cb34fd5466d2aa45492"
+}

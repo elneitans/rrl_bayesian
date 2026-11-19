@@ -1,0 +1,105 @@
+{
+  "payload": {
+    "evaluation_bank_used_for_gate": false,
+    "holdout": {
+      "path": "probe_425000-593236e907d792ab1361ff242440d34c985829c4b593f582be0b1d916911aa1a.pkl",
+      "sha256": "593236e907d792ab1361ff242440d34c985829c4b593f582be0b1d916911aa1a"
+    },
+    "identity": {
+      "campaign": "47cc2276291ba5507aa097850cbd7e3d2332c6d09fa10e0fbd56d4fb6ef81664",
+      "criterion": "anova",
+      "mode": "refit_only",
+      "parent": {
+        "path": "checkpoints/500000-773f79b7b95d46464dde1d54713d09314b0f539c2f5f3c8c6970afd2fa9a87ff.pkl",
+        "sha256": "773f79b7b95d46464dde1d54713d09314b0f539c2f5f3c8c6970afd2fa9a87ff"
+      },
+      "parent_counter": 500000,
+      "seed": 721101
+    },
+    "point": 425000,
+    "reference": {
+      "path": "reference_425000-1cb313a56837e8762469af2f2d65b824d3765a433bc7da403cf8c7897f824aea.pkl",
+      "sha256": "1cb313a56837e8762469af2f2d65b824d3765a433bc7da403cf8c7897f824aea"
+    },
+    "return_bank": {
+      "path": "return_bank_425000-01485676d45ea4ecef60a72bc568357633e3046a3b52299095e1a5c096d84716.pkl",
+      "sha256": "01485676d45ea4ecef60a72bc568357633e3046a3b52299095e1a5c096d84716"
+    },
+    "reviews": [
+      {
+        "action": "LEFT",
+        "bounded_q": false,
+        "candidate_mse": 0.05698709612689321,
+        "counter": 925000,
+        "current_mse": 0.05551568260432263,
+        "gate": {
+          "accepted": false,
+          "blocks": 8,
+          "mean_difference": 0.0014199073345043459,
+          "reason": "loss_gate",
+          "samples": 77,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": 0.0025,
+          "upper_bound": 0.0027279269746113585
+        },
+        "kind": "refit_review",
+        "loss_gate": {
+          "accepted": false,
+          "blocks": 8,
+          "mean_difference": 0.0014199073345043459,
+          "reason": "loss_gate",
+          "samples": 77,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": 0.0025,
+          "upper_bound": 0.0027279269746113585
+        },
+        "new_leaves": 7,
+        "new_literal": "Literal(name='x', type='comparative', obj1='ball_t', obj2='ball_t-1', obj3=None)",
+        "node": 196,
+        "old_leaves": 7,
+        "old_literal": "Literal(name='x', type='comparative', obj1='ball_t', obj2='ball_t-1', obj3=None)",
+        "path": "root/more/less",
+        "train_samples": 252
+      },
+      {
+        "action": "LEFT",
+        "bounded_q": false,
+        "candidate_mse": 0.04595499436050754,
+        "counter": 925000,
+        "current_mse": 0.04486118128951265,
+        "gate": {
+          "accepted": false,
+          "blocks": 8,
+          "mean_difference": 0.001709026062009197,
+          "reason": "loss_gate",
+          "samples": 70,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": 0.0025,
+          "upper_bound": 0.002968494314732309
+        },
+        "kind": "refit_review",
+        "loss_gate": {
+          "accepted": false,
+          "blocks": 8,
+          "mean_difference": 0.001709026062009197,
+          "reason": "loss_gate",
+          "samples": 70,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": 0.0025,
+          "upper_bound": 0.002968494314732309
+        },
+        "new_leaves": 6,
+        "new_literal": "Literal(name='x', type='comparative', obj1='ball_t', obj2='ball_t-1', obj3=None)",
+        "node": 177,
+        "old_leaves": 6,
+        "old_literal": "Literal(name='x', type='comparative', obj1='ball_t', obj2='ball_t-1', obj3=None)",
+        "path": "root/more/more",
+        "train_samples": 272
+      }
+    ],
+    "validation_samples": 964,
+    "validation_used_for_td": false
+  },
+  "schema": "pong_analysis_unit_v2",
+  "sha256": "c8680ef58806f56558a7482f781fcbf02d18adde636279b0d7269bc13c72b0f6"
+}

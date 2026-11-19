@@ -1,0 +1,25 @@
+No broken requirements found.
+hydra
+Python 3.11.7
+job=38662 root=/home/natan.brugueras/projects/rrl_breakout_bart_ablation_20261110_01/code
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/mnt-homes/wapol/gilureta/natan.brugueras/projects/rrl_breakout_bart_ablation_20261110_01/code/experiments/breakout_bart_ablation.py", line 236, in main
+    report(args.output, config)
+  File "/mnt-homes/wapol/gilureta/natan.brugueras/projects/rrl_breakout_bart_ablation_20261110_01/code/experiments/breakout_bart_ablation.py", line 198, in report
+    cell = checked_read(path)
+           ^^^^^^^^^^^^^^^^^^
+  File "/mnt-homes/wapol/gilureta/natan.brugueras/projects/rrl_breakout_bart_ablation_20261110_01/code/experiments/pong_analysis_runtime.py", line 68, in checked_read
+    raise ValueError('checksum/schema mismatch')
+ValueError: checksum/schema mismatch
+
+------------------------------------------------------------------------
+[Slurm] Este trabajo (#38662) terminó SIN reporte de rendimiento por correo.
+Puedes recibir un correo con el uso de CPU, RAM y GPU de tus trabajos
+(y sugerencias para que esperen menos en cola) agregando esta línea
+en tu script de sbatch, junto a las líneas #SBATCH:
+
+    #SENDJOBREPORT
+
+Dudas: slurmjobs@cenia.cl
+------------------------------------------------------------------------

@@ -1,0 +1,1961 @@
+{
+  "resolved": {
+    "schema": "pong_progressive_v2",
+    "protocol": {
+      "schema": "pong_progressive_v2",
+      "name": "pong_extra_trees_2m_20261027",
+      "level": "long",
+      "pipelines": [
+        "ocatari"
+      ],
+      "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+      "training_horizon": 27000,
+      "learners": {
+        "extra_trees": {
+          "n_estimators": 20,
+          "max_depth": 4,
+          "min_samples_leaf": 2,
+          "n_jobs": 1,
+          "sklearn_version": "1.9.1",
+          "encoding": "nominal_missing_v1"
+        }
+      },
+      "learning": {
+        "gamma": 0.99,
+        "replay_capacity": 50000,
+        "batch_size_per_action": 128,
+        "fit_interval": 512,
+        "warmup_interactions": 512,
+        "bootstrap_on_truncation": true
+      },
+      "exploration": {
+        "epsilon_init": 1,
+        "epsilon_min": 0.1,
+        "epsilon_decay_steps": 50000
+      },
+      "training_seeds": [
+        501601,
+        501602,
+        501603,
+        501604,
+        501605,
+        501606,
+        501607,
+        501608,
+        501609,
+        501610,
+        501611,
+        501612,
+        501613,
+        501614,
+        501615
+      ],
+      "evaluation": {
+        "intermediate": {
+          "seeds": [
+            501801,
+            501802
+          ],
+          "horizon": 27000,
+          "checkpoints": [
+            0,
+            10000,
+            100000,
+            500000,
+            2000000
+          ]
+        },
+        "final_development": {
+          "seeds": [
+            501901,
+            501902,
+            501903,
+            501904,
+            501905,
+            501906,
+            501907,
+            501908,
+            501909,
+            501910
+          ],
+          "horizon": 27000,
+          "checkpoints": [
+            100000,
+            500000,
+            2000000
+          ]
+        },
+        "reserved_test": {
+          "seeds": [
+            420101,
+            420102,
+            420103,
+            420104,
+            420105,
+            420106,
+            420107,
+            420108,
+            420109,
+            420110,
+            420111,
+            420112,
+            420113,
+            420114,
+            420115,
+            420116,
+            420117,
+            420118,
+            420119,
+            420120
+          ],
+          "horizon": 27000,
+          "checkpoints": []
+        }
+      },
+      "max_decisions": 2000000,
+      "milestones": [
+        100000,
+        500000,
+        2000000
+      ],
+      "checkpoint_interval": 512,
+      "budgets": {
+        "training_seconds_per_cell": 86400,
+        "evaluation_seconds_per_episode": 2400,
+        "fit_margin_seconds": 10
+      },
+      "cache_bytes": 1048576,
+      "bart_review": null,
+      "primary_checkpoint": "final"
+    },
+    "cells": [
+      {
+        "id": "ocatari/extra_trees/501601",
+        "pipeline": "ocatari",
+        "learner": "extra_trees",
+        "seed": 501601,
+        "environment": {
+          "pipeline": "ocatari",
+          "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+          "horizon": 27000,
+          "contract": "pong_common_v1"
+        },
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT",
+            "RIGHTFIRE",
+            "LEFTFIRE"
+          ],
+          "seed": 501601,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 50000,
+          "batch_size_per_action": 128,
+          "fit_interval": 512,
+          "warmup_interactions": 512,
+          "epsilon_init": 1,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            501801,
+            501802,
+            501901,
+            501902,
+            501903,
+            501904,
+            501905,
+            501906,
+            501907,
+            501908,
+            501909,
+            501910
+          ],
+          "test_seeds": [
+            420101,
+            420102,
+            420103,
+            420104,
+            420105,
+            420106,
+            420107,
+            420108,
+            420109,
+            420110,
+            420111,
+            420112,
+            420113,
+            420114,
+            420115,
+            420116,
+            420117,
+            420118,
+            420119,
+            420120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "n_estimators": 20,
+          "max_depth": 4,
+          "min_samples_leaf": 2,
+          "n_jobs": 1,
+          "sklearn_version": "1.9.1",
+          "encoding": "nominal_missing_v1"
+        },
+        "hash": "fd45006b64373f666e3458f34aebcbe6929c753ad208bdc972d419369fb8b30b"
+      },
+      {
+        "id": "ocatari/extra_trees/501602",
+        "pipeline": "ocatari",
+        "learner": "extra_trees",
+        "seed": 501602,
+        "environment": {
+          "pipeline": "ocatari",
+          "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+          "horizon": 27000,
+          "contract": "pong_common_v1"
+        },
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT",
+            "RIGHTFIRE",
+            "LEFTFIRE"
+          ],
+          "seed": 501602,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 50000,
+          "batch_size_per_action": 128,
+          "fit_interval": 512,
+          "warmup_interactions": 512,
+          "epsilon_init": 1,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            501801,
+            501802,
+            501901,
+            501902,
+            501903,
+            501904,
+            501905,
+            501906,
+            501907,
+            501908,
+            501909,
+            501910
+          ],
+          "test_seeds": [
+            420101,
+            420102,
+            420103,
+            420104,
+            420105,
+            420106,
+            420107,
+            420108,
+            420109,
+            420110,
+            420111,
+            420112,
+            420113,
+            420114,
+            420115,
+            420116,
+            420117,
+            420118,
+            420119,
+            420120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "n_estimators": 20,
+          "max_depth": 4,
+          "min_samples_leaf": 2,
+          "n_jobs": 1,
+          "sklearn_version": "1.9.1",
+          "encoding": "nominal_missing_v1"
+        },
+        "hash": "09fb6d5fdbdb6a19b66329812b80a4ffbadc8b11a14e100c8ef2cc860d54caf6"
+      },
+      {
+        "id": "ocatari/extra_trees/501603",
+        "pipeline": "ocatari",
+        "learner": "extra_trees",
+        "seed": 501603,
+        "environment": {
+          "pipeline": "ocatari",
+          "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+          "horizon": 27000,
+          "contract": "pong_common_v1"
+        },
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT",
+            "RIGHTFIRE",
+            "LEFTFIRE"
+          ],
+          "seed": 501603,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 50000,
+          "batch_size_per_action": 128,
+          "fit_interval": 512,
+          "warmup_interactions": 512,
+          "epsilon_init": 1,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            501801,
+            501802,
+            501901,
+            501902,
+            501903,
+            501904,
+            501905,
+            501906,
+            501907,
+            501908,
+            501909,
+            501910
+          ],
+          "test_seeds": [
+            420101,
+            420102,
+            420103,
+            420104,
+            420105,
+            420106,
+            420107,
+            420108,
+            420109,
+            420110,
+            420111,
+            420112,
+            420113,
+            420114,
+            420115,
+            420116,
+            420117,
+            420118,
+            420119,
+            420120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "n_estimators": 20,
+          "max_depth": 4,
+          "min_samples_leaf": 2,
+          "n_jobs": 1,
+          "sklearn_version": "1.9.1",
+          "encoding": "nominal_missing_v1"
+        },
+        "hash": "b4d007e193dbd15827297ed921a728084d763537587f5051bc01bd5a84912a9d"
+      },
+      {
+        "id": "ocatari/extra_trees/501604",
+        "pipeline": "ocatari",
+        "learner": "extra_trees",
+        "seed": 501604,
+        "environment": {
+          "pipeline": "ocatari",
+          "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+          "horizon": 27000,
+          "contract": "pong_common_v1"
+        },
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT",
+            "RIGHTFIRE",
+            "LEFTFIRE"
+          ],
+          "seed": 501604,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 50000,
+          "batch_size_per_action": 128,
+          "fit_interval": 512,
+          "warmup_interactions": 512,
+          "epsilon_init": 1,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            501801,
+            501802,
+            501901,
+            501902,
+            501903,
+            501904,
+            501905,
+            501906,
+            501907,
+            501908,
+            501909,
+            501910
+          ],
+          "test_seeds": [
+            420101,
+            420102,
+            420103,
+            420104,
+            420105,
+            420106,
+            420107,
+            420108,
+            420109,
+            420110,
+            420111,
+            420112,
+            420113,
+            420114,
+            420115,
+            420116,
+            420117,
+            420118,
+            420119,
+            420120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "n_estimators": 20,
+          "max_depth": 4,
+          "min_samples_leaf": 2,
+          "n_jobs": 1,
+          "sklearn_version": "1.9.1",
+          "encoding": "nominal_missing_v1"
+        },
+        "hash": "29e1cd27619ae3e0c72b1394f801802b1a8685c60668e60cd8773e557e6a74f3"
+      },
+      {
+        "id": "ocatari/extra_trees/501605",
+        "pipeline": "ocatari",
+        "learner": "extra_trees",
+        "seed": 501605,
+        "environment": {
+          "pipeline": "ocatari",
+          "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+          "horizon": 27000,
+          "contract": "pong_common_v1"
+        },
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT",
+            "RIGHTFIRE",
+            "LEFTFIRE"
+          ],
+          "seed": 501605,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 50000,
+          "batch_size_per_action": 128,
+          "fit_interval": 512,
+          "warmup_interactions": 512,
+          "epsilon_init": 1,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            501801,
+            501802,
+            501901,
+            501902,
+            501903,
+            501904,
+            501905,
+            501906,
+            501907,
+            501908,
+            501909,
+            501910
+          ],
+          "test_seeds": [
+            420101,
+            420102,
+            420103,
+            420104,
+            420105,
+            420106,
+            420107,
+            420108,
+            420109,
+            420110,
+            420111,
+            420112,
+            420113,
+            420114,
+            420115,
+            420116,
+            420117,
+            420118,
+            420119,
+            420120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "n_estimators": 20,
+          "max_depth": 4,
+          "min_samples_leaf": 2,
+          "n_jobs": 1,
+          "sklearn_version": "1.9.1",
+          "encoding": "nominal_missing_v1"
+        },
+        "hash": "81a6b29df77d38def2f51cc3f578a0006347abd737fbf8938c0faadccf06da4f"
+      },
+      {
+        "id": "ocatari/extra_trees/501606",
+        "pipeline": "ocatari",
+        "learner": "extra_trees",
+        "seed": 501606,
+        "environment": {
+          "pipeline": "ocatari",
+          "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+          "horizon": 27000,
+          "contract": "pong_common_v1"
+        },
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT",
+            "RIGHTFIRE",
+            "LEFTFIRE"
+          ],
+          "seed": 501606,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 50000,
+          "batch_size_per_action": 128,
+          "fit_interval": 512,
+          "warmup_interactions": 512,
+          "epsilon_init": 1,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            501801,
+            501802,
+            501901,
+            501902,
+            501903,
+            501904,
+            501905,
+            501906,
+            501907,
+            501908,
+            501909,
+            501910
+          ],
+          "test_seeds": [
+            420101,
+            420102,
+            420103,
+            420104,
+            420105,
+            420106,
+            420107,
+            420108,
+            420109,
+            420110,
+            420111,
+            420112,
+            420113,
+            420114,
+            420115,
+            420116,
+            420117,
+            420118,
+            420119,
+            420120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "n_estimators": 20,
+          "max_depth": 4,
+          "min_samples_leaf": 2,
+          "n_jobs": 1,
+          "sklearn_version": "1.9.1",
+          "encoding": "nominal_missing_v1"
+        },
+        "hash": "0ba72b8c72b83d272736ba3c021822b335c8f66a0785830cb702cf2fa8e2c237"
+      },
+      {
+        "id": "ocatari/extra_trees/501607",
+        "pipeline": "ocatari",
+        "learner": "extra_trees",
+        "seed": 501607,
+        "environment": {
+          "pipeline": "ocatari",
+          "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+          "horizon": 27000,
+          "contract": "pong_common_v1"
+        },
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT",
+            "RIGHTFIRE",
+            "LEFTFIRE"
+          ],
+          "seed": 501607,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 50000,
+          "batch_size_per_action": 128,
+          "fit_interval": 512,
+          "warmup_interactions": 512,
+          "epsilon_init": 1,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            501801,
+            501802,
+            501901,
+            501902,
+            501903,
+            501904,
+            501905,
+            501906,
+            501907,
+            501908,
+            501909,
+            501910
+          ],
+          "test_seeds": [
+            420101,
+            420102,
+            420103,
+            420104,
+            420105,
+            420106,
+            420107,
+            420108,
+            420109,
+            420110,
+            420111,
+            420112,
+            420113,
+            420114,
+            420115,
+            420116,
+            420117,
+            420118,
+            420119,
+            420120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "n_estimators": 20,
+          "max_depth": 4,
+          "min_samples_leaf": 2,
+          "n_jobs": 1,
+          "sklearn_version": "1.9.1",
+          "encoding": "nominal_missing_v1"
+        },
+        "hash": "81e0e9f283394b8faef8e8faa771502ea3a40a05032a0c87fb8d1eeca2f38384"
+      },
+      {
+        "id": "ocatari/extra_trees/501608",
+        "pipeline": "ocatari",
+        "learner": "extra_trees",
+        "seed": 501608,
+        "environment": {
+          "pipeline": "ocatari",
+          "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+          "horizon": 27000,
+          "contract": "pong_common_v1"
+        },
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT",
+            "RIGHTFIRE",
+            "LEFTFIRE"
+          ],
+          "seed": 501608,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 50000,
+          "batch_size_per_action": 128,
+          "fit_interval": 512,
+          "warmup_interactions": 512,
+          "epsilon_init": 1,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            501801,
+            501802,
+            501901,
+            501902,
+            501903,
+            501904,
+            501905,
+            501906,
+            501907,
+            501908,
+            501909,
+            501910
+          ],
+          "test_seeds": [
+            420101,
+            420102,
+            420103,
+            420104,
+            420105,
+            420106,
+            420107,
+            420108,
+            420109,
+            420110,
+            420111,
+            420112,
+            420113,
+            420114,
+            420115,
+            420116,
+            420117,
+            420118,
+            420119,
+            420120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "n_estimators": 20,
+          "max_depth": 4,
+          "min_samples_leaf": 2,
+          "n_jobs": 1,
+          "sklearn_version": "1.9.1",
+          "encoding": "nominal_missing_v1"
+        },
+        "hash": "d7ee8bcbefc6d24ef5ae524e650dfccee2b946319a5300fe75b380994f0f2a6c"
+      },
+      {
+        "id": "ocatari/extra_trees/501609",
+        "pipeline": "ocatari",
+        "learner": "extra_trees",
+        "seed": 501609,
+        "environment": {
+          "pipeline": "ocatari",
+          "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+          "horizon": 27000,
+          "contract": "pong_common_v1"
+        },
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT",
+            "RIGHTFIRE",
+            "LEFTFIRE"
+          ],
+          "seed": 501609,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 50000,
+          "batch_size_per_action": 128,
+          "fit_interval": 512,
+          "warmup_interactions": 512,
+          "epsilon_init": 1,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            501801,
+            501802,
+            501901,
+            501902,
+            501903,
+            501904,
+            501905,
+            501906,
+            501907,
+            501908,
+            501909,
+            501910
+          ],
+          "test_seeds": [
+            420101,
+            420102,
+            420103,
+            420104,
+            420105,
+            420106,
+            420107,
+            420108,
+            420109,
+            420110,
+            420111,
+            420112,
+            420113,
+            420114,
+            420115,
+            420116,
+            420117,
+            420118,
+            420119,
+            420120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "n_estimators": 20,
+          "max_depth": 4,
+          "min_samples_leaf": 2,
+          "n_jobs": 1,
+          "sklearn_version": "1.9.1",
+          "encoding": "nominal_missing_v1"
+        },
+        "hash": "e4fd004698217ccd6cd546a32bbf21341c12192ee87b8743ebe1ddc1350c9c3b"
+      },
+      {
+        "id": "ocatari/extra_trees/501610",
+        "pipeline": "ocatari",
+        "learner": "extra_trees",
+        "seed": 501610,
+        "environment": {
+          "pipeline": "ocatari",
+          "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+          "horizon": 27000,
+          "contract": "pong_common_v1"
+        },
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT",
+            "RIGHTFIRE",
+            "LEFTFIRE"
+          ],
+          "seed": 501610,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 50000,
+          "batch_size_per_action": 128,
+          "fit_interval": 512,
+          "warmup_interactions": 512,
+          "epsilon_init": 1,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            501801,
+            501802,
+            501901,
+            501902,
+            501903,
+            501904,
+            501905,
+            501906,
+            501907,
+            501908,
+            501909,
+            501910
+          ],
+          "test_seeds": [
+            420101,
+            420102,
+            420103,
+            420104,
+            420105,
+            420106,
+            420107,
+            420108,
+            420109,
+            420110,
+            420111,
+            420112,
+            420113,
+            420114,
+            420115,
+            420116,
+            420117,
+            420118,
+            420119,
+            420120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "n_estimators": 20,
+          "max_depth": 4,
+          "min_samples_leaf": 2,
+          "n_jobs": 1,
+          "sklearn_version": "1.9.1",
+          "encoding": "nominal_missing_v1"
+        },
+        "hash": "43110419748dbb9ecea41ae10ecbe7a2ac68381e1a18f60e39cef6d95a7c3705"
+      },
+      {
+        "id": "ocatari/extra_trees/501611",
+        "pipeline": "ocatari",
+        "learner": "extra_trees",
+        "seed": 501611,
+        "environment": {
+          "pipeline": "ocatari",
+          "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+          "horizon": 27000,
+          "contract": "pong_common_v1"
+        },
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT",
+            "RIGHTFIRE",
+            "LEFTFIRE"
+          ],
+          "seed": 501611,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 50000,
+          "batch_size_per_action": 128,
+          "fit_interval": 512,
+          "warmup_interactions": 512,
+          "epsilon_init": 1,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            501801,
+            501802,
+            501901,
+            501902,
+            501903,
+            501904,
+            501905,
+            501906,
+            501907,
+            501908,
+            501909,
+            501910
+          ],
+          "test_seeds": [
+            420101,
+            420102,
+            420103,
+            420104,
+            420105,
+            420106,
+            420107,
+            420108,
+            420109,
+            420110,
+            420111,
+            420112,
+            420113,
+            420114,
+            420115,
+            420116,
+            420117,
+            420118,
+            420119,
+            420120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "n_estimators": 20,
+          "max_depth": 4,
+          "min_samples_leaf": 2,
+          "n_jobs": 1,
+          "sklearn_version": "1.9.1",
+          "encoding": "nominal_missing_v1"
+        },
+        "hash": "ba3a8e96e9386ff76d6ec38f75c23ba99b775306cdcc97f99eaeb45df98ea852"
+      },
+      {
+        "id": "ocatari/extra_trees/501612",
+        "pipeline": "ocatari",
+        "learner": "extra_trees",
+        "seed": 501612,
+        "environment": {
+          "pipeline": "ocatari",
+          "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+          "horizon": 27000,
+          "contract": "pong_common_v1"
+        },
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT",
+            "RIGHTFIRE",
+            "LEFTFIRE"
+          ],
+          "seed": 501612,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 50000,
+          "batch_size_per_action": 128,
+          "fit_interval": 512,
+          "warmup_interactions": 512,
+          "epsilon_init": 1,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            501801,
+            501802,
+            501901,
+            501902,
+            501903,
+            501904,
+            501905,
+            501906,
+            501907,
+            501908,
+            501909,
+            501910
+          ],
+          "test_seeds": [
+            420101,
+            420102,
+            420103,
+            420104,
+            420105,
+            420106,
+            420107,
+            420108,
+            420109,
+            420110,
+            420111,
+            420112,
+            420113,
+            420114,
+            420115,
+            420116,
+            420117,
+            420118,
+            420119,
+            420120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "n_estimators": 20,
+          "max_depth": 4,
+          "min_samples_leaf": 2,
+          "n_jobs": 1,
+          "sklearn_version": "1.9.1",
+          "encoding": "nominal_missing_v1"
+        },
+        "hash": "7b5ffe2d32625e2e809f76a1ed6cc7eae16838a5ed9d56de2d138242f2f3a773"
+      },
+      {
+        "id": "ocatari/extra_trees/501613",
+        "pipeline": "ocatari",
+        "learner": "extra_trees",
+        "seed": 501613,
+        "environment": {
+          "pipeline": "ocatari",
+          "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+          "horizon": 27000,
+          "contract": "pong_common_v1"
+        },
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT",
+            "RIGHTFIRE",
+            "LEFTFIRE"
+          ],
+          "seed": 501613,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 50000,
+          "batch_size_per_action": 128,
+          "fit_interval": 512,
+          "warmup_interactions": 512,
+          "epsilon_init": 1,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            501801,
+            501802,
+            501901,
+            501902,
+            501903,
+            501904,
+            501905,
+            501906,
+            501907,
+            501908,
+            501909,
+            501910
+          ],
+          "test_seeds": [
+            420101,
+            420102,
+            420103,
+            420104,
+            420105,
+            420106,
+            420107,
+            420108,
+            420109,
+            420110,
+            420111,
+            420112,
+            420113,
+            420114,
+            420115,
+            420116,
+            420117,
+            420118,
+            420119,
+            420120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "n_estimators": 20,
+          "max_depth": 4,
+          "min_samples_leaf": 2,
+          "n_jobs": 1,
+          "sklearn_version": "1.9.1",
+          "encoding": "nominal_missing_v1"
+        },
+        "hash": "daf1da566ea8e98b33ba3855c72a10118406594db5499d7f66fc8fe52037127b"
+      },
+      {
+        "id": "ocatari/extra_trees/501614",
+        "pipeline": "ocatari",
+        "learner": "extra_trees",
+        "seed": 501614,
+        "environment": {
+          "pipeline": "ocatari",
+          "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+          "horizon": 27000,
+          "contract": "pong_common_v1"
+        },
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT",
+            "RIGHTFIRE",
+            "LEFTFIRE"
+          ],
+          "seed": 501614,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 50000,
+          "batch_size_per_action": 128,
+          "fit_interval": 512,
+          "warmup_interactions": 512,
+          "epsilon_init": 1,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            501801,
+            501802,
+            501901,
+            501902,
+            501903,
+            501904,
+            501905,
+            501906,
+            501907,
+            501908,
+            501909,
+            501910
+          ],
+          "test_seeds": [
+            420101,
+            420102,
+            420103,
+            420104,
+            420105,
+            420106,
+            420107,
+            420108,
+            420109,
+            420110,
+            420111,
+            420112,
+            420113,
+            420114,
+            420115,
+            420116,
+            420117,
+            420118,
+            420119,
+            420120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "n_estimators": 20,
+          "max_depth": 4,
+          "min_samples_leaf": 2,
+          "n_jobs": 1,
+          "sklearn_version": "1.9.1",
+          "encoding": "nominal_missing_v1"
+        },
+        "hash": "363d87f3854bbc68f467b77e66b5dc8c67ebcd2c69dbaa986d965261cf0b5e31"
+      },
+      {
+        "id": "ocatari/extra_trees/501615",
+        "pipeline": "ocatari",
+        "learner": "extra_trees",
+        "seed": 501615,
+        "environment": {
+          "pipeline": "ocatari",
+          "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+          "horizon": 27000,
+          "contract": "pong_common_v1"
+        },
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT",
+            "RIGHTFIRE",
+            "LEFTFIRE"
+          ],
+          "seed": 501615,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 50000,
+          "batch_size_per_action": 128,
+          "fit_interval": 512,
+          "warmup_interactions": 512,
+          "epsilon_init": 1,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            501801,
+            501802,
+            501901,
+            501902,
+            501903,
+            501904,
+            501905,
+            501906,
+            501907,
+            501908,
+            501909,
+            501910
+          ],
+          "test_seeds": [
+            420101,
+            420102,
+            420103,
+            420104,
+            420105,
+            420106,
+            420107,
+            420108,
+            420109,
+            420110,
+            420111,
+            420112,
+            420113,
+            420114,
+            420115,
+            420116,
+            420117,
+            420118,
+            420119,
+            420120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "n_estimators": 20,
+          "max_depth": 4,
+          "min_samples_leaf": 2,
+          "n_jobs": 1,
+          "sklearn_version": "1.9.1",
+          "encoding": "nominal_missing_v1"
+        },
+        "hash": "23c1b248b302da5a2ca50f0988ba90099c2264f98f5c39ee8244bfd3241ee54e"
+      }
+    ],
+    "unresolved": []
+  },
+  "workload": [
+    {
+      "id": "ocatari/extra_trees/501601",
+      "seed": 501601,
+      "decisions": 2000000,
+      "expected_fits": 3906,
+      "expected_checkpoints": 3911,
+      "evaluation_episodes": 40
+    },
+    {
+      "id": "ocatari/extra_trees/501602",
+      "seed": 501602,
+      "decisions": 2000000,
+      "expected_fits": 3906,
+      "expected_checkpoints": 3911,
+      "evaluation_episodes": 40
+    },
+    {
+      "id": "ocatari/extra_trees/501603",
+      "seed": 501603,
+      "decisions": 2000000,
+      "expected_fits": 3906,
+      "expected_checkpoints": 3911,
+      "evaluation_episodes": 40
+    },
+    {
+      "id": "ocatari/extra_trees/501604",
+      "seed": 501604,
+      "decisions": 2000000,
+      "expected_fits": 3906,
+      "expected_checkpoints": 3911,
+      "evaluation_episodes": 40
+    },
+    {
+      "id": "ocatari/extra_trees/501605",
+      "seed": 501605,
+      "decisions": 2000000,
+      "expected_fits": 3906,
+      "expected_checkpoints": 3911,
+      "evaluation_episodes": 40
+    },
+    {
+      "id": "ocatari/extra_trees/501606",
+      "seed": 501606,
+      "decisions": 2000000,
+      "expected_fits": 3906,
+      "expected_checkpoints": 3911,
+      "evaluation_episodes": 40
+    },
+    {
+      "id": "ocatari/extra_trees/501607",
+      "seed": 501607,
+      "decisions": 2000000,
+      "expected_fits": 3906,
+      "expected_checkpoints": 3911,
+      "evaluation_episodes": 40
+    },
+    {
+      "id": "ocatari/extra_trees/501608",
+      "seed": 501608,
+      "decisions": 2000000,
+      "expected_fits": 3906,
+      "expected_checkpoints": 3911,
+      "evaluation_episodes": 40
+    },
+    {
+      "id": "ocatari/extra_trees/501609",
+      "seed": 501609,
+      "decisions": 2000000,
+      "expected_fits": 3906,
+      "expected_checkpoints": 3911,
+      "evaluation_episodes": 40
+    },
+    {
+      "id": "ocatari/extra_trees/501610",
+      "seed": 501610,
+      "decisions": 2000000,
+      "expected_fits": 3906,
+      "expected_checkpoints": 3911,
+      "evaluation_episodes": 40
+    },
+    {
+      "id": "ocatari/extra_trees/501611",
+      "seed": 501611,
+      "decisions": 2000000,
+      "expected_fits": 3906,
+      "expected_checkpoints": 3911,
+      "evaluation_episodes": 40
+    },
+    {
+      "id": "ocatari/extra_trees/501612",
+      "seed": 501612,
+      "decisions": 2000000,
+      "expected_fits": 3906,
+      "expected_checkpoints": 3911,
+      "evaluation_episodes": 40
+    },
+    {
+      "id": "ocatari/extra_trees/501613",
+      "seed": 501613,
+      "decisions": 2000000,
+      "expected_fits": 3906,
+      "expected_checkpoints": 3911,
+      "evaluation_episodes": 40
+    },
+    {
+      "id": "ocatari/extra_trees/501614",
+      "seed": 501614,
+      "decisions": 2000000,
+      "expected_fits": 3906,
+      "expected_checkpoints": 3911,
+      "evaluation_episodes": 40
+    },
+    {
+      "id": "ocatari/extra_trees/501615",
+      "seed": 501615,
+      "decisions": 2000000,
+      "expected_fits": 3906,
+      "expected_checkpoints": 3911,
+      "evaluation_episodes": 40
+    }
+  ],
+  "estimates": [
+    {
+      "cell": "ocatari/extra_trees/501601",
+      "training_seconds_observed_rate_range": [
+        16498.640491602146,
+        16498.640491602146
+      ],
+      "log_bytes_observed_rate_range": [
+        718991308.59375,
+        718991308.59375
+      ],
+      "peak_rss_observed_range": [
+        321540096,
+        321540096
+      ],
+      "checkpoint_bytes_before_retention_observed_size_projection": [
+        98584577,
+        29934512408
+      ],
+      "evaluation_seconds_episode_observed_range": [
+        6.897482782951556,
+        19.87807889096439
+      ],
+      "evaluation_seconds_observed_rate_projection": [
+        275.89931131806225,
+        795.1231556385756
+      ],
+      "evaluation_worker_seconds_rate_projection": [
+        753.6253177856894,
+        753.6253177856894
+      ],
+      "uncertainty": "Observed rates only; tree/replay growth and hardware can change cost. No maximum bound."
+    },
+    {
+      "cell": "ocatari/extra_trees/501602",
+      "training_seconds_observed_rate_range": [
+        16498.640491602146,
+        16498.640491602146
+      ],
+      "log_bytes_observed_rate_range": [
+        718991308.59375,
+        718991308.59375
+      ],
+      "peak_rss_observed_range": [
+        321540096,
+        321540096
+      ],
+      "checkpoint_bytes_before_retention_observed_size_projection": [
+        98584577,
+        29934512408
+      ],
+      "evaluation_seconds_episode_observed_range": [
+        6.897482782951556,
+        19.87807889096439
+      ],
+      "evaluation_seconds_observed_rate_projection": [
+        275.89931131806225,
+        795.1231556385756
+      ],
+      "evaluation_worker_seconds_rate_projection": [
+        753.6253177856894,
+        753.6253177856894
+      ],
+      "uncertainty": "Observed rates only; tree/replay growth and hardware can change cost. No maximum bound."
+    },
+    {
+      "cell": "ocatari/extra_trees/501603",
+      "training_seconds_observed_rate_range": [
+        16498.640491602146,
+        16498.640491602146
+      ],
+      "log_bytes_observed_rate_range": [
+        718991308.59375,
+        718991308.59375
+      ],
+      "peak_rss_observed_range": [
+        321540096,
+        321540096
+      ],
+      "checkpoint_bytes_before_retention_observed_size_projection": [
+        98584577,
+        29934512408
+      ],
+      "evaluation_seconds_episode_observed_range": [
+        6.897482782951556,
+        19.87807889096439
+      ],
+      "evaluation_seconds_observed_rate_projection": [
+        275.89931131806225,
+        795.1231556385756
+      ],
+      "evaluation_worker_seconds_rate_projection": [
+        753.6253177856894,
+        753.6253177856894
+      ],
+      "uncertainty": "Observed rates only; tree/replay growth and hardware can change cost. No maximum bound."
+    },
+    {
+      "cell": "ocatari/extra_trees/501604",
+      "training_seconds_observed_rate_range": [
+        16498.640491602146,
+        16498.640491602146
+      ],
+      "log_bytes_observed_rate_range": [
+        718991308.59375,
+        718991308.59375
+      ],
+      "peak_rss_observed_range": [
+        321540096,
+        321540096
+      ],
+      "checkpoint_bytes_before_retention_observed_size_projection": [
+        98584577,
+        29934512408
+      ],
+      "evaluation_seconds_episode_observed_range": [
+        6.897482782951556,
+        19.87807889096439
+      ],
+      "evaluation_seconds_observed_rate_projection": [
+        275.89931131806225,
+        795.1231556385756
+      ],
+      "evaluation_worker_seconds_rate_projection": [
+        753.6253177856894,
+        753.6253177856894
+      ],
+      "uncertainty": "Observed rates only; tree/replay growth and hardware can change cost. No maximum bound."
+    },
+    {
+      "cell": "ocatari/extra_trees/501605",
+      "training_seconds_observed_rate_range": [
+        16498.640491602146,
+        16498.640491602146
+      ],
+      "log_bytes_observed_rate_range": [
+        718991308.59375,
+        718991308.59375
+      ],
+      "peak_rss_observed_range": [
+        321540096,
+        321540096
+      ],
+      "checkpoint_bytes_before_retention_observed_size_projection": [
+        98584577,
+        29934512408
+      ],
+      "evaluation_seconds_episode_observed_range": [
+        6.897482782951556,
+        19.87807889096439
+      ],
+      "evaluation_seconds_observed_rate_projection": [
+        275.89931131806225,
+        795.1231556385756
+      ],
+      "evaluation_worker_seconds_rate_projection": [
+        753.6253177856894,
+        753.6253177856894
+      ],
+      "uncertainty": "Observed rates only; tree/replay growth and hardware can change cost. No maximum bound."
+    },
+    {
+      "cell": "ocatari/extra_trees/501606",
+      "training_seconds_observed_rate_range": [
+        16498.640491602146,
+        16498.640491602146
+      ],
+      "log_bytes_observed_rate_range": [
+        718991308.59375,
+        718991308.59375
+      ],
+      "peak_rss_observed_range": [
+        321540096,
+        321540096
+      ],
+      "checkpoint_bytes_before_retention_observed_size_projection": [
+        98584577,
+        29934512408
+      ],
+      "evaluation_seconds_episode_observed_range": [
+        6.897482782951556,
+        19.87807889096439
+      ],
+      "evaluation_seconds_observed_rate_projection": [
+        275.89931131806225,
+        795.1231556385756
+      ],
+      "evaluation_worker_seconds_rate_projection": [
+        753.6253177856894,
+        753.6253177856894
+      ],
+      "uncertainty": "Observed rates only; tree/replay growth and hardware can change cost. No maximum bound."
+    },
+    {
+      "cell": "ocatari/extra_trees/501607",
+      "training_seconds_observed_rate_range": [
+        16498.640491602146,
+        16498.640491602146
+      ],
+      "log_bytes_observed_rate_range": [
+        718991308.59375,
+        718991308.59375
+      ],
+      "peak_rss_observed_range": [
+        321540096,
+        321540096
+      ],
+      "checkpoint_bytes_before_retention_observed_size_projection": [
+        98584577,
+        29934512408
+      ],
+      "evaluation_seconds_episode_observed_range": [
+        6.897482782951556,
+        19.87807889096439
+      ],
+      "evaluation_seconds_observed_rate_projection": [
+        275.89931131806225,
+        795.1231556385756
+      ],
+      "evaluation_worker_seconds_rate_projection": [
+        753.6253177856894,
+        753.6253177856894
+      ],
+      "uncertainty": "Observed rates only; tree/replay growth and hardware can change cost. No maximum bound."
+    },
+    {
+      "cell": "ocatari/extra_trees/501608",
+      "training_seconds_observed_rate_range": [
+        16498.640491602146,
+        16498.640491602146
+      ],
+      "log_bytes_observed_rate_range": [
+        718991308.59375,
+        718991308.59375
+      ],
+      "peak_rss_observed_range": [
+        321540096,
+        321540096
+      ],
+      "checkpoint_bytes_before_retention_observed_size_projection": [
+        98584577,
+        29934512408
+      ],
+      "evaluation_seconds_episode_observed_range": [
+        6.897482782951556,
+        19.87807889096439
+      ],
+      "evaluation_seconds_observed_rate_projection": [
+        275.89931131806225,
+        795.1231556385756
+      ],
+      "evaluation_worker_seconds_rate_projection": [
+        753.6253177856894,
+        753.6253177856894
+      ],
+      "uncertainty": "Observed rates only; tree/replay growth and hardware can change cost. No maximum bound."
+    },
+    {
+      "cell": "ocatari/extra_trees/501609",
+      "training_seconds_observed_rate_range": [
+        16498.640491602146,
+        16498.640491602146
+      ],
+      "log_bytes_observed_rate_range": [
+        718991308.59375,
+        718991308.59375
+      ],
+      "peak_rss_observed_range": [
+        321540096,
+        321540096
+      ],
+      "checkpoint_bytes_before_retention_observed_size_projection": [
+        98584577,
+        29934512408
+      ],
+      "evaluation_seconds_episode_observed_range": [
+        6.897482782951556,
+        19.87807889096439
+      ],
+      "evaluation_seconds_observed_rate_projection": [
+        275.89931131806225,
+        795.1231556385756
+      ],
+      "evaluation_worker_seconds_rate_projection": [
+        753.6253177856894,
+        753.6253177856894
+      ],
+      "uncertainty": "Observed rates only; tree/replay growth and hardware can change cost. No maximum bound."
+    },
+    {
+      "cell": "ocatari/extra_trees/501610",
+      "training_seconds_observed_rate_range": [
+        16498.640491602146,
+        16498.640491602146
+      ],
+      "log_bytes_observed_rate_range": [
+        718991308.59375,
+        718991308.59375
+      ],
+      "peak_rss_observed_range": [
+        321540096,
+        321540096
+      ],
+      "checkpoint_bytes_before_retention_observed_size_projection": [
+        98584577,
+        29934512408
+      ],
+      "evaluation_seconds_episode_observed_range": [
+        6.897482782951556,
+        19.87807889096439
+      ],
+      "evaluation_seconds_observed_rate_projection": [
+        275.89931131806225,
+        795.1231556385756
+      ],
+      "evaluation_worker_seconds_rate_projection": [
+        753.6253177856894,
+        753.6253177856894
+      ],
+      "uncertainty": "Observed rates only; tree/replay growth and hardware can change cost. No maximum bound."
+    },
+    {
+      "cell": "ocatari/extra_trees/501611",
+      "training_seconds_observed_rate_range": [
+        16498.640491602146,
+        16498.640491602146
+      ],
+      "log_bytes_observed_rate_range": [
+        718991308.59375,
+        718991308.59375
+      ],
+      "peak_rss_observed_range": [
+        321540096,
+        321540096
+      ],
+      "checkpoint_bytes_before_retention_observed_size_projection": [
+        98584577,
+        29934512408
+      ],
+      "evaluation_seconds_episode_observed_range": [
+        6.897482782951556,
+        19.87807889096439
+      ],
+      "evaluation_seconds_observed_rate_projection": [
+        275.89931131806225,
+        795.1231556385756
+      ],
+      "evaluation_worker_seconds_rate_projection": [
+        753.6253177856894,
+        753.6253177856894
+      ],
+      "uncertainty": "Observed rates only; tree/replay growth and hardware can change cost. No maximum bound."
+    },
+    {
+      "cell": "ocatari/extra_trees/501612",
+      "training_seconds_observed_rate_range": [
+        16498.640491602146,
+        16498.640491602146
+      ],
+      "log_bytes_observed_rate_range": [
+        718991308.59375,
+        718991308.59375
+      ],
+      "peak_rss_observed_range": [
+        321540096,
+        321540096
+      ],
+      "checkpoint_bytes_before_retention_observed_size_projection": [
+        98584577,
+        29934512408
+      ],
+      "evaluation_seconds_episode_observed_range": [
+        6.897482782951556,
+        19.87807889096439
+      ],
+      "evaluation_seconds_observed_rate_projection": [
+        275.89931131806225,
+        795.1231556385756
+      ],
+      "evaluation_worker_seconds_rate_projection": [
+        753.6253177856894,
+        753.6253177856894
+      ],
+      "uncertainty": "Observed rates only; tree/replay growth and hardware can change cost. No maximum bound."
+    },
+    {
+      "cell": "ocatari/extra_trees/501613",
+      "training_seconds_observed_rate_range": [
+        16498.640491602146,
+        16498.640491602146
+      ],
+      "log_bytes_observed_rate_range": [
+        718991308.59375,
+        718991308.59375
+      ],
+      "peak_rss_observed_range": [
+        321540096,
+        321540096
+      ],
+      "checkpoint_bytes_before_retention_observed_size_projection": [
+        98584577,
+        29934512408
+      ],
+      "evaluation_seconds_episode_observed_range": [
+        6.897482782951556,
+        19.87807889096439
+      ],
+      "evaluation_seconds_observed_rate_projection": [
+        275.89931131806225,
+        795.1231556385756
+      ],
+      "evaluation_worker_seconds_rate_projection": [
+        753.6253177856894,
+        753.6253177856894
+      ],
+      "uncertainty": "Observed rates only; tree/replay growth and hardware can change cost. No maximum bound."
+    },
+    {
+      "cell": "ocatari/extra_trees/501614",
+      "training_seconds_observed_rate_range": [
+        16498.640491602146,
+        16498.640491602146
+      ],
+      "log_bytes_observed_rate_range": [
+        718991308.59375,
+        718991308.59375
+      ],
+      "peak_rss_observed_range": [
+        321540096,
+        321540096
+      ],
+      "checkpoint_bytes_before_retention_observed_size_projection": [
+        98584577,
+        29934512408
+      ],
+      "evaluation_seconds_episode_observed_range": [
+        6.897482782951556,
+        19.87807889096439
+      ],
+      "evaluation_seconds_observed_rate_projection": [
+        275.89931131806225,
+        795.1231556385756
+      ],
+      "evaluation_worker_seconds_rate_projection": [
+        753.6253177856894,
+        753.6253177856894
+      ],
+      "uncertainty": "Observed rates only; tree/replay growth and hardware can change cost. No maximum bound."
+    },
+    {
+      "cell": "ocatari/extra_trees/501615",
+      "training_seconds_observed_rate_range": [
+        16498.640491602146,
+        16498.640491602146
+      ],
+      "log_bytes_observed_rate_range": [
+        718991308.59375,
+        718991308.59375
+      ],
+      "peak_rss_observed_range": [
+        321540096,
+        321540096
+      ],
+      "checkpoint_bytes_before_retention_observed_size_projection": [
+        98584577,
+        29934512408
+      ],
+      "evaluation_seconds_episode_observed_range": [
+        6.897482782951556,
+        19.87807889096439
+      ],
+      "evaluation_seconds_observed_rate_projection": [
+        275.89931131806225,
+        795.1231556385756
+      ],
+      "evaluation_worker_seconds_rate_projection": [
+        753.6253177856894,
+        753.6253177856894
+      ],
+      "uncertainty": "Observed rates only; tree/replay growth and hardware can change cost. No maximum bound."
+    }
+  ],
+  "uncertainty": "Missing compatible measurements means unknown time/storage, never zero.",
+  "pending_authorizations": [
+    "milestone authorization",
+    "compatible_Linux_cost_measurements",
+    "explicit_long_campaign_authorization"
+  ],
+  "reserved_test_episodes_executed": 0
+}

@@ -1,0 +1,38 @@
+{
+  "payload": {
+    "campaign": "a1f0dc5d98593a103a95cbff9dc223d8ecb91690d29fabe638714dedecda5c32",
+    "cell": "26f2086c9d50d5ede0c820919248a080ed856436d0b0f6396a31e91be74d99a5",
+    "checkpoint": {
+      "path": "checkpoints/300000-0de8d6dddb32dbbaccea1d4c94db004f0a835a61142dd809a2afa4f5f4743849.pkl",
+      "sha256": "0de8d6dddb32dbbaccea1d4c94db004f0a835a61142dd809a2afa4f5f4743849"
+    },
+    "group": "intermediate",
+    "horizon": 27000,
+    "policy": "greedy_uniform_ties_v1",
+    "runtime": {
+      "ale-py": "0.10.2",
+      "gymnasium": "1.1.1",
+      "machine": "x86_64",
+      "numeric_threads": {
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1"
+      },
+      "numpy": "1.26.4",
+      "ocatari": "2.2.1",
+      "platform": "linux",
+      "python": "3.11.7",
+      "scipy": "1.12.0"
+    },
+    "schema": "pong_checkpoint_evaluation_v2",
+    "seed": 734001,
+    "seeds": [
+      734001,
+      734002
+    ],
+    "service": "first_fire_v1"
+  },
+  "schema": "pong_analysis_unit_v2",
+  "sha256": "f74b2fc3b1b03675cbab575e300506470078dc37bdb9e0528206323af7561c63"
+}

@@ -1,0 +1,89 @@
+{
+  "verified_at_utc": "2026-11-14T19:53:53.609226+00:00",
+  "source_hashes": {
+    "bayesian_rrtl/tree.py": "a634b623b0e11cebaf47af6f0f55b32805c52af649b4e1b4e02d5eb8a48e71c4",
+    "bayesian_rrtl/ensemble.py": "4c73c8a7de405a3dc841401b6719906308c7a7c51544ebd6ac55abdfe7d4eeea",
+    "bayesian_rrtl/online/learners.py": "168ef10e0dbc63bbf1bef3eb629a8818409e97c2ac90abbdd54da64864d6673d",
+    "experiments/breakout_bart_stability.py": "7a9edcfd1c6e079bbd909682ee4982ce367e62b928d80ec0c07ace48d87cdd09",
+    "tests/test_bart_stability.py": "8ced73cfdf30e31bc864cbc4984cb3ac2e65fcaec6921d6ff464c646fe9e92f1",
+    "configs/breakout_bart_stability_1m_20261114.json": "5f9de4fbf59bdf88103f26af7b47ec79cac7bc8b3733d12c63cffa0757d9a640"
+  },
+  "trainings": 10,
+  "variants": [
+    {
+      "variant": "bounded_structure",
+      "training_seeds": [
+        733101,
+        733102,
+        733103,
+        733104,
+        733105
+      ],
+      "max_decisions": 1000000,
+      "smoke_fits": 6,
+      "smoke_target_model_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "smoke_verified_constraints": {
+        "actions_retained_for_support": 0,
+        "distance_rejections": 0,
+        "support_repair_nodes": 0,
+        "target_model_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "target_update_interval": 1,
+        "verified_fits": 6
+      },
+      "first_training_counter": 0,
+      "first_training_state": "partial"
+    },
+    {
+      "variant": "slow_target",
+      "training_seeds": [
+        733101,
+        733102,
+        733103,
+        733104,
+        733105
+      ],
+      "max_decisions": 1000000,
+      "smoke_fits": 6,
+      "smoke_target_model_ids": [
+        0,
+        0,
+        0,
+        0,
+        4,
+        4
+      ],
+      "smoke_verified_constraints": {
+        "actions_retained_for_support": 0,
+        "distance_rejections": 0,
+        "support_repair_nodes": 0,
+        "target_model_ids": [
+          0,
+          0,
+          0,
+          0,
+          4,
+          4
+        ],
+        "target_update_interval": 4,
+        "verified_fits": 6
+      },
+      "first_training_counter": 0,
+      "first_training_state": "partial"
+    }
+  ],
+  "jobs": "stability_prepare\t39800\nstability_paired\t39801\nreport\t39802\n"
+}

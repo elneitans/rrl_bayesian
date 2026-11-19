@@ -1,0 +1,1355 @@
+{
+  "payload": {
+    "accounting": {
+      "evaluation_budget_seconds_per_episode_sum": 8158.682768567698,
+      "evaluation_worker_seconds_known_sum": 8190.212251906982,
+      "training_seconds_per_unit_sum": 719.1294896240579
+    },
+    "analysis": {
+      "limits": [
+        "Few training seeds and degenerate bootstrap intervals do not establish equivalence.",
+        "Fixed-data A diagnostics do not certify every online BART fit.",
+        "A poor policy alone does not establish overfit, bad mixing or representation insufficiency.",
+        "Active times exclude queue and process startup; sums are not parallel campaign wall time."
+      ],
+      "no_cross_game_score_average": true,
+      "paired_contrasts": [],
+      "runs": [
+        {
+          "auc_interval": [
+            0,
+            20480
+          ],
+          "auc_status": "complete",
+          "cell": "Breakout/ocatari/bart/710601",
+          "counter": 20480,
+          "curve": [
+            {
+              "completed_games": 2,
+              "interactions": 0,
+              "mean_return": 1.0,
+              "training_active_seconds": 0.0,
+              "truncation_fraction": 0.0
+            },
+            {
+              "completed_games": 0,
+              "interactions": 20480,
+              "mean_return": 0.0,
+              "training_active_seconds": 706.3074729094515,
+              "truncation_fraction": 1.0
+            }
+          ],
+          "evaluation_seconds": 8190.212251906982,
+          "final_development": {
+            "completed_games": 0,
+            "episodes": [
+              {
+                "actions": {
+                  "FIRE": 1,
+                  "NOOP": 26995,
+                  "RIGHT": 4
+                },
+                "raw_return": 0.0,
+                "reason": null,
+                "return": 0.0,
+                "return_scope": "horizon_limited",
+                "seconds": 694.3121757720364,
+                "seed": 712601,
+                "status": "completed",
+                "steps": 27000,
+                "terminated": false,
+                "truncated": true,
+                "unique_encoded_states": 8
+              },
+              {
+                "actions": {
+                  "FIRE": 1,
+                  "NOOP": 26995,
+                  "RIGHT": 4
+                },
+                "raw_return": 0.0,
+                "reason": null,
+                "return": 0.0,
+                "return_scope": "horizon_limited",
+                "seconds": 712.867588856956,
+                "seed": 712602,
+                "status": "completed",
+                "steps": 27000,
+                "terminated": false,
+                "truncated": true,
+                "unique_encoded_states": 8
+              },
+              {
+                "actions": {
+                  "FIRE": 1,
+                  "NOOP": 26995,
+                  "RIGHT": 4
+                },
+                "raw_return": 0.0,
+                "reason": null,
+                "return": 0.0,
+                "return_scope": "horizon_limited",
+                "seconds": 659.9718022000743,
+                "seed": 712603,
+                "status": "completed",
+                "steps": 27000,
+                "terminated": false,
+                "truncated": true,
+                "unique_encoded_states": 8
+              },
+              {
+                "actions": {
+                  "FIRE": 1,
+                  "NOOP": 26995,
+                  "RIGHT": 4
+                },
+                "raw_return": 0.0,
+                "reason": null,
+                "return": 0.0,
+                "return_scope": "horizon_limited",
+                "seconds": 702.6277493169764,
+                "seed": 712604,
+                "status": "completed",
+                "steps": 27000,
+                "terminated": false,
+                "truncated": true,
+                "unique_encoded_states": 8
+              },
+              {
+                "actions": {
+                  "FIRE": 1,
+                  "NOOP": 26995,
+                  "RIGHT": 4
+                },
+                "raw_return": 0.0,
+                "reason": null,
+                "return": 0.0,
+                "return_scope": "horizon_limited",
+                "seconds": 678.6382478810847,
+                "seed": 712605,
+                "status": "completed",
+                "steps": 27000,
+                "terminated": false,
+                "truncated": true,
+                "unique_encoded_states": 8
+              },
+              {
+                "actions": {
+                  "FIRE": 1,
+                  "NOOP": 26995,
+                  "RIGHT": 4
+                },
+                "raw_return": 0.0,
+                "reason": null,
+                "return": 0.0,
+                "return_scope": "horizon_limited",
+                "seconds": 643.4357277649688,
+                "seed": 712606,
+                "status": "completed",
+                "steps": 27000,
+                "terminated": false,
+                "truncated": true,
+                "unique_encoded_states": 8
+              },
+              {
+                "actions": {
+                  "FIRE": 1,
+                  "NOOP": 26995,
+                  "RIGHT": 4
+                },
+                "raw_return": 0.0,
+                "reason": null,
+                "return": 0.0,
+                "return_scope": "horizon_limited",
+                "seconds": 683.3064246129943,
+                "seed": 712607,
+                "status": "completed",
+                "steps": 27000,
+                "terminated": false,
+                "truncated": true,
+                "unique_encoded_states": 8
+              },
+              {
+                "actions": {
+                  "FIRE": 1,
+                  "NOOP": 26995,
+                  "RIGHT": 4
+                },
+                "raw_return": 0.0,
+                "reason": null,
+                "return": 0.0,
+                "return_scope": "horizon_limited",
+                "seconds": 708.8252058340004,
+                "seed": 712608,
+                "status": "completed",
+                "steps": 27000,
+                "terminated": false,
+                "truncated": true,
+                "unique_encoded_states": 8
+              },
+              {
+                "actions": {
+                  "FIRE": 1,
+                  "NOOP": 26995,
+                  "RIGHT": 4
+                },
+                "raw_return": 0.0,
+                "reason": null,
+                "return": 0.0,
+                "return_scope": "horizon_limited",
+                "seconds": 667.0928242069203,
+                "seed": 712609,
+                "status": "completed",
+                "steps": 27000,
+                "terminated": false,
+                "truncated": true,
+                "unique_encoded_states": 8
+              },
+              {
+                "actions": {
+                  "FIRE": 1,
+                  "NOOP": 26995,
+                  "RIGHT": 4
+                },
+                "raw_return": 0.0,
+                "reason": null,
+                "return": 0.0,
+                "return_scope": "horizon_limited",
+                "seconds": 666.5712316449499,
+                "seed": 712610,
+                "status": "completed",
+                "steps": 27000,
+                "terminated": false,
+                "truncated": true,
+                "unique_encoded_states": 8
+              }
+            ],
+            "horizon": 27000,
+            "iqr_raw_return": 0.0,
+            "mean_completed_game_raw_return": null,
+            "mean_raw_return": 0.0,
+            "median_raw_return": 0.0,
+            "schema": "pong_evaluation_v2",
+            "std_raw_return": 0.0,
+            "truncation_fraction": 1.0
+          },
+          "game": "Breakout",
+          "learner": "bart",
+          "maximum_decisions": 20480,
+          "metrics": {
+            "completed_games": 101,
+            "ended_episodes": 101,
+            "epsilon": 0.38940363387971727,
+            "interactions": 20480,
+            "learner": {
+              "cache_bytes": 0,
+              "complexity": {
+                "FIRE": {
+                  "diagnostics": {
+                    "burn_in": 50,
+                    "elapsed_seconds": 3.795472714002244,
+                    "m": 20,
+                    "max_cache_error": null,
+                    "moves": {
+                      "change": {
+                        "acceptance_given_possible": null,
+                        "accepted": 0,
+                        "impossible": 0,
+                        "rejected": 0,
+                        "selected": 0
+                      },
+                      "grow": {
+                        "acceptance_given_possible": 0.13437195715676728,
+                        "accepted": 138,
+                        "impossible": 0,
+                        "rejected": 889,
+                        "selected": 1027
+                      },
+                      "prune": {
+                        "acceptance_given_possible": 0.2040133779264214,
+                        "accepted": 122,
+                        "impossible": 375,
+                        "rejected": 476,
+                        "selected": 973
+                      },
+                      "swap": {
+                        "acceptance_given_possible": null,
+                        "accepted": 0,
+                        "impossible": 0,
+                        "rejected": 0,
+                        "selected": 0
+                      }
+                    },
+                    "retained": 50,
+                    "sweeps": 100,
+                    "targets_outside_scale": 0
+                  },
+                  "draws": 50,
+                  "leaves_last_draw": 36,
+                  "max_depth_last_draw": 1,
+                  "trees": 20
+                },
+                "LEFT": {
+                  "diagnostics": {
+                    "burn_in": 50,
+                    "elapsed_seconds": 3.260413651005365,
+                    "m": 20,
+                    "max_cache_error": null,
+                    "moves": {
+                      "change": {
+                        "acceptance_given_possible": null,
+                        "accepted": 0,
+                        "impossible": 0,
+                        "rejected": 0,
+                        "selected": 0
+                      },
+                      "grow": {
+                        "acceptance_given_possible": 0.12082514734774066,
+                        "accepted": 123,
+                        "impossible": 0,
+                        "rejected": 895,
+                        "selected": 1018
+                      },
+                      "prune": {
+                        "acceptance_given_possible": 0.25874125874125875,
+                        "accepted": 111,
+                        "impossible": 553,
+                        "rejected": 318,
+                        "selected": 982
+                      },
+                      "swap": {
+                        "acceptance_given_possible": null,
+                        "accepted": 0,
+                        "impossible": 0,
+                        "rejected": 0,
+                        "selected": 0
+                      }
+                    },
+                    "retained": 50,
+                    "sweeps": 100,
+                    "targets_outside_scale": 0
+                  },
+                  "draws": 50,
+                  "leaves_last_draw": 32,
+                  "max_depth_last_draw": 2,
+                  "trees": 20
+                },
+                "NOOP": {
+                  "diagnostics": {
+                    "burn_in": 50,
+                    "elapsed_seconds": 3.089072755072266,
+                    "m": 20,
+                    "max_cache_error": null,
+                    "moves": {
+                      "change": {
+                        "acceptance_given_possible": null,
+                        "accepted": 0,
+                        "impossible": 0,
+                        "rejected": 0,
+                        "selected": 0
+                      },
+                      "grow": {
+                        "acceptance_given_possible": 0.12223291626564003,
+                        "accepted": 127,
+                        "impossible": 0,
+                        "rejected": 912,
+                        "selected": 1039
+                      },
+                      "prune": {
+                        "acceptance_given_possible": 0.3286908077994429,
+                        "accepted": 118,
+                        "impossible": 602,
+                        "rejected": 241,
+                        "selected": 961
+                      },
+                      "swap": {
+                        "acceptance_given_possible": null,
+                        "accepted": 0,
+                        "impossible": 0,
+                        "rejected": 0,
+                        "selected": 0
+                      }
+                    },
+                    "retained": 50,
+                    "sweeps": 100,
+                    "targets_outside_scale": 0
+                  },
+                  "draws": 50,
+                  "leaves_last_draw": 29,
+                  "max_depth_last_draw": 1,
+                  "trees": 20
+                },
+                "RIGHT": {
+                  "diagnostics": {
+                    "burn_in": 50,
+                    "elapsed_seconds": 3.1629755130270496,
+                    "m": 20,
+                    "max_cache_error": null,
+                    "moves": {
+                      "change": {
+                        "acceptance_given_possible": null,
+                        "accepted": 0,
+                        "impossible": 0,
+                        "rejected": 0,
+                        "selected": 0
+                      },
+                      "grow": {
+                        "acceptance_given_possible": 0.13872255489021956,
+                        "accepted": 139,
+                        "impossible": 0,
+                        "rejected": 863,
+                        "selected": 1002
+                      },
+                      "prune": {
+                        "acceptance_given_possible": 0.30714285714285716,
+                        "accepted": 129,
+                        "impossible": 578,
+                        "rejected": 291,
+                        "selected": 998
+                      },
+                      "swap": {
+                        "acceptance_given_possible": null,
+                        "accepted": 0,
+                        "impossible": 0,
+                        "rejected": 0,
+                        "selected": 0
+                      }
+                    },
+                    "retained": 50,
+                    "sweeps": 100,
+                    "targets_outside_scale": 0
+                  },
+                  "draws": 50,
+                  "leaves_last_draw": 30,
+                  "max_depth_last_draw": 1,
+                  "trees": 20
+                }
+              },
+              "fits": 40,
+              "kind": "bart",
+              "phase_seconds": {
+                "encoding": 19.685288419248536,
+                "fit": 523.2883706766879,
+                "prediction": 63.05312026862521,
+                "selection_targets": 8.317115572979674
+              },
+              "replay_size": 20480
+            },
+            "phase_seconds": {
+              "checkpoint_logs": 44.83009417750873,
+              "emulation_extraction": 45.90674071176909,
+              "fit": 523.2883706766879,
+              "policy_collection_td": 1.0756307864794508,
+              "prediction": 63.05312026862521,
+              "relations_encoding": 21.128578335396014,
+              "selection_targets": 8.317115572979674
+            },
+            "relations": 11,
+            "truncated_episodes": 0
+          },
+          "normalized_auc_decisions": 0.5,
+          "peak_rss_bytes": 299667456,
+          "pipeline": "ocatari",
+          "queue_seconds": null,
+          "retries": 0,
+          "seed": 710601,
+          "state": "completed",
+          "training_seconds": 719.1294896240579
+        }
+      ],
+      "seed_summaries": [
+        {
+          "game": "Breakout",
+          "independent_unit": "training_seed",
+          "iqr": 0.0,
+          "learner": "bart",
+          "mean": 0.0,
+          "median": 0.0,
+          "n_training_seeds": 1,
+          "per_training_seed": {
+            "710601": 0.0
+          },
+          "pipeline": "ocatari",
+          "return_scope_composition": {
+            "710601": {
+              "completed_games": 0,
+              "mean_by_scope": {
+                "horizon_limited": 0.0
+              },
+              "truncation_fraction": 1.0
+            }
+          },
+          "std": null
+        }
+      ]
+    },
+    "campaign": "bbf97c642a0c93cb86dd3512a9ca325692cdbbf14f3bebd18f051a1c36832400",
+    "cells": [
+      {
+        "cell": "Breakout/ocatari/bart/710601",
+        "comparison_state": "completed",
+        "counter": 20480,
+        "evaluation_budget_seconds": 8158.682768567698,
+        "evaluation_seconds": 8190.212251906982,
+        "evaluations": [
+          {
+            "checkpoint": {
+              "path": "checkpoints/20480-132cd05e0a5a7a9c2a7693976f6363694224797ad2a1c264210da913d59b9850.pkl",
+              "sha256": "132cd05e0a5a7a9c2a7693976f6363694224797ad2a1c264210da913d59b9850"
+            },
+            "counter": 20480,
+            "floor_result": null,
+            "group": "final_development",
+            "report": {
+              "completed_games": 0,
+              "episodes": [
+                {
+                  "actions": {
+                    "FIRE": 1,
+                    "NOOP": 26995,
+                    "RIGHT": 4
+                  },
+                  "raw_return": 0.0,
+                  "reason": null,
+                  "return": 0.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 694.3121757720364,
+                  "seed": 712601,
+                  "status": "completed",
+                  "steps": 27000,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 8
+                },
+                {
+                  "actions": {
+                    "FIRE": 1,
+                    "NOOP": 26995,
+                    "RIGHT": 4
+                  },
+                  "raw_return": 0.0,
+                  "reason": null,
+                  "return": 0.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 712.867588856956,
+                  "seed": 712602,
+                  "status": "completed",
+                  "steps": 27000,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 8
+                },
+                {
+                  "actions": {
+                    "FIRE": 1,
+                    "NOOP": 26995,
+                    "RIGHT": 4
+                  },
+                  "raw_return": 0.0,
+                  "reason": null,
+                  "return": 0.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 659.9718022000743,
+                  "seed": 712603,
+                  "status": "completed",
+                  "steps": 27000,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 8
+                },
+                {
+                  "actions": {
+                    "FIRE": 1,
+                    "NOOP": 26995,
+                    "RIGHT": 4
+                  },
+                  "raw_return": 0.0,
+                  "reason": null,
+                  "return": 0.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 702.6277493169764,
+                  "seed": 712604,
+                  "status": "completed",
+                  "steps": 27000,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 8
+                },
+                {
+                  "actions": {
+                    "FIRE": 1,
+                    "NOOP": 26995,
+                    "RIGHT": 4
+                  },
+                  "raw_return": 0.0,
+                  "reason": null,
+                  "return": 0.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 678.6382478810847,
+                  "seed": 712605,
+                  "status": "completed",
+                  "steps": 27000,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 8
+                },
+                {
+                  "actions": {
+                    "FIRE": 1,
+                    "NOOP": 26995,
+                    "RIGHT": 4
+                  },
+                  "raw_return": 0.0,
+                  "reason": null,
+                  "return": 0.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 643.4357277649688,
+                  "seed": 712606,
+                  "status": "completed",
+                  "steps": 27000,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 8
+                },
+                {
+                  "actions": {
+                    "FIRE": 1,
+                    "NOOP": 26995,
+                    "RIGHT": 4
+                  },
+                  "raw_return": 0.0,
+                  "reason": null,
+                  "return": 0.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 683.3064246129943,
+                  "seed": 712607,
+                  "status": "completed",
+                  "steps": 27000,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 8
+                },
+                {
+                  "actions": {
+                    "FIRE": 1,
+                    "NOOP": 26995,
+                    "RIGHT": 4
+                  },
+                  "raw_return": 0.0,
+                  "reason": null,
+                  "return": 0.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 708.8252058340004,
+                  "seed": 712608,
+                  "status": "completed",
+                  "steps": 27000,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 8
+                },
+                {
+                  "actions": {
+                    "FIRE": 1,
+                    "NOOP": 26995,
+                    "RIGHT": 4
+                  },
+                  "raw_return": 0.0,
+                  "reason": null,
+                  "return": 0.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 667.0928242069203,
+                  "seed": 712609,
+                  "status": "completed",
+                  "steps": 27000,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 8
+                },
+                {
+                  "actions": {
+                    "FIRE": 1,
+                    "NOOP": 26995,
+                    "RIGHT": 4
+                  },
+                  "raw_return": 0.0,
+                  "reason": null,
+                  "return": 0.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 666.5712316449499,
+                  "seed": 712610,
+                  "status": "completed",
+                  "steps": 27000,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 8
+                }
+              ],
+              "horizon": 27000,
+              "iqr_raw_return": 0.0,
+              "mean_completed_game_raw_return": null,
+              "mean_raw_return": 0.0,
+              "median_raw_return": 0.0,
+              "schema": "pong_evaluation_v2",
+              "std_raw_return": 0.0,
+              "truncation_fraction": 1.0
+            },
+            "seconds": 6817.6489780909615,
+            "training_active_seconds": 706.3074729094515
+          },
+          {
+            "checkpoint": {
+              "path": "checkpoints/0-b47c020ab9ff2846d4fd83a6b2468e7744ecd7b335e9558aa609d565e42d4649.pkl",
+              "sha256": "b47c020ab9ff2846d4fd83a6b2468e7744ecd7b335e9558aa609d565e42d4649"
+            },
+            "counter": 0,
+            "floor_result": null,
+            "group": "intermediate",
+            "report": {
+              "completed_games": 2,
+              "episodes": [
+                {
+                  "actions": {
+                    "FIRE": 36,
+                    "LEFT": 46,
+                    "NOOP": 43,
+                    "RIGHT": 45
+                  },
+                  "raw_return": 1.0,
+                  "reason": null,
+                  "return": 1.0,
+                  "return_scope": "complete_game",
+                  "seconds": 2.4269450090359896,
+                  "seed": 711601,
+                  "status": "completed",
+                  "steps": 170,
+                  "terminated": true,
+                  "truncated": false,
+                  "unique_encoded_states": 40
+                },
+                {
+                  "actions": {
+                    "FIRE": 57,
+                    "LEFT": 33,
+                    "NOOP": 55,
+                    "RIGHT": 32
+                  },
+                  "raw_return": 1.0,
+                  "reason": null,
+                  "return": 1.0,
+                  "return_scope": "complete_game",
+                  "seconds": 2.4561752550071105,
+                  "seed": 711602,
+                  "status": "completed",
+                  "steps": 177,
+                  "terminated": true,
+                  "truncated": false,
+                  "unique_encoded_states": 36
+                }
+              ],
+              "horizon": 27000,
+              "iqr_raw_return": 0.0,
+              "mean_completed_game_raw_return": 1.0,
+              "mean_raw_return": 1.0,
+              "median_raw_return": 1.0,
+              "schema": "pong_evaluation_v2",
+              "std_raw_return": 0.0,
+              "truncation_fraction": 0.0
+            },
+            "seconds": 4.8831202640431,
+            "training_active_seconds": 0.0
+          },
+          {
+            "checkpoint": {
+              "path": "checkpoints/20480-132cd05e0a5a7a9c2a7693976f6363694224797ad2a1c264210da913d59b9850.pkl",
+              "sha256": "132cd05e0a5a7a9c2a7693976f6363694224797ad2a1c264210da913d59b9850"
+            },
+            "counter": 20480,
+            "floor_result": null,
+            "group": "intermediate",
+            "report": {
+              "completed_games": 0,
+              "episodes": [
+                {
+                  "actions": {
+                    "FIRE": 1,
+                    "NOOP": 26995,
+                    "RIGHT": 4
+                  },
+                  "raw_return": 0.0,
+                  "reason": null,
+                  "return": 0.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 682.342116115964,
+                  "seed": 711601,
+                  "status": "completed",
+                  "steps": 27000,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 8
+                },
+                {
+                  "actions": {
+                    "FIRE": 1,
+                    "NOOP": 26995,
+                    "RIGHT": 4
+                  },
+                  "raw_return": 0.0,
+                  "reason": null,
+                  "return": 0.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 651.0291674869368,
+                  "seed": 711602,
+                  "status": "completed",
+                  "steps": 27000,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 8
+                }
+              ],
+              "horizon": 27000,
+              "iqr_raw_return": 0.0,
+              "mean_completed_game_raw_return": null,
+              "mean_raw_return": 0.0,
+              "median_raw_return": 0.0,
+              "schema": "pong_evaluation_v2",
+              "std_raw_return": 0.0,
+              "truncation_fraction": 1.0
+            },
+            "seconds": 1333.3712836029008,
+            "training_active_seconds": 706.3074729094515
+          }
+        ],
+        "game": "Breakout",
+        "inventory": {
+          "artifacts": [
+            {
+              "bytes": 34579,
+              "confirmed": true,
+              "path": "checkpoints/0-b47c020ab9ff2846d4fd83a6b2468e7744ecd7b335e9558aa609d565e42d4649.pkl",
+              "protected": true,
+              "removable": false
+            },
+            {
+              "bytes": 1658652,
+              "confirmed": true,
+              "path": "checkpoints/1024-0970b515e830af42d4a43ef29b3e08ddd13d0d1215b4bd17f1f35a68265b4559.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 4277125,
+              "confirmed": true,
+              "path": "checkpoints/10240-77d17ab0cbff7c69b265f466691e504695463e1c81b43f167fd97c4d8bc4e64b.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 4389427,
+              "confirmed": true,
+              "path": "checkpoints/10752-2eb571ef3c451b65109f1eaa44a8c090bba4ce40348985f1fd2a7cd274c68364.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 4528635,
+              "confirmed": true,
+              "path": "checkpoints/11264-7504bec36289982cd2c5b693d76fa7bef15f9eb60586a8ad13446ca977d2014e.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 4677166,
+              "confirmed": true,
+              "path": "checkpoints/11776-e3bb72aad6726c6b8b926c29c2af0e1bfabb21312f4c919c7255b5b1f5f307f0.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 4796983,
+              "confirmed": true,
+              "path": "checkpoints/12288-36c8b5ea067dabd750f81b6428ced820f029cbeae74ece95f74c327f2376506c.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 4867555,
+              "confirmed": true,
+              "path": "checkpoints/12800-6d4569b8b2f1247c5d3179861902e739016c67706ef9e7b5951ae51f22899c42.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 4949122,
+              "confirmed": true,
+              "path": "checkpoints/13312-cb4fc745da30db439222be2849b1eb6d3b706bb16307ce525d3cf9551c129794.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 5120541,
+              "confirmed": true,
+              "path": "checkpoints/13824-931ffd544ff60866f334d5fde630cf7ff45169c62db085c9562f3f30330c7649.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 5300164,
+              "confirmed": true,
+              "path": "checkpoints/14336-07cebcc0f398c8951b40be83930d69eacb10c9852a3b84f20a8e5841ca707986.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 5383411,
+              "confirmed": true,
+              "path": "checkpoints/14848-343ef15e28276b6bf87f7d53da8ea6b88e04df9aff477c31e3742973c60c5d64.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 1896403,
+              "confirmed": true,
+              "path": "checkpoints/1536-344bc0d00d695aed6a3cf4c1679858766faea62e49b841787ae3e7be147315eb.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 5478240,
+              "confirmed": true,
+              "path": "checkpoints/15360-a3b5a36959c33fc61570db997a75da8b024e252d2de8bdda0780587449b4df13.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 5616949,
+              "confirmed": true,
+              "path": "checkpoints/15872-c942e4981eb4b6f86b44173884ae4547a836db250fca2131d8c9d2359a221537.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 5713628,
+              "confirmed": true,
+              "path": "checkpoints/16384-9b6ea6fea7306cd1f0c1c92aaeeee632e285d022d77d435551ad1e2c5866f7c4.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 5891076,
+              "confirmed": true,
+              "path": "checkpoints/16896-9d2e8c195a732b7874b0292cf726d94a3dd2fadcb4979454fd8b3c23dbd3021e.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 6079196,
+              "confirmed": true,
+              "path": "checkpoints/17408-61e9e2b1773e087a7a5b932bc86003cf01c54d1457eae2e02e2e2c5b76943a30.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 6154814,
+              "confirmed": true,
+              "path": "checkpoints/17920-2c946d89c892d2109427afa9d281d7e24bd12cb231c8c34d7097016ee3a86f85.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 6250130,
+              "confirmed": true,
+              "path": "checkpoints/18432-0bdfef86ff858d1237d3bcdea5a42c3c530d3d1962ae68cf126bab1f6217e796.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 6381962,
+              "confirmed": true,
+              "path": "checkpoints/18944-09e4542254af8e97860a001f67b0bea65d6bc13dd4ed28f74a21ad1dab944dc0.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 6521663,
+              "confirmed": true,
+              "path": "checkpoints/19456-6cb5562172ed244693231c73524bbe581bfee9c9d4a54086e45924f2cf058fa6.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 6607942,
+              "confirmed": true,
+              "path": "checkpoints/19968-97b9c1cd29294aaa323c39f763905450641d2b3bd6eae2c76664f95060252d1a.pkl",
+              "protected": true,
+              "removable": false
+            },
+            {
+              "bytes": 2060336,
+              "confirmed": true,
+              "path": "checkpoints/2048-8d14b25a29ee158d1fee10b70d0bcd903fe279b85430b05553e50c70bf120893.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 6752014,
+              "confirmed": true,
+              "path": "checkpoints/20480-132cd05e0a5a7a9c2a7693976f6363694224797ad2a1c264210da913d59b9850.pkl",
+              "protected": true,
+              "removable": false
+            },
+            {
+              "bytes": 2176093,
+              "confirmed": true,
+              "path": "checkpoints/2560-524b2ff0721d76950456df1c1f637483145a9a2a9020cf24220c31f7a2303e8f.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 2347799,
+              "confirmed": true,
+              "path": "checkpoints/3072-4a7492bb624de93b021c8596b3b53b8da51cd354d92250b9cc64a7b2546b9ed8.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 2536259,
+              "confirmed": true,
+              "path": "checkpoints/3584-284f5077314016851804cfd81ae9b8a8607a5a551a075bb64912ec9d06bf6777.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 2640149,
+              "confirmed": true,
+              "path": "checkpoints/4096-f9cf26c39371a4db73011ea0b91795a975bf4fb3d3e5b5308ee3823cfdee83d4.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 2747795,
+              "confirmed": true,
+              "path": "checkpoints/4608-114cea7414e0ee72ab1caf72286ee425d8e86154e6a3f97c804d461d50d9926f.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 819518,
+              "confirmed": true,
+              "path": "checkpoints/512-a1f8c64e8a87b9657bc02d52a7a8e55a66aa66c82b56c99857e75293b7fb58d2.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 2880861,
+              "confirmed": true,
+              "path": "checkpoints/5120-e7bafd76e233133ff5dd378a77f02dc4d2d8f418a4bd47cee265a42936101c6b.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 3010776,
+              "confirmed": true,
+              "path": "checkpoints/5632-5c4a0d8774e7ca4f3e596eff7c0639b063d96e6f9f14c35090520a68c9147870.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 3177853,
+              "confirmed": true,
+              "path": "checkpoints/6144-c9ad0b601caca7f7b225c959b1ee110919bc641f85065aa60d730bd964b859dd.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 3302342,
+              "confirmed": true,
+              "path": "checkpoints/6656-b1c4312e9ba474cd9554fb5080cf02e9926a06d97633e9f47a11e0ca7b2ff01d.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 3372504,
+              "confirmed": true,
+              "path": "checkpoints/7168-e46ed707f63665c8b92dd2139b83456c4c0ee45f79d2b6e895adfa704f12af01.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 3537899,
+              "confirmed": true,
+              "path": "checkpoints/7680-86a9c5bae507fd8c0e7de015758d162759c193f5479d3db687e55f6242698a5f.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 3732212,
+              "confirmed": true,
+              "path": "checkpoints/8192-96563b40fb829c8680cf11f5eb76ad967bd2c242f203f33d6fa73617d9026315.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 3813630,
+              "confirmed": true,
+              "path": "checkpoints/8704-6cc80ff05ecf9fb589acbf2a069118f91533bd34b52286854e6b92dc1f4cf565.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 3916730,
+              "confirmed": true,
+              "path": "checkpoints/9216-0065f6bfe38a9e235c1de48a24e5b0e4168c3dfad06bd01654c262014f25fc26.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 4123603,
+              "confirmed": true,
+              "path": "checkpoints/9728-5ddeaa00f7dac5df782917762cef1a8a6f63ae652717df1e27d03966995dd9a9.pkl",
+              "protected": false,
+              "removable": true
+            }
+          ],
+          "checkpoint_bytes": 169523736,
+          "log_bytes": 6559013,
+          "schema": "pong_retention_v2",
+          "unconfirmed_logs": []
+        },
+        "logs": {
+          "decisions": 20480,
+          "ended_episodes": 101,
+          "raw_return": 201.0
+        },
+        "metrics": {
+          "completed_games": 101,
+          "ended_episodes": 101,
+          "epsilon": 0.38940363387971727,
+          "interactions": 20480,
+          "learner": {
+            "cache_bytes": 0,
+            "complexity": {
+              "FIRE": {
+                "diagnostics": {
+                  "burn_in": 50,
+                  "elapsed_seconds": 3.795472714002244,
+                  "m": 20,
+                  "max_cache_error": null,
+                  "moves": {
+                    "change": {
+                      "acceptance_given_possible": null,
+                      "accepted": 0,
+                      "impossible": 0,
+                      "rejected": 0,
+                      "selected": 0
+                    },
+                    "grow": {
+                      "acceptance_given_possible": 0.13437195715676728,
+                      "accepted": 138,
+                      "impossible": 0,
+                      "rejected": 889,
+                      "selected": 1027
+                    },
+                    "prune": {
+                      "acceptance_given_possible": 0.2040133779264214,
+                      "accepted": 122,
+                      "impossible": 375,
+                      "rejected": 476,
+                      "selected": 973
+                    },
+                    "swap": {
+                      "acceptance_given_possible": null,
+                      "accepted": 0,
+                      "impossible": 0,
+                      "rejected": 0,
+                      "selected": 0
+                    }
+                  },
+                  "retained": 50,
+                  "sweeps": 100,
+                  "targets_outside_scale": 0
+                },
+                "draws": 50,
+                "leaves_last_draw": 36,
+                "max_depth_last_draw": 1,
+                "trees": 20
+              },
+              "LEFT": {
+                "diagnostics": {
+                  "burn_in": 50,
+                  "elapsed_seconds": 3.260413651005365,
+                  "m": 20,
+                  "max_cache_error": null,
+                  "moves": {
+                    "change": {
+                      "acceptance_given_possible": null,
+                      "accepted": 0,
+                      "impossible": 0,
+                      "rejected": 0,
+                      "selected": 0
+                    },
+                    "grow": {
+                      "acceptance_given_possible": 0.12082514734774066,
+                      "accepted": 123,
+                      "impossible": 0,
+                      "rejected": 895,
+                      "selected": 1018
+                    },
+                    "prune": {
+                      "acceptance_given_possible": 0.25874125874125875,
+                      "accepted": 111,
+                      "impossible": 553,
+                      "rejected": 318,
+                      "selected": 982
+                    },
+                    "swap": {
+                      "acceptance_given_possible": null,
+                      "accepted": 0,
+                      "impossible": 0,
+                      "rejected": 0,
+                      "selected": 0
+                    }
+                  },
+                  "retained": 50,
+                  "sweeps": 100,
+                  "targets_outside_scale": 0
+                },
+                "draws": 50,
+                "leaves_last_draw": 32,
+                "max_depth_last_draw": 2,
+                "trees": 20
+              },
+              "NOOP": {
+                "diagnostics": {
+                  "burn_in": 50,
+                  "elapsed_seconds": 3.089072755072266,
+                  "m": 20,
+                  "max_cache_error": null,
+                  "moves": {
+                    "change": {
+                      "acceptance_given_possible": null,
+                      "accepted": 0,
+                      "impossible": 0,
+                      "rejected": 0,
+                      "selected": 0
+                    },
+                    "grow": {
+                      "acceptance_given_possible": 0.12223291626564003,
+                      "accepted": 127,
+                      "impossible": 0,
+                      "rejected": 912,
+                      "selected": 1039
+                    },
+                    "prune": {
+                      "acceptance_given_possible": 0.3286908077994429,
+                      "accepted": 118,
+                      "impossible": 602,
+                      "rejected": 241,
+                      "selected": 961
+                    },
+                    "swap": {
+                      "acceptance_given_possible": null,
+                      "accepted": 0,
+                      "impossible": 0,
+                      "rejected": 0,
+                      "selected": 0
+                    }
+                  },
+                  "retained": 50,
+                  "sweeps": 100,
+                  "targets_outside_scale": 0
+                },
+                "draws": 50,
+                "leaves_last_draw": 29,
+                "max_depth_last_draw": 1,
+                "trees": 20
+              },
+              "RIGHT": {
+                "diagnostics": {
+                  "burn_in": 50,
+                  "elapsed_seconds": 3.1629755130270496,
+                  "m": 20,
+                  "max_cache_error": null,
+                  "moves": {
+                    "change": {
+                      "acceptance_given_possible": null,
+                      "accepted": 0,
+                      "impossible": 0,
+                      "rejected": 0,
+                      "selected": 0
+                    },
+                    "grow": {
+                      "acceptance_given_possible": 0.13872255489021956,
+                      "accepted": 139,
+                      "impossible": 0,
+                      "rejected": 863,
+                      "selected": 1002
+                    },
+                    "prune": {
+                      "acceptance_given_possible": 0.30714285714285716,
+                      "accepted": 129,
+                      "impossible": 578,
+                      "rejected": 291,
+                      "selected": 998
+                    },
+                    "swap": {
+                      "acceptance_given_possible": null,
+                      "accepted": 0,
+                      "impossible": 0,
+                      "rejected": 0,
+                      "selected": 0
+                    }
+                  },
+                  "retained": 50,
+                  "sweeps": 100,
+                  "targets_outside_scale": 0
+                },
+                "draws": 50,
+                "leaves_last_draw": 30,
+                "max_depth_last_draw": 1,
+                "trees": 20
+              }
+            },
+            "fits": 40,
+            "kind": "bart",
+            "phase_seconds": {
+              "encoding": 19.685288419248536,
+              "fit": 523.2883706766879,
+              "prediction": 63.05312026862521,
+              "selection_targets": 8.317115572979674
+            },
+            "replay_size": 20480
+          },
+          "phase_seconds": {
+            "checkpoint_logs": 44.83009417750873,
+            "emulation_extraction": 45.90674071176909,
+            "fit": 523.2883706766879,
+            "policy_collection_td": 1.0756307864794508,
+            "prediction": 63.05312026862521,
+            "relations_encoding": 21.128578335396014,
+            "selection_targets": 8.317115572979674
+          },
+          "relations": 11,
+          "truncated_episodes": 0
+        },
+        "peak_rss_bytes": 299667456,
+        "pending_evaluations": [],
+        "reason": null,
+        "training_attempts": 1,
+        "training_seconds": 719.1294896240579,
+        "training_state": "completed",
+        "unfinished_evaluation_attempts": 0
+      }
+    ],
+    "completed": true,
+    "limitations": [
+      "A floor result does not establish equivalence.",
+      "Smoke is technical only; primary result is frozen final checkpoint.",
+      "Operational sums are resource consumption, not concurrent wall time."
+    ],
+    "reserved_test_executed": false,
+    "reserved_test_executed_by_report": false,
+    "schema": "pong_progressive_report_v2"
+  },
+  "schema": "pong_analysis_unit_v2",
+  "sha256": "9329107429b81083acd446a47a9a26b6b9f9113d84865ef0df0388b07591ef6e"
+}

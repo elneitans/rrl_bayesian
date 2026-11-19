@@ -1,0 +1,127 @@
+{
+  "payload": {
+    "binding": {
+      "campaign": "11e337ba6b37c318aa5cdcd82af1b85584ab94c51a1b45b0e614fb665af06b7b",
+      "cell": "2bf519894c2dff417a431ee5792dc0fb58b4b960c84a41212baa6fded31ff106",
+      "learner": "extra_trees",
+      "runtime": {
+        "ale-py": "0.10.2",
+        "gymnasium": "1.1.1",
+        "machine": "x86_64",
+        "numeric_threads": {
+          "MKL_NUM_THREADS": "1",
+          "NUMEXPR_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "numpy": "1.26.4",
+        "ocatari": "2.2.1",
+        "platform": "linux",
+        "python": "3.11.7",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.12.0"
+      }
+    },
+    "checkpoint": {
+      "path": "checkpoints/20480-9dc10d11cce6fc4d0c50ef03219e3922225120f750b7396c600288263cd91e49.pkl",
+      "sha256": "9dc10d11cce6fc4d0c50ef03219e3922225120f750b7396c600288263cd91e49"
+    },
+    "counter": 20480,
+    "log_head": {
+      "end": 20480,
+      "path": "logs/20480-79dd5296c268ebe1503f448c57f6a1c5f85b29e4c437b34dbb854494718fe63d.jsonl",
+      "sha256": "79dd5296c268ebe1503f448c57f6a1c5f85b29e4c437b34dbb854494718fe63d"
+    },
+    "metrics": {
+      "completed_games": 98,
+      "ended_episodes": 98,
+      "epsilon": 0.38940363387971727,
+      "interactions": 20480,
+      "learner": {
+        "cache_bytes": 0,
+        "complexity": {
+          "FIRE": {
+            "config": {
+              "encoding": "nominal_missing_v1",
+              "max_depth": 4,
+              "min_samples_leaf": 2,
+              "n_estimators": 20,
+              "n_jobs": 1,
+              "sklearn_version": "1.9.1"
+            },
+            "estimator": "ExtraTrees",
+            "leaves": 300,
+            "max_depth": 4,
+            "trees": 20
+          },
+          "LEFT": {
+            "config": {
+              "encoding": "nominal_missing_v1",
+              "max_depth": 4,
+              "min_samples_leaf": 2,
+              "n_estimators": 20,
+              "n_jobs": 1,
+              "sklearn_version": "1.9.1"
+            },
+            "estimator": "ExtraTrees",
+            "leaves": 220,
+            "max_depth": 4,
+            "trees": 20
+          },
+          "NOOP": {
+            "config": {
+              "encoding": "nominal_missing_v1",
+              "max_depth": 4,
+              "min_samples_leaf": 2,
+              "n_estimators": 20,
+              "n_jobs": 1,
+              "sklearn_version": "1.9.1"
+            },
+            "estimator": "ExtraTrees",
+            "leaves": 282,
+            "max_depth": 4,
+            "trees": 20
+          },
+          "RIGHT": {
+            "config": {
+              "encoding": "nominal_missing_v1",
+              "max_depth": 4,
+              "min_samples_leaf": 2,
+              "n_estimators": 20,
+              "n_jobs": 1,
+              "sklearn_version": "1.9.1"
+            },
+            "estimator": "ExtraTrees",
+            "leaves": 280,
+            "max_depth": 4,
+            "trees": 20
+          }
+        },
+        "fits": 40,
+        "kind": "extra_trees",
+        "phase_seconds": {
+          "encoding": 20.05210745986551,
+          "fit": 3.988401646958664,
+          "prediction": 24.567461397266015,
+          "selection_targets": 2.649099900969304
+        },
+        "replay_size": 20480
+      },
+      "phase_seconds": {
+        "checkpoint_logs": 64.17769926902838,
+        "emulation_extraction": 47.11826620751526,
+        "fit": 3.988401646958664,
+        "policy_collection_td": 1.104888411005959,
+        "prediction": 24.567461397266015,
+        "relations_encoding": 21.535053108003922,
+        "selection_targets": 2.649099900969304
+      },
+      "relations": 11,
+      "truncated_episodes": 0
+    },
+    "reason": null,
+    "state": "completed"
+  },
+  "schema": "pong_analysis_unit_v2",
+  "sha256": "1bed097dcb98d388e22dd501cb19e03d9c200e65a0a5b7652a2340ae370c028c"
+}

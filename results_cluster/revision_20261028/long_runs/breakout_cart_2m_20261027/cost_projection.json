@@ -1,0 +1,1508 @@
+{
+  "resolved": {
+    "schema": "atari_comparison_v3",
+    "protocol": {
+      "schema": "atari_comparison_v3",
+      "name": "breakout_cart_2m_20261027",
+      "level": "long",
+      "games": {
+        "Breakout": {
+          "environment": {
+            "game": "Breakout",
+            "pipeline": "ocatari",
+            "rom_sha256": "376323f051c3c373c887fd83abead39d87d844ff283d435f4addbfc1710c6fd5",
+            "horizon": 27000,
+            "spatial_tolerance": 4,
+            "temporal_tolerance": 0,
+            "contract": "atari_common_v3"
+          },
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT"
+          ],
+          "relations": {
+            "relation_schema": "breakout_primary_v1",
+            "catalog_hash": "d89f5773ad0bc3aae285478ca4b4cb156099bd2adeff32d1048052ceab89ab1a",
+            "objects": [
+              "player",
+              "ball"
+            ],
+            "relations": 11,
+            "movement": [
+              "player",
+              "ball"
+            ],
+            "coordinates": "pixel_centers_top_left_x_right_y_down",
+            "spatial_tolerance": 4,
+            "temporal_tolerance": 0,
+            "contact": "bbox_overlap_or_touch_both_axes_not_emulator_collision",
+            "history": "previous_decision_no_reward_reset; unknown_previous_presence_unobserved",
+            "identity": "detector_slots; no physical enemy/projectile velocity claim"
+          },
+          "training_seeds": [
+            710601,
+            710602,
+            710603,
+            710604,
+            710605,
+            710606,
+            710607,
+            710608,
+            710609,
+            710610
+          ],
+          "evaluation": {
+            "intermediate": {
+              "seeds": [
+                711601,
+                711602
+              ],
+              "horizon": 27000,
+              "checkpoints": [
+                0,
+                10000,
+                100000,
+                500000,
+                2000000
+              ]
+            },
+            "final_development": {
+              "seeds": [
+                712601,
+                712602,
+                712603,
+                712604,
+                712605,
+                712606,
+                712607,
+                712608,
+                712609,
+                712610
+              ],
+              "horizon": 27000,
+              "checkpoints": [
+                100000,
+                500000,
+                2000000
+              ]
+            },
+            "reserved_test": {
+              "seeds": [
+                810101,
+                810102,
+                810103,
+                810104,
+                810105,
+                810106,
+                810107,
+                810108,
+                810109,
+                810110,
+                810111,
+                810112,
+                810113,
+                810114,
+                810115,
+                810116,
+                810117,
+                810118,
+                810119,
+                810120
+              ],
+              "horizon": 27000,
+              "checkpoints": []
+            }
+          },
+          "max_decisions": 2000000,
+          "milestones": [
+            100000,
+            500000,
+            2000000
+          ],
+          "checkpoint_interval": 512,
+          "budgets": {
+            "training_seconds_per_cell": 86400,
+            "evaluation_seconds_per_episode": 2400,
+            "fit_margin_seconds": 10
+          },
+          "auc_interval": [
+            0,
+            2000000
+          ],
+          "contrasts": [],
+          "primary_metric": "final_development_mean_raw_return"
+        }
+      },
+      "learners": {
+        "cart": {
+          "max_depth": 4,
+          "min_child": 2,
+          "criterion": "SSE"
+        }
+      },
+      "learning": {
+        "gamma": 0.99,
+        "replay_capacity": 50000,
+        "batch_size_per_action": 128,
+        "fit_interval": 512,
+        "warmup_interactions": 512,
+        "bootstrap_on_truncation": true
+      },
+      "exploration": {
+        "epsilon_init": 1,
+        "epsilon_min": 0.1,
+        "epsilon_decay_steps": 50000
+      },
+      "cache_bytes": 1048576,
+      "bart_review": null,
+      "primary_checkpoint": "final",
+      "cells": [
+        {
+          "game": "Breakout",
+          "pipeline": "ocatari",
+          "learner": "cart",
+          "seed": 710601
+        },
+        {
+          "game": "Breakout",
+          "pipeline": "ocatari",
+          "learner": "cart",
+          "seed": 710602
+        },
+        {
+          "game": "Breakout",
+          "pipeline": "ocatari",
+          "learner": "cart",
+          "seed": 710603
+        },
+        {
+          "game": "Breakout",
+          "pipeline": "ocatari",
+          "learner": "cart",
+          "seed": 710604
+        },
+        {
+          "game": "Breakout",
+          "pipeline": "ocatari",
+          "learner": "cart",
+          "seed": 710605
+        },
+        {
+          "game": "Breakout",
+          "pipeline": "ocatari",
+          "learner": "cart",
+          "seed": 710606
+        },
+        {
+          "game": "Breakout",
+          "pipeline": "ocatari",
+          "learner": "cart",
+          "seed": 710607
+        },
+        {
+          "game": "Breakout",
+          "pipeline": "ocatari",
+          "learner": "cart",
+          "seed": 710608
+        },
+        {
+          "game": "Breakout",
+          "pipeline": "ocatari",
+          "learner": "cart",
+          "seed": 710609
+        },
+        {
+          "game": "Breakout",
+          "pipeline": "ocatari",
+          "learner": "cart",
+          "seed": 710610
+        }
+      ],
+      "resources": {
+        "cpus_per_cell": 2,
+        "memory_gib_per_cell": 20
+      },
+      "max_decisions": null,
+      "milestones": [],
+      "evaluation": {},
+      "budgets": {},
+      "checkpoint_interval": null
+    },
+    "cells": [
+      {
+        "pipeline": "ocatari",
+        "learner": "cart",
+        "seed": 710601,
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT"
+          ],
+          "seed": 710601,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 50000,
+          "batch_size_per_action": 128,
+          "fit_interval": 512,
+          "warmup_interactions": 512,
+          "epsilon_init": 1,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            711601,
+            711602,
+            712601,
+            712602,
+            712603,
+            712604,
+            712605,
+            712606,
+            712607,
+            712608,
+            712609,
+            712610
+          ],
+          "test_seeds": [
+            810101,
+            810102,
+            810103,
+            810104,
+            810105,
+            810106,
+            810107,
+            810108,
+            810109,
+            810110,
+            810111,
+            810112,
+            810113,
+            810114,
+            810115,
+            810116,
+            810117,
+            810118,
+            810119,
+            810120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "max_depth": 4,
+          "min_child": 2,
+          "criterion": "SSE"
+        },
+        "game": "Breakout",
+        "environment": {
+          "game": "Breakout",
+          "pipeline": "ocatari",
+          "rom_sha256": "376323f051c3c373c887fd83abead39d87d844ff283d435f4addbfc1710c6fd5",
+          "horizon": 27000,
+          "spatial_tolerance": 4,
+          "temporal_tolerance": 0,
+          "contract": "atari_common_v3"
+        },
+        "id": "Breakout/ocatari/cart/710601",
+        "hash": "f6fff0e1df499550b41cfc3ffd315751cfe259a90ca5119b3808d01532571465"
+      },
+      {
+        "pipeline": "ocatari",
+        "learner": "cart",
+        "seed": 710602,
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT"
+          ],
+          "seed": 710602,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 50000,
+          "batch_size_per_action": 128,
+          "fit_interval": 512,
+          "warmup_interactions": 512,
+          "epsilon_init": 1,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            711601,
+            711602,
+            712601,
+            712602,
+            712603,
+            712604,
+            712605,
+            712606,
+            712607,
+            712608,
+            712609,
+            712610
+          ],
+          "test_seeds": [
+            810101,
+            810102,
+            810103,
+            810104,
+            810105,
+            810106,
+            810107,
+            810108,
+            810109,
+            810110,
+            810111,
+            810112,
+            810113,
+            810114,
+            810115,
+            810116,
+            810117,
+            810118,
+            810119,
+            810120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "max_depth": 4,
+          "min_child": 2,
+          "criterion": "SSE"
+        },
+        "game": "Breakout",
+        "environment": {
+          "game": "Breakout",
+          "pipeline": "ocatari",
+          "rom_sha256": "376323f051c3c373c887fd83abead39d87d844ff283d435f4addbfc1710c6fd5",
+          "horizon": 27000,
+          "spatial_tolerance": 4,
+          "temporal_tolerance": 0,
+          "contract": "atari_common_v3"
+        },
+        "id": "Breakout/ocatari/cart/710602",
+        "hash": "aab541e715b561f0d525ed0f860a982f342d323cd1b83cf4a897533b00fa0968"
+      },
+      {
+        "pipeline": "ocatari",
+        "learner": "cart",
+        "seed": 710603,
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT"
+          ],
+          "seed": 710603,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 50000,
+          "batch_size_per_action": 128,
+          "fit_interval": 512,
+          "warmup_interactions": 512,
+          "epsilon_init": 1,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            711601,
+            711602,
+            712601,
+            712602,
+            712603,
+            712604,
+            712605,
+            712606,
+            712607,
+            712608,
+            712609,
+            712610
+          ],
+          "test_seeds": [
+            810101,
+            810102,
+            810103,
+            810104,
+            810105,
+            810106,
+            810107,
+            810108,
+            810109,
+            810110,
+            810111,
+            810112,
+            810113,
+            810114,
+            810115,
+            810116,
+            810117,
+            810118,
+            810119,
+            810120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "max_depth": 4,
+          "min_child": 2,
+          "criterion": "SSE"
+        },
+        "game": "Breakout",
+        "environment": {
+          "game": "Breakout",
+          "pipeline": "ocatari",
+          "rom_sha256": "376323f051c3c373c887fd83abead39d87d844ff283d435f4addbfc1710c6fd5",
+          "horizon": 27000,
+          "spatial_tolerance": 4,
+          "temporal_tolerance": 0,
+          "contract": "atari_common_v3"
+        },
+        "id": "Breakout/ocatari/cart/710603",
+        "hash": "0d52a9a564bf69ab3b5a89a285d8406fe39236357b6048128485bf6f1174c2e7"
+      },
+      {
+        "pipeline": "ocatari",
+        "learner": "cart",
+        "seed": 710604,
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT"
+          ],
+          "seed": 710604,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 50000,
+          "batch_size_per_action": 128,
+          "fit_interval": 512,
+          "warmup_interactions": 512,
+          "epsilon_init": 1,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            711601,
+            711602,
+            712601,
+            712602,
+            712603,
+            712604,
+            712605,
+            712606,
+            712607,
+            712608,
+            712609,
+            712610
+          ],
+          "test_seeds": [
+            810101,
+            810102,
+            810103,
+            810104,
+            810105,
+            810106,
+            810107,
+            810108,
+            810109,
+            810110,
+            810111,
+            810112,
+            810113,
+            810114,
+            810115,
+            810116,
+            810117,
+            810118,
+            810119,
+            810120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "max_depth": 4,
+          "min_child": 2,
+          "criterion": "SSE"
+        },
+        "game": "Breakout",
+        "environment": {
+          "game": "Breakout",
+          "pipeline": "ocatari",
+          "rom_sha256": "376323f051c3c373c887fd83abead39d87d844ff283d435f4addbfc1710c6fd5",
+          "horizon": 27000,
+          "spatial_tolerance": 4,
+          "temporal_tolerance": 0,
+          "contract": "atari_common_v3"
+        },
+        "id": "Breakout/ocatari/cart/710604",
+        "hash": "e29ebebf03871543a21c7933ed09b2b05785447d4ceeb05cf8ae1ef5031f2fa4"
+      },
+      {
+        "pipeline": "ocatari",
+        "learner": "cart",
+        "seed": 710605,
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT"
+          ],
+          "seed": 710605,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 50000,
+          "batch_size_per_action": 128,
+          "fit_interval": 512,
+          "warmup_interactions": 512,
+          "epsilon_init": 1,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            711601,
+            711602,
+            712601,
+            712602,
+            712603,
+            712604,
+            712605,
+            712606,
+            712607,
+            712608,
+            712609,
+            712610
+          ],
+          "test_seeds": [
+            810101,
+            810102,
+            810103,
+            810104,
+            810105,
+            810106,
+            810107,
+            810108,
+            810109,
+            810110,
+            810111,
+            810112,
+            810113,
+            810114,
+            810115,
+            810116,
+            810117,
+            810118,
+            810119,
+            810120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "max_depth": 4,
+          "min_child": 2,
+          "criterion": "SSE"
+        },
+        "game": "Breakout",
+        "environment": {
+          "game": "Breakout",
+          "pipeline": "ocatari",
+          "rom_sha256": "376323f051c3c373c887fd83abead39d87d844ff283d435f4addbfc1710c6fd5",
+          "horizon": 27000,
+          "spatial_tolerance": 4,
+          "temporal_tolerance": 0,
+          "contract": "atari_common_v3"
+        },
+        "id": "Breakout/ocatari/cart/710605",
+        "hash": "9fc1b2d1b51bc060c5718f893d5b4fa16289d21d7b08a450c095bd0ab43cd999"
+      },
+      {
+        "pipeline": "ocatari",
+        "learner": "cart",
+        "seed": 710606,
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT"
+          ],
+          "seed": 710606,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 50000,
+          "batch_size_per_action": 128,
+          "fit_interval": 512,
+          "warmup_interactions": 512,
+          "epsilon_init": 1,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            711601,
+            711602,
+            712601,
+            712602,
+            712603,
+            712604,
+            712605,
+            712606,
+            712607,
+            712608,
+            712609,
+            712610
+          ],
+          "test_seeds": [
+            810101,
+            810102,
+            810103,
+            810104,
+            810105,
+            810106,
+            810107,
+            810108,
+            810109,
+            810110,
+            810111,
+            810112,
+            810113,
+            810114,
+            810115,
+            810116,
+            810117,
+            810118,
+            810119,
+            810120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "max_depth": 4,
+          "min_child": 2,
+          "criterion": "SSE"
+        },
+        "game": "Breakout",
+        "environment": {
+          "game": "Breakout",
+          "pipeline": "ocatari",
+          "rom_sha256": "376323f051c3c373c887fd83abead39d87d844ff283d435f4addbfc1710c6fd5",
+          "horizon": 27000,
+          "spatial_tolerance": 4,
+          "temporal_tolerance": 0,
+          "contract": "atari_common_v3"
+        },
+        "id": "Breakout/ocatari/cart/710606",
+        "hash": "4ef7752d77afed7effdfa5d78e2d7cbc70c51cc8f50951730749f3a735da1f5f"
+      },
+      {
+        "pipeline": "ocatari",
+        "learner": "cart",
+        "seed": 710607,
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT"
+          ],
+          "seed": 710607,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 50000,
+          "batch_size_per_action": 128,
+          "fit_interval": 512,
+          "warmup_interactions": 512,
+          "epsilon_init": 1,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            711601,
+            711602,
+            712601,
+            712602,
+            712603,
+            712604,
+            712605,
+            712606,
+            712607,
+            712608,
+            712609,
+            712610
+          ],
+          "test_seeds": [
+            810101,
+            810102,
+            810103,
+            810104,
+            810105,
+            810106,
+            810107,
+            810108,
+            810109,
+            810110,
+            810111,
+            810112,
+            810113,
+            810114,
+            810115,
+            810116,
+            810117,
+            810118,
+            810119,
+            810120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "max_depth": 4,
+          "min_child": 2,
+          "criterion": "SSE"
+        },
+        "game": "Breakout",
+        "environment": {
+          "game": "Breakout",
+          "pipeline": "ocatari",
+          "rom_sha256": "376323f051c3c373c887fd83abead39d87d844ff283d435f4addbfc1710c6fd5",
+          "horizon": 27000,
+          "spatial_tolerance": 4,
+          "temporal_tolerance": 0,
+          "contract": "atari_common_v3"
+        },
+        "id": "Breakout/ocatari/cart/710607",
+        "hash": "68ebd9eb5af5d1c253b7610a775a624c27b9628a3b54a227ac845e2ad5488c59"
+      },
+      {
+        "pipeline": "ocatari",
+        "learner": "cart",
+        "seed": 710608,
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT"
+          ],
+          "seed": 710608,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 50000,
+          "batch_size_per_action": 128,
+          "fit_interval": 512,
+          "warmup_interactions": 512,
+          "epsilon_init": 1,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            711601,
+            711602,
+            712601,
+            712602,
+            712603,
+            712604,
+            712605,
+            712606,
+            712607,
+            712608,
+            712609,
+            712610
+          ],
+          "test_seeds": [
+            810101,
+            810102,
+            810103,
+            810104,
+            810105,
+            810106,
+            810107,
+            810108,
+            810109,
+            810110,
+            810111,
+            810112,
+            810113,
+            810114,
+            810115,
+            810116,
+            810117,
+            810118,
+            810119,
+            810120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "max_depth": 4,
+          "min_child": 2,
+          "criterion": "SSE"
+        },
+        "game": "Breakout",
+        "environment": {
+          "game": "Breakout",
+          "pipeline": "ocatari",
+          "rom_sha256": "376323f051c3c373c887fd83abead39d87d844ff283d435f4addbfc1710c6fd5",
+          "horizon": 27000,
+          "spatial_tolerance": 4,
+          "temporal_tolerance": 0,
+          "contract": "atari_common_v3"
+        },
+        "id": "Breakout/ocatari/cart/710608",
+        "hash": "412c1f0e0783179fd2624f0b5075fbbbb6f9a329aeaaaaf2e961d98a77fcf722"
+      },
+      {
+        "pipeline": "ocatari",
+        "learner": "cart",
+        "seed": 710609,
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT"
+          ],
+          "seed": 710609,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 50000,
+          "batch_size_per_action": 128,
+          "fit_interval": 512,
+          "warmup_interactions": 512,
+          "epsilon_init": 1,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            711601,
+            711602,
+            712601,
+            712602,
+            712603,
+            712604,
+            712605,
+            712606,
+            712607,
+            712608,
+            712609,
+            712610
+          ],
+          "test_seeds": [
+            810101,
+            810102,
+            810103,
+            810104,
+            810105,
+            810106,
+            810107,
+            810108,
+            810109,
+            810110,
+            810111,
+            810112,
+            810113,
+            810114,
+            810115,
+            810116,
+            810117,
+            810118,
+            810119,
+            810120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "max_depth": 4,
+          "min_child": 2,
+          "criterion": "SSE"
+        },
+        "game": "Breakout",
+        "environment": {
+          "game": "Breakout",
+          "pipeline": "ocatari",
+          "rom_sha256": "376323f051c3c373c887fd83abead39d87d844ff283d435f4addbfc1710c6fd5",
+          "horizon": 27000,
+          "spatial_tolerance": 4,
+          "temporal_tolerance": 0,
+          "contract": "atari_common_v3"
+        },
+        "id": "Breakout/ocatari/cart/710609",
+        "hash": "77ac293987839d6ae3d8f6ea2538459cdacc462c6564d1a6772459d5feb334f5"
+      },
+      {
+        "pipeline": "ocatari",
+        "learner": "cart",
+        "seed": 710610,
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT"
+          ],
+          "seed": 710610,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 50000,
+          "batch_size_per_action": 128,
+          "fit_interval": 512,
+          "warmup_interactions": 512,
+          "epsilon_init": 1,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            711601,
+            711602,
+            712601,
+            712602,
+            712603,
+            712604,
+            712605,
+            712606,
+            712607,
+            712608,
+            712609,
+            712610
+          ],
+          "test_seeds": [
+            810101,
+            810102,
+            810103,
+            810104,
+            810105,
+            810106,
+            810107,
+            810108,
+            810109,
+            810110,
+            810111,
+            810112,
+            810113,
+            810114,
+            810115,
+            810116,
+            810117,
+            810118,
+            810119,
+            810120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "max_depth": 4,
+          "min_child": 2,
+          "criterion": "SSE"
+        },
+        "game": "Breakout",
+        "environment": {
+          "game": "Breakout",
+          "pipeline": "ocatari",
+          "rom_sha256": "376323f051c3c373c887fd83abead39d87d844ff283d435f4addbfc1710c6fd5",
+          "horizon": 27000,
+          "spatial_tolerance": 4,
+          "temporal_tolerance": 0,
+          "contract": "atari_common_v3"
+        },
+        "id": "Breakout/ocatari/cart/710610",
+        "hash": "07afd5134349c1777a111c7a24bc72af34f3db4d115e327b3eb60ff05afd44f5"
+      }
+    ],
+    "unresolved": []
+  },
+  "workload": [
+    {
+      "id": "Breakout/ocatari/cart/710601",
+      "seed": 710601,
+      "decisions": 2000000,
+      "expected_fits": 3906,
+      "expected_checkpoints": 3911,
+      "evaluation_episodes": 40,
+      "game": "Breakout",
+      "pipeline": "ocatari",
+      "resources": {
+        "cpus_per_cell": 2,
+        "memory_gib_per_cell": 20
+      }
+    },
+    {
+      "id": "Breakout/ocatari/cart/710602",
+      "seed": 710602,
+      "decisions": 2000000,
+      "expected_fits": 3906,
+      "expected_checkpoints": 3911,
+      "evaluation_episodes": 40,
+      "game": "Breakout",
+      "pipeline": "ocatari",
+      "resources": {
+        "cpus_per_cell": 2,
+        "memory_gib_per_cell": 20
+      }
+    },
+    {
+      "id": "Breakout/ocatari/cart/710603",
+      "seed": 710603,
+      "decisions": 2000000,
+      "expected_fits": 3906,
+      "expected_checkpoints": 3911,
+      "evaluation_episodes": 40,
+      "game": "Breakout",
+      "pipeline": "ocatari",
+      "resources": {
+        "cpus_per_cell": 2,
+        "memory_gib_per_cell": 20
+      }
+    },
+    {
+      "id": "Breakout/ocatari/cart/710604",
+      "seed": 710604,
+      "decisions": 2000000,
+      "expected_fits": 3906,
+      "expected_checkpoints": 3911,
+      "evaluation_episodes": 40,
+      "game": "Breakout",
+      "pipeline": "ocatari",
+      "resources": {
+        "cpus_per_cell": 2,
+        "memory_gib_per_cell": 20
+      }
+    },
+    {
+      "id": "Breakout/ocatari/cart/710605",
+      "seed": 710605,
+      "decisions": 2000000,
+      "expected_fits": 3906,
+      "expected_checkpoints": 3911,
+      "evaluation_episodes": 40,
+      "game": "Breakout",
+      "pipeline": "ocatari",
+      "resources": {
+        "cpus_per_cell": 2,
+        "memory_gib_per_cell": 20
+      }
+    },
+    {
+      "id": "Breakout/ocatari/cart/710606",
+      "seed": 710606,
+      "decisions": 2000000,
+      "expected_fits": 3906,
+      "expected_checkpoints": 3911,
+      "evaluation_episodes": 40,
+      "game": "Breakout",
+      "pipeline": "ocatari",
+      "resources": {
+        "cpus_per_cell": 2,
+        "memory_gib_per_cell": 20
+      }
+    },
+    {
+      "id": "Breakout/ocatari/cart/710607",
+      "seed": 710607,
+      "decisions": 2000000,
+      "expected_fits": 3906,
+      "expected_checkpoints": 3911,
+      "evaluation_episodes": 40,
+      "game": "Breakout",
+      "pipeline": "ocatari",
+      "resources": {
+        "cpus_per_cell": 2,
+        "memory_gib_per_cell": 20
+      }
+    },
+    {
+      "id": "Breakout/ocatari/cart/710608",
+      "seed": 710608,
+      "decisions": 2000000,
+      "expected_fits": 3906,
+      "expected_checkpoints": 3911,
+      "evaluation_episodes": 40,
+      "game": "Breakout",
+      "pipeline": "ocatari",
+      "resources": {
+        "cpus_per_cell": 2,
+        "memory_gib_per_cell": 20
+      }
+    },
+    {
+      "id": "Breakout/ocatari/cart/710609",
+      "seed": 710609,
+      "decisions": 2000000,
+      "expected_fits": 3906,
+      "expected_checkpoints": 3911,
+      "evaluation_episodes": 40,
+      "game": "Breakout",
+      "pipeline": "ocatari",
+      "resources": {
+        "cpus_per_cell": 2,
+        "memory_gib_per_cell": 20
+      }
+    },
+    {
+      "id": "Breakout/ocatari/cart/710610",
+      "seed": 710610,
+      "decisions": 2000000,
+      "expected_fits": 3906,
+      "expected_checkpoints": 3911,
+      "evaluation_episodes": 40,
+      "game": "Breakout",
+      "pipeline": "ocatari",
+      "resources": {
+        "cpus_per_cell": 2,
+        "memory_gib_per_cell": 20
+      }
+    }
+  ],
+  "estimates": [
+    {
+      "cell": "Breakout/ocatari/cart/710601",
+      "training_seconds_observed_rate_range": [
+        9649.649563289131,
+        9649.649563289131
+      ],
+      "log_bytes_observed_rate_range": [
+        632146972.65625,
+        632146972.65625
+      ],
+      "peak_rss_observed_range": [
+        289488896,
+        289488896
+      ],
+      "checkpoint_bytes_before_retention_observed_size_projection": [
+        134209876,
+        19370420355
+      ],
+      "evaluation_seconds_episode_observed_range": [
+        2.7353001539595425,
+        616.5599654377438
+      ],
+      "evaluation_seconds_observed_rate_projection": [
+        109.4120061583817,
+        24662.398617509753
+      ],
+      "evaluation_worker_seconds_rate_projection": [
+        19710.64991706583,
+        19710.64991706583
+      ],
+      "uncertainty": "Observed rates only; tree/replay growth and hardware can change cost. No maximum bound."
+    },
+    {
+      "cell": "Breakout/ocatari/cart/710602",
+      "training_seconds_observed_rate_range": [
+        9649.649563289131,
+        9649.649563289131
+      ],
+      "log_bytes_observed_rate_range": [
+        632146972.65625,
+        632146972.65625
+      ],
+      "peak_rss_observed_range": [
+        289488896,
+        289488896
+      ],
+      "checkpoint_bytes_before_retention_observed_size_projection": [
+        134209876,
+        19370420355
+      ],
+      "evaluation_seconds_episode_observed_range": [
+        2.7353001539595425,
+        616.5599654377438
+      ],
+      "evaluation_seconds_observed_rate_projection": [
+        109.4120061583817,
+        24662.398617509753
+      ],
+      "evaluation_worker_seconds_rate_projection": [
+        19710.64991706583,
+        19710.64991706583
+      ],
+      "uncertainty": "Observed rates only; tree/replay growth and hardware can change cost. No maximum bound."
+    },
+    {
+      "cell": "Breakout/ocatari/cart/710603",
+      "training_seconds_observed_rate_range": [
+        9649.649563289131,
+        9649.649563289131
+      ],
+      "log_bytes_observed_rate_range": [
+        632146972.65625,
+        632146972.65625
+      ],
+      "peak_rss_observed_range": [
+        289488896,
+        289488896
+      ],
+      "checkpoint_bytes_before_retention_observed_size_projection": [
+        134209876,
+        19370420355
+      ],
+      "evaluation_seconds_episode_observed_range": [
+        2.7353001539595425,
+        616.5599654377438
+      ],
+      "evaluation_seconds_observed_rate_projection": [
+        109.4120061583817,
+        24662.398617509753
+      ],
+      "evaluation_worker_seconds_rate_projection": [
+        19710.64991706583,
+        19710.64991706583
+      ],
+      "uncertainty": "Observed rates only; tree/replay growth and hardware can change cost. No maximum bound."
+    },
+    {
+      "cell": "Breakout/ocatari/cart/710604",
+      "training_seconds_observed_rate_range": [
+        9649.649563289131,
+        9649.649563289131
+      ],
+      "log_bytes_observed_rate_range": [
+        632146972.65625,
+        632146972.65625
+      ],
+      "peak_rss_observed_range": [
+        289488896,
+        289488896
+      ],
+      "checkpoint_bytes_before_retention_observed_size_projection": [
+        134209876,
+        19370420355
+      ],
+      "evaluation_seconds_episode_observed_range": [
+        2.7353001539595425,
+        616.5599654377438
+      ],
+      "evaluation_seconds_observed_rate_projection": [
+        109.4120061583817,
+        24662.398617509753
+      ],
+      "evaluation_worker_seconds_rate_projection": [
+        19710.64991706583,
+        19710.64991706583
+      ],
+      "uncertainty": "Observed rates only; tree/replay growth and hardware can change cost. No maximum bound."
+    },
+    {
+      "cell": "Breakout/ocatari/cart/710605",
+      "training_seconds_observed_rate_range": [
+        9649.649563289131,
+        9649.649563289131
+      ],
+      "log_bytes_observed_rate_range": [
+        632146972.65625,
+        632146972.65625
+      ],
+      "peak_rss_observed_range": [
+        289488896,
+        289488896
+      ],
+      "checkpoint_bytes_before_retention_observed_size_projection": [
+        134209876,
+        19370420355
+      ],
+      "evaluation_seconds_episode_observed_range": [
+        2.7353001539595425,
+        616.5599654377438
+      ],
+      "evaluation_seconds_observed_rate_projection": [
+        109.4120061583817,
+        24662.398617509753
+      ],
+      "evaluation_worker_seconds_rate_projection": [
+        19710.64991706583,
+        19710.64991706583
+      ],
+      "uncertainty": "Observed rates only; tree/replay growth and hardware can change cost. No maximum bound."
+    },
+    {
+      "cell": "Breakout/ocatari/cart/710606",
+      "training_seconds_observed_rate_range": [
+        9649.649563289131,
+        9649.649563289131
+      ],
+      "log_bytes_observed_rate_range": [
+        632146972.65625,
+        632146972.65625
+      ],
+      "peak_rss_observed_range": [
+        289488896,
+        289488896
+      ],
+      "checkpoint_bytes_before_retention_observed_size_projection": [
+        134209876,
+        19370420355
+      ],
+      "evaluation_seconds_episode_observed_range": [
+        2.7353001539595425,
+        616.5599654377438
+      ],
+      "evaluation_seconds_observed_rate_projection": [
+        109.4120061583817,
+        24662.398617509753
+      ],
+      "evaluation_worker_seconds_rate_projection": [
+        19710.64991706583,
+        19710.64991706583
+      ],
+      "uncertainty": "Observed rates only; tree/replay growth and hardware can change cost. No maximum bound."
+    },
+    {
+      "cell": "Breakout/ocatari/cart/710607",
+      "training_seconds_observed_rate_range": [
+        9649.649563289131,
+        9649.649563289131
+      ],
+      "log_bytes_observed_rate_range": [
+        632146972.65625,
+        632146972.65625
+      ],
+      "peak_rss_observed_range": [
+        289488896,
+        289488896
+      ],
+      "checkpoint_bytes_before_retention_observed_size_projection": [
+        134209876,
+        19370420355
+      ],
+      "evaluation_seconds_episode_observed_range": [
+        2.7353001539595425,
+        616.5599654377438
+      ],
+      "evaluation_seconds_observed_rate_projection": [
+        109.4120061583817,
+        24662.398617509753
+      ],
+      "evaluation_worker_seconds_rate_projection": [
+        19710.64991706583,
+        19710.64991706583
+      ],
+      "uncertainty": "Observed rates only; tree/replay growth and hardware can change cost. No maximum bound."
+    },
+    {
+      "cell": "Breakout/ocatari/cart/710608",
+      "training_seconds_observed_rate_range": [
+        9649.649563289131,
+        9649.649563289131
+      ],
+      "log_bytes_observed_rate_range": [
+        632146972.65625,
+        632146972.65625
+      ],
+      "peak_rss_observed_range": [
+        289488896,
+        289488896
+      ],
+      "checkpoint_bytes_before_retention_observed_size_projection": [
+        134209876,
+        19370420355
+      ],
+      "evaluation_seconds_episode_observed_range": [
+        2.7353001539595425,
+        616.5599654377438
+      ],
+      "evaluation_seconds_observed_rate_projection": [
+        109.4120061583817,
+        24662.398617509753
+      ],
+      "evaluation_worker_seconds_rate_projection": [
+        19710.64991706583,
+        19710.64991706583
+      ],
+      "uncertainty": "Observed rates only; tree/replay growth and hardware can change cost. No maximum bound."
+    },
+    {
+      "cell": "Breakout/ocatari/cart/710609",
+      "training_seconds_observed_rate_range": [
+        9649.649563289131,
+        9649.649563289131
+      ],
+      "log_bytes_observed_rate_range": [
+        632146972.65625,
+        632146972.65625
+      ],
+      "peak_rss_observed_range": [
+        289488896,
+        289488896
+      ],
+      "checkpoint_bytes_before_retention_observed_size_projection": [
+        134209876,
+        19370420355
+      ],
+      "evaluation_seconds_episode_observed_range": [
+        2.7353001539595425,
+        616.5599654377438
+      ],
+      "evaluation_seconds_observed_rate_projection": [
+        109.4120061583817,
+        24662.398617509753
+      ],
+      "evaluation_worker_seconds_rate_projection": [
+        19710.64991706583,
+        19710.64991706583
+      ],
+      "uncertainty": "Observed rates only; tree/replay growth and hardware can change cost. No maximum bound."
+    },
+    {
+      "cell": "Breakout/ocatari/cart/710610",
+      "training_seconds_observed_rate_range": [
+        9649.649563289131,
+        9649.649563289131
+      ],
+      "log_bytes_observed_rate_range": [
+        632146972.65625,
+        632146972.65625
+      ],
+      "peak_rss_observed_range": [
+        289488896,
+        289488896
+      ],
+      "checkpoint_bytes_before_retention_observed_size_projection": [
+        134209876,
+        19370420355
+      ],
+      "evaluation_seconds_episode_observed_range": [
+        2.7353001539595425,
+        616.5599654377438
+      ],
+      "evaluation_seconds_observed_rate_projection": [
+        109.4120061583817,
+        24662.398617509753
+      ],
+      "evaluation_worker_seconds_rate_projection": [
+        19710.64991706583,
+        19710.64991706583
+      ],
+      "uncertainty": "Observed rates only; tree/replay growth and hardware can change cost. No maximum bound."
+    }
+  ],
+  "n_trainings": 10,
+  "n_development_evaluation_episodes": 400,
+  "pending_authorizations": [
+    "explicit game milestones"
+  ],
+  "uncertainty": "Pong B measurements cannot estimate Breakout/DemonAttack. Missing compatible Linux cost is unknown.",
+  "reserved_test_episodes_executed": 0
+}

@@ -1,0 +1,80 @@
+{
+  "payload": {
+    "evaluation_bank_used_for_gate": false,
+    "holdout": {
+      "path": "probe_325000-55943d7919bdd753cca943c8b6538364fbe8f613450f6a6c4e8e3d02119f616f.pkl",
+      "sha256": "55943d7919bdd753cca943c8b6538364fbe8f613450f6a6c4e8e3d02119f616f"
+    },
+    "identity": {
+      "campaign": "47cc2276291ba5507aa097850cbd7e3d2332c6d09fa10e0fbd56d4fb6ef81664",
+      "criterion": "anova",
+      "mode": "refit_only",
+      "parent": {
+        "path": "checkpoints/500000-773f79b7b95d46464dde1d54713d09314b0f539c2f5f3c8c6970afd2fa9a87ff.pkl",
+        "sha256": "773f79b7b95d46464dde1d54713d09314b0f539c2f5f3c8c6970afd2fa9a87ff"
+      },
+      "parent_counter": 500000,
+      "seed": 721101
+    },
+    "point": 325000,
+    "reference": {
+      "path": "reference_325000-75a674e80f3f626146e9432d9d6b0f97a886a7ae881e63c33a1813f9e45955a7.pkl",
+      "sha256": "75a674e80f3f626146e9432d9d6b0f97a886a7ae881e63c33a1813f9e45955a7"
+    },
+    "return_bank": {
+      "path": "return_bank_325000-1d97180f0144c28349790e2dbb866f47d52672250cf0a0d510a51330d7f09786.pkl",
+      "sha256": "1d97180f0144c28349790e2dbb866f47d52672250cf0a0d510a51330d7f09786"
+    },
+    "reviews": [
+      {
+        "action": "RIGHT",
+        "bounded_q": false,
+        "candidate_mse": 0.13328373212571146,
+        "counter": 825000,
+        "current_mse": 0.14668475456746544,
+        "gate": {
+          "accepted": true,
+          "blocks": 8,
+          "mean_difference": -0.011929535601692862,
+          "reason": "loss_gate",
+          "samples": 104,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": 0.0025,
+          "upper_bound": -0.007779343176746408
+        },
+        "kind": "refit_review",
+        "loss_gate": {
+          "accepted": true,
+          "blocks": 8,
+          "mean_difference": -0.011929535601692862,
+          "reason": "loss_gate",
+          "samples": 104,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": 0.0025,
+          "upper_bound": -0.007779343176746408
+        },
+        "new_leaves": 4,
+        "new_literal": "Literal(name='present', type='logical', obj1='ball_t-1', obj2=None, obj3=None)",
+        "node": 168,
+        "old_leaves": 4,
+        "old_literal": "Literal(name='present', type='logical', obj1='ball_t-1', obj2=None, obj3=None)",
+        "parameter_version": 13,
+        "path": "root/less/true",
+        "policy_guard": {
+          "accepted": false,
+          "blocks": 8,
+          "changed_state_fraction": 0.11122345803842265,
+          "limit": 0.05,
+          "mean_tv": 0.11256720430107527,
+          "samples": 989
+        },
+        "structure_version": 9,
+        "train_samples": 397
+      }
+    ],
+    "validation_samples": 989,
+    "validation_used_for_td": false
+  },
+  "schema": "pong_analysis_unit_v2",
+  "sha256": "7402e8d7d83495aed900129c35013aceccb7631a073a8b955b09e5f8952f346b"
+}

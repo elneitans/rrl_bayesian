@@ -1,0 +1,80 @@
+{
+  "payload": {
+    "evaluation_bank_used_for_gate": false,
+    "holdout": {
+      "path": "probe_75000-e2151f9874311896daed642be89cb0300e8bb9a1dd24d43e127b6cbb501e2190.pkl",
+      "sha256": "e2151f9874311896daed642be89cb0300e8bb9a1dd24d43e127b6cbb501e2190"
+    },
+    "identity": {
+      "campaign": "47cc2276291ba5507aa097850cbd7e3d2332c6d09fa10e0fbd56d4fb6ef81664",
+      "criterion": "anova",
+      "mode": "refit_only",
+      "parent": {
+        "path": "checkpoints/500000-773f79b7b95d46464dde1d54713d09314b0f539c2f5f3c8c6970afd2fa9a87ff.pkl",
+        "sha256": "773f79b7b95d46464dde1d54713d09314b0f539c2f5f3c8c6970afd2fa9a87ff"
+      },
+      "parent_counter": 500000,
+      "seed": 721101
+    },
+    "point": 75000,
+    "reference": {
+      "path": "reference_75000-ee85d8ba7e2b8693be3649ba41b19ada0934905ec096e06297cd9ac28a53db60.pkl",
+      "sha256": "ee85d8ba7e2b8693be3649ba41b19ada0934905ec096e06297cd9ac28a53db60"
+    },
+    "return_bank": {
+      "path": "return_bank_75000-3a2515816305c5dcbc88d363f0b4df75c003074e96437640a0eae6ee0c2045a9.pkl",
+      "sha256": "3a2515816305c5dcbc88d363f0b4df75c003074e96437640a0eae6ee0c2045a9"
+    },
+    "reviews": [
+      {
+        "action": "NOOP",
+        "bounded_q": false,
+        "candidate_mse": 0.027538414628942954,
+        "counter": 575000,
+        "current_mse": 0.027413656724034303,
+        "gate": {
+          "accepted": true,
+          "blocks": 8,
+          "mean_difference": 0.00015591529938480987,
+          "reason": "loss_gate",
+          "samples": 95,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": 0.0025,
+          "upper_bound": 0.0005685055254346608
+        },
+        "kind": "refit_review",
+        "loss_gate": {
+          "accepted": true,
+          "blocks": 8,
+          "mean_difference": 0.00015591529938480987,
+          "reason": "loss_gate",
+          "samples": 95,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": 0.0025,
+          "upper_bound": 0.0005685055254346608
+        },
+        "new_leaves": 20,
+        "new_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+        "node": 1,
+        "old_leaves": 20,
+        "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+        "parameter_version": 3,
+        "path": "root/more",
+        "policy_guard": {
+          "accepted": false,
+          "blocks": 8,
+          "changed_state_fraction": 0.091796875,
+          "limit": 0.05,
+          "mean_tv": 0.091796875,
+          "samples": 1024
+        },
+        "structure_version": 3,
+        "train_samples": 1111
+      }
+    ],
+    "validation_samples": 1024,
+    "validation_used_for_td": false
+  },
+  "schema": "pong_analysis_unit_v2",
+  "sha256": "439ffbd7be91d3fb8b8659ff85194e6d1c7a2e2d206c537a420d99f9a27c5e86"
+}

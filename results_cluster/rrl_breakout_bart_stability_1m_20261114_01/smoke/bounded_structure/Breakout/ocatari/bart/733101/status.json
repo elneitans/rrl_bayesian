@@ -1,0 +1,298 @@
+{
+  "payload": {
+    "binding": {
+      "campaign": "e62d75f1c1af2d33312ab33dc50b6e60edc2163041f978f10fc85febe83f8931",
+      "cell": "c77856fd851bdb46f7297d15d4c71c60f0a493bc6c3e159e2437b37134aa5211",
+      "learner": "bart",
+      "runtime": {
+        "ale-py": "0.10.2",
+        "gymnasium": "1.1.1",
+        "machine": "x86_64",
+        "numeric_threads": {
+          "MKL_NUM_THREADS": "1",
+          "NUMEXPR_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "numpy": "1.26.4",
+        "ocatari": "2.2.1",
+        "platform": "linux",
+        "python": "3.11.7",
+        "scipy": "1.12.0"
+      }
+    },
+    "checkpoint": {
+      "path": "checkpoints/96-c597910267a3f60b982399bd003913e2c744352f45c7d7f87e0087b1217f1762.pkl",
+      "sha256": "c597910267a3f60b982399bd003913e2c744352f45c7d7f87e0087b1217f1762"
+    },
+    "counter": 96,
+    "log_head": {
+      "end": 96,
+      "path": "logs/96-c3938deaf063acddf93d17be16b7c105711cf2aaea1bec90b242794b4524c641.jsonl",
+      "sha256": "c3938deaf063acddf93d17be16b7c105711cf2aaea1bec90b242794b4524c641"
+    },
+    "metrics": {
+      "completed_games": 0,
+      "ended_episodes": 0,
+      "epsilon": 0.9955887946947243,
+      "interactions": 96,
+      "learner": {
+        "cache_bytes": 0,
+        "complexity": {
+          "FIRE": {
+            "diagnostics": {
+              "burn_in": 2,
+              "distance_rejections": 0,
+              "elapsed_seconds": 0.012649215990677476,
+              "m": 2,
+              "max_cache_error": null,
+              "max_structure_distance_per_tree": [
+                0,
+                0
+              ],
+              "moves": {
+                "change": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                },
+                "grow": {
+                  "acceptance_given_possible": 0.0,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 5,
+                  "selected": 5
+                },
+                "prune": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 7,
+                  "rejected": 0,
+                  "selected": 7
+                },
+                "swap": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                }
+              },
+              "reset_trees": 0,
+              "retained": 4,
+              "reused_trees": 2,
+              "structure_limit": 2,
+              "support_repairs_per_tree": [
+                0,
+                0
+              ],
+              "sweeps": 6,
+              "targets_outside_scale": 0
+            },
+            "draws": 4,
+            "leaves_last_draw": 2,
+            "max_depth_last_draw": 0,
+            "trees": 2
+          },
+          "LEFT": {
+            "diagnostics": {
+              "burn_in": 2,
+              "distance_rejections": 0,
+              "elapsed_seconds": 0.014003236079588532,
+              "m": 2,
+              "max_cache_error": null,
+              "max_structure_distance_per_tree": [
+                0,
+                0
+              ],
+              "moves": {
+                "change": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                },
+                "grow": {
+                  "acceptance_given_possible": 0.0,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 6,
+                  "selected": 6
+                },
+                "prune": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 6,
+                  "rejected": 0,
+                  "selected": 6
+                },
+                "swap": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                }
+              },
+              "reset_trees": 0,
+              "retained": 4,
+              "reused_trees": 2,
+              "structure_limit": 2,
+              "support_repairs_per_tree": [
+                0,
+                0
+              ],
+              "sweeps": 6,
+              "targets_outside_scale": 0
+            },
+            "draws": 4,
+            "leaves_last_draw": 2,
+            "max_depth_last_draw": 0,
+            "trees": 2
+          },
+          "NOOP": {
+            "diagnostics": {
+              "burn_in": 2,
+              "distance_rejections": 0,
+              "elapsed_seconds": 0.01738777686841786,
+              "m": 2,
+              "max_cache_error": null,
+              "max_structure_distance_per_tree": [
+                0,
+                0
+              ],
+              "moves": {
+                "change": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                },
+                "grow": {
+                  "acceptance_given_possible": 0.0,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 8,
+                  "selected": 8
+                },
+                "prune": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 4,
+                  "rejected": 0,
+                  "selected": 4
+                },
+                "swap": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                }
+              },
+              "reset_trees": 0,
+              "retained": 4,
+              "reused_trees": 2,
+              "structure_limit": 2,
+              "support_repairs_per_tree": [
+                0,
+                0
+              ],
+              "sweeps": 6,
+              "targets_outside_scale": 0
+            },
+            "draws": 4,
+            "leaves_last_draw": 2,
+            "max_depth_last_draw": 0,
+            "trees": 2
+          },
+          "RIGHT": {
+            "diagnostics": {
+              "burn_in": 2,
+              "distance_rejections": 0,
+              "elapsed_seconds": 0.012511775130406022,
+              "m": 2,
+              "max_cache_error": null,
+              "max_structure_distance_per_tree": [
+                0,
+                0
+              ],
+              "moves": {
+                "change": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                },
+                "grow": {
+                  "acceptance_given_possible": 0.0,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 5,
+                  "selected": 5
+                },
+                "prune": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 7,
+                  "rejected": 0,
+                  "selected": 7
+                },
+                "swap": {
+                  "acceptance_given_possible": null,
+                  "accepted": 0,
+                  "impossible": 0,
+                  "rejected": 0,
+                  "selected": 0
+                }
+              },
+              "reset_trees": 0,
+              "retained": 4,
+              "reused_trees": 2,
+              "structure_limit": 2,
+              "support_repairs_per_tree": [
+                0,
+                0
+              ],
+              "sweeps": 6,
+              "targets_outside_scale": 0
+            },
+            "draws": 4,
+            "leaves_last_draw": 2,
+            "max_depth_last_draw": 0,
+            "trees": 2
+          }
+        },
+        "fits": 6,
+        "kind": "bart",
+        "phase_seconds": {
+          "encoding": 0.1066239234060049,
+          "fit": 0.3219698111061007,
+          "prediction": 0.0,
+          "selection_targets": 0.04751493176445365
+        },
+        "replay_size": 96
+      },
+      "phase_seconds": {
+        "checkpoint_logs": 1.9839762810152024,
+        "emulation_extraction": 0.4298432271461934,
+        "fit": 0.3219698111061007,
+        "policy_collection_td": 0.004875207785516977,
+        "prediction": 0.0,
+        "relations_encoding": 0.11618031212128699,
+        "selection_targets": 0.04751493176445365
+      },
+      "relations": 11,
+      "truncated_episodes": 0
+    },
+    "reason": null,
+    "state": "completed"
+  },
+  "schema": "pong_analysis_unit_v2",
+  "sha256": "a813be0c1d2f2032d8827ff59b602c2b83d639465029d412a018173c2259c94d"
+}

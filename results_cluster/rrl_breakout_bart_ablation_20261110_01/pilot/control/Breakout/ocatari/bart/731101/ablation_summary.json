@@ -1,0 +1,432 @@
+{
+  "payload": {
+    "checkpoint": {
+      "path": "checkpoints/100000-a6883b0073cf97a6ddfbc04b0c14857c63e804ef3ac0d2f629d2112b4d5636a6.pkl",
+      "sha256": "a6883b0073cf97a6ddfbc04b0c14857c63e804ef3ac0d2f629d2112b4d5636a6"
+    },
+    "development": {
+      "25000": [
+        {
+          "actions": {
+            "NOOP": 27000
+          },
+          "raw_return": 0.0,
+          "reason": null,
+          "return_scope": "horizon_limited",
+          "seconds": 85.69869803916663,
+          "seed": 732001,
+          "status": "completed",
+          "steps": 27000,
+          "terminated": false,
+          "transitions": [
+            {
+              "decisions": 27000,
+              "fired": false,
+              "kind": "reset",
+              "start": 0
+            }
+          ],
+          "truncated": true,
+          "unique_encoded_states": 4
+        },
+        {
+          "actions": {
+            "NOOP": 27000
+          },
+          "raw_return": 0.0,
+          "reason": null,
+          "return_scope": "horizon_limited",
+          "seconds": 90.68424713099375,
+          "seed": 732002,
+          "status": "completed",
+          "steps": 27000,
+          "terminated": false,
+          "transitions": [
+            {
+              "decisions": 27000,
+              "fired": false,
+              "kind": "reset",
+              "start": 0
+            }
+          ],
+          "truncated": true,
+          "unique_encoded_states": 4
+        }
+      ],
+      "50000": [
+        {
+          "actions": {
+            "FIRE": 21,
+            "LEFT": 177,
+            "RIGHT": 14
+          },
+          "raw_return": 3.0,
+          "reason": null,
+          "return_scope": "complete_game",
+          "seconds": 2.60283756791614,
+          "seed": 732001,
+          "status": "completed",
+          "steps": 212,
+          "terminated": true,
+          "transitions": [
+            {
+              "decisions": 1,
+              "fired": true,
+              "kind": "reset",
+              "start": 0
+            },
+            {
+              "decisions": 1,
+              "fired": true,
+              "kind": "life_lost",
+              "start": 53
+            },
+            {
+              "decisions": 1,
+              "fired": true,
+              "kind": "life_lost",
+              "start": 77
+            },
+            {
+              "decisions": 1,
+              "fired": true,
+              "kind": "life_lost",
+              "start": 132
+            },
+            {
+              "decisions": 1,
+              "fired": true,
+              "kind": "life_lost",
+              "start": 188
+            }
+          ],
+          "truncated": false,
+          "unique_encoded_states": 24
+        },
+        {
+          "actions": {
+            "FIRE": 21,
+            "LEFT": 177,
+            "RIGHT": 14
+          },
+          "raw_return": 3.0,
+          "reason": null,
+          "return_scope": "complete_game",
+          "seconds": 2.712194469058886,
+          "seed": 732002,
+          "status": "completed",
+          "steps": 212,
+          "terminated": true,
+          "transitions": [
+            {
+              "decisions": 1,
+              "fired": true,
+              "kind": "reset",
+              "start": 0
+            },
+            {
+              "decisions": 1,
+              "fired": true,
+              "kind": "life_lost",
+              "start": 53
+            },
+            {
+              "decisions": 1,
+              "fired": true,
+              "kind": "life_lost",
+              "start": 77
+            },
+            {
+              "decisions": 1,
+              "fired": true,
+              "kind": "life_lost",
+              "start": 132
+            },
+            {
+              "decisions": 1,
+              "fired": true,
+              "kind": "life_lost",
+              "start": 188
+            }
+          ],
+          "truncated": false,
+          "unique_encoded_states": 24
+        }
+      ],
+      "100000": [
+        {
+          "actions": {
+            "FIRE": 66,
+            "LEFT": 7,
+            "NOOP": 12,
+            "RIGHT": 112
+          },
+          "raw_return": 2.0,
+          "reason": null,
+          "return_scope": "complete_game",
+          "seconds": 2.024573551956564,
+          "seed": 732101,
+          "status": "completed",
+          "steps": 197,
+          "terminated": true,
+          "transitions": [
+            {
+              "decisions": 1,
+              "fired": true,
+              "kind": "reset",
+              "start": 0
+            },
+            {
+              "decisions": 1,
+              "fired": true,
+              "kind": "life_lost",
+              "start": 25
+            },
+            {
+              "decisions": 1,
+              "fired": true,
+              "kind": "life_lost",
+              "start": 124
+            },
+            {
+              "decisions": 1,
+              "fired": true,
+              "kind": "life_lost",
+              "start": 148
+            },
+            {
+              "decisions": 1,
+              "fired": true,
+              "kind": "life_lost",
+              "start": 172
+            }
+          ],
+          "truncated": false,
+          "unique_encoded_states": 17
+        },
+        {
+          "actions": {
+            "FIRE": 66,
+            "LEFT": 7,
+            "NOOP": 12,
+            "RIGHT": 112
+          },
+          "raw_return": 2.0,
+          "reason": null,
+          "return_scope": "complete_game",
+          "seconds": 2.3645642730407417,
+          "seed": 732102,
+          "status": "completed",
+          "steps": 197,
+          "terminated": true,
+          "transitions": [
+            {
+              "decisions": 1,
+              "fired": true,
+              "kind": "reset",
+              "start": 0
+            },
+            {
+              "decisions": 1,
+              "fired": true,
+              "kind": "life_lost",
+              "start": 25
+            },
+            {
+              "decisions": 1,
+              "fired": true,
+              "kind": "life_lost",
+              "start": 124
+            },
+            {
+              "decisions": 1,
+              "fired": true,
+              "kind": "life_lost",
+              "start": 148
+            },
+            {
+              "decisions": 1,
+              "fired": true,
+              "kind": "life_lost",
+              "start": 172
+            }
+          ],
+          "truncated": false,
+          "unique_encoded_states": 17
+        },
+        {
+          "actions": {
+            "FIRE": 66,
+            "LEFT": 7,
+            "NOOP": 12,
+            "RIGHT": 112
+          },
+          "raw_return": 2.0,
+          "reason": null,
+          "return_scope": "complete_game",
+          "seconds": 2.0422239331528544,
+          "seed": 732103,
+          "status": "completed",
+          "steps": 197,
+          "terminated": true,
+          "transitions": [
+            {
+              "decisions": 1,
+              "fired": true,
+              "kind": "reset",
+              "start": 0
+            },
+            {
+              "decisions": 1,
+              "fired": true,
+              "kind": "life_lost",
+              "start": 25
+            },
+            {
+              "decisions": 1,
+              "fired": true,
+              "kind": "life_lost",
+              "start": 124
+            },
+            {
+              "decisions": 1,
+              "fired": true,
+              "kind": "life_lost",
+              "start": 148
+            },
+            {
+              "decisions": 1,
+              "fired": true,
+              "kind": "life_lost",
+              "start": 172
+            }
+          ],
+          "truncated": false,
+          "unique_encoded_states": 17
+        },
+        {
+          "actions": {
+            "FIRE": 66,
+            "LEFT": 7,
+            "NOOP": 12,
+            "RIGHT": 112
+          },
+          "raw_return": 2.0,
+          "reason": null,
+          "return_scope": "complete_game",
+          "seconds": 2.206638009985909,
+          "seed": 732104,
+          "status": "completed",
+          "steps": 197,
+          "terminated": true,
+          "transitions": [
+            {
+              "decisions": 1,
+              "fired": true,
+              "kind": "reset",
+              "start": 0
+            },
+            {
+              "decisions": 1,
+              "fired": true,
+              "kind": "life_lost",
+              "start": 25
+            },
+            {
+              "decisions": 1,
+              "fired": true,
+              "kind": "life_lost",
+              "start": 124
+            },
+            {
+              "decisions": 1,
+              "fired": true,
+              "kind": "life_lost",
+              "start": 148
+            },
+            {
+              "decisions": 1,
+              "fired": true,
+              "kind": "life_lost",
+              "start": 172
+            }
+          ],
+          "truncated": false,
+          "unique_encoded_states": 17
+        },
+        {
+          "actions": {
+            "FIRE": 66,
+            "LEFT": 7,
+            "NOOP": 12,
+            "RIGHT": 112
+          },
+          "raw_return": 2.0,
+          "reason": null,
+          "return_scope": "complete_game",
+          "seconds": 2.366078855935484,
+          "seed": 732105,
+          "status": "completed",
+          "steps": 197,
+          "terminated": true,
+          "transitions": [
+            {
+              "decisions": 1,
+              "fired": true,
+              "kind": "reset",
+              "start": 0
+            },
+            {
+              "decisions": 1,
+              "fired": true,
+              "kind": "life_lost",
+              "start": 25
+            },
+            {
+              "decisions": 1,
+              "fired": true,
+              "kind": "life_lost",
+              "start": 124
+            },
+            {
+              "decisions": 1,
+              "fired": true,
+              "kind": "life_lost",
+              "start": 148
+            },
+            {
+              "decisions": 1,
+              "fired": true,
+              "kind": "life_lost",
+              "start": 172
+            }
+          ],
+          "truncated": false,
+          "unique_encoded_states": 17
+        }
+      ]
+    },
+    "first_fit": 512,
+    "first_fit_rows_by_action": {
+      "FIRE": 128,
+      "LEFT": 128,
+      "NOOP": 108,
+      "RIGHT": 123
+    },
+    "fits": 195,
+    "training_phase_seconds": {
+      "checkpoint_logs": 13.180187148274854,
+      "emulation_extraction": 214.4301223915536,
+      "fit": 2904.1621321626008,
+      "policy_collection_td": 7.786040431354195,
+      "prediction": 346.08618787047453,
+      "relations_encoding": 124.95221295347437,
+      "selection_targets": 50.634959641844034
+    },
+    "training_seed": 731101,
+    "trees_fit_after_first_fit": 15520,
+    "trees_reused_after_first_fit": 0
+  },
+  "schema": "pong_analysis_unit_v2",
+  "sha256": "5a666bf51e536cb605a309317c8442639a0026a9da6f3f546cc06aca9196df99"
+}

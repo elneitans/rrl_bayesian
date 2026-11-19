@@ -1,0 +1,122 @@
+{
+  "payload": {
+    "checkpoint": {
+      "path": "checkpoints/96-c597910267a3f60b982399bd003913e2c744352f45c7d7f87e0087b1217f1762.pkl",
+      "sha256": "c597910267a3f60b982399bd003913e2c744352f45c7d7f87e0087b1217f1762"
+    },
+    "development": {
+      "32": [
+        {
+          "actions": {
+            "NOOP": 128
+          },
+          "raw_return": 0.0,
+          "reason": null,
+          "return_scope": "horizon_limited",
+          "seconds": 1.5024475450627506,
+          "seed": 734001,
+          "status": "completed",
+          "steps": 128,
+          "terminated": false,
+          "transitions": [
+            {
+              "decisions": 128,
+              "fired": false,
+              "kind": "reset",
+              "start": 0
+            }
+          ],
+          "truncated": true,
+          "unique_encoded_states": 2
+        }
+      ],
+      "64": [
+        {
+          "actions": {
+            "LEFT": 128
+          },
+          "raw_return": 0.0,
+          "reason": null,
+          "return_scope": "horizon_limited",
+          "seconds": 1.408435860881582,
+          "seed": 734001,
+          "status": "completed",
+          "steps": 128,
+          "terminated": false,
+          "transitions": [
+            {
+              "decisions": 128,
+              "fired": false,
+              "kind": "reset",
+              "start": 0
+            }
+          ],
+          "truncated": true,
+          "unique_encoded_states": 3
+        }
+      ],
+      "96": [
+        {
+          "actions": {
+            "NOOP": 128
+          },
+          "raw_return": 0.0,
+          "reason": null,
+          "return_scope": "horizon_limited",
+          "seconds": 1.4795069231186062,
+          "seed": 734101,
+          "status": "completed",
+          "steps": 128,
+          "terminated": false,
+          "transitions": [
+            {
+              "decisions": 128,
+              "fired": false,
+              "kind": "reset",
+              "start": 0
+            }
+          ],
+          "truncated": true,
+          "unique_encoded_states": 2
+        }
+      ]
+    },
+    "first_fit": 8,
+    "first_fit_rows_by_action": {
+      "FIRE": 3,
+      "LEFT": 2,
+      "NOOP": 2,
+      "RIGHT": 1
+    },
+    "fits": 6,
+    "stability": {
+      "actions_retained_for_support": 0,
+      "distance_rejections": 0,
+      "support_repair_nodes": 0,
+      "target_model_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "target_update_interval": 1,
+      "verified_fits": 6
+    },
+    "training_phase_seconds": {
+      "checkpoint_logs": 1.9839762810152024,
+      "emulation_extraction": 0.4298432271461934,
+      "fit": 0.3219698111061007,
+      "policy_collection_td": 0.004875207785516977,
+      "prediction": 0.0,
+      "relations_encoding": 0.11618031212128699,
+      "selection_targets": 0.04751493176445365
+    },
+    "training_seed": 733101,
+    "trees_fit_after_first_fit": 40,
+    "trees_reused_after_first_fit": 40
+  },
+  "schema": "pong_analysis_unit_v2",
+  "sha256": "35d6acbcad3ab8f76230bd7fa23a083a6769c41ff962f89cea5f6dc6f9f4134e"
+}

@@ -1,0 +1,41 @@
+{
+  "payload": {
+    "artifacts": {},
+    "identity_sha256": "febc88b4fdfa76a1faa5591e41d8fcebf5f86c8dfb15b1416af9c2c1729e2546",
+    "reason": null,
+    "result": {
+      "actions": {
+        "FIRE": 3,
+        "LEFT": 13502,
+        "RIGHT": 13495
+      },
+      "raw_return": 1.0,
+      "reason": null,
+      "return_scope": "horizon_limited",
+      "seconds": 86.58015765994787,
+      "seed": 734002,
+      "status": "completed",
+      "steps": 27000,
+      "terminated": false,
+      "transitions": [
+        {
+          "decisions": 1,
+          "fired": true,
+          "kind": "reset",
+          "start": 0
+        },
+        {
+          "decisions": 26947,
+          "fired": false,
+          "kind": "life_lost",
+          "start": 53
+        }
+      ],
+      "truncated": true,
+      "unique_encoded_states": 31
+    },
+    "status": "completed"
+  },
+  "schema": "pong_analysis_unit_v2",
+  "sha256": "6deb17e24f6bb88877c2289a8bec202d4b00402b00f85413ec0a0f8f6907e155"
+}

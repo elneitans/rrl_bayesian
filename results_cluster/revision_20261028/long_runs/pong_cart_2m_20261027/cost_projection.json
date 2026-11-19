@@ -1,0 +1,1913 @@
+{
+  "resolved": {
+    "schema": "pong_progressive_v2",
+    "protocol": {
+      "schema": "pong_progressive_v2",
+      "name": "pong_cart_2m_20261027",
+      "level": "long",
+      "pipelines": [
+        "ocatari"
+      ],
+      "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+      "training_horizon": 27000,
+      "learners": {
+        "cart": {
+          "max_depth": 4,
+          "min_child": 2,
+          "criterion": "SSE"
+        }
+      },
+      "learning": {
+        "gamma": 0.99,
+        "replay_capacity": 50000,
+        "batch_size_per_action": 128,
+        "fit_interval": 512,
+        "warmup_interactions": 512,
+        "bootstrap_on_truncation": true
+      },
+      "exploration": {
+        "epsilon_init": 1,
+        "epsilon_min": 0.1,
+        "epsilon_decay_steps": 50000
+      },
+      "training_seeds": [
+        501601,
+        501602,
+        501603,
+        501604,
+        501605,
+        501606,
+        501607,
+        501608,
+        501609,
+        501610,
+        501611,
+        501612,
+        501613,
+        501614,
+        501615
+      ],
+      "evaluation": {
+        "intermediate": {
+          "seeds": [
+            501801,
+            501802
+          ],
+          "horizon": 27000,
+          "checkpoints": [
+            0,
+            10000,
+            100000,
+            500000,
+            2000000
+          ]
+        },
+        "final_development": {
+          "seeds": [
+            501901,
+            501902,
+            501903,
+            501904,
+            501905,
+            501906,
+            501907,
+            501908,
+            501909,
+            501910
+          ],
+          "horizon": 27000,
+          "checkpoints": [
+            100000,
+            500000,
+            2000000
+          ]
+        },
+        "reserved_test": {
+          "seeds": [
+            420101,
+            420102,
+            420103,
+            420104,
+            420105,
+            420106,
+            420107,
+            420108,
+            420109,
+            420110,
+            420111,
+            420112,
+            420113,
+            420114,
+            420115,
+            420116,
+            420117,
+            420118,
+            420119,
+            420120
+          ],
+          "horizon": 27000,
+          "checkpoints": []
+        }
+      },
+      "max_decisions": 2000000,
+      "milestones": [
+        100000,
+        500000,
+        2000000
+      ],
+      "checkpoint_interval": 512,
+      "budgets": {
+        "training_seconds_per_cell": 86400,
+        "evaluation_seconds_per_episode": 2400,
+        "fit_margin_seconds": 10
+      },
+      "cache_bytes": 1048576,
+      "bart_review": null,
+      "primary_checkpoint": "final"
+    },
+    "cells": [
+      {
+        "id": "ocatari/cart/501601",
+        "pipeline": "ocatari",
+        "learner": "cart",
+        "seed": 501601,
+        "environment": {
+          "pipeline": "ocatari",
+          "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+          "horizon": 27000,
+          "contract": "pong_common_v1"
+        },
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT",
+            "RIGHTFIRE",
+            "LEFTFIRE"
+          ],
+          "seed": 501601,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 50000,
+          "batch_size_per_action": 128,
+          "fit_interval": 512,
+          "warmup_interactions": 512,
+          "epsilon_init": 1,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            501801,
+            501802,
+            501901,
+            501902,
+            501903,
+            501904,
+            501905,
+            501906,
+            501907,
+            501908,
+            501909,
+            501910
+          ],
+          "test_seeds": [
+            420101,
+            420102,
+            420103,
+            420104,
+            420105,
+            420106,
+            420107,
+            420108,
+            420109,
+            420110,
+            420111,
+            420112,
+            420113,
+            420114,
+            420115,
+            420116,
+            420117,
+            420118,
+            420119,
+            420120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "max_depth": 4,
+          "min_child": 2,
+          "criterion": "SSE"
+        },
+        "hash": "346f2b81f53b91e5a782693b3b1844d3211c94a8602d37165390b98f079fd62f"
+      },
+      {
+        "id": "ocatari/cart/501602",
+        "pipeline": "ocatari",
+        "learner": "cart",
+        "seed": 501602,
+        "environment": {
+          "pipeline": "ocatari",
+          "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+          "horizon": 27000,
+          "contract": "pong_common_v1"
+        },
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT",
+            "RIGHTFIRE",
+            "LEFTFIRE"
+          ],
+          "seed": 501602,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 50000,
+          "batch_size_per_action": 128,
+          "fit_interval": 512,
+          "warmup_interactions": 512,
+          "epsilon_init": 1,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            501801,
+            501802,
+            501901,
+            501902,
+            501903,
+            501904,
+            501905,
+            501906,
+            501907,
+            501908,
+            501909,
+            501910
+          ],
+          "test_seeds": [
+            420101,
+            420102,
+            420103,
+            420104,
+            420105,
+            420106,
+            420107,
+            420108,
+            420109,
+            420110,
+            420111,
+            420112,
+            420113,
+            420114,
+            420115,
+            420116,
+            420117,
+            420118,
+            420119,
+            420120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "max_depth": 4,
+          "min_child": 2,
+          "criterion": "SSE"
+        },
+        "hash": "6a65a26a34605154abbe22b0f378437f6ed07a767d47cd505a395ac06dd92ad0"
+      },
+      {
+        "id": "ocatari/cart/501603",
+        "pipeline": "ocatari",
+        "learner": "cart",
+        "seed": 501603,
+        "environment": {
+          "pipeline": "ocatari",
+          "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+          "horizon": 27000,
+          "contract": "pong_common_v1"
+        },
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT",
+            "RIGHTFIRE",
+            "LEFTFIRE"
+          ],
+          "seed": 501603,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 50000,
+          "batch_size_per_action": 128,
+          "fit_interval": 512,
+          "warmup_interactions": 512,
+          "epsilon_init": 1,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            501801,
+            501802,
+            501901,
+            501902,
+            501903,
+            501904,
+            501905,
+            501906,
+            501907,
+            501908,
+            501909,
+            501910
+          ],
+          "test_seeds": [
+            420101,
+            420102,
+            420103,
+            420104,
+            420105,
+            420106,
+            420107,
+            420108,
+            420109,
+            420110,
+            420111,
+            420112,
+            420113,
+            420114,
+            420115,
+            420116,
+            420117,
+            420118,
+            420119,
+            420120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "max_depth": 4,
+          "min_child": 2,
+          "criterion": "SSE"
+        },
+        "hash": "44c8e77901a6a527947754e8840fff78a2803c291859df2d8a8b18a59c8540b4"
+      },
+      {
+        "id": "ocatari/cart/501604",
+        "pipeline": "ocatari",
+        "learner": "cart",
+        "seed": 501604,
+        "environment": {
+          "pipeline": "ocatari",
+          "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+          "horizon": 27000,
+          "contract": "pong_common_v1"
+        },
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT",
+            "RIGHTFIRE",
+            "LEFTFIRE"
+          ],
+          "seed": 501604,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 50000,
+          "batch_size_per_action": 128,
+          "fit_interval": 512,
+          "warmup_interactions": 512,
+          "epsilon_init": 1,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            501801,
+            501802,
+            501901,
+            501902,
+            501903,
+            501904,
+            501905,
+            501906,
+            501907,
+            501908,
+            501909,
+            501910
+          ],
+          "test_seeds": [
+            420101,
+            420102,
+            420103,
+            420104,
+            420105,
+            420106,
+            420107,
+            420108,
+            420109,
+            420110,
+            420111,
+            420112,
+            420113,
+            420114,
+            420115,
+            420116,
+            420117,
+            420118,
+            420119,
+            420120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "max_depth": 4,
+          "min_child": 2,
+          "criterion": "SSE"
+        },
+        "hash": "200a427672249d23bad5eebb4487030aebcc7039923049a320043a27dfcb6dde"
+      },
+      {
+        "id": "ocatari/cart/501605",
+        "pipeline": "ocatari",
+        "learner": "cart",
+        "seed": 501605,
+        "environment": {
+          "pipeline": "ocatari",
+          "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+          "horizon": 27000,
+          "contract": "pong_common_v1"
+        },
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT",
+            "RIGHTFIRE",
+            "LEFTFIRE"
+          ],
+          "seed": 501605,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 50000,
+          "batch_size_per_action": 128,
+          "fit_interval": 512,
+          "warmup_interactions": 512,
+          "epsilon_init": 1,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            501801,
+            501802,
+            501901,
+            501902,
+            501903,
+            501904,
+            501905,
+            501906,
+            501907,
+            501908,
+            501909,
+            501910
+          ],
+          "test_seeds": [
+            420101,
+            420102,
+            420103,
+            420104,
+            420105,
+            420106,
+            420107,
+            420108,
+            420109,
+            420110,
+            420111,
+            420112,
+            420113,
+            420114,
+            420115,
+            420116,
+            420117,
+            420118,
+            420119,
+            420120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "max_depth": 4,
+          "min_child": 2,
+          "criterion": "SSE"
+        },
+        "hash": "c3f56fa6b0eed6b3ad3fde9f615f90a6747313239a14baf813194c9fc55c5440"
+      },
+      {
+        "id": "ocatari/cart/501606",
+        "pipeline": "ocatari",
+        "learner": "cart",
+        "seed": 501606,
+        "environment": {
+          "pipeline": "ocatari",
+          "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+          "horizon": 27000,
+          "contract": "pong_common_v1"
+        },
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT",
+            "RIGHTFIRE",
+            "LEFTFIRE"
+          ],
+          "seed": 501606,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 50000,
+          "batch_size_per_action": 128,
+          "fit_interval": 512,
+          "warmup_interactions": 512,
+          "epsilon_init": 1,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            501801,
+            501802,
+            501901,
+            501902,
+            501903,
+            501904,
+            501905,
+            501906,
+            501907,
+            501908,
+            501909,
+            501910
+          ],
+          "test_seeds": [
+            420101,
+            420102,
+            420103,
+            420104,
+            420105,
+            420106,
+            420107,
+            420108,
+            420109,
+            420110,
+            420111,
+            420112,
+            420113,
+            420114,
+            420115,
+            420116,
+            420117,
+            420118,
+            420119,
+            420120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "max_depth": 4,
+          "min_child": 2,
+          "criterion": "SSE"
+        },
+        "hash": "6606534447ee14218d0f098b622a6fb93d079f8fb56079b6707c6d19dd950d9a"
+      },
+      {
+        "id": "ocatari/cart/501607",
+        "pipeline": "ocatari",
+        "learner": "cart",
+        "seed": 501607,
+        "environment": {
+          "pipeline": "ocatari",
+          "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+          "horizon": 27000,
+          "contract": "pong_common_v1"
+        },
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT",
+            "RIGHTFIRE",
+            "LEFTFIRE"
+          ],
+          "seed": 501607,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 50000,
+          "batch_size_per_action": 128,
+          "fit_interval": 512,
+          "warmup_interactions": 512,
+          "epsilon_init": 1,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            501801,
+            501802,
+            501901,
+            501902,
+            501903,
+            501904,
+            501905,
+            501906,
+            501907,
+            501908,
+            501909,
+            501910
+          ],
+          "test_seeds": [
+            420101,
+            420102,
+            420103,
+            420104,
+            420105,
+            420106,
+            420107,
+            420108,
+            420109,
+            420110,
+            420111,
+            420112,
+            420113,
+            420114,
+            420115,
+            420116,
+            420117,
+            420118,
+            420119,
+            420120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "max_depth": 4,
+          "min_child": 2,
+          "criterion": "SSE"
+        },
+        "hash": "8a6b12b2aece29518bce62b39f7f60352fb7e7e78810d7f4fcbbf25d4f833ca5"
+      },
+      {
+        "id": "ocatari/cart/501608",
+        "pipeline": "ocatari",
+        "learner": "cart",
+        "seed": 501608,
+        "environment": {
+          "pipeline": "ocatari",
+          "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+          "horizon": 27000,
+          "contract": "pong_common_v1"
+        },
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT",
+            "RIGHTFIRE",
+            "LEFTFIRE"
+          ],
+          "seed": 501608,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 50000,
+          "batch_size_per_action": 128,
+          "fit_interval": 512,
+          "warmup_interactions": 512,
+          "epsilon_init": 1,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            501801,
+            501802,
+            501901,
+            501902,
+            501903,
+            501904,
+            501905,
+            501906,
+            501907,
+            501908,
+            501909,
+            501910
+          ],
+          "test_seeds": [
+            420101,
+            420102,
+            420103,
+            420104,
+            420105,
+            420106,
+            420107,
+            420108,
+            420109,
+            420110,
+            420111,
+            420112,
+            420113,
+            420114,
+            420115,
+            420116,
+            420117,
+            420118,
+            420119,
+            420120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "max_depth": 4,
+          "min_child": 2,
+          "criterion": "SSE"
+        },
+        "hash": "23f7300d52c0085f684f7bfa0ab35e53181c06f5ee87a131182de4118e695c31"
+      },
+      {
+        "id": "ocatari/cart/501609",
+        "pipeline": "ocatari",
+        "learner": "cart",
+        "seed": 501609,
+        "environment": {
+          "pipeline": "ocatari",
+          "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+          "horizon": 27000,
+          "contract": "pong_common_v1"
+        },
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT",
+            "RIGHTFIRE",
+            "LEFTFIRE"
+          ],
+          "seed": 501609,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 50000,
+          "batch_size_per_action": 128,
+          "fit_interval": 512,
+          "warmup_interactions": 512,
+          "epsilon_init": 1,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            501801,
+            501802,
+            501901,
+            501902,
+            501903,
+            501904,
+            501905,
+            501906,
+            501907,
+            501908,
+            501909,
+            501910
+          ],
+          "test_seeds": [
+            420101,
+            420102,
+            420103,
+            420104,
+            420105,
+            420106,
+            420107,
+            420108,
+            420109,
+            420110,
+            420111,
+            420112,
+            420113,
+            420114,
+            420115,
+            420116,
+            420117,
+            420118,
+            420119,
+            420120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "max_depth": 4,
+          "min_child": 2,
+          "criterion": "SSE"
+        },
+        "hash": "b5b94dd265c2483671e1a1a1d6798a54f9c84ba87e0a552567c6305d78874340"
+      },
+      {
+        "id": "ocatari/cart/501610",
+        "pipeline": "ocatari",
+        "learner": "cart",
+        "seed": 501610,
+        "environment": {
+          "pipeline": "ocatari",
+          "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+          "horizon": 27000,
+          "contract": "pong_common_v1"
+        },
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT",
+            "RIGHTFIRE",
+            "LEFTFIRE"
+          ],
+          "seed": 501610,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 50000,
+          "batch_size_per_action": 128,
+          "fit_interval": 512,
+          "warmup_interactions": 512,
+          "epsilon_init": 1,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            501801,
+            501802,
+            501901,
+            501902,
+            501903,
+            501904,
+            501905,
+            501906,
+            501907,
+            501908,
+            501909,
+            501910
+          ],
+          "test_seeds": [
+            420101,
+            420102,
+            420103,
+            420104,
+            420105,
+            420106,
+            420107,
+            420108,
+            420109,
+            420110,
+            420111,
+            420112,
+            420113,
+            420114,
+            420115,
+            420116,
+            420117,
+            420118,
+            420119,
+            420120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "max_depth": 4,
+          "min_child": 2,
+          "criterion": "SSE"
+        },
+        "hash": "982b831c4756441ba416c3212bf4def9323ba1d57392d39b7b4ef86008329cab"
+      },
+      {
+        "id": "ocatari/cart/501611",
+        "pipeline": "ocatari",
+        "learner": "cart",
+        "seed": 501611,
+        "environment": {
+          "pipeline": "ocatari",
+          "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+          "horizon": 27000,
+          "contract": "pong_common_v1"
+        },
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT",
+            "RIGHTFIRE",
+            "LEFTFIRE"
+          ],
+          "seed": 501611,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 50000,
+          "batch_size_per_action": 128,
+          "fit_interval": 512,
+          "warmup_interactions": 512,
+          "epsilon_init": 1,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            501801,
+            501802,
+            501901,
+            501902,
+            501903,
+            501904,
+            501905,
+            501906,
+            501907,
+            501908,
+            501909,
+            501910
+          ],
+          "test_seeds": [
+            420101,
+            420102,
+            420103,
+            420104,
+            420105,
+            420106,
+            420107,
+            420108,
+            420109,
+            420110,
+            420111,
+            420112,
+            420113,
+            420114,
+            420115,
+            420116,
+            420117,
+            420118,
+            420119,
+            420120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "max_depth": 4,
+          "min_child": 2,
+          "criterion": "SSE"
+        },
+        "hash": "1a2515aa25a8c7fca9f410f714c98262da7954485ea9bf346b788061ca43ecc8"
+      },
+      {
+        "id": "ocatari/cart/501612",
+        "pipeline": "ocatari",
+        "learner": "cart",
+        "seed": 501612,
+        "environment": {
+          "pipeline": "ocatari",
+          "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+          "horizon": 27000,
+          "contract": "pong_common_v1"
+        },
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT",
+            "RIGHTFIRE",
+            "LEFTFIRE"
+          ],
+          "seed": 501612,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 50000,
+          "batch_size_per_action": 128,
+          "fit_interval": 512,
+          "warmup_interactions": 512,
+          "epsilon_init": 1,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            501801,
+            501802,
+            501901,
+            501902,
+            501903,
+            501904,
+            501905,
+            501906,
+            501907,
+            501908,
+            501909,
+            501910
+          ],
+          "test_seeds": [
+            420101,
+            420102,
+            420103,
+            420104,
+            420105,
+            420106,
+            420107,
+            420108,
+            420109,
+            420110,
+            420111,
+            420112,
+            420113,
+            420114,
+            420115,
+            420116,
+            420117,
+            420118,
+            420119,
+            420120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "max_depth": 4,
+          "min_child": 2,
+          "criterion": "SSE"
+        },
+        "hash": "9938f654afeeda7e049efcc81c3fe50ab301a73ac5255d04a753313dd68c4f0f"
+      },
+      {
+        "id": "ocatari/cart/501613",
+        "pipeline": "ocatari",
+        "learner": "cart",
+        "seed": 501613,
+        "environment": {
+          "pipeline": "ocatari",
+          "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+          "horizon": 27000,
+          "contract": "pong_common_v1"
+        },
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT",
+            "RIGHTFIRE",
+            "LEFTFIRE"
+          ],
+          "seed": 501613,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 50000,
+          "batch_size_per_action": 128,
+          "fit_interval": 512,
+          "warmup_interactions": 512,
+          "epsilon_init": 1,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            501801,
+            501802,
+            501901,
+            501902,
+            501903,
+            501904,
+            501905,
+            501906,
+            501907,
+            501908,
+            501909,
+            501910
+          ],
+          "test_seeds": [
+            420101,
+            420102,
+            420103,
+            420104,
+            420105,
+            420106,
+            420107,
+            420108,
+            420109,
+            420110,
+            420111,
+            420112,
+            420113,
+            420114,
+            420115,
+            420116,
+            420117,
+            420118,
+            420119,
+            420120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "max_depth": 4,
+          "min_child": 2,
+          "criterion": "SSE"
+        },
+        "hash": "eb6568043e51daf86beb273e31021f3bbdd98c84ca6797d2ef7df89f9ad226c6"
+      },
+      {
+        "id": "ocatari/cart/501614",
+        "pipeline": "ocatari",
+        "learner": "cart",
+        "seed": 501614,
+        "environment": {
+          "pipeline": "ocatari",
+          "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+          "horizon": 27000,
+          "contract": "pong_common_v1"
+        },
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT",
+            "RIGHTFIRE",
+            "LEFTFIRE"
+          ],
+          "seed": 501614,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 50000,
+          "batch_size_per_action": 128,
+          "fit_interval": 512,
+          "warmup_interactions": 512,
+          "epsilon_init": 1,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            501801,
+            501802,
+            501901,
+            501902,
+            501903,
+            501904,
+            501905,
+            501906,
+            501907,
+            501908,
+            501909,
+            501910
+          ],
+          "test_seeds": [
+            420101,
+            420102,
+            420103,
+            420104,
+            420105,
+            420106,
+            420107,
+            420108,
+            420109,
+            420110,
+            420111,
+            420112,
+            420113,
+            420114,
+            420115,
+            420116,
+            420117,
+            420118,
+            420119,
+            420120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "max_depth": 4,
+          "min_child": 2,
+          "criterion": "SSE"
+        },
+        "hash": "bb49e8d039c112d4ba8f9fe0496c6979fc5571924464706aacdf0a15b5013ba1"
+      },
+      {
+        "id": "ocatari/cart/501615",
+        "pipeline": "ocatari",
+        "learner": "cart",
+        "seed": 501615,
+        "environment": {
+          "pipeline": "ocatari",
+          "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+          "horizon": 27000,
+          "contract": "pong_common_v1"
+        },
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT",
+            "RIGHTFIRE",
+            "LEFTFIRE"
+          ],
+          "seed": 501615,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 50000,
+          "batch_size_per_action": 128,
+          "fit_interval": 512,
+          "warmup_interactions": 512,
+          "epsilon_init": 1,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            501801,
+            501802,
+            501901,
+            501902,
+            501903,
+            501904,
+            501905,
+            501906,
+            501907,
+            501908,
+            501909,
+            501910
+          ],
+          "test_seeds": [
+            420101,
+            420102,
+            420103,
+            420104,
+            420105,
+            420106,
+            420107,
+            420108,
+            420109,
+            420110,
+            420111,
+            420112,
+            420113,
+            420114,
+            420115,
+            420116,
+            420117,
+            420118,
+            420119,
+            420120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "max_depth": 4,
+          "min_child": 2,
+          "criterion": "SSE"
+        },
+        "hash": "a1946f9229d0fca95a7a042073887344676af11586bee677c339b2a8d87f4c4d"
+      }
+    ],
+    "unresolved": []
+  },
+  "workload": [
+    {
+      "id": "ocatari/cart/501601",
+      "seed": 501601,
+      "decisions": 2000000,
+      "expected_fits": 3906,
+      "expected_checkpoints": 3911,
+      "evaluation_episodes": 40
+    },
+    {
+      "id": "ocatari/cart/501602",
+      "seed": 501602,
+      "decisions": 2000000,
+      "expected_fits": 3906,
+      "expected_checkpoints": 3911,
+      "evaluation_episodes": 40
+    },
+    {
+      "id": "ocatari/cart/501603",
+      "seed": 501603,
+      "decisions": 2000000,
+      "expected_fits": 3906,
+      "expected_checkpoints": 3911,
+      "evaluation_episodes": 40
+    },
+    {
+      "id": "ocatari/cart/501604",
+      "seed": 501604,
+      "decisions": 2000000,
+      "expected_fits": 3906,
+      "expected_checkpoints": 3911,
+      "evaluation_episodes": 40
+    },
+    {
+      "id": "ocatari/cart/501605",
+      "seed": 501605,
+      "decisions": 2000000,
+      "expected_fits": 3906,
+      "expected_checkpoints": 3911,
+      "evaluation_episodes": 40
+    },
+    {
+      "id": "ocatari/cart/501606",
+      "seed": 501606,
+      "decisions": 2000000,
+      "expected_fits": 3906,
+      "expected_checkpoints": 3911,
+      "evaluation_episodes": 40
+    },
+    {
+      "id": "ocatari/cart/501607",
+      "seed": 501607,
+      "decisions": 2000000,
+      "expected_fits": 3906,
+      "expected_checkpoints": 3911,
+      "evaluation_episodes": 40
+    },
+    {
+      "id": "ocatari/cart/501608",
+      "seed": 501608,
+      "decisions": 2000000,
+      "expected_fits": 3906,
+      "expected_checkpoints": 3911,
+      "evaluation_episodes": 40
+    },
+    {
+      "id": "ocatari/cart/501609",
+      "seed": 501609,
+      "decisions": 2000000,
+      "expected_fits": 3906,
+      "expected_checkpoints": 3911,
+      "evaluation_episodes": 40
+    },
+    {
+      "id": "ocatari/cart/501610",
+      "seed": 501610,
+      "decisions": 2000000,
+      "expected_fits": 3906,
+      "expected_checkpoints": 3911,
+      "evaluation_episodes": 40
+    },
+    {
+      "id": "ocatari/cart/501611",
+      "seed": 501611,
+      "decisions": 2000000,
+      "expected_fits": 3906,
+      "expected_checkpoints": 3911,
+      "evaluation_episodes": 40
+    },
+    {
+      "id": "ocatari/cart/501612",
+      "seed": 501612,
+      "decisions": 2000000,
+      "expected_fits": 3906,
+      "expected_checkpoints": 3911,
+      "evaluation_episodes": 40
+    },
+    {
+      "id": "ocatari/cart/501613",
+      "seed": 501613,
+      "decisions": 2000000,
+      "expected_fits": 3906,
+      "expected_checkpoints": 3911,
+      "evaluation_episodes": 40
+    },
+    {
+      "id": "ocatari/cart/501614",
+      "seed": 501614,
+      "decisions": 2000000,
+      "expected_fits": 3906,
+      "expected_checkpoints": 3911,
+      "evaluation_episodes": 40
+    },
+    {
+      "id": "ocatari/cart/501615",
+      "seed": 501615,
+      "decisions": 2000000,
+      "expected_fits": 3906,
+      "expected_checkpoints": 3911,
+      "evaluation_episodes": 40
+    }
+  ],
+  "estimates": [
+    {
+      "cell": "ocatari/cart/501601",
+      "training_seconds_observed_rate_range": [
+        10002.034292870121,
+        10002.034292870121
+      ],
+      "log_bytes_observed_rate_range": [
+        715946484.375,
+        715946484.375
+      ],
+      "peak_rss_observed_range": [
+        291889152,
+        291889152
+      ],
+      "checkpoint_bytes_before_retention_observed_size_projection": [
+        97567717,
+        27201505608
+      ],
+      "evaluation_seconds_episode_observed_range": [
+        8.425309999962337,
+        21.2961207969347
+      ],
+      "evaluation_seconds_observed_rate_projection": [
+        337.0123999984935,
+        851.8448318773881
+      ],
+      "evaluation_worker_seconds_rate_projection": [
+        710.018364068653,
+        710.018364068653
+      ],
+      "uncertainty": "Observed rates only; tree/replay growth and hardware can change cost. No maximum bound."
+    },
+    {
+      "cell": "ocatari/cart/501602",
+      "training_seconds_observed_rate_range": [
+        10002.034292870121,
+        10002.034292870121
+      ],
+      "log_bytes_observed_rate_range": [
+        715946484.375,
+        715946484.375
+      ],
+      "peak_rss_observed_range": [
+        291889152,
+        291889152
+      ],
+      "checkpoint_bytes_before_retention_observed_size_projection": [
+        97567717,
+        27201505608
+      ],
+      "evaluation_seconds_episode_observed_range": [
+        8.425309999962337,
+        21.2961207969347
+      ],
+      "evaluation_seconds_observed_rate_projection": [
+        337.0123999984935,
+        851.8448318773881
+      ],
+      "evaluation_worker_seconds_rate_projection": [
+        710.018364068653,
+        710.018364068653
+      ],
+      "uncertainty": "Observed rates only; tree/replay growth and hardware can change cost. No maximum bound."
+    },
+    {
+      "cell": "ocatari/cart/501603",
+      "training_seconds_observed_rate_range": [
+        10002.034292870121,
+        10002.034292870121
+      ],
+      "log_bytes_observed_rate_range": [
+        715946484.375,
+        715946484.375
+      ],
+      "peak_rss_observed_range": [
+        291889152,
+        291889152
+      ],
+      "checkpoint_bytes_before_retention_observed_size_projection": [
+        97567717,
+        27201505608
+      ],
+      "evaluation_seconds_episode_observed_range": [
+        8.425309999962337,
+        21.2961207969347
+      ],
+      "evaluation_seconds_observed_rate_projection": [
+        337.0123999984935,
+        851.8448318773881
+      ],
+      "evaluation_worker_seconds_rate_projection": [
+        710.018364068653,
+        710.018364068653
+      ],
+      "uncertainty": "Observed rates only; tree/replay growth and hardware can change cost. No maximum bound."
+    },
+    {
+      "cell": "ocatari/cart/501604",
+      "training_seconds_observed_rate_range": [
+        10002.034292870121,
+        10002.034292870121
+      ],
+      "log_bytes_observed_rate_range": [
+        715946484.375,
+        715946484.375
+      ],
+      "peak_rss_observed_range": [
+        291889152,
+        291889152
+      ],
+      "checkpoint_bytes_before_retention_observed_size_projection": [
+        97567717,
+        27201505608
+      ],
+      "evaluation_seconds_episode_observed_range": [
+        8.425309999962337,
+        21.2961207969347
+      ],
+      "evaluation_seconds_observed_rate_projection": [
+        337.0123999984935,
+        851.8448318773881
+      ],
+      "evaluation_worker_seconds_rate_projection": [
+        710.018364068653,
+        710.018364068653
+      ],
+      "uncertainty": "Observed rates only; tree/replay growth and hardware can change cost. No maximum bound."
+    },
+    {
+      "cell": "ocatari/cart/501605",
+      "training_seconds_observed_rate_range": [
+        10002.034292870121,
+        10002.034292870121
+      ],
+      "log_bytes_observed_rate_range": [
+        715946484.375,
+        715946484.375
+      ],
+      "peak_rss_observed_range": [
+        291889152,
+        291889152
+      ],
+      "checkpoint_bytes_before_retention_observed_size_projection": [
+        97567717,
+        27201505608
+      ],
+      "evaluation_seconds_episode_observed_range": [
+        8.425309999962337,
+        21.2961207969347
+      ],
+      "evaluation_seconds_observed_rate_projection": [
+        337.0123999984935,
+        851.8448318773881
+      ],
+      "evaluation_worker_seconds_rate_projection": [
+        710.018364068653,
+        710.018364068653
+      ],
+      "uncertainty": "Observed rates only; tree/replay growth and hardware can change cost. No maximum bound."
+    },
+    {
+      "cell": "ocatari/cart/501606",
+      "training_seconds_observed_rate_range": [
+        10002.034292870121,
+        10002.034292870121
+      ],
+      "log_bytes_observed_rate_range": [
+        715946484.375,
+        715946484.375
+      ],
+      "peak_rss_observed_range": [
+        291889152,
+        291889152
+      ],
+      "checkpoint_bytes_before_retention_observed_size_projection": [
+        97567717,
+        27201505608
+      ],
+      "evaluation_seconds_episode_observed_range": [
+        8.425309999962337,
+        21.2961207969347
+      ],
+      "evaluation_seconds_observed_rate_projection": [
+        337.0123999984935,
+        851.8448318773881
+      ],
+      "evaluation_worker_seconds_rate_projection": [
+        710.018364068653,
+        710.018364068653
+      ],
+      "uncertainty": "Observed rates only; tree/replay growth and hardware can change cost. No maximum bound."
+    },
+    {
+      "cell": "ocatari/cart/501607",
+      "training_seconds_observed_rate_range": [
+        10002.034292870121,
+        10002.034292870121
+      ],
+      "log_bytes_observed_rate_range": [
+        715946484.375,
+        715946484.375
+      ],
+      "peak_rss_observed_range": [
+        291889152,
+        291889152
+      ],
+      "checkpoint_bytes_before_retention_observed_size_projection": [
+        97567717,
+        27201505608
+      ],
+      "evaluation_seconds_episode_observed_range": [
+        8.425309999962337,
+        21.2961207969347
+      ],
+      "evaluation_seconds_observed_rate_projection": [
+        337.0123999984935,
+        851.8448318773881
+      ],
+      "evaluation_worker_seconds_rate_projection": [
+        710.018364068653,
+        710.018364068653
+      ],
+      "uncertainty": "Observed rates only; tree/replay growth and hardware can change cost. No maximum bound."
+    },
+    {
+      "cell": "ocatari/cart/501608",
+      "training_seconds_observed_rate_range": [
+        10002.034292870121,
+        10002.034292870121
+      ],
+      "log_bytes_observed_rate_range": [
+        715946484.375,
+        715946484.375
+      ],
+      "peak_rss_observed_range": [
+        291889152,
+        291889152
+      ],
+      "checkpoint_bytes_before_retention_observed_size_projection": [
+        97567717,
+        27201505608
+      ],
+      "evaluation_seconds_episode_observed_range": [
+        8.425309999962337,
+        21.2961207969347
+      ],
+      "evaluation_seconds_observed_rate_projection": [
+        337.0123999984935,
+        851.8448318773881
+      ],
+      "evaluation_worker_seconds_rate_projection": [
+        710.018364068653,
+        710.018364068653
+      ],
+      "uncertainty": "Observed rates only; tree/replay growth and hardware can change cost. No maximum bound."
+    },
+    {
+      "cell": "ocatari/cart/501609",
+      "training_seconds_observed_rate_range": [
+        10002.034292870121,
+        10002.034292870121
+      ],
+      "log_bytes_observed_rate_range": [
+        715946484.375,
+        715946484.375
+      ],
+      "peak_rss_observed_range": [
+        291889152,
+        291889152
+      ],
+      "checkpoint_bytes_before_retention_observed_size_projection": [
+        97567717,
+        27201505608
+      ],
+      "evaluation_seconds_episode_observed_range": [
+        8.425309999962337,
+        21.2961207969347
+      ],
+      "evaluation_seconds_observed_rate_projection": [
+        337.0123999984935,
+        851.8448318773881
+      ],
+      "evaluation_worker_seconds_rate_projection": [
+        710.018364068653,
+        710.018364068653
+      ],
+      "uncertainty": "Observed rates only; tree/replay growth and hardware can change cost. No maximum bound."
+    },
+    {
+      "cell": "ocatari/cart/501610",
+      "training_seconds_observed_rate_range": [
+        10002.034292870121,
+        10002.034292870121
+      ],
+      "log_bytes_observed_rate_range": [
+        715946484.375,
+        715946484.375
+      ],
+      "peak_rss_observed_range": [
+        291889152,
+        291889152
+      ],
+      "checkpoint_bytes_before_retention_observed_size_projection": [
+        97567717,
+        27201505608
+      ],
+      "evaluation_seconds_episode_observed_range": [
+        8.425309999962337,
+        21.2961207969347
+      ],
+      "evaluation_seconds_observed_rate_projection": [
+        337.0123999984935,
+        851.8448318773881
+      ],
+      "evaluation_worker_seconds_rate_projection": [
+        710.018364068653,
+        710.018364068653
+      ],
+      "uncertainty": "Observed rates only; tree/replay growth and hardware can change cost. No maximum bound."
+    },
+    {
+      "cell": "ocatari/cart/501611",
+      "training_seconds_observed_rate_range": [
+        10002.034292870121,
+        10002.034292870121
+      ],
+      "log_bytes_observed_rate_range": [
+        715946484.375,
+        715946484.375
+      ],
+      "peak_rss_observed_range": [
+        291889152,
+        291889152
+      ],
+      "checkpoint_bytes_before_retention_observed_size_projection": [
+        97567717,
+        27201505608
+      ],
+      "evaluation_seconds_episode_observed_range": [
+        8.425309999962337,
+        21.2961207969347
+      ],
+      "evaluation_seconds_observed_rate_projection": [
+        337.0123999984935,
+        851.8448318773881
+      ],
+      "evaluation_worker_seconds_rate_projection": [
+        710.018364068653,
+        710.018364068653
+      ],
+      "uncertainty": "Observed rates only; tree/replay growth and hardware can change cost. No maximum bound."
+    },
+    {
+      "cell": "ocatari/cart/501612",
+      "training_seconds_observed_rate_range": [
+        10002.034292870121,
+        10002.034292870121
+      ],
+      "log_bytes_observed_rate_range": [
+        715946484.375,
+        715946484.375
+      ],
+      "peak_rss_observed_range": [
+        291889152,
+        291889152
+      ],
+      "checkpoint_bytes_before_retention_observed_size_projection": [
+        97567717,
+        27201505608
+      ],
+      "evaluation_seconds_episode_observed_range": [
+        8.425309999962337,
+        21.2961207969347
+      ],
+      "evaluation_seconds_observed_rate_projection": [
+        337.0123999984935,
+        851.8448318773881
+      ],
+      "evaluation_worker_seconds_rate_projection": [
+        710.018364068653,
+        710.018364068653
+      ],
+      "uncertainty": "Observed rates only; tree/replay growth and hardware can change cost. No maximum bound."
+    },
+    {
+      "cell": "ocatari/cart/501613",
+      "training_seconds_observed_rate_range": [
+        10002.034292870121,
+        10002.034292870121
+      ],
+      "log_bytes_observed_rate_range": [
+        715946484.375,
+        715946484.375
+      ],
+      "peak_rss_observed_range": [
+        291889152,
+        291889152
+      ],
+      "checkpoint_bytes_before_retention_observed_size_projection": [
+        97567717,
+        27201505608
+      ],
+      "evaluation_seconds_episode_observed_range": [
+        8.425309999962337,
+        21.2961207969347
+      ],
+      "evaluation_seconds_observed_rate_projection": [
+        337.0123999984935,
+        851.8448318773881
+      ],
+      "evaluation_worker_seconds_rate_projection": [
+        710.018364068653,
+        710.018364068653
+      ],
+      "uncertainty": "Observed rates only; tree/replay growth and hardware can change cost. No maximum bound."
+    },
+    {
+      "cell": "ocatari/cart/501614",
+      "training_seconds_observed_rate_range": [
+        10002.034292870121,
+        10002.034292870121
+      ],
+      "log_bytes_observed_rate_range": [
+        715946484.375,
+        715946484.375
+      ],
+      "peak_rss_observed_range": [
+        291889152,
+        291889152
+      ],
+      "checkpoint_bytes_before_retention_observed_size_projection": [
+        97567717,
+        27201505608
+      ],
+      "evaluation_seconds_episode_observed_range": [
+        8.425309999962337,
+        21.2961207969347
+      ],
+      "evaluation_seconds_observed_rate_projection": [
+        337.0123999984935,
+        851.8448318773881
+      ],
+      "evaluation_worker_seconds_rate_projection": [
+        710.018364068653,
+        710.018364068653
+      ],
+      "uncertainty": "Observed rates only; tree/replay growth and hardware can change cost. No maximum bound."
+    },
+    {
+      "cell": "ocatari/cart/501615",
+      "training_seconds_observed_rate_range": [
+        10002.034292870121,
+        10002.034292870121
+      ],
+      "log_bytes_observed_rate_range": [
+        715946484.375,
+        715946484.375
+      ],
+      "peak_rss_observed_range": [
+        291889152,
+        291889152
+      ],
+      "checkpoint_bytes_before_retention_observed_size_projection": [
+        97567717,
+        27201505608
+      ],
+      "evaluation_seconds_episode_observed_range": [
+        8.425309999962337,
+        21.2961207969347
+      ],
+      "evaluation_seconds_observed_rate_projection": [
+        337.0123999984935,
+        851.8448318773881
+      ],
+      "evaluation_worker_seconds_rate_projection": [
+        710.018364068653,
+        710.018364068653
+      ],
+      "uncertainty": "Observed rates only; tree/replay growth and hardware can change cost. No maximum bound."
+    }
+  ],
+  "uncertainty": "Missing compatible measurements means unknown time/storage, never zero.",
+  "pending_authorizations": [
+    "milestone authorization",
+    "compatible_Linux_cost_measurements",
+    "explicit_long_campaign_authorization"
+  ],
+  "reserved_test_episodes_executed": 0
+}

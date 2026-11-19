@@ -1,0 +1,1005 @@
+{
+  "payload": {
+    "accounting": {
+      "evaluation_budget_seconds_per_episode_sum": 6871.272498419974,
+      "evaluation_worker_seconds_known_sum": 6898.727470973041,
+      "training_seconds_per_unit_sum": 98.8124115280807
+    },
+    "analysis": {
+      "limits": [
+        "Few training seeds and degenerate bootstrap intervals do not establish equivalence.",
+        "Fixed-data A diagnostics do not certify every online BART fit.",
+        "A poor policy alone does not establish overfit, bad mixing or representation insufficiency.",
+        "Active times exclude queue and process startup; sums are not parallel campaign wall time."
+      ],
+      "no_cross_game_score_average": true,
+      "paired_contrasts": [],
+      "runs": [
+        {
+          "auc_interval": [
+            0,
+            20480
+          ],
+          "auc_status": "complete",
+          "cell": "Breakout/ocatari/cart/710601",
+          "counter": 20480,
+          "curve": [
+            {
+              "completed_games": 2,
+              "interactions": 0,
+              "mean_return": 1.0,
+              "training_active_seconds": 0.0,
+              "truncation_fraction": 0.0
+            },
+            {
+              "completed_games": 0,
+              "interactions": 20480,
+              "mean_return": 0.0,
+              "training_active_seconds": 89.8735003923066,
+              "truncation_fraction": 1.0
+            }
+          ],
+          "evaluation_seconds": 6898.727470973041,
+          "final_development": {
+            "completed_games": 0,
+            "episodes": [
+              {
+                "actions": {
+                  "NOOP": 5,
+                  "RIGHT": 26995
+                },
+                "raw_return": 0.0,
+                "reason": null,
+                "return": 0.0,
+                "return_scope": "horizon_limited",
+                "seconds": 616.5599654377438,
+                "seed": 712601,
+                "status": "completed",
+                "steps": 27000,
+                "terminated": false,
+                "truncated": true,
+                "unique_encoded_states": 3
+              },
+              {
+                "actions": {
+                  "NOOP": 5,
+                  "RIGHT": 26995
+                },
+                "raw_return": 0.0,
+                "reason": null,
+                "return": 0.0,
+                "return_scope": "horizon_limited",
+                "seconds": 562.3963928483427,
+                "seed": 712602,
+                "status": "completed",
+                "steps": 27000,
+                "terminated": false,
+                "truncated": true,
+                "unique_encoded_states": 3
+              },
+              {
+                "actions": {
+                  "NOOP": 5,
+                  "RIGHT": 26995
+                },
+                "raw_return": 0.0,
+                "reason": null,
+                "return": 0.0,
+                "return_scope": "horizon_limited",
+                "seconds": 544.2078411527909,
+                "seed": 712603,
+                "status": "completed",
+                "steps": 27000,
+                "terminated": false,
+                "truncated": true,
+                "unique_encoded_states": 3
+              },
+              {
+                "actions": {
+                  "NOOP": 5,
+                  "RIGHT": 26995
+                },
+                "raw_return": 0.0,
+                "reason": null,
+                "return": 0.0,
+                "return_scope": "horizon_limited",
+                "seconds": 598.5793966907077,
+                "seed": 712604,
+                "status": "completed",
+                "steps": 27000,
+                "terminated": false,
+                "truncated": true,
+                "unique_encoded_states": 3
+              },
+              {
+                "actions": {
+                  "NOOP": 5,
+                  "RIGHT": 26995
+                },
+                "raw_return": 0.0,
+                "reason": null,
+                "return": 0.0,
+                "return_scope": "horizon_limited",
+                "seconds": 550.7096308181062,
+                "seed": 712605,
+                "status": "completed",
+                "steps": 27000,
+                "terminated": false,
+                "truncated": true,
+                "unique_encoded_states": 3
+              },
+              {
+                "actions": {
+                  "NOOP": 5,
+                  "RIGHT": 26995
+                },
+                "raw_return": 0.0,
+                "reason": null,
+                "return": 0.0,
+                "return_scope": "horizon_limited",
+                "seconds": 583.9976441371255,
+                "seed": 712606,
+                "status": "completed",
+                "steps": 27000,
+                "terminated": false,
+                "truncated": true,
+                "unique_encoded_states": 3
+              },
+              {
+                "actions": {
+                  "NOOP": 5,
+                  "RIGHT": 26995
+                },
+                "raw_return": 0.0,
+                "reason": null,
+                "return": 0.0,
+                "return_scope": "horizon_limited",
+                "seconds": 549.7851965692826,
+                "seed": 712607,
+                "status": "completed",
+                "steps": 27000,
+                "terminated": false,
+                "truncated": true,
+                "unique_encoded_states": 3
+              },
+              {
+                "actions": {
+                  "NOOP": 5,
+                  "RIGHT": 26995
+                },
+                "raw_return": 0.0,
+                "reason": null,
+                "return": 0.0,
+                "return_scope": "horizon_limited",
+                "seconds": 586.9980714158155,
+                "seed": 712608,
+                "status": "completed",
+                "steps": 27000,
+                "terminated": false,
+                "truncated": true,
+                "unique_encoded_states": 3
+              },
+              {
+                "actions": {
+                  "NOOP": 5,
+                  "RIGHT": 26995
+                },
+                "raw_return": 0.0,
+                "reason": null,
+                "return": 0.0,
+                "return_scope": "horizon_limited",
+                "seconds": 586.9763910300098,
+                "seed": 712609,
+                "status": "completed",
+                "steps": 27000,
+                "terminated": false,
+                "truncated": true,
+                "unique_encoded_states": 3
+              },
+              {
+                "actions": {
+                  "NOOP": 5,
+                  "RIGHT": 26995
+                },
+                "raw_return": 0.0,
+                "reason": null,
+                "return": 0.0,
+                "return_scope": "horizon_limited",
+                "seconds": 560.6518410323188,
+                "seed": 712610,
+                "status": "completed",
+                "steps": 27000,
+                "terminated": false,
+                "truncated": true,
+                "unique_encoded_states": 3
+              }
+            ],
+            "horizon": 27000,
+            "iqr_raw_return": 0.0,
+            "mean_completed_game_raw_return": null,
+            "mean_raw_return": 0.0,
+            "median_raw_return": 0.0,
+            "schema": "pong_evaluation_v2",
+            "std_raw_return": 0.0,
+            "truncation_fraction": 1.0
+          },
+          "game": "Breakout",
+          "learner": "cart",
+          "maximum_decisions": 20480,
+          "metrics": {
+            "completed_games": 102,
+            "ended_episodes": 102,
+            "epsilon": 0.38940363387971727,
+            "interactions": 20480,
+            "learner": {
+              "cache_bytes": 0,
+              "complexity": {
+                "FIRE": {
+                  "leaves": 13,
+                  "max_depth": 4
+                },
+                "LEFT": {
+                  "leaves": 11,
+                  "max_depth": 4
+                },
+                "NOOP": {
+                  "leaves": 14,
+                  "max_depth": 4
+                },
+                "RIGHT": {
+                  "leaves": 12,
+                  "max_depth": 4
+                }
+              },
+              "fits": 40,
+              "kind": "cart",
+              "phase_seconds": {
+                "encoding": 17.778900415170938,
+                "fit": 1.0510389772243798,
+                "prediction": 0.6427566013298929,
+                "selection_targets": 0.43599750893190503
+              },
+              "replay_size": 20480
+            },
+            "phase_seconds": {
+              "checkpoint_logs": 28.331484763883054,
+              "emulation_extraction": 40.5150100258179,
+              "fit": 1.0510389772243798,
+              "policy_collection_td": 0.9352226089686155,
+              "prediction": 0.6427566013298929,
+              "relations_encoding": 19.050266212318093,
+              "selection_targets": 0.43599750893190503
+            },
+            "relations": 11,
+            "truncated_episodes": 0
+          },
+          "normalized_auc_decisions": 0.5,
+          "peak_rss_bytes": 289488896,
+          "pipeline": "ocatari",
+          "queue_seconds": null,
+          "retries": 0,
+          "seed": 710601,
+          "state": "completed",
+          "training_seconds": 98.8124115280807
+        }
+      ],
+      "seed_summaries": [
+        {
+          "game": "Breakout",
+          "independent_unit": "training_seed",
+          "iqr": 0.0,
+          "learner": "cart",
+          "mean": 0.0,
+          "median": 0.0,
+          "n_training_seeds": 1,
+          "per_training_seed": {
+            "710601": 0.0
+          },
+          "pipeline": "ocatari",
+          "return_scope_composition": {
+            "710601": {
+              "completed_games": 0,
+              "mean_by_scope": {
+                "horizon_limited": 0.0
+              },
+              "truncation_fraction": 1.0
+            }
+          },
+          "std": null
+        }
+      ]
+    },
+    "campaign": "5c95c2f6216f5a87e9c0f329c4cfe4811cbbb54b9b1d6a14fc01bc548243942e",
+    "cells": [
+      {
+        "cell": "Breakout/ocatari/cart/710601",
+        "comparison_state": "completed",
+        "counter": 20480,
+        "evaluation_budget_seconds": 6871.272498419974,
+        "evaluation_seconds": 6898.727470973041,
+        "evaluations": [
+          {
+            "checkpoint": {
+              "path": "checkpoints/20480-79856651193287433a0cd5b06855a4248bd1f0eed3757da8541dea9c8d097bdf.pkl",
+              "sha256": "79856651193287433a0cd5b06855a4248bd1f0eed3757da8541dea9c8d097bdf"
+            },
+            "counter": 20480,
+            "floor_result": null,
+            "group": "final_development",
+            "report": {
+              "completed_games": 0,
+              "episodes": [
+                {
+                  "actions": {
+                    "NOOP": 5,
+                    "RIGHT": 26995
+                  },
+                  "raw_return": 0.0,
+                  "reason": null,
+                  "return": 0.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 616.5599654377438,
+                  "seed": 712601,
+                  "status": "completed",
+                  "steps": 27000,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 3
+                },
+                {
+                  "actions": {
+                    "NOOP": 5,
+                    "RIGHT": 26995
+                  },
+                  "raw_return": 0.0,
+                  "reason": null,
+                  "return": 0.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 562.3963928483427,
+                  "seed": 712602,
+                  "status": "completed",
+                  "steps": 27000,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 3
+                },
+                {
+                  "actions": {
+                    "NOOP": 5,
+                    "RIGHT": 26995
+                  },
+                  "raw_return": 0.0,
+                  "reason": null,
+                  "return": 0.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 544.2078411527909,
+                  "seed": 712603,
+                  "status": "completed",
+                  "steps": 27000,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 3
+                },
+                {
+                  "actions": {
+                    "NOOP": 5,
+                    "RIGHT": 26995
+                  },
+                  "raw_return": 0.0,
+                  "reason": null,
+                  "return": 0.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 598.5793966907077,
+                  "seed": 712604,
+                  "status": "completed",
+                  "steps": 27000,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 3
+                },
+                {
+                  "actions": {
+                    "NOOP": 5,
+                    "RIGHT": 26995
+                  },
+                  "raw_return": 0.0,
+                  "reason": null,
+                  "return": 0.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 550.7096308181062,
+                  "seed": 712605,
+                  "status": "completed",
+                  "steps": 27000,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 3
+                },
+                {
+                  "actions": {
+                    "NOOP": 5,
+                    "RIGHT": 26995
+                  },
+                  "raw_return": 0.0,
+                  "reason": null,
+                  "return": 0.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 583.9976441371255,
+                  "seed": 712606,
+                  "status": "completed",
+                  "steps": 27000,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 3
+                },
+                {
+                  "actions": {
+                    "NOOP": 5,
+                    "RIGHT": 26995
+                  },
+                  "raw_return": 0.0,
+                  "reason": null,
+                  "return": 0.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 549.7851965692826,
+                  "seed": 712607,
+                  "status": "completed",
+                  "steps": 27000,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 3
+                },
+                {
+                  "actions": {
+                    "NOOP": 5,
+                    "RIGHT": 26995
+                  },
+                  "raw_return": 0.0,
+                  "reason": null,
+                  "return": 0.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 586.9980714158155,
+                  "seed": 712608,
+                  "status": "completed",
+                  "steps": 27000,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 3
+                },
+                {
+                  "actions": {
+                    "NOOP": 5,
+                    "RIGHT": 26995
+                  },
+                  "raw_return": 0.0,
+                  "reason": null,
+                  "return": 0.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 586.9763910300098,
+                  "seed": 712609,
+                  "status": "completed",
+                  "steps": 27000,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 3
+                },
+                {
+                  "actions": {
+                    "NOOP": 5,
+                    "RIGHT": 26995
+                  },
+                  "raw_return": 0.0,
+                  "reason": null,
+                  "return": 0.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 560.6518410323188,
+                  "seed": 712610,
+                  "status": "completed",
+                  "steps": 27000,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 3
+                }
+              ],
+              "horizon": 27000,
+              "iqr_raw_return": 0.0,
+              "mean_completed_game_raw_return": null,
+              "mean_raw_return": 0.0,
+              "median_raw_return": 0.0,
+              "schema": "pong_evaluation_v2",
+              "std_raw_return": 0.0,
+              "truncation_fraction": 1.0
+            },
+            "seconds": 5740.862371132243,
+            "training_active_seconds": 89.8735003923066
+          },
+          {
+            "checkpoint": {
+              "path": "checkpoints/0-adecb02901039e4cd0c625205134b2846168646dcc10cb9d805c267593fbc2cc.pkl",
+              "sha256": "adecb02901039e4cd0c625205134b2846168646dcc10cb9d805c267593fbc2cc"
+            },
+            "counter": 0,
+            "floor_result": null,
+            "group": "intermediate",
+            "report": {
+              "completed_games": 2,
+              "episodes": [
+                {
+                  "actions": {
+                    "FIRE": 36,
+                    "LEFT": 46,
+                    "NOOP": 43,
+                    "RIGHT": 45
+                  },
+                  "raw_return": 1.0,
+                  "reason": null,
+                  "return": 1.0,
+                  "return_scope": "complete_game",
+                  "seconds": 3.0768414097838104,
+                  "seed": 711601,
+                  "status": "completed",
+                  "steps": 170,
+                  "terminated": true,
+                  "truncated": false,
+                  "unique_encoded_states": 40
+                },
+                {
+                  "actions": {
+                    "FIRE": 57,
+                    "LEFT": 33,
+                    "NOOP": 55,
+                    "RIGHT": 32
+                  },
+                  "raw_return": 1.0,
+                  "reason": null,
+                  "return": 1.0,
+                  "return_scope": "complete_game",
+                  "seconds": 2.7353001539595425,
+                  "seed": 711602,
+                  "status": "completed",
+                  "steps": 177,
+                  "terminated": true,
+                  "truncated": false,
+                  "unique_encoded_states": 36
+                }
+              ],
+              "horizon": 27000,
+              "iqr_raw_return": 0.0,
+              "mean_completed_game_raw_return": 1.0,
+              "mean_raw_return": 1.0,
+              "median_raw_return": 1.0,
+              "schema": "pong_evaluation_v2",
+              "std_raw_return": 0.0,
+              "truncation_fraction": 0.0
+            },
+            "seconds": 5.812141563743353,
+            "training_active_seconds": 0.0
+          },
+          {
+            "checkpoint": {
+              "path": "checkpoints/20480-79856651193287433a0cd5b06855a4248bd1f0eed3757da8541dea9c8d097bdf.pkl",
+              "sha256": "79856651193287433a0cd5b06855a4248bd1f0eed3757da8541dea9c8d097bdf"
+            },
+            "counter": 20480,
+            "floor_result": null,
+            "group": "intermediate",
+            "report": {
+              "completed_games": 0,
+              "episodes": [
+                {
+                  "actions": {
+                    "NOOP": 5,
+                    "RIGHT": 26995
+                  },
+                  "raw_return": 0.0,
+                  "reason": null,
+                  "return": 0.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 550.62911290396,
+                  "seed": 711601,
+                  "status": "completed",
+                  "steps": 27000,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 3
+                },
+                {
+                  "actions": {
+                    "NOOP": 5,
+                    "RIGHT": 26995
+                  },
+                  "raw_return": 0.0,
+                  "reason": null,
+                  "return": 0.0,
+                  "return_scope": "horizon_limited",
+                  "seconds": 570.1498650349677,
+                  "seed": 711602,
+                  "status": "completed",
+                  "steps": 27000,
+                  "terminated": false,
+                  "truncated": true,
+                  "unique_encoded_states": 3
+                }
+              ],
+              "horizon": 27000,
+              "iqr_raw_return": 0.0,
+              "mean_completed_game_raw_return": null,
+              "mean_raw_return": 0.0,
+              "median_raw_return": 0.0,
+              "schema": "pong_evaluation_v2",
+              "std_raw_return": 0.0,
+              "truncation_fraction": 1.0
+            },
+            "seconds": 1120.7789779389277,
+            "training_active_seconds": 89.8735003923066
+          }
+        ],
+        "game": "Breakout",
+        "inventory": {
+          "artifacts": [
+            {
+              "bytes": 34316,
+              "confirmed": true,
+              "path": "checkpoints/0-adecb02901039e4cd0c625205134b2846168646dcc10cb9d805c267593fbc2cc.pkl",
+              "protected": true,
+              "removable": false
+            },
+            {
+              "bytes": 301390,
+              "confirmed": true,
+              "path": "checkpoints/1024-eb535567a4fd75db4c7cb708135dcec5856bb41decd1b900617afb8f3037058b.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 2508811,
+              "confirmed": true,
+              "path": "checkpoints/10240-95e0093abe6d50d856961c75700be7ea32c25db84808f416e0ae628a390ca625.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 2631940,
+              "confirmed": true,
+              "path": "checkpoints/10752-ede78feffb59c9ff9ee70360d12b6cf5db5fbbeedc4ef311a52b648276cd3ee9.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 2753690,
+              "confirmed": true,
+              "path": "checkpoints/11264-fc5323f360f54d0b15f2963b6254d0df0364487f734675b00287ae79dd5386c3.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 2875328,
+              "confirmed": true,
+              "path": "checkpoints/11776-6f9016e51e92925cb0e6b6d86696d833ebeaba1e393df448eeced5beb653cc27.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 2997158,
+              "confirmed": true,
+              "path": "checkpoints/12288-0dcb8a375f13cb8ea3e5c2629f575db72f2182e51e01897bf1ef4b151137c971.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 3120134,
+              "confirmed": true,
+              "path": "checkpoints/12800-1c5df2927660e39d222f066fba9c9736a005724aa842a0624c4cb6585b80813c.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 3243222,
+              "confirmed": true,
+              "path": "checkpoints/13312-503881bb464ada3f82b128b6932fd0aeda60cc45563b379831e7385ca89130fa.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 3365216,
+              "confirmed": true,
+              "path": "checkpoints/13824-89878882d2240059f318f6aaee0c8835640a6d9ffdeb03f572dbe1260075baa1.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 3487326,
+              "confirmed": true,
+              "path": "checkpoints/14336-5d30f4f5368ab3b5c1981f81afbb6caca12b94f80d348e417d0d55466cd860cc.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 3609729,
+              "confirmed": true,
+              "path": "checkpoints/14848-a3f2f81b14dfcce3abfb5aadcb2d5c65f8254c394f0644c8e61ca7769e710c93.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 426150,
+              "confirmed": true,
+              "path": "checkpoints/1536-d958622b73645b54bf104680ce7e23894dbcf83cb15f9c013a8b7529ee229582.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 3731365,
+              "confirmed": true,
+              "path": "checkpoints/15360-d353c94ef391d9b06fbf0355adb9679c73a3756e73ef98eb95663e173ff512c2.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 3853771,
+              "confirmed": true,
+              "path": "checkpoints/15872-f57fa9821470f6d30c814844212c17690f78db11a706359f6c86bc51a73d8430.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 3976035,
+              "confirmed": true,
+              "path": "checkpoints/16384-399a986f5621e612b0056bd375184e55158bcde5126abf033f03f65c39a94355.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 4097990,
+              "confirmed": true,
+              "path": "checkpoints/16896-21e55d225bbca322b281059598026c8567e9b8668b23c4328a55d4a55b24047c.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 4219639,
+              "confirmed": true,
+              "path": "checkpoints/17408-2ad8c328de782946bb97e9f058e8d355f5e02b796e0179c474d8fa3964a06c17.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 4341631,
+              "confirmed": true,
+              "path": "checkpoints/17920-0ff26729a01876c23222cd51ee6002e0ac212f4839ebb44b24acaa8e0b170c3e.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 4464691,
+              "confirmed": true,
+              "path": "checkpoints/18432-1d318ec687b34c508061ec45a333a4e23cb9ddb1f0187b8d556aea9fdac77a62.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 4587181,
+              "confirmed": true,
+              "path": "checkpoints/18944-ec52590bf9f858dec18156f61645d87f386cb20fb56ed8370a7b4f207cd54e7d.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 4709493,
+              "confirmed": true,
+              "path": "checkpoints/19456-45fdc03356f0266afff33bc83d4919fbadab9cfa588439e321c5519e0b278c5e.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 4830247,
+              "confirmed": true,
+              "path": "checkpoints/19968-d3cba3e7cd0a684150c706af6d9f4621b29a70403ef1bc454f01dcb179e88d82.pkl",
+              "protected": true,
+              "removable": false
+            },
+            {
+              "bytes": 550705,
+              "confirmed": true,
+              "path": "checkpoints/2048-e3d4329c06ee9169bcf14754cd0aee0336a24f3f4bfa992701bffc7ae79d4a04.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 4952805,
+              "confirmed": true,
+              "path": "checkpoints/20480-79856651193287433a0cd5b06855a4248bd1f0eed3757da8541dea9c8d097bdf.pkl",
+              "protected": true,
+              "removable": false
+            },
+            {
+              "bytes": 674417,
+              "confirmed": true,
+              "path": "checkpoints/2560-170b400d7855978ac81f9b804c41dd335e8d1f7cf579729c096b19d0bd117e59.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 797115,
+              "confirmed": true,
+              "path": "checkpoints/3072-5ee37c8ed2de9bb6bc59e58c1acd33c0a38aa39d35597513e1fe8f9279d59f33.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 919174,
+              "confirmed": true,
+              "path": "checkpoints/3584-ba63cfc962aa3690008a1cf63b9829fc4bced6cda33a45e872e65289ddcf9575.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 1041276,
+              "confirmed": true,
+              "path": "checkpoints/4096-ba1979e4ae547b6a5ff3b610c10a8fbf8e4d5953a35058ea0a64711cca9f6751.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 1163916,
+              "confirmed": true,
+              "path": "checkpoints/4608-584a194eeb1c6a26f37e1d895957588deba04143d3a78862c16451e2f4abb00e.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 176485,
+              "confirmed": true,
+              "path": "checkpoints/512-9dc2caf4b36c51b28085c8a11467fda90dfbb06002414ddb7983a6326dafdc86.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 1286067,
+              "confirmed": true,
+              "path": "checkpoints/5120-7bff954501eb17c70ab2428a067f9631b8b5b2e087620fc4ff013b87d5cb3e65.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 1407795,
+              "confirmed": true,
+              "path": "checkpoints/5632-b17dc8eab215cbe247c11d4bab8ea7e0218aa2edb29a417c06031518751cdf54.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 1530491,
+              "confirmed": true,
+              "path": "checkpoints/6144-9d74a7184d48b90cd5cc9a3e0943d00033f9a763eb675ce6d583bad252b59987.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 1653690,
+              "confirmed": true,
+              "path": "checkpoints/6656-888ac79a8b65a6997ca752b1dcbed70b7ff3493bbbc69a41d26f4029086234b2.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 1775081,
+              "confirmed": true,
+              "path": "checkpoints/7168-fb3d921345bfc1dd9e4ee9b9d6d9c531e32c4e2b59f69e94938d31a5763fd67f.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 1896888,
+              "confirmed": true,
+              "path": "checkpoints/7680-a5bfc2575d8addbbb2daa6b7d1cd969cbe3cf76096ca2430465a10c0ae7016b6.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 2019832,
+              "confirmed": true,
+              "path": "checkpoints/8192-2ce731d1991fc712ab83e9780c753867c623bfb131988bdde38a9e56b7ce3e40.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 2142530,
+              "confirmed": true,
+              "path": "checkpoints/8704-5a5db6550827a6d49d8a083503eb3d93654f9ff1a2646466497d76e9f0608bb4.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 2264361,
+              "confirmed": true,
+              "path": "checkpoints/9216-063379fc72c21d5457cd7dcce077dfcea955f0a81c32571f4df0f73f7ba3b8d6.pkl",
+              "protected": false,
+              "removable": true
+            },
+            {
+              "bytes": 2386100,
+              "confirmed": true,
+              "path": "checkpoints/9728-b88b2e01eb142152d305621c0a5fdfd95aac2c8944cc61f24f630f913fb1781f.pkl",
+              "protected": false,
+              "removable": true
+            }
+          ],
+          "checkpoint_bytes": 102805181,
+          "log_bytes": 6473185,
+          "schema": "pong_retention_v2",
+          "unconfirmed_logs": []
+        },
+        "logs": {
+          "decisions": 20480,
+          "ended_episodes": 102,
+          "raw_return": 190.0
+        },
+        "metrics": {
+          "completed_games": 102,
+          "ended_episodes": 102,
+          "epsilon": 0.38940363387971727,
+          "interactions": 20480,
+          "learner": {
+            "cache_bytes": 0,
+            "complexity": {
+              "FIRE": {
+                "leaves": 13,
+                "max_depth": 4
+              },
+              "LEFT": {
+                "leaves": 11,
+                "max_depth": 4
+              },
+              "NOOP": {
+                "leaves": 14,
+                "max_depth": 4
+              },
+              "RIGHT": {
+                "leaves": 12,
+                "max_depth": 4
+              }
+            },
+            "fits": 40,
+            "kind": "cart",
+            "phase_seconds": {
+              "encoding": 17.778900415170938,
+              "fit": 1.0510389772243798,
+              "prediction": 0.6427566013298929,
+              "selection_targets": 0.43599750893190503
+            },
+            "replay_size": 20480
+          },
+          "phase_seconds": {
+            "checkpoint_logs": 28.331484763883054,
+            "emulation_extraction": 40.5150100258179,
+            "fit": 1.0510389772243798,
+            "policy_collection_td": 0.9352226089686155,
+            "prediction": 0.6427566013298929,
+            "relations_encoding": 19.050266212318093,
+            "selection_targets": 0.43599750893190503
+          },
+          "relations": 11,
+          "truncated_episodes": 0
+        },
+        "peak_rss_bytes": 289488896,
+        "pending_evaluations": [],
+        "reason": null,
+        "training_attempts": 1,
+        "training_seconds": 98.8124115280807,
+        "training_state": "completed",
+        "unfinished_evaluation_attempts": 0
+      }
+    ],
+    "completed": true,
+    "limitations": [
+      "A floor result does not establish equivalence.",
+      "Smoke is technical only; primary result is frozen final checkpoint.",
+      "Operational sums are resource consumption, not concurrent wall time."
+    ],
+    "reserved_test_executed": false,
+    "reserved_test_executed_by_report": false,
+    "schema": "pong_progressive_report_v2"
+  },
+  "schema": "pong_analysis_unit_v2",
+  "sha256": "5236b9e2a1bf6e3198af68250b6ddfb463a9902b78fdc1b4532ff51bf8eb0d54"
+}

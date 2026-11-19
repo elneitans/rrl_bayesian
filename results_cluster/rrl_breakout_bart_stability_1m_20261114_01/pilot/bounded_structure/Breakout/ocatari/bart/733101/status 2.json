@@ -1,0 +1,65 @@
+{
+  "payload": {
+    "binding": {
+      "campaign": "2bddac57d8090b28afd922b7bcf18ba481550dc832509c79d55b422d043ddd97",
+      "cell": "485badd669f55633bcbabe280e8bccec4f1ee0a7c6822c77d1d40e21042cccab",
+      "learner": "bart",
+      "runtime": {
+        "ale-py": "0.10.2",
+        "gymnasium": "1.1.1",
+        "machine": "x86_64",
+        "numeric_threads": {
+          "MKL_NUM_THREADS": "1",
+          "NUMEXPR_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "numpy": "1.26.4",
+        "ocatari": "2.2.1",
+        "platform": "linux",
+        "python": "3.11.7",
+        "scipy": "1.12.0"
+      }
+    },
+    "checkpoint": {
+      "path": "checkpoints/0-5fe6c24027d4e12d10ea673aae2a2808ab3f49b5d060a87a475f470fcb36c490.pkl",
+      "sha256": "5fe6c24027d4e12d10ea673aae2a2808ab3f49b5d060a87a475f470fcb36c490"
+    },
+    "counter": 0,
+    "log_head": null,
+    "metrics": {
+      "completed_games": 0,
+      "ended_episodes": 0,
+      "epsilon": 1.0,
+      "interactions": 0,
+      "learner": {
+        "cache_bytes": 0,
+        "complexity": {},
+        "fits": 0,
+        "kind": "bart",
+        "phase_seconds": {
+          "encoding": 0.0,
+          "fit": 0.0,
+          "prediction": 0.0,
+          "selection_targets": 0.0
+        },
+        "replay_size": 0
+      },
+      "phase_seconds": {
+        "checkpoint_logs": 0.5283399070613086,
+        "emulation_extraction": 0.0,
+        "fit": 0.0,
+        "policy_collection_td": 0.0,
+        "prediction": 0.0,
+        "relations_encoding": 0.0,
+        "selection_targets": 0.0
+      },
+      "relations": 11,
+      "truncated_episodes": 0
+    },
+    "reason": "initial",
+    "state": "partial"
+  },
+  "schema": "pong_analysis_unit_v2",
+  "sha256": "521e5e97aaf2a4aa9abda829a41781d5de783e0d5d17d3895225840aef2845e6"
+}

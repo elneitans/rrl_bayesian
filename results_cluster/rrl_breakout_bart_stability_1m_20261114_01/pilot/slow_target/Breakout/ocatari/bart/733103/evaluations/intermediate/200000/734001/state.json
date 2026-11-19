@@ -1,0 +1,60 @@
+{
+  "payload": {
+    "artifacts": {},
+    "identity_sha256": "bc4728a3c5d2788bcddd61661a865b9d7a0e2cd86e63541b5e59962e14519260",
+    "reason": null,
+    "result": {
+      "actions": {
+        "FIRE": 101,
+        "LEFT": 29,
+        "NOOP": 29,
+        "RIGHT": 62
+      },
+      "raw_return": 2.0,
+      "reason": null,
+      "return_scope": "complete_game",
+      "seconds": 3.0409707939252257,
+      "seed": 734001,
+      "status": "completed",
+      "steps": 221,
+      "terminated": true,
+      "transitions": [
+        {
+          "decisions": 2,
+          "fired": true,
+          "kind": "reset",
+          "start": 0
+        },
+        {
+          "decisions": 10,
+          "fired": true,
+          "kind": "life_lost",
+          "start": 26
+        },
+        {
+          "decisions": 2,
+          "fired": true,
+          "kind": "life_lost",
+          "start": 50
+        },
+        {
+          "decisions": 12,
+          "fired": true,
+          "kind": "life_lost",
+          "start": 74
+        },
+        {
+          "decisions": 2,
+          "fired": true,
+          "kind": "life_lost",
+          "start": 197
+        }
+      ],
+      "truncated": false,
+      "unique_encoded_states": 34
+    },
+    "status": "completed"
+  },
+  "schema": "pong_analysis_unit_v2",
+  "sha256": "4ceccfb04f8087b10134f273bfa1c1df69d2791ae3a3974d31d7c353a28d4e82"
+}
