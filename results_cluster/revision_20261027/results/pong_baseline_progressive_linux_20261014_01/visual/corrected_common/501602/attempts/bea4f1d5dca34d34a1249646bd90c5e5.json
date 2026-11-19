@@ -1,0 +1,48 @@
+{
+  "payload": {
+    "attempt_seconds": 3480.0,
+    "budget_extension": "baseline-500k-01",
+    "confirmed_counter": 500000,
+    "ended_unix": 1792950302.897974,
+    "environment": {
+      "CONDA_DEFAULT_ENV": "/home/natan.brugueras/archive/conda_envs/rrl-pong-analysis",
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "executable": "/home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/bin/python",
+    "node": "hydra",
+    "peak_rss_bytes": 196399104,
+    "reason": "authorized_milestone_reached",
+    "resources": {
+      "SLURM_ARRAY_TASK_ID": "1",
+      "SLURM_CPUS_PER_TASK": "2",
+      "SLURM_JOB_ID": "34247",
+      "SLURM_JOB_PARTITION": "ialab-low",
+      "SLURM_JOB_QOS": "regular",
+      "SLURM_MEM_PER_NODE": "20480"
+    },
+    "resume_counter": 100000,
+    "runtime": {
+      "ale-py": "0.10.2",
+      "gymnasium": "1.1.1",
+      "machine": "x86_64",
+      "numeric_threads": {
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1"
+      },
+      "numpy": "1.26.4",
+      "ocatari": "2.2.1",
+      "platform": "linux",
+      "python": "3.11.7",
+      "scipy": "1.12.0"
+    },
+    "seconds": 3023.2881995640346,
+    "started_unix": 1792947279.5559273,
+    "state": "partial"
+  },
+  "schema": "pong_analysis_unit_v2",
+  "sha256": "14844daa55da1af15c0c096b135ab4f1f4fa77785ddd49d9cce613b986b1fdfc"
+}

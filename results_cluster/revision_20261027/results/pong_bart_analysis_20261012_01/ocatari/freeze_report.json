@@ -1,0 +1,831 @@
+{
+  "pipeline": "ocatari",
+  "fixed_fit": {
+    "schema": "pong_fixed_fit_v1",
+    "kind": "fixed_fit",
+    "checkpoint_sha256": "ddf332631a98f9dc68e059ca7c60028f574ed0c86b406a6745233d93965fe36d",
+    "config": {
+      "actions": [
+        "NOOP",
+        "FIRE",
+        "RIGHT",
+        "LEFT",
+        "RIGHTFIRE",
+        "LEFTFIRE"
+      ],
+      "seed": 71,
+      "gamma": 0.99,
+      "reward_min": -1.0,
+      "reward_max": 1.0,
+      "replay_capacity": 50000,
+      "batch_size_per_action": 128,
+      "fit_interval": 512,
+      "warmup_interactions": 512,
+      "kernel": "grow_prune",
+      "m": 20,
+      "burn_in": 50,
+      "draws": 50,
+      "k": 2.0,
+      "alpha_tree": 0.95,
+      "beta_tree": 2.0,
+      "max_depth": 4,
+      "min_child": 2,
+      "nu": 3.0,
+      "noise_quantile": 0.9,
+      "variance_floor": 1e-08,
+      "epsilon_init": 1.0,
+      "epsilon_min": 0.1,
+      "epsilon_decay_steps": 50000,
+      "bootstrap_on_truncation": true,
+      "resample_repeated_actions": false,
+      "action_buffer_capacity": 10,
+      "validation_seeds": [
+        320101,
+        320102,
+        320103,
+        320104,
+        320105,
+        320106,
+        320107,
+        320108,
+        320109,
+        320110
+      ],
+      "test_seeds": [
+        420101,
+        420102,
+        420103,
+        420104,
+        420105,
+        420106,
+        420107,
+        420108,
+        420109,
+        420110,
+        420111,
+        420112,
+        420113,
+        420114,
+        420115,
+        420116,
+        420117,
+        420118,
+        420119,
+        420120
+      ]
+    },
+    "encoder": {
+      "version": 1,
+      "catalog": [
+        {
+          "type": "comparative",
+          "name": "x",
+          "obj1": "ball_t",
+          "obj2": "ball_t-1",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "x",
+          "obj1": "ball_t",
+          "obj2": "enemy_t",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "x",
+          "obj1": "enemy_t",
+          "obj2": "enemy_t-1",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "x",
+          "obj1": "player_t",
+          "obj2": "ball_t",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "x",
+          "obj1": "player_t",
+          "obj2": "enemy_t",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "x",
+          "obj1": "player_t",
+          "obj2": "player_t-1",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "y",
+          "obj1": "ball_t",
+          "obj2": "ball_t-1",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "y",
+          "obj1": "ball_t",
+          "obj2": "enemy_t",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "y",
+          "obj1": "enemy_t",
+          "obj2": "enemy_t-1",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "y",
+          "obj1": "player_t",
+          "obj2": "ball_t",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "y",
+          "obj1": "player_t",
+          "obj2": "enemy_t",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "y",
+          "obj1": "player_t",
+          "obj2": "player_t-1",
+          "obj3": null
+        },
+        {
+          "type": "logical",
+          "name": "incontact",
+          "obj1": "ball_t",
+          "obj2": "enemy_t",
+          "obj3": null
+        },
+        {
+          "type": "logical",
+          "name": "incontact",
+          "obj1": "player_t",
+          "obj2": "ball_t",
+          "obj3": null
+        },
+        {
+          "type": "logical",
+          "name": "present",
+          "obj1": "ball_t",
+          "obj2": null,
+          "obj3": null
+        },
+        {
+          "type": "logical",
+          "name": "present",
+          "obj1": "ball_t-1",
+          "obj2": null,
+          "obj3": null
+        },
+        {
+          "type": "logical",
+          "name": "present",
+          "obj1": "enemy_t",
+          "obj2": null,
+          "obj3": null
+        },
+        {
+          "type": "logical",
+          "name": "present",
+          "obj1": "enemy_t-1",
+          "obj2": null,
+          "obj3": null
+        },
+        {
+          "type": "logical",
+          "name": "present",
+          "obj1": "player_t",
+          "obj2": null,
+          "obj3": null
+        },
+        {
+          "type": "logical",
+          "name": "present",
+          "obj1": "player_t-1",
+          "obj2": null,
+          "obj3": null
+        }
+      ],
+      "catalog_hash": "fd40d7f407a3ea2b3634712e212e0d35c591626e41f8fbe3d64ce8073ff2de42"
+    },
+    "fit_id": 40,
+    "target_model_id": 39,
+    "interaction": 20480,
+    "scale": {
+      "lower": -99.99999999999991,
+      "upper": 99.99999999999991
+    },
+    "tree_prior": {
+      "alpha_tree": 0.95,
+      "beta_tree": 2.0,
+      "max_depth": 4,
+      "min_child": 2
+    },
+    "noise_prior_parameters": {
+      "nu": 3.0,
+      "q": 0.9,
+      "variance_floor": 1e-08
+    },
+    "actions": [
+      {
+        "action": "NOOP",
+        "index": 0,
+        "samples": 128,
+        "data_hash": "2d1027188e380135ab9938c351c48a41b5a1f959f8041a6481ed5ea907fe5919",
+        "regression_holdout_episodes": [
+          18,
+          19,
+          20,
+          21,
+          22
+        ],
+        "regression_train_samples": 96,
+        "calibration": {
+          "prior": {
+            "nu": 3.0,
+            "lambda_": 3.6839834576814535e-07
+          },
+          "residual_variance": 1.891244870041044e-06,
+          "method": "response_variance_rank_fallback",
+          "variance_floor": 1e-08,
+          "quantile": 0.9
+        }
+      },
+      {
+        "action": "FIRE",
+        "index": 1,
+        "samples": 128,
+        "data_hash": "fe971f7d39d35de5d82abe1f76115941e269e4da5e834c32617a5f5981c6a7d1",
+        "regression_holdout_episodes": [
+          18,
+          19,
+          20,
+          21,
+          22
+        ],
+        "regression_train_samples": 97,
+        "calibration": {
+          "prior": {
+            "nu": 3.0,
+            "lambda_": 1.9479145805172777e-09
+          },
+          "residual_variance": 1e-08,
+          "method": "response_variance_rank_fallback_floor",
+          "variance_floor": 1e-08,
+          "quantile": 0.9
+        }
+      },
+      {
+        "action": "RIGHT",
+        "index": 2,
+        "samples": 128,
+        "data_hash": "56ebb6a3fe02129e28b538ffa1bd5ce97e0ce191d8f21eb31f72491dd4b9192b",
+        "regression_holdout_episodes": [
+          18,
+          19,
+          20,
+          21,
+          22
+        ],
+        "regression_train_samples": 96,
+        "calibration": {
+          "prior": {
+            "nu": 3.0,
+            "lambda_": 1.7376383453123897e-07
+          },
+          "residual_variance": 8.920505871725401e-07,
+          "method": "response_variance_rank_fallback",
+          "variance_floor": 1e-08,
+          "quantile": 0.9
+        }
+      },
+      {
+        "action": "LEFT",
+        "index": 3,
+        "samples": 128,
+        "data_hash": "ebed66651ea48eb1318327cbeed00762d9fd1f087060eaf2901d2cc8ed47eb27",
+        "regression_holdout_episodes": [
+          19,
+          20,
+          21,
+          22
+        ],
+        "regression_train_samples": 110,
+        "calibration": {
+          "prior": {
+            "nu": 3.0,
+            "lambda_": 6.85885415675099e-08
+          },
+          "residual_variance": 3.5211267605633866e-07,
+          "method": "response_variance_rank_fallback",
+          "variance_floor": 1e-08,
+          "quantile": 0.9
+        }
+      },
+      {
+        "action": "RIGHTFIRE",
+        "index": 4,
+        "samples": 128,
+        "data_hash": "c006ee2dd7c60ed66555a62f6038a0b58e5d915b2b8b9bb0a37fdbaccbd9ce30",
+        "regression_holdout_episodes": [
+          18,
+          19,
+          20,
+          21,
+          22
+        ],
+        "regression_train_samples": 109,
+        "calibration": {
+          "prior": {
+            "nu": 3.0,
+            "lambda_": 1.047015720536045e-07
+          },
+          "residual_variance": 5.375059722885821e-07,
+          "method": "response_variance_rank_fallback",
+          "variance_floor": 1e-08,
+          "quantile": 0.9
+        }
+      },
+      {
+        "action": "LEFTFIRE",
+        "index": 5,
+        "samples": 128,
+        "data_hash": "f9413c2dc65b94b578863303fc182ca4cb622964c9fb79841b983e2b57bc6a22",
+        "regression_holdout_episodes": [
+          18,
+          19,
+          20,
+          21,
+          22
+        ],
+        "regression_train_samples": 92,
+        "calibration": {
+          "prior": {
+            "nu": 3.0,
+            "lambda_": 1.9479145805172777e-09
+          },
+          "residual_variance": 1e-08,
+          "method": "response_variance_rank_fallback_floor",
+          "variance_floor": 1e-08,
+          "quantile": 0.9
+        }
+      }
+    ],
+    "npz_sha256": "0b8a389a62a01d712d14409b0dca8e00438cddc559f94a99c994499569ed02ed",
+    "runtime": {
+      "python": "3.11.7",
+      "executable": "/home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/bin/python",
+      "packages": {
+        "numpy": "1.26.4",
+        "scipy": "1.12.0",
+        "scikit-learn": "1.9.1",
+        "gymnasium": "1.1.1",
+        "ale-py": "0.10.2",
+        "ocatari": "2.2.1"
+      }
+    },
+    "target_meaning": "Last pilot fit Bellman targets, never recomputed in this artifact"
+  },
+  "fixed_transitions": {
+    "schema": "pong_fixed_transitions_v1",
+    "kind": "fixed_transitions",
+    "behavior": "pilot_replay",
+    "checkpoint_sha256": "ddf332631a98f9dc68e059ca7c60028f574ed0c86b406a6745233d93965fe36d",
+    "encoder": {
+      "version": 1,
+      "catalog": [
+        {
+          "type": "comparative",
+          "name": "x",
+          "obj1": "ball_t",
+          "obj2": "ball_t-1",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "x",
+          "obj1": "ball_t",
+          "obj2": "enemy_t",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "x",
+          "obj1": "enemy_t",
+          "obj2": "enemy_t-1",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "x",
+          "obj1": "player_t",
+          "obj2": "ball_t",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "x",
+          "obj1": "player_t",
+          "obj2": "enemy_t",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "x",
+          "obj1": "player_t",
+          "obj2": "player_t-1",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "y",
+          "obj1": "ball_t",
+          "obj2": "ball_t-1",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "y",
+          "obj1": "ball_t",
+          "obj2": "enemy_t",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "y",
+          "obj1": "enemy_t",
+          "obj2": "enemy_t-1",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "y",
+          "obj1": "player_t",
+          "obj2": "ball_t",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "y",
+          "obj1": "player_t",
+          "obj2": "enemy_t",
+          "obj3": null
+        },
+        {
+          "type": "comparative",
+          "name": "y",
+          "obj1": "player_t",
+          "obj2": "player_t-1",
+          "obj3": null
+        },
+        {
+          "type": "logical",
+          "name": "incontact",
+          "obj1": "ball_t",
+          "obj2": "enemy_t",
+          "obj3": null
+        },
+        {
+          "type": "logical",
+          "name": "incontact",
+          "obj1": "player_t",
+          "obj2": "ball_t",
+          "obj3": null
+        },
+        {
+          "type": "logical",
+          "name": "present",
+          "obj1": "ball_t",
+          "obj2": null,
+          "obj3": null
+        },
+        {
+          "type": "logical",
+          "name": "present",
+          "obj1": "ball_t-1",
+          "obj2": null,
+          "obj3": null
+        },
+        {
+          "type": "logical",
+          "name": "present",
+          "obj1": "enemy_t",
+          "obj2": null,
+          "obj3": null
+        },
+        {
+          "type": "logical",
+          "name": "present",
+          "obj1": "enemy_t-1",
+          "obj2": null,
+          "obj3": null
+        },
+        {
+          "type": "logical",
+          "name": "present",
+          "obj1": "player_t",
+          "obj2": null,
+          "obj3": null
+        },
+        {
+          "type": "logical",
+          "name": "present",
+          "obj1": "player_t-1",
+          "obj2": null,
+          "obj3": null
+        }
+      ],
+      "catalog_hash": "fd40d7f407a3ea2b3634712e212e0d35c591626e41f8fbe3d64ce8073ff2de42"
+    },
+    "config": {
+      "actions": [
+        "NOOP",
+        "FIRE",
+        "RIGHT",
+        "LEFT",
+        "RIGHTFIRE",
+        "LEFTFIRE"
+      ],
+      "seed": 71,
+      "gamma": 0.99,
+      "reward_min": -1.0,
+      "reward_max": 1.0,
+      "replay_capacity": 50000,
+      "batch_size_per_action": 128,
+      "fit_interval": 512,
+      "warmup_interactions": 512,
+      "kernel": "grow_prune",
+      "m": 20,
+      "burn_in": 50,
+      "draws": 50,
+      "k": 2.0,
+      "alpha_tree": 0.95,
+      "beta_tree": 2.0,
+      "max_depth": 4,
+      "min_child": 2,
+      "nu": 3.0,
+      "noise_quantile": 0.9,
+      "variance_floor": 1e-08,
+      "epsilon_init": 1.0,
+      "epsilon_min": 0.1,
+      "epsilon_decay_steps": 50000,
+      "bootstrap_on_truncation": true,
+      "resample_repeated_actions": false,
+      "action_buffer_capacity": 10,
+      "validation_seeds": [
+        320101,
+        320102,
+        320103,
+        320104,
+        320105,
+        320106,
+        320107,
+        320108,
+        320109,
+        320110
+      ],
+      "test_seeds": [
+        420101,
+        420102,
+        420103,
+        420104,
+        420105,
+        420106,
+        420107,
+        420108,
+        420109,
+        420110,
+        420111,
+        420112,
+        420113,
+        420114,
+        420115,
+        420116,
+        420117,
+        420118,
+        420119,
+        420120
+      ]
+    },
+    "replay_count": 20480,
+    "fqi_selected_count": 768,
+    "holdout_episodes": [
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "coverage": [
+      {
+        "action": "NOOP",
+        "replay_total": 3574,
+        "selected_train": 128,
+        "positive": 0,
+        "negative": 6,
+        "missing_states": 0,
+        "episodes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
+      },
+      {
+        "action": "FIRE",
+        "replay_total": 3794,
+        "selected_train": 128,
+        "positive": 0,
+        "negative": 3,
+        "missing_states": 0,
+        "episodes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
+      },
+      {
+        "action": "RIGHT",
+        "replay_total": 3415,
+        "selected_train": 128,
+        "positive": 0,
+        "negative": 4,
+        "missing_states": 0,
+        "episodes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
+      },
+      {
+        "action": "LEFT",
+        "replay_total": 3242,
+        "selected_train": 128,
+        "positive": 0,
+        "negative": 2,
+        "missing_states": 0,
+        "episodes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
+      },
+      {
+        "action": "RIGHTFIRE",
+        "replay_total": 3096,
+        "selected_train": 128,
+        "positive": 0,
+        "negative": 5,
+        "missing_states": 0,
+        "episodes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
+      },
+      {
+        "action": "LEFTFIRE",
+        "replay_total": 3359,
+        "selected_train": 128,
+        "positive": 0,
+        "negative": 3,
+        "missing_states": 0,
+        "episodes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
+      }
+    ],
+    "npz_sha256": "3e8bbc421938812913cfc6fe5b4d1cc3a969f8c763dfa58c5d9b9ca18db0561c",
+    "runtime": {
+      "python": "3.11.7",
+      "executable": "/home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/bin/python",
+      "packages": {
+        "numpy": "1.26.4",
+        "scipy": "1.12.0",
+        "scikit-learn": "1.9.1",
+        "gymnasium": "1.1.1",
+        "ale-py": "0.10.2",
+        "ocatari": "2.2.1"
+      }
+    },
+    "selection_seed": 560301,
+    "target_meaning": "No Bellman labels stored; targets recomputed per learner and epoch"
+  },
+  "environment": {
+    "game": "Pong",
+    "extractor": "ocatari_ram_v1",
+    "representation": "comparative",
+    "include_incomplete_states": true,
+    "frameskip": 4,
+    "repeat_action_probability": 0.0,
+    "max_episode_steps": 27000,
+    "env_id": "ALE/Pong-v5",
+    "relation_schema": "pong_relational_v1",
+    "reward_transform": "sign",
+    "reset_policy": "none"
+  },
+  "checkpoint_sha256": "ddf332631a98f9dc68e059ca7c60028f574ed0c86b406a6745233d93965fe36d"
+}
