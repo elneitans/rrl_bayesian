@@ -1,0 +1,113 @@
+{
+  "payload": {
+    "evaluation_bank_used_for_gate": false,
+    "holdout": {
+      "path": "probe_75000-38609376b2862ac5764220523cd1f2a31f326deb5823873bcf270d23d4703de4.pkl",
+      "sha256": "38609376b2862ac5764220523cd1f2a31f326deb5823873bcf270d23d4703de4"
+    },
+    "identity": {
+      "campaign": "5c68a97ac3ddd52553a705703ef4faf12d014108b41ca16e7b3b84d7eff805b4",
+      "criterion": "historical_f",
+      "mode": "guarded",
+      "parent": {
+        "path": "checkpoints/500000-f90d42df62c9f60e7030e419e9e3fc3482e12dc6ffe0c079667af7dff8e309f2.pkl",
+        "sha256": "f90d42df62c9f60e7030e419e9e3fc3482e12dc6ffe0c079667af7dff8e309f2"
+      },
+      "parent_counter": 500000,
+      "seed": 710603
+    },
+    "point": 75000,
+    "reference": {
+      "path": "reference_75000-528e28c94ceda2e3498a78a25442393a7aa9add8e996abcf662d388835d92eac.pkl",
+      "sha256": "528e28c94ceda2e3498a78a25442393a7aa9add8e996abcf662d388835d92eac"
+    },
+    "return_bank": {
+      "path": "return_bank_75000-3ec53da817ec9aeb0df2870478258cffcd5f551114503dc9a7d17c90c71570d4.pkl",
+      "sha256": "3ec53da817ec9aeb0df2870478258cffcd5f551114503dc9a7d17c90c71570d4"
+    },
+    "reviews": [
+      {
+        "action": "RIGHT",
+        "bounded_q": true,
+        "candidate_mse": 0.022335829152365816,
+        "counter": 575000,
+        "current_mse": 0.022700281175025934,
+        "gate": {
+          "accepted": false,
+          "blocks": 8,
+          "mean_difference": -0.0003569117111395577,
+          "reason": "loss_gate",
+          "samples": 263,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": -0.001,
+          "upper_bound": -0.00013529484304776161
+        },
+        "kind": "replacement_review",
+        "loss_gate": {
+          "accepted": false,
+          "blocks": 8,
+          "mean_difference": -0.0003569117111395577,
+          "reason": "loss_gate",
+          "samples": 263,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": -0.001,
+          "upper_bound": -0.00013529484304776161
+        },
+        "new_leaves": 7,
+        "new_literal": "Literal(name='y', type='comparative', obj1='ball_t', obj2='ball_t-1', obj3=None)",
+        "node": 22,
+        "old_leaves": 7,
+        "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+        "path": "root/true",
+        "train_samples": 3097
+      },
+      {
+        "action": "RIGHT",
+        "bounded_q": true,
+        "candidate_mse": 0.023110676401984973,
+        "counter": 575000,
+        "current_mse": 0.022700281175025934,
+        "gate": {
+          "accepted": false,
+          "blocks": 8,
+          "mean_difference": 0.00029440037300890534,
+          "reason": "policy_trust",
+          "samples": 263,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": 0.0025,
+          "upper_bound": 0.00095774988159962
+        },
+        "kind": "prune_review",
+        "loss_gate": {
+          "accepted": true,
+          "blocks": 8,
+          "mean_difference": 0.00029440037300890534,
+          "reason": "loss_gate",
+          "samples": 263,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": 0.0025,
+          "upper_bound": 0.00095774988159962
+        },
+        "new_leaves": 1,
+        "new_literal": "None",
+        "node": 22,
+        "old_leaves": 7,
+        "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+        "path": "root/true",
+        "policy_guard": {
+          "accepted": false,
+          "blocks": 8,
+          "changed_state_fraction": 0.5828220858895705,
+          "limit": 0.05,
+          "mean_tv": 0.5813276431525092,
+          "samples": 978
+        },
+        "train_samples": 3097
+      }
+    ],
+    "validation_samples": 978,
+    "validation_used_for_td": false
+  },
+  "schema": "pong_analysis_unit_v2",
+  "sha256": "6449ec4ac92b996b89504dd18bc227cba72705491aa9a087b86a62abe50e4cea"
+}

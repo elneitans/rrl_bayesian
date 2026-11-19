@@ -1,0 +1,113 @@
+{
+  "payload": {
+    "evaluation_bank_used_for_gate": false,
+    "holdout": {
+      "path": "probe_75000-38609376b2862ac5764220523cd1f2a31f326deb5823873bcf270d23d4703de4.pkl",
+      "sha256": "38609376b2862ac5764220523cd1f2a31f326deb5823873bcf270d23d4703de4"
+    },
+    "identity": {
+      "campaign": "5c68a97ac3ddd52553a705703ef4faf12d014108b41ca16e7b3b84d7eff805b4",
+      "criterion": "historical_f",
+      "mode": "stable_guarded",
+      "parent": {
+        "path": "checkpoints/500000-98d3f500b9e3f4d9aafdc5edadc8be6971816c12ae7164b79ea4115a799171a3.pkl",
+        "sha256": "98d3f500b9e3f4d9aafdc5edadc8be6971816c12ae7164b79ea4115a799171a3"
+      },
+      "parent_counter": 500000,
+      "seed": 710602
+    },
+    "point": 75000,
+    "reference": {
+      "path": "reference_75000-b76b67231c6c8bfc0d92b723c62d7a936c6303ea5f08738d57831b70378f8254.pkl",
+      "sha256": "b76b67231c6c8bfc0d92b723c62d7a936c6303ea5f08738d57831b70378f8254"
+    },
+    "return_bank": {
+      "path": "return_bank_75000-3ec53da817ec9aeb0df2870478258cffcd5f551114503dc9a7d17c90c71570d4.pkl",
+      "sha256": "3ec53da817ec9aeb0df2870478258cffcd5f551114503dc9a7d17c90c71570d4"
+    },
+    "reviews": [
+      {
+        "action": "NOOP",
+        "bounded_q": true,
+        "candidate_mse": 0.0062085557921253524,
+        "counter": 575000,
+        "current_mse": 0.015965260999242423,
+        "gate": {
+          "accepted": false,
+          "blocks": 8,
+          "mean_difference": -0.00986854761847255,
+          "reason": "policy_trust",
+          "samples": 147,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": -0.001,
+          "upper_bound": -0.00868428854419077
+        },
+        "kind": "replacement_review",
+        "loss_gate": {
+          "accepted": true,
+          "blocks": 8,
+          "mean_difference": -0.00986854761847255,
+          "reason": "loss_gate",
+          "samples": 147,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": -0.001,
+          "upper_bound": -0.00868428854419077
+        },
+        "new_leaves": 6,
+        "new_literal": "Literal(name='present', type='logical', obj1='ball_t', obj2=None, obj3=None)",
+        "node": 0,
+        "old_leaves": 6,
+        "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='player_t-1', obj3=None)",
+        "path": "root",
+        "policy_guard": {
+          "accepted": false,
+          "blocks": 8,
+          "changed_state_fraction": 0.5572597137014315,
+          "limit": 0.05,
+          "mean_tv": 0.5559931424341182,
+          "samples": 978
+        },
+        "train_samples": 1234
+      },
+      {
+        "action": "LEFT",
+        "bounded_q": true,
+        "candidate_mse": 0.028336039137558038,
+        "counter": 575000,
+        "current_mse": 0.02540013073770388,
+        "gate": {
+          "accepted": false,
+          "blocks": 8,
+          "mean_difference": 0.003015003674295006,
+          "reason": "loss_gate",
+          "samples": 306,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": 0.0025,
+          "upper_bound": 0.00525432641525141
+        },
+        "kind": "prune_review",
+        "loss_gate": {
+          "accepted": false,
+          "blocks": 8,
+          "mean_difference": 0.003015003674295006,
+          "reason": "loss_gate",
+          "samples": 306,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": 0.0025,
+          "upper_bound": 0.00525432641525141
+        },
+        "new_leaves": 1,
+        "new_literal": "None",
+        "node": 21,
+        "old_leaves": 5,
+        "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+        "path": "root",
+        "train_samples": 4773
+      }
+    ],
+    "validation_samples": 978,
+    "validation_used_for_td": false
+  },
+  "schema": "pong_analysis_unit_v2",
+  "sha256": "ed7c5cdea9ef55e182216530c38af3bae28a7151415ab1fb2e6c1e67c212640f"
+}

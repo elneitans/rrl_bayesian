@@ -1,0 +1,113 @@
+{
+  "payload": {
+    "evaluation_bank_used_for_gate": false,
+    "holdout": {
+      "path": "probe_25000-3c9a59dc8bd96c81a3d8382c76de0d6a0b9544b30c8385692b7fbe18c42c725e.pkl",
+      "sha256": "3c9a59dc8bd96c81a3d8382c76de0d6a0b9544b30c8385692b7fbe18c42c725e"
+    },
+    "identity": {
+      "campaign": "5c68a97ac3ddd52553a705703ef4faf12d014108b41ca16e7b3b84d7eff805b4",
+      "criterion": "historical_f",
+      "mode": "stable_guarded",
+      "parent": {
+        "path": "checkpoints/500000-f90d42df62c9f60e7030e419e9e3fc3482e12dc6ffe0c079667af7dff8e309f2.pkl",
+        "sha256": "f90d42df62c9f60e7030e419e9e3fc3482e12dc6ffe0c079667af7dff8e309f2"
+      },
+      "parent_counter": 500000,
+      "seed": 710603
+    },
+    "point": 25000,
+    "reference": {
+      "path": "reference_25000-2950a38f5158d6fcc6d481c1503049e381d052c2a0fdf0712ea2a9981f215d0f.pkl",
+      "sha256": "2950a38f5158d6fcc6d481c1503049e381d052c2a0fdf0712ea2a9981f215d0f"
+    },
+    "return_bank": {
+      "path": "return_bank_25000-529283a524d5c3be07a7312207bf2072e2a087ad499eefd7cef5050f5361d13c.pkl",
+      "sha256": "529283a524d5c3be07a7312207bf2072e2a087ad499eefd7cef5050f5361d13c"
+    },
+    "reviews": [
+      {
+        "action": "RIGHT",
+        "bounded_q": true,
+        "candidate_mse": 0.024136564118246762,
+        "counter": 525000,
+        "current_mse": 0.025282069161806756,
+        "gate": {
+          "accepted": false,
+          "blocks": 8,
+          "mean_difference": -0.0009758055268918002,
+          "reason": "policy_trust",
+          "samples": 244,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": 0.0025,
+          "upper_bound": -0.00017109644840536774
+        },
+        "kind": "prune_review",
+        "loss_gate": {
+          "accepted": true,
+          "blocks": 8,
+          "mean_difference": -0.0009758055268918002,
+          "reason": "loss_gate",
+          "samples": 244,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": 0.0025,
+          "upper_bound": -0.00017109644840536774
+        },
+        "new_leaves": 1,
+        "new_literal": "None",
+        "node": 22,
+        "old_leaves": 7,
+        "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+        "path": "root/true",
+        "policy_guard": {
+          "accepted": false,
+          "blocks": 8,
+          "changed_state_fraction": 0.23135964912280702,
+          "limit": 0.05,
+          "mean_tv": 0.23199098590646777,
+          "samples": 912
+        },
+        "train_samples": 3572
+      },
+      {
+        "action": "RIGHT",
+        "bounded_q": true,
+        "candidate_mse": 0.024429592542320487,
+        "counter": 525000,
+        "current_mse": 0.025282069161806756,
+        "gate": {
+          "accepted": false,
+          "blocks": 8,
+          "mean_difference": -0.0007703450606616132,
+          "reason": "loss_gate",
+          "samples": 244,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": -0.001,
+          "upper_bound": -0.00031556270348933143
+        },
+        "kind": "replacement_review",
+        "loss_gate": {
+          "accepted": false,
+          "blocks": 8,
+          "mean_difference": -0.0007703450606616132,
+          "reason": "loss_gate",
+          "samples": 244,
+          "scope": "exploratory_block_bootstrap_not_sequential_guarantee",
+          "threshold": -0.001,
+          "upper_bound": -0.00031556270348933143
+        },
+        "new_leaves": 7,
+        "new_literal": "Literal(name='y', type='comparative', obj1='ball_t', obj2='ball_t-1', obj3=None)",
+        "node": 22,
+        "old_leaves": 7,
+        "old_literal": "Literal(name='x', type='comparative', obj1='player_t', obj2='ball_t', obj3=None)",
+        "path": "root/true",
+        "train_samples": 3572
+      }
+    ],
+    "validation_samples": 912,
+    "validation_used_for_td": false
+  },
+  "schema": "pong_analysis_unit_v2",
+  "sha256": "aedf2577faae841edeadbd5ddade5b433b034420b71dbd768aab6ae9ff9af750"
+}

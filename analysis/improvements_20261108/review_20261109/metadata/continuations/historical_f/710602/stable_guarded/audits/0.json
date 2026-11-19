@@ -1,0 +1,342 @@
+{
+  "payload": {
+    "counter": 500000,
+    "events": [],
+    "identity": {
+      "campaign": "5c68a97ac3ddd52553a705703ef4faf12d014108b41ca16e7b3b84d7eff805b4",
+      "criterion": "historical_f",
+      "mode": "stable_guarded",
+      "parent": {
+        "path": "checkpoints/500000-98d3f500b9e3f4d9aafdc5edadc8be6971816c12ae7164b79ea4115a799171a3.pkl",
+        "sha256": "98d3f500b9e3f4d9aafdc5edadc8be6971816c12ae7164b79ea4115a799171a3"
+      },
+      "parent_counter": 500000,
+      "seed": 710602
+    },
+    "metrics": {
+      "active_splits": 9,
+      "grows_total": 0,
+      "initial_splits": 9,
+      "leaves": 19,
+      "mode": "stable_guarded",
+      "parameter_version": 0,
+      "prunes_total": 0,
+      "refits_total": 0,
+      "replacements_total": 0,
+      "structure_version": 0,
+      "target_counter": 500000,
+      "target_syncs": 0
+    },
+    "signals": [],
+    "trees": [
+      {
+        "action": "NOOP",
+        "depth": 0,
+        "leaf": false,
+        "literal": {
+          "name": "x",
+          "obj1": "player_t",
+          "obj2": "player_t-1",
+          "obj3": null,
+          "type": "comparative"
+        },
+        "node": 0,
+        "path": "root",
+        "q": 0.8007132855426958
+      },
+      {
+        "action": "NOOP",
+        "depth": 1,
+        "leaf": true,
+        "literal": null,
+        "node": 1,
+        "path": "root/more",
+        "q": 0.8345230924679741
+      },
+      {
+        "action": "NOOP",
+        "depth": 1,
+        "leaf": false,
+        "literal": {
+          "name": "x",
+          "obj1": "player_t",
+          "obj2": "ball_t",
+          "obj3": null,
+          "type": "comparative"
+        },
+        "node": 2,
+        "path": "root/same",
+        "q": 0.7737985512056555
+      },
+      {
+        "action": "NOOP",
+        "depth": 2,
+        "leaf": true,
+        "literal": null,
+        "node": 3,
+        "path": "root/same/more",
+        "q": 0.958329273946784
+      },
+      {
+        "action": "NOOP",
+        "depth": 2,
+        "leaf": true,
+        "literal": null,
+        "node": 4,
+        "path": "root/same/same",
+        "q": 0.9655272064458281
+      },
+      {
+        "action": "NOOP",
+        "depth": 2,
+        "leaf": true,
+        "literal": null,
+        "node": 5,
+        "path": "root/same/less",
+        "q": 1.0025182483688537
+      },
+      {
+        "action": "NOOP",
+        "depth": 1,
+        "leaf": false,
+        "literal": {
+          "name": "present",
+          "obj1": "ball_t-1",
+          "obj2": null,
+          "obj3": null,
+          "type": "logical"
+        },
+        "node": 6,
+        "path": "root/less",
+        "q": 0.8446194186015344
+      },
+      {
+        "action": "NOOP",
+        "depth": 2,
+        "leaf": true,
+        "literal": null,
+        "node": 7,
+        "path": "root/less/true",
+        "q": 0.9111074370810417
+      },
+      {
+        "action": "NOOP",
+        "depth": 2,
+        "leaf": true,
+        "literal": null,
+        "node": 8,
+        "path": "root/less/false",
+        "q": 0.7962418983065342
+      },
+      {
+        "action": "FIRE",
+        "depth": 0,
+        "leaf": false,
+        "literal": {
+          "name": "present",
+          "obj1": "ball_t",
+          "obj2": null,
+          "obj3": null,
+          "type": "logical"
+        },
+        "node": 9,
+        "path": "root",
+        "q": 1.3558385420967105
+      },
+      {
+        "action": "FIRE",
+        "depth": 1,
+        "leaf": true,
+        "literal": null,
+        "node": 10,
+        "path": "root/true",
+        "q": 1.0043473664235933
+      },
+      {
+        "action": "FIRE",
+        "depth": 1,
+        "leaf": true,
+        "literal": null,
+        "node": 11,
+        "path": "root/false",
+        "q": 0.8106525143171
+      },
+      {
+        "action": "RIGHT",
+        "depth": 0,
+        "leaf": false,
+        "literal": {
+          "name": "x",
+          "obj1": "player_t",
+          "obj2": "player_t-1",
+          "obj3": null,
+          "type": "comparative"
+        },
+        "node": 12,
+        "path": "root",
+        "q": 0.8302408117223012
+      },
+      {
+        "action": "RIGHT",
+        "depth": 1,
+        "leaf": true,
+        "literal": null,
+        "node": 13,
+        "path": "root/more",
+        "q": 0.8337075152597991
+      },
+      {
+        "action": "RIGHT",
+        "depth": 1,
+        "leaf": false,
+        "literal": {
+          "name": "x",
+          "obj1": "player_t",
+          "obj2": "ball_t",
+          "obj3": null,
+          "type": "comparative"
+        },
+        "node": 14,
+        "path": "root/same",
+        "q": 0.7914158060227161
+      },
+      {
+        "action": "RIGHT",
+        "depth": 2,
+        "leaf": true,
+        "literal": null,
+        "node": 15,
+        "path": "root/same/more",
+        "q": 0.9547334999888863
+      },
+      {
+        "action": "RIGHT",
+        "depth": 2,
+        "leaf": true,
+        "literal": null,
+        "node": 16,
+        "path": "root/same/same",
+        "q": 0.9590504990146732
+      },
+      {
+        "action": "RIGHT",
+        "depth": 2,
+        "leaf": true,
+        "literal": null,
+        "node": 17,
+        "path": "root/same/less",
+        "q": 0.9908855097181322
+      },
+      {
+        "action": "RIGHT",
+        "depth": 1,
+        "leaf": false,
+        "literal": {
+          "name": "present",
+          "obj1": "ball_t",
+          "obj2": null,
+          "obj3": null,
+          "type": "logical"
+        },
+        "node": 18,
+        "path": "root/less",
+        "q": 1.2475788732628164
+      },
+      {
+        "action": "RIGHT",
+        "depth": 2,
+        "leaf": true,
+        "literal": null,
+        "node": 19,
+        "path": "root/less/true",
+        "q": 0.9560922637331704
+      },
+      {
+        "action": "RIGHT",
+        "depth": 2,
+        "leaf": true,
+        "literal": null,
+        "node": 20,
+        "path": "root/less/false",
+        "q": 0.8189959530470204
+      },
+      {
+        "action": "LEFT",
+        "depth": 0,
+        "leaf": false,
+        "literal": {
+          "name": "x",
+          "obj1": "player_t",
+          "obj2": "ball_t",
+          "obj3": null,
+          "type": "comparative"
+        },
+        "node": 21,
+        "path": "root",
+        "q": 0.7764039948333793
+      },
+      {
+        "action": "LEFT",
+        "depth": 1,
+        "leaf": true,
+        "literal": null,
+        "node": 22,
+        "path": "root/more",
+        "q": 0.9605497894076387
+      },
+      {
+        "action": "LEFT",
+        "depth": 1,
+        "leaf": true,
+        "literal": null,
+        "node": 23,
+        "path": "root/same",
+        "q": 0.9793220384542861
+      },
+      {
+        "action": "LEFT",
+        "depth": 1,
+        "leaf": false,
+        "literal": {
+          "name": "x",
+          "obj1": "player_t",
+          "obj2": "player_t-1",
+          "obj3": null,
+          "type": "comparative"
+        },
+        "node": 24,
+        "path": "root/less",
+        "q": 1.1030783615098025
+      },
+      {
+        "action": "LEFT",
+        "depth": 2,
+        "leaf": true,
+        "literal": null,
+        "node": 25,
+        "path": "root/less/more",
+        "q": 1.0264623478905457
+      },
+      {
+        "action": "LEFT",
+        "depth": 2,
+        "leaf": true,
+        "literal": null,
+        "node": 26,
+        "path": "root/less/same",
+        "q": 1.0514362384664175
+      },
+      {
+        "action": "LEFT",
+        "depth": 2,
+        "leaf": true,
+        "literal": null,
+        "node": 27,
+        "path": "root/less/less",
+        "q": 1.0089012746412065
+      }
+    ]
+  },
+  "schema": "pong_analysis_unit_v2",
+  "sha256": "11aa173fc20cf44b3e0ee35a6333c5c7b71d193e47417cc0beb4dfb952e131ba"
+}
