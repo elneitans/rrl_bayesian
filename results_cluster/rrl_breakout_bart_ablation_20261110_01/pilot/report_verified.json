@@ -1,0 +1,1554 @@
+{
+  "verified_training_cells": 12,
+  "verified_development_episodes": 108,
+  "development_only": true,
+  "training_seeds": [
+    731101,
+    731102,
+    731103
+  ],
+  "by_seed": {
+    "control": {
+      "731101": {
+        "evaluation": {
+          "25000": {
+            "returns": [
+              0.0,
+              0.0
+            ],
+            "mean_return": 0.0,
+            "truncated": 2,
+            "reset": {
+              "opportunities": 2,
+              "fires": 0,
+              "within_32": 0,
+              "censored_before_32": 0,
+              "median_delay_given_fire": null,
+              "mean_delay_given_fire": null
+            },
+            "life_lost": {
+              "opportunities": 0,
+              "fires": 0,
+              "within_32": 0,
+              "censored_before_32": 0,
+              "median_delay_given_fire": null,
+              "mean_delay_given_fire": null
+            }
+          },
+          "50000": {
+            "returns": [
+              3.0,
+              3.0
+            ],
+            "mean_return": 3.0,
+            "truncated": 0,
+            "reset": {
+              "opportunities": 2,
+              "fires": 2,
+              "within_32": 2,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 1.0,
+              "mean_delay_given_fire": 1
+            },
+            "life_lost": {
+              "opportunities": 8,
+              "fires": 8,
+              "within_32": 8,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 1.0,
+              "mean_delay_given_fire": 1
+            }
+          },
+          "100000": {
+            "returns": [
+              2.0,
+              2.0,
+              2.0,
+              2.0,
+              2.0
+            ],
+            "mean_return": 2.0,
+            "truncated": 0,
+            "reset": {
+              "opportunities": 5,
+              "fires": 5,
+              "within_32": 5,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 1,
+              "mean_delay_given_fire": 1
+            },
+            "life_lost": {
+              "opportunities": 20,
+              "fires": 20,
+              "within_32": 20,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 1.0,
+              "mean_delay_given_fire": 1
+            }
+          }
+        },
+        "fits": 195,
+        "first_fit": 512,
+        "trees_reused": 0,
+        "trees_fit": 15520,
+        "training_minutes": 61.02053070999294,
+        "fit_minutes": 48.40270220271001
+      },
+      "731102": {
+        "evaluation": {
+          "25000": {
+            "returns": [
+              0.0,
+              0.0
+            ],
+            "mean_return": 0.0,
+            "truncated": 2,
+            "reset": {
+              "opportunities": 2,
+              "fires": 0,
+              "within_32": 0,
+              "censored_before_32": 0,
+              "median_delay_given_fire": null,
+              "mean_delay_given_fire": null
+            },
+            "life_lost": {
+              "opportunities": 0,
+              "fires": 0,
+              "within_32": 0,
+              "censored_before_32": 0,
+              "median_delay_given_fire": null,
+              "mean_delay_given_fire": null
+            }
+          },
+          "50000": {
+            "returns": [
+              2.0,
+              2.0
+            ],
+            "mean_return": 2.0,
+            "truncated": 0,
+            "reset": {
+              "opportunities": 2,
+              "fires": 2,
+              "within_32": 2,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 1.0,
+              "mean_delay_given_fire": 1
+            },
+            "life_lost": {
+              "opportunities": 8,
+              "fires": 8,
+              "within_32": 8,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 2.0,
+              "mean_delay_given_fire": 1.75
+            }
+          },
+          "100000": {
+            "returns": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean_return": 0.0,
+            "truncated": 5,
+            "reset": {
+              "opportunities": 5,
+              "fires": 0,
+              "within_32": 0,
+              "censored_before_32": 0,
+              "median_delay_given_fire": null,
+              "mean_delay_given_fire": null
+            },
+            "life_lost": {
+              "opportunities": 0,
+              "fires": 0,
+              "within_32": 0,
+              "censored_before_32": 0,
+              "median_delay_given_fire": null,
+              "mean_delay_given_fire": null
+            }
+          }
+        },
+        "fits": 195,
+        "first_fit": 512,
+        "trees_reused": 0,
+        "trees_fit": 15520,
+        "training_minutes": 63.302414546670235,
+        "fit_minutes": 50.373924877114284
+      },
+      "731103": {
+        "evaluation": {
+          "25000": {
+            "returns": [
+              0.0,
+              0.0
+            ],
+            "mean_return": 0.0,
+            "truncated": 2,
+            "reset": {
+              "opportunities": 2,
+              "fires": 0,
+              "within_32": 0,
+              "censored_before_32": 0,
+              "median_delay_given_fire": null,
+              "mean_delay_given_fire": null
+            },
+            "life_lost": {
+              "opportunities": 0,
+              "fires": 0,
+              "within_32": 0,
+              "censored_before_32": 0,
+              "median_delay_given_fire": null,
+              "mean_delay_given_fire": null
+            }
+          },
+          "50000": {
+            "returns": [
+              0.0,
+              0.0
+            ],
+            "mean_return": 0.0,
+            "truncated": 2,
+            "reset": {
+              "opportunities": 2,
+              "fires": 0,
+              "within_32": 0,
+              "censored_before_32": 0,
+              "median_delay_given_fire": null,
+              "mean_delay_given_fire": null
+            },
+            "life_lost": {
+              "opportunities": 0,
+              "fires": 0,
+              "within_32": 0,
+              "censored_before_32": 0,
+              "median_delay_given_fire": null,
+              "mean_delay_given_fire": null
+            }
+          },
+          "100000": {
+            "returns": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean_return": 0.0,
+            "truncated": 5,
+            "reset": {
+              "opportunities": 5,
+              "fires": 0,
+              "within_32": 0,
+              "censored_before_32": 0,
+              "median_delay_given_fire": null,
+              "mean_delay_given_fire": null
+            },
+            "life_lost": {
+              "opportunities": 0,
+              "fires": 0,
+              "within_32": 0,
+              "censored_before_32": 0,
+              "median_delay_given_fire": null,
+              "mean_delay_given_fire": null
+            }
+          }
+        },
+        "fits": 195,
+        "first_fit": 512,
+        "trees_reused": 0,
+        "trees_fit": 15520,
+        "training_minutes": 60.09516659366976,
+        "fit_minutes": 47.538176268265424
+      }
+    },
+    "warm_start": {
+      "731101": {
+        "evaluation": {
+          "25000": {
+            "returns": [
+              0.0,
+              0.0
+            ],
+            "mean_return": 0.0,
+            "truncated": 2,
+            "reset": {
+              "opportunities": 2,
+              "fires": 0,
+              "within_32": 0,
+              "censored_before_32": 0,
+              "median_delay_given_fire": null,
+              "mean_delay_given_fire": null
+            },
+            "life_lost": {
+              "opportunities": 0,
+              "fires": 0,
+              "within_32": 0,
+              "censored_before_32": 0,
+              "median_delay_given_fire": null,
+              "mean_delay_given_fire": null
+            }
+          },
+          "50000": {
+            "returns": [
+              11.0,
+              11.0
+            ],
+            "mean_return": 11.0,
+            "truncated": 0,
+            "reset": {
+              "opportunities": 2,
+              "fires": 2,
+              "within_32": 2,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 1.0,
+              "mean_delay_given_fire": 1
+            },
+            "life_lost": {
+              "opportunities": 8,
+              "fires": 8,
+              "within_32": 8,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 1.0,
+              "mean_delay_given_fire": 1
+            }
+          },
+          "100000": {
+            "returns": [
+              3.0,
+              3.0,
+              3.0,
+              3.0,
+              3.0
+            ],
+            "mean_return": 3.0,
+            "truncated": 0,
+            "reset": {
+              "opportunities": 5,
+              "fires": 5,
+              "within_32": 5,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 7,
+              "mean_delay_given_fire": 7
+            },
+            "life_lost": {
+              "opportunities": 20,
+              "fires": 20,
+              "within_32": 20,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 10.5,
+              "mean_delay_given_fire": 10.5
+            }
+          }
+        },
+        "fits": 195,
+        "first_fit": 512,
+        "trees_reused": 14278,
+        "trees_fit": 15520,
+        "training_minutes": 85.4823298742141,
+        "fit_minutes": 69.6932880572897
+      },
+      "731102": {
+        "evaluation": {
+          "25000": {
+            "returns": [
+              0.0,
+              0.0
+            ],
+            "mean_return": 0.0,
+            "truncated": 2,
+            "reset": {
+              "opportunities": 2,
+              "fires": 0,
+              "within_32": 0,
+              "censored_before_32": 0,
+              "median_delay_given_fire": null,
+              "mean_delay_given_fire": null
+            },
+            "life_lost": {
+              "opportunities": 0,
+              "fires": 0,
+              "within_32": 0,
+              "censored_before_32": 0,
+              "median_delay_given_fire": null,
+              "mean_delay_given_fire": null
+            }
+          },
+          "50000": {
+            "returns": [
+              0.0,
+              0.0
+            ],
+            "mean_return": 0.0,
+            "truncated": 2,
+            "reset": {
+              "opportunities": 2,
+              "fires": 0,
+              "within_32": 0,
+              "censored_before_32": 0,
+              "median_delay_given_fire": null,
+              "mean_delay_given_fire": null
+            },
+            "life_lost": {
+              "opportunities": 0,
+              "fires": 0,
+              "within_32": 0,
+              "censored_before_32": 0,
+              "median_delay_given_fire": null,
+              "mean_delay_given_fire": null
+            }
+          },
+          "100000": {
+            "returns": [
+              3.0,
+              3.0,
+              3.0,
+              3.0,
+              3.0
+            ],
+            "mean_return": 3.0,
+            "truncated": 0,
+            "reset": {
+              "opportunities": 5,
+              "fires": 5,
+              "within_32": 5,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 1,
+              "mean_delay_given_fire": 1
+            },
+            "life_lost": {
+              "opportunities": 20,
+              "fires": 20,
+              "within_32": 15,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 8.5,
+              "mean_delay_given_fire": 32.5
+            }
+          }
+        },
+        "fits": 195,
+        "first_fit": 512,
+        "trees_reused": 14229,
+        "trees_fit": 15520,
+        "training_minutes": 86.21896267789027,
+        "fit_minutes": 70.01245614893269
+      },
+      "731103": {
+        "evaluation": {
+          "25000": {
+            "returns": [
+              0.0,
+              0.0
+            ],
+            "mean_return": 0.0,
+            "truncated": 2,
+            "reset": {
+              "opportunities": 2,
+              "fires": 0,
+              "within_32": 0,
+              "censored_before_32": 0,
+              "median_delay_given_fire": null,
+              "mean_delay_given_fire": null
+            },
+            "life_lost": {
+              "opportunities": 0,
+              "fires": 0,
+              "within_32": 0,
+              "censored_before_32": 0,
+              "median_delay_given_fire": null,
+              "mean_delay_given_fire": null
+            }
+          },
+          "50000": {
+            "returns": [
+              0.0,
+              0.0
+            ],
+            "mean_return": 0.0,
+            "truncated": 0,
+            "reset": {
+              "opportunities": 2,
+              "fires": 2,
+              "within_32": 2,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 1.0,
+              "mean_delay_given_fire": 1
+            },
+            "life_lost": {
+              "opportunities": 8,
+              "fires": 8,
+              "within_32": 8,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 1.0,
+              "mean_delay_given_fire": 1
+            }
+          },
+          "100000": {
+            "returns": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean_return": 0.0,
+            "truncated": 0,
+            "reset": {
+              "opportunities": 5,
+              "fires": 5,
+              "within_32": 5,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 1,
+              "mean_delay_given_fire": 1
+            },
+            "life_lost": {
+              "opportunities": 20,
+              "fires": 20,
+              "within_32": 20,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 1.0,
+              "mean_delay_given_fire": 1
+            }
+          }
+        },
+        "fits": 195,
+        "first_fit": 512,
+        "trees_reused": 14268,
+        "trees_fit": 15520,
+        "training_minutes": 84.73729728290733,
+        "fit_minutes": 69.10332539333031
+      }
+    },
+    "interval_1024": {
+      "731101": {
+        "evaluation": {
+          "25000": {
+            "returns": [
+              4.0,
+              4.0
+            ],
+            "mean_return": 4.0,
+            "truncated": 0,
+            "reset": {
+              "opportunities": 2,
+              "fires": 2,
+              "within_32": 2,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 1.0,
+              "mean_delay_given_fire": 1
+            },
+            "life_lost": {
+              "opportunities": 8,
+              "fires": 8,
+              "within_32": 8,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 10.0,
+              "mean_delay_given_fire": 10
+            }
+          },
+          "50000": {
+            "returns": [
+              0.0,
+              0.0
+            ],
+            "mean_return": 0.0,
+            "truncated": 0,
+            "reset": {
+              "opportunities": 2,
+              "fires": 2,
+              "within_32": 2,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 1.0,
+              "mean_delay_given_fire": 1
+            },
+            "life_lost": {
+              "opportunities": 8,
+              "fires": 8,
+              "within_32": 8,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 1.0,
+              "mean_delay_given_fire": 1
+            }
+          },
+          "100000": {
+            "returns": [
+              3.0,
+              3.0,
+              3.0,
+              3.0,
+              3.0
+            ],
+            "mean_return": 3.0,
+            "truncated": 0,
+            "reset": {
+              "opportunities": 5,
+              "fires": 5,
+              "within_32": 5,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 1,
+              "mean_delay_given_fire": 1
+            },
+            "life_lost": {
+              "opportunities": 20,
+              "fires": 20,
+              "within_32": 20,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 2.0,
+              "mean_delay_given_fire": 2
+            }
+          }
+        },
+        "fits": 98,
+        "first_fit": 512,
+        "trees_reused": 0,
+        "trees_fit": 7760,
+        "training_minutes": 32.86240734739307,
+        "fit_minutes": 23.246238792761385
+      },
+      "731102": {
+        "evaluation": {
+          "25000": {
+            "returns": [
+              6.0,
+              6.0
+            ],
+            "mean_return": 6.0,
+            "truncated": 0,
+            "reset": {
+              "opportunities": 2,
+              "fires": 2,
+              "within_32": 2,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 2.0,
+              "mean_delay_given_fire": 2
+            },
+            "life_lost": {
+              "opportunities": 8,
+              "fires": 8,
+              "within_32": 2,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 38.0,
+              "mean_delay_given_fire": 29
+            }
+          },
+          "50000": {
+            "returns": [
+              3.0,
+              3.0
+            ],
+            "mean_return": 3.0,
+            "truncated": 0,
+            "reset": {
+              "opportunities": 2,
+              "fires": 2,
+              "within_32": 2,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 1.0,
+              "mean_delay_given_fire": 1
+            },
+            "life_lost": {
+              "opportunities": 8,
+              "fires": 8,
+              "within_32": 8,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 10.5,
+              "mean_delay_given_fire": 10.5
+            }
+          },
+          "100000": {
+            "returns": [
+              7.0,
+              7.0,
+              7.0,
+              7.0,
+              7.0
+            ],
+            "mean_return": 7.0,
+            "truncated": 0,
+            "reset": {
+              "opportunities": 5,
+              "fires": 5,
+              "within_32": 5,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 1,
+              "mean_delay_given_fire": 1
+            },
+            "life_lost": {
+              "opportunities": 20,
+              "fires": 20,
+              "within_32": 20,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 1.0,
+              "mean_delay_given_fire": 1
+            }
+          }
+        },
+        "fits": 98,
+        "first_fit": 512,
+        "trees_reused": 0,
+        "trees_fit": 7760,
+        "training_minutes": 31.224366059616052,
+        "fit_minutes": 21.69118761943343
+      },
+      "731103": {
+        "evaluation": {
+          "25000": {
+            "returns": [
+              5.0,
+              5.0
+            ],
+            "mean_return": 5.0,
+            "truncated": 0,
+            "reset": {
+              "opportunities": 2,
+              "fires": 2,
+              "within_32": 2,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 1.0,
+              "mean_delay_given_fire": 1
+            },
+            "life_lost": {
+              "opportunities": 8,
+              "fires": 8,
+              "within_32": 8,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 20.0,
+              "mean_delay_given_fire": 15.25
+            }
+          },
+          "50000": {
+            "returns": [
+              16.0,
+              16.0
+            ],
+            "mean_return": 16.0,
+            "truncated": 0,
+            "reset": {
+              "opportunities": 2,
+              "fires": 2,
+              "within_32": 2,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 1.0,
+              "mean_delay_given_fire": 1
+            },
+            "life_lost": {
+              "opportunities": 8,
+              "fires": 8,
+              "within_32": 8,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 1.0,
+              "mean_delay_given_fire": 1
+            }
+          },
+          "100000": {
+            "returns": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "mean_return": 1.0,
+            "truncated": 0,
+            "reset": {
+              "opportunities": 5,
+              "fires": 5,
+              "within_32": 5,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 1,
+              "mean_delay_given_fire": 1
+            },
+            "life_lost": {
+              "opportunities": 20,
+              "fires": 20,
+              "within_32": 20,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 1.0,
+              "mean_delay_given_fire": 1
+            }
+          }
+        },
+        "fits": 98,
+        "first_fit": 512,
+        "trees_reused": 0,
+        "trees_fit": 7760,
+        "training_minutes": 36.827834684277576,
+        "fit_minutes": 26.47700793790476
+      }
+    },
+    "warmup_4096": {
+      "731101": {
+        "evaluation": {
+          "25000": {
+            "returns": [
+              0.0,
+              0.0
+            ],
+            "mean_return": 0.0,
+            "truncated": 2,
+            "reset": {
+              "opportunities": 2,
+              "fires": 2,
+              "within_32": 0,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 22786.0,
+              "mean_delay_given_fire": 22786
+            },
+            "life_lost": {
+              "opportunities": 0,
+              "fires": 0,
+              "within_32": 0,
+              "censored_before_32": 0,
+              "median_delay_given_fire": null,
+              "mean_delay_given_fire": null
+            }
+          },
+          "50000": {
+            "returns": [
+              0.0,
+              0.0
+            ],
+            "mean_return": 0.0,
+            "truncated": 2,
+            "reset": {
+              "opportunities": 2,
+              "fires": 0,
+              "within_32": 0,
+              "censored_before_32": 0,
+              "median_delay_given_fire": null,
+              "mean_delay_given_fire": null
+            },
+            "life_lost": {
+              "opportunities": 0,
+              "fires": 0,
+              "within_32": 0,
+              "censored_before_32": 0,
+              "median_delay_given_fire": null,
+              "mean_delay_given_fire": null
+            }
+          },
+          "100000": {
+            "returns": [
+              2.0,
+              2.0,
+              2.0,
+              2.0,
+              2.0
+            ],
+            "mean_return": 2.0,
+            "truncated": 0,
+            "reset": {
+              "opportunities": 5,
+              "fires": 5,
+              "within_32": 5,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 1,
+              "mean_delay_given_fire": 1
+            },
+            "life_lost": {
+              "opportunities": 20,
+              "fires": 20,
+              "within_32": 20,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 2.0,
+              "mean_delay_given_fire": 1.75
+            }
+          }
+        },
+        "fits": 188,
+        "first_fit": 4096,
+        "trees_reused": 0,
+        "trees_fit": 14960,
+        "training_minutes": 61.28084937466386,
+        "fit_minutes": 48.123799722168286
+      },
+      "731102": {
+        "evaluation": {
+          "25000": {
+            "returns": [
+              11.0,
+              11.0
+            ],
+            "mean_return": 11.0,
+            "truncated": 0,
+            "reset": {
+              "opportunities": 2,
+              "fires": 2,
+              "within_32": 2,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 1.0,
+              "mean_delay_given_fire": 1
+            },
+            "life_lost": {
+              "opportunities": 8,
+              "fires": 8,
+              "within_32": 8,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 1.0,
+              "mean_delay_given_fire": 1
+            }
+          },
+          "50000": {
+            "returns": [
+              3.0,
+              3.0
+            ],
+            "mean_return": 3.0,
+            "truncated": 0,
+            "reset": {
+              "opportunities": 2,
+              "fires": 2,
+              "within_32": 2,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 1.0,
+              "mean_delay_given_fire": 1
+            },
+            "life_lost": {
+              "opportunities": 8,
+              "fires": 8,
+              "within_32": 8,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 1.0,
+              "mean_delay_given_fire": 1
+            }
+          },
+          "100000": {
+            "returns": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "mean_return": 0.0,
+            "truncated": 5,
+            "reset": {
+              "opportunities": 5,
+              "fires": 0,
+              "within_32": 0,
+              "censored_before_32": 0,
+              "median_delay_given_fire": null,
+              "mean_delay_given_fire": null
+            },
+            "life_lost": {
+              "opportunities": 0,
+              "fires": 0,
+              "within_32": 0,
+              "censored_before_32": 0,
+              "median_delay_given_fire": null,
+              "mean_delay_given_fire": null
+            }
+          }
+        },
+        "fits": 188,
+        "first_fit": 4096,
+        "trees_reused": 0,
+        "trees_fit": 14960,
+        "training_minutes": 57.168758057116065,
+        "fit_minutes": 44.94371488638765
+      },
+      "731103": {
+        "evaluation": {
+          "25000": {
+            "returns": [
+              0.0,
+              0.0
+            ],
+            "mean_return": 0.0,
+            "truncated": 0,
+            "reset": {
+              "opportunities": 2,
+              "fires": 2,
+              "within_32": 2,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 1.0,
+              "mean_delay_given_fire": 1
+            },
+            "life_lost": {
+              "opportunities": 8,
+              "fires": 8,
+              "within_32": 8,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 1.0,
+              "mean_delay_given_fire": 1
+            }
+          },
+          "50000": {
+            "returns": [
+              1.0,
+              1.0
+            ],
+            "mean_return": 1.0,
+            "truncated": 0,
+            "reset": {
+              "opportunities": 2,
+              "fires": 2,
+              "within_32": 2,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 1.0,
+              "mean_delay_given_fire": 1
+            },
+            "life_lost": {
+              "opportunities": 8,
+              "fires": 8,
+              "within_32": 8,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 3.0,
+              "mean_delay_given_fire": 3
+            }
+          },
+          "100000": {
+            "returns": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "mean_return": 1.0,
+            "truncated": 0,
+            "reset": {
+              "opportunities": 5,
+              "fires": 5,
+              "within_32": 5,
+              "censored_before_32": 0,
+              "median_delay_given_fire": 2,
+              "mean_delay_given_fire": 2
+            },
+            "life_lost": {
+              "opportunities": 20,
+              "fires": 15,
+              "within_32": 15,
+              "censored_before_32": 5,
+              "median_delay_given_fire": 2,
+              "mean_delay_given_fire": 8.333333333333334
+            }
+          }
+        },
+        "fits": 188,
+        "first_fit": 4096,
+        "trees_reused": 0,
+        "trees_fit": 14960,
+        "training_minutes": 52.98610661117903,
+        "fit_minutes": 41.40626925791536
+      }
+    }
+  },
+  "final": {
+    "control": {
+      "scores": [
+        2.0,
+        0.0,
+        0.0
+      ],
+      "mean": 0.6666666666666666,
+      "paired_differences": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean_training_minutes": 61.472703950110976,
+      "mean_fit_minutes": 48.771601116029906,
+      "fit_count": 195,
+      "truncations": 10,
+      "reset": {
+        "opportunities": 15,
+        "fires": 5,
+        "within_32": 5,
+        "censored_before_32": 0,
+        "median_delay_given_fire": 1,
+        "mean_delay_given_fire": 1
+      },
+      "life_lost": {
+        "opportunities": 20,
+        "fires": 20,
+        "within_32": 20,
+        "censored_before_32": 0,
+        "median_delay_given_fire": 1.0,
+        "mean_delay_given_fire": 1
+      },
+      "by_checkpoint": {
+        "25000": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "50000": [
+          3.0,
+          2.0,
+          0.0
+        ],
+        "100000": [
+          2.0,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "warm_start": {
+      "scores": [
+        3.0,
+        3.0,
+        0.0
+      ],
+      "mean": 2.0,
+      "paired_differences": [
+        1.0,
+        3.0,
+        0.0
+      ],
+      "mean_training_minutes": 85.4795299450039,
+      "mean_fit_minutes": 69.6030231998509,
+      "fit_count": 195,
+      "truncations": 0,
+      "reset": {
+        "opportunities": 15,
+        "fires": 15,
+        "within_32": 15,
+        "censored_before_32": 0,
+        "median_delay_given_fire": 1,
+        "mean_delay_given_fire": 3
+      },
+      "life_lost": {
+        "opportunities": 60,
+        "fires": 60,
+        "within_32": 55,
+        "censored_before_32": 0,
+        "median_delay_given_fire": 1.0,
+        "mean_delay_given_fire": 14.666666666666666
+      },
+      "by_checkpoint": {
+        "25000": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "50000": [
+          11.0,
+          0.0,
+          0.0
+        ],
+        "100000": [
+          3.0,
+          3.0,
+          0.0
+        ]
+      }
+    },
+    "interval_1024": {
+      "scores": [
+        3.0,
+        7.0,
+        1.0
+      ],
+      "mean": 3.6666666666666665,
+      "paired_differences": [
+        1.0,
+        7.0,
+        1.0
+      ],
+      "mean_training_minutes": 33.638202697095565,
+      "mean_fit_minutes": 23.804811450033192,
+      "fit_count": 98,
+      "truncations": 0,
+      "reset": {
+        "opportunities": 15,
+        "fires": 15,
+        "within_32": 15,
+        "censored_before_32": 0,
+        "median_delay_given_fire": 1,
+        "mean_delay_given_fire": 1
+      },
+      "life_lost": {
+        "opportunities": 60,
+        "fires": 60,
+        "within_32": 60,
+        "censored_before_32": 0,
+        "median_delay_given_fire": 1.0,
+        "mean_delay_given_fire": 1.3333333333333333
+      },
+      "by_checkpoint": {
+        "25000": [
+          4.0,
+          6.0,
+          5.0
+        ],
+        "50000": [
+          0.0,
+          3.0,
+          16.0
+        ],
+        "100000": [
+          3.0,
+          7.0,
+          1.0
+        ]
+      }
+    },
+    "warmup_4096": {
+      "scores": [
+        2.0,
+        0.0,
+        1.0
+      ],
+      "mean": 1.0,
+      "paired_differences": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "mean_training_minutes": 57.14523801431965,
+      "mean_fit_minutes": 44.8245946221571,
+      "fit_count": 188,
+      "truncations": 5,
+      "reset": {
+        "opportunities": 15,
+        "fires": 10,
+        "within_32": 10,
+        "censored_before_32": 0,
+        "median_delay_given_fire": 1.5,
+        "mean_delay_given_fire": 1.5
+      },
+      "life_lost": {
+        "opportunities": 40,
+        "fires": 35,
+        "within_32": 35,
+        "censored_before_32": 5,
+        "median_delay_given_fire": 2,
+        "mean_delay_given_fire": 4.571428571428571
+      },
+      "by_checkpoint": {
+        "25000": [
+          0.0,
+          11.0,
+          0.0
+        ],
+        "50000": [
+          0.0,
+          3.0,
+          1.0
+        ],
+        "100000": [
+          2.0,
+          0.0,
+          1.0
+        ]
+      }
+    }
+  },
+  "fixed": {
+    "710602": {
+      "control": [
+        {
+          "lot": 1,
+          "churn_mean": 0.6379889161249067,
+          "churn_by_chain": [
+            0.6554406906106789,
+            0.631141425983161,
+            0.6527230096983907,
+            0.6126505382073963
+          ],
+          "start_action_counts": {
+            "RIGHT": 1,
+            "FIRE": 3
+          },
+          "gap_by_chain": [
+            -3.3557197486144617,
+            0.6636999976281857,
+            1.183268643856053,
+            0.8162720332634166
+          ],
+          "panel_disagreement": 11,
+          "panel_size": 17,
+          "trees_reused_of_320": 0,
+          "fit_seconds": 62.60593109112233,
+          "fire_margin_rhat": 1.5038535499159287
+        },
+        {
+          "lot": 2,
+          "churn_mean": 0.4745483853778109,
+          "churn_by_chain": [
+            0.639480976233614,
+            0.4806831503783438,
+            0.38417883406160075,
+            0.39385058083768515
+          ],
+          "start_action_counts": {
+            "FIRE": 4
+          },
+          "gap_by_chain": [
+            0.8990522581980116,
+            0.9408247044051024,
+            0.9165685809482085,
+            1.089325965305136
+          ],
+          "panel_disagreement": 5,
+          "panel_size": 17,
+          "trees_reused_of_320": 0,
+          "fit_seconds": 57.487465005135164,
+          "fire_margin_rhat": 1.0891946285122498
+        },
+        {
+          "lot": 3,
+          "churn_mean": 0.47115794522007887,
+          "churn_by_chain": [
+            0.5583235638921453,
+            0.4030693807950549,
+            0.48262815730576575,
+            0.44061067888734945
+          ],
+          "start_action_counts": {
+            "FIRE": 4
+          },
+          "gap_by_chain": [
+            0.8369668628994305,
+            0.7566656832898815,
+            0.8990438415906539,
+            0.7613396366640188
+          ],
+          "panel_disagreement": 10,
+          "panel_size": 17,
+          "trees_reused_of_320": 0,
+          "fit_seconds": 62.385790484491736,
+          "fire_margin_rhat": 1.0453728602280958
+        }
+      ],
+      "warm_start": [
+        {
+          "lot": 1,
+          "churn_mean": 0.6216028988596398,
+          "churn_by_chain": [
+            0.6533624640306938,
+            0.639480976233614,
+            0.5994085047426196,
+            0.5941596504316317
+          ],
+          "start_action_counts": {
+            "RIGHT": 3,
+            "FIRE": 1
+          },
+          "gap_by_chain": [
+            -17.096202516551017,
+            -9.696458545391025,
+            -4.540901674805781,
+            0.9627989493518783
+          ],
+          "panel_disagreement": 7,
+          "panel_size": 17,
+          "trees_reused_of_320": 280,
+          "fit_seconds": 70.9016310882289,
+          "fire_margin_rhat": 1.8204506190172303
+        },
+        {
+          "lot": 2,
+          "churn_mean": 0.35826095065544067,
+          "churn_by_chain": [
+            0.31860812107002023,
+            0.3586805925610146,
+            0.37650538207396356,
+            0.37924970691676435
+          ],
+          "start_action_counts": {
+            "RIGHT": 1,
+            "FIRE": 2,
+            "NOOP": 1
+          },
+          "gap_by_chain": [
+            -14.670628524768034,
+            1.0601043671992443,
+            0.8552714931417285,
+            -1.839480064651596
+          ],
+          "panel_disagreement": 4,
+          "panel_size": 17,
+          "trees_reused_of_320": 297,
+          "fit_seconds": 74.5067048901692,
+          "fire_margin_rhat": 1.8191729659143299
+        },
+        {
+          "lot": 3,
+          "churn_mean": 0.41359373334754346,
+          "churn_by_chain": [
+            0.4171373761057231,
+            0.3909730363423212,
+            0.40040498774379196,
+            0.44585953319833743
+          ],
+          "start_action_counts": {
+            "FIRE": 2,
+            "NOOP": 1,
+            "LEFT": 1
+          },
+          "gap_by_chain": [
+            0.8376636067069825,
+            -0.3407688290198507,
+            -7.866621570157378,
+            0.7902020799978686
+          ],
+          "panel_disagreement": 12,
+          "panel_size": 17,
+          "trees_reused_of_320": 300,
+          "fit_seconds": 79.26651097927243,
+          "fire_margin_rhat": 1.3760194083112478
+        }
+      ]
+    },
+    "710608": {
+      "control": [
+        {
+          "lot": 1,
+          "churn_mean": 0.749369681689253,
+          "churn_by_chain": [
+            0.627744510978044,
+            0.9791994957453514,
+            0.6952673600168084,
+            0.6952673600168084
+          ],
+          "start_action_counts": {
+            "FIRE": 4
+          },
+          "gap_by_chain": [
+            2.5942915434800256,
+            2.04157093767499,
+            2.272020467972837,
+            2.925794967602471
+          ],
+          "panel_disagreement": 9,
+          "panel_size": 17,
+          "trees_reused_of_320": 0,
+          "fit_seconds": 76.64752833452076,
+          "fire_margin_rhat": 1.021158445272382
+        },
+        {
+          "lot": 2,
+          "churn_mean": 0.5760190146023743,
+          "churn_by_chain": [
+            0.49936968168925305,
+            0.6657999789893897,
+            0.6593129530412859,
+            0.4795934446895682
+          ],
+          "start_action_counts": {
+            "FIRE": 2,
+            "NOOP": 1,
+            "LEFT": 1
+          },
+          "gap_by_chain": [
+            3.2559995558121386,
+            -1.063954729424509,
+            -9.252698473572707,
+            0.5874511306862615
+          ],
+          "panel_disagreement": 13,
+          "panel_size": 17,
+          "trees_reused_of_320": 0,
+          "fit_seconds": 73.63349929032847,
+          "fire_margin_rhat": 1.090604795334082
+        },
+        {
+          "lot": 3,
+          "churn_mean": 0.896260111356235,
+          "churn_by_chain": [
+            0.8323353293413174,
+            0.9615768463073853,
+            0.8428931610463284,
+            0.9482351087299086
+          ],
+          "start_action_counts": {
+            "FIRE": 4
+          },
+          "gap_by_chain": [
+            2.702347433881755,
+            2.7675780342853074,
+            2.2441197979304803,
+            2.1933926738803677
+          ],
+          "panel_disagreement": 10,
+          "panel_size": 17,
+          "trees_reused_of_320": 0,
+          "fit_seconds": 73.67730884975754,
+          "fire_margin_rhat": 1.1029614950766984
+        }
+      ],
+      "warm_start": [
+        {
+          "lot": 1,
+          "churn_mean": 0.7094626536400882,
+          "churn_by_chain": [
+            0.6717880029414854,
+            0.6435024687467171,
+            0.9040340371887803,
+            0.6185261056833701
+          ],
+          "start_action_counts": {
+            "LEFT": 4
+          },
+          "gap_by_chain": [
+            -10.526991520609883,
+            -13.828726286013946,
+            -12.964191533721333,
+            -14.688715946471547
+          ],
+          "panel_disagreement": 13,
+          "panel_size": 17,
+          "trees_reused_of_320": 284,
+          "fit_seconds": 84.89761899830773,
+          "fire_margin_rhat": 1.0520861487397248
+        },
+        {
+          "lot": 2,
+          "churn_mean": 0.5781332072696712,
+          "churn_by_chain": [
+            0.6464702174598173,
+            0.45711209160626115,
+            0.7726389326609938,
+            0.4363115873516126
+          ],
+          "start_action_counts": {
+            "LEFT": 1,
+            "FIRE": 3
+          },
+          "gap_by_chain": [
+            -10.7407448061943,
+            2.1142444911317995,
+            0.3423609377249903,
+            0.0887815587259837
+          ],
+          "panel_disagreement": 10,
+          "panel_size": 17,
+          "trees_reused_of_320": 262,
+          "fit_seconds": 82.68422723794356,
+          "fire_margin_rhat": 1.3864211832891544
+        },
+        {
+          "lot": 3,
+          "churn_mean": 0.8853739888643766,
+          "churn_by_chain": [
+            0.9220506355709633,
+            0.8405294673810274,
+            0.9246769618657422,
+            0.8542388906397731
+          ],
+          "start_action_counts": {
+            "LEFT": 3,
+            "FIRE": 1
+          },
+          "gap_by_chain": [
+            -2.401878701732201,
+            2.9434724533650325,
+            -2.713750365425639,
+            -4.375309623973507
+          ],
+          "panel_disagreement": 9,
+          "panel_size": 17,
+          "trees_reused_of_320": 315,
+          "fit_seconds": 84.87280051619746,
+          "fire_margin_rhat": 2.081389154508065
+        }
+      ]
+    }
+  }
+}

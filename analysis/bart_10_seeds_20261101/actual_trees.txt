@@ -1,0 +1,119 @@
+Representative trees: illustration of contributions, not standalone Q or average posterior tree. Trees chosen at different fits are NOT the same persistent tree lineage.
+
+Seed 710601; model 1953; RIGHT; last retained draw; largest tree, index 10; scale center 0.0, width 199.99999999999983
+y(ball_t,ball_t-1) is_missing None
+  True: incontact(player_t,ball_t) is_missing None
+  True:   True: leaf contribution = 1.9449 Q units (no intercept)
+  True:   False: leaf contribution = 2.07207 Q units (no intercept)
+  False: y(player_t,ball_t) equals less
+  False:   True: leaf contribution = 3.05129 Q units (no intercept)
+  False:   False: leaf contribution = 3.39934 Q units (no intercept)
+
+Evolution example seed602; checkpoint 100000; current; model 195; RIGHT; last retained draw; largest tree index12. Different selected trees, NOT lineage.
+incontact(player_t,ball_t) equals False
+  True: leaf contribution = -1.67028 Q units (no intercept)
+  False: present(ball_t-1,None) is_missing None
+  False:   True: leaf contribution = -3.25704 Q units (no intercept)
+  False:   False: leaf contribution = 0.856793 Q units (no intercept)
+
+Evolution example seed602; checkpoint 500000; current; model 976; RIGHT; last retained draw; largest tree index2. Different selected trees, NOT lineage.
+y(ball_t,ball_t-1) equals less
+  True: leaf contribution = 3.48806 Q units (no intercept)
+  False: y(player_t,ball_t) is_missing None
+  False:   True: x(player_t,player_t-1) equals more
+  False:   True:   True: leaf contribution = 5.56543 Q units (no intercept)
+  False:   True:   False: leaf contribution = 3.60862 Q units (no intercept)
+  False:   False: leaf contribution = 2.9885 Q units (no intercept)
+
+Evolution example seed602; checkpoint 1000000; current; model 1953; RIGHT; last retained draw; largest tree index1. Different selected trees, NOT lineage.
+incontact(player_t,ball_t) equals False
+  True: leaf contribution = 0.872875 Q units (no intercept)
+  False: present(ball_t-1,None) equals False
+  False:   True: x(player_t,player_t-1) equals more
+  False:   True:   True: leaf contribution = -5.90014 Q units (no intercept)
+  False:   True:   False: leaf contribution = -2.25485 Q units (no intercept)
+  False:   False: leaf contribution = -12.3472 Q units (no intercept)
+
+Evolution example seed602; checkpoint 1000000; previous fit; model 1952; RIGHT; last retained draw; largest tree index1. Different selected trees, NOT lineage.
+present(ball_t-1,None) equals False
+  True: leaf contribution = 1.13423 Q units (no intercept)
+  False: x(player_t,ball_t) is_missing None
+  False:   True: leaf contribution = 2.1736 Q units (no intercept)
+  False:   False: y(player_t,ball_t) equals same
+  False:   False:   True: x(player_t,player_t-1) equals less
+  False:   False:   True:   True: leaf contribution = 5.20145 Q units (no intercept)
+  False:   False:   True:   False: leaf contribution = 7.84873 Q units (no intercept)
+  False:   False:   False: leaf contribution = 3.44806 Q units (no intercept)
+
+Seed 710602; model 1953; RIGHT; last retained draw; largest tree, index 1; scale center 0.0, width 199.99999999999983
+incontact(player_t,ball_t) equals False
+  True: leaf contribution = 0.872875 Q units (no intercept)
+  False: present(ball_t-1,None) equals False
+  False:   True: x(player_t,player_t-1) equals more
+  False:   True:   True: leaf contribution = -5.90014 Q units (no intercept)
+  False:   True:   False: leaf contribution = -2.25485 Q units (no intercept)
+  False:   False: leaf contribution = -12.3472 Q units (no intercept)
+
+Seed 710603; model 1953; RIGHT; last retained draw; largest tree, index 4; scale center 0.0, width 199.99999999999983
+x(player_t,ball_t) is_missing None
+  True: leaf contribution = 7.99341 Q units (no intercept)
+  False: present(ball_t-1,None) equals True
+  False:   True: leaf contribution = 3.46834 Q units (no intercept)
+  False:   False: leaf contribution = -4.17884 Q units (no intercept)
+
+Seed 710604; model 1953; RIGHT; last retained draw; largest tree, index 4; scale center 0.0, width 199.99999999999983
+x(player_t,player_t-1) equals less
+  True: x(player_t,ball_t) equals less
+  True:   True: x(ball_t,ball_t-1) equals less
+  True:   True:   True: leaf contribution = 7.46446 Q units (no intercept)
+  True:   True:   False: leaf contribution = 3.62186 Q units (no intercept)
+  True:   False: leaf contribution = 4.32296 Q units (no intercept)
+  False: leaf contribution = 4.43607 Q units (no intercept)
+
+Seed 710605; model 1953; RIGHT; last retained draw; largest tree, index 10; scale center 0.0, width 199.99999999999983
+y(player_t,ball_t) equals more
+  True: x(ball_t,ball_t-1) is_missing None
+  True:   True: leaf contribution = 4.90787 Q units (no intercept)
+  True:   False: leaf contribution = 3.47339 Q units (no intercept)
+  False: present(ball_t,None) equals True
+  False:   True: leaf contribution = 0.86008 Q units (no intercept)
+  False:   False: leaf contribution = 7.04645 Q units (no intercept)
+
+Seed 710606; model 1953; RIGHT; last retained draw; largest tree, index 0; scale center 0.0, width 199.99999999999983
+y(ball_t,ball_t-1) is_missing None
+  True: leaf contribution = 3.17474 Q units (no intercept)
+  False: leaf contribution = 2.9351 Q units (no intercept)
+
+Seed 710607; model 1953; RIGHT; last retained draw; largest tree, index 11; scale center 0.0, width 199.99999999999983
+y(player_t,ball_t) equals more
+  True: x(ball_t,ball_t-1) is_missing None
+  True:   True: leaf contribution = 5.18537 Q units (no intercept)
+  True:   False: leaf contribution = -2.69708 Q units (no intercept)
+  False: x(player_t,ball_t) is_missing None
+  False:   True: leaf contribution = 2.92181 Q units (no intercept)
+  False:   False: leaf contribution = 11.0247 Q units (no intercept)
+
+Seed 710608; model 1953; RIGHT; last retained draw; largest tree, index 10; scale center 0.0, width 199.99999999999983
+x(player_t,player_t-1) equals less
+  True: leaf contribution = 3.40079 Q units (no intercept)
+  False: x(player_t,player_t-1) equals same
+  False:   True: y(ball_t,ball_t-1) is_missing None
+  False:   True:   True: leaf contribution = 0.250983 Q units (no intercept)
+  False:   True:   False: leaf contribution = 2.81797 Q units (no intercept)
+  False:   False: leaf contribution = 10.7344 Q units (no intercept)
+
+Seed 710609; model 1953; RIGHT; last retained draw; largest tree, index 2; scale center 0.0, width 199.99999999999983
+incontact(player_t,ball_t) equals True
+  True: leaf contribution = -3.83561 Q units (no intercept)
+  False: x(player_t,ball_t) equals same
+  False:   True: leaf contribution = 5.10254 Q units (no intercept)
+  False:   False: leaf contribution = 1.42002 Q units (no intercept)
+
+Seed 710610; model 1953; RIGHT; last retained draw; largest tree, index 1; scale center 0.0, width 199.99999999999983
+x(player_t,ball_t) equals more
+  True: y(ball_t,ball_t-1) is_missing None
+  True:   True: leaf contribution = 7.38919 Q units (no intercept)
+  True:   False: y(ball_t,ball_t-1) equals less
+  True:   False:   True: leaf contribution = 9.18679 Q units (no intercept)
+  True:   False:   False: leaf contribution = 1.97685 Q units (no intercept)
+  False: leaf contribution = 9.24892 Q units (no intercept)

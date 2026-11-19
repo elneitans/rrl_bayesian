@@ -1,0 +1,624 @@
+{
+  "complete": true,
+  "missing": [],
+  "start_diversity": {
+    "unique_encoded": 6,
+    "unique_physical": 6,
+    "unique_ram": 6
+  },
+  "evaluation_validation_start_ram_disjoint": true,
+  "frozen_rollouts": 324,
+  "continuations": 30,
+  "verified_continuation_transitions": 3000000,
+  "matched_vs_normal": [
+    {
+      "criterion": "anova",
+      "seed": 710603,
+      "mode": "normal",
+      "point": 100000,
+      "paired_starts": 6,
+      "mean_difference_vs_normal": 0.0
+    },
+    {
+      "criterion": "anova",
+      "seed": 710603,
+      "mode": "frozen",
+      "point": 100000,
+      "paired_starts": 6,
+      "mean_difference_vs_normal": -16.166666666666668
+    },
+    {
+      "criterion": "anova",
+      "seed": 710603,
+      "mode": "prune",
+      "point": 100000,
+      "paired_starts": 6,
+      "mean_difference_vs_normal": 62.666666666666664
+    },
+    {
+      "criterion": "anova",
+      "seed": 710603,
+      "mode": "prune_regrow",
+      "point": 100000,
+      "paired_starts": 6,
+      "mean_difference_vs_normal": -17.0
+    },
+    {
+      "criterion": "anova",
+      "seed": 710603,
+      "mode": "replace",
+      "point": 100000,
+      "paired_starts": 6,
+      "mean_difference_vs_normal": -17.166666666666668
+    },
+    {
+      "criterion": "anova",
+      "seed": 710607,
+      "mode": "normal",
+      "point": 100000,
+      "paired_starts": 6,
+      "mean_difference_vs_normal": 0.0
+    },
+    {
+      "criterion": "anova",
+      "seed": 710607,
+      "mode": "frozen",
+      "point": 100000,
+      "paired_starts": 6,
+      "mean_difference_vs_normal": -1.6666666666666667
+    },
+    {
+      "criterion": "anova",
+      "seed": 710607,
+      "mode": "prune",
+      "point": 100000,
+      "paired_starts": 6,
+      "mean_difference_vs_normal": -1.6666666666666667
+    },
+    {
+      "criterion": "anova",
+      "seed": 710607,
+      "mode": "prune_regrow",
+      "point": 100000,
+      "paired_starts": 6,
+      "mean_difference_vs_normal": 0.0
+    },
+    {
+      "criterion": "anova",
+      "seed": 710607,
+      "mode": "replace",
+      "point": 100000,
+      "paired_starts": 6,
+      "mean_difference_vs_normal": -22.666666666666668
+    },
+    {
+      "criterion": "anova",
+      "seed": 710610,
+      "mode": "normal",
+      "point": 100000,
+      "paired_starts": 6,
+      "mean_difference_vs_normal": 0.0
+    },
+    {
+      "criterion": "anova",
+      "seed": 710610,
+      "mode": "frozen",
+      "point": 100000,
+      "paired_starts": 6,
+      "mean_difference_vs_normal": -19.0
+    },
+    {
+      "criterion": "anova",
+      "seed": 710610,
+      "mode": "prune",
+      "point": 100000,
+      "paired_starts": 6,
+      "mean_difference_vs_normal": -19.0
+    },
+    {
+      "criterion": "anova",
+      "seed": 710610,
+      "mode": "prune_regrow",
+      "point": 100000,
+      "paired_starts": 6,
+      "mean_difference_vs_normal": 0.0
+    },
+    {
+      "criterion": "anova",
+      "seed": 710610,
+      "mode": "replace",
+      "point": 100000,
+      "paired_starts": 6,
+      "mean_difference_vs_normal": 72.0
+    },
+    {
+      "criterion": "historical_f",
+      "seed": 710603,
+      "mode": "normal",
+      "point": 100000,
+      "paired_starts": 6,
+      "mean_difference_vs_normal": 0.0
+    },
+    {
+      "criterion": "historical_f",
+      "seed": 710603,
+      "mode": "frozen",
+      "point": 100000,
+      "paired_starts": 6,
+      "mean_difference_vs_normal": -50.166666666666664
+    },
+    {
+      "criterion": "historical_f",
+      "seed": 710603,
+      "mode": "prune",
+      "point": 100000,
+      "paired_starts": 6,
+      "mean_difference_vs_normal": -49.0
+    },
+    {
+      "criterion": "historical_f",
+      "seed": 710603,
+      "mode": "prune_regrow",
+      "point": 100000,
+      "paired_starts": 6,
+      "mean_difference_vs_normal": -49.0
+    },
+    {
+      "criterion": "historical_f",
+      "seed": 710603,
+      "mode": "replace",
+      "point": 100000,
+      "paired_starts": 6,
+      "mean_difference_vs_normal": -42.333333333333336
+    },
+    {
+      "criterion": "historical_f",
+      "seed": 710607,
+      "mode": "normal",
+      "point": 100000,
+      "paired_starts": 6,
+      "mean_difference_vs_normal": 0.0
+    },
+    {
+      "criterion": "historical_f",
+      "seed": 710607,
+      "mode": "frozen",
+      "point": 100000,
+      "paired_starts": 6,
+      "mean_difference_vs_normal": 0.0
+    },
+    {
+      "criterion": "historical_f",
+      "seed": 710607,
+      "mode": "prune",
+      "point": 100000,
+      "paired_starts": 6,
+      "mean_difference_vs_normal": -60.833333333333336
+    },
+    {
+      "criterion": "historical_f",
+      "seed": 710607,
+      "mode": "prune_regrow",
+      "point": 100000,
+      "paired_starts": 6,
+      "mean_difference_vs_normal": -60.833333333333336
+    },
+    {
+      "criterion": "historical_f",
+      "seed": 710607,
+      "mode": "replace",
+      "point": 100000,
+      "paired_starts": 6,
+      "mean_difference_vs_normal": -52.666666666666664
+    },
+    {
+      "criterion": "historical_f",
+      "seed": 710610,
+      "mode": "normal",
+      "point": 100000,
+      "paired_starts": 6,
+      "mean_difference_vs_normal": 0.0
+    },
+    {
+      "criterion": "historical_f",
+      "seed": 710610,
+      "mode": "frozen",
+      "point": 100000,
+      "paired_starts": 6,
+      "mean_difference_vs_normal": 0.0
+    },
+    {
+      "criterion": "historical_f",
+      "seed": 710610,
+      "mode": "prune",
+      "point": 100000,
+      "paired_starts": 6,
+      "mean_difference_vs_normal": -2.8333333333333335
+    },
+    {
+      "criterion": "historical_f",
+      "seed": 710610,
+      "mode": "prune_regrow",
+      "point": 100000,
+      "paired_starts": 6,
+      "mean_difference_vs_normal": -2.8333333333333335
+    },
+    {
+      "criterion": "historical_f",
+      "seed": 710610,
+      "mode": "replace",
+      "point": 100000,
+      "paired_starts": 6,
+      "mean_difference_vs_normal": -2.6666666666666665
+    }
+  ],
+  "revision_operations": [
+    {
+      "criterion": "historical_f",
+      "seed": 710603,
+      "active_splits": 16,
+      "grows_total": 1,
+      "initial_splits": 15,
+      "leaves": 33,
+      "mode": "normal",
+      "prunes_total": 0,
+      "replacements_total": 0,
+      "structure_version": 1
+    },
+    {
+      "criterion": "historical_f",
+      "seed": 710603,
+      "active_splits": 15,
+      "grows_total": 0,
+      "initial_splits": 15,
+      "leaves": 31,
+      "mode": "frozen",
+      "prunes_total": 0,
+      "replacements_total": 0,
+      "structure_version": 0
+    },
+    {
+      "criterion": "historical_f",
+      "seed": 710603,
+      "active_splits": 10,
+      "grows_total": 0,
+      "initial_splits": 15,
+      "leaves": 22,
+      "mode": "prune",
+      "prunes_total": 4,
+      "replacements_total": 0,
+      "structure_version": 4
+    },
+    {
+      "criterion": "historical_f",
+      "seed": 710603,
+      "active_splits": 13,
+      "grows_total": 3,
+      "initial_splits": 15,
+      "leaves": 27,
+      "mode": "prune_regrow",
+      "prunes_total": 4,
+      "replacements_total": 0,
+      "structure_version": 7
+    },
+    {
+      "criterion": "historical_f",
+      "seed": 710603,
+      "active_splits": 15,
+      "grows_total": 1,
+      "initial_splits": 15,
+      "leaves": 30,
+      "mode": "replace",
+      "prunes_total": 0,
+      "replacements_total": 2,
+      "structure_version": 3
+    },
+    {
+      "criterion": "historical_f",
+      "seed": 710607,
+      "active_splits": 10,
+      "grows_total": 0,
+      "initial_splits": 10,
+      "leaves": 21,
+      "mode": "normal",
+      "prunes_total": 0,
+      "replacements_total": 0,
+      "structure_version": 0
+    },
+    {
+      "criterion": "historical_f",
+      "seed": 710607,
+      "active_splits": 10,
+      "grows_total": 0,
+      "initial_splits": 10,
+      "leaves": 21,
+      "mode": "frozen",
+      "prunes_total": 0,
+      "replacements_total": 0,
+      "structure_version": 0
+    },
+    {
+      "criterion": "historical_f",
+      "seed": 710607,
+      "active_splits": 6,
+      "grows_total": 0,
+      "initial_splits": 10,
+      "leaves": 13,
+      "mode": "prune",
+      "prunes_total": 4,
+      "replacements_total": 0,
+      "structure_version": 4
+    },
+    {
+      "criterion": "historical_f",
+      "seed": 710607,
+      "active_splits": 6,
+      "grows_total": 0,
+      "initial_splits": 10,
+      "leaves": 13,
+      "mode": "prune_regrow",
+      "prunes_total": 4,
+      "replacements_total": 0,
+      "structure_version": 4
+    },
+    {
+      "criterion": "historical_f",
+      "seed": 710607,
+      "active_splits": 12,
+      "grows_total": 1,
+      "initial_splits": 10,
+      "leaves": 24,
+      "mode": "replace",
+      "prunes_total": 0,
+      "replacements_total": 4,
+      "structure_version": 5
+    },
+    {
+      "criterion": "historical_f",
+      "seed": 710610,
+      "active_splits": 7,
+      "grows_total": 0,
+      "initial_splits": 7,
+      "leaves": 15,
+      "mode": "normal",
+      "prunes_total": 0,
+      "replacements_total": 0,
+      "structure_version": 0
+    },
+    {
+      "criterion": "historical_f",
+      "seed": 710610,
+      "active_splits": 7,
+      "grows_total": 0,
+      "initial_splits": 7,
+      "leaves": 15,
+      "mode": "frozen",
+      "prunes_total": 0,
+      "replacements_total": 0,
+      "structure_version": 0
+    },
+    {
+      "criterion": "historical_f",
+      "seed": 710610,
+      "active_splits": 2,
+      "grows_total": 0,
+      "initial_splits": 7,
+      "leaves": 7,
+      "mode": "prune",
+      "prunes_total": 4,
+      "replacements_total": 0,
+      "structure_version": 4
+    },
+    {
+      "criterion": "historical_f",
+      "seed": 710610,
+      "active_splits": 3,
+      "grows_total": 1,
+      "initial_splits": 7,
+      "leaves": 9,
+      "mode": "prune_regrow",
+      "prunes_total": 4,
+      "replacements_total": 0,
+      "structure_version": 5
+    },
+    {
+      "criterion": "historical_f",
+      "seed": 710610,
+      "active_splits": 13,
+      "grows_total": 6,
+      "initial_splits": 7,
+      "leaves": 26,
+      "mode": "replace",
+      "prunes_total": 0,
+      "replacements_total": 4,
+      "structure_version": 10
+    },
+    {
+      "criterion": "anova",
+      "seed": 710603,
+      "active_splits": 108,
+      "grows_total": 4,
+      "initial_splits": 104,
+      "leaves": 216,
+      "mode": "normal",
+      "prunes_total": 0,
+      "replacements_total": 0,
+      "structure_version": 4
+    },
+    {
+      "criterion": "anova",
+      "seed": 710603,
+      "active_splits": 104,
+      "grows_total": 0,
+      "initial_splits": 104,
+      "leaves": 208,
+      "mode": "frozen",
+      "prunes_total": 0,
+      "replacements_total": 0,
+      "structure_version": 0
+    },
+    {
+      "criterion": "anova",
+      "seed": 710603,
+      "active_splits": 96,
+      "grows_total": 0,
+      "initial_splits": 104,
+      "leaves": 192,
+      "mode": "prune",
+      "prunes_total": 4,
+      "replacements_total": 0,
+      "structure_version": 4
+    },
+    {
+      "criterion": "anova",
+      "seed": 710603,
+      "active_splits": 100,
+      "grows_total": 10,
+      "initial_splits": 104,
+      "leaves": 201,
+      "mode": "prune_regrow",
+      "prunes_total": 4,
+      "replacements_total": 0,
+      "structure_version": 14
+    },
+    {
+      "criterion": "anova",
+      "seed": 710603,
+      "active_splits": 93,
+      "grows_total": 18,
+      "initial_splits": 104,
+      "leaves": 188,
+      "mode": "replace",
+      "prunes_total": 0,
+      "replacements_total": 2,
+      "structure_version": 20
+    },
+    {
+      "criterion": "anova",
+      "seed": 710607,
+      "active_splits": 117,
+      "grows_total": 4,
+      "initial_splits": 113,
+      "leaves": 237,
+      "mode": "normal",
+      "prunes_total": 0,
+      "replacements_total": 0,
+      "structure_version": 4
+    },
+    {
+      "criterion": "anova",
+      "seed": 710607,
+      "active_splits": 113,
+      "grows_total": 0,
+      "initial_splits": 113,
+      "leaves": 229,
+      "mode": "frozen",
+      "prunes_total": 0,
+      "replacements_total": 0,
+      "structure_version": 0
+    },
+    {
+      "criterion": "anova",
+      "seed": 710607,
+      "active_splits": 113,
+      "grows_total": 0,
+      "initial_splits": 113,
+      "leaves": 229,
+      "mode": "prune",
+      "prunes_total": 0,
+      "replacements_total": 0,
+      "structure_version": 0
+    },
+    {
+      "criterion": "anova",
+      "seed": 710607,
+      "active_splits": 117,
+      "grows_total": 4,
+      "initial_splits": 113,
+      "leaves": 237,
+      "mode": "prune_regrow",
+      "prunes_total": 0,
+      "replacements_total": 0,
+      "structure_version": 4
+    },
+    {
+      "criterion": "anova",
+      "seed": 710607,
+      "active_splits": 104,
+      "grows_total": 7,
+      "initial_splits": 113,
+      "leaves": 211,
+      "mode": "replace",
+      "prunes_total": 0,
+      "replacements_total": 2,
+      "structure_version": 9
+    },
+    {
+      "criterion": "anova",
+      "seed": 710610,
+      "active_splits": 99,
+      "grows_total": 5,
+      "initial_splits": 94,
+      "leaves": 195,
+      "mode": "normal",
+      "prunes_total": 0,
+      "replacements_total": 0,
+      "structure_version": 5
+    },
+    {
+      "criterion": "anova",
+      "seed": 710610,
+      "active_splits": 94,
+      "grows_total": 0,
+      "initial_splits": 94,
+      "leaves": 185,
+      "mode": "frozen",
+      "prunes_total": 0,
+      "replacements_total": 0,
+      "structure_version": 0
+    },
+    {
+      "criterion": "anova",
+      "seed": 710610,
+      "active_splits": 94,
+      "grows_total": 0,
+      "initial_splits": 94,
+      "leaves": 185,
+      "mode": "prune",
+      "prunes_total": 0,
+      "replacements_total": 0,
+      "structure_version": 0
+    },
+    {
+      "criterion": "anova",
+      "seed": 710610,
+      "active_splits": 99,
+      "grows_total": 5,
+      "initial_splits": 94,
+      "leaves": 195,
+      "mode": "prune_regrow",
+      "prunes_total": 0,
+      "replacements_total": 0,
+      "structure_version": 5
+    },
+    {
+      "criterion": "anova",
+      "seed": 710610,
+      "active_splits": 90,
+      "grows_total": 8,
+      "initial_splits": 94,
+      "leaves": 182,
+      "mode": "replace",
+      "prunes_total": 0,
+      "replacements_total": 2,
+      "structure_version": 10
+    }
+  ],
+  "limitations": [
+    "Diagnostic snapshot continuations, not complete-game benchmark scores.",
+    "Three selected seed case studies do not estimate population superiority.",
+    "Block-bootstrap gates are exploratory and repeated selection is not calibrated.",
+    "Bellman loss improvements do not guarantee return improvement.",
+    "No reserved test executed."
+  ]
+}

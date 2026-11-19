@@ -1,0 +1,13 @@
+criterion,mode,control,seeds,mean_difference,seed_wins,seed_ties,seed_losses
+historical_f,slow_td,baseline,5,1.6833333333333351,3,1,1
+historical_f,double_td,baseline,5,-23.3,2,0,3
+historical_f,stable_td,slow_td,5,-15.116666666666669,2,0,3
+historical_f,guarded,baseline,5,-17.633333333333333,1,1,3
+historical_f,stable_guarded,stable_td,5,-0.16666666666666644,1,3,1
+historical_f,refit_only,baseline,5,-10.683333333333334,1,0,4
+anova,slow_td,baseline,5,10.549999999999997,3,0,2
+anova,double_td,baseline,5,-22.21666666666667,0,0,5
+anova,stable_td,slow_td,5,-2.6833333333333327,2,1,2
+anova,guarded,baseline,5,-1.1,2,0,3
+anova,stable_guarded,stable_td,5,4.8833333333333355,2,2,1
+anova,refit_only,baseline,5,34.98333333333333,3,0,2
