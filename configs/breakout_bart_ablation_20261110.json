@@ -1,0 +1,16 @@
+{
+  "training_seeds": [731101, 731102, 731103],
+  "fixed_fit_seeds": [710602, 710608],
+  "fixed_fit_chains": 4,
+  "intermediate_seeds": [732001, 732002],
+  "development_seeds": [732101, 732102, 732103, 732104, 732105],
+  "checkpoints": [25000, 50000, 100000],
+  "training_seconds": 14400,
+  "evaluation_seconds": 1200,
+  "variants": {
+    "control": {},
+    "warm_start": {"estimator": {"warm_start": true}},
+    "interval_1024": {"learning": {"fit_interval": 1024}},
+    "warmup_4096": {"learning": {"warmup_interactions": 4096}}
+  }
+}

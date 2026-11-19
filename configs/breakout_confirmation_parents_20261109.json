@@ -1,0 +1,183 @@
+{
+  "bart_review": null,
+  "cache_bytes": 1048576,
+  "cells": [
+    {
+      "game": "Breakout",
+      "learner": "corrected_common",
+      "pipeline": "ocatari",
+      "seed": 721101
+    },
+    {
+      "game": "Breakout",
+      "learner": "corrected_common",
+      "pipeline": "ocatari",
+      "seed": 721102
+    },
+    {
+      "game": "Breakout",
+      "learner": "corrected_common",
+      "pipeline": "ocatari",
+      "seed": 721103
+    },
+    {
+      "game": "Breakout",
+      "learner": "corrected_common",
+      "pipeline": "ocatari",
+      "seed": 721104
+    },
+    {
+      "game": "Breakout",
+      "learner": "corrected_common",
+      "pipeline": "ocatari",
+      "seed": 721105
+    }
+  ],
+  "exploration": {
+    "epsilon_decay_steps": 50000,
+    "epsilon_init": 1,
+    "epsilon_min": 0.1
+  },
+  "games": {
+    "Breakout": {
+      "actions": [
+        "NOOP",
+        "FIRE",
+        "RIGHT",
+        "LEFT"
+      ],
+      "auc_interval": [
+        0,
+        1000000
+      ],
+      "budgets": {
+        "evaluation_seconds_per_episode": 2400,
+        "fit_margin_seconds": 10,
+        "training_seconds_per_cell": 172800
+      },
+      "checkpoint_interval": 25000,
+      "contrasts": [],
+      "environment": {
+        "contract": "atari_common_v3",
+        "game": "Breakout",
+        "horizon": 27000,
+        "pipeline": "ocatari",
+        "rom_sha256": "376323f051c3c373c887fd83abead39d87d844ff283d435f4addbfc1710c6fd5",
+        "spatial_tolerance": 4,
+        "temporal_tolerance": 0
+      },
+      "evaluation": {
+        "final_development": {
+          "checkpoints": [
+            1000000
+          ],
+          "horizon": 3000,
+          "seeds": [
+            732101,
+            732102,
+            732103,
+            732104,
+            732105
+          ]
+        },
+        "intermediate": {
+          "checkpoints": [
+            0,
+            500000,
+            1000000
+          ],
+          "horizon": 3000,
+          "seeds": [
+            731101,
+            731102
+          ]
+        },
+        "reserved_test": {
+          "checkpoints": [],
+          "horizon": 27000,
+          "seeds": [
+            810101,
+            810102,
+            810103,
+            810104,
+            810105,
+            810106,
+            810107,
+            810108,
+            810109,
+            810110,
+            810111,
+            810112,
+            810113,
+            810114,
+            810115,
+            810116,
+            810117,
+            810118,
+            810119,
+            810120
+          ]
+        }
+      },
+      "max_decisions": 1000000,
+      "milestones": [
+        500000,
+        1000000
+      ],
+      "primary_metric": "final_development_mean_raw_return",
+      "relations": {
+        "catalog_hash": "d89f5773ad0bc3aae285478ca4b4cb156099bd2adeff32d1048052ceab89ab1a",
+        "contact": "bbox_overlap_or_touch_both_axes_not_emulator_collision",
+        "coordinates": "pixel_centers_top_left_x_right_y_down",
+        "history": "previous_decision_no_reward_reset; unknown_previous_presence_unobserved",
+        "identity": "detector_slots; no physical enemy/projectile velocity claim",
+        "movement": [
+          "player",
+          "ball"
+        ],
+        "objects": [
+          "player",
+          "ball"
+        ],
+        "relation_schema": "breakout_primary_v1",
+        "relations": 11,
+        "spatial_tolerance": 4,
+        "temporal_tolerance": 0
+      },
+      "training_seeds": [
+        721101,
+        721102,
+        721103,
+        721104,
+        721105
+      ]
+    }
+  },
+  "learners": {
+    "corrected_common": {
+      "best_literal_criteria": "p-value",
+      "eta_q": 0.025,
+      "inherit_q_values": true,
+      "max_depth": 4,
+      "min_sample_size": 128,
+      "significance_level": 0.0001,
+      "split_test": "anova"
+    }
+  },
+  "learning": {
+    "batch_size_per_action": 128,
+    "bootstrap_on_truncation": true,
+    "fit_interval": 512,
+    "gamma": 0.99,
+    "replay_capacity": 50000,
+    "warmup_interactions": 512
+  },
+  "level": "long",
+  "name": "breakout_confirmation_parents_20261109",
+  "primary_checkpoint": "final",
+  "resources": {
+    "cpus_per_cell": 2,
+    "memory_gib_per_cell": 20
+  },
+  "schema": "atari_comparison_v3"
+}

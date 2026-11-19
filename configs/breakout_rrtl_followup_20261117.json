@@ -1,0 +1,82 @@
+{
+  "name": "breakout_rrtl_followup_20261117",
+  "modes": [
+    "baseline",
+    "slow_td",
+    "frozen_td",
+    "frozen_slow_td",
+    "refit_only",
+    "refit_damped",
+    "guarded"
+  ],
+  "seeds": [
+    721101,
+    721102,
+    721103,
+    721104,
+    721105
+  ],
+  "seed_roles": {
+    "721101": "development",
+    "721102": "development",
+    "721103": "development",
+    "721104": "development",
+    "721105": "development"
+  },
+  "checkpoints": [
+    500000
+  ],
+  "parent_counter": 500000,
+  "continuation_decisions": 500000,
+  "evaluation_interval": 25000,
+  "save_interval": 25000,
+  "evaluation_horizon": 3000,
+  "starts": 12,
+  "probe_starts": 6,
+  "return_starts": 6,
+  "return_horizon": 1500,
+  "start_seed": 4813711,
+  "validation_start_seed": 4823711,
+  "return_start_seed": 4833711,
+  "evaluation_seed": 4843711,
+  "probe_seed": 4853711,
+  "return_evaluation_seed": 4863711,
+  "return_gate_seed": 4873711,
+  "probe_blocks": 8,
+  "probe_horizon": 128,
+  "revision": {
+    "mode": "normal",
+    "buffer_capacity": 8192,
+    "min_train": 128,
+    "min_validation": 64,
+    "min_validation_blocks": 4,
+    "min_child": 16,
+    "max_candidates": 2,
+    "replacement_depth": 2,
+    "cooldown": 10000,
+    "noninferiority_margin": 0.0025,
+    "replacement_gain": 0.001,
+    "bootstrap_samples": 400,
+    "confidence": 0.95,
+    "seed": 3072711
+  },
+  "schedule": {
+    "baseline": 500000,
+    "slow_td": 100000,
+    "frozen_td": 100000,
+    "frozen_slow_td": 100000,
+    "refit_only": 500000,
+    "refit_damped": 500000,
+    "guarded": 100000
+  },
+  "refit_fraction": 0.25,
+  "double_lag": 5000,
+  "prune_points": [
+    0,
+    5000,
+    10000,
+    25000
+  ],
+  "serve_window": 32,
+  "final_window": 100000
+}

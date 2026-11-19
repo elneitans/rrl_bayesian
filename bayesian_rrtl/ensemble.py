@@ -1,6 +1,6 @@
 """Gaussian BART on a fixed relational batch: sum trees, average posterior draws."""
 
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 import hashlib
 import time
 
@@ -13,6 +13,48 @@ from .proposals import GrowPruneKernel, RevisionKernel
 from .rules import RuleCatalog
 from .sampler import TreeUpdate, update_tree
 from .tree import Tree
+
+
+class StructureLimitError(ValueError):
+    """The new batch requires more support repairs than the allowed distance."""
+
+    def __init__(self, tree_index, required_distance, limit):
+        self.tree_index = tree_index
+        self.required_distance = required_distance
+        self.limit = limit
+        super().__init__(f'Tree {tree_index} requires distance {required_distance}, limit {limit}')
+
+
+def repair_tree_support(tree, batch, rules, prior):
+    """Prune unsupported subtrees, preserving every supported ancestral split."""
+    def visit(node, rows, depth):
+        if node.is_leaf:
+            return node
+        eligible = prior.eligible(rules, batch, rows, depth)
+        if node.rule not in eligible.get(node.rule.relation, ()):
+            return Tree(float(node.predict(batch)[rows].mean()))
+        route = node.rule.route(batch)[rows]
+        return Tree(rule=node.rule, true_child=visit(node.true_child, rows[route], depth + 1),
+                    false_child=visit(node.false_child, rows[~route], depth + 1))
+
+    return visit(tree, np.arange(len(batch)), 0)
+
+
+class BoundedStructureKernel:
+    """Reject proposals outside a fixed neighbourhood of the inherited tree."""
+
+    def __init__(self, kernel, anchor, limit):
+        self.kernel, self.anchor, self.limit = kernel, anchor, limit
+        self.rules = kernel.rules
+        self.distance_rejections = 0
+        self.max_distance = 0
+
+    def propose(self, tree, rng):
+        proposal = self.kernel.propose(tree, rng)
+        if not proposal.impossible and proposal.candidate.structure_distance(self.anchor) > self.limit:
+            self.distance_rejections += 1
+            return replace(proposal, candidate=tree, impossible=True)
+        return proposal
 
 
 class PredictionCache:
@@ -82,6 +124,11 @@ class BARTPosterior:
     targets_outside_scale: int
     elapsed_seconds: float
     max_cache_error: float | None
+    reused_trees: int | None = None
+    structure_limit: int | None = None
+    structure_distances: tuple[int, ...] | None = None
+    support_repairs: tuple[int, ...] | None = None
+    distance_rejections: int | None = None
 
     @property
     def m(self):
@@ -110,6 +157,13 @@ class BARTPosterior:
                   'retained': len(self.draws), 'targets_outside_scale': self.targets_outside_scale,
                   'elapsed_seconds': self.elapsed_seconds, 'max_cache_error': self.max_cache_error,
                   'moves': {}}
+        if self.reused_trees is not None:
+            result.update(reused_trees=self.reused_trees, reset_trees=self.m-self.reused_trees)
+        if self.structure_limit is not None:
+            result.update(structure_limit=self.structure_limit,
+                          max_structure_distance_per_tree=self.structure_distances,
+                          support_repairs_per_tree=self.support_repairs,
+                          distance_rejections=self.distance_rejections)
         for move in ('grow', 'prune', 'change', 'swap'):
             updates = [u for step in self.trace for u in step.updates if u.move == move]
             possible = sum(not u.impossible for u in updates)
@@ -130,14 +184,19 @@ class BARTRegressor:
         self.m, self.k = m, k
         self.tree_prior, self.noise_prior, self.scale = tree_prior, noise_prior, scale
 
-    def sweep(self, cache, sigma2, y_normalized, kernel, rng, *, fixed_sigma2=None, verify_cache=False):
+    def sweep(self, cache, sigma2, y_normalized, kernel, rng, *, fixed_sigma2=None, verify_cache=False,
+              bounded_kernels=None):
         updates = []
         max_error = 0.0
         for j in range(self.m):
             residuals = cache.partial_residuals(y_normalized, j)
+            active_kernel = kernel if bounded_kernels is None else bounded_kernels[j]
             tree, update = update_tree(cache.trees[j], sigma2, cache.batch, residuals,
-                                       kernel, rng, self.tau2, self.tree_prior)
+                                       active_kernel, rng, self.tau2, self.tree_prior)
             cache.replace(j, tree)
+            if bounded_kernels is not None:
+                distance = tree.structure_distance(active_kernel.anchor)
+                active_kernel.max_distance = max(active_kernel.max_distance, distance)
             updates.append(update)
             if verify_cache:
                 max_error = max(max_error, cache.verify())
@@ -149,15 +208,24 @@ class BARTRegressor:
                                    len(leaves), max(map(len, leaves)))
         return float(sigma2), diagnostic, max_error
 
-    def fit(self, batch, y, rng, *, burn_in=500, draws=1000, fixed_sigma2=None, verify_cache=False):
-        """Restart independent MCMC on fixed X/y. Inputs/predictions use original units.
+    def fit(self, batch, y, rng, *, burn_in=500, draws=1000, fixed_sigma2=None,
+            verify_cache=False, initial_trees=None, max_structure_distance=None):
+        """Run MCMC on fixed X/y, optionally initializing from a previous draw.
 
         fixed_sigma2 is in normalized units and is intended for numerical checks.
+        initial_trees use normalized leaf values. Unsupported trees start from a stump.
+        With a structure limit, support pruning consumes the same distance budget.
+        Every sampled structure stays in that fixed neighbourhood of the inherited tree.
         verify_cache recomputes predictions after EACH tree update; leave it off
         for normal inference. No thinning or sampling of new minibatches occurs.
         """
         if type(burn_in) is not int or burn_in < 0 or type(draws) is not int or draws < 1:
             raise ValueError('Require nonnegative burn_in and positive draws')
+        if max_structure_distance is not None:
+            if type(max_structure_distance) is not int or max_structure_distance < 0:
+                raise ValueError('Structure distance must be a nonnegative integer')
+            if initial_trees is None:
+                raise ValueError('A structure limit requires inherited trees')
         y = residual_vector(y).copy()
         if not len(y) or len(y) != len(batch):
             raise ValueError('fit requires nonempty aligned X and y')
@@ -173,19 +241,51 @@ class BARTRegressor:
         kernel = (GrowPruneKernel if self.kernel == "grow_prune" else RevisionKernel)(batch, rules, self.tree_prior)
         data_hash = hashlib.sha256(batch.catalog_hash.encode() + batch.values.tobytes()
                                    + batch.observed.tobytes() + y.tobytes()).hexdigest()
-        cache = PredictionCache([Tree(float(normalized.mean() / self.m)) for _ in range(self.m)], batch)
+        stump = Tree(float(normalized.mean() / self.m))
+        trees = [stump] * self.m
+        reused = None
+        bounded_kernels = None
+        repairs = None
+        if initial_trees is not None:
+            initial_trees = tuple(initial_trees)
+            if len(initial_trees) != self.m or not all(isinstance(tree, Tree) for tree in initial_trees):
+                raise ValueError('Expected one initial Tree per ensemble component')
+            reused = 0
+            for i, tree in enumerate(initial_trees):
+                if max_structure_distance is not None:
+                    trees[i] = repair_tree_support(tree, batch, rules, self.tree_prior)
+                    distance = trees[i].structure_distance(tree)
+                    if distance > max_structure_distance:
+                        raise StructureLimitError(i, distance, max_structure_distance)
+                    reused += 1
+                elif np.isfinite(self.tree_prior.log_prior(tree, batch, rules)):
+                    trees[i] = tree
+                    reused += 1
+            if max_structure_distance is not None:
+                bounded_kernels = [BoundedStructureKernel(kernel, tree, max_structure_distance)
+                                   for tree in initial_trees]
+                repairs = tuple(tree.structure_distance(anchor) for tree, anchor in zip(trees, initial_trees))
+                for bounded, distance in zip(bounded_kernels, repairs):
+                    bounded.max_distance = distance
+        cache = PredictionCache(trees, batch)
         sigma2 = self.noise_prior.lambda_ if fixed_sigma2 is None else fixed_sigma2
         retained, trace = [], []
         max_cache_error = 0.0 if verify_cache else None
         for sweep in range(burn_in + draws):
             sigma2, diagnostic, error = self.sweep(cache, sigma2, normalized, kernel, rng,
-                                                    fixed_sigma2=fixed_sigma2, verify_cache=verify_cache)
+                                                    fixed_sigma2=fixed_sigma2, verify_cache=verify_cache,
+                                                    bounded_kernels=bounded_kernels)
             trace.append(diagnostic)
             if verify_cache:
                 max_cache_error = max(max_cache_error, error)
             if sweep >= burn_in:
                 retained.append(EnsembleDraw(tuple(cache.trees), sigma2))
-        return BARTPosterior(tuple(retained), batch.catalog_hash, data_hash, self.scale,
+        posterior = BARTPosterior(tuple(retained), batch.catalog_hash, data_hash, self.scale,
                              self.tree_prior, self.noise_prior, self.k, burn_in, fixed_sigma2,
                              tuple(trace), int(np.count_nonzero((y < self.scale.lower) | (y > self.scale.upper))),
-                             time.perf_counter() - started, max_cache_error)
+                             time.perf_counter() - started, max_cache_error, reused)
+        if bounded_kernels is not None:
+            posterior = replace(posterior, structure_limit=max_structure_distance,
+                structure_distances=tuple(k.max_distance for k in bounded_kernels),
+                support_repairs=repairs, distance_rejections=sum(k.distance_rejections for k in bounded_kernels))
+        return posterior

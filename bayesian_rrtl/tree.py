@@ -34,6 +34,18 @@ class Tree:
             return ()
         return (self.rule, self.true_child.structure_key(), self.false_child.structure_key())
 
+    def structure_distance(self, other):
+        """Number of split rules added, removed or changed at corresponding paths."""
+        if self.is_leaf:
+            if other.is_leaf:
+                return 0
+            return 1 + self.structure_distance(other.true_child) + self.structure_distance(other.false_child)
+        if other.is_leaf:
+            return other.structure_distance(self)
+        return (int(self.rule != other.rule)
+                + self.true_child.structure_distance(other.true_child)
+                + self.false_child.structure_distance(other.false_child))
+
     def replace(self, path, subtree):
         """Return a new tree, leaving this tree and all posterior draws untouched."""
         if not path:

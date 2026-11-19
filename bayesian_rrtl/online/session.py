@@ -67,8 +67,7 @@ class OnlineSession:
     def next_fit_due(self):
         if not LEARNERS[self.learner].batch:
             return False
-        n = self.interactions+1
-        return n >= self.learning.warmup_interactions and n-self.agent.last_fit_step >= self.learning.fit_interval
+        return self.agent.fit_due(self.interactions+1)
 
     def _reset(self):
         reserved = set(self.learning.validation_seeds+self.learning.test_seeds)
@@ -212,5 +211,11 @@ class OnlineSession:
                     if batch is not None:
                         batch.values.flags.writeable = batch.observed.flags.writeable = False
             session.agent.cache.clear()
+        else:
+            from .learners import baseline_config
+            from bayesian_rrtl.baseline_checkpoint import _validate_trees
+            if session.agent.config != baseline_config(session.learning, cell['estimator']):
+                raise ValueError('Baseline checkpoint split_test/config mismatch')
+            _validate_trees(session.agent)
         environment.restore(payload['environment'])
         return session

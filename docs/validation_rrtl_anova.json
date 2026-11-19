@@ -1,0 +1,137 @@
+{
+  "schema": "rrtl_anova_validation_v1",
+  "date": "2026-11-01",
+  "default_split_test": "historical_f",
+  "experimental_split_test": "anova",
+  "historical_tree_sha256": "5e6fb6015eddb875dc3a38a1981e0da1502fa2bcdeb1db59aba362635eab1a60",
+  "historical_tree_unchanged": true,
+  "pre_change_sources_verified": 94,
+  "historical_snapshot": "historical/pre_rrtl_anova_20261101_code",
+  "runtime": {
+    "python": "3.11.7",
+    "platform": "darwin",
+    "machine": "arm64",
+    "numpy": "1.26.4",
+    "scipy": "1.12.0",
+    "gymnasium": "1.1.1",
+    "real_ocatari_available": false
+  },
+  "source_hashes": {
+    "bayesian_rrtl/baseline_anova.py": "9fecf33aeb156d9b9c58f8c327c73bb56a7edb2a41985e5ef407527714cba5cd",
+    "bayesian_rrtl/baseline.py": "b34c3c5ed8471c9477b4d1169ec31c00cfce8515fdf9dc4da6b9b8db93f59a1e",
+    "bayesian_rrtl/baseline_adapter.py": "9b7a992d16c0dca1c1fc3ab3a89fc7b8c316b5766a2ee3f328c41c028d7d9d00",
+    "bayesian_rrtl/config.py": "de9178914683e5e3d3a6a3b8f80d21a21ee8cc652e7e73ab809bac437193d433",
+    "bayesian_rrtl/baseline_checkpoint.py": "f7d3210ca6bcc90bf84816f7424681c7e68ae63ee6caa950d1c5253543e72b57",
+    "bayesian_rrtl/online/session.py": "efc4a8c5dbbf564e69a9c8ec65bc4929679334544af616e5f20b004db0f18290",
+    "bayesian_rrtl/online/learners.py": "74e1928d5e7602b05f6e492715d849dccb9f0342f97c0aeb310d62f9a66e23e2",
+    "experiments/report_rrtl_split_tests.py": "5d19e54be06c6a9c1d6402138012d1befec1a3f3416a14197deac80b6cdf76aa",
+    "tests/test_baseline_anova.py": "01b4ce85abbd5530f3afc54f7d6e1691b82353dfbae83ac9ad0cb30ba7d44ddd",
+    "train_atari.py": "20e73109a003fe2572172a7bf697cf9fd1b9e9c3f44c31b64ad33da463d2dbd9"
+  },
+  "tests": [
+    {
+      "report": "results/rrtl_anova_validation_20261101/pytest.xml",
+      "tests": 258,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 48.398
+    },
+    {
+      "report": "results/rrtl_anova_validation_20261101/anova_pytest.xml",
+      "tests": 31,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 7.667
+    }
+  ],
+  "test_scope_note": "258 passed in the broad suite, 20 Atari/OCAtari cases deselected. Final targeted ANOVA suite: 31 passed, overlapping the broad suite; its pair integration additionally covered all three synthetic game drivers and long-authorization guards.",
+  "ruff": "passed",
+  "git_diff_check": "passed",
+  "coverage": [
+    "scipy.stats.f_oneway reference, 2/3 groups, empty/unequal groups",
+    "degrees of freedom, zero total variance, zero within variance, equal means",
+    "nonfinite/negative/inconsistent statistics; numeric overflow and invalid survival output",
+    "minimum-p selection and inclusive significance threshold",
+    "comparative/logical branches, strict minimum, max depth, missing fallback, Q inheritance",
+    "descendants remain ANOVA",
+    "statistics from updated Q, not TD targets",
+    "common and online checkpoint contracts reject criterion switches",
+    "exact fresh-process checkpoint continuation",
+    "omitted option equals explicit historical_f, historical default regression",
+    "three-game paired common runner: 6 synthetic cells with pause/resume, evaluation, growth/time metrics",
+    "paired protocols reject hidden parameter differences",
+    "long configs reject training/authorization without review and compatible Linux costs"
+  ],
+  "configurations": [
+    {
+      "path": "configs/rrtl_split_tests_long_review_anova.json",
+      "sha256": "8318fbec281c1038b8e264ef752c6bf639df7fee16b86dbbee343838dd25e549"
+    },
+    {
+      "path": "configs/rrtl_split_tests_long_review_historical_f.json",
+      "sha256": "238e608593a29fb70e30d09f4e73f6360d11432aa7e328759b99335bd9c86b82"
+    },
+    {
+      "path": "configs/rrtl_split_tests_smoke_anova.json",
+      "sha256": "2834bbf4b402799ac5bf14ebfd63dbcda33c9898edff6db2e64cc970926f88cc"
+    },
+    {
+      "path": "configs/rrtl_split_tests_smoke_historical_f.json",
+      "sha256": "843cfa8ca9697d72ef0824e0f6fc29f97515df2644c5d964091556917ecb023e"
+    }
+  ],
+  "workload": [
+    {
+      "config": "configs/rrtl_split_tests_long_review_anova.json",
+      "cost_estimates": 0,
+      "development_episodes": 330,
+      "pending": [
+        "explicit game milestones"
+      ],
+      "planned_decisions": 30000000,
+      "test_executed": 0,
+      "trainings": 15
+    },
+    {
+      "config": "configs/rrtl_split_tests_long_review_historical_f.json",
+      "cost_estimates": 0,
+      "development_episodes": 330,
+      "pending": [
+        "explicit game milestones"
+      ],
+      "planned_decisions": 30000000,
+      "test_executed": 0,
+      "trainings": 15
+    },
+    {
+      "config": "configs/rrtl_split_tests_smoke_anova.json",
+      "cost_estimates": 0,
+      "development_episodes": 12,
+      "pending": [
+        "explicit game milestones"
+      ],
+      "planned_decisions": 192,
+      "test_executed": 0,
+      "trainings": 3
+    },
+    {
+      "config": "configs/rrtl_split_tests_smoke_historical_f.json",
+      "cost_estimates": 0,
+      "development_episodes": 12,
+      "pending": [
+        "explicit game milestones"
+      ],
+      "planned_decisions": 192,
+      "test_executed": 0,
+      "trainings": 3
+    }
+  ],
+  "long_runs_authorized": false,
+  "long_runs_executed": false,
+  "slurm_submitted": false,
+  "reserved_test_real_executed": false,
+  "real_atari_runs_executed": false,
+  "statistical_limitation": "Experimental growth criterion. Temporal dependence, selection across relations and repeated checks prevent assuming p-values control false-positive rates. No efficacy conclusion from synthetic tests."
+}

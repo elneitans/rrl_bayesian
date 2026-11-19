@@ -1,7 +1,7 @@
 """Environment-free TD/F-test adapter; delegates learning to corrected H0.
 
 Only this boundary normalizes boolean facts. Missing literals retain Node's
-internal-node Q fallback; no missing branch or new splitting formula is added.
+internal-node Q fallback. ANOVA growth is explicit; historical F is the default.
 Episode collection, scheduled exploration and checkpoint files belong to the
 subsequent comparison-plan stages.
 """
@@ -16,6 +16,7 @@ from types import SimpleNamespace
 import numpy as np
 
 from .baseline import CorrectedNode, CorrectedRRLAgent
+from .baseline_anova import ANOVANode
 from .encoding import CATEGORIES, RelationKey, RelationalEncoder
 from .targets import bootstrap_mask
 from preprocessing import Fact
@@ -35,6 +36,7 @@ class BaselineLearnerConfig:
     inherit_q_values: bool = True
     bootstrap_on_truncation: bool = True
     seed: int = 1
+    split_test: str = 'historical_f'
 
     def __post_init__(self):
         if not 0 < self.eta_q <= 1 or not 0 <= self.gamma < 1:
@@ -47,6 +49,10 @@ class BaselineLearnerConfig:
             raise ValueError('Invalid seed or significance level')
         if self.best_literal_criteria not in ('p-value', 'f-ratio', 'max-q-value'):
             raise ValueError('Invalid literal criterion')
+        if self.split_test not in ('historical_f', 'anova'):
+            raise ValueError('Invalid split_test: expected historical_f or anova')
+        if self.split_test == 'anova' and self.best_literal_criteria != 'p-value':
+            raise ValueError('ANOVA split_test requires p-value candidate selection')
         if any(type(getattr(self, name)) is not bool for name in
                ('inherit_q_values', 'bootstrap_on_truncation')):
             raise ValueError('Inheritance and bootstrap options must be boolean')
@@ -93,7 +99,8 @@ class RelationalBaselineAgent:
         lookup = [(k.name, k.obj1, k.obj2) for k in self.encoder.catalog]
         if len(set(lookup)) != len(lookup):
             raise ValueError('Input catalog is ambiguous for historical Node lookup')
-        roots = {action: CorrectedNode(root_action=action, refinements=list(self.literals),
+        node_type = ANOVANode if config.split_test == 'anova' else CorrectedNode
+        roots = {action: node_type(root_action=action, refinements=list(self.literals),
                  max_depth=config.max_depth, min_sample_size=config.min_sample_size,
                  significance_level=config.significance_level,
                  best_literal_criteria=config.best_literal_criteria, valid_actions=list(self.actions))

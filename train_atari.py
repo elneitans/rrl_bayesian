@@ -119,7 +119,7 @@ def run_bayesian(env_config, config, output, steps, eval_split, resume=None, env
         env.close()
 
 
-def run_corrected(env_config, config, output, steps, eval_split):
+def run_corrected(env_config, config, output, steps, eval_split, *, split_test='historical_f'):
     if get_game_spec(env_config.game, env_config.extractor).backend_factory is not None:
         raise ValueError('corrected supports only legacy visual environments, not OCAtari')
     from bayesian_rrtl.baseline import CorrectedRRLAgent
@@ -132,7 +132,7 @@ def run_corrected(env_config, config, output, steps, eval_split):
         resample_repeated_actions=config.resample_repeated_actions, action_buffer_capacity=config.action_buffer_capacity,
         include_incomplete_states=env_config.include_incomplete_states, frameskip=env_config.frameskip,
         repeat_action_probability=env_config.repeat_action_probability, max_episode_steps=env_config.max_episode_steps,
-        validation_seeds=config.validation_seeds, test_seeds=config.test_seeds)
+        validation_seeds=config.validation_seeds, test_seeds=config.test_seeds, split_test=split_test)
     agent = CorrectedRRLAgent(baseline_config, output)
     # H0 uses child 1 for environments, H5 uses child 0. Pair the episode-seed stream explicitly.
     agent.environment_rng = np.random.default_rng(np.random.SeedSequence(config.seed).spawn(3 + len(config.actions))[0])
@@ -152,7 +152,7 @@ def run_corrected(env_config, config, output, steps, eval_split):
     rows = list(csv.DictReader((output / 'train.csv').open()))
     if len(rows) != steps:
         raise ValueError('Baseline interaction count mismatch')
-    return {'variant': 'rrtl_corrected', 'interactions': steps, 'additional_interactions': steps,
+    return {'variant': 'rrtl_corrected', 'split_test': split_test, 'interactions': steps, 'additional_interactions': steps,
             'training_seconds': seconds, 'profile': profile_summary(profiler), 'evaluation': evaluation,
             'training_seeds': agent.training_seeds, 'completed_episodes': summary['completed_episodes'],
             'finite_data': bool(np.isfinite([[float(r[k]) for k in ('Reward', 'Raw reward', 'New Q', 'TD target')]
@@ -166,11 +166,15 @@ def main():
     source.add_argument('--resume', type=Path)
     source.add_argument('--checkpoint', type=Path, help='Evaluate Bayesian checkpoint without training')
     parser.add_argument('--variant', choices=('bayesian', 'corrected'), default='bayesian')
+    parser.add_argument('--split-test', choices=('historical_f', 'anova'), default='historical_f',
+                        help='Experimental baseline growth criterion; corrected variant only')
     parser.add_argument('--output', type=Path)
     parser.add_argument('--steps', type=int)
     parser.add_argument('--seed', type=int)
     parser.add_argument('--eval-split', choices=('validation', 'test', 'none'), default='validation')
     args = parser.parse_args()
+    if args.variant != 'corrected' and args.split_test != 'historical_f':
+        parser.error('--split-test anova requires --variant corrected')
     if args.resume or args.checkpoint:
         if args.variant != 'bayesian' or args.seed is not None:
             parser.error('Checkpoint mode requires bayesian variant and its saved seed')
@@ -223,6 +227,8 @@ def main():
                 if env.encoder().catalog_hash != saved_agent.encoder.catalog_hash:
                     raise ValueError('Checkpoint/environment catalog mismatch')
         info = manifest(env_config, config, args.variant, env)
+        if args.variant == 'corrected':
+            info['split_test'] = args.split_test
         info['additional_interactions'] = steps
         info['resumed_from'] = str(args.resume.resolve()) if args.resume else None
         output.mkdir(parents=True, exist_ok=False)
@@ -230,7 +236,7 @@ def main():
         if args.variant == 'bayesian':
             summary = run_bayesian(env_config, config, output, steps, args.eval_split, args.resume, env)
         else:
-            summary = run_corrected(env_config, config, output, steps, args.eval_split)
+            summary = run_corrected(env_config, config, output, steps, args.eval_split, split_test=args.split_test)
     finally:
         if env is not None:
             env.close()

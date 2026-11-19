@@ -1,0 +1,13 @@
+{
+  "name": "breakout_bart_stability_1m_20261114",
+  "training_seeds": [733101, 733102, 733103, 733104, 733105],
+  "intermediate_seeds": [734001, 734002],
+  "development_seeds": [734101, 734102, 734103, 734104, 734105, 734106, 734107, 734108, 734109, 734110],
+  "checkpoints": [100000, 200000, 300000, 400000, 500000, 600000, 700000, 800000, 900000, 925000, 950000, 975000, 1000000],
+  "training_seconds": 86400,
+  "evaluation_seconds": 1200,
+  "variants": {
+    "bounded_structure": {"warm_start": true, "max_structure_distance": 2},
+    "slow_target": {"target_update_interval": 4}
+  }
+}

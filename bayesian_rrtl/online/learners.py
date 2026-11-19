@@ -12,7 +12,7 @@ from bayesian_rrtl.agent import (ActionDataset, BayesianQAgent, BayesianQModel, 
                                 calibration_design)
 from bayesian_rrtl.baseline_adapter import BaselineLearnerConfig, RelationalBaselineAgent
 from bayesian_rrtl.controls import PointTreeModel, fit_cart
-from bayesian_rrtl.ensemble import BARTRegressor
+from bayesian_rrtl.ensemble import BARTRegressor, StructureLimitError
 from bayesian_rrtl.priors import FixedScale, calibrate_noise
 from bayesian_rrtl.q_config import BayesianQConfig
 from bayesian_rrtl.replay import concatenate_states
@@ -168,6 +168,21 @@ class PredictionCache:
         return value
 
 
+def online_bart_config(config, estimator):
+    options = dict(estimator)
+    for name in ('warm_start', 'first_fit_at_warmup'):
+        if type(options.pop(name, False)) is not bool:
+            raise ValueError(f'{name} must be boolean')
+    distance = options.pop('max_structure_distance', None)
+    if distance is not None:
+        if type(distance) is not int or distance < 0 or not estimator.get('warm_start', False):
+            raise ValueError('Structure distance requires a nonnegative integer and warm_start')
+    interval = options.pop('target_update_interval', 1)
+    if type(interval) is not int or interval < 1:
+        raise ValueError('Target update interval must be a positive integer')
+    return BayesianQConfig(**asdict(config), **options)
+
+
 class OnlineBatchAgent(BayesianQAgent):
     """All batch methods share observe, replay selection, targets and atomic publication."""
     def __init__(self, config, encoder, *, learner, estimator, cache_bytes=1048576):
@@ -183,7 +198,7 @@ class OnlineBatchAgent(BayesianQAgent):
                 raise ValueError('Incompatible ExtraTrees dependency')
         else:
             # Explicit composition, not a reinterpretation of historic flat config.
-            BayesianQConfig(**asdict(config), **estimator)
+            online_bart_config(config, estimator)
         super().__init__(config, encoder)
         self.cache = PredictionCache(cache_bytes)
         self.phase_seconds = {'selection_targets': 0., 'fit': 0., 'prediction': 0., 'encoding': 0.}
@@ -222,22 +237,32 @@ class OnlineBatchAgent(BayesianQAgent):
                 min_samples_leaf=options.min_samples_leaf, n_jobs=1,
                 random_state=int(rng.integers(2**32))).fit(nominal_indicators(dataset.batch), dataset.targets)
             return NominalExtraTrees(model, self.encoder.catalog_hash, options), None
-        bart = BayesianQConfig(**asdict(c), **e)
+        bart = online_bart_config(c, e)
         if calibration is None:
             calibration = calibrate_noise(c.scale.normalize(dataset.targets), calibration_design(dataset.batch),
                 nu=bart.nu, quantile=bart.noise_quantile, variance_floor=bart.variance_floor)
+        previous = self.model.posteriors[dataset.action] if e.get('warm_start', False) else None
+        initial_trees = previous.draws[-1].trees if previous is not None else None
         posterior = BARTRegressor(kernel=bart.kernel, m=bart.m, tree_prior=bart.tree_prior,
             scale=c.scale, k=bart.k, noise_prior=calibration.prior).fit(dataset.batch, dataset.targets,
-                rng, burn_in=bart.burn_in, draws=bart.draws)
+                rng, burn_in=bart.burn_in, draws=bart.draws, initial_trees=initial_trees,
+                max_structure_distance=e.get('max_structure_distance') if initial_trees is not None else None)
         return posterior, calibration
+
+    def fit_due(self, interactions, *, force=False):
+        c = self.config
+        first_at_warmup = (self.last_fit_step == 0 and self.learner_id == 'bart'
+                           and self.estimator_config.get('first_fit_at_warmup', False))
+        return (interactions >= c.warmup_interactions and interactions > self.last_fit_step
+                and (force or first_at_warmup or interactions-self.last_fit_step >= c.fit_interval))
 
     def fit_if_due(self, *, force=False):
         c = self.config
-        if (self.interactions < c.warmup_interactions or not len(self.replay)
-                or self.interactions == self.last_fit_step
-                or (not force and self.interactions-self.last_fit_step < c.fit_interval)):
+        if not len(self.replay) or not self.fit_due(self.interactions, force=force):
             return None
-        target = self.model
+        previous = self.model
+        target_interval = self.estimator_config.get('target_update_interval', 1) if self.learner_id == 'bart' else 1
+        target = previous if self.fit_count % target_interval == 0 else self.target_model
         replay_rng, rngs = copy.deepcopy(self.replay_rng), copy.deepcopy(self.mcmc_rngs)
         started = time.perf_counter()
         datasets = []
@@ -252,7 +277,7 @@ class OnlineBatchAgent(BayesianQAgent):
             datasets.append(ActionDataset(action, ids, batch, y, sha))
         selection_seconds = time.perf_counter()-started
         started = time.perf_counter()
-        models, calibrations = list(target.posteriors), list(self.calibrations)
+        models, calibrations = list(previous.posteriors), list(self.calibrations)
         updated, skipped, details = [], [], {}
         for data in datasets:
             action = data.action
@@ -260,12 +285,23 @@ class OnlineBatchAgent(BayesianQAgent):
                 skipped.append(action)
                 details[c.actions[action]] = {'updated': False, 'reason': 'no_replay_data'}
                 continue
-            models[action], calibrations[action] = self.fit_action(data, rngs[action], calibrations[action])
+            try:
+                models[action], calibrations[action] = self.fit_action(data, rngs[action], calibrations[action])
+            except StructureLimitError as exc:
+                # Keep the published posterior when support repair would exceed the cap.
+                skipped.append(action)
+                details[c.actions[action]] = {'updated': False, 'reason': 'support_repair_exceeds_limit',
+                    'tree_index': exc.tree_index, 'repair_distance': exc.required_distance,
+                    'structure_limit': exc.limit, 'samples': len(data.batch), 'data_hash': data.data_hash}
+                continue
             details[c.actions[action]] = {**models[action].diagnostics(), 'updated': True,
                                          'samples': len(data.batch), 'data_hash': data.data_hash}
+            if self.learner_id == 'bart' and self.estimator_config.get('warm_start', False):
+                details[c.actions[action]].setdefault('reused_trees', 0)
+                details[c.actions[action]].setdefault('reset_trees', models[action].m)
             updated.append(action)
         fit_seconds = time.perf_counter()-started
-        model = BayesianQModel(c.actions, tuple(models), self.encoder.catalog_hash, target.model_id+1)
+        model = BayesianQModel(c.actions, tuple(models), self.encoder.catalog_hash, previous.model_id+1)
         record = FitRecord(model.model_id, target.model_id, self.interactions,
             digest({'learning': asdict(c), 'estimator': self.estimator_config, 'learner': self.learner_id}),
             tuple(datasets), tuple(updated), tuple(skipped), details)
@@ -282,11 +318,15 @@ class OnlineBatchAgent(BayesianQAgent):
         return record
 
 
-def _baseline(config, encoder, estimator, cache_bytes):
+def baseline_config(config, estimator):
     if set(estimator) & {'seed', 'gamma', 'bootstrap_on_truncation'}:
         raise ValueError('Baseline shared fields belong in learning config')
-    return RelationalBaselineAgent(config.actions, encoder, BaselineLearnerConfig(**estimator,
-        seed=config.seed, gamma=config.gamma, bootstrap_on_truncation=config.bootstrap_on_truncation))
+    return BaselineLearnerConfig(**estimator, seed=config.seed, gamma=config.gamma,
+                                 bootstrap_on_truncation=config.bootstrap_on_truncation)
+
+
+def _baseline(config, encoder, estimator, cache_bytes):
+    return RelationalBaselineAgent(config.actions, encoder, baseline_config(config, estimator))
 
 
 def _batch(kind):
@@ -315,7 +355,7 @@ def learner_metrics(agent, learner, batch):
             yield root, depth
             for child in root.children:
                 yield from nodes(child, depth+1)
-        result = {'kind': 'rrtl_corrected_common_v1', 'splits': agent.n_splits,
+        result = {'kind': 'rrtl_corrected_common_v1', 'split_test': agent.config.split_test, 'splits': agent.n_splits,
                   'fallback': copy.deepcopy(agent.query_counts), 'complexity': {}}
         for name, root in agent.root_nodes.items():
             entries = list(nodes(root))

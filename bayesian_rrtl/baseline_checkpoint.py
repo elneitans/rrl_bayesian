@@ -19,6 +19,7 @@ import tempfile
 import numpy as np
 
 from .baseline import CorrectedNode
+from .baseline_anova import ANOVANode, anova_from_stats
 from .baseline_adapter import LEARNER_ID, BaselineLearnerConfig, RelationalBaselineAgent
 from .baseline_training import BaselineTrainingSession
 from .comparison import ComparisonPolicyConfig, PongEnvironmentFactory, _validate_environment
@@ -31,7 +32,7 @@ SCHEMA_VERSION = 1
 COLLECTOR_FIELDS = ('state', 'done', 'episode_id', 'step_id', 'episode_return', 'raw_episode_return',
                     'history', 'episode_history', 'training_seeds')
 SOURCES = ('relational_regresion_tree.py', 'preprocessing.py', 'bayesian_rrtl/baseline.py',
-           'bayesian_rrtl/baseline_adapter.py', 'bayesian_rrtl/baseline_training.py',
+           'bayesian_rrtl/baseline_adapter.py', 'bayesian_rrtl/baseline_anova.py', 'bayesian_rrtl/baseline_training.py',
            'bayesian_rrtl/baseline_checkpoint.py', 'bayesian_rrtl/comparison.py',
            'bayesian_rrtl/targets.py', 'bayesian_rrtl/encoding.py', 'bayesian_rrtl/atari.py',
            'bayesian_rrtl/objects.py', 'bayesian_rrtl/game_registry.py',
@@ -73,7 +74,8 @@ def _validate_trees(agent):
     seen, splits = set(), 0
     def visit(node, action, refinements, parent, depth):
         nonlocal splits
-        _require(type(node) in (Node, CorrectedNode) and id(node) not in seen, 'Invalid tree node/cycle')
+        allowed = (ANOVANode,) if agent.config.split_test == 'anova' else (Node, CorrectedNode)
+        _require(type(node) in allowed and id(node) not in seen, 'Invalid tree node/cycle or split_test')
         seen.add(id(node))
         _require(node.parent is parent and node.depth == depth and node.root_action == action,
                  'Tree parent/action/depth mismatch')
@@ -90,6 +92,8 @@ def _validate_trees(agent):
                          and math.isfinite(stats['mu']) and math.isfinite(stats['J']), 'Invalid split statistics')
             _require(groups['Total']['n'] == sum(groups[k]['n'] for k in CATEGORIES[literal.type]),
                      'Inconsistent split sample counters')
+            if agent.config.split_test == 'anova':
+                anova_from_stats(groups)
         if node.literal is None:
             _require(not node.children and all(getattr(node, name, None) is None for name in
                      ('more_branch', 'same_branch', 'less_branch', 'true_branch', 'false_branch')),

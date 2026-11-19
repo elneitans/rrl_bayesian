@@ -10,9 +10,9 @@ import sys
 from importlib.metadata import PackageNotFoundError, version
 
 from bayesian_rrtl.games.pong import PONG_ACTIONS, PongRelationsV1
-from bayesian_rrtl.online.learners import (CARTConfig, ExtraTreesConfig, LEARNERS, LearningConfig)
+from bayesian_rrtl.online.learners import (CARTConfig, ExtraTreesConfig, LEARNERS, LearningConfig,
+                                          online_bart_config)
 from bayesian_rrtl.baseline_adapter import BaselineLearnerConfig
-from bayesian_rrtl.q_config import BayesianQConfig
 from experiments.pong_analysis_runtime import checked_read, checked_write, digest, bytes_hash, unit_lock
 from experiments.pong_common_contract import CommonPongConfig
 
@@ -138,7 +138,7 @@ def resolve(raw):
                     elif learner == 'extra_trees':
                         ExtraTreesConfig(**estimator)
                     elif learner == 'bart':
-                        BayesianQConfig(**asdict(learning), **estimator)
+                        online_bart_config(learning, estimator)
                     else:
                         if set(estimator) & {'seed', 'gamma', 'bootstrap_on_truncation'}:
                             raise ValueError('Duplicated baseline common fields')

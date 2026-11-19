@@ -33,6 +33,7 @@ Los diagnósticos cortos no prueban convergencia de las posteriores.
 - [Despliegue en clúster: Conda, Slurm, preflight, smoke y piloto](docs/cluster_pong.md)
 - [Plan de implementación versionado](plan_implementacion_rrtl_bart.md)
 - [Configuración de prueba corta](configs/breakout_smoke.json)
+- [RRTL-ANOVA experimental: criterio, validación y configuraciones pareadas](docs/rrtl_anova.md)
 
 ```bash
 python3.11 -m venv .venv

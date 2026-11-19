@@ -36,6 +36,7 @@ class BaselineConfig:
     validation_seeds: tuple[int, ...] = (100001, 100002)
     test_seeds: tuple[int, ...] = (200001, 200002)
     render_graph: bool = False
+    split_test: str = "historical_f"
 
     def __post_init__(self):
         object.__setattr__(self, "validation_seeds", tuple(self.validation_seeds))
@@ -60,6 +61,10 @@ class BaselineConfig:
             raise ValueError("Invalid repeat action probability")
         if self.best_literal_criteria not in ("p-value", "f-ratio", "max-q-value"):
             raise ValueError("Invalid literal criterion")
+        if self.split_test not in ("historical_f", "anova"):
+            raise ValueError("Invalid split_test: expected historical_f or anova")
+        if self.split_test == "anova" and self.best_literal_criteria != "p-value":
+            raise ValueError("ANOVA split_test requires p-value candidate selection")
         seeds = [self.seed, *self.validation_seeds, *self.test_seeds]
         if any(not isinstance(s, int) or not 0 <= s < 2**32 for s in seeds):
             raise ValueError("Seeds must be unsigned 32-bit integers")

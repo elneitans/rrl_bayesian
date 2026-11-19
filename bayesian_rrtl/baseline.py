@@ -100,10 +100,17 @@ class CorrectedRRLAgent(RRLAgent):
 
     def update_transition(self, state, action_index, reward, next_state, terminated, truncated):
         root = self.root_nodes[self.index_to_action[action_index]]
+        if getattr(self.config, 'split_test', 'historical_f') == 'anova':
+            from .baseline_anova import ANOVANode
+            # H0 factories create historical roots. Specialize without replacing
+            # stored statistics, Q, parent links or the fixed candidate catalogue.
+            root.__class__ = ANOVANode
         leaf = root.get_state_leaf(state)
         # Legacy factories and older checkpoints contain Node instances. Specialize
         # only the active leaf, preserving its identity, parent links and statistics.
-        if type(leaf) is Node:
+        if getattr(self.config, 'split_test', 'historical_f') == 'anova':
+            leaf.__class__ = ANOVANode
+        elif type(leaf) is Node:
             leaf.__class__ = CorrectedNode
         update = q_learning_update(
             leaf.q_value, reward,

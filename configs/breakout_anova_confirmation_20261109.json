@@ -1,0 +1,103 @@
+{
+  "name": "breakout_anova_confirmation_20261109",
+  "modes": [
+    "baseline",
+    "slow_td",
+    "refit_only"
+  ],
+  "variants": {
+    "baseline": {
+      "variant": "baseline",
+      "eta_q": 0.025,
+      "bootstrap": "online",
+      "target_interval": 5000,
+      "repair": "none",
+      "max_policy_tv": 0.05,
+      "complexity_penalty": 0.0001,
+      "return_confidence": 0.9,
+      "return_bootstraps": 400,
+      "return_margin": 1.0,
+      "max_start_drop": 5.0,
+      "relative_start_drop": 0.2
+    },
+    "slow_td": {
+      "variant": "slow_td",
+      "eta_q": 0.005,
+      "bootstrap": "online",
+      "target_interval": 5000,
+      "repair": "none",
+      "max_policy_tv": 0.05,
+      "complexity_penalty": 0.0001,
+      "return_confidence": 0.9,
+      "return_bootstraps": 400,
+      "return_margin": 1.0,
+      "max_start_drop": 5.0,
+      "relative_start_drop": 0.2
+    },
+    "refit_only": {
+      "variant": "refit_only",
+      "eta_q": 0.025,
+      "bootstrap": "online",
+      "target_interval": 5000,
+      "repair": "refit",
+      "max_policy_tv": 0.05,
+      "complexity_penalty": 0.0001,
+      "return_confidence": 0.9,
+      "return_bootstraps": 400,
+      "return_margin": 1.0,
+      "max_start_drop": 5.0,
+      "relative_start_drop": 0.2
+    }
+  },
+  "seeds": [
+    721101,
+    721102,
+    721103,
+    721104,
+    721105
+  ],
+  "seed_roles": {
+    "721101": "confirmation",
+    "721102": "confirmation",
+    "721103": "confirmation",
+    "721104": "confirmation",
+    "721105": "confirmation"
+  },
+  "checkpoints": [
+    500000
+  ],
+  "parent_counter": 500000,
+  "continuation_decisions": 500000,
+  "evaluation_interval": 25000,
+  "save_interval": 25000,
+  "evaluation_horizon": 3000,
+  "starts": 12,
+  "probe_starts": 6,
+  "return_starts": 6,
+  "return_horizon": 1500,
+  "start_seed": 3003711,
+  "validation_start_seed": 3013711,
+  "return_start_seed": 3023711,
+  "evaluation_seed": 3034711,
+  "probe_seed": 3045711,
+  "return_evaluation_seed": 3054711,
+  "return_gate_seed": 3065711,
+  "probe_blocks": 8,
+  "probe_horizon": 128,
+  "revision": {
+    "mode": "normal",
+    "buffer_capacity": 8192,
+    "min_train": 128,
+    "min_validation": 64,
+    "min_validation_blocks": 4,
+    "min_child": 16,
+    "max_candidates": 2,
+    "replacement_depth": 2,
+    "cooldown": 10000,
+    "noninferiority_margin": 0.0025,
+    "replacement_gain": 0.001,
+    "bootstrap_samples": 400,
+    "confidence": 0.95,
+    "seed": 3072711
+  }
+}
