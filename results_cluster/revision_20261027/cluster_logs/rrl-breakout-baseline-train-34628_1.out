@@ -1,0 +1,379 @@
+No broken requirements found.
+hydra
+Python 3.11.7
+job=34652 root=/home/natan.brugueras/projects/rrl_bayesian
+mode=train cell=4 campaign=/home/natan.brugueras/projects/rrl_bayesian/results/breakout_baseline_15_linux_20261026_01
+A.L.E: Arcade Learning Environment (version 0.10.2+c9d4b19)
+[Powered by Stella]
+{
+  "binding": {
+    "campaign": "9f5e8f2684519f5245eed0551754c9442f3f7152d35b24b9f8c9ed35f8af2cee",
+    "cell": "18ef4661cf89a0163f83d0813791cbfa9d1a3925416ce6fadd440986ae3d01db",
+    "learner": "corrected_common",
+    "runtime": {
+      "python": "3.11.7",
+      "platform": "linux",
+      "machine": "x86_64",
+      "numeric_threads": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1"
+      },
+      "numpy": "1.26.4",
+      "scipy": "1.12.0",
+      "gymnasium": "1.1.1",
+      "ale-py": "0.10.2",
+      "ocatari": "2.2.1"
+    }
+  },
+  "counter": 500000,
+  "checkpoint": {
+    "path": "checkpoints/500000-de5cfe2ad23513770cf47472ee6632d6503fcc68d9cbd1829c7756eee6dc67b4.pkl",
+    "sha256": "de5cfe2ad23513770cf47472ee6632d6503fcc68d9cbd1829c7756eee6dc67b4"
+  },
+  "log_head": {
+    "path": "logs/500000-43e52865e541768ec341c4e40f50d6cd6e0ccc5a4c866cb8046d3c4ab58034be.jsonl",
+    "sha256": "43e52865e541768ec341c4e40f50d6cd6e0ccc5a4c866cb8046d3c4ab58034be",
+    "end": 500000
+  },
+  "state": "partial",
+  "reason": "authorized_milestone_reached",
+  "metrics": {
+    "interactions": 500000,
+    "epsilon": 0.1,
+    "relations": 11,
+    "ended_episodes": 1304,
+    "completed_games": 1304,
+    "truncated_episodes": 0,
+    "phase_seconds": {
+      "emulation_extraction": 1021.9558557138662,
+      "relations_encoding": 727.016758600017,
+      "prediction": 59.93545675696805,
+      "policy_collection_td": 931.3853092516074,
+      "selection_targets": 0.0,
+      "fit": 0.0,
+      "checkpoint_logs": 709.6093681510538
+    },
+    "learner": {
+      "kind": "rrtl_corrected_common_v1",
+      "splits": 13,
+      "fallback": {
+        "prediction": {
+          "queries": 1742056,
+          "internal_fallbacks": 116308
+        },
+        "update": {
+          "queries": 500000,
+          "internal_fallbacks": 19890
+        },
+        "bootstrap": {
+          "queries": 1994784,
+          "internal_fallbacks": 127058
+        }
+      },
+      "complexity": {
+        "NOOP": {
+          "leaves": 6,
+          "max_depth": 2
+        },
+        "FIRE": {
+          "leaves": 7,
+          "max_depth": 2
+        },
+        "RIGHT": {
+          "leaves": 8,
+          "max_depth": 3
+        },
+        "LEFT": {
+          "leaves": 7,
+          "max_depth": 2
+        }
+      }
+    }
+  }
+}
+mode=train cell=5 campaign=/home/natan.brugueras/projects/rrl_bayesian/results/breakout_baseline_15_linux_20261026_01
+A.L.E: Arcade Learning Environment (version 0.10.2+c9d4b19)
+[Powered by Stella]
+{
+  "binding": {
+    "campaign": "9f5e8f2684519f5245eed0551754c9442f3f7152d35b24b9f8c9ed35f8af2cee",
+    "cell": "96e49a429ab76e55c15537d7026571679d4704807ca415b04dae3d48a3663919",
+    "learner": "corrected_common",
+    "runtime": {
+      "python": "3.11.7",
+      "platform": "linux",
+      "machine": "x86_64",
+      "numeric_threads": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1"
+      },
+      "numpy": "1.26.4",
+      "scipy": "1.12.0",
+      "gymnasium": "1.1.1",
+      "ale-py": "0.10.2",
+      "ocatari": "2.2.1"
+    }
+  },
+  "counter": 500000,
+  "checkpoint": {
+    "path": "checkpoints/500000-e35431af44a75e9e7bcfc170c95de5db1651313349a7fbec480fffb20a17c380.pkl",
+    "sha256": "e35431af44a75e9e7bcfc170c95de5db1651313349a7fbec480fffb20a17c380"
+  },
+  "log_head": {
+    "path": "logs/500000-d517348795f6df34efbc2873e81ec58234d2cc409dc73b8f3532cb723779466d.jsonl",
+    "sha256": "d517348795f6df34efbc2873e81ec58234d2cc409dc73b8f3532cb723779466d",
+    "end": 500000
+  },
+  "state": "partial",
+  "reason": "authorized_milestone_reached",
+  "metrics": {
+    "interactions": 500000,
+    "epsilon": 0.1,
+    "relations": 11,
+    "ended_episodes": 1133,
+    "completed_games": 1133,
+    "truncated_episodes": 0,
+    "phase_seconds": {
+      "emulation_extraction": 985.4545664731995,
+      "relations_encoding": 694.0494620834943,
+      "prediction": 61.72733843221795,
+      "policy_collection_td": 939.0889817979187,
+      "selection_targets": 0.0,
+      "fit": 0.0,
+      "checkpoint_logs": 717.2879919724655
+    },
+    "learner": {
+      "kind": "rrtl_corrected_common_v1",
+      "splits": 13,
+      "fallback": {
+        "prediction": {
+          "queries": 1742520,
+          "internal_fallbacks": 33753
+        },
+        "update": {
+          "queries": 500000,
+          "internal_fallbacks": 5923
+        },
+        "bootstrap": {
+          "queries": 1995468,
+          "internal_fallbacks": 36565
+        }
+      },
+      "complexity": {
+        "NOOP": {
+          "leaves": 8,
+          "max_depth": 3
+        },
+        "FIRE": {
+          "leaves": 4,
+          "max_depth": 2
+        },
+        "RIGHT": {
+          "leaves": 6,
+          "max_depth": 2
+        },
+        "LEFT": {
+          "leaves": 9,
+          "max_depth": 2
+        }
+      }
+    }
+  }
+}
+mode=train cell=6 campaign=/home/natan.brugueras/projects/rrl_bayesian/results/breakout_baseline_15_linux_20261026_01
+A.L.E: Arcade Learning Environment (version 0.10.2+c9d4b19)
+[Powered by Stella]
+{
+  "binding": {
+    "campaign": "9f5e8f2684519f5245eed0551754c9442f3f7152d35b24b9f8c9ed35f8af2cee",
+    "cell": "c5dc840da803a3ef379b860b77fbb0adca2984ee81634a53df88491edeb452ef",
+    "learner": "corrected_common",
+    "runtime": {
+      "python": "3.11.7",
+      "platform": "linux",
+      "machine": "x86_64",
+      "numeric_threads": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1"
+      },
+      "numpy": "1.26.4",
+      "scipy": "1.12.0",
+      "gymnasium": "1.1.1",
+      "ale-py": "0.10.2",
+      "ocatari": "2.2.1"
+    }
+  },
+  "counter": 500000,
+  "checkpoint": {
+    "path": "checkpoints/500000-cff6edd4b75f3d4d438c1a35201e619a8dfeaafb67334f3519af7c519a22e002.pkl",
+    "sha256": "cff6edd4b75f3d4d438c1a35201e619a8dfeaafb67334f3519af7c519a22e002"
+  },
+  "log_head": {
+    "path": "logs/500000-7e4e4d3009b0b44b4875ab956a2fcd0b5a6d8cc207991c96d6e070f5680356bf.jsonl",
+    "sha256": "7e4e4d3009b0b44b4875ab956a2fcd0b5a6d8cc207991c96d6e070f5680356bf",
+    "end": 500000
+  },
+  "state": "partial",
+  "reason": "authorized_milestone_reached",
+  "metrics": {
+    "interactions": 500000,
+    "epsilon": 0.1,
+    "relations": 11,
+    "ended_episodes": 1157,
+    "completed_games": 1157,
+    "truncated_episodes": 0,
+    "phase_seconds": {
+      "emulation_extraction": 996.7306996147381,
+      "relations_encoding": 691.5168177591986,
+      "prediction": 60.303465246397536,
+      "policy_collection_td": 928.7804094497114,
+      "selection_targets": 0.0,
+      "fit": 0.0,
+      "checkpoint_logs": 723.4848936908529
+    },
+    "learner": {
+      "kind": "rrtl_corrected_common_v1",
+      "splits": 10,
+      "fallback": {
+        "prediction": {
+          "queries": 1742244,
+          "internal_fallbacks": 37632
+        },
+        "update": {
+          "queries": 500000,
+          "internal_fallbacks": 2439
+        },
+        "bootstrap": {
+          "queries": 1995372,
+          "internal_fallbacks": 41361
+        }
+      },
+      "complexity": {
+        "NOOP": {
+          "leaves": 4,
+          "max_depth": 2
+        },
+        "FIRE": {
+          "leaves": 4,
+          "max_depth": 2
+        },
+        "RIGHT": {
+          "leaves": 4,
+          "max_depth": 2
+        },
+        "LEFT": {
+          "leaves": 9,
+          "max_depth": 2
+        }
+      }
+    }
+  }
+}
+mode=train cell=7 campaign=/home/natan.brugueras/projects/rrl_bayesian/results/breakout_baseline_15_linux_20261026_01
+A.L.E: Arcade Learning Environment (version 0.10.2+c9d4b19)
+[Powered by Stella]
+{
+  "binding": {
+    "campaign": "9f5e8f2684519f5245eed0551754c9442f3f7152d35b24b9f8c9ed35f8af2cee",
+    "cell": "353366540db20d4af3740c5188c5e9c562082a9f13f006d3f2698a9b65a91b66",
+    "learner": "corrected_common",
+    "runtime": {
+      "python": "3.11.7",
+      "platform": "linux",
+      "machine": "x86_64",
+      "numeric_threads": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1"
+      },
+      "numpy": "1.26.4",
+      "scipy": "1.12.0",
+      "gymnasium": "1.1.1",
+      "ale-py": "0.10.2",
+      "ocatari": "2.2.1"
+    }
+  },
+  "counter": 500000,
+  "checkpoint": {
+    "path": "checkpoints/500000-b8454cd35a71f416fed1bd11e8dd01b656533ff9fd727a500d29baaa70f9a3e2.pkl",
+    "sha256": "b8454cd35a71f416fed1bd11e8dd01b656533ff9fd727a500d29baaa70f9a3e2"
+  },
+  "log_head": {
+    "path": "logs/500000-3451c8e0fc668a26534119de42be38796d8d219582a0565ccdb3a071fc12e490.jsonl",
+    "sha256": "3451c8e0fc668a26534119de42be38796d8d219582a0565ccdb3a071fc12e490",
+    "end": 500000
+  },
+  "state": "partial",
+  "reason": "authorized_milestone_reached",
+  "metrics": {
+    "interactions": 500000,
+    "epsilon": 0.1,
+    "relations": 11,
+    "ended_episodes": 2106,
+    "completed_games": 2106,
+    "truncated_episodes": 0,
+    "phase_seconds": {
+      "emulation_extraction": 1183.6179312762688,
+      "relations_encoding": 681.8287669440615,
+      "prediction": 55.74754472577479,
+      "policy_collection_td": 872.8091770035098,
+      "selection_targets": 0.0,
+      "fit": 0.0,
+      "checkpoint_logs": 740.7285587326623
+    },
+    "learner": {
+      "kind": "rrtl_corrected_common_v1",
+      "splits": 9,
+      "fallback": {
+        "prediction": {
+          "queries": 1743356,
+          "internal_fallbacks": 199566
+        },
+        "update": {
+          "queries": 500000,
+          "internal_fallbacks": 49706
+        },
+        "bootstrap": {
+          "queries": 1991576,
+          "internal_fallbacks": 214385
+        }
+      },
+      "complexity": {
+        "NOOP": {
+          "leaves": 7,
+          "max_depth": 2
+        },
+        "FIRE": {
+          "leaves": 7,
+          "max_depth": 2
+        },
+        "RIGHT": {
+          "leaves": 5,
+          "max_depth": 2
+        },
+        "LEFT": {
+          "leaves": 3,
+          "max_depth": 1
+        }
+      }
+    }
+  }
+}
+
+------------------------------------------------------------------------
+[Slurm] Este trabajo (#34652) terminó SIN reporte de rendimiento por correo.
+Puedes recibir un correo con el uso de CPU, RAM y GPU de tus trabajos
+(y sugerencias para que esperen menos en cola) agregando esta línea
+en tu script de sbatch, junto a las líneas #SBATCH:
+
+    #SENDJOBREPORT
+
+Dudas: slurmjobs@cenia.cl
+------------------------------------------------------------------------

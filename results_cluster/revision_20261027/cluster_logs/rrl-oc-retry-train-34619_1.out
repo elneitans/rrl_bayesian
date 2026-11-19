@@ -1,0 +1,113 @@
+No broken requirements found.
+hydra
+Python 3.11.7
+job=34645 root=/home/natan.brugueras/projects/rrl_bayesian
+A.L.E: Arcade Learning Environment (version 0.10.2+c9d4b19)
+[Powered by Stella]
+{
+  "binding": {
+    "campaign": "a399d23d9aed4120a0c42bdd4d1911a7bc13eac9f6c62fa7fc28491da3e8d42c",
+    "cell": "0c6a6f0410e00b706f4979b0a64ef2b9f6ab3aee51e7525febe8735c70232979",
+    "learner": "corrected_common",
+    "runtime": {
+      "python": "3.11.7",
+      "platform": "linux",
+      "machine": "x86_64",
+      "numeric_threads": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1"
+      },
+      "numpy": "1.26.4",
+      "scipy": "1.12.0",
+      "gymnasium": "1.1.1",
+      "ale-py": "0.10.2",
+      "ocatari": "2.2.1"
+    }
+  },
+  "counter": 2000000,
+  "checkpoint": {
+    "path": "checkpoints/2000000-4903da84d72902e5a086a52d464f48962c74cdd73127c6036c8b884ea5167a99.pkl",
+    "sha256": "4903da84d72902e5a086a52d464f48962c74cdd73127c6036c8b884ea5167a99"
+  },
+  "log_head": {
+    "path": "logs/2000000-91f6504b9bb9c9f94f4ed128355d294e572e56dcb33c28007eb9b79b103717ac.jsonl",
+    "sha256": "91f6504b9bb9c9f94f4ed128355d294e572e56dcb33c28007eb9b79b103717ac",
+    "end": 2000000
+  },
+  "state": "completed",
+  "reason": null,
+  "metrics": {
+    "interactions": 2000000,
+    "epsilon": 0.1,
+    "relations": 20,
+    "ended_episodes": 2133,
+    "completed_games": 2133,
+    "truncated_episodes": 0,
+    "phase_seconds": {
+      "emulation_extraction": 2287.058058638475,
+      "relations_encoding": 4800.1963025196455,
+      "prediction": 520.4978438881226,
+      "policy_collection_td": 3892.0822872130084,
+      "selection_targets": 0.0,
+      "fit": 0.0,
+      "checkpoint_logs": 2803.61982101138
+    },
+    "learner": {
+      "kind": "rrtl_corrected_common_v1",
+      "splits": 62,
+      "fallback": {
+        "prediction": {
+          "queries": 10712292,
+          "internal_fallbacks": 2976947
+        },
+        "update": {
+          "queries": 2000000,
+          "internal_fallbacks": 572221
+        },
+        "bootstrap": {
+          "queries": 11987202,
+          "internal_fallbacks": 3293775
+        }
+      },
+      "complexity": {
+        "NOOP": {
+          "leaves": 25,
+          "max_depth": 4
+        },
+        "FIRE": {
+          "leaves": 29,
+          "max_depth": 4
+        },
+        "RIGHT": {
+          "leaves": 13,
+          "max_depth": 3
+        },
+        "LEFT": {
+          "leaves": 26,
+          "max_depth": 4
+        },
+        "RIGHTFIRE": {
+          "leaves": 17,
+          "max_depth": 4
+        },
+        "LEFTFIRE": {
+          "leaves": 18,
+          "max_depth": 4
+        }
+      }
+    }
+  }
+}
+
+------------------------------------------------------------------------
+[Slurm] Este trabajo (#34645) terminó SIN reporte de rendimiento por correo.
+Puedes recibir un correo con el uso de CPU, RAM y GPU de tus trabajos
+(y sugerencias para que esperen menos en cola) agregando esta línea
+en tu script de sbatch, junto a las líneas #SBATCH:
+
+    #SENDJOBREPORT
+
+Dudas: slurmjobs@cenia.cl
+------------------------------------------------------------------------

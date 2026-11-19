@@ -1,0 +1,345 @@
+No broken requirements found.
+hydra
+Python 3.11.7
+job=34395 root=/home/natan.brugueras/projects/rrl_bayesian
+A.L.E: Arcade Learning Environment (version 0.10.2+c9d4b19)
+[Powered by Stella]
+[
+  {
+    "group": "intermediate",
+    "counter": 0,
+    "checkpoint": {
+      "path": "checkpoints/0-be859b0b38f0a5ec861700a769d526655d92879dbdf0396e265409a93d82cd54.pkl",
+      "sha256": "be859b0b38f0a5ec861700a769d526655d92879dbdf0396e265409a93d82cd54"
+    },
+    "state": "completed",
+    "episodes": [
+      {
+        "seed": 711601,
+        "status": "completed",
+        "steps": 170,
+        "raw_return": 1.0,
+        "actions": {
+          "NOOP": 43,
+          "RIGHT": 45,
+          "LEFT": 46,
+          "FIRE": 36
+        },
+        "terminated": true,
+        "truncated": false,
+        "reason": null,
+        "return_scope": "complete_game",
+        "unique_encoded_states": 40,
+        "seconds": 3.402841005998198
+      },
+      {
+        "seed": 711602,
+        "status": "completed",
+        "steps": 177,
+        "raw_return": 1.0,
+        "actions": {
+          "RIGHT": 32,
+          "LEFT": 33,
+          "FIRE": 57,
+          "NOOP": 55
+        },
+        "terminated": true,
+        "truncated": false,
+        "reason": null,
+        "return_scope": "complete_game",
+        "unique_encoded_states": 36,
+        "seconds": 1.9476224500103854
+      }
+    ]
+  },
+  {
+    "group": "intermediate",
+    "counter": 10000,
+    "checkpoint": {
+      "path": "checkpoints/10000-51cd3064166fc0b07711900e1d7630c2d1b8430490f7de2a9018af894da3786d.pkl",
+      "sha256": "51cd3064166fc0b07711900e1d7630c2d1b8430490f7de2a9018af894da3786d"
+    },
+    "state": "completed",
+    "episodes": [
+      {
+        "seed": 711601,
+        "status": "completed",
+        "steps": 27000,
+        "raw_return": 0.0,
+        "actions": {
+          "NOOP": 27000
+        },
+        "terminated": false,
+        "truncated": true,
+        "reason": null,
+        "return_scope": "horizon_limited",
+        "unique_encoded_states": 4,
+        "seconds": 253.96042022801703
+      },
+      {
+        "seed": 711602,
+        "status": "completed",
+        "steps": 27000,
+        "raw_return": 0.0,
+        "actions": {
+          "NOOP": 27000
+        },
+        "terminated": false,
+        "truncated": true,
+        "reason": null,
+        "return_scope": "horizon_limited",
+        "unique_encoded_states": 4,
+        "seconds": 274.68767409800785
+      }
+    ]
+  },
+  {
+    "group": "intermediate",
+    "counter": 100000,
+    "checkpoint": {
+      "path": "checkpoints/100000-bfe7fec81ffae8e9677eddf94f110e16f49455b929e8452da5b787a46b56d842.pkl",
+      "sha256": "bfe7fec81ffae8e9677eddf94f110e16f49455b929e8452da5b787a46b56d842"
+    },
+    "state": "completed",
+    "episodes": [
+      {
+        "seed": 711601,
+        "status": "completed",
+        "steps": 27000,
+        "raw_return": 1.0,
+        "actions": {
+          "FIRE": 1,
+          "LEFT": 37,
+          "NOOP": 18,
+          "RIGHT": 26944
+        },
+        "terminated": false,
+        "truncated": true,
+        "reason": null,
+        "return_scope": "horizon_limited",
+        "unique_encoded_states": 27,
+        "seconds": 258.9000451430329
+      },
+      {
+        "seed": 711602,
+        "status": "completed",
+        "steps": 27000,
+        "raw_return": 1.0,
+        "actions": {
+          "FIRE": 1,
+          "LEFT": 37,
+          "NOOP": 18,
+          "RIGHT": 26944
+        },
+        "terminated": false,
+        "truncated": true,
+        "reason": null,
+        "return_scope": "horizon_limited",
+        "unique_encoded_states": 27,
+        "seconds": 275.32828996301396
+      }
+    ]
+  },
+  {
+    "group": "final_development",
+    "counter": 100000,
+    "checkpoint": {
+      "path": "checkpoints/100000-bfe7fec81ffae8e9677eddf94f110e16f49455b929e8452da5b787a46b56d842.pkl",
+      "sha256": "bfe7fec81ffae8e9677eddf94f110e16f49455b929e8452da5b787a46b56d842"
+    },
+    "state": "completed",
+    "episodes": [
+      {
+        "seed": 712601,
+        "status": "completed",
+        "steps": 27000,
+        "raw_return": 1.0,
+        "actions": {
+          "FIRE": 1,
+          "LEFT": 37,
+          "NOOP": 18,
+          "RIGHT": 26944
+        },
+        "terminated": false,
+        "truncated": true,
+        "reason": null,
+        "return_scope": "horizon_limited",
+        "unique_encoded_states": 27,
+        "seconds": 285.5496919649886
+      },
+      {
+        "seed": 712602,
+        "status": "completed",
+        "steps": 27000,
+        "raw_return": 1.0,
+        "actions": {
+          "FIRE": 1,
+          "LEFT": 37,
+          "NOOP": 18,
+          "RIGHT": 26944
+        },
+        "terminated": false,
+        "truncated": true,
+        "reason": null,
+        "return_scope": "horizon_limited",
+        "unique_encoded_states": 27,
+        "seconds": 272.18269322498236
+      },
+      {
+        "seed": 712603,
+        "status": "completed",
+        "steps": 27000,
+        "raw_return": 1.0,
+        "actions": {
+          "FIRE": 1,
+          "LEFT": 37,
+          "NOOP": 18,
+          "RIGHT": 26944
+        },
+        "terminated": false,
+        "truncated": true,
+        "reason": null,
+        "return_scope": "horizon_limited",
+        "unique_encoded_states": 27,
+        "seconds": 253.41870940901572
+      },
+      {
+        "seed": 712604,
+        "status": "completed",
+        "steps": 27000,
+        "raw_return": 1.0,
+        "actions": {
+          "FIRE": 1,
+          "LEFT": 37,
+          "NOOP": 18,
+          "RIGHT": 26944
+        },
+        "terminated": false,
+        "truncated": true,
+        "reason": null,
+        "return_scope": "horizon_limited",
+        "unique_encoded_states": 27,
+        "seconds": 244.21923404099653
+      },
+      {
+        "seed": 712605,
+        "status": "completed",
+        "steps": 27000,
+        "raw_return": 1.0,
+        "actions": {
+          "FIRE": 1,
+          "LEFT": 37,
+          "NOOP": 18,
+          "RIGHT": 26944
+        },
+        "terminated": false,
+        "truncated": true,
+        "reason": null,
+        "return_scope": "horizon_limited",
+        "unique_encoded_states": 27,
+        "seconds": 246.25790608802345
+      },
+      {
+        "seed": 712606,
+        "status": "completed",
+        "steps": 27000,
+        "raw_return": 1.0,
+        "actions": {
+          "FIRE": 1,
+          "LEFT": 37,
+          "NOOP": 18,
+          "RIGHT": 26944
+        },
+        "terminated": false,
+        "truncated": true,
+        "reason": null,
+        "return_scope": "horizon_limited",
+        "unique_encoded_states": 27,
+        "seconds": 235.52861950802617
+      },
+      {
+        "seed": 712607,
+        "status": "completed",
+        "steps": 27000,
+        "raw_return": 1.0,
+        "actions": {
+          "FIRE": 1,
+          "LEFT": 37,
+          "NOOP": 18,
+          "RIGHT": 26944
+        },
+        "terminated": false,
+        "truncated": true,
+        "reason": null,
+        "return_scope": "horizon_limited",
+        "unique_encoded_states": 27,
+        "seconds": 215.00249941000948
+      },
+      {
+        "seed": 712608,
+        "status": "completed",
+        "steps": 27000,
+        "raw_return": 1.0,
+        "actions": {
+          "FIRE": 1,
+          "LEFT": 37,
+          "NOOP": 18,
+          "RIGHT": 26944
+        },
+        "terminated": false,
+        "truncated": true,
+        "reason": null,
+        "return_scope": "horizon_limited",
+        "unique_encoded_states": 27,
+        "seconds": 244.997930085985
+      },
+      {
+        "seed": 712609,
+        "status": "completed",
+        "steps": 27000,
+        "raw_return": 1.0,
+        "actions": {
+          "FIRE": 1,
+          "LEFT": 37,
+          "NOOP": 18,
+          "RIGHT": 26944
+        },
+        "terminated": false,
+        "truncated": true,
+        "reason": null,
+        "return_scope": "horizon_limited",
+        "unique_encoded_states": 27,
+        "seconds": 236.54777621396352
+      },
+      {
+        "seed": 712610,
+        "status": "completed",
+        "steps": 27000,
+        "raw_return": 1.0,
+        "actions": {
+          "FIRE": 1,
+          "LEFT": 37,
+          "NOOP": 18,
+          "RIGHT": 26944
+        },
+        "terminated": false,
+        "truncated": true,
+        "reason": null,
+        "return_scope": "horizon_limited",
+        "unique_encoded_states": 27,
+        "seconds": 253.78835306497058
+      }
+    ]
+  }
+]
+
+------------------------------------------------------------------------
+[Slurm] Este trabajo (#34395) terminó SIN reporte de rendimiento por correo.
+Puedes recibir un correo con el uso de CPU, RAM y GPU de tus trabajos
+(y sugerencias para que esperen menos en cola) agregando esta línea
+en tu script de sbatch, junto a las líneas #SBATCH:
+
+    #SENDJOBREPORT
+
+Dudas: slurmjobs@cenia.cl
+------------------------------------------------------------------------

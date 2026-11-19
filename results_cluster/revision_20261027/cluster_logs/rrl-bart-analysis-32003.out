@@ -1,0 +1,41 @@
+No broken requirements found.
+hydra
+Python 3.11.7
+job=32003 root=/mnt-homes/wapol/gilureta/natan.brugueras/projects/rrl_bayesian
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/mnt-homes/wapol/gilureta/natan.brugueras/projects/rrl_bayesian/experiments/compare_fqi_trees.py", line 316, in <module>
+    main()
+  File "/mnt-homes/wapol/gilureta/natan.brugueras/projects/rrl_bayesian/experiments/compare_fqi_trees.py", line 310, in main
+    write_new(output / 'regression.json', report)
+  File "/mnt-homes/wapol/gilureta/natan.brugueras/projects/rrl_bayesian/experiments/pong_analysis_common.py", line 45, in write_new
+    json.dump(payload, handle, indent=2, allow_nan=False)
+  File "/home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/lib/python3.11/json/__init__.py", line 179, in dump
+    for chunk in iterable:
+  File "/home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/lib/python3.11/json/encoder.py", line 432, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  File "/home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/lib/python3.11/json/encoder.py", line 406, in _iterencode_dict
+    yield from chunks
+  [Previous line repeated 3 more times]
+  File "/home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/lib/python3.11/json/encoder.py", line 439, in _iterencode
+    o = _default(o)
+        ^^^^^^^^^^^
+  File "/home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/lib/python3.11/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type int64 is not JSON serializable
+
+------------------------------------------------------------------------
+[Slurm] Este trabajo (#32003) terminó SIN reporte de rendimiento por correo.
+Puedes recibir un correo con el uso de CPU, RAM y GPU de tus trabajos
+(y sugerencias para que esperen menos en cola) agregando esta línea
+en tu script de sbatch, junto a las líneas #SBATCH:
+
+    #SENDJOBREPORT
+
+Dudas: slurmjobs@cenia.cl
+------------------------------------------------------------------------

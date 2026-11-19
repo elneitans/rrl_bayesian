@@ -1,0 +1,27 @@
+No broken requirements found.
+hydra
+Python 3.11.7
+job=34524 root=/home/natan.brugueras/projects/rrl_bayesian/historical/pong_pilot_linux_01_code
+BART base: pipeline=ocatari action=1 initialization=stumps
+{"status": "completed", "action": 1, "condition": "base", "smoke": false}
+BART base: pipeline=ocatari action=1 initialization=dispersed
+{"status": "completed", "action": 1, "condition": "base", "smoke": false}
+BART base: pipeline=ocatari action=4 initialization=stumps
+{"status": "completed", "action": 4, "condition": "base", "smoke": false}
+BART base: pipeline=ocatari action=4 initialization=dispersed
+{"status": "completed", "action": 4, "condition": "base", "smoke": false}
+BART base: pipeline=ocatari action=0 initialization=stumps
+{"status": "completed", "action": 0, "condition": "base", "smoke": false}
+BART base: pipeline=ocatari action=0 initialization=dispersed
+{"status": "completed", "action": 0, "condition": "base", "smoke": false}
+
+------------------------------------------------------------------------
+[Slurm] Este trabajo (#34524) terminó SIN reporte de rendimiento por correo.
+Puedes recibir un correo con el uso de CPU, RAM y GPU de tus trabajos
+(y sugerencias para que esperen menos en cola) agregando esta línea
+en tu script de sbatch, junto a las líneas #SBATCH:
+
+    #SENDJOBREPORT
+
+Dudas: slurmjobs@cenia.cl
+------------------------------------------------------------------------

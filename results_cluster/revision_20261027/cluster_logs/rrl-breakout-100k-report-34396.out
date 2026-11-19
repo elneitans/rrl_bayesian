@@ -1,0 +1,2477 @@
+No broken requirements found.
+hydra
+Python 3.11.7
+job=34396 root=/home/natan.brugueras/projects/rrl_bayesian
+{
+  "schema": "pong_progressive_report_v2",
+  "campaign": "9f5e8f2684519f5245eed0551754c9442f3f7152d35b24b9f8c9ed35f8af2cee",
+  "cells": [
+    {
+      "cell": "Breakout/ocatari/corrected_common/710601",
+      "game": "Breakout",
+      "training_state": "partial",
+      "reason": "authorized_milestone_reached",
+      "comparison_state": "partial",
+      "counter": 100000,
+      "metrics": {
+        "completed_games": 451,
+        "ended_episodes": 451,
+        "epsilon": 0.1,
+        "interactions": 100000,
+        "learner": {
+          "complexity": {
+            "FIRE": {
+              "leaves": 3,
+              "max_depth": 1
+            },
+            "LEFT": {
+              "leaves": 7,
+              "max_depth": 2
+            },
+            "NOOP": {
+              "leaves": 5,
+              "max_depth": 2
+            },
+            "RIGHT": {
+              "leaves": 8,
+              "max_depth": 3
+            }
+          },
+          "fallback": {
+            "bootstrap": {
+              "internal_fallbacks": 23059,
+              "queries": 398196
+            },
+            "prediction": {
+              "internal_fallbacks": 19330,
+              "queries": 302240
+            },
+            "update": {
+              "internal_fallbacks": 2088,
+              "queries": 100000
+            }
+          },
+          "kind": "rrtl_corrected_common_v1",
+          "splits": 10
+        },
+        "phase_seconds": {
+          "checkpoint_logs": 74.92776416317793,
+          "emulation_extraction": 234.11977055761963,
+          "fit": 0.0,
+          "policy_collection_td": 179.51240688213147,
+          "prediction": 8.808358985756058,
+          "relations_encoding": 133.73956997779896,
+          "selection_targets": 0.0
+        },
+        "relations": 11,
+        "truncated_episodes": 0
+      },
+      "logs": {
+        "decisions": 100000,
+        "ended_episodes": 451,
+        "raw_return": 1143.0
+      },
+      "training_attempts": 1,
+      "peak_rss_bytes": 199561216,
+      "training_seconds": 665.0075748329982,
+      "evaluation_seconds": 3580.426378539996,
+      "evaluation_budget_seconds": 3559.783812719863,
+      "unfinished_evaluation_attempts": 0,
+      "inventory": {
+        "schema": "pong_retention_v2",
+        "checkpoint_bytes": 13550346,
+        "log_bytes": 41237996,
+        "unconfirmed_logs": [],
+        "artifacts": [
+          {
+            "path": "checkpoints/0-be859b0b38f0a5ec861700a769d526655d92879dbdf0396e265409a93d82cd54.pkl",
+            "bytes": 40129,
+            "confirmed": true,
+            "protected": true,
+            "removable": false
+          },
+          {
+            "path": "checkpoints/10000-51cd3064166fc0b07711900e1d7630c2d1b8430490f7de2a9018af894da3786d.pkl",
+            "bytes": 48658,
+            "confirmed": true,
+            "protected": true,
+            "removable": false
+          },
+          {
+            "path": "checkpoints/100000-bfe7fec81ffae8e9677eddf94f110e16f49455b929e8452da5b787a46b56d842.pkl",
+            "bytes": 92880,
+            "confirmed": true,
+            "protected": true,
+            "removable": false
+          },
+          {
+            "path": "checkpoints/1024-a8cced8c8d2a2aff94d19fc293d061f832a782e9aca03ae069fac0be1fe419ce.pkl",
+            "bytes": 43186,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/10240-4b67eb46bd7dfbdb5c102a7b08f0959e3f35acb3cf74a7a4640e242e84db9295.pkl",
+            "bytes": 48319,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/10752-e032de5decae13d225ebfc253f6d9ff5b841ae4b792f09a668e30e2ac141b6cf.pkl",
+            "bytes": 48638,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/11264-a6078a715b3b1ddb709f2bf6e2a75bdf1a57b5e095e0c59d7d696441e1b6c368.pkl",
+            "bytes": 48537,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/11776-8e0c4864d7c012105ba0e9b5d93e9ce12d33b7f7e1d6b80195f27446adc26b06.pkl",
+            "bytes": 48645,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/12288-a860403bc2da75d1320df1a21593970bafd01c1742195d762824df74f1d5b439.pkl",
+            "bytes": 48668,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/12800-f1cbb5fe7f99bdb87ca1a93eda03a4721fe9480252d51956cdaf200f8730ff83.pkl",
+            "bytes": 48662,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/13312-9f4284b0b550dbfe724ef3b3f871c05858bac240978a9b2fd6a7040fc6365ce2.pkl",
+            "bytes": 48682,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/13824-5b8d045e433e158cab8e91bbfdb8349f051b3e9d582ecefe12b967c952307084.pkl",
+            "bytes": 48359,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/14336-175737a7cf25b80942ee7c4d9a3efa126920b34e133d273b8f50d81a0f91cd9c.pkl",
+            "bytes": 48675,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/14848-2f438a7fab6f72a4ce48ca05f7ba90021aac94640892d55a6418c7331ea51830.pkl",
+            "bytes": 48696,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/1536-bc914c226118a8fe2a6e08a22455ec6da07ec6d9c7f124a5ba30729837e94c3b.pkl",
+            "bytes": 43248,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/15360-2539cabcfc6d5c048b2936daeb9cefe2ed2cc322f78e73083ecf315a737b6aed.pkl",
+            "bytes": 48702,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/15872-f8d12bed4bc0a20a56dcd9646e4a553cbba7523e050d26e6687b1d4478bab933.pkl",
+            "bytes": 48667,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/16384-b519985199fe6a28fb603da97722bc9cde5be14a47335de8f89b27abb7dd1808.pkl",
+            "bytes": 48709,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/16896-e9404ed30e1c8bb78402f7009e937952221a2cffcaf663dda15a6ea0a5a55427.pkl",
+            "bytes": 48707,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/17408-ceb38b977c70c36187fa4a8bee22b90366525b80e8c4f8b5d7472aa62e822659.pkl",
+            "bytes": 48704,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/17920-12980fdd4b154e168b3ed4dc8712a9d4da675dded0ec150e0690aaeb9dec216a.pkl",
+            "bytes": 48725,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/18432-2b93d39aad7037e4797f49f61e752462bcd0f5900ba93d4d9600251c13f7cfa5.pkl",
+            "bytes": 48728,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/18944-e8b579a7633af00d35bd5827d09e15d00dd1b77b2671c13bd6f05f92da78900c.pkl",
+            "bytes": 48630,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/19456-0c3f7a73cae535ed4eb28f56f11b69ce15d502f0d7d70bc69af2fd6140976a66.pkl",
+            "bytes": 48745,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/19968-9b880e97011a8c4e29103bd3a0eb97172c275fae43357fee9912072513797390.pkl",
+            "bytes": 48771,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/2048-e8f691c062d3b98def5cd83146e5c6846cabddeaf9fa690526089bd8c8ad01fc.pkl",
+            "bytes": 43304,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/20480-de5f7a751f34ba92fb0f3478ee490887b40c497997e326fe47f41f770bd7c10d.pkl",
+            "bytes": 48756,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/20992-629bab6a2442e30bf9d108e524ee29c16f3fe02c10c1c529bce2cf209bd37bd6.pkl",
+            "bytes": 48750,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/21504-c930b390b9aa146635110f4f96501fc142f901c1785b21eeea204d28f029b0f5.pkl",
+            "bytes": 48756,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/22016-44909d4554e849179e786c8ce66cdeb28a6b3c5b3ba78557c7eacd714d282330.pkl",
+            "bytes": 48394,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/22528-ff7a5d4b41dbab167c517cb753b97179c8ebc425b9a8f0562cd20a3199c4d51c.pkl",
+            "bytes": 48759,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/23040-14ae5d29da1f300fa18a331418d86e4215a645e8165072df6750c7443c1d7fa9.pkl",
+            "bytes": 48413,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/23552-4369e0308811b8c3745b8830d77069ea10587574db3cba74e4e1bda77cdcf8dd.pkl",
+            "bytes": 48734,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/24064-9b53d0657b678e49b222a7ad837d41f8894beca67d244bf5de1a8b7f5fab1c95.pkl",
+            "bytes": 48425,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/24576-c5ddc37d7a4541e248115cb7dcf484d9fef4a626cc7b5c69a27c092fed7265ba.pkl",
+            "bytes": 48737,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/25088-b1d86ec339208f410354b60b0afacf75a018b63418e3fdecc323216a4d0073d5.pkl",
+            "bytes": 48738,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/2560-22df2df129d9d1dbaaffd1ffcf3d6486eb1458736b21c7d6cebb982ddfa88f1c.pkl",
+            "bytes": 43288,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/25600-e316ddbbd452f9ff59f4951aa52825f84b19bab9217661fec2271ecec5a70119.pkl",
+            "bytes": 48736,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/26112-7e69b69844754a8f8fefe1a231284bec1f14bb98a637149b7c5af26525650bd7.pkl",
+            "bytes": 48745,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/26624-31c52a0e3cfc05bdaf149f276ccf925e42ad3c1c41905dd6a6c7fe3f29b688d9.pkl",
+            "bytes": 48421,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/27136-e318c8db9800b4efde7f0030dd5966faa2acf379e3a4ef8cf0608b6661a61e3d.pkl",
+            "bytes": 48727,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/27648-7bb10af8e54e0e16e84d0e9c7e145a7468b6fe898f2e63400fae8a7abaa06c62.pkl",
+            "bytes": 48740,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/28160-ab648294df36f2a00b456a9b2e50c835c0e4a54a4a8b640ba602fc83b44403e7.pkl",
+            "bytes": 48427,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/28672-780b803e7ade32999bfa26a117e1ffb71ed4ac6bcbdc743687148539442df0ba.pkl",
+            "bytes": 48760,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/29184-9bfc311aceea743563f177b098c020c939a2e5bf973277135846eed39410a844.pkl",
+            "bytes": 48758,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/29696-9e247e8d83583475d73049c670984ef61921d973b0807f7ad633eb6791f29b57.pkl",
+            "bytes": 48434,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/30208-30a91bf147a62a763c208939311849c0f3b2ccfb34875e67a87eb5d1db827cfa.pkl",
+            "bytes": 48423,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/3072-bf40f372851e0d1ab8cebcbf54dec94e2c31f9165c2a5a6fa76e906c0678f160.pkl",
+            "bytes": 42999,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/30720-321ecb3191fc46c369e262e8373409c14588ec0afade3ce526c44191f157e30a.pkl",
+            "bytes": 48757,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/31232-a90e6a79df6c03732e509b70cc6caa26d94f3c70ec701dff8a923b55c99561ef.pkl",
+            "bytes": 48758,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/31744-f277afa2bf5a84c3a5af593bb7514ab5ecee7dd768152ecde48c1db7808f2cfe.pkl",
+            "bytes": 48446,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/32256-931377251c0c433b443689e5a0c9a4f99d1b2d70a6977e4d4b54c44bc8b28682.pkl",
+            "bytes": 48734,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/32768-32c5431cc6d7146f0ae06d3fa831783d7f02c4a0dcd22d2197199c03b5640ac8.pkl",
+            "bytes": 48716,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/33280-80a7b3aef8c4fafd7081678569dcd5b6bf5755f76c0738071af4de3fb24fe5ee.pkl",
+            "bytes": 48733,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/33792-cf6130ef550729ad3c948f7856f67be17932931788eea331cdb8c67af10c74f1.pkl",
+            "bytes": 48712,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/34304-738b8723deff6f9656d964303ae0a7f5c02c436260b61c445a70c8cdec34c9d0.pkl",
+            "bytes": 48732,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/34816-4cc45a07712d621a911cb08c91695686c3c573dca4339fa9dfc42af8cf9b4abc.pkl",
+            "bytes": 48439,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/35328-96666376bb6af7a1d1369409a233c7c87fa75e250996de7df468ee856ffa0d45.pkl",
+            "bytes": 48402,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/3584-50e7384c627cb4e40798815095cbee95d81089ecc021fbd428001e5f8833919e.pkl",
+            "bytes": 43041,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/35840-72f05153ae7b92384660023510d3cc638ef26ef6af470b7304bdb53e6dc4c5e6.pkl",
+            "bytes": 48744,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/36352-e180763947463cef8ace3f3ed1f5e762174dec1e5510b0b384e446806e007f6f.pkl",
+            "bytes": 48646,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/36864-d18a3e3e2532d0e1168adefcc0fa12ac87627bdea2bd3c539939676885ba64b9.pkl",
+            "bytes": 48748,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/37376-0361eb4d7ea980a194e7696599ec9cecf6a1c2897a4c3359f3e3e5ffa428967d.pkl",
+            "bytes": 53606,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/37888-fabb1a3aeac32585fb566fa935ef0b68263cae7db402d35707c0c7596a9697ac.pkl",
+            "bytes": 54006,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/38400-ed49fbd159c0eb272d422d363af481e94769ff7abbaf035b3d7eb5e0c0542093.pkl",
+            "bytes": 54047,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/38912-869e11cf98f1381e97e70a8aa84362d9b76a8d9d7ca5750573b9a32564ba9716.pkl",
+            "bytes": 57294,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/39424-6886599f62b7993cd57a0c36dedc939d5438034dfb5096710537763e05255e25.pkl",
+            "bytes": 57001,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/39936-4d51d8ae15746e98b36a23d76906ad3ae4020aa1c4f1117415640060e835f0de.pkl",
+            "bytes": 57333,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/40448-7a0bf7bf08617a75c7615c9da1b9807ade67102b42e79732cd0e31cfdc712fba.pkl",
+            "bytes": 57357,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/4096-32875e8c3a49f0846f0cd4d262b67363a3805f7e58c609c2dc9c8b05c9ee62ca.pkl",
+            "bytes": 43342,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/40960-eff2a9701cd6e04e38ff23fcd4bf7d1986c10e6e08dd8c711532a35a286bb1ef.pkl",
+            "bytes": 57350,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/41472-57dd9f055ca6eb2ea393043692dcb14f3366d4251339b8e0a4021f0cbf64479e.pkl",
+            "bytes": 57341,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/41984-b2c84920cc60699da6f694ae8fd6003d95e3d0272cdf607996a174a499199b5b.pkl",
+            "bytes": 57340,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/42496-29736381dfc9a1cb583fdff9f6a8c75d9e859e9b6659f64bed90008c17a7881f.pkl",
+            "bytes": 57034,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/43008-d8c26d901016e18bfa91e1ce70c0b14ac08a520ee3c3e11fcacd0680c3667cb4.pkl",
+            "bytes": 57340,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/43520-ed656fe35ee07798e824eee002a4a81a778807ffa047ee254325fa30843ed39d.pkl",
+            "bytes": 57339,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/44032-e0becc33cb20b20855f310a404400025cf88e1e540e21d42d4de078a3323a6ab.pkl",
+            "bytes": 57345,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/44544-f02456c71bbfd232f8a3d67707ad24733d6e8ee514b664bfa1977382a50647a3.pkl",
+            "bytes": 57333,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/45056-1662cd73b6682f6b1bbd8f7eff4a227c1533a518efe26d271539fb91eb178341.pkl",
+            "bytes": 57322,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/45568-c2dc6cda31e1981459c990cf19d8b636a632efe7e6dbddd9c862fe39cde86b4e.pkl",
+            "bytes": 57035,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/4608-0a2277e1541746b3394a9a3fd8b520b9eb066bb37ff22d3417c3db6b652bb6db.pkl",
+            "bytes": 43326,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/46080-c10c170aab177608d5719a1faba8e5cd9f4fbcd90c8dc4799f6db5dbe93702f2.pkl",
+            "bytes": 57359,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/46592-66a22a97806c75cd0c959361d70c27354b8570099d62ac68a724472f264381a1.pkl",
+            "bytes": 57332,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/47104-11bd8f46ea540a88cfc5f83247e418fe0bf39a72aef7ba170f02f8d93a3a5dc6.pkl",
+            "bytes": 57045,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/47616-04074fb80752ef465767965695834ed389349f4c82d6f067fbc67098875e95be.pkl",
+            "bytes": 62478,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/48128-7c5a81d7d56cc012e7810799f3737e54aae0013790c48229dd9cd2b6ff5f4101.pkl",
+            "bytes": 62479,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/48640-9f93116948889e37c2d873d87cd4c2f06fe4b4e125a0b16f93617793c4a74384.pkl",
+            "bytes": 62509,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/49152-e4bcb0a528ae3d328e368e6268d3a5156b59c2840d281819bdb236635b162442.pkl",
+            "bytes": 62532,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/49664-c9fff3927c21cca1694967c3a0de84b5034fa9b2dd1cee1a2c94a1ad255201da.pkl",
+            "bytes": 62557,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/50176-c30be9d090501e784989395624746e9bc3c730314a0572603e81564a956691ab.pkl",
+            "bytes": 62284,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/50688-eef29c008b4222ec8d42ed99d2e8ca5c428eaf9f1b7b6f0cdc08509d5016fd6a.pkl",
+            "bytes": 62595,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/512-79da9a7c3b437c1dae558445c35a7398e185c57091727319885e1bc0a17e1a2a.pkl",
+            "bytes": 43142,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/5120-4cdab8a1e0f76bb225c10711ce67acfb0e5c963b62ade6fcda45a1bb857eecaa.pkl",
+            "bytes": 43058,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/51200-2b92f2dc1b5724c3e618d4fd4d4c23bb4bcdb9b4e92164cf094db6884ea613fb.pkl",
+            "bytes": 62576,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/51712-15b6bdfcd4a369eb7b059871595126b44f6d5e9cc476fa4ae9b30b1b88efcfdb.pkl",
+            "bytes": 62573,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/52224-1e2814bc51d9fc3e1800264763ad90d6cefeabdae2f245d13d561b2f4dc48198.pkl",
+            "bytes": 62636,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/52736-29d1a6f66120b932e85542f73ee63824b3d8a0a04db8c1a009d4ba19d1b61cf8.pkl",
+            "bytes": 62632,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/53248-bf69707cb14ca70c6ae74832d311cda2dbb0c52e2b846b483bafaf841a5c5112.pkl",
+            "bytes": 67232,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/53760-ccad352a82e351774f11db456e6e744ee143177ff6c0159e07cad35b6e04bd4b.pkl",
+            "bytes": 67550,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/54272-71be77e86fe2ea4d8a709ca3fe482474f1db10a215ab7973970c38f8ebf9991c.pkl",
+            "bytes": 71967,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/54784-443316c82a32c82981df7631b48ad0c0be8c5034947ac3e746fe5e967f15404e.pkl",
+            "bytes": 72042,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/55296-fde9e7df5f5a0c396dccfe51426d795982134bc6f1c2174904d575b96b228985.pkl",
+            "bytes": 72091,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/55808-2f28cdce0a34f0f9f55ff97359831f0b29630c99695d78ed23f50543392fc997.pkl",
+            "bytes": 76861,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/5632-e1f3bf3c796c45c5ab809eb632f548b5caed0e24c293cc5e0ca76f3f30927471.pkl",
+            "bytes": 43065,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/56320-fcf91ba2d9a036e3b9656ada424d11a1afb6815457dceb4e825cc7bfaada7908.pkl",
+            "bytes": 82113,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/56832-bcb5e7390a9c52cee407ebbc00d027ed19e5cf9e2c6c1552fca9670b5edb5c38.pkl",
+            "bytes": 82197,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/57344-8b2384b2d50d278f7602fecef1950b34e44e4e1f9c1393146150fce3f0ebfe60.pkl",
+            "bytes": 81918,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/57856-c7723244cc6e5130a35624c57e5adcbd2a355f52441d2670420267a94ecfa1a6.pkl",
+            "bytes": 82236,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/58368-2443078a9635f47ef0260d0be0c791c8e64394195211fd1bfc180f5af1bf6084.pkl",
+            "bytes": 81957,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/58880-318950a38377df2af7e41a0715f03a9867ed91b79a17dab1c3ee08883654c5d8.pkl",
+            "bytes": 82263,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/59392-352ee6ddd198d9dd1f5ca7f513d3f20c8b516f7deb6bd3ebe65d6650d4e050f4.pkl",
+            "bytes": 82327,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/59904-381363e9698f99ac931dc94021d9a29fc93186841a297d8dfa71d8fd3b294646.pkl",
+            "bytes": 82370,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/60416-787edcd38fff79c46a75044bce5181e14cff0dbb33b10c8324339f4413cbbaa4.pkl",
+            "bytes": 82327,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/60928-9a4b6bebc9011984fc137ee681047f99c8a32660c33f43173ab83829776fb22c.pkl",
+            "bytes": 82253,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/6144-981e25011205f39d7699799c1c6a406f0e41df55b088625a69bb9a4fd82b75ad.pkl",
+            "bytes": 43370,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/61440-cd3415c103eac574eee445ee55d8b5d64c6666a91b06424d8a3b067132c8f017.pkl",
+            "bytes": 82055,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/61952-53d711eee2c14932ad494c086838c0af26a948962eec4808cc0bfefaddda9c6f.pkl",
+            "bytes": 82409,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/62464-a7a5e7b222324619cb8cc54f4eb6839007fad98e8c73e3ce95659e1ef6381398.pkl",
+            "bytes": 82405,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/62976-298ecf6085b8f765a0de9ec4fd20824f1f5d21193113db8f1608fbf2c12e6c3a.pkl",
+            "bytes": 87211,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/63488-09780cc3d9029595f9ceb4d0d111fe667aaabb11df68db1a4ebfae64a482ede8.pkl",
+            "bytes": 87268,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/64000-8b12681611deb73f8f3157fdc7b2fb77eb06b76eb1f4d6eda2c5daed2264535d.pkl",
+            "bytes": 87599,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/64512-e40a942cd514a163e47723f471bcfcbfe15f97b2e29ab4c0756eedceaee39982.pkl",
+            "bytes": 87248,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/65024-c782875585d548e25d58b753873ee809889ff4bac5e2d745aab64161b4a6bd75.pkl",
+            "bytes": 87646,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/65536-74b9eddf932770d5c52e041b862df8f5140460c824898b01ce798542c984d6d9.pkl",
+            "bytes": 87702,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/66048-b0debb5636fdabedab9b351c82a28e97b62ed895e1b688e249885bae1cb23b7b.pkl",
+            "bytes": 87695,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/6656-c23cac2ab9b109580d1ab6aa21b33216363b456f0d50c2376cc1ff61a0abf1f9.pkl",
+            "bytes": 48256,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/66560-59c68391c0213f6d5d7df23854582008d6cc3fd63f3591b30c970bf1965370c5.pkl",
+            "bytes": 87728,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/67072-f5bfce6c8ce77ff5f909696ad8ca9012675f084f70ac6148a2044aeec85a2add.pkl",
+            "bytes": 87789,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/67584-c2d8e84a5958f3975f5132c560876a079a89d47347e09fb4db01e8765a0c6989.pkl",
+            "bytes": 87791,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/68096-0004dc38f2e809625019703692282fd4f7c17c555414eaf115ed0a9cfc82c151.pkl",
+            "bytes": 87762,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/68608-d8892bef5d1bd90ebd9fd803a3ed3df468abe07ed3676903f4639f6fcf12f28e.pkl",
+            "bytes": 87807,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/69120-704a7580b47fa44f3da0e2f3bb2210a05fc3ceab8a437ab9808449a31aaf3c3e.pkl",
+            "bytes": 87819,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/69632-100418b1d606f192a42232bbb4d88eb74aecf52ecc93af573dbc4bb6bc133764.pkl",
+            "bytes": 87794,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/70144-0715ee0570a0aa3186fafd5b911bba46aeab15a964f6b9e840dbf89cb95a06a9.pkl",
+            "bytes": 87824,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/70656-835878c5301a1cdafc99d394af1eaf3e2d66445b3408d88148cd253a23299b3d.pkl",
+            "bytes": 87806,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/71168-fa77c8461d52bda7636c48f316337c2f2494b7b5bd3abc4739345b18ee4b241a.pkl",
+            "bytes": 87834,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/7168-23b2d4c5fe67a4142f7e59515816dc8154be6ca29e32bb23676bc3ff673dcab9.pkl",
+            "bytes": 48590,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/71680-e0d4205289b70cf4b7f56d331e4f4b151e454f7d35e71c88d2fee79c68517e75.pkl",
+            "bytes": 87854,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/72192-e78d4b4c467e8fd5f8ba9bd1d16f73e1d90b586dbfaa343a9bebac54834fa5e5.pkl",
+            "bytes": 87877,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/72704-bd3ace440647b800b18dc56c562c3c2aa20066dff7e17b77b51322864a690e23.pkl",
+            "bytes": 87783,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/73216-c44a3273325ad0a16ee00747b92b3dc9b2e8339cd8204db9a22c19bdaff55088.pkl",
+            "bytes": 87865,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/73728-32f4bbdc91fdd80842274225b2451ffb959231ce59dbe4df47814abe9a4bb614.pkl",
+            "bytes": 87881,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/74240-ce2a95ce1bfc8692942916d57faae2013dcc9355140874584f5158114aef3d23.pkl",
+            "bytes": 87581,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/74752-e2afef896b7cc6f76f8d35042ce0d4b9456cbb678f45b5960c6ca5d16662425c.pkl",
+            "bytes": 87613,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/75264-aa7bdc8376924be6cc7e6df3d3aad859930b5c39a6b8bba159eb34dfca543922.pkl",
+            "bytes": 87936,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/75776-6cc37eb78ceca6b2d9f709afaeccc02e19bfae71144bf2c3130e10976b3d44a6.pkl",
+            "bytes": 87913,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/76288-1949cead3ba6c583d8f13d73f952a078496d18c5a8cb69f0a06be927d1efaf50.pkl",
+            "bytes": 87916,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/7680-912469aeb18113971a833af30f2b5de5ac523d37f84aeea6909f42c901acc669.pkl",
+            "bytes": 48607,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/76800-e80648b8f1ea3983a8a5e824a1840a4b93508ee39cf8784db8b6e231c11b2b6f.pkl",
+            "bytes": 87897,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/77312-36220449ae8cb4769dbefaa721944856b7de3478a6112f7c80f62f299a6ef2cb.pkl",
+            "bytes": 87954,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/77824-af6fa491679d82c6572ee8ed8ad7798ee402534d12beb1d207e3dbf60282233f.pkl",
+            "bytes": 87831,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/78336-be6363ac322ee252eae04c1aa4b28bb1613f480b952e6d56dbc0932cd9c47102.pkl",
+            "bytes": 91943,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/78848-576f64a9787f2966bc790de20c88a16d1b1f0e25ddb08574857c0bf234c81ef1.pkl",
+            "bytes": 92211,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/79360-cc6ff15ccc319d2693b24d529938454f1e09f6985c49ae19c91569f9aa403200.pkl",
+            "bytes": 92258,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/79872-83dd7f1c9712da98bd8a8d712fb77743120f79270ef5b02c26be5d2422a81e20.pkl",
+            "bytes": 92232,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/80384-7348711e47c75bf03985f7e3960f8a9eb33ddab425d04603ddf256adbceeb2de.pkl",
+            "bytes": 92219,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/80896-735843606b7cd332ee6dba975e6702ab209467fb19c19795ffc80d6000c77beb.pkl",
+            "bytes": 92147,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/81408-03806b58cce7ecaf1ba419d27de0a0d286eceef23596abc40095dd8518ac6aea.pkl",
+            "bytes": 92261,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/8192-aba75c7962638e058928c29650292a94dabb95321166ed3a0c399df6e4322ebd.pkl",
+            "bytes": 48620,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/81920-f06bb735bc096c79e20fcff8704cce94e77fba9e43941ea06fdf101069f97e21.pkl",
+            "bytes": 92147,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/82432-3457d7367f9e0583012254f5e52b2e9ae60fc01309e54789490b9682828ce9c3.pkl",
+            "bytes": 92231,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/82944-07fbc11edc800b3c26f3661cdab6a52aa974ef0109f03dc3b90ea17574da5abe.pkl",
+            "bytes": 92245,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/83456-c852ab2a5fc82cfc425728c2d65a78228f2c38c033b26e30603ddc0542c8b62d.pkl",
+            "bytes": 92280,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/83968-63e18e27d6acad5876fc3d4b2f844a0faa9c93426fdf3cd2bc94c8df760f7208.pkl",
+            "bytes": 92275,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/84480-6d146808747beea1a460ff1e1798ad27d69b038dedbd447546fc896215212ee1.pkl",
+            "bytes": 92154,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/84992-64345c03a2cb272a0caa77a7ed2a67cedd91bb4e05f471e1e38aba4b693a80dd.pkl",
+            "bytes": 92320,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/85504-9e69d24657d070dc55b1a6e63e926440aa34763324f43517337d00ea177b439e.pkl",
+            "bytes": 92536,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/86016-539cf021f0844aa673877f7059229f20ed5d1fab45c2570c78ad8106ce4eda5a.pkl",
+            "bytes": 92542,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/86528-3d21bce96ddd1358ed09a17241c27f41930b8c56d88ac76dcc392614dc026926.pkl",
+            "bytes": 92534,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/8704-26da77fa896d2cab5ef06ed8e86e50e4321423444364161448d6172ce3c62a8a.pkl",
+            "bytes": 48629,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/87040-ee76606a7859722fc10af16d7103a36cb32164705a0dc0e51b4b2c3ab041828c.pkl",
+            "bytes": 92214,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/87552-f69e5d2cdd706048093cc5b7528458e8e404da0a7a9fa321f66658f04eb52aa3.pkl",
+            "bytes": 92547,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/88064-412259d1f4a600f77f79dd7b3c2048106a92cc85299772df83d9c0c2df6ae8bb.pkl",
+            "bytes": 92534,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/88576-ab953332a05491f53cddfc070b5dfe3074fa17cbc67ba7abf4591f4adfb65570.pkl",
+            "bytes": 92726,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/89088-367a02250cc5a1a61c2779935c468b618f5ff66b91c4ee5375d611096a8822e9.pkl",
+            "bytes": 92826,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/89600-5cf602eb7e6951c612a8e61e48164c8366a480c4084586a89658298e5a971327.pkl",
+            "bytes": 92784,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/90112-ea962385a6a868259461e116f39160170b7596d68543bded08f957729769496f.pkl",
+            "bytes": 92791,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/90624-96edb1bf426585f9323b2bd352e78936fb15ae035293a0f79700ee2d88d82d94.pkl",
+            "bytes": 92781,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/91136-cf8021994b7951ba1a039c7d60b28f8bc2db8f6e737136536f811b68c3cec3dd.pkl",
+            "bytes": 92804,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/91648-69f0413851b40d68d08d48193a3b19be3292ed9cd9c0cb4fae55831597b1636d.pkl",
+            "bytes": 92806,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/9216-249fb7cdc1b2a1114020b86d58ac8a6d5b6a7600400d3ec76b9732c51104abcd.pkl",
+            "bytes": 48298,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/92160-8d824f359d6d24bbc297b49a676151404b6e94c790804446008d27b0ef3e2ce3.pkl",
+            "bytes": 92789,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/92672-092d7f642e63fbb3be851d50f9e04870554fb70b74f8a3adfc791695e354969a.pkl",
+            "bytes": 92820,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/93184-536ee7fb9efaebecb08ffb88ed3256f0e1cd0c5e8809a077cdbb3b640bbbb3bd.pkl",
+            "bytes": 92489,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/93696-3ae5eaf7fdc715ba013765357c2c9d2af184332ead83f17a8a5303e0f2255f45.pkl",
+            "bytes": 92845,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/94208-cb5e7f71e92130309d1fdb795ed132bc15aea3256541bee2030847c630db4830.pkl",
+            "bytes": 92795,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/94720-8300c4a4ac2d7598e7497c0c23d4a494e43b056da8b32679c7790f0de30e512e.pkl",
+            "bytes": 92820,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/95232-6fb844bea9edd8dc9b4c15727e4efa6c2b1a6d23794408cca97422c85685c9b4.pkl",
+            "bytes": 92872,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/95744-165cd5e73121840c6eeac684e15291685a6848d8e29bb817c863627676af3b2c.pkl",
+            "bytes": 92837,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/96256-494860d7ef7f9470e63f275a741f9f1fad4caa06f876df139240563b10fb6cb7.pkl",
+            "bytes": 92853,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/96768-d0620357fc2f6c97bb271c9b1610d6c54c0a78cb7a8b4a4ddf29eec16be761cb.pkl",
+            "bytes": 92871,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/9728-998b9b56b4fcaccc4b0ae753c2f2c2dee12458f60b352cd9619643dea2835472.pkl",
+            "bytes": 48654,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/97280-d1b0606e6b8111253df5821323a05621b393117c0d1c22479cbdebba24382721.pkl",
+            "bytes": 92902,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/97792-5a74868e20299c2e43e7ec8af4065ef7aa4efb88f30637c584a8d87c574ea431.pkl",
+            "bytes": 92891,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/98304-62cb160f9c71b2ae9a5e3006c656a5012398a4e64d945662ed54b736824b89f0.pkl",
+            "bytes": 92876,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/98816-453372e74d6c158b1c638827286385b4356986b6842e0d9cf84d9c84685df3b7.pkl",
+            "bytes": 92900,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/99328-e1972b253e8a5361b5210e954e7a3c1048f7d8760d6911b5cdfabf4aef7910f5.pkl",
+            "bytes": 92888,
+            "confirmed": true,
+            "protected": false,
+            "removable": true
+          },
+          {
+            "path": "checkpoints/99840-446211794f67ee83c8ab801fa2cc5eb6562bf54d0ffd782db21af0f1817ec74e.pkl",
+            "bytes": 92884,
+            "confirmed": true,
+            "protected": true,
+            "removable": false
+          }
+        ]
+      },
+      "evaluations": [
+        {
+          "group": "final_development",
+          "counter": 100000,
+          "checkpoint": {
+            "path": "checkpoints/100000-bfe7fec81ffae8e9677eddf94f110e16f49455b929e8452da5b787a46b56d842.pkl",
+            "sha256": "bfe7fec81ffae8e9677eddf94f110e16f49455b929e8452da5b787a46b56d842"
+          },
+          "training_active_seconds": 630.6949734384543,
+          "seconds": 2487.4934130109614,
+          "report": {
+            "schema": "pong_evaluation_v2",
+            "episodes": [
+              {
+                "actions": {
+                  "FIRE": 1,
+                  "LEFT": 37,
+                  "NOOP": 18,
+                  "RIGHT": 26944
+                },
+                "raw_return": 1.0,
+                "reason": null,
+                "return_scope": "horizon_limited",
+                "seconds": 285.5496919649886,
+                "seed": 712601,
+                "status": "completed",
+                "steps": 27000,
+                "terminated": false,
+                "truncated": true,
+                "unique_encoded_states": 27,
+                "return": 1.0
+              },
+              {
+                "actions": {
+                  "FIRE": 1,
+                  "LEFT": 37,
+                  "NOOP": 18,
+                  "RIGHT": 26944
+                },
+                "raw_return": 1.0,
+                "reason": null,
+                "return_scope": "horizon_limited",
+                "seconds": 272.18269322498236,
+                "seed": 712602,
+                "status": "completed",
+                "steps": 27000,
+                "terminated": false,
+                "truncated": true,
+                "unique_encoded_states": 27,
+                "return": 1.0
+              },
+              {
+                "actions": {
+                  "FIRE": 1,
+                  "LEFT": 37,
+                  "NOOP": 18,
+                  "RIGHT": 26944
+                },
+                "raw_return": 1.0,
+                "reason": null,
+                "return_scope": "horizon_limited",
+                "seconds": 253.41870940901572,
+                "seed": 712603,
+                "status": "completed",
+                "steps": 27000,
+                "terminated": false,
+                "truncated": true,
+                "unique_encoded_states": 27,
+                "return": 1.0
+              },
+              {
+                "actions": {
+                  "FIRE": 1,
+                  "LEFT": 37,
+                  "NOOP": 18,
+                  "RIGHT": 26944
+                },
+                "raw_return": 1.0,
+                "reason": null,
+                "return_scope": "horizon_limited",
+                "seconds": 244.21923404099653,
+                "seed": 712604,
+                "status": "completed",
+                "steps": 27000,
+                "terminated": false,
+                "truncated": true,
+                "unique_encoded_states": 27,
+                "return": 1.0
+              },
+              {
+                "actions": {
+                  "FIRE": 1,
+                  "LEFT": 37,
+                  "NOOP": 18,
+                  "RIGHT": 26944
+                },
+                "raw_return": 1.0,
+                "reason": null,
+                "return_scope": "horizon_limited",
+                "seconds": 246.25790608802345,
+                "seed": 712605,
+                "status": "completed",
+                "steps": 27000,
+                "terminated": false,
+                "truncated": true,
+                "unique_encoded_states": 27,
+                "return": 1.0
+              },
+              {
+                "actions": {
+                  "FIRE": 1,
+                  "LEFT": 37,
+                  "NOOP": 18,
+                  "RIGHT": 26944
+                },
+                "raw_return": 1.0,
+                "reason": null,
+                "return_scope": "horizon_limited",
+                "seconds": 235.52861950802617,
+                "seed": 712606,
+                "status": "completed",
+                "steps": 27000,
+                "terminated": false,
+                "truncated": true,
+                "unique_encoded_states": 27,
+                "return": 1.0
+              },
+              {
+                "actions": {
+                  "FIRE": 1,
+                  "LEFT": 37,
+                  "NOOP": 18,
+                  "RIGHT": 26944
+                },
+                "raw_return": 1.0,
+                "reason": null,
+                "return_scope": "horizon_limited",
+                "seconds": 215.00249941000948,
+                "seed": 712607,
+                "status": "completed",
+                "steps": 27000,
+                "terminated": false,
+                "truncated": true,
+                "unique_encoded_states": 27,
+                "return": 1.0
+              },
+              {
+                "actions": {
+                  "FIRE": 1,
+                  "LEFT": 37,
+                  "NOOP": 18,
+                  "RIGHT": 26944
+                },
+                "raw_return": 1.0,
+                "reason": null,
+                "return_scope": "horizon_limited",
+                "seconds": 244.997930085985,
+                "seed": 712608,
+                "status": "completed",
+                "steps": 27000,
+                "terminated": false,
+                "truncated": true,
+                "unique_encoded_states": 27,
+                "return": 1.0
+              },
+              {
+                "actions": {
+                  "FIRE": 1,
+                  "LEFT": 37,
+                  "NOOP": 18,
+                  "RIGHT": 26944
+                },
+                "raw_return": 1.0,
+                "reason": null,
+                "return_scope": "horizon_limited",
+                "seconds": 236.54777621396352,
+                "seed": 712609,
+                "status": "completed",
+                "steps": 27000,
+                "terminated": false,
+                "truncated": true,
+                "unique_encoded_states": 27,
+                "return": 1.0
+              },
+              {
+                "actions": {
+                  "FIRE": 1,
+                  "LEFT": 37,
+                  "NOOP": 18,
+                  "RIGHT": 26944
+                },
+                "raw_return": 1.0,
+                "reason": null,
+                "return_scope": "horizon_limited",
+                "seconds": 253.78835306497058,
+                "seed": 712610,
+                "status": "completed",
+                "steps": 27000,
+                "terminated": false,
+                "truncated": true,
+                "unique_encoded_states": 27,
+                "return": 1.0
+              }
+            ],
+            "horizon": 27000,
+            "mean_raw_return": 1.0,
+            "median_raw_return": 1.0,
+            "std_raw_return": 0.0,
+            "iqr_raw_return": 0.0,
+            "truncation_fraction": 1.0,
+            "completed_games": 0,
+            "mean_completed_game_raw_return": null
+          },
+          "floor_result": null
+        },
+        {
+          "group": "intermediate",
+          "counter": 0,
+          "checkpoint": {
+            "path": "checkpoints/0-be859b0b38f0a5ec861700a769d526655d92879dbdf0396e265409a93d82cd54.pkl",
+            "sha256": "be859b0b38f0a5ec861700a769d526655d92879dbdf0396e265409a93d82cd54"
+          },
+          "training_active_seconds": 0.0,
+          "seconds": 5.350463456008583,
+          "report": {
+            "schema": "pong_evaluation_v2",
+            "episodes": [
+              {
+                "actions": {
+                  "FIRE": 36,
+                  "LEFT": 46,
+                  "NOOP": 43,
+                  "RIGHT": 45
+                },
+                "raw_return": 1.0,
+                "reason": null,
+                "return_scope": "complete_game",
+                "seconds": 3.402841005998198,
+                "seed": 711601,
+                "status": "completed",
+                "steps": 170,
+                "terminated": true,
+                "truncated": false,
+                "unique_encoded_states": 40,
+                "return": 1.0
+              },
+              {
+                "actions": {
+                  "FIRE": 57,
+                  "LEFT": 33,
+                  "NOOP": 55,
+                  "RIGHT": 32
+                },
+                "raw_return": 1.0,
+                "reason": null,
+                "return_scope": "complete_game",
+                "seconds": 1.9476224500103854,
+                "seed": 711602,
+                "status": "completed",
+                "steps": 177,
+                "terminated": true,
+                "truncated": false,
+                "unique_encoded_states": 36,
+                "return": 1.0
+              }
+            ],
+            "horizon": 27000,
+            "mean_raw_return": 1.0,
+            "median_raw_return": 1.0,
+            "std_raw_return": 0.0,
+            "iqr_raw_return": 0.0,
+            "truncation_fraction": 0.0,
+            "completed_games": 2,
+            "mean_completed_game_raw_return": 1.0
+          },
+          "floor_result": null
+        },
+        {
+          "group": "intermediate",
+          "counter": 10000,
+          "checkpoint": {
+            "path": "checkpoints/10000-51cd3064166fc0b07711900e1d7630c2d1b8430490f7de2a9018af894da3786d.pkl",
+            "sha256": "51cd3064166fc0b07711900e1d7630c2d1b8430490f7de2a9018af894da3786d"
+          },
+          "training_active_seconds": 62.964398825890385,
+          "seconds": 528.6480943260249,
+          "report": {
+            "schema": "pong_evaluation_v2",
+            "episodes": [
+              {
+                "actions": {
+                  "NOOP": 27000
+                },
+                "raw_return": 0.0,
+                "reason": null,
+                "return_scope": "horizon_limited",
+                "seconds": 253.96042022801703,
+                "seed": 711601,
+                "status": "completed",
+                "steps": 27000,
+                "terminated": false,
+                "truncated": true,
+                "unique_encoded_states": 4,
+                "return": 0.0
+              },
+              {
+                "actions": {
+                  "NOOP": 27000
+                },
+                "raw_return": 0.0,
+                "reason": null,
+                "return_scope": "horizon_limited",
+                "seconds": 274.68767409800785,
+                "seed": 711602,
+                "status": "completed",
+                "steps": 27000,
+                "terminated": false,
+                "truncated": true,
+                "unique_encoded_states": 4,
+                "return": 0.0
+              }
+            ],
+            "horizon": 27000,
+            "mean_raw_return": 0.0,
+            "median_raw_return": 0.0,
+            "std_raw_return": 0.0,
+            "iqr_raw_return": 0.0,
+            "truncation_fraction": 1.0,
+            "completed_games": 0,
+            "mean_completed_game_raw_return": null
+          },
+          "floor_result": null
+        },
+        {
+          "group": "intermediate",
+          "counter": 100000,
+          "checkpoint": {
+            "path": "checkpoints/100000-bfe7fec81ffae8e9677eddf94f110e16f49455b929e8452da5b787a46b56d842.pkl",
+            "sha256": "bfe7fec81ffae8e9677eddf94f110e16f49455b929e8452da5b787a46b56d842"
+          },
+          "training_active_seconds": 630.6949734384543,
+          "seconds": 534.2283351060469,
+          "report": {
+            "schema": "pong_evaluation_v2",
+            "episodes": [
+              {
+                "actions": {
+                  "FIRE": 1,
+                  "LEFT": 37,
+                  "NOOP": 18,
+                  "RIGHT": 26944
+                },
+                "raw_return": 1.0,
+                "reason": null,
+                "return_scope": "horizon_limited",
+                "seconds": 258.9000451430329,
+                "seed": 711601,
+                "status": "completed",
+                "steps": 27000,
+                "terminated": false,
+                "truncated": true,
+                "unique_encoded_states": 27,
+                "return": 1.0
+              },
+              {
+                "actions": {
+                  "FIRE": 1,
+                  "LEFT": 37,
+                  "NOOP": 18,
+                  "RIGHT": 26944
+                },
+                "raw_return": 1.0,
+                "reason": null,
+                "return_scope": "horizon_limited",
+                "seconds": 275.32828996301396,
+                "seed": 711602,
+                "status": "completed",
+                "steps": 27000,
+                "terminated": false,
+                "truncated": true,
+                "unique_encoded_states": 27,
+                "return": 1.0
+              }
+            ],
+            "horizon": 27000,
+            "mean_raw_return": 1.0,
+            "median_raw_return": 1.0,
+            "std_raw_return": 0.0,
+            "iqr_raw_return": 0.0,
+            "truncation_fraction": 1.0,
+            "completed_games": 0,
+            "mean_completed_game_raw_return": null
+          },
+          "floor_result": null
+        }
+      ],
+      "pending_evaluations": [
+        {
+          "group": "final_development",
+          "counter": 500000,
+          "reason": "checkpoint_pending"
+        },
+        {
+          "group": "final_development",
+          "counter": 2000000,
+          "reason": "checkpoint_pending"
+        },
+        {
+          "group": "intermediate",
+          "counter": 500000,
+          "reason": "checkpoint_pending"
+        },
+        {
+          "group": "intermediate",
+          "counter": 2000000,
+          "reason": "checkpoint_pending"
+        }
+      ]
+    },
+    {
+      "cell": "Breakout/ocatari/corrected_common/710602",
+      "training_state": "pending",
+      "comparison_state": "pending",
+      "evaluations": [],
+      "pending_evaluations": []
+    },
+    {
+      "cell": "Breakout/ocatari/corrected_common/710603",
+      "training_state": "pending",
+      "comparison_state": "pending",
+      "evaluations": [],
+      "pending_evaluations": []
+    },
+    {
+      "cell": "Breakout/ocatari/corrected_common/710604",
+      "training_state": "pending",
+      "comparison_state": "pending",
+      "evaluations": [],
+      "pending_evaluations": []
+    },
+    {
+      "cell": "Breakout/ocatari/corrected_common/710605",
+      "training_state": "pending",
+      "comparison_state": "pending",
+      "evaluations": [],
+      "pending_evaluations": []
+    },
+    {
+      "cell": "Breakout/ocatari/corrected_common/710606",
+      "training_state": "pending",
+      "comparison_state": "pending",
+      "evaluations": [],
+      "pending_evaluations": []
+    },
+    {
+      "cell": "Breakout/ocatari/corrected_common/710607",
+      "training_state": "pending",
+      "comparison_state": "pending",
+      "evaluations": [],
+      "pending_evaluations": []
+    },
+    {
+      "cell": "Breakout/ocatari/corrected_common/710608",
+      "training_state": "pending",
+      "comparison_state": "pending",
+      "evaluations": [],
+      "pending_evaluations": []
+    },
+    {
+      "cell": "Breakout/ocatari/corrected_common/710609",
+      "training_state": "pending",
+      "comparison_state": "pending",
+      "evaluations": [],
+      "pending_evaluations": []
+    },
+    {
+      "cell": "Breakout/ocatari/corrected_common/710610",
+      "training_state": "pending",
+      "comparison_state": "pending",
+      "evaluations": [],
+      "pending_evaluations": []
+    },
+    {
+      "cell": "Breakout/ocatari/corrected_common/710611",
+      "training_state": "pending",
+      "comparison_state": "pending",
+      "evaluations": [],
+      "pending_evaluations": []
+    },
+    {
+      "cell": "Breakout/ocatari/corrected_common/710612",
+      "training_state": "pending",
+      "comparison_state": "pending",
+      "evaluations": [],
+      "pending_evaluations": []
+    },
+    {
+      "cell": "Breakout/ocatari/corrected_common/710613",
+      "training_state": "pending",
+      "comparison_state": "pending",
+      "evaluations": [],
+      "pending_evaluations": []
+    },
+    {
+      "cell": "Breakout/ocatari/corrected_common/710614",
+      "training_state": "pending",
+      "comparison_state": "pending",
+      "evaluations": [],
+      "pending_evaluations": []
+    },
+    {
+      "cell": "Breakout/ocatari/corrected_common/710615",
+      "training_state": "pending",
+      "comparison_state": "pending",
+      "evaluations": [],
+      "pending_evaluations": []
+    }
+  ],
+  "completed": false,
+  "accounting": {
+    "training_seconds_per_unit_sum": 665.0075748329982,
+    "evaluation_worker_seconds_known_sum": 3580.426378539996,
+    "evaluation_budget_seconds_per_episode_sum": 3559.783812719863
+  },
+  "limitations": [
+    "A floor result does not establish equivalence.",
+    "Smoke is technical only; primary result is frozen final checkpoint.",
+    "Operational sums are resource consumption, not concurrent wall time."
+  ],
+  "reserved_test_executed": false,
+  "reserved_test_executed_by_report": false,
+  "analysis": {
+    "runs": [
+      {
+        "cell": "Breakout/ocatari/corrected_common/710601",
+        "game": "Breakout",
+        "pipeline": "ocatari",
+        "learner": "corrected_common",
+        "seed": 710601,
+        "state": "partial",
+        "counter": 100000,
+        "maximum_decisions": 2000000,
+        "curve": [
+          {
+            "interactions": 0,
+            "mean_return": 1.0,
+            "training_active_seconds": 0.0,
+            "completed_games": 2,
+            "truncation_fraction": 0.0
+          },
+          {
+            "interactions": 10000,
+            "mean_return": 0.0,
+            "training_active_seconds": 62.964398825890385,
+            "completed_games": 0,
+            "truncation_fraction": 1.0
+          },
+          {
+            "interactions": 100000,
+            "mean_return": 1.0,
+            "training_active_seconds": 630.6949734384543,
+            "completed_games": 0,
+            "truncation_fraction": 1.0
+          }
+        ],
+        "auc_interval": [
+          0,
+          2000000
+        ],
+        "normalized_auc_decisions": null,
+        "auc_status": "inconclusive_missing_common_interval",
+        "training_seconds": 665.0075748329982,
+        "evaluation_seconds": 3580.426378539996,
+        "metrics": {
+          "completed_games": 451,
+          "ended_episodes": 451,
+          "epsilon": 0.1,
+          "interactions": 100000,
+          "learner": {
+            "complexity": {
+              "FIRE": {
+                "leaves": 3,
+                "max_depth": 1
+              },
+              "LEFT": {
+                "leaves": 7,
+                "max_depth": 2
+              },
+              "NOOP": {
+                "leaves": 5,
+                "max_depth": 2
+              },
+              "RIGHT": {
+                "leaves": 8,
+                "max_depth": 3
+              }
+            },
+            "fallback": {
+              "bootstrap": {
+                "internal_fallbacks": 23059,
+                "queries": 398196
+              },
+              "prediction": {
+                "internal_fallbacks": 19330,
+                "queries": 302240
+              },
+              "update": {
+                "internal_fallbacks": 2088,
+                "queries": 100000
+              }
+            },
+            "kind": "rrtl_corrected_common_v1",
+            "splits": 10
+          },
+          "phase_seconds": {
+            "checkpoint_logs": 74.92776416317793,
+            "emulation_extraction": 234.11977055761963,
+            "fit": 0.0,
+            "policy_collection_td": 179.51240688213147,
+            "prediction": 8.808358985756058,
+            "relations_encoding": 133.73956997779896,
+            "selection_targets": 0.0
+          },
+          "relations": 11,
+          "truncated_episodes": 0
+        },
+        "retries": 0,
+        "peak_rss_bytes": 199561216,
+        "queue_seconds": null,
+        "final_development": null
+      },
+      {
+        "cell": "Breakout/ocatari/corrected_common/710602",
+        "game": "Breakout",
+        "pipeline": "ocatari",
+        "learner": "corrected_common",
+        "seed": 710602,
+        "state": "pending",
+        "counter": 0,
+        "maximum_decisions": 2000000,
+        "curve": [],
+        "auc_interval": [
+          0,
+          2000000
+        ],
+        "normalized_auc_decisions": null,
+        "auc_status": "inconclusive_missing_common_interval",
+        "training_seconds": null,
+        "evaluation_seconds": null,
+        "metrics": null,
+        "retries": 0,
+        "peak_rss_bytes": null,
+        "queue_seconds": null,
+        "final_development": null
+      },
+      {
+        "cell": "Breakout/ocatari/corrected_common/710603",
+        "game": "Breakout",
+        "pipeline": "ocatari",
+        "learner": "corrected_common",
+        "seed": 710603,
+        "state": "pending",
+        "counter": 0,
+        "maximum_decisions": 2000000,
+        "curve": [],
+        "auc_interval": [
+          0,
+          2000000
+        ],
+        "normalized_auc_decisions": null,
+        "auc_status": "inconclusive_missing_common_interval",
+        "training_seconds": null,
+        "evaluation_seconds": null,
+        "metrics": null,
+        "retries": 0,
+        "peak_rss_bytes": null,
+        "queue_seconds": null,
+        "final_development": null
+      },
+      {
+        "cell": "Breakout/ocatari/corrected_common/710604",
+        "game": "Breakout",
+        "pipeline": "ocatari",
+        "learner": "corrected_common",
+        "seed": 710604,
+        "state": "pending",
+        "counter": 0,
+        "maximum_decisions": 2000000,
+        "curve": [],
+        "auc_interval": [
+          0,
+          2000000
+        ],
+        "normalized_auc_decisions": null,
+        "auc_status": "inconclusive_missing_common_interval",
+        "training_seconds": null,
+        "evaluation_seconds": null,
+        "metrics": null,
+        "retries": 0,
+        "peak_rss_bytes": null,
+        "queue_seconds": null,
+        "final_development": null
+      },
+      {
+        "cell": "Breakout/ocatari/corrected_common/710605",
+        "game": "Breakout",
+        "pipeline": "ocatari",
+        "learner": "corrected_common",
+        "seed": 710605,
+        "state": "pending",
+        "counter": 0,
+        "maximum_decisions": 2000000,
+        "curve": [],
+        "auc_interval": [
+          0,
+          2000000
+        ],
+        "normalized_auc_decisions": null,
+        "auc_status": "inconclusive_missing_common_interval",
+        "training_seconds": null,
+        "evaluation_seconds": null,
+        "metrics": null,
+        "retries": 0,
+        "peak_rss_bytes": null,
+        "queue_seconds": null,
+        "final_development": null
+      },
+      {
+        "cell": "Breakout/ocatari/corrected_common/710606",
+        "game": "Breakout",
+        "pipeline": "ocatari",
+        "learner": "corrected_common",
+        "seed": 710606,
+        "state": "pending",
+        "counter": 0,
+        "maximum_decisions": 2000000,
+        "curve": [],
+        "auc_interval": [
+          0,
+          2000000
+        ],
+        "normalized_auc_decisions": null,
+        "auc_status": "inconclusive_missing_common_interval",
+        "training_seconds": null,
+        "evaluation_seconds": null,
+        "metrics": null,
+        "retries": 0,
+        "peak_rss_bytes": null,
+        "queue_seconds": null,
+        "final_development": null
+      },
+      {
+        "cell": "Breakout/ocatari/corrected_common/710607",
+        "game": "Breakout",
+        "pipeline": "ocatari",
+        "learner": "corrected_common",
+        "seed": 710607,
+        "state": "pending",
+        "counter": 0,
+        "maximum_decisions": 2000000,
+        "curve": [],
+        "auc_interval": [
+          0,
+          2000000
+        ],
+        "normalized_auc_decisions": null,
+        "auc_status": "inconclusive_missing_common_interval",
+        "training_seconds": null,
+        "evaluation_seconds": null,
+        "metrics": null,
+        "retries": 0,
+        "peak_rss_bytes": null,
+        "queue_seconds": null,
+        "final_development": null
+      },
+      {
+        "cell": "Breakout/ocatari/corrected_common/710608",
+        "game": "Breakout",
+        "pipeline": "ocatari",
+        "learner": "corrected_common",
+        "seed": 710608,
+        "state": "pending",
+        "counter": 0,
+        "maximum_decisions": 2000000,
+        "curve": [],
+        "auc_interval": [
+          0,
+          2000000
+        ],
+        "normalized_auc_decisions": null,
+        "auc_status": "inconclusive_missing_common_interval",
+        "training_seconds": null,
+        "evaluation_seconds": null,
+        "metrics": null,
+        "retries": 0,
+        "peak_rss_bytes": null,
+        "queue_seconds": null,
+        "final_development": null
+      },
+      {
+        "cell": "Breakout/ocatari/corrected_common/710609",
+        "game": "Breakout",
+        "pipeline": "ocatari",
+        "learner": "corrected_common",
+        "seed": 710609,
+        "state": "pending",
+        "counter": 0,
+        "maximum_decisions": 2000000,
+        "curve": [],
+        "auc_interval": [
+          0,
+          2000000
+        ],
+        "normalized_auc_decisions": null,
+        "auc_status": "inconclusive_missing_common_interval",
+        "training_seconds": null,
+        "evaluation_seconds": null,
+        "metrics": null,
+        "retries": 0,
+        "peak_rss_bytes": null,
+        "queue_seconds": null,
+        "final_development": null
+      },
+      {
+        "cell": "Breakout/ocatari/corrected_common/710610",
+        "game": "Breakout",
+        "pipeline": "ocatari",
+        "learner": "corrected_common",
+        "seed": 710610,
+        "state": "pending",
+        "counter": 0,
+        "maximum_decisions": 2000000,
+        "curve": [],
+        "auc_interval": [
+          0,
+          2000000
+        ],
+        "normalized_auc_decisions": null,
+        "auc_status": "inconclusive_missing_common_interval",
+        "training_seconds": null,
+        "evaluation_seconds": null,
+        "metrics": null,
+        "retries": 0,
+        "peak_rss_bytes": null,
+        "queue_seconds": null,
+        "final_development": null
+      },
+      {
+        "cell": "Breakout/ocatari/corrected_common/710611",
+        "game": "Breakout",
+        "pipeline": "ocatari",
+        "learner": "corrected_common",
+        "seed": 710611,
+        "state": "pending",
+        "counter": 0,
+        "maximum_decisions": 2000000,
+        "curve": [],
+        "auc_interval": [
+          0,
+          2000000
+        ],
+        "normalized_auc_decisions": null,
+        "auc_status": "inconclusive_missing_common_interval",
+        "training_seconds": null,
+        "evaluation_seconds": null,
+        "metrics": null,
+        "retries": 0,
+        "peak_rss_bytes": null,
+        "queue_seconds": null,
+        "final_development": null
+      },
+      {
+        "cell": "Breakout/ocatari/corrected_common/710612",
+        "game": "Breakout",
+        "pipeline": "ocatari",
+        "learner": "corrected_common",
+        "seed": 710612,
+        "state": "pending",
+        "counter": 0,
+        "maximum_decisions": 2000000,
+        "curve": [],
+        "auc_interval": [
+          0,
+          2000000
+        ],
+        "normalized_auc_decisions": null,
+        "auc_status": "inconclusive_missing_common_interval",
+        "training_seconds": null,
+        "evaluation_seconds": null,
+        "metrics": null,
+        "retries": 0,
+        "peak_rss_bytes": null,
+        "queue_seconds": null,
+        "final_development": null
+      },
+      {
+        "cell": "Breakout/ocatari/corrected_common/710613",
+        "game": "Breakout",
+        "pipeline": "ocatari",
+        "learner": "corrected_common",
+        "seed": 710613,
+        "state": "pending",
+        "counter": 0,
+        "maximum_decisions": 2000000,
+        "curve": [],
+        "auc_interval": [
+          0,
+          2000000
+        ],
+        "normalized_auc_decisions": null,
+        "auc_status": "inconclusive_missing_common_interval",
+        "training_seconds": null,
+        "evaluation_seconds": null,
+        "metrics": null,
+        "retries": 0,
+        "peak_rss_bytes": null,
+        "queue_seconds": null,
+        "final_development": null
+      },
+      {
+        "cell": "Breakout/ocatari/corrected_common/710614",
+        "game": "Breakout",
+        "pipeline": "ocatari",
+        "learner": "corrected_common",
+        "seed": 710614,
+        "state": "pending",
+        "counter": 0,
+        "maximum_decisions": 2000000,
+        "curve": [],
+        "auc_interval": [
+          0,
+          2000000
+        ],
+        "normalized_auc_decisions": null,
+        "auc_status": "inconclusive_missing_common_interval",
+        "training_seconds": null,
+        "evaluation_seconds": null,
+        "metrics": null,
+        "retries": 0,
+        "peak_rss_bytes": null,
+        "queue_seconds": null,
+        "final_development": null
+      },
+      {
+        "cell": "Breakout/ocatari/corrected_common/710615",
+        "game": "Breakout",
+        "pipeline": "ocatari",
+        "learner": "corrected_common",
+        "seed": 710615,
+        "state": "pending",
+        "counter": 0,
+        "maximum_decisions": 2000000,
+        "curve": [],
+        "auc_interval": [
+          0,
+          2000000
+        ],
+        "normalized_auc_decisions": null,
+        "auc_status": "inconclusive_missing_common_interval",
+        "training_seconds": null,
+        "evaluation_seconds": null,
+        "metrics": null,
+        "retries": 0,
+        "peak_rss_bytes": null,
+        "queue_seconds": null,
+        "final_development": null
+      }
+    ],
+    "seed_summaries": [
+      {
+        "game": "Breakout",
+        "pipeline": "ocatari",
+        "learner": "corrected_common",
+        "independent_unit": "training_seed",
+        "per_training_seed": {},
+        "return_scope_composition": {},
+        "n_training_seeds": 0,
+        "mean": null,
+        "median": null,
+        "std": null,
+        "iqr": null
+      }
+    ],
+    "paired_contrasts": [],
+    "no_cross_game_score_average": true,
+    "limits": [
+      "Few training seeds and degenerate bootstrap intervals do not establish equivalence.",
+      "Fixed-data A diagnostics do not certify every online BART fit.",
+      "A poor policy alone does not establish overfit, bad mixing or representation insufficiency.",
+      "Active times exclude queue and process startup; sums are not parallel campaign wall time."
+    ]
+  }
+}
+
+------------------------------------------------------------------------
+[Slurm] Este trabajo (#34396) terminó SIN reporte de rendimiento por correo.
+Puedes recibir un correo con el uso de CPU, RAM y GPU de tus trabajos
+(y sugerencias para que esperen menos en cola) agregando esta línea
+en tu script de sbatch, junto a las líneas #SBATCH:
+
+    #SENDJOBREPORT
+
+Dudas: slurmjobs@cenia.cl
+------------------------------------------------------------------------

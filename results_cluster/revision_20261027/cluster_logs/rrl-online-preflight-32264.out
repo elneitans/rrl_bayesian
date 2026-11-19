@@ -1,0 +1,654 @@
+No broken requirements found.
+hydra
+Python 3.11.7
+job=32264 root=/home/natan.brugueras/projects/rrl_bayesian
+..........................................................               [100%]
+=============================== warnings summary ===============================
+../../../../../../home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:88
+../../../../../../home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:88
+../../../../../../home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:88
+../../../../../../home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:88
+../../../../../../home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:88
+../../../../../../home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:88
+  /home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:88: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+    parse = parser.parseString(pattern)
+
+../../../../../../home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:92
+../../../../../../home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:92
+../../../../../../home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:92
+../../../../../../home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:92
+../../../../../../home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:92
+../../../../../../home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:92
+  /home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:92: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+    parser.resetCache()
+
+../../../../../../home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/lib/python3.11/site-packages/matplotlib/_mathtext.py:45
+  /home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/lib/python3.11/site-packages/matplotlib/_mathtext.py:45: PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'
+    ParserElement.enablePackrat()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+58 passed, 13 warnings in 98.07s (0:01:38)
+{'ocatari': '2.2.1', 'gymnasium': '1.1.1', 'ale-py': '0.10.2'}
+{
+  "resolved": {
+    "schema": "pong_progressive_v2",
+    "protocol": {
+      "schema": "pong_progressive_v2",
+      "name": "pong_online_technical_smoke_v1",
+      "level": "smoke",
+      "pipelines": [
+        "visual",
+        "ocatari"
+      ],
+      "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+      "training_horizon": 128,
+      "learners": {
+        "corrected_common": {
+          "eta_q": 0.025,
+          "max_depth": 4,
+          "min_sample_size": 128,
+          "significance_level": 0.0001,
+          "best_literal_criteria": "p-value",
+          "inherit_q_values": true
+        },
+        "cart": {
+          "max_depth": 2,
+          "min_child": 2,
+          "criterion": "SSE"
+        },
+        "bart": {
+          "kernel": "grow_prune",
+          "m": 2,
+          "burn_in": 2,
+          "draws": 3,
+          "k": 2.0,
+          "alpha_tree": 0.95,
+          "beta_tree": 2.0,
+          "max_depth": 2,
+          "min_child": 2,
+          "nu": 3.0,
+          "noise_quantile": 0.9,
+          "variance_floor": 1e-08
+        }
+      },
+      "learning": {
+        "gamma": 0.99,
+        "replay_capacity": 128,
+        "batch_size_per_action": 8,
+        "fit_interval": 16,
+        "warmup_interactions": 16,
+        "bootstrap_on_truncation": true
+      },
+      "exploration": {
+        "epsilon_init": 1.0,
+        "epsilon_min": 0.1,
+        "epsilon_decay_steps": 50000
+      },
+      "training_seeds": [
+        501501
+      ],
+      "evaluation": {
+        "intermediate": {
+          "seeds": [
+            501801
+          ],
+          "horizon": 128,
+          "checkpoints": [
+            0,
+            32,
+            64
+          ]
+        },
+        "final_development": {
+          "seeds": [
+            501901
+          ],
+          "horizon": 128,
+          "checkpoints": [
+            64
+          ]
+        },
+        "reserved_test": {
+          "seeds": [
+            420101,
+            420102,
+            420103,
+            420104,
+            420105,
+            420106,
+            420107,
+            420108,
+            420109,
+            420110,
+            420111,
+            420112,
+            420113,
+            420114,
+            420115,
+            420116,
+            420117,
+            420118,
+            420119,
+            420120
+          ],
+          "horizon": 27000,
+          "checkpoints": []
+        }
+      },
+      "max_decisions": 64,
+      "milestones": [
+        32,
+        64
+      ],
+      "checkpoint_interval": 16,
+      "budgets": {
+        "training_seconds_per_cell": 120,
+        "evaluation_seconds_per_episode": 60,
+        "fit_margin_seconds": 1
+      },
+      "cache_bytes": 1048576,
+      "bart_review": null,
+      "primary_checkpoint": "final"
+    },
+    "cells": [
+      {
+        "id": "visual/corrected_common/501501",
+        "pipeline": "visual",
+        "learner": "corrected_common",
+        "seed": 501501,
+        "environment": {
+          "pipeline": "visual",
+          "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+          "horizon": 128,
+          "contract": "pong_common_v1"
+        },
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT",
+            "RIGHTFIRE",
+            "LEFTFIRE"
+          ],
+          "seed": 501501,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 128,
+          "batch_size_per_action": 8,
+          "fit_interval": 16,
+          "warmup_interactions": 16,
+          "epsilon_init": 1.0,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            501801,
+            501901
+          ],
+          "test_seeds": [
+            420101,
+            420102,
+            420103,
+            420104,
+            420105,
+            420106,
+            420107,
+            420108,
+            420109,
+            420110,
+            420111,
+            420112,
+            420113,
+            420114,
+            420115,
+            420116,
+            420117,
+            420118,
+            420119,
+            420120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "eta_q": 0.025,
+          "max_depth": 4,
+          "min_sample_size": 128,
+          "significance_level": 0.0001,
+          "best_literal_criteria": "p-value",
+          "inherit_q_values": true
+        },
+        "hash": "4b35687187768d66a86baaed59886946522ddb645a4cd46556243100809525f6"
+      },
+      {
+        "id": "visual/cart/501501",
+        "pipeline": "visual",
+        "learner": "cart",
+        "seed": 501501,
+        "environment": {
+          "pipeline": "visual",
+          "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+          "horizon": 128,
+          "contract": "pong_common_v1"
+        },
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT",
+            "RIGHTFIRE",
+            "LEFTFIRE"
+          ],
+          "seed": 501501,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 128,
+          "batch_size_per_action": 8,
+          "fit_interval": 16,
+          "warmup_interactions": 16,
+          "epsilon_init": 1.0,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            501801,
+            501901
+          ],
+          "test_seeds": [
+            420101,
+            420102,
+            420103,
+            420104,
+            420105,
+            420106,
+            420107,
+            420108,
+            420109,
+            420110,
+            420111,
+            420112,
+            420113,
+            420114,
+            420115,
+            420116,
+            420117,
+            420118,
+            420119,
+            420120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "max_depth": 2,
+          "min_child": 2,
+          "criterion": "SSE"
+        },
+        "hash": "75e65f10aeeaffe0ad2c46b9b05359e56531b8f83f460f8905c2c1ba8076975f"
+      },
+      {
+        "id": "visual/bart/501501",
+        "pipeline": "visual",
+        "learner": "bart",
+        "seed": 501501,
+        "environment": {
+          "pipeline": "visual",
+          "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+          "horizon": 128,
+          "contract": "pong_common_v1"
+        },
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT",
+            "RIGHTFIRE",
+            "LEFTFIRE"
+          ],
+          "seed": 501501,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 128,
+          "batch_size_per_action": 8,
+          "fit_interval": 16,
+          "warmup_interactions": 16,
+          "epsilon_init": 1.0,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            501801,
+            501901
+          ],
+          "test_seeds": [
+            420101,
+            420102,
+            420103,
+            420104,
+            420105,
+            420106,
+            420107,
+            420108,
+            420109,
+            420110,
+            420111,
+            420112,
+            420113,
+            420114,
+            420115,
+            420116,
+            420117,
+            420118,
+            420119,
+            420120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "kernel": "grow_prune",
+          "m": 2,
+          "burn_in": 2,
+          "draws": 3,
+          "k": 2.0,
+          "alpha_tree": 0.95,
+          "beta_tree": 2.0,
+          "max_depth": 2,
+          "min_child": 2,
+          "nu": 3.0,
+          "noise_quantile": 0.9,
+          "variance_floor": 1e-08
+        },
+        "hash": "14635aac126084ce9d018f502d87b173aaa70e642d8541c7a69c099b88f8ce1c"
+      },
+      {
+        "id": "ocatari/corrected_common/501501",
+        "pipeline": "ocatari",
+        "learner": "corrected_common",
+        "seed": 501501,
+        "environment": {
+          "pipeline": "ocatari",
+          "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+          "horizon": 128,
+          "contract": "pong_common_v1"
+        },
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT",
+            "RIGHTFIRE",
+            "LEFTFIRE"
+          ],
+          "seed": 501501,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 128,
+          "batch_size_per_action": 8,
+          "fit_interval": 16,
+          "warmup_interactions": 16,
+          "epsilon_init": 1.0,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            501801,
+            501901
+          ],
+          "test_seeds": [
+            420101,
+            420102,
+            420103,
+            420104,
+            420105,
+            420106,
+            420107,
+            420108,
+            420109,
+            420110,
+            420111,
+            420112,
+            420113,
+            420114,
+            420115,
+            420116,
+            420117,
+            420118,
+            420119,
+            420120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "eta_q": 0.025,
+          "max_depth": 4,
+          "min_sample_size": 128,
+          "significance_level": 0.0001,
+          "best_literal_criteria": "p-value",
+          "inherit_q_values": true
+        },
+        "hash": "9eef74c4bf709074219bffa36ae77886845d768c70ac65ea7c15159da6807d88"
+      },
+      {
+        "id": "ocatari/cart/501501",
+        "pipeline": "ocatari",
+        "learner": "cart",
+        "seed": 501501,
+        "environment": {
+          "pipeline": "ocatari",
+          "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+          "horizon": 128,
+          "contract": "pong_common_v1"
+        },
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT",
+            "RIGHTFIRE",
+            "LEFTFIRE"
+          ],
+          "seed": 501501,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 128,
+          "batch_size_per_action": 8,
+          "fit_interval": 16,
+          "warmup_interactions": 16,
+          "epsilon_init": 1.0,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            501801,
+            501901
+          ],
+          "test_seeds": [
+            420101,
+            420102,
+            420103,
+            420104,
+            420105,
+            420106,
+            420107,
+            420108,
+            420109,
+            420110,
+            420111,
+            420112,
+            420113,
+            420114,
+            420115,
+            420116,
+            420117,
+            420118,
+            420119,
+            420120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "max_depth": 2,
+          "min_child": 2,
+          "criterion": "SSE"
+        },
+        "hash": "110be0155c5b843ba63764a473431ca8e9095fef44faf2b3bc564ca46bc0aa85"
+      },
+      {
+        "id": "ocatari/bart/501501",
+        "pipeline": "ocatari",
+        "learner": "bart",
+        "seed": 501501,
+        "environment": {
+          "pipeline": "ocatari",
+          "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+          "horizon": 128,
+          "contract": "pong_common_v1"
+        },
+        "learning": {
+          "actions": [
+            "NOOP",
+            "FIRE",
+            "RIGHT",
+            "LEFT",
+            "RIGHTFIRE",
+            "LEFTFIRE"
+          ],
+          "seed": 501501,
+          "gamma": 0.99,
+          "reward_min": -1.0,
+          "reward_max": 1.0,
+          "replay_capacity": 128,
+          "batch_size_per_action": 8,
+          "fit_interval": 16,
+          "warmup_interactions": 16,
+          "epsilon_init": 1.0,
+          "epsilon_min": 0.1,
+          "epsilon_decay_steps": 50000,
+          "bootstrap_on_truncation": true,
+          "validation_seeds": [
+            501801,
+            501901
+          ],
+          "test_seeds": [
+            420101,
+            420102,
+            420103,
+            420104,
+            420105,
+            420106,
+            420107,
+            420108,
+            420109,
+            420110,
+            420111,
+            420112,
+            420113,
+            420114,
+            420115,
+            420116,
+            420117,
+            420118,
+            420119,
+            420120
+          ],
+          "resample_repeated_actions": false,
+          "action_buffer_capacity": 10
+        },
+        "estimator": {
+          "kernel": "grow_prune",
+          "m": 2,
+          "burn_in": 2,
+          "draws": 3,
+          "k": 2.0,
+          "alpha_tree": 0.95,
+          "beta_tree": 2.0,
+          "max_depth": 2,
+          "min_child": 2,
+          "nu": 3.0,
+          "noise_quantile": 0.9,
+          "variance_floor": 1e-08
+        },
+        "hash": "5a2d8edee58e9a41e35618e9ead3ed289e2e3c5467f5cdf0362dbfd97c5316c2"
+      }
+    ],
+    "unresolved": []
+  },
+  "workload": [
+    {
+      "id": "visual/corrected_common/501501",
+      "seed": 501501,
+      "decisions": 64,
+      "expected_fits": 0,
+      "expected_checkpoints": 5,
+      "evaluation_episodes": 4
+    },
+    {
+      "id": "visual/cart/501501",
+      "seed": 501501,
+      "decisions": 64,
+      "expected_fits": 4,
+      "expected_checkpoints": 5,
+      "evaluation_episodes": 4
+    },
+    {
+      "id": "visual/bart/501501",
+      "seed": 501501,
+      "decisions": 64,
+      "expected_fits": 4,
+      "expected_checkpoints": 5,
+      "evaluation_episodes": 4
+    },
+    {
+      "id": "ocatari/corrected_common/501501",
+      "seed": 501501,
+      "decisions": 64,
+      "expected_fits": 0,
+      "expected_checkpoints": 5,
+      "evaluation_episodes": 4
+    },
+    {
+      "id": "ocatari/cart/501501",
+      "seed": 501501,
+      "decisions": 64,
+      "expected_fits": 4,
+      "expected_checkpoints": 5,
+      "evaluation_episodes": 4
+    },
+    {
+      "id": "ocatari/bart/501501",
+      "seed": 501501,
+      "decisions": 64,
+      "expected_fits": 4,
+      "expected_checkpoints": 5,
+      "evaluation_episodes": 4
+    }
+  ],
+  "estimates": [],
+  "uncertainty": "Missing compatible measurements means unknown time/storage, never zero.",
+  "pending_authorizations": [],
+  "reserved_test_episodes_executed": 0
+}
+
+------------------------------------------------------------------------
+[Slurm] Este trabajo (#32264) terminó SIN reporte de rendimiento por correo.
+Puedes recibir un correo con el uso de CPU, RAM y GPU de tus trabajos
+(y sugerencias para que esperen menos en cola) agregando esta línea
+en tu script de sbatch, junto a las líneas #SBATCH:
+
+    #SENDJOBREPORT
+
+Dudas: slurmjobs@cenia.cl
+------------------------------------------------------------------------

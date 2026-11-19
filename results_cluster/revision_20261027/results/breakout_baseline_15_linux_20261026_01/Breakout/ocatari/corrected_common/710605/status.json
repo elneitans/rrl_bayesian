@@ -1,0 +1,92 @@
+{
+  "payload": {
+    "binding": {
+      "campaign": "9f5e8f2684519f5245eed0551754c9442f3f7152d35b24b9f8c9ed35f8af2cee",
+      "cell": "18ef4661cf89a0163f83d0813791cbfa9d1a3925416ce6fadd440986ae3d01db",
+      "learner": "corrected_common",
+      "runtime": {
+        "ale-py": "0.10.2",
+        "gymnasium": "1.1.1",
+        "machine": "x86_64",
+        "numeric_threads": {
+          "MKL_NUM_THREADS": "1",
+          "NUMEXPR_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "numpy": "1.26.4",
+        "ocatari": "2.2.1",
+        "platform": "linux",
+        "python": "3.11.7",
+        "scipy": "1.12.0"
+      }
+    },
+    "checkpoint": {
+      "path": "checkpoints/500000-de5cfe2ad23513770cf47472ee6632d6503fcc68d9cbd1829c7756eee6dc67b4.pkl",
+      "sha256": "de5cfe2ad23513770cf47472ee6632d6503fcc68d9cbd1829c7756eee6dc67b4"
+    },
+    "counter": 500000,
+    "log_head": {
+      "end": 500000,
+      "path": "logs/500000-43e52865e541768ec341c4e40f50d6cd6e0ccc5a4c866cb8046d3c4ab58034be.jsonl",
+      "sha256": "43e52865e541768ec341c4e40f50d6cd6e0ccc5a4c866cb8046d3c4ab58034be"
+    },
+    "metrics": {
+      "completed_games": 1304,
+      "ended_episodes": 1304,
+      "epsilon": 0.1,
+      "interactions": 500000,
+      "learner": {
+        "complexity": {
+          "FIRE": {
+            "leaves": 7,
+            "max_depth": 2
+          },
+          "LEFT": {
+            "leaves": 7,
+            "max_depth": 2
+          },
+          "NOOP": {
+            "leaves": 6,
+            "max_depth": 2
+          },
+          "RIGHT": {
+            "leaves": 8,
+            "max_depth": 3
+          }
+        },
+        "fallback": {
+          "bootstrap": {
+            "internal_fallbacks": 127058,
+            "queries": 1994784
+          },
+          "prediction": {
+            "internal_fallbacks": 116308,
+            "queries": 1742056
+          },
+          "update": {
+            "internal_fallbacks": 19890,
+            "queries": 500000
+          }
+        },
+        "kind": "rrtl_corrected_common_v1",
+        "splits": 13
+      },
+      "phase_seconds": {
+        "checkpoint_logs": 709.6093681510538,
+        "emulation_extraction": 1021.9558557138662,
+        "fit": 0.0,
+        "policy_collection_td": 931.3853092516074,
+        "prediction": 59.93545675696805,
+        "relations_encoding": 727.016758600017,
+        "selection_targets": 0.0
+      },
+      "relations": 11,
+      "truncated_episodes": 0
+    },
+    "reason": "authorized_milestone_reached",
+    "state": "partial"
+  },
+  "schema": "pong_analysis_unit_v2",
+  "sha256": "b32966aad1fd57ed8f76de4cb2782e624e86252bd3ad221147c332d444ddb743"
+}

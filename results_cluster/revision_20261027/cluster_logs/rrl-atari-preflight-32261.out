@@ -1,0 +1,42 @@
+No broken requirements found.
+hydra
+Python 3.11.7
+job=32261 root=/home/natan.brugueras/projects/rrl_bayesian
+...................                                                      [100%]
+=============================== warnings summary ===============================
+../../../../../../home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:88
+../../../../../../home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:88
+../../../../../../home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:88
+../../../../../../home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:88
+../../../../../../home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:88
+../../../../../../home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:88
+  /home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:88: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+    parse = parser.parseString(pattern)
+
+../../../../../../home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:92
+../../../../../../home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:92
+../../../../../../home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:92
+../../../../../../home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:92
+../../../../../../home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:92
+../../../../../../home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:92
+  /home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:92: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+    parser.resetCache()
+
+../../../../../../home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/lib/python3.11/site-packages/matplotlib/_mathtext.py:45
+  /home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/lib/python3.11/site-packages/matplotlib/_mathtext.py:45: PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'
+    ParserElement.enablePackrat()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+19 passed, 13 warnings in 117.17s (0:01:57)
+Matplotlib is building the font cache; this may take a moment.
+
+------------------------------------------------------------------------
+[Slurm] Este trabajo (#32261) terminó SIN reporte de rendimiento por correo.
+Puedes recibir un correo con el uso de CPU, RAM y GPU de tus trabajos
+(y sugerencias para que esperen menos en cola) agregando esta línea
+en tu script de sbatch, junto a las líneas #SBATCH:
+
+    #SENDJOBREPORT
+
+Dudas: slurmjobs@cenia.cl
+------------------------------------------------------------------------

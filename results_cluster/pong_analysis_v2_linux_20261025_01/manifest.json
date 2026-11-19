@@ -1,0 +1,428 @@
+{
+  "payload": {
+    "config": {
+      "action_probe_seed": 560101,
+      "assisted_collection_seeds": [
+        560201,
+        560202,
+        560203,
+        560204
+      ],
+      "assisted_max_decisions": 8192,
+      "assisted_random_fraction": 0.5,
+      "bootstrap_seed": 560501,
+      "campaign_id": "pong_analysis_linux_20261025_v2",
+      "collection_exploration_seed": 560701,
+      "common_collection_seeds": [
+        560601,
+        560602,
+        560603,
+        560604,
+        560605,
+        560606,
+        560607,
+        560608
+      ],
+      "common_protocol": {
+        "actions": [
+          "NOOP",
+          "FIRE",
+          "RIGHT",
+          "LEFT",
+          "RIGHTFIRE",
+          "LEFTFIRE"
+        ],
+        "env_id": "ALE/Pong-v5",
+        "frameskip": 4,
+        "horizon": 27000,
+        "pipelines": {
+          "ocatari": "pong_common_ram_v1",
+          "visual": "pong_common_rgb_v1"
+        },
+        "purpose": "development",
+        "relation_schema": "pong_relational_v1",
+        "repeat_action_probability": 0.0,
+        "reset_policy": "none",
+        "reward_transform": "sign",
+        "rom_sha256": "41623e3c26148f96cbe77d56512845d224a63c8fe5bf90e38527155e39ec96d3",
+        "schema": "pong_common_v1"
+      },
+      "development_seeds": [
+        560001,
+        560002,
+        560003,
+        560004,
+        560005,
+        560006,
+        560007,
+        560008,
+        560009,
+        560010,
+        560011,
+        560012,
+        560013,
+        560014,
+        560015,
+        560016,
+        560017,
+        560018,
+        560019,
+        560020
+      ],
+      "fixed_fit_seed": 71,
+      "fqi_batch_per_action": 128,
+      "fqi_epochs": [
+        1,
+        5,
+        10,
+        20,
+        40
+      ],
+      "fqi_evaluation_seeds": [
+        560401,
+        560402,
+        560403,
+        560404,
+        560405,
+        560406,
+        560407,
+        560408,
+        560409,
+        560410,
+        560411,
+        560412,
+        560413,
+        560414,
+        560415,
+        560416,
+        560417,
+        560418,
+        560419,
+        560420
+      ],
+      "fqi_validation_episode_fraction": 0.2,
+      "horizon": 27000,
+      "max_seconds_per_episode": 600,
+      "mcmc_burn_in": 1000,
+      "mcmc_chains": 4,
+      "mcmc_draws": 2000,
+      "mcmc_initial_actions": 3,
+      "mcmc_seconds_per_job": 1800,
+      "mcmc_seed": 560301,
+      "pipeline_order": [
+        "ocatari",
+        "visual"
+      ],
+      "schema": "pong_bart_analysis_v2",
+      "selection_seed": 560702,
+      "slurm_memory_gb": 20,
+      "slurm_time": "12:00:00",
+      "smoke_horizon": 128,
+      "smoke_seed": 560102,
+      "source_campaign": "/home/natan.brugueras/projects/rrl_bayesian/results/pong_pilot_linux_01",
+      "source_trace": "/home/natan.brugueras/projects/rrl_bayesian/results/pong_policy_diagnostic_visual_bart_73_final_01"
+    },
+    "config_sha256": "eab45a60a3bb4a193a8b26e427f3afb294c019898047c8c258e4c5dc2e4fcfa8",
+    "pilot": {
+      "pilot_protocol_sha256": "5af328465cbeeefc79f092485df4203d6e5f7af49a8ad47b95b7c6c7a57d315a",
+      "reserved_test_seeds_untouched": [
+        420101,
+        420102,
+        420103,
+        420104,
+        420105,
+        420106,
+        420107,
+        420108,
+        420109,
+        420110,
+        420111,
+        420112,
+        420113,
+        420114,
+        420115,
+        420116,
+        420117,
+        420118,
+        420119,
+        420120
+      ],
+      "runs": [
+        {
+          "cell": "visual/corrected_common/71",
+          "checkpoint_sha256": "d3c51df5128105c92ac34be740f19a801011569341dae544fb5f55692cb784a5",
+          "interactions": 20480,
+          "state": "completed"
+        },
+        {
+          "cell": "visual/bart/71",
+          "checkpoint_sha256": "4da69d3346f1c8671bd48f3d4e4842c1bee2f60bb4d60ea457453378d0a94c40",
+          "interactions": 20480,
+          "state": "completed"
+        },
+        {
+          "cell": "visual/corrected_common/72",
+          "checkpoint_sha256": "46159110364cfceb9f0823625bfbff8e05c9d4dc41f0fc6fbeac7b5ecebbd89a",
+          "interactions": 20480,
+          "state": "completed"
+        },
+        {
+          "cell": "visual/bart/72",
+          "checkpoint_sha256": "4515887dbfba3832307328e23048dbc8c31214bb56e930d170a316032f80cce5",
+          "interactions": 20480,
+          "state": "completed"
+        },
+        {
+          "cell": "visual/corrected_common/73",
+          "checkpoint_sha256": "27f1d1a67e32ca999bb7c9db636aff98fd1f2a6e55b6bfe411419a850489b3cf",
+          "interactions": 20480,
+          "state": "completed"
+        },
+        {
+          "cell": "visual/bart/73",
+          "checkpoint_sha256": "3404f8a504605d7e1fb68915d1564cc853b7b8bbdc9b853e91ec37b031e96de8",
+          "interactions": 20480,
+          "state": "completed"
+        },
+        {
+          "cell": "ocatari/corrected_common/71",
+          "checkpoint_sha256": "e353fe6b4d62e9dc857085f69dff6bf458f9932a23cf469c408cdba66c7cbcd6",
+          "interactions": 20480,
+          "state": "completed"
+        },
+        {
+          "cell": "ocatari/bart/71",
+          "checkpoint_sha256": "ddf332631a98f9dc68e059ca7c60028f574ed0c86b406a6745233d93965fe36d",
+          "interactions": 20480,
+          "state": "completed"
+        },
+        {
+          "cell": "ocatari/corrected_common/72",
+          "checkpoint_sha256": "e6611719a832a9863223bcb00a54dd442c2dd7c6ab87cac9c8b3356d3cd1b0ab",
+          "interactions": 20480,
+          "state": "completed"
+        },
+        {
+          "cell": "ocatari/bart/72",
+          "checkpoint_sha256": "051d4e2629a864af9fb491bb9a1841b630fe4ed12b259310bc5046fdc85ce8c4",
+          "interactions": 20480,
+          "state": "completed"
+        },
+        {
+          "cell": "ocatari/corrected_common/73",
+          "checkpoint_sha256": "c48e487b9ad74be55ca31d08c1caa2e0e77b769f08d1f407d11fcbc41767d773",
+          "interactions": 20480,
+          "state": "completed"
+        },
+        {
+          "cell": "ocatari/bart/73",
+          "checkpoint_sha256": "e98bae2c82f1fd60d06c8193e0fbdb828746a2f4a1a6a85c340543f7921b1bb0",
+          "interactions": 20480,
+          "state": "completed"
+        }
+      ],
+      "source_campaign": "/home/natan.brugueras/projects/rrl_bayesian/results/pong_pilot_linux_01",
+      "visual_bart_73_trace": {
+        "actions": {
+          "FIRE": 73,
+          "LEFTFIRE": 12,
+          "NOOP": 338,
+          "RIGHT": 337,
+          "RIGHTFIRE": 2
+        },
+        "checkpoint_sha256": "3404f8a504605d7e1fb68915d1564cc853b7b8bbdc9b853e91ec37b031e96de8",
+        "empty_states": 334,
+        "gif_frames": 191,
+        "gif_note": "Preview only: every 4 decisions, maximum 300 frames; not necessarily a full game.",
+        "longest_same_action_streak": 17,
+        "mean_q_margin": 0.1114979854135349,
+        "points_lost": 21.0,
+        "points_won": 0.0,
+        "raw_return": -21.0,
+        "seconds": 82.73292510298779,
+        "seed": 320101,
+        "status": "recorded",
+        "steps": 762,
+        "stop_reason": "terminated",
+        "switches": 70,
+        "unique_encoded_states": 21
+      },
+      "visual_bart_73_trace_sha256": "4685719bda7810a51ba4fee33eaf414bab248db438261825d6c640fe69e58af9"
+    },
+    "pilot_protocol": {
+      "budgets": {
+        "evaluation_seconds_total": 14400,
+        "training_seconds_per_run": 7200
+      },
+      "checkpoint_interval": 512,
+      "contrasts": [
+        "visual/bart - visual/corrected_common",
+        "ocatari/bart - ocatari/corrected_common"
+      ],
+      "curve_checkpoints": [
+        0,
+        5120,
+        10240,
+        15360,
+        20480
+      ],
+      "environments": {
+        "ocatari": {
+          "env_id": "ALE/Pong-v5",
+          "extractor": "ocatari_ram_v1",
+          "frameskip": 4,
+          "game": "Pong",
+          "include_incomplete_states": true,
+          "max_episode_steps": 27000,
+          "relation_schema": "pong_relational_v1",
+          "repeat_action_probability": 0.0,
+          "representation": "comparative",
+          "reset_policy": "none",
+          "reward_transform": "sign"
+        },
+        "visual": {
+          "env_id": "PongNoFrameskip-v4",
+          "extractor": "legacy_visual_pong_v1",
+          "frameskip": 4,
+          "game": "Pong",
+          "include_incomplete_states": false,
+          "max_episode_steps": 27000,
+          "relation_schema": "legacy_pong_v1",
+          "repeat_action_probability": 0.0,
+          "representation": "comparative",
+          "reset_policy": "legacy_fire",
+          "reward_transform": "sign_plus_0.1"
+        }
+      },
+      "evaluation_episodes": 10,
+      "evaluation_horizon": 27000,
+      "execution_order_seed": 930001,
+      "interactions": 20480,
+      "learners": {
+        "bart": {
+          "action_buffer_capacity": 10,
+          "alpha_tree": 0.95,
+          "batch_size_per_action": 128,
+          "beta_tree": 2.0,
+          "bootstrap_on_truncation": true,
+          "burn_in": 50,
+          "draws": 50,
+          "epsilon_decay_steps": 50000,
+          "epsilon_init": 1.0,
+          "epsilon_min": 0.1,
+          "fit_interval": 512,
+          "gamma": 0.99,
+          "k": 2.0,
+          "kernel": "grow_prune",
+          "m": 20,
+          "max_depth": 4,
+          "min_child": 2,
+          "noise_quantile": 0.9,
+          "nu": 3.0,
+          "replay_capacity": 50000,
+          "resample_repeated_actions": false,
+          "variance_floor": 1e-08,
+          "warmup_interactions": 512
+        },
+        "corrected_common": {
+          "best_literal_criteria": "p-value",
+          "bootstrap_on_truncation": true,
+          "eta_q": 0.025,
+          "gamma": 0.99,
+          "inherit_q_values": true,
+          "max_depth": 4,
+          "min_sample_size": 128,
+          "significance_level": 0.0001
+        }
+      },
+      "primary_checkpoint": "final",
+      "purpose": "development",
+      "schema": "pong_comparison_v1",
+      "test_seeds": [
+        420101,
+        420102,
+        420103,
+        420104,
+        420105,
+        420106,
+        420107,
+        420108,
+        420109,
+        420110,
+        420111,
+        420112,
+        420113,
+        420114,
+        420115,
+        420116,
+        420117,
+        420118,
+        420119,
+        420120
+      ],
+      "training_seeds": [
+        71,
+        72,
+        73
+      ],
+      "validation_seeds": [
+        320101,
+        320102,
+        320103,
+        320104,
+        320105,
+        320106,
+        320107,
+        320108,
+        320109,
+        320110
+      ]
+    },
+    "runtime": {
+      "executable": "/home/natan.brugueras/archive/conda_envs/rrl-pong-analysis/bin/python",
+      "packages": {
+        "ale-py": "0.10.2",
+        "gymnasium": "1.1.1",
+        "numpy": "1.26.4",
+        "ocatari": "2.2.1",
+        "scikit-learn": "1.9.1",
+        "scipy": "1.12.0"
+      },
+      "python": "3.11.7"
+    },
+    "schema": "pong_bart_analysis_v2",
+    "source_hashes": {
+      "bayesian_rrtl/agent.py": "fb83e747a487ecf1769200db3b9cc29d1df404fe2c77684aafca19796ba8601c",
+      "bayesian_rrtl/controls.py": "b99cb67c080fe57a07820b3bebc634eef8db5b1f39867dab7158b7b4f35f0e5e",
+      "bayesian_rrtl/diagnostics.py": "1fcea2be086a94dc76e8bb5b0c69141118773273b1d15a37bcaab1ee9c790f43",
+      "bayesian_rrtl/ensemble.py": "172d5e991a82826070037f55fb522f0383b42dd5c45c77a06615ddebfe1659be",
+      "bayesian_rrtl/games/pong.py": "413681aa1064c55b574adcb86466d00002d9c40c8651d17eb5ae63aede8c7ad4",
+      "bayesian_rrtl/replay.py": "e4de5bbecb011fa860bfce5ced13242ede6f31e0a00606aba078effc52fb835c",
+      "bayesian_rrtl/targets.py": "5276110077c1011c2dda184ba6ab473b3f87e5aef5336954a7796f7b2f1f46da",
+      "configs/pong_bart_analysis_v1.json": "dded7c9554c8889fe7f666fc9db88586910bb6621ca70defe33432552ec9ad38",
+      "environment-pong-analysis.yml": "9562d6b4cf1d0c41ee43c77f6d65132a344efcc0af330d60626d9906b3d6d5a9",
+      "experiments/audit_bart_fixed_data.py": "819e146afd54fe97db22b38a64df7caab8b9cced2c2cd16e25f0e85c79b28064",
+      "experiments/audit_pong_readiness.py": "69605e5308d3dae1aa2ce80e9bcecae7597d2f9107d9a1b239b484e129ff9503",
+      "experiments/audit_pong_representation.py": "ac70d2e4616185d3883b25d4693accd3a5093f46dde2ac15411519ff009f1512",
+      "experiments/collect_pong_assisted.py": "88bfe47f6342251549e3b9652ceb11d3902f934f0e82617b1e48a9a4193bcb49",
+      "experiments/collect_pong_dataset.py": "1121afe9c2b33c134a865d33001694f6bce7aaa02d6998ca24244cb4123aaf1c",
+      "experiments/compare_fqi_trees.py": "02f23c3103caf555b57253b5f6c5a4d7d1cb67d649bcecf6b613ff034cd837ad",
+      "experiments/compare_pong.py": "e95bdd30988decb58726b026b44d73405a626bc85d826badee379c54a8821908",
+      "experiments/diagnose_pong_policy.py": "491ab5e42cbd4dd117b81901b9f302a98197c791c96800d51db854ad1881576d",
+      "experiments/evaluate_pong_heuristics.py": "dd301b34a70e8f117f42d1fc059a4d72eae3553acffd2c5a505b0c631cbb4725",
+      "experiments/freeze_pong_analysis_data.py": "bf680e2a7f78d75350d6c816dc063026483ea9f8fa8f6f01261c79b5b2809006",
+      "experiments/freeze_pong_regression.py": "3ab677a4043849a83625cd42c6f78e4952293a472a00c1b5f52a2ff8a67cbf2a",
+      "experiments/pong_analysis_common.py": "93c9816e101591f01e0611843c24a204b748f4bb13a2d26b047bb310ec572831",
+      "experiments/pong_analysis_runtime.py": "66c13224b9ec79dfcdcc229de831fc34f7d50bd6b1128183b867fd3a66d49e22",
+      "experiments/pong_common_contract.py": "087f113a2a87279a038ff4bbe7bdd188dd4df24e5c7baa97ca39b7a2cbb4b315",
+      "experiments/pong_dataset_selection.py": "4ceed9ff6981da01672f3045be287f17f1825b594cd11498d05d37f1635ed548",
+      "experiments/preserve_pong_history.py": "019dd597e418af8a2d50067d09b75ff6bad6e59d0ca780789bda8fd559a7bdd1",
+      "experiments/validate_ocatari_pong.py": "19aad9dbcafb1a2dccd745ab8a1cc6e460324a41810c9f3afdf0589981e7325b",
+      "experiments/validate_pong_comparison_inputs.py": "f296a40d83740c7dc82eb9bc28d1711e0e526bb8b58836ac82d9d83e652f9cc4",
+      "requirements-pong-analysis.txt": "bc7aa65a6f28f82a3145d1ae971fbb8be0e0ce43e9305d0caa4a7803b14dce36",
+      "slurm/05_pong_analysis.sbatch": "2fcf0ca9a41890d3eb377b2b2669d5b446dfffbbcf85a570b410008388b9be38"
+    }
+  },
+  "schema": "pong_analysis_unit_v2",
+  "sha256": "70158ec886a6df92d88086d4ff2035f5d59883bdfd94e303dbd146b9d94c45e7"
+}

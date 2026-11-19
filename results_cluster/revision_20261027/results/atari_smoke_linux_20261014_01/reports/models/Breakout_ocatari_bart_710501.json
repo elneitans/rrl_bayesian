@@ -1,0 +1,260 @@
+{
+  "actions": {
+    "FIRE": {
+      "fitted": true,
+      "frequency_kind": "posterior inclusion",
+      "last_draw_contributions": [
+        {
+          "reference_contribution": [
+            -7.241800133864535e-06,
+            -7.241800133864535e-06
+          ],
+          "tree": 0
+        },
+        {
+          "reference_contribution": [
+            2.3825298438915426e-05,
+            2.3825298438915426e-05
+          ],
+          "tree": 1
+        }
+      ],
+      "rules": [],
+      "units": "normalized; add intercept and multiply scale once per ensemble"
+    },
+    "LEFT": {
+      "fitted": true,
+      "frequency_kind": "posterior inclusion",
+      "last_draw_contributions": [
+        {
+          "reference_contribution": [
+            5.980511009107261e-06,
+            5.980511009107261e-06
+          ],
+          "tree": 0
+        },
+        {
+          "reference_contribution": [
+            8.027936900452678e-06,
+            8.027936900452678e-06
+          ],
+          "tree": 1
+        }
+      ],
+      "rules": [],
+      "units": "normalized; add intercept and multiply scale once per ensemble"
+    },
+    "NOOP": {
+      "fitted": true,
+      "frequency_kind": "posterior inclusion",
+      "last_draw_contributions": [
+        {
+          "reference_contribution": [
+            -4.273181743840787e-05,
+            -4.273181743840787e-05
+          ],
+          "tree": 0
+        },
+        {
+          "reference_contribution": [
+            5.3483345694887595e-05,
+            5.3483345694887595e-05
+          ],
+          "tree": 1
+        }
+      ],
+      "rules": [],
+      "units": "normalized; add intercept and multiply scale once per ensemble"
+    },
+    "RIGHT": {
+      "fitted": true,
+      "frequency_kind": "posterior inclusion",
+      "last_draw_contributions": [
+        {
+          "reference_contribution": [
+            2.0767429353126236e-05,
+            2.0767429353126236e-05
+          ],
+          "tree": 0
+        },
+        {
+          "reference_contribution": [
+            -2.1655698277789244e-05,
+            -2.1655698277789244e-05
+          ],
+          "tree": 1
+        }
+      ],
+      "rules": [],
+      "units": "normalized; add intercept and multiply scale once per ensemble"
+    }
+  },
+  "catalog": {
+    "catalog": [
+      {
+        "name": "x",
+        "obj1": "ball_t",
+        "obj2": "ball_t-1",
+        "obj3": null,
+        "type": "comparative"
+      },
+      {
+        "name": "x",
+        "obj1": "player_t",
+        "obj2": "ball_t",
+        "obj3": null,
+        "type": "comparative"
+      },
+      {
+        "name": "x",
+        "obj1": "player_t",
+        "obj2": "player_t-1",
+        "obj3": null,
+        "type": "comparative"
+      },
+      {
+        "name": "y",
+        "obj1": "ball_t",
+        "obj2": "ball_t-1",
+        "obj3": null,
+        "type": "comparative"
+      },
+      {
+        "name": "y",
+        "obj1": "player_t",
+        "obj2": "ball_t",
+        "obj3": null,
+        "type": "comparative"
+      },
+      {
+        "name": "y",
+        "obj1": "player_t",
+        "obj2": "player_t-1",
+        "obj3": null,
+        "type": "comparative"
+      },
+      {
+        "name": "incontact",
+        "obj1": "player_t",
+        "obj2": "ball_t",
+        "obj3": null,
+        "type": "logical"
+      },
+      {
+        "name": "present",
+        "obj1": "ball_t",
+        "obj2": null,
+        "obj3": null,
+        "type": "logical"
+      },
+      {
+        "name": "present",
+        "obj1": "ball_t-1",
+        "obj2": null,
+        "obj3": null,
+        "type": "logical"
+      },
+      {
+        "name": "present",
+        "obj1": "player_t",
+        "obj2": null,
+        "obj3": null,
+        "type": "logical"
+      },
+      {
+        "name": "present",
+        "obj1": "player_t-1",
+        "obj2": null,
+        "obj3": null,
+        "type": "logical"
+      }
+    ],
+    "catalog_hash": "d89f5773ad0bc3aae285478ca4b4cb156099bd2adeff32d1048052ceab89ab1a",
+    "version": 1
+  },
+  "cell": "Breakout/ocatari/bart/710501",
+  "checkpoint": {
+    "path": "checkpoints/64-eb1984405fcc33db935681d5a01e9f5070e41d5493a97391ab62d6ebf7b7eaf5.pkl",
+    "sha256": "eb1984405fcc33db935681d5a01e9f5070e41d5493a97391ab62d6ebf7b7eaf5"
+  },
+  "learner": "bart",
+  "normalization": {
+    "intercept_c": 0.0,
+    "recover": "Q = c + W * posterior_mean(sum(tree_contributions)); no observation noise in greedy Q",
+    "width_W": 199.99999999999983
+  },
+  "policy": "argmax over all action Q; uniform RNG tie breaking",
+  "reference_observed": [
+    [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ]
+  ],
+  "reference_q": [
+    [
+      0.003406926024046846,
+      0.0027975340638393934,
+      0.0006108530831308514,
+      0.003703070086240308
+    ],
+    [
+      0.003406926024046846,
+      0.0027975340638393934,
+      0.0006108530831308514,
+      0.003703070086240308
+    ]
+  ],
+  "reference_values": [
+    [
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1,
+      -1
+    ],
+    [
+      0,
+      2,
+      1,
+      2,
+      2,
+      1,
+      0,
+      1,
+      1,
+      1,
+      1
+    ]
+  ],
+  "references": "empty and current training observation; not a separate fidelity dataset",
+  "units": "training clipped reward Q",
+  "warning": "Frequent splits are not an equivalent policy; prediction combines all trees and posterior draws."
+}

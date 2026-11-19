@@ -1,0 +1,42 @@
+No broken requirements found.
+hydra
+Python 3.11.7
+job=34523 root=/home/natan.brugueras/projects/rrl_bayesian/historical/pong_pilot_linux_01_code
+A.L.E: Arcade Learning Environment (version 0.10.2+c9d4b19)
+[Powered by Stella]
+{"pipeline": "ocatari", "fixed_fit": "0b8a389a62a01d712d14409b0dca8e00438cddc559f94a99c994499569ed02ed", "fixed_transitions": "9ac76073b3935db83592c482f3f0109863351466e327a4605b3138f12828c856"}
+{
+  "actions": [
+    1,
+    4,
+    0
+  ],
+  "coverage": [
+    3574,
+    3794,
+    3415,
+    3242,
+    3096,
+    3359
+  ],
+  "positive_rewards": [
+    0,
+    2,
+    1,
+    0,
+    0,
+    2
+  ],
+  "rule": "max replay coverage, min replay coverage, then max positive raw rewards; index tie-break"
+}
+
+------------------------------------------------------------------------
+[Slurm] Este trabajo (#34523) terminó SIN reporte de rendimiento por correo.
+Puedes recibir un correo con el uso de CPU, RAM y GPU de tus trabajos
+(y sugerencias para que esperen menos en cola) agregando esta línea
+en tu script de sbatch, junto a las líneas #SBATCH:
+
+    #SENDJOBREPORT
+
+Dudas: slurmjobs@cenia.cl
+------------------------------------------------------------------------

@@ -1,0 +1,112 @@
+No broken requirements found.
+hydra
+Python 3.11.7
+job=34501 root=/home/natan.brugueras/projects/rrl_bayesian
+A.L.E: Arcade Learning Environment (version 0.10.2+c9d4b19)
+[Powered by Stella]
+[2026-10-26T16:18:49.363] error: *** JOB 34501 ON hydra CANCELLED AT 2026-10-26T16:18:49 DUE to SIGNAL Terminated ***
+eporte de rendimiento por correo.
+Puedes recibir un correo con el uso de CPU, RAM y GPU de tus trabajos
+(y sugerencias para que esperen menos en cola) agregando esta línea
+en tu script de sbatch, junto a las líneas #SBATCH:
+
+    #SENDJOBREPORT
+
+Dudas: slurmjobs@cenia.cl
+------------------------------------------------------------------------
+{
+  "binding": {
+    "campaign": "6d8dc7d70b3b36b389f01e7c484367d8ee2c8080c72d706626ea29b4a1aeebb7",
+    "cell": "89abbf6012ab9ae9d1d1f245f9e573a27b1fe16827546925d1442d5bb61a7050",
+    "learner": "corrected_common",
+    "runtime": {
+      "python": "3.11.7",
+      "platform": "linux",
+      "machine": "x86_64",
+      "numeric_threads": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1"
+      },
+      "numpy": "1.26.4",
+      "scipy": "1.12.0",
+      "gymnasium": "1.1.1",
+      "ale-py": "0.10.2",
+      "ocatari": "2.2.1"
+    }
+  },
+  "counter": 1010468,
+  "checkpoint": {
+    "path": "checkpoints/1010468-56115fd35d8904acc00a8b0397845b1b9949a148328d8126ddf90a87e308b5a6.pkl",
+    "sha256": "56115fd35d8904acc00a8b0397845b1b9949a148328d8126ddf90a87e308b5a6"
+  },
+  "log_head": {
+    "path": "logs/1010468-7ba966839043e9817df6caafb296adec19f1792a4e34c19ab5681a8934ed1f7d.jsonl",
+    "sha256": "7ba966839043e9817df6caafb296adec19f1792a4e34c19ab5681a8934ed1f7d",
+    "end": 1010468
+  },
+  "state": "partial",
+  "reason": "interrupted_signal",
+  "metrics": {
+    "interactions": 1010468,
+    "epsilon": 0.1,
+    "relations": 20,
+    "ended_episodes": 1004,
+    "completed_games": 1004,
+    "truncated_episodes": 0,
+    "phase_seconds": {
+      "emulation_extraction": 2144.4437507631956,
+      "relations_encoding": 2409.3788040774525,
+      "prediction": 220.83841297391336,
+      "policy_collection_td": 2132.7175696656923,
+      "selection_targets": 0.0,
+      "fit": 0.0,
+      "checkpoint_logs": 982.2575767368544
+    },
+    "learner": {
+      "kind": "rrtl_corrected_common_v1",
+      "splits": 41,
+      "fallback": {
+        "prediction": {
+          "queries": 5369412,
+          "internal_fallbacks": 1708281
+        },
+        "update": {
+          "queries": 1010468,
+          "internal_fallbacks": 325296
+        },
+        "bootstrap": {
+          "queries": 6056784,
+          "internal_fallbacks": 1893738
+        }
+      },
+      "complexity": {
+        "NOOP": {
+          "leaves": 11,
+          "max_depth": 4
+        },
+        "FIRE": {
+          "leaves": 12,
+          "max_depth": 3
+        },
+        "RIGHT": {
+          "leaves": 22,
+          "max_depth": 4
+        },
+        "LEFT": {
+          "leaves": 17,
+          "max_depth": 4
+        },
+        "RIGHTFIRE": {
+          "leaves": 9,
+          "max_depth": 3
+        },
+        "LEFTFIRE": {
+          "leaves": 15,
+          "max_depth": 4
+        }
+      }
+    }
+  }
+}
